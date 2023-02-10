@@ -1,0 +1,3039 @@
+@media only screen and (max-width: 1960px) {
+
+	.prrtdesign{
+
+		display: block;
+
+	}
+
+}
+
+@media only screen and (max-width: 1800px) {
+
+	.innovate_sponsor_wrap{
+
+		padding: 200px 0;
+
+	}
+
+	.homepgbanCon h3{
+
+		font-size: 30px;
+
+	}
+
+	.footernav ul li a{
+
+		margin: 0 15px;
+
+	}
+
+	.footerwrap .footerbgrw img{
+
+		width: 1200px;
+
+		height: auto;
+
+	}
+
+	.bannerlines.nextone {
+
+		width: 1200px;
+
+		height: 1200px;
+
+	}
+
+	.bannerlines.next_two {
+
+		width: 780px;
+
+		height: 780px;
+
+	}
+
+	.details-wrap .daterw{
+
+		font-size: 17px;
+
+	}
+
+	.agenda-wrap .leaserw {
+
+		padding: 60px 0;
+
+	}
+
+	.agenda-wrap .banner-wrap{
+
+		padding: 210px 0;
+
+	}
+
+	.homepgbanCon{
+
+		margin-top: 160px;
+
+	}
+
+}
+
+@media only screen and (max-width: 1700px) {
+	.homepgbaner .rtsidedeign{
+
+		width: 500px;
+
+		height: 533px;
+
+	}
+
+	.homepgbaner .teamban{
+
+		width: 860px;
+
+		height: 511px;
+
+		right:440px;
+
+	}
+
+	.bannerlines{
+        width: 780px;
+        height: 780px;
+		right:84px;
+
+	}
+
+	.bannerlines.nextone{
+		right:350px;
+		width: 950px;
+		height: 950px;
+	}
+
+	.bannerlines.next_two{
+		right: 680px;
+		width: 720px;
+		height: 720px;
+	}
+
+
+	.footerwrap .footerbgrw img {
+
+		width: 1100px;
+
+	}
+
+	.prrtdesign{
+
+		margin-top:50px;
+
+	}
+
+	.innovate_sponsor_wrap {
+
+		padding: 180px 0;
+
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+
+	.footerwrap .footerbgrw img {
+
+		width: 1060px;
+
+	}
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+	.homepgbanCon h1{
+
+		line-height: 40px;
+
+		margin-bottom: 5px;
+
+	}
+
+	.homepgbanCon h3 {
+
+		font-size: 28px;
+
+		line-height: 36px;
+
+		margin-bottom: 5px;
+
+	}
+
+	.homepgbaner .teamban {
+
+		bottom:-150px;
+
+	}
+
+	.innovate_section .container_wd{
+
+		top: 120px;
+
+	}
+
+	.innovate_sponsor_wrap {
+
+		padding: 150px 0;
+
+	}
+
+	.attend_innovate_row {
+
+		margin-bottom: 40px;
+
+	}
+
+	.prrtdesign {
+
+		margin-top: -44px;
+
+	}
+
+
+	.gettingrw .getting-content {
+
+		margin-bottom: 20px;
+
+	}
+
+	.agenda-wrap .banner-wrap {
+
+		padding: 180px 0;
+
+	}
+
+	.footerwrap .footerbgrw img {
+
+		width: 940px;
+
+	}
+
+}
+
+
+@media only screen and (max-width: 1320px) {
+
+	.container {
+
+		width: 1170px;
+
+	}
+
+	.innovate_section .container_wd{
+
+		width: 1170px;
+
+		margin-left: -585px;
+
+	}
+
+	.homepgbaner .rtsidedeign {
+
+		width: 420px;
+
+		height: 448px;
+
+	}
+
+	.homepgbaner .teamban {
+
+		width: 780px;
+
+		height: 463px;
+
+		right: 400px;
+
+	}
+
+	.innovate_sponsor_wrap .sponsortxt {
+
+		padding: 30px 0 20px 0;
+
+	}
+
+	.innovate_sponsor_wrap {
+
+		padding: 130px 0;
+
+	}
+
+	.footerwrap .footerbgrw img {
+
+		width: 960px;
+
+	}
+
+	.bannerlines {
+
+		width: 650px;
+
+		height: 650px;
+
+		right: 70px;
+
+	}
+
+	.bannerlines.nextone {
+        right: 220px;
+        width: 250px;
+        height: 250px;
+	}
+
+	.bannerlines.next_two {
+        width: 580px;
+        height: 580px;
+        right: 550px;
+	}
+
+	.right-container .floatingimg {
+
+		width: 280px;
+
+		height:274px;
+
+		top: -85px;
+
+	}
+
+	.footerwrap .footerbgrw img {
+
+		width: 840px;
+
+	}
+
+	.pricenottext, .footerwrap .copyrightrw, .footernav ul li a {
+
+		font-size: 14px;
+
+	}
+
+	.homepgbanCon h1{
+
+		font-size: 36px;
+
+	}
+
+	.homepgbanCon h3{
+
+		font-size: 24px;
+
+	}
+
+	.sminfotext{
+
+		font-size: 24px;
+
+		line-height: 30px;
+
+	}
+
+	.homepgbanCon{
+		max-width: 750px;
+		margin-top: 160px;
+	}
+
+	.innovate_section .container_wd .what_innovate_heading,.expectinnovateleftbox h2,.expectinnovateleftbox h2,.innovate_sponsor_wrap .headingSponsor,.innovatedateheading,.pricingheading{
+
+		font-size: 32px;
+
+	}
+
+	.training-wrap h3{
+
+		font-size: 32px;
+
+		line-height: 36px;
+
+	}
+
+	.agenda-wrap .training-wrap{
+
+		margin-top: 120px;
+
+	}
+
+	.aboutinnovationCon .aboutinnovationbd{
+
+		font-size: 18px;
+
+		line-height: 32px;
+
+	}
+
+	.aboutinnovationCon .innovateinfo,.expectinnovateContextbx .nortext,.attend_innovate_con_box .attendContextrw,.getting-details p,.training-col .contentrw p{
+
+		font-size: 15px;
+
+		line-height: 32px;
+
+	}
+
+	.training-col .image-wrap{
+
+		left: 0;
+
+	}
+
+	.expectinnovateleftbox .what_expect_nor_text,.innovate_sponsor_wrap .sponsortxt,.user_conference_rw,.innovate_sm_heading,.user_conference_rw.shortCon{
+
+		font-size: 16px;
+
+		line-height: 32px;
+
+	}
+
+	.expectinnovateContextbx .heading_title,.getting-details span{
+
+		font-size: 18px;
+
+	}
+
+	.attend_innovate_con_box .titlesh{
+
+		font-size: 18px;
+
+	}
+
+	.user_conference_rw.date{
+
+		font-size: 21px;
+
+	}
+
+	.earlybirdprice{
+
+		font-size: 44px;
+
+	}
+
+	.code-wrap h1,.venue-wrap h1,.agenda-wrap h1,.faq-wrap h1{
+
+		font-size: 40px;
+
+	}
+
+	.code-wrap p, .code-wrap ol li {
+
+		font-size: 15px;
+
+		line-height: 32px;
+
+	}
+
+	.code-wrap .headingrw{
+
+		font-size: 16px;
+
+	}
+
+	.venue-wrap .venue-content{
+
+		font-size: 18px;
+
+	}
+
+	.tab-navgroup li, .tab-view .tabrw span, .tab-view .tabrw .right-description {
+		font-size: 18px;
+	}
+
+	.training-wrap .sub-title{
+
+		font-size: 18px;
+
+		line-height: 28px;
+
+		margin-bottom: 20px;
+
+	}
+
+	.agenda-wrap .training-pass h3{
+
+		font-size: 32px;
+
+		line-height: 36px;
+
+	}
+
+	.training-wrap p{
+
+		font-size: 18px;
+
+		line-height: 28px;
+
+		margin-bottom: 40px;
+
+		max-width: 600px;
+
+	}
+
+	.training-pass .colwrap p.pre-title,.colwrap .contentrw .titlerw{
+
+		font-size: 18px;
+
+		line-height: 32px;
+
+	}
+
+	.leaserw .lease-content span{
+
+		font-size: 18px;
+
+	}
+
+	.leaserw .lease-content span.subtxt,.accordion .content p{
+
+		font-size: 15px;
+
+	}
+
+	.agenda-wrap .banner-wrap .agendContext {
+
+		font-size: 24px;
+
+		line-height: 40px;
+
+	}
+
+	.tab-view .tabrw .right-content,
+	.tab-view .tabrw .right-description {
+		margin-left: 50px;
+	}
+
+	.accordion .titlerw,.accordion a.headingrw{
+
+		font-size: 18px;
+
+	}
+
+	.accordion-item .content span{
+
+		font-size: 15px;
+
+		line-height: 28px;
+
+	}
+
+	.register-wrap .left-container h2{
+
+		font-size: 40px;
+
+	}
+
+	.register-wrap .left-container h3{
+
+		font-size: 24px;
+
+		line-height: 36px;
+
+	}
+
+	.details-wrap .tredingrw h4,.details-wrap .daterw{
+
+		font-size: 18px;
+
+	}
+
+	.details-wrap .tredingrw .addrw{
+
+		left:130px;
+
+	}
+
+	.details-wrap .tredingrw .addrw.exclusive {
+
+		left: 236px;
+
+	}
+
+	.innovate_sponsor_wrap .container {
+
+		width: 1200px;
+
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.container {
+
+		width:1080px;
+
+	}
+
+	.innovate_section .container_wd {
+
+		top: 115px;
+
+		left: 50%;
+
+		width: 1080px;
+
+		margin-left:-540px;
+
+	}
+
+	.innovate_section .aboutinnovationCon{
+
+		width: 400px
+
+	}
+
+	.innovate_section .container_wd .what_innovate_heading, .expectinnovateleftbox h2 {
+
+		font-size: 32px;
+
+		line-height: 36px;
+
+	}
+
+	.sminfotext{
+
+		font-size: 21px;
+
+		line-height: 32px;
+
+	}
+
+	.aboutinnovationCon .innovateinfo{
+
+		margin-top: 20px;
+
+	}
+
+	.homepgbaner .teamban {
+
+		width:700px;
+
+		height: 416px;
+
+		right: 400px;
+
+		bottom: -160px;
+
+	}
+
+	.homepgbanCon{
+		margin-top: 130px;
+		max-width: 600px;
+	}
+
+	.homepgbaner .rtsidedeign {
+
+		width: 380px;
+
+		height: 405px;
+
+	}
+
+	.bannerlines {
+		width: 650px;
+		height: 650px;
+	}
+
+	.bannerlines.nextone {
+        right: 220px;
+        width: 250px;
+        height: 250px;
+	}
+
+	.bannerlines.next_two {
+        width: 540px;
+        height: 540px;
+        right: 450px;
+	}
+
+	.expectinnovatewrap .container {
+
+		padding: 50px 15px;
+
+	}
+
+	.attend_innovate_wrap{
+
+		padding: 60px 0;
+
+	}
+
+		.expectinnovateConrow {
+
+			margin-bottom: 20px;
+
+		}
+
+		.innovate_sponsor_wrap {
+
+			padding: 110px 0;
+
+		}
+
+		.pricingsectionwrap{
+
+			padding: 60px 0 0px 0;
+
+		}
+
+		.pricingConbox {
+
+			margin-top: 50px;
+
+		}
+
+		.pricenottext, .footerwrap .copyrightrw, .footernav ul li a {
+
+			font-size: 14px;
+
+		}
+
+		.details-wrap .tredingrw .addrw{
+
+			width: 70px;
+
+		}
+
+		.right-container .form-wrapper h4 {
+
+			margin-top: 20px;
+
+			font-size: 21px;
+
+			margin-bottom: 15px;
+
+		}
+
+		.code-wrap,.faq-wrap,.venue-wrap,.agenda-wrap{
+
+			margin-top: 145px;
+
+		}
+
+		.codeConbx {
+
+			margin-top: 70px;
+
+			margin-bottom: 70px;
+
+		}
+
+		.venue-wrap .venue-content .registerbtnrw {
+
+			margin-top: 60px;
+
+			margin-bottom: 0;
+
+		}
+
+		.gettingrw .gettingbg{
+
+			width: 400px;
+
+			height: 177px;
+
+		}
+
+		.tab-section .tab-view .tabrw {
+
+			margin-top: 70px;
+
+		}
+
+		.training-wrap a{
+
+			font-size: 16px;
+
+		}
+
+		.training-col .contentrw p{
+
+			margin-bottom: 20px;
+
+		}
+
+		.agenda-wrap .training-pass{
+
+			padding: 60px 0;
+
+		}
+
+		.agenda-wrap .banner-wrap {
+
+			padding: 160px 0;
+
+		}
+
+		.navbar-default .navbar-nav > li > a{
+
+			padding: 12px 18px;
+
+			font-size: 16px;
+
+		}
+
+		.dropdown .option-list a{
+
+			font-size: 16px;
+
+		}
+
+		.navbar .option-list{
+
+			top:64px;
+
+		}
+
+		.agenda-wrap .tab-section{
+
+			margin-top: 60px;
+
+		}
+		.innovate_sponsor_wrap .container {
+
+			width: 1110px;
+
+		}
+
+	}
+
+
+
+	@media only screen and (max-width: 1170px) {
+
+		.register-wrap .left-container{
+
+			max-width: inherit;
+
+			width: auto;
+
+			padding-left: 0px;
+
+		}
+
+		.innovate_section .container_wd {
+
+			top: 70px;
+
+			left: 30px;
+
+			right:30px;
+
+			width: auto;
+
+			margin-left:0;
+
+		}
+
+		.register-wrap {
+
+			margin-top: 60px;
+
+			margin-bottom: 90px;
+
+		}
+
+		.navbar-default{
+
+			height: 80px;
+
+		}
+
+		.container {
+
+			width: auto;
+
+			padding: 0 30px;
+
+		}
+
+		.navbar-brand{
+
+			width: 150px;
+
+			height: 36px;
+
+			margin: 22px 0;
+
+		}
+
+		.navbar-default .container .regheaderbtn{
+
+			right:20px;
+
+		}
+	
+        .navbar-right {
+            margin-top: 30px;
+        }
+
+		.navbar-default .container .regheaderbtn{
+
+			top:17px;
+
+		}
+
+
+		.innovate_section .container_wd {
+
+			top: 105px;
+
+			left: 20px;
+
+			right: 20px;
+
+		}
+
+		.innovate_sponsor_wrap {
+
+			padding: 90px 0;
+
+		}
+
+		.homepgbaner .teamban{
+
+			right:340px;
+
+		}
+
+		.footerwrap .footerbgrw img {
+
+			width:760px;
+
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			padding: 12px 16px;
+		}
+
+		.innovate_sponsor_wrap .container {
+
+			width: auto;
+
+			padding: 0px 15px;
+		}
+	}
+
+
+
+	@media only screen and (max-width: 1100px) {
+
+		.homepgbaner .teamban{
+
+			right:320px;
+
+		}
+
+		.innovate_section .container_wd{
+
+			top:90px;
+
+		}
+
+		.code-wrap h1,.venue-wrap h1,.agenda-wrap h1,.faq-wrap h1 {
+
+			font-size: 36px;
+
+			line-height: 40px;
+
+		}
+
+		.right-container .floatingimg {
+
+			width: 220px;
+
+			height: 215px;
+
+			top: -66px;
+
+		}
+
+		.register-wrap .right-container .form-wrapper {
+
+			max-width: 400px;
+
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			padding: 12px 13px;
+		}
+	}
+
+
+
+	@media only screen and (max-width: 1023px) {
+
+		.prrtdesign{
+
+			display: none;
+
+		}
+		.navbar-default .navbar-nav > li > a {
+
+			padding: 12px 8px;
+
+			font-size: 14px;
+
+		}
+		.navbar-default .container .regheaderbtn{
+
+			width: 120px;
+
+			font-size: 14px;
+
+		}
+
+		.dropdown .option-list a{
+
+			font-size: 14px;
+
+		}
+
+		.homepgbaner .teamban{
+
+			right:50%;
+
+			margin-right: -350px;
+
+			bottom: -140px;
+
+		}
+
+		.homepgbaner .container{
+
+			padding: 0 20px;
+
+		}
+
+		.expectinnovatewrap .container .expectmobimg img {
+
+			width: 320px;
+
+		}
+
+		.footerwrap .footerbgrw img {
+
+			width: 700px;
+
+		}
+
+		.innovate_section .container_wd {
+
+			top: 75px;
+
+			left: 10px;
+
+			right: 20px;
+
+		}
+
+		.expectinnovatewrap .container {
+
+			padding: 30px 15px;
+
+		}
+
+
+		.code-wrap,.faq-wrap,.venue-wrap,.agenda-wrap{
+
+			margin-top: 120px;
+
+		}
+
+		.codeConbx {
+
+			margin-top: 50px;
+
+			margin-bottom: 50px;
+
+		}
+
+		.navbar-default {
+
+			height: 70px;
+
+		}
+
+		.navbar-default .container .regheaderbtn {
+
+			top: 13px;
+
+		}
+
+		.navbar-right {
+
+			margin-top: 26px;
+
+			margin-right: 130px;
+
+		}
+		.navbar .option-list {
+			top: 53px;
+		}
+
+		.gettingrw .gettingbg {
+
+			width: 300px;
+
+			height: 133px;
+
+		}
+
+		.venue-wrap .gettingrw{
+
+			padding: 40px 0;
+
+		}
+
+		.gettingrw .colwrap{
+
+			flex: unset;
+
+		}
+
+		.agenda-wrap .training-wrap{
+
+			min-height: 400px;
+
+			background-size: 360px;
+
+		}
+
+		.training-wrap p{
+
+			max-width: 500px;
+
+		}
+
+		.agenda-wrap .leaserw {
+
+			padding: 40px 0;
+
+		}
+
+		.leaserw .icon-wrap .image-wrap{
+
+			width: 100px;
+
+			height: 100px;
+
+		}
+
+		.leaserw .lease-content{
+
+			margin-left: 100px;
+
+		}
+
+		.leaserw .container{
+
+			padding: 0 15px;
+
+		}
+
+		.leaserw .lease-content span{
+
+			font-size: 16px;
+
+		}
+
+		.agenda-wrap .banner-wrap .agendContext {
+
+			font-size: 21px;
+
+			line-height: 36px;
+
+		}
+
+		.agenda-wrap .banner-wrap {
+
+			padding: 120px 0;
+
+			margin-bottom: 80px;
+
+		}
+
+		.videoslidebx {
+
+			width: 400px;
+
+			height: 260px;
+
+		}
+
+		.venue-wrap h1{
+
+			text-align: left;
+
+			padding: 0 20px;
+
+		}
+
+		.venue-wrap h1.inno_heading{
+
+			text-align: center;
+
+		}
+
+		.gettingrw .colwrap h2{
+
+			padding: 0;
+
+		}
+
+		.venue-wrap .gettingrw .container{
+
+			padding: 0 20px;
+
+		}
+
+		.gettingrw h2 span {
+
+			display: inline-block;
+
+		}
+
+		.homepgbanCon h1 {
+
+			font-size: 32px;
+
+		}
+
+		.code-wrap h1,.venue-wrap h1,.agenda-wrap h1,.faq-wrap h1{
+
+			font-size: 32px;
+
+		}
+
+		.homepgbanCon h3 {
+
+			font-size: 21px;
+
+		}
+
+		.sminfotext {
+
+			font-size: 18px;
+
+			line-height: 28px;
+
+		}
+
+		.innovate_section .container_wd .what_innovate_heading, .expectinnovateleftbox h2 {
+
+			font-size: 28px;
+
+			line-height: 32px;
+
+		}
+
+		.aboutinnovationCon .aboutinnovationbd {
+
+			font-size: 16px;
+
+			line-height: 28px;
+
+		}
+
+		.colwrap .contentrw .titlerw {
+
+			font-size: 16px;
+
+			line-height: 28px;
+
+			margin-bottom: 20px;
+
+		}
+
+		.aboutinnovationCon .innovateinfo, .expectinnovateContextbx .nortext, .attend_innovate_con_box .attendContextrw {
+
+			font-size: 15px;
+
+			line-height: 28px;
+
+		}
+
+		.expectinnovateleftbox .what_expect_nor_text, .innovate_sponsor_wrap .sponsortxt, .user_conference_rw, .innovate_sm_heading, .user_conference_rw.shortCon,.training-pass .colwrap p.pre-title {
+
+			font-size: 16px;
+
+			line-height: 28px;
+
+		}
+
+		.innovate_section .container_wd .what_innovate_heading, .expectinnovateleftbox h2, .expectinnovateleftbox h2, .innovate_sponsor_wrap .headingSponsor, .innovatedateheading, .pricingheading,.training-wrap h3 {
+
+			font-size: 28px;
+
+		}
+
+		.expectinnovateContextbx .heading_title {
+
+			font-size: 16px;
+
+			line-height: 24px;
+
+		}
+
+		.attend_innovate_con_box .titlesh,.training-wrap .sub-title,.training-wrap p{
+
+			font-size: 16px;
+
+		}
+
+		.tab-navgroup li, .tab-view .tabrw span, .tab-view .tabrw .right-description {
+			font-size: 16px;
+		}
+
+		.agenda-wrap .training-pass .line-bg {
+
+			width: 600px;
+
+			height: 418px;
+
+			right: 178px;
+
+		}
+
+		.agenda-wrap .training-pass h3 {
+
+			font-size: 28px;
+
+			line-height: 32px;
+
+		}
+
+		.agenda-wrap .training-pass {
+
+			padding: 50px 0;
+
+		}
+
+    	.tab-view .tabrw .right-content,
+    	.tab-view .tabrw .right-description {
+			margin-left: 0px;
+		}
+
+		.accordion .titlerw, .accordion a.headingrw {
+
+			font-size: 16px;
+
+		}
+
+		.right-container .floatingimg{
+
+			display: none;
+
+		}
+
+		.register-wrap .right-container .form-wrapper {
+
+			max-width:inherit;
+
+			width: auto;
+
+		}
+
+		.register-wrap .left-container h2 {
+
+			font-size: 36px;
+
+		}
+
+		.register-wrap .left-container h3 {
+
+			font-size: 21px;
+
+			line-height: 32px;
+
+		}
+
+		.details-wrap .tredingrw h4, .details-wrap .daterw {
+
+			font-size: 16px;
+
+		}
+
+		.details-wrap .tredingrw .addrw {
+
+			left: 120px;
+
+		}
+
+		.details-wrap .tredingrw .addrw.exclusive {
+
+			left: 210px;
+
+		}
+
+		.right-container .form-wrapper h4 {
+
+			font-size: 18px;
+
+		}
+
+	}
+
+
+
+	@media only screen and (max-width: 991px) {
+
+		.tab-section .tab-view:after{
+
+			left: 170px;
+
+		}
+
+		.tab-section .tab-view .tabrw:after{
+
+			left:157px;
+
+		}
+
+		.tab-section label{
+
+			margin: 0 15px;
+
+		}
+		.verteximgrw .secondarylogo img {
+
+			width: 120px!important;
+
+			height: auto!important;
+
+		}
+
+		.verteximgrw .grtAmericansg img{
+			height: auto!important;
+		}
+	}
+
+
+
+	@media only screen and (max-width: 839px) {
+
+		.innovate_sponsor_wrap .verteximgrw {
+
+			margin-top: 30px;
+
+		}
+
+		.innovate_section .aboutinnovationCon {
+
+			width: 360px;
+
+		}
+
+		.expectinnovateConrow .expectinnovateContextbx {
+
+			margin-left: 140px;
+
+		}
+
+		.bannerlines {
+			width: 480px;
+			height: 480px;
+		}
+
+		.bannerlines.nextone {
+            width: 250px;
+            height: 250px;
+            right: 200px;
+		}
+
+		.bannerlines.next_two {
+            width: 400px;
+            height: 400px;
+            right: 320px;
+		}
+
+			.navbar-right {
+
+				margin-top: 26px;
+
+				margin-right: 114px;
+
+			}
+
+			.navbar-default .container .regheaderbtn{
+				width: 110px;
+			}
+
+			.navbar-default .container .regheaderbtn {
+
+				top: 13px;
+
+			}
+
+			.navbar-default .navbar-nav > li > a {
+
+				padding: 12px 8px;
+				font-size: 13px;
+
+			}
+
+			.dropdown .option-list a {
+				font-size: 13px;
+			}
+			.navbar .option-list {
+				top: 51px;
+			}
+			.videoslidebx {
+
+				width: 380px;
+
+				height: 230px;
+
+				border: 10px solid #fff;
+
+			}
+
+		}
+
+    @media only screen and (max-width: 1073px) {
+        .bannerlines.next_two {
+            width: 470px;
+            height: 470px;
+            right: 400px;
+        }
+    }
+
+		@media only screen and (max-width: 767px) {
+
+			.homepgbaner .mobile_view{
+
+				position: relative;
+
+				right:0px;
+
+				bottom: 0px;
+
+				width:320px;
+
+				height: 362px;
+
+				background: url(../images/mobile_view_banner.png) no-repeat;
+
+				background-size: 100% 100%;
+
+				display: block;
+
+			}
+
+			.attend_innovate_con_box{
+				border: 0;
+			}
+
+			.teamban.desktop_view{
+
+				display:none;  
+
+			} 
+
+			.teamban.mobile_view{
+
+				display:block;  
+
+			}
+
+			.homepgbaner{
+
+				height: auto;
+
+			}
+
+			.homepgbaner .teamban{
+
+				position: relative;
+
+				right: auto;
+
+				bottom: auto;
+
+			}
+
+			.homepgbaner .teamban{
+
+				width:500px;
+
+				height: 297px;
+
+				margin-left: 10px;
+
+			}
+
+            .innovate_section .row {
+                display: none;
+            }
+
+			.innovate_section .inovateimgbx,.bannerlines,.expectinnovatewrap .container .expectmobimg{
+
+				display: none;
+
+			}
+
+			.toprtdesignban,.btrtdesignban {
+
+				width: 180px;
+
+				height: 179px;
+
+			}
+
+    .expectinnovateleftbox h2 br{
+
+    	display: none;
+
+
+
+    }
+
+    .expectinnovateleftbox {
+        padding: 50px 0 80px 0;
+    }
+
+    .expectinnovateleftbox .what_expect_nor_text{
+
+    	margin-top: 20px;
+
+    }
+
+    .expectinnovatewrap .container {
+
+    	padding: 15px;
+
+    }
+
+    .expectinnovateContextbx .heading_title{
+
+    	margin-bottom: 0;
+
+    }
+
+    .expectinnovateConrow {
+
+    	margin-bottom: 10px;
+
+    }
+
+    .eqWrap{
+
+    	display: block;
+
+    	margin-bottom: 0;
+
+    }
+
+    .attend_innovate_wrap .container {
+
+    	padding: 0 20px;
+
+    }
+
+    .attend_innovate_row {
+
+    	margin-bottom: 20px;
+
+    }
+
+    .attend_innovate_con_box.equalh {
+
+    	margin: 0;
+
+    }
+
+    .attend_innovate_con_box.equalh.none{
+
+    	display: none;
+
+    }
+
+    .attend_innovate_wrap {
+
+    	padding: 30px 0;
+
+    }
+
+    .innovate_sponsor_wrap {
+
+    	padding: 120px 0 70px 0;
+
+    	background: #9c6ab1;
+
+    	background: -moz-linear-gradient(left, #9c6ab1 0%, #ea6f90 100%);
+
+    	background: -webkit-linear-gradient(left, #9c6ab1 0%,#ea6f90 100%);
+
+    	background: linear-gradient(to right, #9c6ab1 0%,#ea6f90 100%);
+
+    	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c6ab1', endColorstr='#ea6f90',GradientType=1 );
+
+    }
+
+    .innovate_sponsor_wrap .headingSponsor{
+
+    	line-height: 36px;
+
+    }
+
+    .innovate_sponsor_wrap .sponsortxt {
+
+    	max-width: 80%;
+
+    }
+
+    .innovate_sponsor_wrap .verteximgrw .verteximgbx {
+
+    	width: 200px;
+
+    	margin: 0 auto;
+
+    }
+    .innovate_sponsor_wrap .verteximgrw .verteximgbx img {
+
+    	margin: 15px auto;
+
+    }
+    
+    .innovate_sponsor_wrap .linktextrw{
+
+    	display: none;
+
+    }
+
+    .innovate_section .container_wd{
+
+    	position: relative;
+
+    	top: auto;
+
+    	left: auto;
+
+    	right: auto;
+
+    	padding: 0;
+
+    }
+
+    .innovate_section .container_wd .what_innovate_heading{
+
+    	float: none;
+
+    	color: #fff;
+
+    	padding: 25px 15px;
+
+    	background: #6d6fb3;
+
+    	background: -moz-linear-gradient(left, #6d6fb3 0%, #c4629a 100%);
+
+    	background: -webkit-linear-gradient(left, #6d6fb3 0%,#c4629a 100%);
+
+    	background: linear-gradient(to right, #6d6fb3 0%,#c4629a 100%);
+
+    	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6fb3', endColorstr='#c4629a',GradientType=1 );
+
+    }
+
+    .innovate_section{
+
+    	border-top:0;
+
+    }
+
+    .innovate_section .aboutinnovationCon{
+
+    	float: none;
+
+    	width: auto;
+
+    	padding: 25px 20px;
+
+    }
+
+    .innovate_section {
+
+    	padding-bottom: 0px;
+
+    	min-height:inherit;
+
+    }
+
+    .innovate_sponsor_wrap .verteximgrw .verteximgbx{
+    	float: none;
+    }
+
+    .innovate_sponsor_wrap .verteximgrw.grtamerican, .innovate_sponsor_wrap .verteximgrw.osgrw{
+
+    	float: none;
+
+    	width: 100%;
+
+    }
+
+    .pricingdetailsrow .pricingdetailsbx{
+
+    	width: auto;
+
+    	padding: 30px;
+
+    }
+
+    .navbar-brand {
+
+    	width: 150px;
+
+    	height: 35px;
+
+    	margin: 17px 0;
+
+    	margin-left: 15px;
+
+    }
+
+    .navbar-default.innerpg .navbar-brand {
+
+    	width: 41px;
+
+    	height: 44px;
+
+    	margin: 9px 0;
+
+    	margin-left: 15px;
+
+    	background: url(../images/innovate_mobile_view_logo.png) no-repeat;
+
+    	background-size: 100% 100%;
+
+    }
+
+    .navbar-default {
+
+    	height: 60px;
+
+    }
+
+    .sminfotext {
+
+    	max-width: 500px;
+
+    	margin-bottom: 30px;
+
+    }
+
+    .homepgbaner .container {
+
+    	padding: 0 15px;
+
+    }
+
+    .earlybirdprice {
+
+    	font-size: 36px;
+
+    }
+
+    .pricingsectionwrap {
+
+    	padding: 30px 0 0px 0;
+
+    }
+
+    .pricingConbox {
+
+    	margin-top: 30px;
+
+    }
+
+    .footerwrap .footerbgrw{
+
+    	display: none;
+
+    }
+
+    .footernav{
+
+    	padding-bottom: 15px;
+
+    }
+
+    .footernav ul li a{
+
+    	margin: 0 10px;
+
+    }
+
+    .registerbtnrw a.regisbtnlink{
+
+    	font-size: 16px;
+
+    	padding: 10px 40px;
+
+    }
+
+    .navbar-default .container .regheaderbtn{
+
+    	right: 20px;
+
+    	width: 90px;
+
+    	top:14px;
+
+    	padding: 6px 0 4px 0;
+
+    	font-size: 14px;
+
+    }
+
+    .navbar-default .container{
+
+    	padding: 0 15px;
+
+    }
+
+    .navbar-toggle{
+
+    	margin-right:10px;
+
+    	margin-top: 15px;
+
+    }
+
+    .navbar-default .navbar-toggle {
+
+    	border:0;
+
+    }
+
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+
+    	background-color:transparent;
+
+    }
+
+    .navbar-right {
+
+    	padding: 0;
+
+    	margin: 0;
+
+    }
+
+    .navbar-collapse{
+
+    	position: relative;
+
+    	top:-1px;
+
+    	padding: 0;
+
+    	background-color: #e5f9fc;
+
+    }
+
+    .navbar-default .navbar-nav > li > a{
+
+    	font-size: 15px;
+
+    	text-align: center;
+
+    	border-bottom: 1px solid #cfecf0;
+
+    }
+
+    .navbar-default .navbar-nav > li:last-child > a{
+
+    	border-bottom: 0px solid #cfecf0;
+
+    }
+
+    .loactionicon {
+
+    	top: 8px;
+
+    	left: 3px;
+
+    	width: 100px;
+
+    	height: 104px;
+
+    	display: block;
+
+    }
+
+
+    .navbar-default.innerpg .container .regheaderbtn{
+
+    	color: #fff;
+
+    	border: 2px solid #f14b95;
+
+    	background-color: #f14b95;
+
+    }
+
+    .navbar-default.innerpg .navbar-nav > li > a {
+
+    	color: #263746;
+
+    }
+
+    .register-wrap .container {
+
+    	padding: 0 20px;
+
+    }
+
+    .register-wrap .right-container .form-wrapper{
+
+    	margin-right: 0;
+
+    	margin-top: 50px;
+
+    	padding: 20px;
+
+    }
+
+    .code-wrap .container {
+
+    	padding: 0 20px;
+
+    }
+
+    .code-wrap .headingrw{
+
+    	margin: 15px 0;
+
+    }
+
+    .code-wrap,.venue-wrap,.agenda-wrap,.faq-wrap {
+
+    	margin-top: 90px;
+
+    }
+
+    .faq-wrap h1{
+
+    	text-align: left;
+
+    }
+
+    .codeConbx {
+
+    	margin: 30px 0 40px 0;
+
+    }
+
+    .accordion .titlerw{
+
+    	font-size: 16px;
+
+    	text-align: left;
+
+    	margin-bottom: 5px;
+
+    }
+
+
+    .agenda-wrap .download-link{
+
+    	display: block;
+
+    	padding-left: 20px;
+
+    }
+
+    .agenda-wrap .tab-section {
+
+    	margin-top: 40px;
+
+    }
+
+    .accordion .accordion-item {
+
+    	margin-left: 0;
+
+    }
+
+    .faq-wrap .accordion .row {
+
+    	margin-bottom: 30px;
+
+    }
+
+    .accordion .content p{
+
+    	line-height: 28px;
+
+    }
+
+    .accordion a.headingrw{
+
+    	padding-top: 5px;
+
+    	line-height: 28px;
+
+    }
+
+    .accordion a.headingrw:after{
+
+    	top:2px;
+
+    }
+
+    .accordion-item .detailsrw{
+
+    	margin-top: 20px;
+
+    }
+
+    .accordion .content p:first-child{
+
+    	margin-top: 20px;
+
+    }
+
+    .accordion .content.active{
+
+    	padding-left: 0;
+
+    }
+
+    .faq-wrap .container{
+
+    	padding: 0 15px;
+
+    }
+
+    .venue-wrap .venue-content{
+
+    	margin-bottom: 40px;
+
+    }
+
+    .venue-wrap .venue-content .registerbtnrw {
+
+    	margin-top: 30px;
+
+    }
+
+    .gettingrw .gettingbg{
+
+    	display: none;
+
+    }
+
+    .gettingrw .rowrap{
+
+    	display: block;
+
+    }
+
+    .venue-wrap .gettingrw .container {
+
+    	padding: 0 10px;
+
+    	padding-left: 0;
+
+    }
+
+    .gettingrw h2{
+
+    	line-height: 36px;
+
+    	text-align: center;
+
+    }
+
+    .gettingrw .colwrap h2{
+
+    	padding-left: 15px;
+
+    	text-align: left;
+
+    }
+
+    .venue-wrap .gettingrw {
+
+    	padding: 20px 0;
+
+    }
+
+    .getting-details span {
+
+    	font-size: 16px;
+
+    	padding-top: 17px;
+
+    	margin-bottom: 5px;
+
+    }
+
+    .getting-details p {
+
+    	font-size: 14px;
+
+    	line-height: 28px;
+
+    }
+
+    .gettingrw .getting-content .image-wrap{
+
+    	width: 100px;
+
+    	height: 100px;
+
+    }
+
+    .gettingrw .getting-content .getting-details {
+
+    	margin-left: 110px;
+
+    }
+
+    .gettingrw .getting-content {
+
+    	margin-bottom: 10px;
+
+    }
+
+    .gettingrw .getting-content:last-child {
+
+    	margin-bottom: 30px;
+
+    }
+
+    .tab-section label {
+
+    	padding: 15px 18px;
+
+    	margin: 0 10px;
+
+    }
+
+    .agenda-wrap .training-wrap{
+
+    	background-image: none;
+
+    	min-height: inherit;
+
+    	margin: 40px 0 0 0;
+
+    	padding-bottom: 40px;
+
+    }
+
+    .agenda-wrap .training-pass .line-bg{
+
+    	display: none;
+
+    }
+
+    .agenda-wrap .training-pass h3,.training-wrap h3,.gettingrw h2{
+
+    	font-size: 28px;
+
+    }
+
+    .training-pass .rowwrap {
+
+    	margin-top: 0px;
+
+    }
+
+    .training-pass .container{
+
+    	padding: 0 15px;
+
+    }
+
+    .agenda-wrap .training-pass {
+
+    	padding:30px 0 20px 0;
+
+    }
+
+    .training-col .contentrw p {
+
+    	margin-bottom: 10px;
+
+    }
+
+    .agenda-wrap .banner-wrap .agendContext {
+
+    	font-size: 18px;
+
+    	line-height: 32px;
+
+    	padding: 0 15px;
+
+    }
+
+    .agenda-wrap .banner-wrap {
+
+    	padding: 80px 0;
+
+    	margin-bottom: 40px;
+
+    }
+
+    .tab-section label span.dayrw{
+
+    	display: none;
+
+    }
+
+    .tab-section label span.daterw{
+
+    	display: block;
+
+    }
+
+    .tab-section .tab-view{
+
+    	margin: 0 15px;
+
+    }
+
+    .wd150{
+
+    	width: 150px;
+
+    	padding-right: 0;
+
+    }
+
+    .wd260{
+
+    	width: 250px;
+
+    	margin-left: 60px;
+
+    }
+
+    .training-wrap a{
+
+    	font-size: 14px;
+
+    	padding: 13px 24px;
+
+    }
+
+    .tab-section .tab-view .tabrw {
+
+    	margin-top: 60px;
+
+    }
+
+    .videoslidebx {
+
+    	margin: auto;
+
+    	margin-left: 15px;
+
+    	margin-bottom: 20px;
+
+    }
+
+    .venue-wrap h1.inno_heading,.code-wrap h1{
+
+    	text-align: left;
+
+    }
+
+    .venue-wrap .venue-content {
+
+    	font-size: 16px;
+
+    }
+
+    .agenda-wrap .tab-section{
+
+    	display: block;
+
+    	padding: 0 15px;
+
+    }
+
+    .agenda-wrap .download-link {
+
+    	padding-left: 15px;
+
+    }
+
+    .agenda-wrap .container {
+
+    	padding: 0 20px;
+
+    }
+
+    .training-wrap h3{
+
+    	margin-bottom: 15px;
+
+    }
+
+    .training-wrap p {
+
+    	max-width:inherit;
+
+    }
+
+    .agenda-wrap .training-pass h3{
+
+    	margin-top: 20px;
+
+    }
+
+    .tab-navgroup li, .tab-view .tabrw span, .tab-view .tabrw .right-description {
+    	font-size: 14px;
+    }
+
+    .agenda-wrap .leaserw {
+
+    	padding: 30px 0;
+
+    }
+
+    .training-col .image-wrap{
+
+    	float:none;
+
+    	display: table;
+
+    	margin: auto;
+
+    	margin-bottom: 20px;
+
+    }
+
+    .training-col .contentrw {
+
+    	margin-left: 0;
+
+    }
+
+    .register-wrap .left-container h2{
+
+    	margin-top: 50px;
+
+    }
+
+    .pricingdetailsrow .pricingdetailsbx .pricedropline.nextdrop{
+
+    	z-index: -1;
+
+    }
+
+    .earlybirdprice {
+
+    	font-size: 32px;
+
+    	padding-top: 10px;
+
+    }
+
+    .pricesubheading{
+
+    	font-size: 15px;
+
+    	line-height: 20px;
+
+    }
+
+    .pricenottext{
+
+    	font-size: 11px;
+
+    }
+
+    .noneview{
+
+    	display: none;
+
+    }
+
+    .sliderviewmob{
+
+    	margin: 20px 20px 0 20px;
+
+    	display: block;
+
+    }
+
+    .attend_desktop_view {
+        display: none;
+    }
+
+    .owl-carousel .owl-controls .owl-dots{
+
+    	text-align: center;
+
+    	margin-top: 20px;
+
+    }
+
+    .owl-carousel .owl-controls .owl-dot{
+
+    	width: 20px;
+
+    	height: 20px;
+
+    	border-radius: 100%;
+
+    	margin: 0 5px;
+
+    	display: inline-block;
+
+    	background-color: #E6E6E6;
+
+    }
+
+    .owl-carousel .owl-controls .owl-dot.active{
+
+    	background-color: #CCCCCC;
+
+    }
+
+    .attend_innovate_con_box{
+
+    	box-shadow: none;
+
+    }
+
+    .attend_innovate_con_box .attendContextrw {
+
+    	border: 1px solid #e2e5ee;
+
+    	border-top:0;
+
+    }
+
+    .menubtn,.closebtnnav{
+
+    	display: block;
+
+    }
+
+    .modal-dialog {
+
+    	width: 500px;
+
+    	height: 280px;
+
+    	margin-left: -250px;
+
+    	margin-top: -140px;
+
+    }
+
+    .agenda-wrap .tab-section {
+
+    	display: table;
+
+    	text-align: center;
+
+    }
+
+    .wd260 {
+
+    	text-align: left;
+
+    }
+
+    .tab-section label{
+
+    	width: 19%;
+
+    }
+
+    .aboutinnovationCon .aboutinnovationbd, .aboutinnovationCon .innovateinfo{
+
+    	text-align: left!important;
+
+    }
+    /*.navbar .bookrw-link {
+    	display: none;
+    }
+    .overlay .bookrw-link {
+    	display: block;
+    	right: auto;
+    	position: unset;
+    	width: auto;
+    }
+    .overlay .bookrw-link span {
+    	font-family: 'OpenSans-Semibold';
+    	font-size: 26px;
+    	padding: 10px 20px;
+    	line-height: 50px;
+    }
+    .overlay .option-list.active a {
+    	font-size: 22px;
+    	display: block;
+    	font-family: 'OpenSans-Semibold';
+    }
+    .overlay .option-list.active {
+    	background-color: unset;
+    	}*/
+
+    }
+
+    @media only screen and (max-width: 639px) {
+
+    	.expectinnovateConrow.mneqline {
+
+    		margin-left: -18px;
+
+    	}
+
+    	/*.innovate_sponsor_wrap .verteximgrw .verteximgbx{
+
+    		margin-right: 0;
+
+    	}*/
+
+    	.pricingdetailsrow .pricingdetailsbx {
+
+    		padding: 15px;
+
+    	}
+
+    	.earlybirdbx{
+
+    		width: auto;
+
+    	}
+
+    	.pricingsectionwrap .container {
+
+    		padding: 0 20px;
+
+    	}
+
+    	.innovate_sm_heading{
+
+    		display: block;
+
+    	}
+
+    	.innovate_sm_heading .basebtn {
+
+    		position: relative;
+
+    		right: auto;
+
+    		display: inline;
+
+    		margin: auto;
+
+    		margin-left: 10px;
+
+    		padding: 2px 10px;
+
+    		top: -5px;
+
+    	}
+
+    	.homepgbanCon h3 span{
+
+    		display: block;
+
+    	}
+
+    	.navbar-default.innerpg {
+
+    		background-size: auto 100%;
+
+
+    	}
+
+    	.modal-dialog {
+
+    		width: 396px;
+
+    		height: 220px;
+
+    		margin-left: -198px;
+
+    		margin-top: -110px;
+
+    	}
+
+    	.sminfotext {
+
+    		max-width: 360px;
+
+    	}
+
+    }
+
+    @media only screen and (max-width: 612px) {
+
+    	.wd260 {
+
+    		margin-left: 50px;
+
+    	}
+
+    }
+
+    @media only screen and (max-width: 599px) {
+
+    	.agenda-wrap .tab-section {
+
+    		width: 100%;
+
+    	}
+
+    	.homepgbaner .teamban {
+
+    		width: 400px;
+
+    		height: 237px;
+
+    	}
+
+    }
+
+    @media only screen and (max-width: 479px) {
+
+    	.expectinnovateConrow .exinnovateiconbx{
+
+    		width: 100px;
+
+    		height: 105px;
+
+    		background-size: 100px 523px;
+
+    	}
+
+    	.expectinnovateConrow .exinnovateiconbx.platform{
+
+    		background-position: 0 -105px;
+
+    	}
+
+    	.expectinnovateConrow .exinnovateiconbx.business_transformation{
+
+    		background-position: 0 -210px;
+
+    	}
+
+    	.expectinnovateConrow .exinnovateiconbx.networking{
+
+    		background-position: 0 -315px;
+
+    	}
+
+    	.expectinnovateConrow .exinnovateiconbx.rollin{
+
+    		background-position: 0 -420px;
+
+    	}
+
+    	.expectinnovateConrow .expectinnovateContextbx {
+
+    		margin-left: 110px;
+
+    	}
+
+    	.expectinnovateConrow .expectinnovateContextbx {
+
+    		margin-left: 110px;
+
+    		padding-top: 20px;
+
+    	}
+
+    	.innovate_sponsor_wrap .sponsortxt {
+
+    		max-width: 100%;
+
+    		padding: 10px 0 25px 0;
+
+    	}
+
+    	.pricenottext, .footerwrap .copyrightrw, .footernav ul li a {
+
+    		font-size: 12px;
+
+    	}
+
+    	.pricingConbox .pricingdetailsrow {
+
+    		margin-bottom: 30px;
+
+    	}
+
+    	.wd150 {
+
+    		width: 130px;
+
+    	}
+
+    	.wd260 {
+
+    		width: 190px;
+
+    		margin-left: 20px;
+
+    	}
+
+    	.tab-section .tab-view:after {
+
+    		left: 125px;
+
+    		height: auto;
+
+    		bottom: 8px;
+
+    	}
+
+    	.tab-section .tab-view .tabrw:after {
+
+    		left: 115px;
+
+    	}
+
+    	.tab-navgroup li, .tab-view .tabrw span, .tab-view .tabrw .right-description {
+    		font-size: 12px;
+    	}
+
+    	.tab-section label {
+
+    		padding: 15px 12px;
+
+    		margin: 0 6px;
+
+    	}
+
+    	.videoslidebx {
+
+    		width: 320px;
+
+    		height: 198px;
+
+    		margin: auto !important;
+
+    	}
+
+    	.agenda-wrap .tab-section {
+
+    		padding: 0 8px;
+
+    	}
+
+    	.tab-section .tab-view .tabrw:after{
+
+    		width: 24px;
+
+    		height: 24px;
+
+    	}
+
+    	.homepgbaner .teamban {
+
+    		width: 380px;
+
+    		height: 226px;
+
+    	}
+
+    	.toprtdesignban,.btrtdesignban {
+
+    		width: 160px;
+
+    		height: 159px;
+
+    	}
+
+    	.attend_innovate_wrap {
+
+    		padding: 30px 0;
+
+    	}
+
+
+    	.modal-dialog {
+
+    		width: 300px;
+
+    		height: 170px;
+
+    		margin-left: -150px;
+
+    		margin-top: -85px;
+
+    	}
+
+    	.sminfotext {
+
+    		max-width: 280px;
+
+    	}
+
+    	.navbar-default.innerpg {
+    		background-position: -160px 0;
+    	}
+
+    }
+
+
+
+    @media only screen and (max-width: 390px) {
+
+    	.homepgbaner .teamban {
+
+    		width: 320px;
+
+    		height: 190px;
+
+    	}
+
+    	.sminfotext {
+
+    		max-width: 240px;
+
+    	}
+    }
+
+
+    @media only screen and (max-width: 500px) {
+    	.homepgbaner .rtsidedeign {
+    	    display: none;
+    	}
+    }
+
+    @media only screen and (max-width: 359px) {
+
+    	.homepgbaner .teamban {
+
+    		width: 280px;
+
+    		height: 166px;
+
+    	}
+
+    	.footernav ul li a {
+
+    		margin: 0 8px;
+
+    	}
+
+    	.pricenottext, .footerwrap .copyrightrw, .footernav ul li a {
+
+    		font-size: 11px;
+
+    	}
+
+    	.details-wrap .tredingrw h4, .details-wrap .daterw {
+
+    		font-size: 15px;
+
+    	}
+
+    	.details-wrap .tredingrw .addrw.exclusive {
+
+    		left: 164px;
+
+    	}
+
+    	.wd150 {
+
+    		width: 110px;
+
+    		padding-left: 8px;
+
+    	}
+
+    	.tab-view .tabrw span, .tab-view .tabrw .right-description {
+    		font-size: 11px;
+    	}
+
+    	.tab-section .tab-view:after {
+
+    		left: 113px;
+
+    	}
+
+    	.tab-section .tab-view .tabrw:after {
+
+    		left: 102px;
+
+    	}
+
+    	.training-wrap a {
+
+    		padding: 13px;
+
+    	}
+
+    	.wd260 {
+
+    		width: 170px;
+
+    		margin-left: 20px;
+
+    	}
+
+    	.videoslidebx {
+
+    		width: 280px;
+
+    		height: 175px;
+
+    		border-width:5px;
+
+    		margin-left: 16px !important;
+
+    	}
+
+    	.tab-view .tabrw .right-content,
+    	.tab-view .tabrw .right-description {
+    		margin-left: 5px;
+    		letter-spacing: -0.3px;
+    	}
+
+    	#innovateVideo button.close{
+
+    		right:0;
+
+    	}
+
+    	.homepgbaner .rtsidedeign {
+
+    		width: 300px;
+
+    		height: 320px;
+
+    	}
+
+    }
+
+    @media only screen and (max-width: 1023px) and (min-width: 992px) {
+
+    	.wd260 {
+
+    		padding-left: 55px;
+
+    	}
+
+    }
+
+
+
+/* Custom Styles */
+@media only screen and (max-width: 480px) {
+    .homepgbanCon h1 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .homepgbanCon {
+        margin-bottom: -20px;
+    }
+}

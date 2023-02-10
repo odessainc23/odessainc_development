@@ -1,0 +1,259 @@
+// =============================================================================
+// CSS3 - SCSS/ADMIN/INC/MIXINS/_CSS3.SCSS
+// -----------------------------------------------------------------------------
+// Contains all css3 mixins.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Box Model
+//     a. Box Sizing
+//     b. Box Shadow
+// 02. Border Radius
+// 03. Animations
+// 04. Transitions
+// 05. Transformation
+//     a. Translate
+//     b. Translate X
+//     c. Translate Y
+//     d. Translate 3D
+//     e. Scale
+//     f. Scale X
+//     g. Scale Y
+//     h. Scale 3D
+//     i. Rotate
+//     j. Rotate X
+//     k. Rotate Y
+//     l. Skew
+//     m. Transform Style
+// 06. Backface Visibility
+// 07. Perspective
+// 08. User Select
+// 09. Opacity
+// 10. Hypenation
+// 11. Content Columns
+// =============================================================================
+
+// Box Model
+// =============================================================================
+
+// Box Sizing
+// -------------------------
+
+@mixin box-sizing($boxModel) {
+	box-sizing: $boxModel;
+}
+
+// Box Shadow
+// -------------------------
+
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow;
+}
+
+
+// Border Radius
+// =============================================================================
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+@mixin border-radius-right($radius) {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius) {
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+
+// Animations
+// =============================================================================
+
+@mixin animate($animation) {
+	animation: $animation;
+}
+
+
+// Transitions
+// =============================================================================
+
+@mixin transition($transition) {
+	transition: $transition;
+}
+
+
+// Transformation
+// =============================================================================
+
+// Translate
+// -------------------------
+
+@mixin transform-translate($x, $y) {
+	transform: translate($x, $y);
+}
+
+// Translate X
+// -------------------------
+
+@mixin transform-translate-x($x) {
+	transform: translateX($x);
+}
+
+// Translate Y
+// -------------------------
+
+@mixin transform-translate-y($y) {
+	transform: translateY($y);
+}
+
+// Translate 3D
+// -------------------------
+
+@mixin transform-translate3d($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+}
+
+// Scale
+// -------------------------
+
+@mixin transform-scale($x, $y) {
+	transform: scale($x, $y);
+}
+
+// Scale X
+// -------------------------
+
+@mixin transform-scale-x($x) {
+	transform: scaleX($x);
+}
+
+// Scale Y
+// -------------------------
+
+@mixin transform-scale-y($y) {
+	transform: scaleY($y);
+}
+
+// Scale 3D
+// -------------------------
+
+@mixin transform-scale3d($x, $y, $z) {
+	transform: scale3d($x, $y, $z);
+}
+
+// Rotate
+// -------------------------
+
+@mixin transform-rotate($degrees) {
+	transform: rotate($degrees);
+}
+
+// Rotate X
+// -------------------------
+
+@mixin transform-rotate-x($degrees) {
+	transform: rotateX($degrees);
+}
+
+// Rotate Y
+// -------------------------
+
+@mixin transform-rotate-y($degrees) {
+	transform: rotateY($degrees);
+}
+
+// Skew
+// -------------------------
+
+@mixin transform-skew($x, $y) {
+	transform: skew($x, $y);
+}
+
+// Transform style
+// -------------------------
+
+@mixin transform-style($style) {
+	transform-style: $style;
+}
+
+
+// Backface Visibility
+// =============================================================================
+
+@mixin backface-visibility($visibility) {
+	backface-visibility: $visibility;
+}
+
+
+// Perspective
+// =============================================================================
+
+@mixin perspective($value) {
+	perspective: $value;
+}
+
+
+// User Select
+// =============================================================================
+
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+		-moz-user-select: $select;
+			-o-user-select: $select;
+				user-select: $select;
+}
+
+
+// Opacity
+// =============================================================================
+
+@mixin opacity($opacity: 0.5) {
+	opacity: $opacity;
+	$ie-opacity: $opacity * 100;
+	filter: alpha(opacity=$ie-opacity); //IE8
+}
+
+
+// Hypenation
+// =============================================================================
+
+@mixin hyphens($mode: auto) {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-wrap: break-word;
+	-webkit-hyphens: $mode;
+		-ms-hyphens: $mode;
+			-moz-hyphens: $mode;
+				-o-hyphens: $mode;
+					hyphens: $mode;
+}
+
+// Content Columns
+// =============================================================================
+
+@mixin content-columns($columnCount: 2, $columnGap: 3em, $columnRule: 1px solid #e5e5e5) {
+	-webkit-column-count: $columnCount;
+		-moz-column-count: $columnCount;
+			column-count: $columnCount;
+	-webkit-column-gap: $columnGap;
+		-moz-column-gap: $columnGap;
+			column-gap: $columnGap;
+	-webkit-column-rule: $columnRule;
+		-moz-column-rule: $columnRule;
+			column-rule: $columnRule;
+}

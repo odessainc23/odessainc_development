@@ -1,0 +1,121 @@
+// =============================================================================
+// Grid - SASS/SITE/COMPONENTS/_GRID.SCSS
+// -----------------------------------------------------------------------------
+// Contains grid styles for Odessa Inc.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Basic Styles
+// 02. Gutter Spacing
+// 03. Make Grid
+// =============================================================================
+
+// Basic Styles
+// ====================================================================================================
+
+.odc-gd__container {
+    width: 90%;
+	max-width: 1920px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.odc-gd__container-fluid {
+	width: 100%;
+	max-width: 1920px;
+}
+
+.odc-gd__row {
+	@include flexbox();
+	@include flex-wrap(wrap);
+	@include rem-convert(margin-right, -$gridGutterWidth);
+	@include rem-convert(margin-left, -$gridGutterWidth);
+}
+
+// Gutter Spacing
+// ====================================================================================================
+
+.odc-gd__gutter-0 {
+	margin-right: 0;
+	margin-left: 0;
+
+	> [class*="odc-gd__col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.odc-gd__gutter-2 {
+	@include rem-convert(margin-right, -2px);
+	@include rem-convert(margin-left, -2px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 2px);
+		@include rem-convert(padding-left, 2px);
+	}
+}
+
+.odc-gd__gutter-3 {
+	@include rem-convert(margin-right, -3px);
+	@include rem-convert(margin-left, -3px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 3px);
+		@include rem-convert(padding-left, 3px);
+	}
+}
+
+.odc-gd__gutter-5 {
+	@include rem-convert(margin-right, -5px);
+	@include rem-convert(margin-left, -5px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 5px);
+		@include rem-convert(padding-left, 5px);
+	}
+}
+
+.odc-gd__gutter-10 {
+	@include rem-convert(margin-right, -10px);
+	@include rem-convert(margin-left, -10px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 10px);
+		@include rem-convert(padding-left, 10px);
+	}
+}
+
+.odc-gd__gutter-15 {
+	@include rem-convert(margin-right, -15px);
+	@include rem-convert(margin-left, -15px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 15px);
+		@include rem-convert(padding-left, 15px);
+	}
+}
+
+.odc-gd__gutter-20 {
+	@include rem-convert(margin-right, -20px);
+	@include rem-convert(margin-left, -20px);
+
+	> [class*="odc-gd__col-"] {
+		@include rem-convert(padding-right, 20px);
+		@include rem-convert(padding-left, 20px);
+	}
+}
+
+// Make Grid
+// ====================================================================================================
+
+@include make-grid(xs);
+
+@each $breakpoint in map-keys($screenBreakStack) {
+	@include breakpoints-min ($breakpoint) {
+		@include make-grid($breakpoint);
+	}
+}

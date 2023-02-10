@@ -1,0 +1,103 @@
+// =============================================================================
+// Grid - SCSS/SITE/INC/MIXINS/_GRID.SCSS
+// -----------------------------------------------------------------------------
+// Contains all grid mixins.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Make Grid
+// 02. Make Grid Columns
+// 05. Loop Grid Columns
+// =============================================================================
+
+// Make Grid
+// =============================================================================
+
+@mixin make-grid($class) {
+	@include grid-columns($class);
+
+	.odc-gd__col-#{$class} {
+		@include flex-basis(0);
+		@include flex-grow(1);
+		max-width: 100%;
+		width: 100%;
+	}
+
+	@include loop-grid-columns($gridColumns, $class, width);
+	@include loop-grid-columns($gridColumns, $class, pull);
+	@include loop-grid-columns($gridColumns, $class, push);
+	@include loop-grid-columns($gridColumns, $class, offset);
+}
+
+// Make Grid Columns
+// =============================================================================
+
+@mixin grid-columns($class, $i: 1, $list: ".odc-gd__col-#{$class}-#{$i}") {
+	@for $i from (1 + 1) through $gridColumns {
+		$list: "#{$list}, .odc-gd__col-#{$class}-#{$i}";
+	}
+
+	.odc-gd__col-#{$class}, #{$list} {
+		@include flex(0, 0, auto);
+		@include rem-convert(padding-right, $gridGutterWidth);
+		@include rem-convert(padding-left, $gridGutterWidth);
+	}
+}
+
+// Loop Grid Columns
+// =============================================================================
+
+@mixin loop-grid-columns($columns, $class, $type) {
+	@for $i from 0 through $columns {
+		@include calc-flex-column($i, $class, $type);
+	}
+}
+
+// Calculate Flex Columns
+// =============================================================================
+
+@mixin calc-flex-column($index, $class, $type) {
+	@if ($type == width) and ($index > 0) {
+		.odc-gd__col-#{$class}-#{$index} {
+			@if ($index == 55) {
+				width: 20%;
+				max-width: 20%;
+				@include flex(0, 0, 20%);
+			} @else {
+				width: percentage(($index / $gridColumns));
+				max-width: percentage(($index / $gridColumns));
+				@include flex(0, 0, percentage(($index / $gridColumns)));
+			}
+		}
+	}
+
+	@if ($type == pull) and ($index < $gridColumns) {
+		.odc-gd__pull-#{$class}-#{$index} {
+			@if ($index == 0) {
+				right: auto;
+			} @else {
+				right: percentage(($index / $gridColumns));
+			}
+		}
+	}
+
+	@if ($type == push) and ($index < $gridColumns) {
+		.odc-gd__push-#{$class}-#{$index} {
+			@if ($index == 0) {
+				left: auto;
+			} @else {
+				left: percentage(($index / $gridColumns));
+			}
+		}
+	}
+
+	@if ($type == offset) and ($index < $gridColumns) {
+		.odc-gd__offset-#{$class}-#{$index} {
+			@if ($index != 0) {
+				margin-left: percentage(($index / $gridColumns));
+			}
+		}
+	}
+}

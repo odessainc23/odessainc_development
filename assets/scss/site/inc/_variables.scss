@@ -1,0 +1,141 @@
+// ====================================================================================================
+// Variables - SCSS/SITE/INC/_VARIABLES.SCSS
+// ----------------------------------------------------------------------------------------------------
+// Variables are used to store values like like colors, font stacks, or any
+// constant CSS value you think you'll want to reuse. Variables are declared
+// using the $ symbol. To know more about variables, visit here:
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_
+// ====================================================================================================
+
+// ====================================================================================================
+// TABLE OF CONTENTS
+// ----------------------------------------------------------------------------------------------------
+// 01. Appearance
+// 02. Scaffoldings
+//     a. Body
+//     b. Links
+// 03. Typography
+//     a. Font Family
+//     b. Base Styles
+//     c. Font Sizes
+//     d. Headings
+//     e. Inline Text Elements
+//     f. Miscellaneous
+// 04. Forms
+//     a. Label & Legend
+//     b. Input
+//     c. Checkbox & Radio
+//     d. Custom Select
+//     e. Custom Checkbox & Radio
+//     f. Custom File Upload
+// 05. Cursor
+// 06. Components
+//     a. Tooltip
+//     b. Alerts
+//     c. Dropdowns
+//     d. Popover
+//     e. Buttons
+//     f. List Groups
+//     g. Navs
+//     h. Badges
+//     i. Labels
+// 07. Miscellaneous
+//     a. Caret
+// ====================================================================================================
+
+// Appearance
+// ====================================================================================================
+
+$accentBgColor:								#009CD7											!default;
+$accentHoverColor:							#0071BF											!default;
+$accentDarkHoverColor:						#00C7EA											!default;
+
+$textPrimaryColor:							#7A6FBE											!default;
+$textPrimaryHoverColor:						#6458B3											!default;
+$textSuccessColor:							#30BB74											!default;
+$textSuccessHoverColor:						#29A063											!default;
+$textInfoColor:								#23B7E5											!default;
+$textInfoHoverColor:						#169AC3											!default;
+$textWarningColor:							#FCD76A											!default;
+$textWarningHoverColor:						#FBCC42											!default;
+$textDangerColor:							#F25656											!default;
+$textDangerHoverColor:						#E14444											!default;
+
+// Scaffoldings
+// ====================================================================================================
+
+// Body
+// -------------------------
+$bodyBackground:							#FFFFFF											!default;
+$bodySecondaryBackground:					#F2F2F2											!default;
+$bodySecondaryLightBackground:				#E5E5E5											!default;
+$bodyTextColor:								#666666											!default;
+$bodyDarkTextColor:							#151515											!default;
+$bodyDarkMobileTextColor:					#555											!default;
+$bodySecondaryTextColor:					#777777											!default;
+$bodySecondaryLightTextColor:				#999999											!default;
+
+// Links
+// -------------------------
+$linkColor:									$bodyTextColor									!default;
+$linkColorHover:							#333333											!default;
+$linkDecoration:							none											!default;
+$linkHoverDecoration:						none											!default;
+$linkTransitions:							color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease		!default;
+
+
+// Typography
+// ====================================================================================================
+
+// Font Family
+// -------------------------
+$sansFontFamily:							'MaisonNeue-Bold'								!default;
+$sansCondensedFontFamily:					'MaisonNeue-Book'								!default;
+$altSansFontFamily:							$lato											!default;
+$monoFontFamily:							$consolas										!default;
+
+// Base Styles
+// -------------------------
+$baseFontSize:								15px											!default;
+$baseLineHeight:							1.7												!default;
+$baseFontWeight:							400												!default;
+$baseFontFamily:							$sansCondensedFontFamily						!default;
+$baseSpacing:								15px											!default;
+$baseBackgroundColor:						#BEC0C2											!default;
+$baseBorderColor:							rgba(0, 0, 0, 0.15)								!default;
+$baseBorderWidth:							1px												!default;
+$baseBorderRadius:							5px												!default;
+
+// Headings
+// -------------------------
+$headingLineHeight:							1.4												!default;
+$headingFontFamily:							$sansFontFamily									!default;
+$headingFontWeight:							400												!default;
+$headingBaseSpacing:						$baseSpacing									!default;
+$headingColor:								$bodySecondaryTextColor							!default;
+$headingSmallColor:							$colorGrayLight									!default;
+$headingLinkColor:							inherit											!default;
+$headingLinkHoverColor:						$accentBgColor									!default;
+
+// Components
+// ====================================================================================================
+
+// Tooltip
+// -------------------------
+$tooltipZindex:								999996											!default;
+$tooltipArrowSize:							5px												!default;
+$tooltipMaxWidth:							200px											!default;
+$tooltipMargin:								3px												!default;
+$tooltipColor:								#F2F2F2											!default;
+$tooltipBg:									rgba(0, 0, 0, 0.9)								!default;
+$tooltipFontSize:							12px											!default;
+
+// Buttons
+// -------------------------
+$buttonDefaultFontSize:						13px											!default;
+$buttonDefaultLineHeight:					28px											!default;
+$buttonDefaultColor:						#4A525F											!default;
+$buttonDefaultHoverColor:					$accentDarkHoverColor							!default;
+$buttonDefaultBackground:					#FFF											!default;
+$buttonDefaultBoxShadow: 					inset 0 0 0 1px rgba(100,121,143,0.302)			!default;
+$buttonDefaultBorderRadius:					2px	 											!default;

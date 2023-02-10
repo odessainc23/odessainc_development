@@ -1,0 +1,161 @@
+// Head Banner
+// =============================================================================
+
+.pglead__banner {
+	.odc-gd__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.pglead__btop {
+	z-index: 99;
+}
+
+.pglead__btext {
+	padding: 0 20px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.leader_person .leader_img {
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+section.leadership_header p {
+	margin-bottom: 40px;
+}
+
+div.leader_person .memberwrapperdiv .memberblock.selected .leaderdivwr {
+	margin-bottom: 20px;
+}
+
+div.leader_person .memberwrapperdiv .memberblock .leaderdivwr {
+	padding: 0;
+}
+
+div.leader_person .memberwrapperdiv .memberblock .leaderdivwr .leader_info {
+	padding: 0 20px;
+}
+
+
+div.leader_person .leader_info div.leadername {
+	font-size: 16px;
+}
+
+div.leader_person .leader_info div.leaderdeg {
+	font-size: 14px;
+}
+
+div.leader_person .leader_info div.leaderexp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+div.leader_person .leader_info div.leaderexp .leadericon {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+div.leader_person .leader_info div.leaderexp span.leadericon a {
+	margin-right: 7px;
+	width: 16px;
+	height: 16px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+div.leader_person .leader_info div.leaderexp span.leadericon a.linkedin {
+	fill: #0f6fc6;
+}
+
+div.leader_person .leader_info div.leaderexp span.leadericon a.twitter {
+	fill: #00abc7;
+}
+
+.innovate_section .odc__btn {
+	padding: 0 40px;
+}
+
+.leadershipmembermodal {
+	padding: 40px 40px;
+	margin-bottom: 60px;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+	border: none;
+}
+
+.leadershipmembermodal p {
+	font-size: 16px;
+}
+
+.leadershipmembermodal .close {
+	color: #555b6d;
+	font-size: 35px;
+}
+
+.leadershipmembermodal h3 {
+	font-size: 1.2rem;
+}
+
+.leadershipmembermodal span {
+	font-size: 1.1rem;
+}
+
+// Responsive
+// =============================================================================
+
+@media (min-width: $screenBreak-XXS) {
+	
+}
+
+@media (min-width: $screenBreak-XS) {
+	.pglead__btext {
+		max-width: 90%;
+	}
+
+	.leadershipmembermodal {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pglead__banner {
+		padding: 70px 0 70px 0;
+	}
+
+	.pglead__btext {
+		max-width: 70%;
+	}
+
+	.leader_person .leader_img {
+		max-width: 150px;
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+
+}

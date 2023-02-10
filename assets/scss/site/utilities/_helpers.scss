@@ -1,0 +1,173 @@
+// =============================================================================
+// Utility Helpers - SASS/UTILITIES/_HELPERS.SCSS
+// -----------------------------------------------------------------------------
+// Contains helper class styles for Odessa Inc.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Clearfix
+// 02. Text Colors
+// 03. Image Sizes
+// 04. Flexbox Helpers
+// 05. Spacing Helpers
+// =============================================================================
+
+// Clearfix
+// =============================================================================
+
+.od-clearfix {
+	@include clearfix();
+}
+
+// Text Colors
+// =============================================================================
+
+.od-text--primary {
+	color: $textPrimaryColor;
+}
+
+a.od-text--primary:hover,
+a.od-text--primary:focus {
+	color: $textPrimaryHoverColor;
+}
+
+.od-text--success {
+	color: $textSuccessColor;
+}
+
+a.od-text--success:hover,
+a.od-text--success:focus {
+	color: $textSuccessHoverColor;
+}
+
+.od-text--info {
+	color: $textInfoColor;
+}
+
+a.od-text--info:hover,
+a.od-text--info:focus {
+	color: $textInfoHoverColor;
+}
+
+.od-text--warning {
+	color: $textWarningColor;
+}
+
+a.od-text--warning:hover,
+a.od-text--warning:focus {
+	color: $textWarningHoverColor;
+}
+
+.od-text--danger {
+	color: $textDangerColor;
+}
+
+a.od-text--danger:hover,
+a.od-text--danger:focus {
+	color: $textDangerHoverColor;
+}
+
+// Image Sizes
+// =============================================================================
+
+.od-img--responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.od-img--rounded {
+	@include rem-convert(border-radius, 5px);
+}
+
+.od-img--circle {
+	@include border-radius(50%);
+}
+
+// Flexbox Helpers
+// =============================================================================
+
+.od-flex {
+	@include flexbox();
+}
+
+.od-flex--row {
+	@include flex-direction(row);
+}
+
+.od-flex--row-reverse {
+	@include flex-direction(row-reverse);
+}
+
+.od-flex--column {
+	@include flex-direction(column);
+}
+
+.od-flex--column-reverse {
+	@include flex-direction(column-reverse);
+}
+
+.od-flex--center {
+	@include flexbox();
+	justify-content: center;
+	align-items: center;
+}
+
+.od-flex--vcenter {
+	@include flexbox();
+	align-items: center;
+}
+
+.od-flex--hcenter {
+	@include flexbox();
+	@include flex-justify-content(center);
+	text-align: center;
+}
+
+.od-flex--hstart {
+	@include flex-justify-content(flex-start);
+	text-align: start;
+}
+
+.od-flex--hend {
+	@include flex-justify-content(flex-end);
+	text-align: end;
+}
+
+.od-flex--vstart {
+	@include flex-align(flex-start);
+}
+
+.od-flex--vend {
+	@include flex-align(flex-end);
+}
+
+.od-flex--around {
+	@include flex-justify-content(space-around);
+}
+
+.od-flex--between {
+	@include flex-justify-content(space-between);
+}
+
+
+// Spacing Helpers
+// =============================================================================
+$space-units	: px											!default;
+$space-values	: ( 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 )	!default;
+$space-prefix	: (
+	od-p  : padding,
+	od-pt : padding-top,
+	od-pr : padding-right,
+	od-pb : padding-bottom,
+	od-pl : padding-left,
+	od-m  : margin,
+	od-mt : margin-top,
+	od-mr : margin-right,
+	od-mb : margin-bottom,
+	od-ml : margin-left
+)												!default;
+
+@include make-space($space-values, $space-units, $space-prefix);

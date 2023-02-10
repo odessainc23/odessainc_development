@@ -1,0 +1,118 @@
+// =============================================================================
+// Media Queries - SCSS/ADMIN/INC/MIXINS/_MEDIA_QUERIES.SCSS
+// -----------------------------------------------------------------------------
+// Media queries allows you to render content that adapt to conditions based
+// on screen resolution. We have implemented mobile first, non mobile and
+// between method breakpoints. You can even add your custom breakpoints values.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Mobile First Method
+// 02. Non Mobile First Method
+// 03. Between Breakpoint Method
+// =============================================================================
+
+// Mobile First Method
+// =============================================================================
+
+@mixin breakpoints-min($point, $value: 0) {
+	@if $point == medium or $point == xs {
+		@media (min-width: $screenBreak-XS) {
+			@content;
+		}
+	}
+
+	@else if $point == large or $point == sm {
+		@media (min-width: $screenBreak-SM) {
+			@content;
+		}
+	}
+
+	@else if $point == large or $point == md {
+		@media (min-width: $screenBreak-MD) {
+			@content;
+		}
+	}
+	
+	@else if $point == large or $point == lg {
+		@media (min-width: $screenBreak-LG) {
+			@content;
+		}
+	}
+
+	@else if $point == xlarge or $point == xl {
+		@media (min-width: $screenBreak-XL) {
+			@content;
+		}
+	}
+
+	@else if $point == xlarge or $point == xxl {
+		@media (min-width: $screenBreak-XXL) {
+			@content;
+		}
+	}
+
+	@else if $point == xlarge or $point == xxxl {
+		@media (min-width: $screenBreak-XXXL) {
+			@content;
+		}
+	}
+	
+	@else {
+		@media (min-width: $value) {
+			@content;
+		}
+	}
+}
+
+// Non Mobile First Method
+// =============================================================================
+
+@mixin breakpoints-max($point, $value: 0) {
+	@if $point == medium or $point == md {
+		@media (max-width: $screenBreak-XS) {
+			@content;
+		}
+	}
+
+	@else if $point == large or $point == lg {
+		@media (max-width: $screenBreak-SM) {
+			@content;
+		}
+	}
+
+	@else if $point == xlarge or $point == xl {
+		@media (max-width: $screenBreak-MD) {
+			@content;
+		}
+	}
+
+	@else if $point == xxlarge or $point == xxl {
+		@media (max-width: $screenBreak-LG) {
+			@content;
+		}
+	}
+
+	@else if $point == xxxlarge or $point == xxxl {
+		@media (max-width: $screenBreak-XXL) {
+			@content;
+		}
+	}
+
+	@else {
+		@media (max-width: $value) {
+			@content;
+		}
+	}
+}
+
+// Between Breakpoint Method
+// =============================================================================
+
+@mixin between-breakpoints($min, $max) {
+	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}

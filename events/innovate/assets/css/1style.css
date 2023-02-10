@@ -1,0 +1,915 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+html, body {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+body {
+	font-family: 'OpenSans';
+	background: #fff;
+	min-height: 100%;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf')  format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf')  format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaisonNeue-Bold';
+  src: url('../fonts/MaisonNeue-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/MaisonNeue-Bold.otf')  format('opentype'),
+	     url('../fonts/MaisonNeue-Bold.woff') format('woff'), url('../fonts/MaisonNeue-Bold.ttf')  format('truetype'), url('../fonts/MaisonNeue-Bold.svg#MaisonNeue-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold.woff') format('woff'), url('OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'MaisonNeue-Book';
+  src: url('../fonts/MaisonNeue-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/MaisonNeue-Book.otf')  format('opentype'),
+	     url('../fonts/MaisonNeue-Book.woff') format('woff'), url('../fonts/MaisonNeue-Book.ttf')  format('truetype'), url('../fonts/MaisonNeue-Book.svg#MaisonNeue-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#wrapper {
+	position: relative;
+}
+.container{
+	width: 1200px;
+}
+/*Header Section Start Here*/
+.navbar-default {
+	background-color: #fff;
+	border: 0;
+	margin-bottom: 0;
+	max-width: 1920px;
+	height: 90px;
+	margin: auto;
+}
+.navbar-default.innerpg{
+	background: url(../images/header_bg.png) no-repeat top right #fff;
+	background-size: 1000px;
+}
+.navbar-default .container{
+	position: relative;
+}
+.navbar-default .container .regheaderbtn{
+	font-family: 'MaisonNeue-Book';
+	position: absolute;
+	top:20px;
+	right: 0;
+	width: 150px;
+	padding: 12px 0 9px 0;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	border:2px solid #f14b95;
+	background-color: #f14b95;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.navbar-default.innerpg .container .regheaderbtn{
+	color: #565a73;
+	border:2px solid #fff;
+	background-color: #fff;
+}
+.navbar-default .container .regheaderbtn:hover{
+	color: #f14b95;
+	background-color: #fff;
+}
+.navbar-brand {
+	width: 180px;
+	height:47px;
+	background: url(../images/innovate_logo.png) no-repeat center center;
+	background-size: 100% 100%;
+	display: block;
+	text-indent: -9999px;
+	margin: 15px 0;
+	margin-left: 0;
+	padding: 0;
+}
+/*Header Section End Here*/
+
+/*Banner Section Start Here*/
+.homepgbaner{
+	position: relative;
+	height: 760px;
+	max-width: 1920px;
+	margin: auto;
+	overflow: hidden;
+}
+.homepgbaner .bannerconwrap{
+	position: relative;
+	max-width: 1300px;
+	height: 760px;
+}
+.homepgbaner .rtsidedeign{
+	position: absolute;
+	right:0px;
+	bottom:-2px;
+	width: 600px;
+	height: 639px;
+	background: url(../images/home_banner_rt_design.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+}
+.homepgbaner .teamban{
+	position: absolute;
+	right:500px;
+	bottom: -80px;
+	width:1000px;
+	height: 594px;
+	background: url(../images/innovate_odessa_leasing_philadelphia.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+}
+.homepgbanCon{
+	margin-top: 100px;
+	margin-left: 300px;
+	max-width: 500px;
+}
+.homepgbanCon h1{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 36px;
+	line-height: 50px;
+	color: #00adc8;
+	margin-top: 0;
+}
+.homepgbanCon h3{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 24px;
+	line-height: 36px;
+	color: #345671;
+	margin-top: 0;
+}
+.sminfotext{
+	font-family: 'OpenSans-Light';
+	font-size: 21px;
+	line-height: 36px;
+	color: #00ACC8;
+}
+.navbar-default .navbar-nav > li > a{
+	font-family: 'MaisonNeue-Book';
+	padding: 12px 20px;
+	font-size: 16px;
+	color: #263746;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.navbar-default.innerpg .navbar-nav > li > a{
+	color: #fff;
+}
+.navbar-default .navbar-nav > li:hover > a{
+	color: #f14b95;
+}
+.navbar-right{
+	margin-top: 25px;
+	margin-right: 170px;
+}
+/*Banner Section End Here*/
+
+/*What Innovate Section Start Here*/
+.innovate_section{
+	position: relative;
+	max-width: 1920px;
+	margin: auto;
+	border-top:1px solid #dfe3e4;
+	padding-bottom: 80px;
+	background-color: #fff;
+}
+.bannerlines{
+	position: absolute;
+	right:100px;
+	top:0;
+	width: 1200px;
+	height: 1200px;
+	background: url(../images/banner_lines_drop.png) no-repeat;
+	background-size: 100% 100%;
+}
+.bannerlines.nextone{
+	right:420px;
+	width: 1300px;
+	height: 1300px;
+}
+.bannerlines.next_two{
+	right:600px;
+	width:840px;
+	height: 840px;
+}
+.innovate_section .inovateimgbx{
+	position: relative;
+}
+.loactionicon{
+	position: absolute;
+	top: -30px;
+	left: -150px;
+	width: 130px;
+	height: 135px;
+	background: url(../images/location_icon.png) no-repeat;
+	background-size: 100% 100%;
+}
+.innovate_section .container_wd{
+	position: absolute;
+	left: 50%;
+	top:120px;
+	width: 1200px;
+	margin-left: -600px;
+}
+.innovate_section .container_wd .what_innovate_heading{
+	font-family: 'MaisonNeue-Bold';
+	float: left;
+	font-size: 36px;
+	line-height: 50px;
+	color: #fff;
+}
+.innovate_section .aboutinnovationCon{
+	position: relative;
+	float: right;
+	width: 440px;
+}
+.aboutinnovationCon .aboutinnovationbd{
+	font-family: 'OpenSans-Bold';
+	font-size: 21px;
+	color: #00aec6;
+	line-height: 36px;
+	text-align: justify;
+}
+.aboutinnovationCon .innovateinfo{
+	font-size: 21px;
+	color: #6b7084;
+	line-height: 36px;
+	margin-top: 40px;
+	text-align: justify;
+}
+.aboutinnovationCon .innovateinfo a {
+	color: #ED1E79;
+}
+.aboutinnovationCon .innovateinfo p{
+	margin-bottom: 20px;
+}
+/*What Innovate Section End Here*/
+
+/*Expect Innovate Section Start Here*/
+.expectinnovatewrap{
+	border-top:1px solid #dfe3e4;
+	border-bottom:1px solid #dfe3e4;
+	background-color: #f4fcff;
+	max-width: 1920px;
+	margin: auto;
+}
+.expectinnovatewrap .container{
+	position: relative;
+	padding: 80px 15px;
+}
+.expectinnovatewrap .container .expectmobimg{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.expectinnovatewrap .container .expectmobimg img{
+	width: 500px;
+	height: auto;
+}
+.expectinnovateConbx{
+	margin: 0;
+}
+.expectinnovateConrow{
+	position: relative;
+	margin-bottom: 30px;
+}
+.expectinnovateConrow .exinnovateiconbx{
+	position: relative;
+	width: 130px;
+	height: 136px;
+	float: left;
+	background: url(../images/expect_innovate_icon.png) no-repeat;
+	background-size: 130px 680px;
+	display: block;
+}
+.expectinnovateConrow .exinnovateiconbx.trainingpass{
+	background-position: 0 0;
+}
+.expectinnovateConrow .exinnovateiconbx.platform{
+	background-position: 0 -136px;
+}
+.expectinnovateConrow .exinnovateiconbx.business_transformation{
+	background-position: 0 -272px;
+}
+.expectinnovateConrow .exinnovateiconbx.networking{
+	background-position: 0 -408px;
+}
+.expectinnovateConrow .exinnovateiconbx.rollin{
+	background-position: 0 -544px;
+}
+.expectinnovateConrow  .expectinnovateContextbx{
+	margin-left: 150px;
+	padding-top: 27px;
+}
+.expectinnovateContextbx .heading_title{
+	font-family: 'OpenSans-Semibold';
+	font-size: 24px;
+	line-height: 30px;
+	color: #00ACC8;
+	margin-bottom: 10px;
+}
+.expectinnovateContextbx .nortext{
+	font-size: 21px;
+    color: #565B73;
+	line-height: 36px;
+}
+.expectinnovateleftbox{
+	margin-top: 30px;
+}
+.expectinnovateleftbox.martp{
+	margin-top: 0;
+	padding-right: 20px;
+}
+.expectinnovateleftbox h2{
+	font-family: 'MaisonNeue-Bold';
+    font-size: 36px;
+    line-height: 40px;
+    color: #345671;
+    margin-top: 0;
+}
+.expectinnovateleftbox .what_expect_nor_text {
+    font-size: 21px;
+    color: #6b7084;
+    line-height: 36px;
+    margin-top: 30px;
+}
+.expectinnovateleftbox .what_expect_nor_text p{
+	margin-bottom: 10px;
+}
+.expectinnovateleftbox .what_expect_nor_text a{
+	color: #ED1E79;
+}
+/*Expect Innovate Section End Here*/
+
+/*Innovate Sponsor Section Start Here*/
+.innovate_sponsor_wrap{
+	position: relative;
+	max-width: 1920px;
+	margin: auto;
+	padding: 240px 0;
+	background: url(../images/innovate_sponsor_bg.jpg) no-repeat;
+	background-size:cover;
+}
+.innovate_sponsor_wrap .headingSponsor{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 36px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}
+.innovate_sponsor_wrap .sponsortxt {
+	font-size: 21px;
+	color: #fff;
+	text-align: center;
+	line-height: 36px;
+	max-width: 75%;
+	padding: 50px 0 30px 0;
+	margin:0 auto;
+}
+.innovate_sponsor_wrap .linkbtnrw,.innovate_sponsor_wrap .linktextrw{
+	text-align: center;
+}
+.innovate_sponsor_wrap .linkbtnrw .emailbtn{
+	padding: 12px 30px;
+	border-radius: 4px;
+	font-size: 16px;
+	color: #263746;
+	background-color: #fff;
+	display: inline-block;
+	text-decoration: none;
+}
+.innovate_sponsor_wrap .linktextrw .downloadlink{
+	font-size: 16px;
+	color: #fff;
+	text-decoration:underline;
+	display: inline-block;
+	margin-top: 30px;
+}
+.innovate_sponsor_wrap .verteximgrw{
+	text-align: center;
+	margin-top: 50px;
+}
+.innovate_sponsor_wrap .verteximgrw .verteximgbx{
+	position: relative;
+	width: 260px;
+	height:auto;
+	margin-right: 50px;
+	display: inline-block;
+}
+.innovate_sponsor_wrap .verteximgrw .verteximgbx img{
+	width: 100%;
+	height: auto;
+}
+.grtAmericansg{
+	position: absolute;
+	right: -500px;
+	bottom: -50px;
+	width: 210px;
+	height: 94px;
+	background: url(../images/great_americans.png) no-repeat;
+	background-size:100% 100%;
+}
+.toprtdesignban{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 218px;
+	height: 216px;
+	background: url(../images/toprt_triangle_design.png) no-repeat;
+	background-size:100% 100%;
+}
+.btrtdesignban{
+	position: absolute;
+	left:0;
+	bottom: 0;
+	width: 218px;
+	height: 217px;
+	background: url(../images/toprt_triangle_design1.png) no-repeat;
+	background-size:100% 100%;
+}
+/*Innovate Sponsor Section End Here*/
+
+/*Pricing Section Start Here*/
+.pricingsectionwrap{
+	position: relative;
+	max-width: 1920px;
+	margin: auto;
+	padding: 80px 0;
+}
+.prrtdesign{
+	position: absolute;
+	top:50%;
+	right: 0;
+	width: 150px;
+	height: 301px;
+	margin-top: 125px;
+	background: url(../images/price_right_design.png) no-repeat;
+	background-size:100% 100%;
+	display: none;
+}
+.pricingheading{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 36px;
+	line-height: 50px;
+	color: #325670;
+	text-align: center;
+}
+.pricingConbox{
+	margin-top: 80px;
+}
+.pricingConbox .pricingdetailsrow{
+	margin-bottom: 50px;
+	text-align: center;
+}
+.pricingdetailsrow .pricingdetailsbx{
+	position: relative;
+	width: 700px;
+	padding: 50px;
+	display: inline-block;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0 10px 30px 0px rgba(0,0,0,0.060);
+}
+.pricingdetailsrow .pricingdetailsbx.trainingpass{
+	border: 2px solid #7fd5e2;
+	box-shadow: none;
+}
+.pricingdetailsrow .pricingdetailsbx .pricedropline{
+	position: absolute;
+	left:-210px;
+	top:-210px;
+	width: 212px;
+	height: 212px;
+	background: url(../images/price_drop_line1.png) no-repeat;
+	background-size:100% 100%;
+}
+.pricingdetailsrow .pricingdetailsbx .pricedropline.nextdrop{
+	left:100px;
+	top:-210px;
+	width: 210px;
+	height: 210px;
+}
+.pricingdetailsrow .pricingdetailsbx .innovatedropline{
+	position: absolute;
+	right:-600px;
+	bottom:-480px;
+	width: 600px;
+	height: 600px;
+	background: url(../images/price_drop_line.png) no-repeat;
+	background-size:100% 100%;
+}
+.pricingdetailsrow .pricingdetailsbx .innovateleftdropline{
+	position: absolute;
+	left:-600px;
+	top:-480px;
+	width: 600px;
+	height: 600px;
+	background: url(../images/price_drop_line.png) no-repeat;
+	background-size:100% 100%;
+}
+.pricingdetailsrow .pricingdetailsbx .innovateleftdropline1{
+	position: absolute;
+	right:-380px;
+	bottom:-640px;
+	width: 640px;
+	height: 640px;
+	background: url(../images/price_drop_line.png) no-repeat;
+	background-size:100% 100%;
+	z-index:0;
+}
+.innovatedateheading{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 36px;
+	line-height: 50px;
+	color: #ee1d79;
+	text-align: center;
+}
+.innovate_sm_heading{
+	position: relative;
+	font-family: 'OpenSans-Semibold';
+	font-size: 24px;
+	line-height: 36px;
+	color: #ee1d79;
+	text-align: center;
+	margin-bottom: 6px;
+	display: inline-block;
+}
+.innovate_sm_heading .basebtn{
+	font-family: 'OpenSans-Bold';
+	position: absolute;
+	top:-20px;
+	right:-120px;
+	padding:2px 20px;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 32px;
+	background-color: #00abc9;
+}
+.user_conference_rw{
+	font-size: 24px;
+	line-height: 36px;
+	color: #565B73;
+	text-align: center;
+}
+.user_conference_rw.shortCon{
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+.user_conference_rw.date{
+	font-family: 'OpenSans-Semibold';
+	font-size: 21px;
+	padding-top: 8px;
+	color: #00ACC8;
+}
+.earlybirdbx{
+	width: 80%;
+	padding: 15px;
+	border-radius: 4px;
+	margin: 30px auto;
+	background-color: #e5f7f9;
+}
+.earlybirdprice{
+	font-family: 'MaisonNeue-Bold';
+	font-size: 50px;
+	color: #01acc6;
+}
+.earlybirdtextCon{
+	margin: 0;
+}
+.pricesubheading{
+	font-family: 'OpenSans-Semibold';
+	font-size: 21px;
+	line-height: 24px;
+	color: #01acc6;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.pricenottext {
+	font-size: 17px;
+	color: #565B73;
+	line-height: 21px;
+	text-align: left;
+}
+.pricenottext.center{
+	text-align: center;
+	line-height: 24px;
+}
+.registerbtnrw{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.registerbtnrw.btm{
+	margin-bottom: 0;
+}
+.registerbtnrw a.regisbtnlink{
+	font-family: 'MaisonNeue-Book';
+	padding: 14px 80px;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 4px;
+	border:2px solid #ed1e79;
+	background-color: #ed1e79;
+	display: inline-block;
+	text-decoration: none;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.registerbtnrw a.regisbtnlink:hover{
+	color: #ed1e79;
+	background-color:transparent;
+}
+.innovatesmtext{
+	font-size: 21px;
+	color: #565B73;
+	line-height: 36px;
+}
+/*Pricing Section End Here*/
+
+/*Attend Innovate Section Start Here*/
+.attend_innovate_wrap{
+	position: relative;
+	padding: 80px 0;
+	max-width: 1920px;
+	margin: auto;
+}
+.attend_innovate_row{
+	margin-bottom:60px;
+}
+.attend_innovate_con_box{
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 30px 0px rgba(0,0,0,0.060);
+}
+.attend_innovate_con_box.equalh{
+	padding: 0;
+	margin: 0 20px;
+}
+.attend_innovate_con_box.equalh.none{
+	background-color: transparent;
+	box-shadow: none;
+}
+.row.margin_mn{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.eqWrap {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+}
+.equalHMWrap {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.attend_innovate_con_box .titlesh{
+	padding: 20px 20px 20px 80px;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 8px 8px 0 0;
+	background: url(../images/header_title_bg.png) top right no-repeat #01acc8;
+	background-size: 100px 72px;
+}
+.attend_innovate_con_box .attendContextrw {
+	padding: 20px;
+	font-size: 18px;
+	color: #565B73;
+	line-height: 36px;
+	border-bottom: 1px solid #e2e5ee;
+	border-radius: 0 0 8px 8px;
+}
+/*Attend Innovate Section End Here*/
+
+/*Register Section Starts Here*/
+.register-wrap {
+	margin-top: 90px;
+	margin-bottom: 80px;
+}
+.register-wrap .right-container .form-wrapper {
+	max-width: 430px;
+	width: 100%;
+	padding: 20px 30px;
+	box-shadow: 0px 0 48px rgba(190,190,190,0.22);
+	margin-top: 85px;
+	border-radius: 5px;
+}
+.right-container .form-wrapper h4 {
+	font-family: 'OpenSans-Semibold';
+	margin-top: 50px;
+	font-size: 23px;
+	color: #263746;
+	margin-bottom: 30px;
+}
+.form-wrapper .form-group{
+	margin-bottom: 30px;
+}
+.form-wrapper .cw-section input {
+    padding: 14px!important;
+    height: auto;
+    font-size: 16px;
+    color: #555b71;
+    border: 2px solid #4fc6da;
+    border-radius: 6px!important;
+    box-shadow: unset!important;
+    border-color: #4fc6da!important;
+    border-width: 2px!important;
+}
+.form-wrapper input::placeholder {
+	font-size: 16px;
+	color: #6a6f83;
+}
+.form-wrapper .cw-button.ng-scope {
+    text-align: left;
+}
+.form-wrapper .cw-button a.ng-binding {
+    background-color: #ed1e79!important;
+    border: 2px solid #ed1e79!important;
+    border-radius: 3px!important;
+    width: 140px;
+    color: #fff!important;
+    margin-bottom: 50px;
+    font-size: 16px!important;
+    height: 56px;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+    background-image: unset;
+    line-height: 40px;
+    text-align: center;
+}
+.form-wrapper .cw-button a.ng-binding:hover {
+	border:2px solid #ed1e79;
+	color: #ed1e79;
+	background-color: transparent;
+}
+.right-container .floatingimg {
+	position: absolute;
+	background-image: url('../images/register-img.png');
+	background-size: 100% 100%;
+	width: 380px;
+	height: 372px;
+	top: -85px;
+	right: -70px;
+}
+.padzero{
+	padding: 0;
+}
+.register-wrap .right-container {
+	position: relative;
+}
+.register-wrap .left-container h2 {
+	font-family: 'MaisonNeue-Bold';
+	font-size: 36px;
+	line-height: 40px;
+	color: #01acc8;
+	margin-bottom: 20px;
+	margin-top: 80px;
+}
+.register-wrap .left-container h2 span{
+	display: block;
+}
+.register-wrap .left-container h3 {
+	font-family: 'MaisonNeue-Bold';
+	color: #345671;
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 40px;
+}
+.details-wrap .tredingrw h4 {
+	color: #ed1e79;
+	font-size: 21px;
+}
+.details-wrap .tredingrw h4 em {
+	font-family: 'MaisonNeue-Bold';
+}
+.details-wrap .tredingrw {
+	position: relative;
+}
+.details-wrap .tredingrw .addrw {
+	position: absolute;
+	top: -16px;
+	left: 135px;
+	background-color: #00aec9;
+	display: inline-block;
+	color: #fff;
+	padding: 2px 9px 5px 9px;
+	border-radius: 30px;
+	font-size: 11px;
+	font-family: 'OpenSans-Semibold';
+	text-align: center;
+}
+.details-wrap .tredingrw .addrw.exclusive {
+	left: 240px;
+}
+.details-wrap .daterw {
+	color: #00aec9;
+	font-size: 20px;
+}
+.left-container .details-wrap {
+	margin-bottom: 35px;
+}
+.register-wrap .left-container {
+	max-width: 375px;
+	width: 100%;
+}
+.form-wrapper .cw-content {
+    height: auto!important;
+    overflow: unset;
+    border: 0px;
+}
+.form-wrapper .cw-wrapper {
+    background-color: unset!important;
+    width: 100%!important;
+    margin: 0px!important;
+}
+.form-wrapper .cw-content {
+    padding: 0px;
+}
+.form-wrapper .cw-control-body {
+    margin-bottom: 10px;
+}
+.form-wrapper .cw-section input:focus {
+    border: unset;
+}
+.form-wrapper .ng-scope .cw-wrapper.ng-scope {
+    height: auto;
+}
+/*Register Section End Here*/
+
+
+/*Footer Section Start Here*/
+.footerwrap{
+	margin: 0;
+}
+.footerwrap .footerlogo{
+	text-align: center;
+	margin: 15px 0;
+}
+.footerwrap .footerlogo .logo {
+	width: 180px;
+	height:47px;
+	background: url(../assets/images/innovate_logo.png) no-repeat center center;
+	background-size: 100% 100%;
+	display:inline-block;
+}
+.footerwrap .footerbgrw{
+	margin-top: 0;
+}
+.footerwrap .copyrightrw{
+	font-size: 18px;
+	color: #263746;
+	text-align: center;
+}
+.footernav,.footernav ul{
+	margin: 0;
+	padding: 0;
+}
+.footernav ul{
+	display: table;
+	margin: auto;
+	margin-top: 15px;
+}
+.footernav ul li{
+	float: left;
+	list-style: none;
+	display: inline-block;
+}
+.footernav ul li a{
+	padding: 10px 0;
+	margin: 0 20px;
+	font-size: 18px;
+	color: #263746;
+	text-decoration: none;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+.footernav ul li a:hover{
+	color: #ed1e79;
+}
+.cw-heading-2,.cw-paragraph{
+	display: none;
+}
+/*Footer Section End Here*/

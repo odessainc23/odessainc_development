@@ -1,0 +1,44 @@
+// =============================================================================
+// Panel - SASS/ADMIN/COMPONENTS/_PANEL.SCSS
+// -----------------------------------------------------------------------------
+// Contains panel component styles for XD Builder.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Base Style
+// 02. Accordian
+// =============================================================================
+
+// Base Style
+// =============================================================================
+
+.odcp-video--inline {
+	position: relative;
+	cursor: pointer;
+
+	video {
+		border: 1px solid rgba(0,0,0,0.05);
+	}	
+}
+
+.odcp-video__icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	margin: -35px 0 0 -35px;
+	background: url(../images/play_icon.png);
+	background-size: 100%;
+	border-radius: 50%;
+
+	.odcp-video:hover & {
+		background-color: #666;
+	}
+
+	.odcp-video.is-playing & {
+		display: none;
+	}
+}

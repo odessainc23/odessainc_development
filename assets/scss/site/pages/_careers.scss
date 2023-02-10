@@ -1,0 +1,322 @@
+// Head Banner
+// =============================================================================
+
+.pgcar__banner {
+	.odc-gd__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.pgcar__btop {
+	z-index: 99;
+}
+
+.pgcar__btext {
+	padding: 0 20px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	font-size: 16px;
+}
+
+.pgcar__baction {
+	padding: 0 35px;
+}
+
+// How we work
+// =============================================================================
+
+.pgcar__howwe {
+	padding-bottom: 60px;
+}
+
+.pgcar__hwtitle {
+	text-align: center;
+}
+
+.pgcar__hwcontent {
+	margin: 0 auto;
+}
+
+.pgcar__hwimage {
+	margin: 30px 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+.pgcar__hwitem {
+	margin-bottom: 30px;
+	font-size: 1.35rem;
+
+	h5 {
+		margin-bottom: 5px;
+	}
+
+	p {
+		margin: 0;
+		font-size: 16px;
+	}
+}
+
+// Head Banner
+// =============================================================================
+
+.pgcar_perks {
+	padding: 50px 0;
+	background: #f3f3f5;
+
+	.odc-gd__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.pgcar_pktitle {
+	margin-bottom: 10px;
+}
+
+.pgcar_pkcontent {
+	width: 100%;
+}
+
+.pgcar_pkitem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px;
+}
+
+.pgcar_pkiicon {
+	width: 80px;
+	margin-bottom: 10px;
+}
+
+.pgcar_pkitext {
+	text-align: center;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.jobopening {
+	padding-top: 60px;
+
+	.subtitle {
+		font-size: 17px;
+	}
+}
+
+.jobopening .container > h2 {
+	margin-top: 40px;
+}
+
+.careers-filters {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 40px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.careers-filters .dropdownlist {
+	position: relative;
+	flex: 1 1;
+	margin: 0 0 20px 0;
+}
+
+.careers-filters .dropdownlist ul {
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: none;
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	list-style: none;
+	z-index: 9999;
+}
+
+.careers-filters .dropdownlist li {
+	display: block;
+	padding: 7px 25px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.careers-filters .dropdownlist li:hover {
+	background: #f3f3f5;
+}
+
+.careers-filters .list-link {
+	display: flex;
+	height: 45px;
+	background: #ff495c;
+	cursor: pointer;
+}
+
+.careers-filters .list-link .label {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	padding: 12px 45px 12px 25px;
+	width: 100%;
+	color: #FFF;
+	border-radius: 0;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.careers-filters .list-link i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 45px;
+	color: #FFF;
+	font-size: 14px;
+	-webkit-transition: all 400ms linear;
+	transition: all 400ms linear;
+}
+
+.careers-filters .dropdownlist.open .list-link i {
+	transform: rotate(-180deg);
+}
+
+.openingList {
+	max-width: 90%;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.openinglist_grp {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.openinglist_grp.hide-group {
+	display: none;
+}
+
+.openinglist_grp:last-child {
+	margin-bottom: 0;
+}
+
+.openingList .openinglist_title {
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+.openingList .opening_item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ebecf0;
+	cursor: pointer;
+}
+
+.openingList .opening_item:last-child {
+	border-bottom: none;
+}
+
+.opening_itemtitle {
+	display: block;
+	color: #545b6d;
+	font-size: 15px;
+}
+
+.opening_item:hover .opening_itemtitle {
+	color: #00ACC8;
+}
+
+.opening_itemlocation {
+	display: block;
+	color: #545b6d;
+	font-size: 13px;
+}
+
+.open_position_box .odc__btn {
+	padding: 0 50px;
+}
+
+// Responsive
+// =============================================================================
+
+@media (min-width: $screenBreak-XXS) {
+	
+}
+
+@media (min-width: $screenBreak-XS) {
+	.pgcar__btext {
+		max-width: 90%;
+	}
+
+	.careers-filters {
+		flex-direction: row;
+	}
+
+	.careers-filters .dropdownlist {
+		margin: 0 30px;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcar__btext {
+		max-width: 70%;
+	}
+
+	.pgcar_pkctop {
+		margin-right: 10%;
+	}
+
+	.pgcar_pkcbot {
+		margin-left: 10%;
+	}
+	
+	.pgcar__hwcontent {
+		max-width: 80%;
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	.pgcar__hwimage {
+		margin: 30px 50px 0 0;
+	}
+
+	.pgcar__hwitem {
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.opening_itemtitle {
+		font-size: 17px;
+	}
+
+	.opening_itemlocation {
+		font-size: 15px;
+	}
+}

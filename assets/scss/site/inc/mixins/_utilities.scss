@@ -1,0 +1,264 @@
+// =============================================================================
+// Utilities - SCSS/ADMIN/INC/MIXINS/_UTILITIES.SCSS
+// -----------------------------------------------------------------------------
+// Contains all standard utility css styles.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Clearfix
+// 02. Block Position
+// 03. Make Float Responsive
+// 04. Text
+// 05. Make Text Align Responsive
+// 06. Font Size
+// 07. Make Spacing
+// 08. Resizable
+// 09. Tab Focus
+// 10. Sizing
+// 11. Placeholder
+// 12. Rem Conversion
+// =============================================================================
+
+// Clearfix
+// =============================================================================
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+// Block Position
+// =============================================================================
+
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin float-left {
+	float: left;
+}
+
+@mixin float-right {
+	float: right;
+}
+
+@mixin float-none {
+	float: none;
+}
+
+// Text
+// =============================================================================
+
+@mixin text-hide() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+@mixin text-clipper() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin text-reset() {
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-break: auto;
+	line-height: 1.4em;
+	text-align: left;
+	text-align: start;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	white-space: normal;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+}
+
+@mixin textalign-left() {
+	text-align: left;
+}
+
+@mixin textalign-right() {
+	text-align: right;
+}
+
+@mixin textalign-center() {
+	text-align: center;
+}
+
+@mixin textalign-justify() {
+	text-align: justify;
+}
+
+// Make Text Align Responsive
+// =============================================================================
+
+@mixin make-helper-textalign() {
+	@each $breakpoint in map-keys($screenBreakStack) {
+		@include breakpoints-min ($breakpoint) {
+			.vtcr-textalign-#{$breakpoint}--l { @include textalign-left() }
+			.vtcr-textalign-#{$breakpoint}--r { @include textalign-right() }
+			.vtcr-textalign-#{$breakpoint}--c { @include textalign-center() }
+			.vtcr-textalign-#{$breakpoint}--j { @include textalign-justify() }
+		}
+	}
+}
+
+// Font Size
+// =============================================================================
+
+// Provides rem unit sizing with a px fallback.
+// Must set html font-size to 62.5% since base 10 is used for px fallback.
+// 1. $sizeValue of 1.6 results in 16px and 1.6rem.
+
+@mixin font-size($value: 16px) {
+	$px : ();
+	$rem: ();
+
+	$unit: unit($value);
+	$val: parseInt($value);
+
+	@if $unit == "px" {
+		$px : append($px,  $value);
+		$rem: append($rem, ($val / 10 + rem));
+	}
+
+	@if $unit == "rem" {
+		$px : append($px,  ($val * 10 + px));
+		$rem: append($rem, $value);
+	}
+
+	font-size: $px;
+	font-size: $rem;
+}
+
+// Make Spacing
+// =============================================================================
+
+@mixin make-space($values, $unit, $prefixes) {
+	@each $attr-short, $attr-long in $prefixes {
+		@each $value in $values {
+			.#{$attr-short}-#{$value} {
+				#{$attr-long} : #{$value}#{$unit};
+			}
+		}
+	}
+
+	@each $breakpoint in map-keys($screenBreakStack) {
+		@include breakpoints-min ($breakpoint) {
+			@each $attr-short, $attr-long in $prefixes {
+				@each $value in $values {
+					.#{$attr-short}-#{$breakpoint}-#{$value} {
+						$spacingvalue: $value + 0px;
+						@include rem-convert( #{$attr-long}, $spacingvalue );
+					}
+				}
+			}
+		}
+	}
+}
+
+// Resizable
+// =============================================================================
+
+@mixin resizable($direction) {
+	resize: $direction;		// Options: horizontal, vertical, both
+	overflow: auto;			// Per CSS3 UI, 'resize' only applies when 'overflow' isn't 'visible'
+}
+
+// Tab Focus
+// =============================================================================
+
+@mixin tab-focus() {
+	outline: thin dotted; // 1
+	outline: 3px auto $linkColor; // 2
+	outline-offset: -1px;
+}
+
+// Sizing
+// =============================================================================
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin square($size) {
+	@include size($size, $size);
+}
+
+// Placeholder
+// =============================================================================
+
+@mixin placeholder($color: $placeholderTextColor) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+// Rem Conversion
+// =============================================================================
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem-convert($property, $values) {
+	$px : ();
+	$rem: ();
+	$unit: ();
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / 10 + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * 10 + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $rem;
+	}
+}

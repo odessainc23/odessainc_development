@@ -1,0 +1,85 @@
+.odblk-knowprod {
+	padding: 25px 0;
+}
+
+.odblk-knprditem {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	h2 {
+		width: 100%;
+		font-size: 1.2rem;
+		font-weight: 300;
+		text-align: center;
+	}
+}
+
+.odblk-knowprodinfo {
+	padding: 25px 0;
+	background-color: #F6F6F6;
+
+	.gd__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 300;
+	}
+}
+
+// Responsive
+// =============================================================================
+
+@media (min-width: $screenBreak-XXS) {
+	
+}
+
+@media (min-width: $screenBreak-XS) {
+	.odblk-knprditem {
+		h2 {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.odblk-knowprod {
+		padding: 40px 0;
+	}
+
+	.odblk-knprditem {
+		h2 {
+			font-size: 1.8rem;
+			text-align: left;
+		}
+	}
+	
+	.odblk-knowprodinfo {
+		padding: 40px 0;
+
+		h3 {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	.odblk-knowprod {
+		padding: 50px 0;
+	}
+
+	.odblk-knprditem {
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	.odblk-knowprodinfo {
+		padding: 50px 0;
+	}
+}

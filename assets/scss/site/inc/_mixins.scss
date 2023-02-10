@@ -1,0 +1,44 @@
+// =============================================================================
+// Mixins - SCSS/ADMIN/INC/_MIXINS.SCSS
+// -----------------------------------------------------------------------------
+// Mixin allows you to make groups of CSS declarations that you want to reuse
+// throughout your site. You can even pass in values to make your mixin more
+// flexible. Mixins can be easily implemented, by starting with @include
+// followed by the name of the mixin. To know more about mixins, visit here:
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. CSS3
+// 02. Flexbox
+// 03. Gradients
+// 04. Grid
+// 04. Media Queries
+// 05. Utilities
+// =============================================================================
+
+// CSS3
+// =============================================================================
+@import "mixins/css3";
+
+// Flexbox
+// =============================================================================
+@import "mixins/flexbox";
+
+// Gradients
+// =============================================================================
+@import "mixins/gradients";
+
+// Grid System
+// =============================================================================
+@import "mixins/grid";
+
+// Media Queries
+// =============================================================================
+@import "mixins/media_queries";
+
+// Utilities
+// =============================================================================
+@import "mixins/utilities";

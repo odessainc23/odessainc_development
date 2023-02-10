@@ -1,0 +1,82 @@
+// =============================================================================
+// Scaffoldings - SASS/SITE/_SCAFFOLDINGS.SCSS
+// -----------------------------------------------------------------------------
+// Contains scaffolding styles for Odessa Inc.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Base Styles
+// =============================================================================
+
+// Base Styles
+// =============================================================================
+
+*,
+:before,
+:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+	font-size: 12px;
+	line-height: $baseLineHeight;
+	background: $baseBackgroundColor;
+}
+
+img {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+// Responsive Styles
+// =============================================================================
+
+@media (min-width: $screenBreak-XS) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	html {
+		font-size: 16px;
+	}
+}

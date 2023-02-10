@@ -1,0 +1,200 @@
+/* Slider */
+.cd-hero {
+  position: relative;
+  float: right;
+  width: 50%;
+}
+
+.cd-hero__slider {
+  position: relative;
+  height: calc(100vh - 64px);
+  width: 100%;
+  overflow: hidden;
+  max-height: 1000px;
+}
+
+.cd-hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+  will-change: transform;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cd-hero__slide.cd-hero__slide--selected {
+  /* this is the visible slide */
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.cd-hero__slide.cd-hero__slide--move-left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.cd-hero__slide.cd-hero__slide--is-moving,
+.cd-hero__slide.cd-hero__slide--selected {
+  /* the cd-hero__slide--is-moving class is assigned to the slide which is moving outside the viewport */
+  -webkit-transition: -webkit-transform 0.9s;
+  transition: -webkit-transform 0.9s;
+  transition: transform 0.9s;
+  transition: transform 0.9s, -webkit-transform 0.9s;
+}
+
+/* Slide style */
+.cd-hero__slide {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  list-style: none;
+}
+.cd-hero__content.cd-hero__content--full-width,
+.cd-hero__content.cd-hero__content--half-width {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  /* this padding is used to align the text */
+  /* padding-top: 100px; */
+  text-align: center;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+.zindex1{
+  z-index: 98;
+}
+.zindex2{
+  z-index: 2 !important;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .cd-hero__content.cd-hero__content--half-width {
+    width: 50%;
+  }
+  .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    left: 0;
+  }
+  .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* Single slide animation */
+@media only screen and (min-width: 768px) {
+  .cd-hero__content.cd-hero__content--half-width {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+        -ms-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  .cd-hero__slide--move-left .cd-hero__content.cd-hero__content--half-width {
+    -webkit-transform: translateX(-40px);
+        -ms-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  .cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width {
+    /* this is the visible slide */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .cd-hero__slide--is-moving .cd-hero__content.cd-hero__content--half-width {
+    /* this is the slide moving outside the viewport 
+    wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
+    -webkit-transition: opacity 0s 0.9s, -webkit-transform 0s 0.9s;
+    transition: opacity 0s 0.9s, -webkit-transform 0s 0.9s;
+    transition: opacity 0s 0.95s, transform 0s 0.9s;
+    transition: opacity 0s 0.9s, transform 0s 0.9s, -webkit-transform 0s 0.9s;
+  }
+  .cd-hero__slide--from-left.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:nth-of-type(2),
+  .cd-hero__slide--from-right.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:first-of-type {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.9s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.9s 0.2s;
+    transition: opacity 0.4s 0.2s, transform 0.95s 0.2s;
+    transition: opacity 0.4s 0.2s, transform 0.9s 0.2s, -webkit-transform 0.9s 0.2s;
+  }
+  .cd-hero__slide--from-left.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:first-of-type,
+  .cd-hero__slide--from-right.cd-hero__slide--selected .cd-hero__content.cd-hero__content--half-width:nth-of-type(2) {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.9s 0.4s;
+    transition: opacity 0.4s 0.4s, -webkit-transform 0.9s 0.4s;
+    transition: opacity 0.4s 0.4s, transform 0.9s 0.4s;
+    transition: opacity 0.4s 0.4s, transform 0.9s 0.4s, -webkit-transform 0.9s 0.4s;
+  }
+  .cd-hero__content--full-width h1,
+  .cd-hero__content--full-width p,
+  .cd-hero__content--full-width .cd-hero__btn {
+    -webkit-transform: translateX(300px);
+        -ms-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  .cd-hero__slide--move-left .cd-hero__content--full-width h1,
+  .cd-hero__slide--move-left .cd-hero__content--full-width p,
+  .cd-hero__slide--move-left .cd-hero__content--full-width .cd-hero__btn {
+    -webkit-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  .cd-hero__slide--selected .cd-hero__content--full-width h1,
+  .cd-hero__slide--selected .cd-hero__content--full-width p,
+  .cd-hero__slide--selected .cd-hero__content--full-width .cd-hero__btn {
+    /* this is the visible slide */
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .cd-hero__slide--is-moving .cd-hero__content--full-width h1,
+  .cd-hero__slide--is-moving .cd-hero__content--full-width p,
+  .cd-hero__slide--is-moving .cd-hero__content--full-width .cd-hero__btn {
+    /* this is the slide moving outside the viewport 
+    wait for the end of the transition on the li parent before set translate to 100px/-100px */
+    -webkit-transition: -webkit-transform 0s 0.5s;
+    transition: -webkit-transform 0s 0.5s;
+    transition: transform 0s 0.5s;
+    transition: transform 0s 0.5s, -webkit-transform 0s 0.5s;
+  }
+  .cd-hero__slide--selected h1 {
+    -webkit-transition: -webkit-transform 0.5s 0.2s;
+    transition: -webkit-transform 0.5s 0.2s;
+    transition: transform 0.5s 0.2s;
+    transition: transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+  }
+  .cd-hero__slide--selected p {
+    -webkit-transition: -webkit-transform 0.5s 0.3s;
+    transition: -webkit-transform 0.5s 0.3s;
+    transition: transform 0.5s 0.3s;
+    transition: transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+  }
+  .cd-hero__slide--selected .cd-hero__btn {
+    -webkit-transition: background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+    transition: background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+    transition: transform 0.5s 0.4s, background-color 0.2s 0s;
+    transition: transform 0.5s 0.4s, background-color 0.2s 0s, -webkit-transform 0.5s 0.4s;
+  }
+}
+.cd-hero__nav{
+  display: none;
+}

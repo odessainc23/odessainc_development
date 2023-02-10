@@ -1,0 +1,230 @@
+<div id="wrapper">
+	<!--Build Page Start Here-->
+	<div class="buildpgwrap"> 
+		<!--Scale Fector Section Start Here-->
+		<div class="buildpgscalefector">
+			<div class="container">
+				<h1 class="text-center">
+				Adapt easily, build <span>confidently, scale faster</span>
+				</h2>
+				<p class="text-center tpbtm">Go from idea to innovation at your pace. Leverage development tools on the<br>
+					Odessa Platform to extend, build, test and ship business features more efficiently.</p>
+			</div>
+			<div class="buildscaleimgbx"><img src="<?php echo base_url(); ?>assets/images/buildscalebg.png" alt="Odessa Build" /></div>
+			<div class="buildtabsbackgbox"></div>
+		</div>
+		<!--Scale Fector Section Start Here-->
+		
+		<div class="container"> 
+			<!--Platform Speed Section Start Here-->
+			<div class="plateformspeedbox">
+				<div class="build_tabs owl-carousel bltabs owl-theme">
+					<div class="items build_tabactive"><a data-toggle="tab" href="#configure">Configure</a></div>
+					<div class="items"><a data-toggle="tab" href="#extendview">Extend</a></div>
+					<div class="items"><a data-toggle="tab" href="#buildview">Build</a></div>
+					<div class="items"><a data-toggle="tab" href="#testview">Test</a></div>
+				</div>
+				<div class="tab-content">
+					<div id="configure" class="tab-pane fade in active">
+						<div class="plateformCon">
+							<div class="row clearfix">
+								<div class="col-md-5">
+									<h3>Platform, at your speed</h3>
+									<div class="normaltxt pdright">Enable your business users to work directly with Odessa to adapt the platform to work the way you do. Need to tweak a workflow? Add a field? No problem. Customize your solution to meet ever-changing business requirements ensuring your changes are compatible with the whole platform. </div>
+								</div>
+								<div class="col-md-7">
+									<div class="listpoints">
+										<div class="row clearfix">
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Edit screen layouts</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span>Configure workflow</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Define business rules </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Create user defined fields</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="extendview" class="tab-pane fade">
+						<div class="plateformCon">
+							<div class="row clearfix">
+								<div class="col-md-5">
+									<h3>Our platform, your imagination</h3>
+									<div class="normaltxt pdright">Collaborate centrally across business teams and IT to create future-ready, upgrade-compatible extensions to existing functionality or integrate with surround applications. Agile, prototype-led development with Odessa means faster and more predictable delivery of features with consistently high quality. </div>
+								</div>
+								<div class="col-md-7">
+									<div class="listpoints">
+										<div class="row clearfix">
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Build new modules</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Integrate with surround applications</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Create new screens </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Define business rules</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="buildview" class="tab-pane fade">
+						<div class="plateformCon">
+							<div class="row clearfix">
+								<div class="col-md-5">
+									<h3>Build modules and custom apps</h3>
+									<div class="normaltxt pdright">Say goodbye to spreadsheets and disparate databases. Simplify your ecosystem on one platform, one united database, and one user experience. Leverage a library of pre-built components to build entirely new products for your business. </div>
+								</div>
+								<div class="col-md-7">
+									<div class="listpoints">
+										<div class="row clearfix">
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Low-code development</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Pre-built components</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Seamless deployment </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Singular user experience</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="testview" class="tab-pane fade">
+						<div class="plateformCon">
+							<div class="row clearfix">
+								<div class="col-md-5">
+									<h3>Smarter software through <span>continuous testing</span></h3>
+									<div class="normaltxt pdright">Bring efficiency to test automation with a best-in-class solution integrated in the platform. Automate repetitive, rule-based tasks to enable your teams to be more productive – free from manual testing methodologies. With increased test coverage, you can deliver outstanding software at scale. </div>
+								</div>
+								<div class="col-md-7">
+									<div class="listpoints">
+										<div class="row clearfix">
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Comprehensive test coverage</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Integration and regression testing</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Faster debugging </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="normaltxt"><span class="blbullets"></span> Build a library of test cases</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btmlinegrey"></div>
+			</div>
+			<!--Platform Speed Section End Here--> 
+			
+			<!--Build Innovation Start Here-->
+			<div class="buildinnovation">
+				<h2 class="text-center">Build innovation, <span>not infrastructure</span></h2>
+				<div class="buildinnovationboxConrw">
+					<div class="row clearfix">
+						<div class="col-sm-4">
+							<div class="buildinnovationConbx">
+								<div class="inoiconrw">
+									<div class="innoicon legacy"></div>
+								</div>
+								<div class="buildino_nor_text">Simplify your infrastructure by <br>
+									consolidating disparate legacy systems<br>
+									and processes into Odessa</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="buildinnovationConbx">
+								<div class="inoiconrw">
+									<div class="innoicon improve_developer"></div>
+								</div>
+								<div class="buildino_nor_text">Improve developer agility by<br>
+									building modules and apps
+									using the<br>
+									same components Odessa developers use</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="buildinnovationConbx">
+								<div class="inoiconrw">
+									<div class="innoicon recoding"></div>
+								</div>
+								<div class="buildino_nor_text">Eliminate the need for re-coding<br>
+									and regression testing
+									as code remains<br>
+									update-safe through Odessa releases</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Build Innovation End Here--> 
+			
+			<!--Development Opps Section Start Here-->
+			<div class="devOpsSection">
+				<div class="devOpsCon clearfix">
+					<div class="devopsimgbx"> <img src="<?php echo base_url(); ?>assets/images/opsdev.jpg" alt="DevOps" /> </div>
+					<div class="devopsconbox">
+						<h3 class="headingsection wtcol">DevOps for the <span>modern enterprise</span></h3>
+						<div class="opstextrw"> DevOps is a profound shift in IT culture, demanding a rethink of IT processes, technology and the way people work. Adopting a combined DevOps and API-led approach to connectivity enables you to increase reliability and minimize disruption, enabling you to move faster and adjust to change. </div>
+						<div class="opstextrw topp"> Start the journey with a technology that helps your teams remove waste and inefficiency from their software development lifecycle. </div>
+					</div>
+				</div>
+			</div>
+			<!--Development Opps Section End Here-->
+			
+			<div class="testimonialswrap">
+				<h2 class="text-center">Start building your own great <span>solutions on Odessa</span></h2>
+				<div class="seeposbtnrw"><a href="<?php echo base_url();?>lets-talk" class="odc__btn odc__btn--primary odc__btn--xl">Get started</a></div>
+				<div class="trusted_brands_logo">
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/leaf_icon.png" alt="Leaf Logo " /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/safin_logo.png" alt="Sasfin Logo " /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/fcl_logo.png" alt="FCL Logo " /> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Build Page End Here--> 
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Odessa Build",
+  "image": "https://www.odessainc.com/assets/images/buildscalebg.png",
+  "description": "Leverage development tools on the Odessa Platform to extend, build, test and ship business features more efficiently.",
+  "brand": "Odessainc",
+  "review": {
+    "@type": "Review",
+    "reviewBody":"Odessa is one of the best at what they do. They are dedicated to learning your business and understanding what you need to do in order to achieve the results that you want.",
+    "author": {"@type": "Person", "name": "Hana Park- Dir. Ops, ICON Investments"}
+  }
+}
+</script>

@@ -1,0 +1,20 @@
+.navbar-default{
+    background-color: #233746;
+}  
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+}
+.navbar-default .navbar-brand{
+    background: url(../images/logo_wt.png) no-repeat;
+    background-size: 100% 100%;
+}
+#nav-icon1 span{
+    background-color:#fff;
+}
+.getmainconbx .getconbx{
+    background:url('https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-DevOps-resource.svg') no-repeat;
+}
+
+.getmainconbx .bluebg{
+    background:url('https://odessainc.com/blog/wp-content/uploads/2020/06/Odessa-APAC-resource.svg') no-repeat;
+}

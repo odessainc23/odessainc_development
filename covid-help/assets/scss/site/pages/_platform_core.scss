@@ -1,0 +1,402 @@
+.pgcor__banner {
+	padding-bottom: 0;
+
+	.odc-gd__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+.pgcor__btitle {
+	line-height: 1.2;
+	max-width: 650px;
+	margin-bottom: 20px;
+}
+
+.pgcor_mods {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.pgcor_mdcontent {
+	p {
+		font-size: 17px;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcor_mods {
+		padding: 120px 0;
+		margin-top: -30px;
+		background: url(../images/coreheaderrt.png) no-repeat top right;
+		background-size: 500px;
+		text-align: left;
+	}
+
+	.pgcor_mdcontent {
+		display: flex;
+		flex-direction: column;
+		min-height: 400px;
+		margin-top: 80px;
+		padding-right: 50px;
+	
+		p {
+			margin-left: 40px;
+		}
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	.pgcor_mods {
+		padding: 150px 0;
+		background-size: 600px;
+	}
+}
+	
+.section.keyfeatures_wr .keyfeaturemenu {
+	padding: 70px 20px;
+}
+
+// 
+
+.pgcor_tdes {
+	padding: 0 0 80px 0;
+	margin: 0;
+}
+
+.pgcor_tdimg {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+
+	img {
+		min-width: 250px;
+		max-width: 300px;
+	}
+}
+
+.pgcor_tdcontent {
+	margin-left: 5%;
+}
+
+.pgcor_tdctabnav {
+	margin-bottom: 15px;
+}
+
+.pgcor_tdctab-item {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.pgcor_tdctabitext {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 5px solid transparent;
+	margin: 15px 0 10px 0;
+	padding: 10px 0;
+	font-family: "MaisonNeue-Bold";
+	font-size: 15px;
+	font-weight: 500;
+
+	.pgcor_tdctab-item.tabactive & {
+		border-bottom: 5px solid #00abc7;
+		background: #FFF;
+		box-shadow: 0px -2px 15px 4px rgba(32, 33, 36, 0.10);
+	}
+}
+
+.pgcor_tdclist {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0 20px;
+
+	li {
+		display: flex;
+		flex-direction: row;
+		font-size: 15px;
+		padding-left: 20px;
+		flex: 0 0 100%;
+		position: relative;
+		margin-bottom: 10px;
+		color: #555b6d;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: #0075A2;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 7px;
+		}
+
+		span {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				display: block;
+				padding-right: 20px;
+
+				&:first-child {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.pgcor_tdclist--static {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 2px solid #F3F3F5;
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcor_tdes {
+		background: url(../images/core-orbit-dots.jpg) no-repeat;
+		background-position: 15px -200px;
+		padding-top: 200px;
+		margin-top: -200px;
+	}
+
+	.pgcor_tdclist {
+		li {
+			flex: 0 0 47%;
+		}
+	}
+}
+
+// Key Features Block
+// =============================================================================
+
+.pgcor_keyfeat {
+	background: #00ACC8;
+}
+
+.pgcor_kfwrap {
+	display: flex;
+}
+
+.pgcor_kfleft {
+	width: 20%;
+}
+
+.pgcor_kfright {
+	width: 80%;
+	background: #FFF url(../images/teamsrtimg.png) no-repeat right;
+}
+
+
+// Design Principles Blocks
+// =============================================================================
+
+.pgcor_dprin {
+	padding: 80px 0;
+	background: #FFF url(../images/core-design-bg.jpg) no-repeat right;
+	background-size: cover;
+}
+
+.pgcor_dpcontent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pgcor_dpctitle {
+	color: #FFF;
+	max-width: 600px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.pgcor_dpctext {
+	color: #FFF;
+	max-width: 600px;
+	text-align: center;
+	font-size: 17px;
+	margin-bottom: 25px;
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcor_dprin {
+		padding: 120px 0;
+	}
+}
+
+
+// Integrate Blocks
+// =============================================================================
+
+.pgcor_integ {
+	padding: 80px 0;
+	text-align: center;
+	background: url(../images/core-orbit.png) no-repeat center bottom;
+	background-size: 350px;
+	padding-bottom: 400px;
+	margin-bottom: 50px;
+}
+
+.pgcor_intitle {
+	margin-bottom: 30px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.pgcor_intext {
+	margin-bottom: 20px;
+	font-size: 17px;
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcor_integ {
+		padding-bottom: 150px;
+		margin: 80px 0;
+		background: url(../images/core-orbit.png) no-repeat -100px center;
+		background-size: 600px;
+		text-align: left;
+	}
+
+	.pgcor_inwrap {
+		min-height: 400px;
+		max-width: 75%;
+		margin-left: 45px;
+	}
+
+	.pgcor_intitle {
+		max-width: 400px;
+		text-align: left;
+	}
+}
+
+// Testimonials
+// =============================================================================
+
+.pgcor_tmhead {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+.pgcor_tmhtitle {
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+
+.pgcor_tmhtext {
+	margin: 0 auto;
+	max-width: 500px;
+	font-size: 17px;		
+}
+
+.pgcor_tmbox {
+	max-width: 700px;
+	margin: 30px auto 50px auto;
+	box-shadow: 0 14px 24px 0 rgba(0, 0, 0, .09);
+}
+
+.pgcor_tmbvideo {
+	position: relative;
+	height: 100%;
+
+	video {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		font-size: 60px;
+		color: rgba(255, 255, 255, 0.5);
+		cursor: pointer;
+	}
+}
+
+.pgcor_tmbcontent {
+	padding: 30px;
+}
+
+.pgcor_tmbclogo {
+	max-width: 125px;
+	margin-bottom: 15px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.pgcor_tmbctext {
+	margin-bottom: 25px;
+	font-size: 15px;
+}
+
+.pgcor_tmbaction {
+	display: flex;
+	align-items: center;
+	color: #00abc7;
+	font-size: 16px;
+
+	i {
+		margin-right: 5px;
+	}
+
+	&:hover {
+		color: #00abc7;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgcor_tmbcontent {
+		padding: 20px 30px 0 0;
+	}
+}
+
+// Bottom Clients Logo
+// =============================================================================
+
+.pgcor_clients {
+	padding-bottom: 30px;
+}
+
+.pgcor_clwrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pgcor_clitem {
+	padding: 25px 30px;
+	width: 100%;
+	max-width: 180px;
+
+	img {
+		width: 100%;
+	}
+}
+
+// Responsive
+// =============================================================================
+
+@media (min-width: $screenBreak-XS) {
+	.pgcor_clwrap {
+
+	}
+}

@@ -1,0 +1,82 @@
+// =============================================================================
+// Gradient - SCSS/ADMIN/INC/MIXINS/_GRADIENTS.SCSS
+// -----------------------------------------------------------------------------
+// Contains all gradient mixins.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+// 01. Horizontal Gradient
+// 02. Vertical Gradient
+// 03. Directional Gradient
+// 04. Radial Gradient
+// 05. Striped Gradient
+// =============================================================================
+
+// Horizontal Gradient
+// =============================================================================
+
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+	background: $end-color;
+	background: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+	background: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+	background: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+	background: $end-color;
+	background: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+	background: -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+	background: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+}
+
+
+// Vertical Gradient
+// =============================================================================
+
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+	background: $end-color;
+	background: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+	background: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+	background: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+	background: $end-color;
+	background: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+	background: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+	background: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+}
+
+
+// Directional Gradient
+// =============================================================================
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+	background: $end-color;
+	background: -webkit-linear-gradient($deg, $start-color, $end-color);
+	background: -o-linear-gradient($deg, $start-color, $end-color);
+	background: linear-gradient($deg, $start-color, $end-color);
+}
+
+
+// Radial Gradient
+// =============================================================================
+
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+	background: $end-color;
+	background: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+	background: radial-gradient(circle, $inner-color, $outer-color);
+}
+
+
+// Striped Gradient
+// =============================================================================
+
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+	background: $end-color;
+	background: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}

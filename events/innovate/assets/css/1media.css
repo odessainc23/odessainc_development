@@ -1,0 +1,346 @@
+@media only screen and (max-width: 1960px) {
+.prrtdesign{
+	display: block;
+}
+}
+@media only screen and (max-width: 1800px) {
+.innovate_sponsor_wrap{
+	padding: 200px 0;
+}
+.aboutinnovationCon .aboutinnovationbd,.aboutinnovationCon .innovateinfo,.expectinnovateContextbx .nortext,.sminfotext,.expectinnovateleftbox .what_expect_nor_text,.expectinnovateleftbox .what_expect_nor_text,.innovate_sponsor_wrap .sponsortxt,.user_conference_rw.shortCon{
+	font-size: 18px;
+	line-height: 32px;
+}
+.homepgbanCon h3{
+	font-size: 22px;
+}
+.expectinnovateContextbx .heading_title{
+	font-size: 21px;
+}
+.homepgbanCon h1,.innovate_section .container_wd .what_innovate_heading,.expectinnovateleftbox h2{
+	font-size: 33px;
+}
+.attend_innovate_con_box .titlesh,.user_conference_rw.date,.pricesubheading,.registerbtnrw a.regisbtnlink{
+	font-size: 18px;
+}
+.attend_innovate_con_box .attendContextrw{
+	font-size: 16px;
+	line-height: 32px;
+}
+.innovate_sponsor_wrap .headingSponsor,.pricingheading,.innovatedateheading{
+	font-size: 33px;
+	line-height: 45px;
+}
+.user_conference_rw,.innovate_sm_heading{
+	font-size: 21px;
+}
+.earlybirdprice{
+	font-size: 45px;
+}
+.pricenottext,.footerwrap .copyrightrw,.footernav ul li a{
+	font-size: 16px;
+}
+.footerwrap .footerbgrw img{
+	width: 1200px;
+	height: auto;
+}
+.bannerlines.nextone {
+    width: 1200px;
+    height: 1200px;
+}
+.bannerlines.next_two {
+    width: 780px;
+    height: 780px;
+}
+.innovate_sponsor_wrap .sponsortxt{
+	max-width: 66%;
+}
+.navbar-default.innerpg{
+	background-size: 860px;
+}
+.register-wrap .left-container h2{
+	font-size: 33px;
+}
+.register-wrap .left-container h3{
+	font-size: 22px;
+	line-height: 32px;
+}
+.details-wrap .tredingrw h4,.details-wrap .daterw{
+	font-size: 18px;
+}
+.details-wrap .tredingrw .addrw{
+	left: 115px;
+}
+.details-wrap .tredingrw .addrw.exclusive{
+	left: 210px;
+}
+}
+
+@media only screen and (max-width: 1700px) {
+.homepgbaner{
+	height: 680px;
+}
+.homepgbaner .rtsidedeign{
+	width: 500px;
+	height: 533px;
+}
+.homepgbaner .teamban{
+	width: 860px;
+	height: 511px;
+	right:440px;
+}
+.bannerlines{
+	right:84px;
+}
+.bannerlines.nextone{
+	right:350px;
+}
+.bannerlines.next_two{
+	right:500px;
+}
+.bannerlines.nextone {
+    width: 950px;
+    height: 950px;
+}
+.bannerlines.next_two {
+    width: 720px;
+    height: 720px;
+}
+.footerwrap .footerbgrw img {
+    width: 1100px;
+}
+.prrtdesign{
+	margin-top:50px;
+}
+.innovate_sponsor_wrap {
+    padding: 180px 0;
+}
+.homepgbanCon {
+    margin-left: 280px;
+}
+.innovate_sponsor_wrap .sponsortxt{
+	max-width: 62%;
+}
+.navbar-default.innerpg{
+	background-size: 800px;
+}
+}
+
+@media only screen and (max-width: 1500px) {
+.homepgbanCon h1{
+	line-height: 40px;
+	margin-bottom: 5px;
+}
+.homepgbanCon h1, .innovate_section .container_wd .what_innovate_heading, .expectinnovateleftbox h2 {
+	font-size: 30px;
+}
+.homepgbanCon h3 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.aboutinnovationCon .aboutinnovationbd, .aboutinnovationCon .innovateinfo, .expectinnovateContextbx .nortext, .sminfotext, .expectinnovateleftbox .what_expect_nor_text, .expectinnovateleftbox .what_expect_nor_text, .innovate_sponsor_wrap .sponsortxt, .user_conference_rw.shortCon {
+    font-size: 16px;
+}
+.homepgbaner {
+    height: 620px;
+}
+.homepgbaner .teamban {
+	bottom:-100px;
+}
+.homepgbanCon {
+    margin-top: 85px;
+    margin-left: 210px;
+    max-width: 400px;
+}
+.expectinnovateContextbx .heading_title {
+    font-size: 18px;
+}
+.innovate_section .container_wd{
+	top:80px;
+}
+.attend_innovate_con_box .titlesh{
+	font-size: 16px;
+}
+.attend_innovate_con_box .attendContextrw {
+    font-size: 14px;
+    line-height: 28px;
+}
+.innovate_sponsor_wrap {
+    padding: 150px 0;
+}
+.attend_innovate_row {
+    margin-bottom: 40px;
+}
+.innovatedateheading,.innovate_sponsor_wrap .headingSponsor{
+	font-size: 30px;
+	line-height: 40px;
+}
+.innovate_sponsor_wrap .sponsortxt{
+	max-width: 60%;
+}
+.prrtdesign {
+    margin-top: -44px;
+}
+.navbar-default.innerpg{
+	background-size: auto 100%;
+}
+.register-wrap .left-container h2 {
+    font-size: 30px;
+}
+.register-wrap .left-container h3 {
+    font-size: 20px;
+}
+}
+@media only screen and (max-width: 1320px) {
+.container {
+	width: 1170px;
+}
+.homepgbaner {
+    height: 560px;
+}
+.homepgbaner .rtsidedeign {
+    width: 420px;
+    height: 448px;
+}
+.homepgbaner .teamban {
+    width: 780px;
+    height: 463px;
+    right: 400px;
+}
+.homepgbanCon h3,.sminfotext{
+	line-height: 28px;
+}
+.innovate_sponsor_wrap .sponsortxt {
+	padding: 30px 0 20px 0;
+}
+.innovate_sponsor_wrap {
+    padding: 130px 0;
+}
+.footerwrap .footerbgrw img {
+    width: 960px;
+}
+.bannerlines {
+	width: 900px;
+	height: 900px;
+    right: 70px;
+}
+.bannerlines.nextone {
+	right: 294px;
+	width: 750px;
+	height: 750px;
+}
+.bannerlines.next_two {
+    width: 580px;
+	height: 580px;
+	right: 420px;
+}
+.right-container .floatingimg {
+    width: 320px;
+    height: 313px;
+    top: -85px;
+    right: -70px;
+}
+.right-container .floatingimg{
+	display: none;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+.container {
+	width:1080px;
+}
+.homepgbaner {
+    height: 500px;
+}
+.innovate_section .container_wd {
+	top: 70px;
+	left: 30px;
+	right:30px;
+	width: auto;
+    margin-left:0;
+}
+.innovate_section .aboutinnovationCon{
+	width: 400px
+}
+.homepgbanCon h1, .innovate_section .container_wd .what_innovate_heading, .expectinnovateleftbox h2 {
+	font-size: 28px;
+	line-height: 36px;
+}
+.homepgbanCon h3 {
+    font-size: 18px;
+}
+.aboutinnovationCon .aboutinnovationbd, .aboutinnovationCon .innovateinfo, .expectinnovateContextbx .nortext, .sminfotext, .expectinnovateleftbox .what_expect_nor_text, .expectinnovateleftbox .what_expect_nor_text, .innovate_sponsor_wrap .sponsortxt, .user_conference_rw.shortCon {
+	font-size: 14px;
+	line-height: 28px;
+}
+.aboutinnovationCon .innovateinfo{
+	margin-top: 20px;
+}
+.homepgbaner .teamban {
+    width:700px;
+    height: 416px;
+    right: 400px;
+}
+.homepgbanCon{
+	margin-top: 75px;
+}
+.homepgbaner .rtsidedeign {
+    width: 380px;
+    height: 405px;
+}
+.expectinnovatewrap .container {
+    padding: 50px 15px;
+}
+.attend_innovate_wrap{
+	padding: 60px 0;
+}
+.innovatedateheading, .innovate_sponsor_wrap .headingSponsor {
+    font-size: 28px;
+    line-height: 36px;
+}
+.innovate_sponsor_wrap .verteximgrw .verteximgbx{
+	width: 220px;
+}
+.grtAmericansg{
+	right:-400px;
+}
+.expectinnovateContextbx .heading_title {
+    font-size: 16px;
+}
+.expectinnovateConrow {
+    margin-bottom: 20px;
+}
+.innovate_sponsor_wrap {
+    padding: 110px 0;
+}
+.pricingsectionwrap{
+	padding: 60px 0;
+}
+.pricingConbox {
+    margin-top: 50px;
+}
+.footerwrap .footerbgrw img {
+    width: 880px;
+}
+}
+
+@media only screen and (max-width: 1170px) {
+.register-wrap .left-container{
+	max-width: inherit;
+	width: auto;
+	padding-left: 0px;
+}
+.register-wrap .right-container .form-wrapper{
+	width: auto;
+	max-width: inherit;
+	margin-right: 15px;
+}
+.register-wrap {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.container {
+    width: auto;
+    padding: 0 30px;
+}
+}

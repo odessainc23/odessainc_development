@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'MaisonNeue-Book';
+	src: url('../fonts/MaisonNeue-Book.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/MaisonNeue-Book.otf') format('opentype'),
+		 url('../fonts/MaisonNeue-Book.woff') format('woff'),
+		 url('../fonts/MaisonNeue-Book.ttf') format('truetype'),
+		 url('../fonts/MaisonNeue-Book.svg#MaisonNeue-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

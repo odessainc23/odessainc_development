@@ -1,0 +1,76 @@
+@media only screen and (max-width: 1320px) {
+	section.pr_anouncement .pr_announcementinfo>span,section.pr_anouncement .pr_announcementinfo span.date,.blog_page .tab_content .tabs_link a,.blog_page  .tab_content .tab_heading,.blog_page .blogperson_det {
+      font: 0.9rem 'MaisonNeue-Book';
+	}	
+	.blog_page div.content .content_text h3{
+		font-size: 1.1rem;
+	}
+}
+@media only screen and (max-width: 1220px) {
+	.section_width {
+		padding: 0px 40px;
+	}
+	section.pr_anouncement .pr_announcementinfo>span,.blog_page .tab_content .tabs_link a,.blog_page  .tab_content .tab_heading {
+       font: 0.8rem 'MaisonNeue-Book';
+	}	
+}
+@media only screen and (max-width: 991px) {
+	.section_width {
+		padding: 0px 15px;
+	}
+	section.pr_anouncement .pr_announcementinfo h1 {
+		margin: 15px 0px;
+	}
+	div.content .content_text p, div.content .content_img span {
+		margin-bottom: 15px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	section.pr_anouncement .displayflex{
+		flex-direction: column;
+		margin:-15px -15px 10px -15px;
+	}
+	section.pr_anouncement .pr_announcementinfo {
+		margin-bottom: 0px;
+        max-width: 100%;
+	}
+	div.content .displayflex {
+		display: block;
+		align-items: initial;
+	}
+	div.content .content_img {
+		margin-bottom: 30px;
+	}
+	.sticky_tabheading{
+		display:none;
+	}
+	.pr_announcementimg {
+      margin-bottom: 50px;
+    }
+	section.pr_anouncement {
+      margin: 0px 0px;
+	}
+	.mbpad{
+		padding:0;
+		margin-top:-15px;
+	}
+	.blogpad{
+		padding:0;
+	}
+	section.pr_anouncement .container{
+		width:100%;
+	}
+	section.pr_anouncement .mbwidth{
+		width:90%;
+	}
+	div.lettalk .letstalkinner{
+		padding: 25px 0;
+	}
+	div.content {
+		margin-bottom: 30px;
+	}
+	.content_text ul{
+		padding-left: 0;
+	}
+}

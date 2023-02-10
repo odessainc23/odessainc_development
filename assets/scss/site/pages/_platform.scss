@@ -1,0 +1,327 @@
+// Banner Block
+// =============================================================================
+
+.pgplat__banner {
+	position: relative;
+	padding: 0;
+	background: url(../images/platformheaderbg.jpg) no-repeat;
+	background-size: cover;
+	background-position: bottom right;
+
+	.odc-gd__row {
+		padding: 80px 0px 120px 0px;
+	}
+}
+
+.pgplat__banner-image {
+	position: absolute;
+	right: 0;
+	bottom: -120px;
+	width: 100%;
+	height: 300px;
+	background: url(../images/platformheaderimg.png) no-repeat bottom;
+	background-size: 400px;
+}
+
+.pgplat__btitle {
+	max-width: 475px;
+	color: #FFF;
+	line-height: 1.1;
+}
+
+.pgplat__btext {
+	width: 100%;
+	color: #FFF;
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+
+.pgplat__bform {
+	margin-bottom: 40px;
+
+	input {
+		padding: 10px;
+		height: 45px;
+		border: 2px solid #ff495c;
+		font-size: 14px;
+		font-style: italic;
+		width: calc(100% - 120px);
+		border-radius: 0px;
+		-moz-border-radius: 0;
+		box-shadow: none;
+		outline: none;
+	}
+
+	.odc__btn {
+		min-width: 120px;
+	}
+}
+
+@media (min-width: $screenBreak-XS) {
+	.pgplat__bleft {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.pgplat__banner-image {
+		background-position: right bottom;
+		background-size: 480px;
+		height: 100%;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgplat__banner-image {
+		background-size: 550px;
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	.pgplat__banner-image {
+		background-size: 50%;
+	}
+}
+
+
+// Features Block
+// =============================================================================
+
+.pgplat_feat {
+	padding: 150px 0 60px 0;
+}
+
+.pgplat_ftgtitle {
+	margin-top: 10px;
+	margin-bottom: 35px;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.pgplat_ftgsub {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 45px;
+	text-align: center;
+}
+
+.pgplat_ftgsicon {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.pgplat_ftgstitle {
+	font-size: 1.4rem;
+}
+
+.pgplat_ftgstext {
+	font-size: 17px;
+	min-width: auto;
+	width: 100%;
+}
+
+.pgplat_ftgslink {
+	font-size: 17px;
+	min-width: auto;
+}
+
+@media (min-width: $screenBreak-XS) {
+	.pgplat_feat {
+		padding: 120px 0 80px 0;
+	}
+
+	.pgplat_ftgtitle {
+		text-align: left;
+		margin-right: 30px;
+	}
+
+	.pgplat_ftgsub {
+		align-items: flex-start;
+		justify-content: flex-start;
+		text-align: left;
+	}
+
+	.pgplat_ftgsicon {
+		width: 35px;
+		height: 35px;
+	}
+
+	.pgplat_ftgstitle {
+		font-size: 1.15rem;
+	}
+}
+
+
+// Clouds Block
+// =============================================================================
+
+.pgplat_cloud {
+	.odc-gd__container {
+
+	}
+}
+
+.pgplat_cldwrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 100px 0 80px 0;
+	background: url(../images/odesscloudbg.png) no-repeat;
+	background-size: cover;
+}
+
+.pgplat_cldtitle {
+	margin-bottom: 25px;
+	width: 75%;
+	color: #FFF;
+	text-align: center;
+}
+
+.pgplat_cldtext {
+	margin-bottom: 25px;
+	width: 75%;
+	color: #FFF;
+	font-size: 17px;
+	text-align: center;
+}
+
+// Teams Block
+// =============================================================================
+
+.pgplat_teams {
+	padding: 80px 0;
+}
+
+.pgplat_tmtitle {
+	margin-bottom: 25px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.pgplat_tmctabnav {
+	margin-bottom: 25px;
+}
+
+.pgplat_tmctab-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom: 5px solid #f3f3f5;
+	cursor: pointer;
+
+	&.tabactive {
+		border-color: #00abc7;
+	}
+}
+
+.pgplat_tmctabiimage {
+	max-width: 100px;
+	height: 100%;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.pgplat_tmctabitext {
+	margin: 15px 0 10px 0;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.pgplat_tmctci-tags {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -5px;
+}
+
+.pgplat_tmctci-text {
+	margin-bottom: 30px;
+}
+
+.pgplat_tmctci-tags {
+	max-width: 500px;
+}
+
+.pgplat_tmctci-tagitem {
+	padding: 5px;
+	margin: 0 0 3px 3px;
+	background: #b7e3eb;
+}
+
+.pgplat_tmctc-item {
+	min-height: 180px;
+}
+
+@media (min-width: $screenBreak-XS) {
+	.pgplat_teams {
+		padding: 100px 0 150px 0;
+		background: url(../images/teamsrtimg.png) no-repeat right 200px;
+		background-size: 300px;
+	}
+
+	.pgplat_tmwrap {
+		padding-right: 300px;
+	}
+
+	.pgplat_tmtitle {
+		text-align: left;
+	}
+
+	.pgplat_tmctabitext {
+		font-size: 16px;
+	}
+
+	.pgplat_tmctci-text {
+		font-size: 17px;
+	}
+}
+
+@media (min-width: $screenBreak-SM) {
+	.pgplat_tmwrap {
+		padding-right: 400px;
+	}
+
+	.pgplat_tmctabiimage {
+		max-width: 120px;
+	}
+}
+
+@media (min-width: $screenBreak-MD) {
+	.pgplat_teams {
+		background-size: 400px;
+	}
+
+	.pgplat_tmwrap {
+		padding-right: 450px;
+	}
+
+	.pgplat_tmtitle {
+		max-width: 350px;
+	}
+}
+
+// Responsive
+// =============================================================================
+
+@media (min-width: $screenBreak-SM) {
+	.pgplat_cldwrap {
+		padding-top: 125px;
+	}
+
+	.pgplat_cldtext {
+		width: 65%;
+		font-size: 18px;
+	}
+}

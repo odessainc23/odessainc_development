@@ -1,0 +1,26 @@
+.navbar-default{
+    background-color: #0075a2;
+    box-shadow:none;
+}  
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+}
+.navbar-default .navbar-nav > li.open > a{
+    color: #00ACC8 !important;
+}
+.xm-nav .top-nav .nav-item a{
+    box-shadow:none;
+}
+.navbar-default .navbar-brand{
+    background: url('../images/logo_wt.png') no-repeat;
+    background-size: 100% 100%;
+}
+.xm-nav .xm-bg-desktop,.xm-nav .primary-nav li a::before{
+    background:none;
+}
+#wrapper{
+    margin-top:0;
+}
+#nav-icon1 span{
+    background-color:#fff;
+}
