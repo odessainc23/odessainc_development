@@ -32,7 +32,7 @@
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
 
-	<link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg">
+	<!-- <link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg"> -->
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>
@@ -91,7 +91,7 @@
 
 		echo $this->minify->deploy_css(TRUE);
 	?>
-	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2023" rel='stylesheet' />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2001" rel='stylesheet' />
 	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel='stylesheet' />
 	
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
@@ -99,7 +99,7 @@
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet" type="text/css" />
 	<?php } ?>
 
-	<link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css?v=5001" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=3001" />
 
 
 	<!-- Google Tag Manager --> 

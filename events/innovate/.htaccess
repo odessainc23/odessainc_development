@@ -12,6 +12,9 @@ RewriteRule ^.*$ - [NC,L]
 # in non-aliased environments as well, providing a safe, one-size
 # fits all solution.
 
+Redirect /events/innovate/code_conduct/ https://www.odessainc.com/events/innovate/code_conduct
+
+
 RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
 RewriteRule ^(.*) - [E=BASE:%1]
 RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]

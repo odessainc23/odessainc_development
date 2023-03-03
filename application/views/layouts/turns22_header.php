@@ -25,6 +25,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta name="sitelock-site-verification" content="168" />
+	<meta name="yandex-verification" content="d7962e7f3953689e">
+
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='-1'>
+	<meta http-equiv='pragma' content='no-cache'>
+
+
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 
 	<link rel="prefetch" href="https://www.odessainc.com/assets/images/odessa-partner-banner-bkmenu.jpg">
@@ -81,6 +89,14 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript">
+
+		jQuery(document).ready(function(){
+			console.log('hi');
+			location.reload(true);
+		});
+		
+	</script> -->
 
 	<!-- Google Tag Manager --> 
 	<script>

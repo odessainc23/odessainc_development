@@ -236,7 +236,11 @@ Redirect /company/#membershipContainer https://www.odessainc.com/company
 
 Redirect /careers/ https://www.odessainc.com/careers
 
+
 Redirect /products/equipment-finance.html https://www.odessainc.com/platform/core
+Redirect /platform/core/ https://www.odessainc.com/platform/core
+
+Redirect /events/events/innovate/code_conduct/ https://www.odessainc.com/events/innovate/code_conduct
 Redirect /products/equipment-finance/asset-management.html https://www.odessainc.com/platform/core
 Redirect /products/equipment-finance/funding-syndication.html https://www.odessainc.com/platform/core
 Redirect /products/equipment-finance/certificate-of-acceptance.html https://www.odessainc.com/platform/core
@@ -249,6 +253,7 @@ Redirect /products/vehicle-fleet-leasing/vehicle-management.html https://www.ode
 Redirect /products/vehicle-fleet-leasing/billing-and-collections.html https://www.odessainc.com/platform/core
 Redirect /products/mobility.html https://www.odessainc.com/platform/developer-tools
 Redirect /products/analytics.html https://www.odessainc.com/platform/developer-tools
+Redirect /platform/developer-tools/ https://www.odessainc.com/platform/developer-tools
 Redirect /products/report-builder.html https://www.odessainc.com/platform
 Redirect /products/customer-portal.html https://www.odessainc.com/platform
 Redirect /products/vendor-portal.html https://www.odessainc.com/platform
@@ -320,6 +325,7 @@ Redirect /legal/confidential_terms https://www.odessainc.com/legal/confidential-
 Redirect /legal/confidential_terms/ https://www.odessainc.com/legal/confidential-terms
 
 Redirect /events/innovate2019/register https://www.odessainc.com/
+
 Redirect /events/innovate2019/register/ https://www.odessainc.com/
 Redirect /events/innovate2019 https://www.odessainc.com/
 Redirect /events/innovate2019/ https://www.odessainc.com/

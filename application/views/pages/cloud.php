@@ -213,7 +213,7 @@
   "name": "Odessa Cloud",
   "image":"https://www.odessainc.com/assets/images/menu_iamges.png",
   "description": "Meet the growing needs of your organization with the Odessa Platform in the Cloud and deliver enhanced capabilities across security, governance, data privacy, and administration.",
-  "brand": "Odessainc",
+  "brand": "Odessa",
   "review": {
     "@type": "Review",
     "reviewBody":"In the end what really made the decision for us was that Odessa had a very good, established base of customers.",

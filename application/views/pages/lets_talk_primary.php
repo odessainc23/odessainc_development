@@ -1,3 +1,41 @@
+
+<style>
+/* hide that honeypot, robots will still see it */
+label[for="honeypot"], #honeypot {
+  display: none;
+  visibility: hidden;
+}
+
+	#page_number{
+		color:red;
+	}
+	.capt{
+		border-radius: 4px;
+		border: 2px solid transparent;
+	}
+	.capt.error{
+		border: 2px solid #ff495c;
+		width: 306px;
+		padding: 0;
+		height: 80px;
+	}
+	.letstalkSecondryform .secnformCon textarea.form-control{
+		height:92px;
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		.g-recaptcha, #rc-imageselect{
+		transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"
+	}
+	.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
+		border: 0 !important;
+		box-shadow:none !important;
+		background:none !important
+	}
+	
+}
+
+</style>
 <div id="wrapper"> 
 	<!--Let's Talk Form Section start here-->
 	<section class="letstalkformSection">
@@ -36,24 +74,28 @@
 					<div class="col-sm-6 col-md-5">
 						<div class="letstalkform">
 							<!--<iframe src="http://go.pardot.com/l/310001/2020-07-23/t159xm" width="100%" height="705" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>-->
-							<form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post">
-                        <div class="form-group">
+							<!-- <form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post"> -->
+						<form id = "primaryForm" method="post" autocomplete="off">
+					
+						<label for="honeypot">Honeypot </label>
+						<input id="honeypot" name="honeypot" size="40" type="text" value="" /><br>
+						<div class="form-group">
                             <input class="form-control" name="first-name" id = "first_name" type="text" placeholder="First Name" required/>
                         </div>
                         <div class="form-group">
                             <input class="form-control" name="last-name" id = "last_name" type="text" placeholder="Last Name" required />
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="job-title" type="text" placeholder="Job Title" required/>
+                            <input class="form-control" name="job-title" type="text" id="job_title" placeholder="Job Title" required/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control"  name="email" type="text" placeholder="Business Email" required />
+                            <input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
                         </div>
                         <div class="form-group">
-                            <input class="form-control"  name="company" type="text" placeholder="Company" required/>
+                            <input class="form-control"  name="company" type="text" id="company" placeholder="Company" required/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="phone" type="text" placeholder="Phone" onkeypress="return isNumberKey(event)" required/>
+                            <input class="form-control" name="phone" type="text" placeholder="Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
                         </div>
                         <div class="form-group">
                             <select name="country" class="select selectpicker" onchange=""><option value=""></option>
@@ -315,17 +357,22 @@
 								<option value="Social Media">Social Media</option>
 								<option value="Other">Other</option>
 							</select>-->
-							<input class="form-control" name="referring-source" type="text" placeholder="How did you hear about us?" required/>
+							<input class="form-control" name="referring-source" type="text" id="referring-source" placeholder="How did you hear about us?" required/>
 						</div>
                         <div class="form-group">
                             <input class="form-control" type="text" name="software-used"
-                                placeholder="What software are you currently using?" required/>
+                                placeholder="What software are you currently using?" required id="software-used"/>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" placeholder="Message" id="message"></textarea>
                         </div>
+						
+						<div class="capt">
+						<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
+							</div>
+						
                         <div class="clearfix">
-                            <button class="odc__btn odc__btn--primary odc__btn--xl btnmar">Let’s Talk</button>
+                            <button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Let’s Talk</button>
                         </div>
                     </form>
 						</div>
@@ -527,10 +574,43 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
             }
           },
          submitHandler: function (form) {
-            $("#primaryForm").submit();
-            
-                }
+			
+			var honeypot_val = $("#honeypot").val();
+			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
+				if(honeypot_val != ''){
+					window.location.reload();
+					return false;
+				}else{
+					$(".capt").addClass("error");
+					return false;
+				}
+			} else {
+				if(honeypot_val == ''){
+					$("#secondaryForm").submit();
+					return true;
+				}else{
+					$(".capt").removeClass("error");
+					return true
+				}
+			}
+
+		
+		}
     });
+	$("#letstalk").click(function(){
+		//console.log($("#honeypot").val())
+		var honeypot_val = $("#honeypot").val();
+		if(honeypot_val == ''){
+			$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+			$("#primaryForm").submit();
+			return true;
+		}else{
+			window.location.reload();
+			return false;
+		}
+	})
+	
+	
 
     $("#first_name").keypress(function(event){
               var regex = new RegExp("^[a-zA-Z ]*$");
@@ -560,6 +640,27 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
     
 });
 
+$(function(){
+  function rescaleCaptcha(){
+    var width = $('.g-recaptcha').parent().width();
+    var scale;
+    if (width < 302) {
+      scale = width / 302;
+    } else{
+      scale = 1; 
+    }
+
+    $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+    $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+    $('.g-recaptcha').css('transform-origin', '0 0');
+    $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+  }
+
+  rescaleCaptcha();
+  $( window ).resize(function() { rescaleCaptcha(); });
+
+});
+
 function isNumberKey(evt)
       {
          var charCode = (evt.which) ? evt.which : event.keyCode
@@ -572,6 +673,7 @@ function isNumberKey(evt)
 </script>
 <link href="<?= base_url(); ?>assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
 <script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
     $(function(){
         $('.selectpicker').selectpicker();

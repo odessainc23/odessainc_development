@@ -3,7 +3,7 @@
 	$custom_css_list = array( 'leadership/index', 'careers/index', 'platform/index', 'platform/core' );
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $page_title; ?></title>
@@ -15,22 +15,32 @@
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/media.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/buttons.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css"  rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2024" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/buttons.css" rel="stylesheet"  type="text/css" />
 	<link href="<?php echo base_url(); ?>assets/css/rs6.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=1001" rel='stylesheet'/>
+	<?php
+		$this->minify->css(array('bootstrap.css', 'owl.carousel.css'));
+
+		echo $this->minify->deploy_css(TRUE);
+	?>
+	<?php
+		$this->minify->css(array('rs6.css', 'buttons.css'));
+
+		echo $this->minify->deploy_css(TRUE);
+	?>
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
-		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet preload" as="style" type="text/css" />
 	<?php } ?>
-
-	<script src="<?php echo base_url(); ?>assets/js/jquery-2.1.1.js"></script> 
+	<script src="<?php echo base_url(); ?>assets/js/jquery-2.1.1.js?v=6001"></script> 
 	<script src="<?php echo base_url(); ?>assets/js/owl.carousel.js"></script> 
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery.cookieMessage.min.js"></script> 
@@ -38,7 +48,7 @@
 	<script src="<?php echo base_url(); ?>assets/js/rs6.min.js"></script>
 	<script type="text/javascript">
 		$.cookieMessage({
-			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy">Learn More</a>. ',
+			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy" rel="nofollow">Learn More</a>. ',
 			'acceptButton': 'Got It!',
 		});
 	</script>
@@ -98,55 +108,7 @@
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
 	</script>
 
-	<style>
-		#cookie-msg {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			bottom: 0px;
-			width: 100%;
-			text-align: center;
-			padding: 20px;
-			background-color: rgb(137, 212, 225);
-			transition: all 0.3s ease-out 0s;
-			color: rgb(42, 45, 54);
-			font-family: MaisonNeue-Book;
-			font-size: 15px;
-			z-index: 99999;
-		}
-		
-		#cookie-msg span a {
-			color: rgb(42, 45, 54);
-			text-decoration: underline;
-		}
-
-		#cookie-msg a.btn-aceptar {
-			color: rgb(42, 45, 54);
-			text-decoration: none;
-			padding: 8px 0px;
-			margin: 15px 0 0 0;
-			border: 2px solid rgb(0, 117, 162);
-			border-radius: 0px;
-			background-color: transparent;
-			font-size: 15px;
-			min-width: 120px;
-			display: inline-block;
-		}
-
-		@media only screen and (min-width: 767px) {
-			#cookie-msg {
-				flex-direction: row;
-				font-size: 16px;
-			}
-			
-			#cookie-msg a.btn-aceptar {
-				margin: 0 0 0 20px;
-				min-width: 150px;
-			}
-		}
-	</style>
+	
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -165,7 +127,7 @@
 				</ul>
 				<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
+						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
 							<!--Services Menu Start Here-->
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -228,7 +190,7 @@
 							</ul>
 							<!--Services Menu End Here--> 
 						</li>
-						<li class="dropdown mega-dropdown"><a href="javascript:void(0);" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
 					data-toggle="dropdown">Why Odessa</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -272,7 +234,7 @@
 								</div>
 							</ul>
 						</li>
-						<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
 				  data-toggle="dropdown">Company</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -326,9 +288,9 @@
 					<div class="container">
 						<div class="mobile_view_menu">
 							<ul>
-								<li><a class="active" href="javascript:void(0)" onclick="tabBx('platformmenu')">Platform</a></li>
-								<li><a href="javascript:void(0)" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
-								<li><a href="javascript:void(0)" onclick="tabBx('companymenu')">Company</a></li>
+								<li><a class="active" href="#" rel="nofollow" onclick="tabBx('platformmenu')">Platform</a></li>
+								<li><a href="#" rel="nofollow" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
+								<li><a href="#" rel="nofollow" onclick="tabBx('companymenu')">Company</a></li>
 								<li><a href="<?php echo base_url(); ?>lets-talk">Let's Talk</a></li>
 							</ul>
 						</div>

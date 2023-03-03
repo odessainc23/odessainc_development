@@ -51,9 +51,9 @@ url_redirect( {url: url,
 			<div class="home-hero-bggrad"></div>
 			<div class="home-hero-bgimg">
 				<picture>
-					<source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" type="image/webp">
+					<!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" type="image/webp">
 					
-					<source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" type="image/jpeg">
+					<source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" type="image/jpeg"> -->
 					<img data-src="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" alt="" class="lazyload"/>
 					
 				</picture>
@@ -78,13 +78,13 @@ url_redirect( {url: url,
 	<!--Platform Solution Section Start-->
 	<div style="clear:both"></div>
 	<div class="platformsectionwrap">
-		<div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" class="lazyload"/> </div>
+		<div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" class="lazyload wh-image"/> </div>
 		<div class="container clearfix">
 			<h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
 			<p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence <br>
 				and extensibility in one seamless platform for better business performance.</p>
 			<div class="assetsfinancebox">
-				<h5>Asset Finance</h5>
+				<h3>Asset Finance</h3>
 				<div class="finance_assets_row">
 					<div class="row clearfix">
 						<div class="col-xs-12 col-sm-4">
@@ -171,7 +171,7 @@ url_redirect( {url: url,
 						<source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.webp" type="image/webp">
 						
 						<source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.jpg" type="image/jpeg">
-						<img data-src="<?= base_url(); ?>assets/images/odessa-cloud-2.jpg" alt="Clouds Server" class="lazyload"/>
+						<img data-src="<?= base_url(); ?>assets/images/odessa-cloud-2.jpg" alt="Clouds Server" class="lazyload wh-image"/>
 						
 					</picture>
 				</div>
@@ -180,7 +180,7 @@ url_redirect( {url: url,
 						<source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.webp" type="image/webp">
 						
 						<source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" type="image/jpeg">
-						<img data-src="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Clouds Server" class="lazyload"/>
+						<img data-src="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Clouds Server" class="lazyload wh-image"/>
 						
 					</picture>
 					 
@@ -233,8 +233,8 @@ url_redirect( {url: url,
 				<div class="col-sm-6 col-lg-7">
 					<div class="clientsmess">
 						<div class="appcllogorw">
-							<div class="testicon"><img data-src="<?= base_url(); ?>assets/images/testi_icon.png" alt="Quotation mark" class="lazyload"/></div>
-							<div class="applogo medone"><img data-src="<?= base_url(); ?>assets/images/med-one_logo.png" alt="Med One" class="lazyload"/></div>
+							<div class="testicon"><img data-src="<?= base_url(); ?>assets/images/testi_icon.png" alt="Quotation mark" class="lazyload wh-image"/></div>
+							<div class="applogo medone"><img data-src="<?= base_url(); ?>assets/images/med-one_logo.png" alt="Med One" class="lazyload wh-image"/></div>
 						</div>
 						<p>On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.</p>
 					</div>
@@ -245,7 +245,7 @@ url_redirect( {url: url,
 							<source data-srcset="<?= base_url(); ?>assets/images/jeff.webp" type="image/webp">
 							
 							<source data-srcset="<?= base_url(); ?>assets/images/jeff.jpg" type="image/jpeg">
-							<img data-src="<?= base_url(); ?>assets/images/jeff.jpg" alt="" class="lazyload"/>
+							<img data-src="<?= base_url(); ?>assets/images/jeff.jpg" alt="" class="lazyload wh-image"/>
 							
 						</picture>
 					</div>
@@ -268,11 +268,11 @@ url_redirect( {url: url,
 <!--				</form> -->
 			</div>
 			<div class="trusted_brands_logo">
-				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " class="lazyload"/> </div>
-				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/pnc_logo.png" alt="PNC Logo " class="lazyload" /> </div>
-				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " class="lazyload" /> </div>
-				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/truist_logo.png" alt="Truist Logo " class="lazyload" /> </div>
-				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/attec_logo.png" alt="Attec Logo " class="lazyload" /> </div>
+				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " class="lazyload wh-image-ratio"/> </div>
+				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/pnc_logo.png" alt="PNC Logo " class="lazyload wh-image-ratio" /> </div>
+				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " class="lazyload wh-image-ratio" /> </div>
+				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/truist_logo.png" alt="Truist Logo " class="lazyload wh-image-ratio" /> </div>
+				<div class="brlogo"> <img data-src="<?= base_url(); ?>assets/images/icons/attec_logo.png" alt="Attec Logo " class="lazyload wh-image-ratio" /> </div>
 			</div>
 		</div>
 	</div>
@@ -281,7 +281,7 @@ url_redirect( {url: url,
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Odessa Inc",
+  "name": "Odessa",
   "url": "https://www.odessainc.com/",
   "logo": "https://www.odessainc.com/",
   "foundingDate": "1998",

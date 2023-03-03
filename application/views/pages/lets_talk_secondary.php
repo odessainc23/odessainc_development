@@ -1,3 +1,41 @@
+
+
+<style>
+	#page_number{
+		color:red;
+	}
+	.capt{
+		border-radius: 4px;
+		border: 2px solid transparent;
+	}
+	.capt.error{
+		border: 2px solid #ff495c;
+		width: 306px;
+		padding: 0;
+		height: 80px;
+	}
+	.letstalkSecondryform .secnformCon textarea.form-control{
+		height:92px;
+	}
+	label[for="honeypot"], #honeypot {
+		display: none;
+		visibility: hidden;
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		.g-recaptcha, #rc-imageselect{
+		transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"
+	}
+	.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
+		border: 0 !important;
+		box-shadow:none !important;
+		background:none !important
+	}
+	
+}
+
+	
+	</style>
 <div id="wrapper">
 
 <!--Let's Talk Secondary Section Start here-->
@@ -11,7 +49,10 @@
 				<!--<iframe src="http://go.pardot.com/l/310001/2020-07-30/tbr4b9" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 				-->
 				<!--<form id="secondaryForm" action="https://go.odessainc.com/l/310001/2021-10-26/2l9dpln" method="post">-->
-				<form id="secondaryForm" action="https://go.odessainc.com/l/310001/2020-06-25/rj5m2v" method="post">
+				<!-- <form id="secondaryForm" action="https://go.odessainc.com/l/310001/2020-06-25/rj5m2v" method="post"> -->
+					<form id = "secondaryForm" method="post" autocomplete="off">
+					<label for="honeypot">Honeypot </label>
+					<input id="honeypot" name="honeypot" size="40" type="text" value="" /><br>
 					<div class="row clearfix">
 						<div class="col-sm-6">
 							<div class="form-group">
@@ -322,9 +363,15 @@
 								<textarea rows="3" cols="3" name="message" class="form-control" placeholder="Message" ></textarea>
 							</div>
 						</div>
+						<div class="col-sm-6">
+							<div class="capt">
+								<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
+							</div>
+						</div>
+						
 					</div>
 					<div class="clearfix secbtntop">
-						<button class="odc__btn odc__btn--primary odc__btn--xl">Let’s Talk</button>
+						<button class="odc__btn odc__btn--primary odc__btn--xl" id="letstalk">Let’s Talk</button>
 					</div>
 				</form>
 			</div>
@@ -487,10 +534,46 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
             }
           },
             submitHandler: function (form) {
-            $("#secondaryForm").submit();
+			
+				var honeypot_val = $("#honeypot").val();
+				if (honeypot_val != '' || grecaptcha.getResponse() == ""){
+					if(honeypot_val != ''){
+						window.location.reload();
+						return false;
+					}else{
+						$(".capt").addClass("error");
+						return false;
+					}
+				} else {
+					if(honeypot_val == ''){
+						$("#secondaryForm").submit();
+						return true;
+					}else{
+						$(".capt").removeClass("error");
+						return true
+					}
+				}
+
             
-                }
+			}
     });
+	$("#letstalk").click(function(){
+	
+		var honeypot_val = $("#honeypot").val();
+		if(honeypot_val == '' && grecaptcha.getResponse() != ""){
+			$('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
+			$("#secondaryForm").submit();
+			return true;
+		}else if(grecaptcha.getResponse() == ""){
+			$(".capt").addClass("error");
+			return false;
+		}else{
+			window.location.reload();
+			return false;
+		}
+           
+ 
+	})
 
     $("#first_name").keypress(function(event){
               var regex = new RegExp("^[a-zA-Z ]*$");
@@ -520,6 +603,26 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
     
 });
 
+$(function(){
+  function rescaleCaptcha(){
+    var width = $('.g-recaptcha').parent().width();
+    var scale;
+    if (width < 302) {
+      scale = width / 302;
+    } else{
+      scale = 1; 
+    }
+
+    $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+    $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+    $('.g-recaptcha').css('transform-origin', '0 0');
+    $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+  }
+
+  rescaleCaptcha();
+  $( window ).resize(function() { rescaleCaptcha(); });
+
+});
 function isNumberKey(evt)
       {
          var charCode = (evt.which) ? evt.which : event.keyCode
@@ -532,6 +635,7 @@ function isNumberKey(evt)
 </script>
 <link href="<?= base_url(); ?>assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
 <script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
     $(function(){
         $('.selectpicker').selectpicker();

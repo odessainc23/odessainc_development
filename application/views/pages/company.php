@@ -1,14 +1,10 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' type='text/javascript'></script>
 <!--Company Video Play start here-->
-<div id="companyvideoplay" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="true">
+<div id="companyvideoplay" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<button type="button" class="close closebox" data-dismiss="modal">&times;</button>
 			<div class="modal-body">
-				<div class="companypg">
-					<iframe id="video" src="<?= base_url() ?>assets/images/odessa-hq-company.mp4" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<div class="companypg"></div>
 			</div>
 		</div>
 	</div>
@@ -208,4 +204,16 @@ women" /> </div>
 	</div>
 	<!-- Advertisement Section End Here --> 
 </div>
+<script>
+	$(function(){
+		$('#companyvideoplay').on('show.bs.modal', function () {
+			$('#companyvideoplay .modal-body .companypg').html('<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_d8h88wu7f0 videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>');
+		});
 
+		$('#companyvideoplay').on('hidden.bs.modal', function () {
+			$('#companyvideoplay .modal-body .companypg').empty();
+		});
+	})
+</script>
+<script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>	

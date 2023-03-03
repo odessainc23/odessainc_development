@@ -126,8 +126,8 @@ if($is_home){?>
 															<picture>
 																<source data-srcset="<?= base_url(); ?>assets/images/covid_distance.webp" type="image/webp">
 																
-																<source data-srcset="<?= base_url(); ?>assets/images/covid_distance.jpg" type="image/jpeg">
-																<img data-src="<?= base_url(); ?>assets/images/covid_distance.jpg" alt="Technology role during covid" class="lazyload"/>
+																<source data-srcset="<?= base_url(); ?>assets/images/covid_distance.webp" type="image/webp">
+																<img data-src="<?= base_url(); ?>assets/images/covid_distance.webp" alt="Technology role during covid" class="lazyload"/>
 																
 															</picture>
 
@@ -180,8 +180,8 @@ if($is_home){?>
 															<picture>
 																<source data-srcset="<?= base_url(); ?>assets/images/menu_company_view.webp" type="image/webp">
 																
-																<source data-srcset="<?= base_url(); ?>assets/images/menu_company_view.jpg" type="image/jpeg">
-																<img data-src="<?= base_url(); ?>assets/images/menu_company_view.jpg" alt="Odessa company view" class="lazyload"/>
+																<source data-srcset="<?= base_url(); ?>assets/images/menu_company_view.webp" type="image/webp">
+																<img data-src="<?= base_url(); ?>assets/images/menu_company_view.webp" alt="Odessa company view" class="lazyload"/>
 																
 															</picture>
 															<div class="imgdownlink"> <a href="<?php echo base_url(); ?>careers">We’re hiring! Come join us</a> </div>
@@ -214,7 +214,7 @@ if($is_home){?>
 					</div>
 					<div class="menubtmline"></div>
 					<!--Platform Menu Start Here-->
-					<div id="platformmenu" class="servicemenuwrap mobileviewmenu">
+					<div id="platformmenu" class="servicemenuwrap mobileviewmenu"  style="display:block">
 						<div class="menuwrap">
 							<div class="row clearfix">
 								<div class="col-xs-6">

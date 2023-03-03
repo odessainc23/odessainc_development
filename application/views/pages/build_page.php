@@ -10,7 +10,7 @@
 				<p class="text-center tpbtm">Go from idea to innovation at your pace. Leverage development tools on the<br>
 					Odessa Platform to extend, build, test and ship business features more efficiently.</p>
 			</div>
-			<div class="buildscaleimgbx"><img src="<?php echo base_url(); ?>assets/images/buildscalebg.png" alt="Odessa Build" /></div>
+			<div class="buildscaleimgbx"><img src="<?php echo base_url(); ?>assets/images/buildscalebg.png" alt="Odessa Build" width="100%" height="100%"/></div>
 			<div class="buildtabsbackgbox"></div>
 		</div>
 		<!--Scale Fector Section Start Here-->
@@ -187,7 +187,7 @@
 			<!--Development Opps Section Start Here-->
 			<div class="devOpsSection">
 				<div class="devOpsCon clearfix">
-					<div class="devopsimgbx"> <img src="<?php echo base_url(); ?>assets/images/opsdev.jpg" alt="DevOps" /> </div>
+					<div class="devopsimgbx"> <img src="<?php echo base_url(); ?>assets/images/opsdev.jpg" alt="DevOps" width="100%" height="100%" /> </div>
 					<div class="devopsconbox">
 						<h3 class="headingsection wtcol">DevOps for the <span>modern enterprise</span></h3>
 						<div class="opstextrw"> DevOps is a profound shift in IT culture, demanding a rethink of IT processes, technology and the way people work. Adopting a combined DevOps and API-led approach to connectivity enables you to increase reliability and minimize disruption, enabling you to move faster and adjust to change. </div>
@@ -201,11 +201,11 @@
 				<h2 class="text-center">Start building your own great <span>solutions on Odessa</span></h2>
 				<div class="seeposbtnrw"><a href="<?php echo base_url();?>lets-talk" class="odc__btn odc__btn--primary odc__btn--xl">Get started</a></div>
 				<div class="trusted_brands_logo">
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " /> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/leaf_icon.png" alt="Leaf Logo " /> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " /> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/safin_logo.png" alt="Sasfin Logo " /> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/fcl_logo.png" alt="FCL Logo " /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " class="wh-image-ratio" width="100%" height="100%"  /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/leaf_icon.png" alt="Leaf Logo " width="100%" height="100%" /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " class="wh-image-ratio" width="100%" height="100%" /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/safin_logo.png" alt="Sasfin Logo " width="100%" height="100%"  /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/fcl_logo.png" alt="FCL Logo " width="100%" height="100%" /> </div>
 				</div>
 			</div>
 		</div>
@@ -220,7 +220,7 @@
   "name": "Odessa Build",
   "image": "https://www.odessainc.com/assets/images/buildscalebg.png",
   "description": "Leverage development tools on the Odessa Platform to extend, build, test and ship business features more efficiently.",
-  "brand": "Odessainc",
+  "brand": "Odessa",
   "review": {
     "@type": "Review",
     "reviewBody":"Odessa is one of the best at what they do. They are dedicated to learning your business and understanding what you need to do in order to achieve the results that you want.",

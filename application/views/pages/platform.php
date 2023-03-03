@@ -263,13 +263,36 @@ url_redirect( {url: url,
 	</section>
 </div>
 <link href="<?php echo base_url(); ?>assets/css/platform.css" rel='stylesheet' />
+<style>
+	.navbar-default {
+		background-color: #0075a2;
+		box-shadow: none;
+	}
+	.navbar-default .navbar-nav > li > a,.xm-nav .top-nav .nav-item a{
+		color: #fff;
+	}
+	.navbar-default .xm-nav .top-nav .nav-item a{
+		box-shadow:none;
+	}
+	.navbar-default #nav-icon1 span{
+		 background-color: #fff;
+	}
+	.navbar-default .navbar-brand {
+		background: url('<?php echo base_url(); ?>assets/images/logo_wt.png') no-repeat;
+		background-size: 100% 100%;
+	}
+	.navbar-default .xm-nav .xm-bg-desktop,
+	.navbar-default .xm-nav .primary-nav li a::before{
+		background:none;
+	}
+</style>
 <script type="application/ld+json">{
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Odessa Platform",
   "image": "https://www.odessainc.com/assets/images/platformheaderimg.png",
   "description": "Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.",
-  "brand": "Odessainc",
+  "brand": "Odessa",
   "review": {
     "@type": "Review",
     "reviewBody": "On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.",

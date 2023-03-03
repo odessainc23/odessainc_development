@@ -37,7 +37,7 @@
 			<div class="odc-gd__row">
 				<div class="odc-gd__col-xxs-12 odc-gd__col-sm-4">
 					<div class="pgcor_tdimg">
-						<img src="<?php echo base_url(); ?>assets/images/platform-core/code-prin-circle.png" alt="Odessa-core" />
+						<img src="<?php echo base_url(); ?>assets/images/platform-core/code-prin-circle.webp" alt="Odessa-core" />
 					</div>
 				</div>
 				<div class="odc-gd__col-xxs-12 odc-gd__col-sm-8">
@@ -196,7 +196,7 @@
 				<div class="odc-gd__row">
 					<div class="odc-gd__col-xxs-12 odc-gd__col-sm-6">
 						<div class="pgcor_tmbvideo" data-toggle="modal" data-target="#companyvideoplay">
-							<video id="pgcor_tmbvideo-source" poster="<?php echo base_url(); ?>assets/images/videoposter.jpg">
+							<video id="pgcor_tmbvideo-source" poster="<?php echo base_url(); ?>assets/images/videoposter.webp">
 								<source src="<?php echo base_url(); ?>assets/images/core_vid.bin" type="video/mp4">
 							</video>
 							<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -206,7 +206,7 @@
 						<div class="pgcor_tmbcontent">
 							<div class="pgcor_tmbclogo"><img src="<?php echo base_url(); ?>assets/images/icons/CSI.png" alt="CSI Leasing"></div>
 							<p class="pgcor_tmbctext">This high growth independent equipment finance company is innovating with Odessa across the United States, UK and Mexico </p>
-							<a href="javascript:void(0);" class="pgcor_tmbaction" data-toggle="modal" data-target="#companyvideoplay"><i class="fa fa-play-circle" aria-hidden="true"></i>Play video</a>
+							<a href="#" rel="nofollow" class="pgcor_tmbaction" data-toggle="modal" data-target="#companyvideoplay"><i class="fa fa-play-circle" aria-hidden="true"></i>Play video</a>
 						</div>
 					</div>
 				</div>
@@ -217,7 +217,7 @@
 		<div class="odc-gd__container">
 			<div class="pgcor_clwrap">
 				<div class="pgcor_clitem pgcor_clitem--ari">
-					<img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/ari-logo.png" alt="ARI Logo" />
+					<img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/ari-logo.webp" alt="ARI Logo" />
 				</div>
 				<div class="pgcor_clitem pgcor_clitem--compeer">
 					<img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/compeer-logo.png" alt="Compeer Logo" />
@@ -240,9 +240,9 @@
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Odessa Core",
-  "image": "https://www.odessainc.com/assets/images/code-prin-circle.jpg",
+  "image": "https://www.odessainc.com/assets/images/code-prin-circle.webp",
   "description": "Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform",
-  "brand": "Odessainc",
+  "brand": "Odessa",
 "review": {
     "@type": "Review",
     "reviewBody": "Odessa's ability to be flexible around what we do was all-important. They're consultants first, developers second. As consultants, I believe they are leasing experts.",
