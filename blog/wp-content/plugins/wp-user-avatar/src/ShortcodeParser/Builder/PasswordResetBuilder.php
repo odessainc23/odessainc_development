@@ -47,12 +47,12 @@ class PasswordResetBuilder
 
         $atts = apply_filters('ppress_password_reset_username_field_atts', $atts);
 
-        $class       = 'class="' . $atts['class'] . '"';
-        $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
-        $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
+        $class       = 'class="' . esc_attr($atts['class']) . '"';
+        $placeholder = 'placeholder="' . esc_attr($atts['placeholder']) . '"';
+        $id          = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
         $value       = isset($_POST['user_login']) ? 'value="' . esc_attr($_POST['user_login']) . '"' : 'value=""';
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<input name=\"user_login\" type='text' $title $value $class $id $placeholder $other_atts_html required='required'/>";
 
@@ -62,14 +62,14 @@ class PasswordResetBuilder
     protected function get_processing_label($atts)
     {
         $form_type = FormRepository::PASSWORD_RESET_TYPE;
-        $form_id   = isset($GLOBALS['pp_password_reset_form_id']) ? $GLOBALS['pp_password_reset_form_id'] : 0;
+        $form_id   = isset($GLOBALS['pp_password_reset_form_id']) ? esc_attr($GLOBALS['pp_password_reset_form_id']) : 0;
 
         if (isset($GLOBALS['pp_melange_form_id'])) {
-            $form_id   = $GLOBALS['pp_melange_form_id'];
+            $form_id   = esc_html($GLOBALS['pp_melange_form_id']);
             $form_type = FormRepository::MELANGE_TYPE;
         }
 
-        return ! empty($atts['processing_label']) ? $atts['processing_label'] : FormRepository::get_processing_label($form_id, $form_type);
+        return ! empty($atts['processing_label']) ? esc_attr($atts['processing_label']) : FormRepository::get_processing_label($form_id, $form_type);
     }
 
     /**
@@ -99,13 +99,13 @@ class PasswordResetBuilder
 
         $atts = apply_filters('ppress_password_reset_submit_field_atts', $atts);
 
-        $name  = 'name="' . $atts['name'] . '"';
-        $class = 'class="pp-submit-form ' . $atts['class'] . '"';
-        $id    = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : '';
+        $name  = 'name="' . esc_attr($atts['name']) . '"';
+        $class = 'class="pp-submit-form ' . esc_attr($atts['class']) . '"';
+        $id    = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : '';
 
-        $value = ! empty($atts['value']) ? $atts['value'] : esc_html__('Get New Password', 'wp-user-avatar');
+        $value = ! empty($atts['value']) ? esc_attr($atts['value']) : esc_html__('Get New Password', 'wp-user-avatar');
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = sprintf(
             '<input data-pp-submit-label="%2$s" data-pp-processing-label="%3$s" type="submit" value="%2$s" %1$s>',
@@ -143,12 +143,12 @@ class PasswordResetBuilder
 
         $atts = apply_filters('ppress_password_reset_handler_password1_field_atts', $atts);
 
-        $class       = 'class="' . $atts['class'] . '"';
-        $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
-        $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
+        $class       = 'class="' . esc_attr($atts['class']) . '"';
+        $placeholder = 'placeholder="' . esc_attr($atts['placeholder']) . '"';
+        $id          = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
         $value       = 'value=""';
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<input name=\"password1\" type='password' $title $value $class $id $placeholder $other_atts_html autocomplete='off'>";
 
@@ -181,12 +181,12 @@ class PasswordResetBuilder
 
         $atts = apply_filters('ppress_password_reset_handler_password2_field_atts', $atts);
 
-        $class       = 'class="' . $atts['class'] . '"';
-        $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
-        $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
+        $class       = 'class="' . esc_attr($atts['class']) . '"';
+        $placeholder = 'placeholder="' . esc_attr($atts['placeholder']) . '"';
+        $id          = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
         $value       = 'value=""';
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<input name=\"password2\" type='password' $title $value $class $id $placeholder $other_atts_html autocomplete='off'>";
 
@@ -217,19 +217,21 @@ class PasswordResetBuilder
         }
 
         wp_localize_script('password-strength-meter', 'pwsL10n', array(
-            'empty'    => esc_html__('Strength indicator'),
-            'short'    => esc_html__('Very weak'),
-            'bad'      => esc_html__('Weak'),
-            'good'     => _x('Medium', 'password strength'),
-            'strong'   => esc_html__('Strong'),
-            'mismatch' => esc_html__('Mismatch'),
+            'empty'    => esc_html__('Strength indicator', 'wp-user-avatar'),
+            'short'    => esc_html__('Very weak', 'wp-user-avatar'),
+            'bad'      => esc_html__('Weak', 'wp-user-avatar'),
+            'good'     => _x('Medium', 'password strength', 'wp-user-avatar'),
+            'strong'   => esc_html__('Strong', 'wp-user-avatar'),
+            'mismatch' => esc_html__('Mismatch', 'wp-user-avatar'),
         ));
 
         ob_start(); ?>
         <?php if ('true' == $atts['enforce']) : ?>
         <input type="hidden" name="pp_enforce_password_meter" value="true">
     <?php endif; ?>
-        <div id="pp-pass-strength-result" <?php echo 'class="' . $atts['class'] . '"' . $other_atts_html; ?>><?php _e('Strength indicator'); ?></div>
+        <div id="pp-pass-strength-result" <?php echo 'class="' . esc_attr($atts['class']) . '"' . $other_atts_html; ?>>
+            <?php _e('Strength indicator', 'wp-user-avatar'); ?>
+        </div>
         <script type="text/javascript">
             var pass_strength = 0;
             jQuery(document).ready(function ($) {
@@ -338,14 +340,14 @@ class PasswordResetBuilder
 
         $atts = apply_filters('ppress_password_reset_handler_submit_field_atts', $atts);
 
-        $name  = 'name="' . $atts['name'] . '"';
-        $class = 'class="pp-submit-form ' . $atts['class'] . '"';
+        $name  = 'name="' . esc_attr($atts['name']) . '"';
+        $class = 'class="pp-submit-form ' . esc_attr($atts['class']) . '"';
 
-        $value = ! empty($atts['value']) ? $atts['value'] : esc_html__('Get New Password', 'wp-user-avatar');
+        $value = ! empty($atts['value']) ? esc_attr($atts['value']) : esc_html__('Get New Password', 'wp-user-avatar');
 
-        $id = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : '';
+        $id = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : '';
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = sprintf(
             '<input data-pp-submit-label="%2$s" data-pp-processing-label="%3$s" type="submit" value="%2$s" %1$s>',

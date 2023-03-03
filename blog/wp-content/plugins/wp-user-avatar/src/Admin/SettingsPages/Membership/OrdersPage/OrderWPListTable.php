@@ -146,7 +146,7 @@ class OrderWPListTable extends \WP_List_Table
 
     public function column_order_total(OrderEntity $order)
     {
-        return ppress_display_amount($order->get_total());
+        return ppress_display_amount($order->get_total(), $order->currency);
     }
 
     public function column_date_created(OrderEntity $order)

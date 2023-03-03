@@ -573,7 +573,7 @@ function ppress_other_field_atts($atts)
 
     foreach ($atts as $key => $value) {
         if ( ! in_array($key, $official_atts)) {
-            $other_atts[$key] = $value;
+            $other_atts[esc_attr($key)] = esc_attr($value);
         }
     }
 
@@ -926,6 +926,11 @@ function ppress_generate_password_reset_url($user_login)
     $user = get_user_by('login', $user_login);
 
     $key = get_password_reset_key($user);
+
+    if(is_wp_error($key)) {
+        ppress_log_error($key->get_error_message());
+        return '';
+    }
 
     return ppress_get_do_password_reset_url($user_login, $key);
 }

@@ -90,7 +90,7 @@ class PerfectoLite extends AbstractTheme
     {
         $fields              = $this->field_listing();
         $registration_button = $this->form_submit_button();
-        $headline            = esc_html($this->get_meta('perfectolite_registration_headline'));
+        $headline            = wp_kses_post($this->get_meta('perfectolite_registration_headline'));
 
         return <<<HTML
 [pp-form-wrapper class="perfecto"]

@@ -15,6 +15,7 @@ use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionStatus;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionTrialPeriod;
 use ProfilePress\Core\Membership\Repositories\OrderRepository;
+use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 use ProfilePress\Core\ShortcodeParser\MyAccount\MyAccountTag;
 
 class OrderService
@@ -365,6 +366,38 @@ class OrderService
         do_action('ppress_subscription_renewed', $subscription->id, $order_id);
 
         return $order_id;
+    }
+
+    /**
+     * @param $order_id
+     *
+     * @return bool
+     */
+    public function process_order_refund($order_id)
+    {
+        $order = OrderRepository::init()->retrieve($order_id);
+
+        if ($order->exists() && $order->is_refundable()) {
+
+            $payment_method = ppress_get_payment_method($order->payment_method);
+
+            if (is_object($payment_method) && method_exists($payment_method, 'process_refund')) {
+
+                $response = $payment_method->process_refund(
+                    $order->get_id(),
+                    $order->get_total()
+                );
+
+                if ($response === true) {
+                    $order->refund_order();
+                    SubscriptionRepository::init()->retrieve($order->subscription_id)->cancel(true);
+
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public function frontend_view_order_url($order_key)

@@ -3,7 +3,7 @@
  * Plugin Name: ProfilePress
  * Plugin URI: https://profilepress.com
  * Description: The modern WordPress membership and user profile plugin.
- * Version: 4.5.4
+ * Version: 4.7.0
  * Author: ProfilePress Membership Team
  * Author URI: https://profilepress.com
  * Text Domain: wp-user-avatar
@@ -13,10 +13,10 @@
 defined('ABSPATH') or die("No script kiddies please!");
 
 define('PROFILEPRESS_SYSTEM_FILE_PATH', __FILE__);
-define('PPRESS_VERSION_NUMBER', '4.5.4');
+define('PPRESS_VERSION_NUMBER', '4.7.0');
 
 if ( ! defined('PPRESS_STRIPE_API_VERSION')) {
-    define('PPRESS_STRIPE_API_VERSION', '2022-08-01');
+    define('PPRESS_STRIPE_API_VERSION', '2022-11-15');
 }
 
 require __DIR__ . '/autoloader.php';

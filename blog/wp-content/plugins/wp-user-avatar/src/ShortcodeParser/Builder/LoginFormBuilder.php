@@ -52,12 +52,12 @@ class LoginFormBuilder
 
         $atts = apply_filters('ppress_login_username_field_atts', $atts);
 
-        $class       = ! empty($atts['class']) ? 'class="' . $atts['class'] . '"' : null;
-        $placeholder = ! empty($atts['placeholder']) ? 'placeholder="' . $atts['placeholder'] . '"' : null;
-        $id          = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
-        $value       = ! empty($atts['value']) ? 'value="' . $atts['value'] . '"' : 'value="' . esc_attr(@ppressPOST_var('login_username', '')) . '"';
+        $class       = ! empty($atts['class']) ? 'class="' . esc_attr($atts['class']) . '"' : null;
+        $placeholder = ! empty($atts['placeholder']) ? 'placeholder="' . esc_attr($atts['placeholder']) . '"' : null;
+        $id          = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
+        $value       = ! empty($atts['value']) ? 'value="' . esc_attr($atts['value']) . '"' : 'value="' . esc_attr(ppressPOST_var('login_username', '')) . '"';
 
-        $title    = 'title="' . $atts['title'] . '"';
+        $title    = 'title="' . esc_attr($atts['title']) . '"';
         $required = isset($atts['required']) && ($atts['required'] === true || $atts['required'] == 'true') ? 'required="required"' : null;
 
         $html = "<input name=\"login_username\" type=\"text\" {$value} {$title} $class $placeholder $id $other_atts_html $required>";
@@ -91,10 +91,10 @@ class LoginFormBuilder
 
         $atts = apply_filters('ppress_login_password_field_atts', $atts);
 
-        $class       = 'class="' . $atts['class'] . '"';
-        $placeholder = 'placeholder="' . $atts['placeholder'] . '"';
+        $class       = 'class="' . esc_attr($atts['class']) . '"';
+        $placeholder = 'placeholder="' . esc_attr($atts['placeholder']) . '"';
 
-        $id       = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
+        $id       = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
         $value    = ! empty($atts['value']) ? 'value="' . esc_attr($atts['value']) . '"' : 'value="' . esc_attr(ppressPOST_var('login_password')) . '"';
         $title    = 'title="' . $atts['title'] . '"';
         $required = isset($atts['required']) && ($atts['required'] === true || $atts['required'] == 'true') ? 'required="required"' : null;
@@ -122,9 +122,9 @@ class LoginFormBuilder
 
         $atts = apply_filters('ppress_login_remember_field_atts', $atts);
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<input name='login_remember' value='false' type='hidden'>";
         $html .= "<input name='login_remember' value='true' type='checkbox' $title $class $id $other_atts_html checked='checked'>";
@@ -135,10 +135,10 @@ class LoginFormBuilder
     public function login_submit($atts)
     {
         $form_type = FormRepository::LOGIN_TYPE;
-        $form_id   = isset($GLOBALS['pp_login_form_id']) ? $GLOBALS['pp_login_form_id'] : 0;
+        $form_id   = isset($GLOBALS['pp_login_form_id']) ? esc_attr($GLOBALS['pp_login_form_id']) : 0;
 
         if (isset($GLOBALS['pp_melange_form_id'])) {
-            $form_id   = $GLOBALS['pp_melange_form_id'];
+            $form_id   = esc_attr($GLOBALS['pp_melange_form_id']);
             $form_type = FormRepository::MELANGE_TYPE;
         }
 
@@ -159,14 +159,14 @@ class LoginFormBuilder
 
         $atts = apply_filters('ppress_login_submit_field_atts', $atts);
 
-        $name  = 'name="' . $atts['name'] . '"';
-        $class = 'class="pp-submit-form ' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
+        $name  = 'name="' . esc_attr($atts['name']) . '"';
+        $class = 'class="pp-submit-form ' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
 
-        $value            = ! empty($atts['value']) ? $atts['value'] : esc_html__('Log In', 'wp-user-avatar');
-        $processing_label = ! empty($atts['processing_label']) ? $atts['processing_label'] : FormRepository::get_processing_label($form_id, $form_type);
+        $value            = ! empty($atts['value']) ? esc_attr($atts['value']) : esc_html__('Log In', 'wp-user-avatar');
+        $processing_label = ! empty($atts['processing_label']) ? esc_attr($atts['processing_label']) : FormRepository::get_processing_label($form_id, $form_type);
 
-        $title = 'title="' . $atts['title'] . '"';
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = sprintf(
             '<input data-pp-submit-label="%2$s" data-pp-processing-label="%3$s" type="submit" value="%2$s" %1$s>',

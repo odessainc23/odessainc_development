@@ -86,7 +86,7 @@ class RegistrationFormBuilder
 
         foreach ($atts as $key => $value) {
             if ( ! in_array($key, $invalid_atts)) {
-                $valid_atts[$key] = $value;
+                $valid_atts[esc_attr($key)] = esc_attr($value);
             }
         }
 
@@ -102,7 +102,7 @@ class RegistrationFormBuilder
         }
 
         if ( ! in_array($field_name, ['ignore_value'])) {
-            $atts['value'] = isset($_POST[$field_name]) ? esc_attr($_POST[$field_name]) : @esc_attr($atts['value']);
+            $atts['value'] = isset($_POST[$field_name]) ? esc_attr($_POST[$field_name]) : esc_attr(ppress_var($atts, 'value'));
         }
 
         $output = [];
@@ -110,6 +110,7 @@ class RegistrationFormBuilder
         foreach ($atts as $key => $value) {
             if ($key != 'required' && ! empty($value)) {
                 $value    = esc_attr($value);
+                $key      = esc_attr($key);
                 $output[] = "$key=\"$value\"";
             }
         }
@@ -151,7 +152,7 @@ class RegistrationFormBuilder
         <?php if ('true' == $atts['enforce']) : ?>
         <input type="hidden" name="pp_enforce_password_meter" value="true">
     <?php endif; ?>
-        <div id="pp-pass-strength-result" <?php echo $attributes; ?>><?php _e('Strength indicator'); ?></div>
+        <div id="pp-pass-strength-result" <?php echo $attributes; ?>><?php _e('Strength indicator', 'wp-user-avatar'); ?></div>
         <script type="text/javascript">
             var pass_strength = 0;
             (function ($) {

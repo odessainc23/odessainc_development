@@ -341,7 +341,7 @@ class FrontendProfileBuilder
             $atts
         );
 
-        $key = $atts['key'];
+        $key = esc_attr($atts['key']);
 
         if (empty($key)) return esc_html__('Field key is missing', 'wp-user-avatar');
 
@@ -362,7 +362,7 @@ class FrontendProfileBuilder
         }
 
         if (empty($data) && ! ppress_is_boolean($data) && ! empty($atts['default'])) {
-            $data = $atts['default'];
+            $data = esc_attr($atts['default']);
         }
 
         return apply_filters('ppress_profile_cpf', $data, self::$user_data);
@@ -380,7 +380,7 @@ class FrontendProfileBuilder
             $atts
         );
 
-        $key = $atts['key'];
+        $key = esc_attr($atts['key']);
 
         $user_upload_data = get_user_meta(self::$user_data->ID, 'pp_uploaded_files', true);
 
@@ -648,8 +648,8 @@ class FrontendProfileBuilder
             )
         );
 
-        $default_img = $atts['default'];
-        $width       = ! empty($atts['width']) ? ' style="width: ' . $atts['width'] . ';"' : null;
+        $default_img = esc_url($atts['default']);
+        $width       = ! empty($atts['width']) ? ' style="width: ' . esc_attr($atts['width']) . ';"' : null;
 
         ob_start();
         echo $this->jcarousel_css();

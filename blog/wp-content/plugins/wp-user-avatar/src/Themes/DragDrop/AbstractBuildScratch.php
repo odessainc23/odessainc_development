@@ -540,7 +540,7 @@ abstract class AbstractBuildScratch extends AbstractTheme
         $headline       = '';
         $saved_headline = $this->get_meta('buildscratch_form_headline');
         if ( ! empty($saved_headline)) {
-            $headline = '<div class="ppbs-headline">' . esc_html($saved_headline) . '</div>';
+            $headline = '<div class="ppbs-headline">' . wp_kses_post($saved_headline) . '</div>';
         }
 
         $social_login_buttons = $this->social_login_buttons();
@@ -583,9 +583,9 @@ HTML;
         $forgot_password_link  = ppress_password_reset_url();
         $signup_link           = ppress_registration_url();
         $login_link            = ppress_login_url();
-        $forgot_password_label = esc_html($this->get_meta('buildscratch_forgot_password_label'));
-        $signup_label          = esc_html($this->get_meta('buildscratch_signup_label'));
-        $login_label           = esc_html($this->get_meta('buildscratch_login_label'));
+        $forgot_password_label = wp_kses_post($this->get_meta('buildscratch_forgot_password_label'));
+        $signup_label          = wp_kses_post($this->get_meta('buildscratch_signup_label'));
+        $login_label           = wp_kses_post($this->get_meta('buildscratch_login_label'));
 
         $login_form_link = $password_reset_form_link = $signup_form_link = '';
 

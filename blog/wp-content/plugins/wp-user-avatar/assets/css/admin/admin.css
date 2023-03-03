@@ -1695,6 +1695,7 @@ textarea.wp-editor-area {
     background-color: #f9f9fa;
     padding: 12px;
     min-height: 43px;
+    display: flex;
 }
 
 .ppress-extensions-items-wrap .ppress-extension-card-install-activate {
@@ -1703,6 +1704,17 @@ textarea.wp-editor-area {
     justify-content: flex-end;
     height: 30px;
     position: relative;
+}
+
+.ppress-extension-card-settings, .ppress-extension-card-install-activate {
+    width: 50%;
+}
+
+.ppress-extension-card-footer > .ppress-extension-card-install-activate {
+    width: 100%;
+}
+
+.ppress-extension-card-install-activate {
 }
 
 .ppress-extensions-items-wrap .ppress-extension-card-install-activate .ppress-extension-card-status {

@@ -454,17 +454,21 @@ class EditUserProfile
 
     /**
      * Core function that removes/delete the user's cover photo
+     *
+     * @param int $user_id
      */
-    public static function remove_cover_image()
+    public static function remove_cover_image($user_id = 0)
     {
-        $slug = get_user_meta(self::get_current_user_id(), 'pp_profile_cover_image', true);
+        $user_id = is_int($user_id) && $user_id > 0 ? $user_id : self::get_current_user_id();
+
+        $slug = get_user_meta($user_id, 'pp_profile_cover_image', true);
 
         do_action('ppress_before_cover_image_removal', $slug);
 
         unlink(PPRESS_COVER_IMAGE_UPLOAD_DIR . $slug);
 
         // delete the record from DB
-        delete_user_meta(self::get_current_user_id(), 'pp_profile_cover_image');
+        delete_user_meta($user_id, 'pp_profile_cover_image');
 
         do_action('ppress_after_cover_image_removal');
     }

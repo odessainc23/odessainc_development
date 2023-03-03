@@ -83,12 +83,12 @@ class EditProfileBuilder
         }
 
         wp_localize_script('password-strength-meter', 'pwsL10n', array(
-            'empty'    => esc_html__('Strength indicator'),
-            'short'    => esc_html__('Very weak'),
-            'bad'      => esc_html__('Weak'),
-            'good'     => _x('Medium', 'password strength'),
-            'strong'   => esc_html__('Strong'),
-            'mismatch' => esc_html__('Mismatch'),
+            'empty'    => esc_html__('Strength indicator', 'wp-user-avatar'),
+            'short'    => esc_html__('Very weak', 'wp-user-avatar'),
+            'bad'      => esc_html__('Weak', 'wp-user-avatar'),
+            'good'     => _x('Medium', 'password strength', 'wp-user-avatar'),
+            'strong'   => esc_html__('Strong', 'wp-user-avatar'),
+            'mismatch' => esc_html__('Mismatch', 'wp-user-avatar'),
         ));
 
         ob_start(); ?>
@@ -96,7 +96,7 @@ class EditProfileBuilder
         <?php if ('true' == $atts['enforce']) : ?>
         <input type="hidden" name="pp_enforce_password_meter" value="true">
     <?php endif; ?>
-        <div id="pp-pass-strength-result" <?php echo 'class="' . $atts['class'] . '"' . $other_atts_html; ?>><?php _e('Strength indicator'); ?></div>
+        <div id="pp-pass-strength-result" <?php echo 'class="' . esc_attr($atts['class']) . '"' . $other_atts_html; ?>><?php _e('Strength indicator','wp-user-avatar'); ?></div>
         <script type="text/javascript">
             var pass_strength = 0;
             jQuery(document).ready(function ($) {

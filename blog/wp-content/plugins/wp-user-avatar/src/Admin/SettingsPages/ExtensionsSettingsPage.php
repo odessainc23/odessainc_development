@@ -114,7 +114,7 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
                 <?php foreach (EM::available_extensions() as $id => $extension) :
                     $name = sprintf('%s[%s]', EM::DB_OPTION_NAME, $id);
                     $extension_class = ppress_var(EM::class_map(), $id);
-                    $upgrade_url =  ppress_upgrade_urls_affilify("https://profilepress.com/pricing/?utm_source=WordPress&utm_campaign=liteplugin&utm_medium=extension-upgrade&utm_content=$id");
+                    $upgrade_url = ppress_upgrade_urls_affilify("https://profilepress.com/pricing/?utm_source=WordPress&utm_campaign=liteplugin&utm_medium=extension-upgrade&utm_content=$id");
                     if ( ! EM::is_premium()) {
                         $upgrade_url = add_query_arg('discount', '10PPOFF', $upgrade_url);
                     }
@@ -148,6 +148,12 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
                                             <?= sprintf(esc_html__('Unavailable: %s', 'wp-user-avatar'), "<span>$callable_result</span>") ?>
                                         </span>
                                     <?php else : ?>
+
+                                        <?php if ( ! empty($extension['setting_url']) && EM::is_enabled($id)) : ?>
+                                            <div class="ppress-extension-card-settings">
+                                                <a href="<?= esc_url($extension['setting_url']) ?>" class="button"><?php esc_html_e('Settings', 'wp-user-avatar') ?></a>
+                                            </div>
+                                        <?php endif; ?>
                                         <div class="ppress-extension-card-install-activate">
                                     <span class="ppress-extension-card-status">
                                         <?= EM::is_enabled($id) ? esc_html__('Activated', 'wp-user-avatar') : esc_html__('Deactivated', 'wp-user-avatar') ?>

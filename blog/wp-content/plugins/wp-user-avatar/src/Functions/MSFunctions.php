@@ -10,6 +10,7 @@ use ProfilePress\Core\Membership\Models\Plan\PlanEntity;
 use ProfilePress\Core\Membership\PaymentMethods\AbstractPaymentMethod;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods as PaymentGateways;
+use ProfilePress\Core\Membership\Services\Calculator;
 use ProfilePressVendor\Carbon\CarbonImmutable;
 
 /**
@@ -513,6 +514,30 @@ function ppress_display_amount($amount, $currency = '')
 function ppress_sanitize_amount($amount)
 {
     return (new CurrencyFormatter($amount))->sanitize()->val();
+}
+
+/**
+ * Converts price, fee or amount in cent to decimal
+ *
+ * @param $amount
+ *
+ * @return string
+ */
+function ppress_cent_to_decimal($amount)
+{
+    return ppress_sanitize_amount(Calculator::init($amount)->dividedBy('100')->val());
+}
+
+/**
+ * Converts price, fee or amount in decimal to cent
+ *
+ * @param $amount
+ *
+ * @return string
+ */
+function ppress_decimal_to_cent($amount)
+{
+    return (int)Calculator::init($amount)->toScale(2)->multipliedBy(100)->toScale(0)->val();
 }
 
 /**

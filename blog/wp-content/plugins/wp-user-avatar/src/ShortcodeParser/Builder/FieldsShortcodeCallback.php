@@ -101,7 +101,7 @@ class FieldsShortcodeCallback
 
         foreach ($atts as $key => $value) {
             if ( ! in_array($key, $invalid_atts)) {
-                $valid_atts[$key] = $value;
+                $valid_atts[esc_attr($key)] = esc_attr($value);
             }
         }
 
@@ -113,7 +113,7 @@ class FieldsShortcodeCallback
         $_POST = $this->GET_POST();
 
         if ($field_name !== $this->tag_name . '_submit') {
-            $atts['required'] = isset($atts['required']) ? $atts['required'] : $required;
+            $atts['required'] = isset($atts['required']) ? esc_attr($atts['required']) : $required;
         }
 
         if ( ! in_array($field_name, ['ignore_value'])) {
@@ -130,6 +130,7 @@ class FieldsShortcodeCallback
 
             if ($key != 'required' && ! empty($value)) {
                 $value    = esc_attr($value);
+                $key      = esc_attr($key);
                 $output[] = "$key=\"$value\"";
             }
         }
@@ -444,7 +445,7 @@ class FieldsShortcodeCallback
 
         $attributes = $this->field_attributes('ignore_value', $this->valid_field_atts(ppress_normalize_attributes($atts)));
 
-        $value = isset($_POST[$field_name]) ? wp_kses_post($_POST[$field_name]) : @wp_kses_post($atts['value']);
+        $value = isset($_POST[$field_name]) ? wp_kses_post($_POST[$field_name]) : wp_kses_post(ppress_var($atts, 'value', ''));
 
         $html = "<textarea name=\"$field_name\" $attributes>$value</textarea>";
 
@@ -662,11 +663,11 @@ class FieldsShortcodeCallback
 
         $key = ppress_sanitize_key($atts['key']);
 
-        $atts['class'] = "pp_datepicker $key " . @$atts['class'];
+        $atts['class'] = "pp_datepicker $key " . esc_attr(ppress_var($atts, 'class', ''));
 
 
         if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
-            $db_data       = isset($atts['value']) ? sanitize_text_field($atts['value']) : ($this->current_user->$key ?? '');
+            $db_data       = isset($atts['value']) ? esc_attr($atts['value']) : ($this->current_user->$key ?? '');
             $atts['value'] = isset($_POST[$key]) ? esc_attr($_POST[$key]) : $db_data;
         }
 
@@ -739,9 +740,9 @@ class FieldsShortcodeCallback
 
         $is_multiple           = isset($atts['is_multiple']) && $atts['is_multiple'] == '1' ? 'multiple' : '';
         $select2_class_name    = $is_multiple == 'multiple' ? 'ppress-select2 ' : '';
-        $data_placeholder_attr = $is_multiple == 'multiple' ? ' data-placeholder="' . @esc_attr($atts['placeholder']) . '"' : '';
+        $data_placeholder_attr = $is_multiple == 'multiple' ? ' data-placeholder="' . esc_attr(ppress_var($atts, 'placeholder')) . '"' : '';
 
-        $atts['class'] = $select2_class_name . @esc_attr($atts['class']);
+        $atts['class'] = $select2_class_name . esc_attr(ppress_var($atts, 'class'));
 
         $attributes = $this->field_attributes('ignore_value', $this->valid_field_atts(ppress_normalize_attributes($atts)));
 
@@ -786,6 +787,9 @@ class FieldsShortcodeCallback
                     }
                 }
 
+                $option_value = esc_attr($option_value);
+                $value        = esc_attr($value);
+
                 $html .= "<option value=\"$option_value\" $selected>$value</option>";
             }
         }
@@ -828,12 +832,12 @@ class FieldsShortcodeCallback
         $html = '<div class="pp-radios-container">';
 
         foreach ($option_values as $value) {
-            $value = trim($value);
+            $value = esc_attr(trim($value));
 
             $checked = @checked($_POST[$key], $value, false);
 
             if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
-                $db_data = isset($atts['value']) ? sanitize_text_field($atts['value']) : ($this->current_user->$key ?? '');
+                $db_data = isset($atts['value']) ? esc_attr($atts['value']) : ($this->current_user->$key ?? '');
                 $checked = @checked(
                     isset($_POST[$key]) && ! empty($_POST[$key]) ? $_POST[$key] : $db_data,
                     $value,
@@ -888,7 +892,7 @@ class FieldsShortcodeCallback
 
         foreach ($option_values as $value) {
 
-            $value = trim($value);
+            $value = esc_attr(trim($value));
 
             $checked = is_array(@$_POST[$key]) && in_array($value, @$_POST[$key]) ? 'checked="checked"' : @checked(@$_POST[$key], $value, false);
 
@@ -1064,10 +1068,10 @@ class FieldsShortcodeCallback
                 $html = apply_filters('ppress_edit_profile_hide_file', $html);
             }
 
-            $html .= "<input name='" . $key . "' type='file' $attributes>";
+            $html .= "<input name='" . esc_attr($key) . "' type='file' $attributes>";
             // if field is required, add an hidden field
             if ($this->form_type == FormRepository::REGISTRATION_TYPE && $this->is_field_required($atts)) {
-                $html .= "<input name='required-" . $key . "' type='hidden' value='true' style='display:none'>";
+                $html .= "<input name='required-" . esc_attr($key) . "' type='hidden' value='true' style='display:none'>";
             }
         }
 
@@ -1103,7 +1107,7 @@ class FieldsShortcodeCallback
         $form_type = $this->form_type;
         $form_id   = isset($GLOBALS['pp_registration_form_id']) ? $GLOBALS['pp_registration_form_id'] : 0;
         if ($form_type == FormRepository::EDIT_PROFILE_TYPE) {
-            $form_id = isset($GLOBALS['pp_edit_profile_form_id']) ? $GLOBALS['pp_edit_profile_form_id'] : 0;
+            $form_id = isset($GLOBALS['pp_edit_profile_form_id']) ? esc_attr($GLOBALS['pp_edit_profile_form_id']) : 0;
         }
 
         if (isset($GLOBALS['pp_melange_form_id'])) {
@@ -1111,7 +1115,7 @@ class FieldsShortcodeCallback
             $form_type = FormRepository::MELANGE_TYPE;
         }
 
-        $processing_label = ! empty($atts['processing_label']) ? $atts['processing_label'] : FormRepository::get_processing_label($form_id, $form_type);
+        $processing_label = ! empty($atts['processing_label']) ? esc_attr($atts['processing_label']) : FormRepository::get_processing_label($form_id, $form_type);
 
         $attributes = $this->field_attributes($field_name, $atts);
 
@@ -1165,10 +1169,10 @@ SCRIPT;
 
         $atts = apply_filters('ppress_edit_profile_remove_avatar_button_atts', $atts);
 
-        $class = 'class="pp-del-profile-avatar ' . $atts['class'] . '"';
-        $label = ! empty($atts['label']) ? $atts['label'] : null;
-        $id    = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="pp-del-profile-avatar ' . esc_attr($atts['class']) . '"';
+        $label = ! empty($atts['label']) ? esc_attr($atts['label']) : null;
+        $id    = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         // ensure a profile avatar for the user is available before the remove button gets displayed
         if (UserAvatar::user_has_pp_avatar($this->current_user->ID)) {
@@ -1201,10 +1205,10 @@ SCRIPT;
 
         $atts = apply_filters('ppress_edit_profile_remove_cover_image_button_atts', $atts);
 
-        $class = 'class="pp-del-cover-image ' . $atts['class'] . '"';
-        $label = ! empty($atts['label']) ? $atts['label'] : null;
-        $id    = ! empty($atts['id']) ? 'id="' . $atts['id'] . '"' : null;
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="pp-del-cover-image ' . esc_attr($atts['class']) . '"';
+        $label = ! empty($atts['label']) ? esc_attr($atts['label']) : null;
+        $id    = ! empty($atts['id']) ? 'id="' . esc_attr($atts['id']) . '"' : null;
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         if (ppress_user_has_cover_image($this->current_user->ID)) {
             $button = "<button type=\"submit\" name=\"eup_remove_cover_image\" value=\"removed\" $class $id $title $other_atts_html>$label</button>";

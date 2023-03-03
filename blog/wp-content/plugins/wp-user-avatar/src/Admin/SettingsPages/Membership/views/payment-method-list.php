@@ -1,8 +1,10 @@
 <?php
 
-$payment_methods = ProfilePress\Core\Membership\PaymentMethods\PaymentMethods::get_instance()->get_all(); ?>
+use ProfilePress\Core\Classes\ExtensionManager;
 
-<div class="ppress-payment-methods-wrap">
+$payment_methods = ProfilePress\Core\Membership\PaymentMethods\PaymentMethods::get_instance()->get_all(true); ?>
+
+<div class="ppress-payment-methods-wrap<?= ExtensionManager::is_premium() ? ' is-premium' : '' ?>">
     <table cellspacing="0" class="widefat">
         <thead>
         <tr>
@@ -17,10 +19,9 @@ $payment_methods = ProfilePress\Core\Membership\PaymentMethods\PaymentMethods::g
         <tbody>
         <?php foreach ($payment_methods as $payment_method) : ?>
             <?php $config_url = esc_url(add_query_arg('method', $payment_method->get_id())); ?>
-            <tr>
+            <tr id="<?php echo $payment_method->get_id() ?>">
                 <td class="ppress-payment-method-table-sort">
-                 <span class="gateway-sort"><span class="dashicons dashicons-menu"></span>
-                    <input type="hidden" name="payment_gateways_order[]" value="<?php echo $payment_method->get_id() ?>"></span>
+                    <span class="gateway-sort"><span class="dashicons dashicons-menu"></span></span>
                 </td>
                 <td class="ppress-payment-method-table-title">
                     <a href="<?= $config_url ?>"><?php echo $payment_method->get_method_title() ?></a>
@@ -48,13 +49,17 @@ $payment_methods = ProfilePress\Core\Membership\PaymentMethods\PaymentMethods::g
         <?php if ( ! ProfilePress\Core\Classes\ExtensionManager::is_premium()) :
 
             $pro_payment_methods = [
-                'paypal' => [
+                'paypal'   => [
                     'name'        => 'PayPal',
                     'description' => esc_html__('Wish to accept payments and sell memberships via PayPal? %supgrade to premium%s.', 'wp-user-avatar')
                 ],
-                'mollie' => [
+                'mollie'   => [
                     'name'        => 'Mollie',
                     'description' => esc_html__('%sUpgrade to premium%s to accept one-time and recurring payments via iDEAL, Credit Card, Apple Pay, Klarna, Bancontact, in3 etc with Mollie.', 'wp-user-avatar')
+                ],
+                'razorpay' => [
+                    'name'        => 'Razorpay',
+                    'description' => esc_html__('%sUpgrade to premium%s to accept one-time and recurring payments via Razorpay.', 'wp-user-avatar')
                 ]
             ];
 

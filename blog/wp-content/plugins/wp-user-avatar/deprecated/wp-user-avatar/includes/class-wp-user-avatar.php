@@ -76,7 +76,7 @@ class WP_User_Avatar
             <img style="width: 450px;height:auto" src="<?= ppress_get_cover_image_url($user->ID) ?>">
             <?php if (ppress_user_has_cover_image($user->ID)) : ?>
                 <br>
-                <a href="#" class="button ppress-remove-cover-photo"><?php esc_attr_e('Remove', 'wp-user-avatar'); ?></a>
+                <a href="#" class="button ppress-remove-cover-photo" data-user_id="<?= $user->ID ?>"><?php esc_attr_e('Remove', 'wp-user-avatar'); ?></a>
             <?php endif; ?>
         </div>
         <p>

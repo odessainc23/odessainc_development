@@ -374,7 +374,7 @@ trait Options
         $infos = \array_filter(\get_object_vars($this), function ($var) {
             return $var;
         });
-        foreach (['dumpProperties', 'constructedObjectId'] as $property) {
+        foreach (['dumpProperties', 'constructedObjectId', 'constructed'] as $property) {
             if (isset($infos[$property])) {
                 unset($infos[$property]);
             }

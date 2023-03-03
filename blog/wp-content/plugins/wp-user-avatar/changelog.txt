@@ -1,5 +1,24 @@
 ﻿== Changelog ==
 
+= 4.7.0 =
+* Pro: [Paystack addon](https://profilepress.com/addons/paystack/?ref=changelog).
+* Fixed bug where subscription was still active even when order was refunded.
+* Fixed bug with checkout not working when Password reset is not allowed for user.
+
+= 4.6.0 =
+* Added [RazorPay addon](https://profilepress.com/addons/razorPay/?ref=changelog).
+* Added support for 'url' config when adding myaccount page menu tabs.
+* Added color fields to settings API.
+* Fixed bug where admin couldn't delete other users cover photo in the admin dashboard.
+* Fixed incorrect currency in order listing display.
+
+= 4.5.5 =
+* Fixed PHP Warning: Undefined array key "user_login".
+* Added missing text domain to strings.
+* Bumped Stripe API version to latest.
+* Fixed XSS in shortcode & content protection admin page.
+* Added settings button to [addons page](https://profilepress.com/addons/?ref=changelog).
+
 = 4.5.4 =
 * Fixed more XSS in form builder.
 

@@ -548,6 +548,11 @@ class Custom_Settings_Page_Api
         return "<tr id=\"$tr_id\"><td colspan=\"5\" style='margin:0;padding:0;'>" . $data . $description . '</td></tr>';
     }
 
+    public function _color($db_options, $key, $args) {
+        $args['class'] = 'ppress-color-picker';
+        return $this->_text($db_options, $key, $args);
+    }
+
     /**
      * Renders the text field
      *

@@ -57,7 +57,7 @@ class PaymentHelpers
     public static function stripe_amount_to_ppress_amount($amount, $currency = '')
     {
         if ( ! self::is_zero_decimal_currency($currency)) {
-            $amount = ppress_sanitize_amount(Calculator::init($amount)->dividedBy('100')->val());
+            $amount = ppress_cent_to_decimal($amount);
         }
 
         return $amount;
