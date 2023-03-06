@@ -71,7 +71,7 @@ class MyAccountTag extends FormProcessor
                     'icon'     => 'shopping_cart',
                     'callback' => [__CLASS__, 'orders_callback']
                 ],
-                'list-downloads'        => [
+                'list-downloads'     => [
                     'title'    => esc_html__('Downloads', 'wp-user-avatar'),
                     /** @todo implement customizing this endpoint */
                     'endpoint' => esc_html(ppress_settings_by_key('myac_downloads_endpoint', 'list-downloads', true)),
@@ -578,8 +578,9 @@ class MyAccountTag extends FormProcessor
 
                     <div class="profilepress-myaccount-nav">
                         <?php foreach ($tabs as $key => $tab) :
+                            $href = ! empty($tab['url']) ? $tab['url'] : $this->get_endpoint_url($key);
                             ?>
-                            <a class="ppmyac-dashboard-item <?= $key ?><?= self::is_endpoint($key) ? ' isactive' : ''; ?>" href="<?= $this->get_endpoint_url($key); ?>">
+                            <a class="ppmyac-dashboard-item <?= $key ?><?= self::is_endpoint($key) ? ' isactive' : ''; ?>" href="<?= esc_url($href); ?>">
                                 <i class="ppmyac-icons">
                                     <?= isset($tab['icon']) ? $tab['icon'] : 'settings'; ?>
                                 </i>

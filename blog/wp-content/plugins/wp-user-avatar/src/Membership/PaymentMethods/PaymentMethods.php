@@ -27,7 +27,7 @@ class PaymentMethods
     /**
      * @return PaymentMethodInterface[]
      */
-    public function get_all()
+    public function get_all($sort = false)
     {
         $bucket = [];
 
@@ -35,6 +35,23 @@ class PaymentMethods
 
             foreach ($this->registered_methods() as $method) {
                 $bucket[$method->id] = $method;
+            }
+        }
+
+        if ($sort === true) {
+            $sorted_vals = ppress_get_payment_method_setting('sorted_payment_methods', [], true);
+            if (is_array($sorted_vals) && ! empty($sorted_vals)) {
+                $sorted_bucket = [];
+                $bucket_keys   = array_keys($bucket);
+
+                foreach ($sorted_vals as $sorted_val) {
+                    if (in_array($sorted_val, $bucket_keys)) {
+                        $sorted_bucket[$sorted_val] = $bucket[$sorted_val];
+                    }
+                }
+
+                // important to merge any gateway not saved in a pristine sorted gateway db value
+                $bucket = array_merge($sorted_bucket, $bucket);
             }
         }
 
@@ -50,7 +67,7 @@ class PaymentMethods
     {
         $bucket = [];
 
-        foreach ($this->get_all() as $method) {
+        foreach ($this->get_all(true) as $method) {
             if ($method->is_enabled()) {
 
                 if ( ! $include_backend_only && $method->is_backend_only()) continue;

@@ -27,20 +27,20 @@ class GDPR
     {
         $user          = get_user_by('email', $email_address);
         $user_id       = $user->ID;
-        /** @todo loop through billing details too. maybe use ppress_custom_fields_key_value_pair() */
-        $custom_fields = PROFILEPRESS_sql::get_profile_custom_fields();
+        $custom_fields = ppress_custom_fields_key_value_pair(true);
 
         $items_removed  = false;
         $items_retained = false;
 
         if ( ! empty($custom_fields) && is_array($custom_fields)) {
 
-            foreach ($custom_fields as $custom_field) {
+            foreach ($custom_fields as $field_key => $field_label) {
 
-                $get_meta_value = get_user_meta($user_id, $custom_field['field_key']);
+                $get_meta_value = get_user_meta($user_id, $field_key);
                 if (empty($get_meta_value)) continue;
 
-                $deleted = delete_user_meta($user_id, $custom_field['field_key']);
+                $deleted = delete_user_meta($user_id, $field_key);
+
                 if ($deleted) {
                     $items_removed = true;
                 } else {
@@ -62,46 +62,27 @@ class GDPR
         $exporters[] = array(
             'exporter_friendly_name' => esc_html__('User Extra Information', 'wp-user-avatar'),
             'callback'               => function ($email_address) {
+
                 $user    = get_user_by('email', $email_address);
                 $user_id = $user->ID;
 
                 $data_to_export = [];
 
-                /** @todo loop through biiling details too  */
-                $custom_fields    = PROFILEPRESS_sql::get_profile_custom_fields();
-                $db_contact_infos = PROFILEPRESS_sql::get_contact_info_fields();
+                $lead_data_to_export = [];
 
-                if ( ! empty($db_contact_infos) || ! empty($custom_fields)) {
+                $x_custom_fields = ppress_custom_fields_key_value_pair(true);
 
-                    $lead_data_to_export = [];
+                if ( ! empty($x_custom_fields) && is_array($x_custom_fields)) {
 
-                    if ( ! empty($db_contact_infos) && is_array($db_contact_infos)) {
+                    foreach ($x_custom_fields as $field_key => $field_label) {
 
-                        foreach ($db_contact_infos as $key => $value) {
+                        $usermeta_value = get_user_meta($user_id, $field_key, true);
 
-                            $usermeta_value = get_user_meta($user_id, $key, true);
-
-                            if ( ! empty($usermeta_value)) {
-                                $lead_data_to_export[] = [
-                                    'name'  => $value,
-                                    'value' => $usermeta_value
-                                ];
-                            }
-                        }
-                    }
-
-                    if ( ! empty($custom_fields) && is_array($custom_fields)) {
-
-                        foreach ($custom_fields as $custom_field) {
-
-                            $usermeta_value = get_user_meta($user_id, $custom_field['field_key'], true);
-
-                            if ( ! empty($usermeta_value)) {
-                                $lead_data_to_export[] = [
-                                    'name'  => $custom_field['label_name'],
-                                    'value' => $usermeta_value
-                                ];
-                            }
+                        if ( ! empty($usermeta_value)) {
+                            $lead_data_to_export[] = [
+                                'name'  => $field_label,
+                                'value' => get_user_meta($user_id, $field_key, true)
+                            ];
                         }
                     }
 

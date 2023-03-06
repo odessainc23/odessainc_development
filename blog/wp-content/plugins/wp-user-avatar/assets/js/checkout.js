@@ -377,4 +377,8 @@ export default function () {
     this.is_var_defined = function (val) {
         return typeof val !== 'undefined' && val !== null;
     };
+
+    this.get_obj_val = function (val, $default) {
+        return this.is_var_defined(val) && val !== "" ? val : $default;
+    };
 }

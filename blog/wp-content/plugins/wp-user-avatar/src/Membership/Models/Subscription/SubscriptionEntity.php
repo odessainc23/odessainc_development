@@ -179,9 +179,17 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
             SubscriptionStatus::TRIALLING,
         ];
 
+        $last_order = $this->get_last_order();
+
         // one-time payments with lifetime expiration is considered not active if they are cancelled
         // unlike recurring sub which is only not active if expired.
         if ($this->is_lifetime() && $this->is_cancelled()) {
+            $ret = false;
+        }
+        if (
+            apply_filters('ppress_subscription_disable_active_status_on_refund', true) &&
+            $this->is_cancelled() && $last_order instanceof OrderEntity && $last_order->is_refunded()
+        ) {
             $ret = false;
         } else {
 
@@ -423,6 +431,23 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         ]);
     }
 
+    /**
+     * @return OrderEntity|false
+     */
+    public function get_last_order()
+    {
+        $orders = OrderRepository::init()->retrieveBy([
+            'subscription_id' => $this->id,
+            'number'          => 1,
+            'plan_id'         => $this->get_plan_id(),
+            'order'           => 'DESC'
+        ]);
+
+        if ( ! empty($orders)) return $orders[0];
+
+        return false;
+    }
+
     public function add_plan_role_to_customer()
     {
         $customer = CustomerFactory::fromId($this->customer_id);
@@ -649,6 +674,12 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         do_action('ppress_subscription_expired', $this);
     }
 
+    /**
+     * @param $change_expiry_date
+     * @param int $expiration_date timestamp in UTC
+     *
+     * @return void
+     */
     public function renew($change_expiry_date = true, $expiration_date = '')
     {
         if ( ! empty($expiration_date)) {

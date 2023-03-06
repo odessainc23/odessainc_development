@@ -152,8 +152,8 @@ class LicenseUpgrader
                         </li>
                         <li>
                             <div class="dashicons dashicons-yes"></div>
-                            <a href="https://profilepress.com/addons/mollie/?utm_source=wp_dashboard&utm_medium=retrieve_license&utm_campaign=lite_license_page" target="_blank" rel="noopener noreferrer">
-                                <?php esc_html_e('Collect Mollie payments', 'wp-user-avatar'); ?>
+                            <a href="https://profilepress.com/addons/?utm_source=wp_dashboard&utm_medium=retrieve_license&utm_campaign=lite_license_page" target="_blank" rel="noopener noreferrer">
+                                <?php esc_html_e('Mollie & Razorpay gateways', 'wp-user-avatar'); ?>
                             </a>
                         </li>
                         <li>

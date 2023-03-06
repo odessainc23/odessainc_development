@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554
+class ComposerStaticInitebf6e8aae2628d0984ab186d6c4c676a
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -111,6 +111,7 @@ class ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554
         'ProfilePressVendor\\Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
         'ProfilePressVendor\\Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'ProfilePressVendor\\Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
+        'ProfilePressVendor\\Carbon\\CarbonPeriodImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriodImmutable.php',
         'ProfilePressVendor\\Carbon\\CarbonTimeZone' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
         'ProfilePressVendor\\Carbon\\Cli\\Invoker' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Cli/Invoker.php',
         'ProfilePressVendor\\Carbon\\Doctrine\\CarbonDoctrineType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/CarbonDoctrineType.php',
@@ -615,9 +616,9 @@ class ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfc05c57daf8c70b936bbb79bd46c7554::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitebf6e8aae2628d0984ab186d6c4c676a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitebf6e8aae2628d0984ab186d6c4c676a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitebf6e8aae2628d0984ab186d6c4c676a::$classMap;
 
         }, null, ClassLoader::class);
     }

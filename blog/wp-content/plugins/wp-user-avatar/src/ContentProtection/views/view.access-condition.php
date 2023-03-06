@@ -70,7 +70,7 @@ foreach (PlanRepository::init()->retrieveAll() as $plan) {
             <td>
                 <select id="pp-cc-access-wp-users" name="ppress_cc_data[access_condition][access_wp_users][]" multiple>
                     <?php foreach ($access_wp_users as $user_id): $user = get_userdata($user_id); ?>
-                        <option value="<?= $user_id ?>" selected>
+                        <option value="<?= esc_attr($user_id) ?>" selected>
                             <?= $user->user_login ?> (<?= $user->user_email ?>)
                         </option>
                     <?php endforeach; ?>

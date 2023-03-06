@@ -162,6 +162,7 @@ $sub_menus = apply_filters('ppress_my_account_settings_sub_menus', ['general' =>
 
                     <?php foreach ($contact_infos as $field_key => $label) : ?>
                         <?php if (in_array($field_key, array_keys($billing_fields))) continue; ?>
+                        <?php if (apply_filters('ppress_myaccount_edit_profile_disable_' . $field_key, false, $current_user_id)) continue; ?>
                         <div class="profilepress-myaccount-form-field <?= $field_key ?>">
                             <label for="<?= $field_key ?>"><?= $label ?></label>
                             <?= sprintf('[edit-profile-cpf key="%1$s" id="%1$s" type="%2$s" class="profilepress-myaccount-form-control"]', $field_key, 'text'); ?>
@@ -180,6 +181,8 @@ $sub_menus = apply_filters('ppress_my_account_settings_sub_menus', ['general' =>
 
                         // skip woocommerce core billing / shipping fields added to wordpress profile admin page.
                         if (in_array($field_key, ppress_woocommerce_billing_shipping_fields())) continue;
+
+                        if (apply_filters('ppress_myaccount_edit_profile_disable_' . $field_key, false, $current_user_id)) continue;
                         ?>
                         <div class="profilepress-myaccount-form-field <?= $field_key ?>">
                             <?php if ($custom_field['type'] !== 'agreeable') : ?>

@@ -303,25 +303,7 @@ class SettingsPage extends AbstractSettingsPage
 
                 $order_id = intval($_GET['id']);
 
-                $order = OrderRepository::init()->retrieve($order_id);
-
-                if ($order->exists() && $order->is_refundable()) {
-
-                    $payment_method = ppress_get_payment_method($order->payment_method);
-
-                    if (is_object($payment_method) && method_exists($payment_method, 'process_refund')) {
-
-                        $response = $payment_method->process_refund(
-                            $order->get_id(),
-                            $order->get_total()
-                        );
-
-                        if ($response === true) {
-                            $order->refund_order();
-                            SubscriptionRepository::init()->retrieve($order->subscription_id)->cancel(true);
-                        }
-                    }
-                }
+                OrderService::init()->process_order_refund($order_id);
 
                 wp_safe_redirect(add_query_arg(['ppress_order_action' => 'edit', 'id' => $order_id, 'saved' => 'true'], PPRESS_MEMBERSHIP_ORDERS_SETTINGS_PAGE));
                 exit;

@@ -55,8 +55,8 @@ class GlobalShortcodes
         $tag = '<input type="hidden" name="is_melange" value="true">';
 
         if (isset($GLOBALS['pp_melange_form_id'], $GLOBALS['pp_melange_form_redirect'])) {
-            $form_id  = $GLOBALS['pp_melange_form_id'];
-            $redirect = $GLOBALS['pp_melange_form_redirect'];
+            $form_id  = esc_attr($GLOBALS['pp_melange_form_id']);
+            $redirect = esc_url($GLOBALS['pp_melange_form_redirect']);
 
             $tag .= "<input type='hidden' name='pp_melange_id' class='pp_melange_id' value='$form_id'>";
             if ( ! empty($GLOBALS['pp_melange_form_redirect'])) {
@@ -187,10 +187,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $label = $atts['label'];
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $label = esc_attr($atts['label']);
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
 
         $html = '<a href="' . wp_registration_url() . "\" {$title} {$class} {$id}>$label</a>";
@@ -219,10 +219,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $label = $atts['label'];
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $label = esc_attr($atts['label']);
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<a href=\"" . wp_lostpassword_url() . "\" {$title} {$class} {$id}>$label</a>";
 
@@ -250,10 +250,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $label = $atts['label'];
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $label = esc_attr($atts['label']);
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = '<a href="' . wp_login_url() . '" ' . "$title $class $id" . '>' . $label . '</a>';
 
@@ -284,10 +284,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $label = $atts['label'];
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $label = esc_attr($atts['label']);
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = '<a href="' . wp_logout_url() . '" ' . "$title $class $id" . '>' . $label . '</a>';
 
@@ -315,10 +315,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class = 'class="' . $atts['class'] . '"';
-        $id    = 'id="' . $atts['id'] . '"';
-        $label = $atts['label'];
-        $title = 'title="' . $atts['title'] . '"';
+        $class = 'class="' . esc_attr($atts['class']) . '"';
+        $id    = 'id="' . esc_attr($atts['id']) . '"';
+        $label = esc_attr($atts['label']);
+        $title = 'title="' . esc_attr($atts['title']) . '"';
 
 
         $edit_profile_page_url = admin_url('profile.php');
@@ -359,10 +359,10 @@ class GlobalShortcodes
             $atts
         );
 
-        $class    = $atts['class'];
-        $id       = $atts['id'];
-        $size     = absint($atts['size']);
-        $alt      = $atts['alt'];
+        $class    = esc_attr($atts['class']);
+        $id       = esc_attr($atts['id']);
+        $size     = esc_attr(absint($atts['size']));
+        $alt      = esc_attr($atts['alt']);
         $original = in_array($atts['original'], ['true', true], true);
 
         $user_id = self::$current_user->ID;
@@ -388,9 +388,9 @@ class GlobalShortcodes
             'alt'   => '',
         ], $atts);
 
-        $class = $atts['class'];
-        $id    = $atts['id'];
-        $alt   = sanitize_text_field($atts['alt']);
+        $class = esc_attr($atts['class']);
+        $id    = esc_attr($atts['id']);
+        $alt   = esc_attr($atts['alt']);
 
         if ( ! empty($id)) {
             $id = " id='$id'";

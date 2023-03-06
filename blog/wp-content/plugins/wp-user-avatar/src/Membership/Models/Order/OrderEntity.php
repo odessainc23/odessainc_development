@@ -239,7 +239,7 @@ class OrderEntity extends AbstractModel implements ModelInterface
                 )
             );
 
-            do_action('ppress_order_order_refunded', $this);
+            do_action('ppress_order_refunded', $this);
         }
 
         return $response;

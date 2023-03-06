@@ -33,6 +33,7 @@ return array(
     'ProfilePressVendor\\Carbon\\CarbonInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
     'ProfilePressVendor\\Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'ProfilePressVendor\\Carbon\\CarbonPeriod' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
+    'ProfilePressVendor\\Carbon\\CarbonPeriodImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonPeriodImmutable.php',
     'ProfilePressVendor\\Carbon\\CarbonTimeZone' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
     'ProfilePressVendor\\Carbon\\Cli\\Invoker' => $vendorDir . '/nesbot/carbon/src/Carbon/Cli/Invoker.php',
     'ProfilePressVendor\\Carbon\\Doctrine\\CarbonDoctrineType' => $vendorDir . '/nesbot/carbon/src/Carbon/Doctrine/CarbonDoctrineType.php',

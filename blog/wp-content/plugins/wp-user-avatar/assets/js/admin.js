@@ -417,12 +417,35 @@
         });
     };
 
+    var payment_methods_sortable = function () {
+
+        $('.ppress-payment-methods-wrap.is-premium tbody').sortable({
+            items: 'tr',
+            cursor: 'move',
+            axis: 'y',
+            handle: '.gateway-sort',
+            scrollSensitivity: 40,
+            helper: 'clone',
+            opacity: 0.65,
+            update: function (event, ui) {
+                $.post(
+                    ajaxurl, {
+                        action: "ppress_payment_methods_sortable",
+                        data: $(this).sortable('toArray'),
+                        csrf: ppress_admin_globals.nonce
+                    }
+                );
+            }
+        });
+    };
+
     $(function () {
         if (typeof window.cmSettingsInstances === 'undefined') {
             window.cmSettingsInstances = {};
         }
         admin_sidebar_tab_settings();
         custom_fields_sortable();
+        payment_methods_sortable();
         custom_field_toggling();
         email_settings_field_init();
         titleshit();
@@ -471,6 +494,8 @@
         }
         // date picker for order filter
         $('.ppress_datepicker').flatpickr({dateFormat: "Y-m-d", allowInput: true});
+
+        $('.ppress-color-picker').wpColorPicker();
 
         //date picker for order edit screen
         $('.ppress_datetime_picker').flatpickr({
@@ -635,8 +660,8 @@
             }
         });
 
-        if ( typeof postboxes !== 'undefined' && /ppress/.test( pagenow ) ) {
-            postboxes.add_postbox_toggles( pagenow );
+        if (typeof postboxes !== 'undefined' && /ppress/.test(pagenow)) {
+            postboxes.add_postbox_toggles(pagenow);
         }
     });
 })(jQuery);

@@ -10,6 +10,7 @@ jQuery(function ($) {
 
             $.post(ajaxurl, {
                 action: 'pp_del_cover_image',
+                user_id: this_obj.data('user_id'),
                 nonce: wpua_custom.nonce
             }).done(function (data) {
                 if ('error' in data && data.error === 'nonce_failed') {

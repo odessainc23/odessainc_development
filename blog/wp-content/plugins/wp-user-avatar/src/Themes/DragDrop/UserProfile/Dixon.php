@@ -170,10 +170,10 @@ class Dixon extends AbstractTheme
 
     public function form_structure()
     {
-        $header_text = esc_html($this->get_profile_field($this->get_meta('dixon_profile_header_text')));
+        $header_text = wp_kses_post($this->get_profile_field($this->get_meta('dixon_profile_header_text')));
 
-        $header_byline       = esc_html($this->get_meta('dixon_profile_header_byline'));
-        $section_header_text = esc_html($this->get_meta('dixon_profile_section_header_text'));
+        $header_byline       = wp_kses_post($this->get_meta('dixon_profile_header_byline'));
+        $section_header_text = wp_kses_post($this->get_meta('dixon_profile_section_header_text'));
 
         $social_links_block = $this->social_links_block();
 

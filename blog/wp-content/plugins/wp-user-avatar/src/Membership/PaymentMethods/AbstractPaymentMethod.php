@@ -349,7 +349,7 @@ abstract class AbstractPaymentMethod implements PaymentMethodInterface
     /**
      * Process refund.
      *
-     * If the p declares 'refunds' support, this will allow it to refund a passed in amount.
+     * If the payment gateway declares 'refunds' support, this will allow it to refund a passed in amount.
      *
      * @param int $order_id Order ID.
      * @param string $amount Refund amount.
