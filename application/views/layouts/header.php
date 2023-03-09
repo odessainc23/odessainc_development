@@ -3,7 +3,7 @@
 	$custom_css_list = array( 'leadership/index', 'careers/index', 'platform/index', 'platform/core' );
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<?php if ( isset($meta_title) ) { ?>
 		<title><?php echo $meta_title; ?></title>
@@ -32,7 +32,7 @@
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
 
-	<!-- <link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg"> -->
+	<link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg">
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>

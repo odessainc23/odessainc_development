@@ -557,22 +557,19 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
             
 			}
     });
-	$("#letstalk").click(function(){
 	
+
+	$("#letstalk").click(function(){
+		//console.log($("#honeypot").val())
 		var honeypot_val = $("#honeypot").val();
-		if(honeypot_val == '' && grecaptcha.getResponse() != ""){
+		if(honeypot_val == ''){
 			$('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
 			$("#secondaryForm").submit();
 			return true;
-		}else if(grecaptcha.getResponse() == ""){
-			$(".capt").addClass("error");
-			return false;
 		}else{
 			window.location.reload();
 			return false;
 		}
-           
- 
 	})
 
     $("#first_name").keypress(function(event){

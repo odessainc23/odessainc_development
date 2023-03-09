@@ -30,7 +30,7 @@ if($is_home){?>
 			</ul>
 			<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
+					<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
 						<!--Services Menu Start Here-->
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<div class="container pos">
@@ -93,7 +93,7 @@ if($is_home){?>
 						</ul>
 						<!--Services Menu End Here--> 
 					</li>
-					<li class="dropdown mega-dropdown"><a href="javascript:void(0);" class="dropdown-toggle hideview"
+					<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
 				data-toggle="dropdown">Why Odessa</a>
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<div class="container pos">
@@ -145,7 +145,7 @@ if($is_home){?>
 							</div>
 						</ul>
 					</li>
-					<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview"
+					<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
 			  data-toggle="dropdown">Company</a>
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<div class="container pos">
@@ -206,9 +206,9 @@ if($is_home){?>
 				<div class="container">
 					<div class="mobile_view_menu">
 						<ul>
-							<li><a class="active" href="javascript:void(0)" onclick="tabBx('platformmenu')">Platform</a></li>
-							<li><a href="javascript:void(0)" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
-							<li><a href="javascript:void(0)" onclick="tabBx('companymenu')">Company</a></li>
+							<li><a class="active" href="#" rel="nofollow" onclick="tabBx('platformmenu')">Platform</a></li>
+							<li><a href="#" rel="nofollow" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
+							<li><a href="#" rel="nofollow" onclick="tabBx('companymenu')">Company</a></li>
 							<li><a href="<?php echo base_url(); ?>lets-talk">Let's Talk</a></li>
 						</ul>
 					</div>
