@@ -355,6 +355,7 @@
         </div>
     </div>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet' /> 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -372,4 +373,14 @@
       ]
     }
     </script>
-    
+    <script async>
+
+		setTimeout(function(){
+			
+
+			AOS.init({
+				throttleDelay: 0,
+			});
+		}, 4000);
+		
+	</script>
