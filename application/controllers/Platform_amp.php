@@ -29,4 +29,23 @@ class Platform_amp extends CI_Controller {
 			$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 		
 	}
+
+	public function core() {
+		$data = array(
+			'page_title' => 'Build on our flexible asset management platform',
+			'description' => 'Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform',
+			'keywords' => 'digital asset management system,asset management system,asset management tools ',
+			'canonical_tag' => '',
+			'og' => '<meta name="revisit-after" content="7 days" />	
+	<meta name="allow-search" content="yes" />
+<title>Build on our flexible asset management platform</title><meta name="description" content="Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform"/>
+	<meta property="og:locale" content="en_US"/>'
+		);
+		
+	
+		$this->load->view( 'templates/amp_pages/header.amp.html', $data );
+		$this->load->view('pages/amp_pages/core.amp.html');
+		$this->load->view( 'templates/amp_pages/footer.amp.html' );
+		
+	}
 }
