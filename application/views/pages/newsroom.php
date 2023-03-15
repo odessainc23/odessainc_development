@@ -151,7 +151,7 @@
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
 								<h3>Accelerating Digital Transformation After COVID-19</h3>
-								<a href="https://www.magazine.monitordaily.com/critical-technology-accelerating-digital-transformation-after-covid19" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
 							</div>
 						</div>
 						
