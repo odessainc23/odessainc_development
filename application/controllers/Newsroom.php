@@ -28,9 +28,12 @@ class Newsroom extends CI_Controller {
 		$data['result']				= $res_announcements;
 		$data['result1']			= $res;
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/newsroom', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/newsroom', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/news.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function announcements() {

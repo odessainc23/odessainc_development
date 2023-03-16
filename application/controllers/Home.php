@@ -13,9 +13,12 @@ class Home extends CI_Controller {
 		$data['tc_title']			= 'Providers of the Odessa Platform, the world\'s leading asset finance software. Book A Demo.';
 		$data['tc_description']		= 'Odessa\'s cross-platform workflow brings efficiency to your operations. Get started with our lease administration software or fleet management software.';
 
-		$this->load->view('layouts/header',$data);
-		$this->load->view('pages/home');
-		$this->load->view('layouts/footer');
+		// $this->load->view('layouts/header',$data);
+		// $this->load->view('pages/home');
+		// $this->load->view('layouts/footer');
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/home.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function turns22() {

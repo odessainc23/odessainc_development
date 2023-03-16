@@ -13,9 +13,12 @@ class Platform extends CI_Controller {
 		$data['tc_title']			= 'Odessa, a smarter way to do asset finance';
 		$data['tc_description']		= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/platform', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/platform', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/platform.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function core() {
@@ -29,9 +32,12 @@ class Platform extends CI_Controller {
 <title>Build on our flexible asset management platform</title><meta name="description" content="Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform"/>
 	<meta property="og:locale" content="en_US"/>'
 		);
-		$this->load->view( 'templates/header', $data );
-		$this->load->view( 'pages/core' );
-		$this->load->view( 'templates/footer' );
+		// $this->load->view( 'templates/header', $data );
+		// $this->load->view( 'pages/core' );
+		// $this->load->view( 'templates/footer' );
+		$this->load->view( 'templates/amp_pages/header.amp.html', $data );
+		$this->load->view('pages/amp_pages/core.amp.html');
+		$this->load->view( 'templates/amp_pages/footer.amp.html' );
 	}
 	public function build() {
 		$data	= array();
@@ -44,8 +50,11 @@ class Platform extends CI_Controller {
 		$data['tc_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
 		$data['tc_description']		= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/build_page', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/build_page', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/dev.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 }

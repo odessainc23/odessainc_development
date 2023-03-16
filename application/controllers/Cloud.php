@@ -21,8 +21,11 @@ class Cloud extends CI_Controller {
 		$data['tc_description']		= 'Scale confidently in the cloud with Odessa, and leave the security, governance, and administration to us for enhanced lease management capabilities.';
 		$data['result']				= $res;
 
-		$this->load->view( 'layouts/header', $data );
-		$this->load->view( 'pages/cloud', $data );
-		$this->load->view( 'layouts/footer', $data );
+		// $this->load->view( 'layouts/header', $data );
+		// $this->load->view( 'pages/cloud', $data );
+		// $this->load->view( 'layouts/footer', $data );
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/cloud.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 }

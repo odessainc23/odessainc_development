@@ -20,8 +20,11 @@ class Company extends CI_Controller {
 		$data['result']				= $result;
 
 
-		$this->load->view('layouts/header',$data);
-		$this->load->view('pages/company', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header',$data);
+		// $this->load->view('pages/company', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/company.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 }

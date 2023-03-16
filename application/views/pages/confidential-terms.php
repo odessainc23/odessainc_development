@@ -15,7 +15,7 @@
 							<a href="#PrivateCloud">Private Cloud Hosted SLA’s</a>
 							<a href="#SourceCode">Source Code Escrow</a>
 							<a href="#InformationSecurity">Information Security Policy</a>
-							<a href="#QlikTerms">Qlik Terms</a>
+							<!-- <a href="#QlikTerms">Qlik Terms</a> -->
 							<a href="#UsePolicy">Acceptable Use Policy</a>
 						</div>
 					</div>
@@ -332,7 +332,7 @@
 						<h3>Information Security Policy</h3>
 						<p>When you browse our website, you do so anonymously, unless you have previously registered with us. We do collect IP (Internet Protocol) addresses of computers for the purpose of maintaining and improving site quality and integrity. </p>
 					</div>
-					<div id="QlikTerms" class="legal-pcontent legal-ppcontab">
+					<!-- <div id="QlikTerms" class="legal-pcontent legal-ppcontab">
 						<h3>Qlik Terms</h3>
 						<p>Customer agrees that the following terms apply to Customer with respect to its License and use of the LeaseWave Analytics Software product:</p>
 						<p>1.	Customer acknowledges that the Software contains or incorporates proprietary software owned by QlikTech Inc (“Qlik”). and its affiliates (“Qlik Products”). Customer is expressly prohibited from using the Qlik Products in any way other than integrated with the data structures of the LeaseWave Software, except as expressly agreed in Section 3 below. Qlik Products are the technology of “Qlik®”. Qlik Products contain license management software and require license keys for their use.</p>
@@ -347,7 +347,7 @@
 						<p>10.	Qlik is under no obligation to provide support, training or education services to Customer for the Qlik Product as integrated with the LeaseWave Software.</p>
 						<p>11.	Odessa may provide Customer’s name, address, individual Customer contact names and information to Qlik, for use by Qlik for its due diligence purposes, such as ensuring its compliance with OFAC, FCPA and other applicable laws.</p>
 						<p>12.	Customer shall indemnify, defend and hold Qlik and Odessa harmless from any and all damages and reasonable and verifiable costs and expenses (including reasonable attorneys’ fees) to the extent incurred by Qlik or Odessa as a result of any third party claim to the extent based on any allegation that any modification or alteration to a Qlik Product or any combination of the Partner Solution and a Qlik Product, made by Customer, infringes any patent, copyright, or trademark, or misappropriates any trade secret of a third party, except to the extent any such infringement or misappropriation arises solely on account of an unmodified Qlik Product. </p>
-					</div>
+					</div> -->
 					<div id="UsePolicy" class="legal-pcontent legal-ppcontab">
 						<h3>Acceptable Use Policy</h3>
 						<h4>1. Introduction</h4>

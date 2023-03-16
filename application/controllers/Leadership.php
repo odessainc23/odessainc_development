@@ -15,9 +15,12 @@ class Leadership extends CI_Controller {
 
 		$data['leaders_list']		= $this->get_list();
 
-		$this->load->view('layouts/header',$data);
-		$this->load->view('pages/leadership', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header',$data);
+		// $this->load->view('pages/leadership', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view('pages/amp_pages/leadership.amp.html', $data);
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function get_list() {

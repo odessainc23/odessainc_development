@@ -80,9 +80,12 @@ class Careers extends CI_Controller {
 		$data['lists']				= $job_lists['content'];
 		//	var_dump($data['lists']);die;
 		$this->load->helper('url');
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/careers', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/careers', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view('pages/amp_pages/careers.amp.html', $data);
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function job($id) {

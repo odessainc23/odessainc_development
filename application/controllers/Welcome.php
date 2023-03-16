@@ -67,9 +67,12 @@ class Welcome extends CI_Controller {
 		$data['tc_title']			= 'Let\'s talk | Odessa';
 		$data['tc_description']		= 'Learn why companies trust Odessa to deliver great stakeholder experiences.';
 
-		$this->load->view('layouts/header',$data);
-		$this->load->view('pages/lets_talk_primary');
-		$this->load->view('layouts/footer');
+		// $this->load->view('layouts/header',$data);
+		// $this->load->view('pages/lets_talk_primary');
+		// $this->load->view('layouts/footer');
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/letstalk.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 
 	public function privacy_policy() {
@@ -115,8 +118,11 @@ class Welcome extends CI_Controller {
 		$data['tc_title']			= 'Technology for Equipment Leasing & asset finance Industry | Odessa';
 		$data['tc_description']		= 'Odessa design offers data-driven solutions that enable enterprise intelligence, delivering excellence to all stakeholders of the lease enterprise.';
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/design_principles', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/design_principles', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
+		$this->load->view( 'pages/amp_pages/design.amp.html', $data );
+		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 }
