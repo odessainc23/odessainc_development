@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 @media only screen and (max-width: 1023px){
         /* .trusted_brands_logo .brlogo amp-img {
@@ -15,6 +16,20 @@
             vertical-align: middle;
             display: inline-block;
         } */
+        .cloudsview1 .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+                bottom:initial
+        }
+        .home-hero-bgimg img{
+            height:100%
+        }
+        .home-hero-bgimg i-amphtml-sizer{
+            padding-top: 150% !important;
+        }
+        .home-hero-bggrad {
+            background: linear-gradient(0deg,#77cdd1 28%,rgba(119,205,209,.3) 65%);
+            position: absolute;
+            z-index: 2;
+        }
     }
     
 </style>
@@ -75,7 +90,7 @@
                         <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" type="image/webp">
                         
                         <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" type="image/jpeg"> -->
-                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
                         
                     </picture>
                        

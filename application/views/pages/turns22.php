@@ -1,3 +1,5 @@
+
+<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet" type="text/css" />
 <style>
 	.turns22,
 .turns22 .block-number {
@@ -144,6 +146,7 @@
   -ms-grid-row-align: center;
   align-self: center;
   width: 95%;
+  height:auto;
 }
 .turns22 .section-hero .hero-logo {
   margin: 0 auto 40px;
