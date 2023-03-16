@@ -1,3 +1,33 @@
+<style amp-custom>
+	.erp_card_wrap .card_img_rte img,.card_img_lft img{
+		min-height: auto;
+		min-width: auto;
+		height: auto;
+	}
+	/* .card_img_lft .i-amphtml-layout-intrinsic .i-amphtml-sizer {
+    max-width: 100%;
+    display: none !IMPORTANT;
+} */
+
+	.card_img_lft .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+		position: relative;
+		top: -179px;
+    	left: -26px;
+	}
+	.card_img_rte .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+		top:initial
+	}
+	.top_arrow .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+		position: relative;
+		height: auto;
+		width: auto;
+	}
+	@media only screen and (max-width: 410px){
+		.discover_banner .learn_more_btn a {
+			min-width: 110px
+		}
+	}
+</style>
 <script type="text/javascript">
  
  
@@ -180,6 +210,7 @@
 									<a href="javascript:void(0)">
 										<amp-img src="<?php echo base_url(); ?>assets/images/discover_icon_4.png" alt="sun icon" width="34"
 											height="39" layout="intrinsic"></amp-img>
+											</a>
 										 <!-- <img src="<?= base_url(); ?>assets/images/discover_icon_4.png" alt="icon" /></a> -->
 								</li>
 							</ul>
