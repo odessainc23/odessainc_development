@@ -1,3 +1,12 @@
+<style>
+	.news_div h3 span{
+		font-family: MaisonNeue-Book;
+    	font-size: 16px;
+		margin: 5px 0 0;
+	}  
+	  
+	</style>
+
 <div id="wrapper">
 	<section class="newsroom">
 		<div class="container">
@@ -127,8 +136,9 @@
 						<div class="col-md-6 col-sm-6 col-xs-12 nopad">
 							<div class="news_rt">
 								<span class="date">May 15, 2021</span>
-								<h3>Mission Critical Technology Delivers Flexibility for Asset Finance</h3>
-								<a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<!-- <h3></h3> -->
+								<h3>Odessa named Most Innovative in Asset Finance 2023 <span>Mission Critical Technology Delivers Flexibility for Asset Finance</span></h3>
+								<a href="https://www.monitordaily.com/issue/2023-innovation-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -136,22 +146,26 @@
 						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">January 9, 2021</span>
-								<h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3>
-								<a href="https://www.magazine.monitordaily.com/the-equipment-finance-ecosystems-journey-toward-inclusion" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
+								<h3>Odessa named Most Innovative in Asset Finance 2022 <span>The Equipment Finance Ecosystem's Journey Toward Inclusion</span> </h3>
+								
+								<a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">January 10, 2021</span>
-								<h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3>
-								<a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<!-- <h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3> -->
+								<h3>Odessa secures investment from Boston private equity <span>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</span></h3>
+								
+								<a href="Odessa secures investment from Boston private equity firm Thomas H. Lee Partners - Philadelphia Business Journal (bizjournals.com)" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
 								<h3>Accelerating Digital Transformation After COVID-19</h3>
-								<a href="https://www.magazine.monitordaily.com/critical-technology-accelerating-digital-transformation-after-covid19" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
 							</div>
 						</div>
 						
