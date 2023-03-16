@@ -56,6 +56,10 @@ $route['platform.amp.html'] = 'Platform_amp';
 $route['news.amp.html'] = 'News_amp';
 $route['design.amp.html'] = 'Design_amp';
 $route['letstalk.amp.html'] = 'Letstalk_amp';
+$route['company.amp.html'] = 'company_amp';
+$route['platform/core.amp.html'] = 'platform_amp/core';
+$route['careers.amp.html'] = 'Careers_amp';
+$route['leadership.amp.html'] = 'leadership_amp';
 
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
