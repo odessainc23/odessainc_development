@@ -3227,6 +3227,10 @@ section.innovate_section .btns_style:hover {
     height: 35px;
     width: auto;
   }
+  #wrapper{
+    margin: 60px auto auto;
+    
+  }
   .fit-mid,
   .footer {
     position: relative;
