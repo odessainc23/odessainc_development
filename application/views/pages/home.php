@@ -63,7 +63,8 @@ url_redirect( {url: url,
 		<div class="home-hero-content">
 			<div class="home-hero-cinner">
 				<div class="home-hero-cwrap">
-					<h4 class="home-hero-cstitle">BUILT TO PERFORM</h4>
+					<p class="home-hero-cstitle" style="font-family: MaisonNeue-Bold;
+    color: #2a2d36;margin: 0 0 10px">BUILT TO PERFORM</p>
 					<div class="home-hero-ctitlewrap">
 						<h1 class="home-hero-ctitle">Your Proven Leasing <br>Platform</h1>
 					</div>

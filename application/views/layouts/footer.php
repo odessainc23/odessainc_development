@@ -109,8 +109,16 @@
 		}, 4000);
 		
 	</script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4da41fc07fb2a379" async></script>
-	<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
+	 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
+	 <script async>
+
+function initAddThis(){
+	 addthis.init()
+}
+// After the DOM has loaded...
+initAddThis();
+</script>
+	<script  type="text/javascript" src="<?php echo base_url(); ?>assets/js/pa-609d1be23a9c8c0011000021.js?v=7001" async></script>
 	
 </body>
 

@@ -60,7 +60,7 @@ $route['company.amp.html'] = 'company_amp';
 $route['platform/core.amp.html'] = 'platform_amp/core';
 $route['careers.amp.html'] = 'Careers_amp';
 $route['leadership.amp.html'] = 'leadership_amp';
-
+$route['turns22.amp.html'] = 'home_amp/turns22';
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
 $route['lets-talk'] = 'welcome/lets_talk_primary';

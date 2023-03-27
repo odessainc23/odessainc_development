@@ -36,9 +36,10 @@
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+ 
+	<script async src="<?php echo base_url(); ?>assets/js/v0.js"></script>
+    <script async custom-element="amp-bind" src="<?php echo base_url(); ?>assets/js/amp-bind-0.1.js"></script>
+	<script async custom-element="amp-script" src="<?php echo base_url(); ?>assets/js/amp-script-0.1.js"></script>
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet preload" as="style" type="text/css" />
 	<?php } ?>

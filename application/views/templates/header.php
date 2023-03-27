@@ -29,7 +29,7 @@
 		echo $this->minify->deploy_css(TRUE);
 	?>
 	<?php
-		$this->minify->css(array('rs6.css', 'buttons.css'));
+		$this->minify->css(array('buttons.css'));
 
 		echo $this->minify->deploy_css(TRUE);
 	?>
