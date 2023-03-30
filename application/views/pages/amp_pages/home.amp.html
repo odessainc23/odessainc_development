@@ -1,38 +1,4 @@
-<style amp-custom>
-.i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
-    display: block;
-    height:auto;
-   min-height: auto;
-}
-.trusted_brands_logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-@media only screen and (max-width: 1023px){
-        /* .trusted_brands_logo .brlogo amp-img {
-            max-width: 90%;
-            vertical-align: middle;
-            display: inline-block;
-        } */
-        .cloudsview1 .i-amphtml-layout-size-defined .i-amphtml-fill-content{
-                bottom:initial
-        }
-        .home-hero-bgimg img{
-            height:100%
-        }
-        .home-hero-bgimg i-amphtml-sizer{
-            padding-top: 150% !important;
-        }
-        .home-hero-bggrad {
-            background: linear-gradient(0deg,#77cdd1 28%,rgba(119,205,209,.3) 65%);
-            position: absolute;
-            z-index: 2;
-        }
-    }
-    
-</style>
+
 
 <script type="text/javascript">
  
@@ -81,19 +47,20 @@
     
     </script>
     
-    <div id="wrapper">
+    <div id="wrapper home-side">
         <div class="home-hero">
             <div class="home-hero-bg">
                 <div class="home-hero-bggrad"></div>
                 <div class="home-hero-bgimg">
-                    <picture>
+                   
+                    
                         <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" type="image/webp">
                         
                         <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" type="image/jpeg"> -->
-                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
                         
-                    </picture>
-                       
+                   
+                
                 </div>
             </div>
             <div class="home-hero-content">
@@ -200,28 +167,31 @@
         <!--Platform Solution Section End--> 
         
         <!--Cloud or Server Start Here-->
-        <div class="cloudserversection">
+        <div class="cloudserversection home-side">
             <div class="container clearfix">
                 <div class="cloudserverCon">
                     <div class="cloudsview1">
-                        <picture>
+                       
+                      
                             <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.webp" type="image/webp">
                             
                             <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.jpg" type="image/jpeg"> -->
                             <!-- <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.jpg" class="lazyload wh-image" layout="responsive"></amp-img> -->
                             <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.webp" alt="Odessa-cloud" width="1"
                                 height="1"  layout="responsive"></amp-img>
-                        </picture>
+                      
+                  
                     </div>
                     <div class="cloudsview2">
-                        <picture>
+                      
                             <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.webp" type="image/webp">
                             
                             <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" type="image/jpeg"> -->
                             <!-- <amp-img src="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Clouds Server" class="lazyload wh-image" layout="intrinsic"></amp-img> -->
                             <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Odessa-cloud"  width="1"
                                 height="1" layout="responsive" ></amp-img>
-                        </picture>
+                      
+                   
                          
                     </div>
                     <h2 class="text-center">Cloud or Server</h2>
@@ -240,7 +210,7 @@
     <!--Cloud or Server End Here--> 
     
     <!--Integrate with the Tools Start-->
-    <div class="integratewithtools">
+    <div class="integratewithtools home-side">
         <div class="container clearfix">
             <div class="integratecon">
                 <div class="integrateconmidCon">
@@ -265,7 +235,7 @@
     <!--Integrate with the Tools End--> 
     
     <!--Testimonials Section Start Here-->
-    <div class="testimonialswrap">
+    <div class="testimonialswrap home-side">
         <div class="container clearfix">
             <div id="clients_view">
                 <div class="row equalHMWrap eqWrap clearfix">
@@ -287,14 +257,14 @@
                     </div>
                     <div class="col-sm-6 col-lg-5">
                         <div class="clientsimgbx">
-                            <picture>
+                            
                                 <!-- <source data-srcset="<?= base_url(); ?>assets/images/jeff.webp" type="image/webp">
                                 
                                 <source data-srcset="<?= base_url(); ?>assets/images/jeff.jpg" type="image/jpeg">
                                 <amp-img src="<?= base_url(); ?>assets/images/jeff.jpg" alt="" class="lazyload wh-image" layout="intrinsic"></amp-img> -->
                                 <amp-img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud"  width="1"
                                     height="1" layout="responsive" ></amp-img>
-                            </picture>
+                            
                         </div>
                     </div>
                 </div>
@@ -371,7 +341,7 @@
         </div>
     </div>
     <!-- <script async src="<?php echo base_url(); ?>assets/js/v0.js"></script> -->
-    <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet preload' /> 
+    <!-- <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet preload' />  -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

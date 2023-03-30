@@ -1,5 +1,5 @@
 <!doctype html>
-<html amp lang="en">
+<html amp>
 <head>		
 	<?php if ( isset($meta_title) ) { ?>
 		<title><?php echo $meta_title; ?></title>
@@ -23,8 +23,8 @@
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 
-	<link rel="preload" as="image" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" imagesrcset="" imagesizes="50vw">
-	<!-- <link rel="prefetch" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg"> -->
+
+	<link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
 
 	<!-- Open Graph Tags -->
     <?php if ( isset($og_title) && !empty($og_title) ) { ?>
@@ -58,14 +58,7 @@
 	<meta property="twitter:card" content="summary">
 	
 	<!-- Canonical URL -->
-	<link rel="canonical" href="<?php echo base_url(); ?>cloud.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>home.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>dev.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>platform.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>news.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>design.amp.html" />
-	<link rel="canonical" href="<?php echo base_url(); ?>letstalk.amp.html" />
-
+	<link rel="canonical" href="<?php echo current_url(); ?>" />
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
@@ -75,9 +68,9 @@
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Bold.otf" as="font" type="font/otf" crossorigin>
 
 	
-    <script async src="<?php echo base_url(); ?>assets/js/v0.js"></script>
-    <script async custom-element="amp-bind" src="<?php echo base_url(); ?>assets/js/amp-bind-0.1.js"></script>
-	<script async custom-element="amp-script" src="<?php echo base_url(); ?>assets/js/amp-script-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 
     <script target="amp-script" id="" type="text/plain">
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -85,6 +78,31 @@
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
+		function preloader() {
+			if (document.images) {
+				var img1 = new Image();
+				var img2 = new Image();
+				var img3 = new Image();
+		
+				img1.src = "<?php echo base_url(); ?>assets/images/odessa-cloud-2.webp";
+				img2.src = "<?php echo base_url(); ?>assets/images/odessa-cloud-2.jpg";
+				img3.src = "<?php echo base_url(); ?>assets/images/odessa-cloud-2.jpeg";
+			}
+		}
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function() {
+					if (oldonload) {
+						oldonload();
+					}
+					func();
+				}
+			}
+		}
+		addLoadEvent(preloader);
 	</script>
     
    	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -95,31 +113,120 @@
 <style amp-custom>
 	
 	@import url('../../../../assets/css/font-awesome.min.css');
-	@import url('../../../../assets/css/bootstrap.css');
-	@import url('../../../../assets/css/owl.carousel.css');
-	@import url('../../../../assets/css/font-awesome.min.css?v=1001');
-	@import url('../../../../assets/css/style.css?v=2024');
-	@import url('../../../../assets/css/styles.min.css?v=2024');
-	@import url('../../../../assets/css/media.css?v=3001');
-	@import url('../../../../assets/css/aos.css?v=5001');
+		@import url('../../../../assets/css/bootstrap.css');
+		@import url('../../../../assets/css/owl.carousel.css');
+		@import url('../../../../assets/css/font-awesome.min.css?v=1001');
+		@import url('../../../../assets/css/style.css?v=2024');
+		@import url('../../../../assets/css/styles.min.css?v=2024');
+		/* @import url('../../../../assets/css/modular_styles.css'); */
+		@import url('../../../../assets/css/media.css?v=3001');
+		@import url('../../../../assets/css/aos.css?v=5001');
 	.business_card .business_icon amp-img{
-	height: 50px;
-	width: 40px;
-	}
+		height: 50px;
+		width: 40px;
+		}
+		/* careers */
+		.pgcar__hwimage amp-img{
+			width:100%;
+			height:100%
+		}
+		/* careers */
+		/* developer tools */
+		.buildscaleimgbx .i-amphtml-blurry-placeholder,.buildscaleimgbx .i-amphtml-fill-content {
+			display: block;
+			height:auto;
+		   min-height: auto;
+		   max-height: initial;
+		   min-width:auto
+		}
+		.buildscaleimgbx i-amphtml-sizer{
+			padding-top: 30.6667% !important;
+		}
+		.trusted_brands_logo{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/* develper tools */
+		
 	
-	@media only screen and (max-width: 1023px) { 
-	.business_card_warp .business_image amp-img {
-		width: 160px;
-		display: inline-block;
-	}
-	}
-	@media only screen and (max-width: 767px) {
-	.business_card_warp .business_image amp-img {
-		width: 140px;
-	}
-	}
+		/* leadership */
+		.pglead_ld-ithumb amp-img {
+			width: 150px !important;
+			height: 150px !important; 
+			vertical-align: middle;
+		}
+		/* leadership */
+		/* home */
+		.home-side .i-amphtml-blurry-placeholder,.home-side .i-amphtml-fill-content {
+			display: block;
+			height:auto;
+			min-height: auto;
+		}
+		.home-side .trusted_brands_logo{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	/* home */
+		@media only screen and (max-width: 1023px) { 
+		.business_card_warp .business_image amp-img {
+			width: 160px;
+			display: inline-block;
+		}
+		.cloudsview1 .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+					bottom:initial
+			}
+			.home-hero-bgimg img{
+				height:100%
+			}
+			.home-hero-bgimg i-amphtml-sizer{
+				padding-top: 150% !important;
+			}
+			.home-hero-bggrad {
+				background: linear-gradient(0deg,#77cdd1 28%,rgba(119,205,209,.3) 65%);
+				position: absolute;
+				z-index: 2;
+			}
+			.buildscaleimgbx i-amphtml-sizer {
+				padding-top: 0.6667% !important;
+			}
+			  
+			.buildscaleimgbx .i-amphtml-blurry-placeholder,.buildscaleimgbx .i-amphtml-fill-content {
+				width: auto;
+				height: 160px;
+				margin: 0 auto;
+				position: relative;
+			}
+		}
+		@media only screen and (max-width: 767px) {
+		.business_card_warp .business_image amp-img {
+			width: 140px;
+		}
+		.plateformCon .normaltxt.pdright {
+					padding-top: 0;
+					padding: 0;
+				}
+	
+				.buildpgscalefector {
+					padding-top: 90px;
+					}
+				.plateformCon .listpoints .normaltxt {
+					line-height: 24px;
+					margin-bottom: 20px;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+				.news_div .news_lt img {
+					margin: 0 0;
+				}
+				#nav-icon1 span{
+					background: #545b6d;
+				}
+		}
 </style>
-	<!-- <?php
+	<?php
 		$this->minify->css(array('bootstrap.css', 'owl.carousel.css'));
 
 		echo $this->minify->deploy_css(TRUE);
@@ -128,8 +235,8 @@
 		$this->minify->css(array('rs6.css', 'buttons.css'));
 
 		echo $this->minify->deploy_css(TRUE);
-	?> -->
-	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001" async></script>
+	?>
+	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001"></script>
 	
 </head>
 <body class="">
