@@ -57,4 +57,18 @@ class Platform extends CI_Controller {
 		$this->load->view( 'pages/amp_pages/dev.amp.html', $data );
 		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
+
+	public function xaas(){
+		$data['meta_title']			= 'Odessa, a smarter way to do asset finance';
+		$data['meta_description']	= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
+		$data['meta_keyword']		= 'asset tracking software digital,asset management software,digital asset management solutions,asset finance software';
+		$data['og_title']			= 'Odessa, a smarter way to do asset finance';
+		$data['og_description']		= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
+		$data['tc_title']			= 'Odessa, a smarter way to do asset finance';
+		$data['tc_description']		= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
+
+		$this->load->view('layouts/header', $data);
+		$this->load->view('pages/xaas', $data);
+		$this->load->view('layouts/footer', $data);
+	}
 }
