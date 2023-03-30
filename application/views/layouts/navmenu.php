@@ -123,13 +123,15 @@ if($is_home){?>
 												<div class="row eqWrap equalHMWrap clearfix">
 													<div class="col-sm-7 col-md-8 colmenubg">
 														<div class="menuimgbox"> 
+														
 															<picture>
 																<source data-srcset="<?= base_url(); ?>assets/images/covid_distance.webp" type="image/webp">
 																
 																<source data-srcset="<?= base_url(); ?>assets/images/covid_distance.webp" type="image/webp">
-																<img data-src="<?= base_url(); ?>assets/images/covid_distance.webp" alt="Technology role during covid" class="lazyload"/>
+																<img src="<?= base_url(); ?>assets/images/covid_distance.webp" alt="Technology role during covid" class="lazyload"/>
 																
 															</picture>
+												
 
 															<div class="imgdownlink"> <a href="<?php echo base_url(); ?>blog/reimagined-technology-role-during-covid//">From the blog: Digital Transformation in the time of COVID</a> </div>
 														</div>
@@ -177,13 +179,15 @@ if($is_home){?>
 												<div class="row eqWrap equalHMWrap clearfix">
 													<div class="col-sm-7 col-md-8 colmenubg">
 														<div class="menuimgbox"> 
+														
 															<picture>
 																<source data-srcset="<?= base_url(); ?>assets/images/menu_company_view.webp" type="image/webp">
 																
 																<source data-srcset="<?= base_url(); ?>assets/images/menu_company_view.webp" type="image/webp">
-																<img data-src="<?= base_url(); ?>assets/images/menu_company_view.webp" alt="Odessa company view" class="lazyload"/>
+																<img src="<?= base_url(); ?>assets/images/menu_company_view.webp" alt="Odessa company view" class="lazyload"/>
 																
 															</picture>
+														
 															<div class="imgdownlink"> <a href="<?php echo base_url(); ?>careers">We’re hiring! Come join us</a> </div>
 														</div>
 													</div>
