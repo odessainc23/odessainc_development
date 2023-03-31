@@ -47,9 +47,7 @@ if($is_home){?>
 													<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Loan Management</a></li>
 												</ul>
 												<ul>
-													<li class="category-dot category-bx">Developer Tools</li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
+													<li class="category-dot category-bx"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color">As-a-Service</a></li>
 												</ul>
 											</div>
 											<div class="col-xs-6 col-sm-3 menuwd20">
@@ -71,6 +69,11 @@ if($is_home){?>
 													<li><a href="<?php echo base_url(); ?>cloud">App Monitoring</a></li>
 													<li><a href="<?php echo base_url(); ?>cloud">Security Monitoring</a></li>
 													<li><a href="<?php echo base_url(); ?>cloud">Autoscaling</a></li>
+												</ul>
+												<ul>
+													<li class="category-dot category-bx">Developer Tools</li>
+													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
+													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
 												</ul>
 											</div>
 											<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
