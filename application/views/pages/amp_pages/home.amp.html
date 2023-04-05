@@ -1,4 +1,8 @@
-
+<style>
+   .platformsectionwrap .dotsdesign img {
+    width: 300px;
+}
+</style>
 
 <script type="text/javascript">
  
@@ -48,7 +52,7 @@
     </script>
     
     <div id="wrapper home-side">
-      
+        <div class="container">
         <div class="home-hero">
             <div class="home-hero-bg">
                 <div class="home-hero-bggrad"></div>
@@ -84,14 +88,25 @@
         <!--Platform Solution Section Start-->
         <div style="clear:both"></div>
         <div class="platformsectionwrap">
-            <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" class="lazyload wh-image"/> </div>
+            <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" width="300" class="lazyload wh-image"/> </div>
             <div class="container clearfix">
                 <h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
                 <p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence <br>
                     and extensibility in one seamless platform for better business performance.</p>
                 <div class="assetsfinancebox">
-                    <h3>Asset Finance</h3>
+                    <!-- <h3>Asset Finance</h3> -->
                     <div class="finance_assets_row">
+                        <div class="row clearfix">
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>Equipment Finance</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>Auto Finance</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>As-a-Service</h3>
+                            </div>
+                            </div>
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-4">
                                 <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
@@ -116,7 +131,7 @@
                 </div>
                 <div class="assets_fin_service">
                     <div class="row equalHMWrap eqWrap clearfix">
-                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="300" data-aos-once="true">
                             <div class="assfinconbx">
                                 <div class="logosrw">
                                     <div class="finass_ser_logo"></div>
@@ -344,6 +359,7 @@
     </div>
     <!-- <script async src="<?php echo base_url(); ?>assets/js/v0.js"></script> -->
     <!-- <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet preload' />  -->
+    </div>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
