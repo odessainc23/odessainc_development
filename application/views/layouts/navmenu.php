@@ -237,10 +237,10 @@ if($is_home){?>
 									
 								</div>
 								<div class="col-xs-6">
-								<ul>
-                                                        <li class="category-dot category-bx"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color">As-a-Service</a></li>
-                                                    </ul>
-														</div>
+                                        <ul>
+                                            <li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="service"><b>As-a-Service</b></a></li>
+                                        </ul>
+                                    </div>
 								<div class="col-xs-6">
 									<ul>
 										<li>Developer Tools</li>

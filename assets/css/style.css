@@ -111,7 +111,7 @@ p {
 .container {
   padding: 0;
   width: 90%;
-  max-width: 1920px;
+  max-width: 90%;
 }
 .container.pos:after {
   display: block;
@@ -2596,6 +2596,7 @@ section.video_section .videoplaybtn img {
 }
 section.video_section {
   height: calc(100vh - 120px);
+    max-height: 568px;
   overflow: hidden;
   position: relative;
 }
@@ -3228,6 +3229,7 @@ section.innovate_section .btns_style:hover {
     height: 35px;
     width: auto;
   }
+  
   .fit-mid,
   .footer {
     position: relative;
@@ -3508,6 +3510,18 @@ section.innovate_section .btns_style:hover {
   font-size: 15px;
   min-width: 120px;
   display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+  .ordr{
+  order:2
+}
+.finance_assets_row .row{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+} 
+  
 }
 @media only screen and (min-width: 767px) {
   .cloudserverCon .nextrw span {
