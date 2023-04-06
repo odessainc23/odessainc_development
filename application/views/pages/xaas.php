@@ -231,9 +231,9 @@
 	<!--Build Page End Here--> 
 </div>
 <link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
-	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
 	<script src="https://www.odessainc.com/assets/js/owl.carousel.js"></script> 
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <!-- <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script> -->
 
 
