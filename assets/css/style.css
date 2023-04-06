@@ -3961,6 +3961,6 @@ section.innovate_section .btns_style:hover {
   margin: 0 auto;
 }
 .clearfix .service{
-  color:black;
+  color:black !important;
   font-size: 13px !important;
 }
