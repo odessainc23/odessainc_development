@@ -59,16 +59,19 @@ class Platform extends CI_Controller {
 	}
 
 	public function xaas(){
-		$data['meta_title']			= 'Odessa, a smarter way to do asset finance';
-		$data['meta_description']	= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
-		$data['meta_keyword']		= 'asset tracking software digital,asset management software,digital asset management solutions,asset finance software';
-		$data['og_title']			= 'Odessa, a smarter way to do asset finance';
-		$data['og_description']		= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
-		$data['tc_title']			= 'Odessa, a smarter way to do asset finance';
-		$data['tc_description']		= 'Our customers use the Odessa Platform to facilitate processes from point of sale, through originations, to contract management and remarketing. Odessa manages both high-volume transactions and complex leases and loans, in any region and currency.';
+		$data['meta_title']			= 'Transform your business with XaaS solutions from Odessa';
+		$data['meta_description']	= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
+		$data['meta_keyword']		= 'XaaS, Billing Software, as-a-service, Subscription Management Software, Pay per use, Usage based billing, Everything as a service, Subscription management platform';
+		$data['og_title']			= 'Transform your business with XaaS solutions from Odessa';
+		$data['og_description']		= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
+		$data['tc_title']			= 'Transform your business with XaaS solutions from Odessa';
+		$data['tc_description']		= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
 
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pages/xaas', $data);
-		$this->load->view('layouts/footer', $data);
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/xaas', $data);
+		// $this->load->view('layouts/footer', $data);
+		$this->load->view('layouts/amp_pages/header.amp.html', $data);
+		$this->load->view('pages/amp_pages/xaas.amp.html', $data);
+		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
