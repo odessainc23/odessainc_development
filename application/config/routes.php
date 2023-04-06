@@ -60,7 +60,8 @@ $route['company.amp.html'] = 'company_amp';
 $route['platform/core.amp.html'] = 'platform_amp/core';
 $route['careers.amp.html'] = 'Careers_amp';
 $route['leadership.amp.html'] = 'leadership_amp';
-
+$route['turns22.amp.html'] = 'home/turns22';
+$route['xaas-everything-as-a-service.amp.html'] = 'xaas_amp/xaas';
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
 $route['lets-talk'] = 'welcome/lets_talk_primary';
@@ -69,6 +70,7 @@ $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
 
 $route['turns22'] = 'home/turns22';
+$route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';
 $route['lets-talk/thankyou.html'] = 'thankyou/index';

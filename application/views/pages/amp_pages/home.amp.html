@@ -1,37 +1,7 @@
-<style amp-custom>
-.i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
-    display: block;
-    height:auto;
-   min-height: auto;
+<style>
+   .platformsectionwrap .dotsdesign img {
+    width: 300px;
 }
-.trusted_brands_logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-@media only screen and (max-width: 1023px){
-        /* .trusted_brands_logo .brlogo amp-img {
-            max-width: 90%;
-            vertical-align: middle;
-            display: inline-block;
-        } */
-        .cloudsview1 .i-amphtml-layout-size-defined .i-amphtml-fill-content{
-                bottom:initial
-        }
-        .home-hero-bgimg img{
-            height:100%
-        }
-        .home-hero-bgimg i-amphtml-sizer{
-            padding-top: 150% !important;
-        }
-        .home-hero-bggrad {
-            background: linear-gradient(0deg,#77cdd1 28%,rgba(119,205,209,.3) 65%);
-            position: absolute;
-            z-index: 2;
-        }
-    }
-    
 </style>
 
 <script type="text/javascript">
@@ -81,29 +51,33 @@
     
     </script>
     
-    <div id="wrapper">
+    <div id="wrapper home-side">
+        <div class="">
         <div class="home-hero">
             <div class="home-hero-bg">
                 <div class="home-hero-bggrad"></div>
                 <div class="home-hero-bgimg">
-                    <picture>
+                   
+                    
                         <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" type="image/webp">
                         
                         <source data-srcset="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" type="image/jpeg"> -->
-                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
                         
-                    </picture>
-                       
+                   
+                
                 </div>
             </div>
             <div class="home-hero-content">
                 <div class="home-hero-cinner">
                     <div class="home-hero-cwrap">
-                        <h4 class="home-hero-cstitle">BUILT TO PERFORM</h4>
+                        <p class="home-hero-cstitle" style="font-family: MaisonNeue-Bold;
+                        color: #2a2d36;margin: 0 0 10px">BUILT TO PERFORM</p>
                         <div class="home-hero-ctitlewrap">
-                            <h1 class="home-hero-ctitle">Your Proven Leasing <br>Platform</h1>
+                            <h1 class="home-hero-ctitle">Your Proven <br>Asset Finance<br> Platform</h1>
                         </div>
-                        <p class="home-hero-cdesc">Asset-based by design, backed by a robust tech stack. Odessa leverages cross-platform workflow enabled by APIs and integrations.</p>
+                        <!-- <p class="home-hero-cdesc">Asset-based by design, backed by a robust tech stack. Odessa leverages cross-platform workflow enabled by APIs and integrations.</p> -->
+                        <p class="home-hero-cdesc">Innovate and grow your business — all while automating operations — with the only asset finance solution you'll ever need.</p>
                         <!-- <a class="odc__btn odc__btn--primary odc__btn--md" href="https://www.odessainc.com/platform" target="_self">Explore the platform</a> -->
                         <a class="odc__btn odc__btn--primary odc__btn--md" href="<?= base_url(); ?>platform" target="_self">Explore the platform</a>
                     </div> 
@@ -114,19 +88,37 @@
         <!--Platform Solution Section Start-->
         <div style="clear:both"></div>
         <div class="platformsectionwrap">
-            <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" class="lazyload wh-image"/> </div>
+            <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" width="300" class="lazyload wh-image"/> </div>
             <div class="container clearfix">
                 <h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
                 <p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence <br>
                     and extensibility in one seamless platform for better business performance.</p>
                 <div class="assetsfinancebox">
-                    <h3>Asset Finance</h3>
+                    <!-- <h3>Asset Finance</h3> -->
                     <div class="finance_assets_row">
+                        <div class="row clearfix">
+                           
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>Auto Finance</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>Equipment Finance</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <h3>As-a-Service</h3>
+                            </div>
+                            </div>
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-4">
                                 <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
                                     <div class="fin_ass_logo"></div>
                                     <div class="finassname">Origination</div>
+                                    </a> </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 ordr" >
+                                <div class="fin_ass_valrw lastrw"> <a href="<?= base_url(); ?>platform">
+                                    <div class="fin_ass_logo ass_man"></div>
+                                    <div class="finassname">Asset Management</div>
                                     </a> </div>
                             </div>
                             <div class="col-xs-12 col-sm-4">
@@ -135,18 +127,13 @@
                                     <div class="finassname">Servicing</div>
                                     </a> </div>
                             </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="fin_ass_valrw lastrw"> <a href="<?= base_url(); ?>platform">
-                                    <div class="fin_ass_logo ass_man"></div>
-                                    <div class="finassname">Asset Management</div>
-                                    </a> </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="assets_fin_service">
                     <div class="row equalHMWrap eqWrap clearfix">
-                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="300" data-aos-once="true">
                             <div class="assfinconbx">
                                 <div class="logosrw">
                                     <div class="finass_ser_logo"></div>
@@ -199,28 +186,31 @@
         <!--Platform Solution Section End--> 
         
         <!--Cloud or Server Start Here-->
-        <div class="cloudserversection">
+        <div class="cloudserversection home-side">
             <div class="container clearfix">
                 <div class="cloudserverCon">
                     <div class="cloudsview1">
-                        <picture>
+                       
+                      
                             <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.webp" type="image/webp">
                             
                             <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-2.jpg" type="image/jpeg"> -->
                             <!-- <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.jpg" class="lazyload wh-image" layout="responsive"></amp-img> -->
                             <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.webp" alt="Odessa-cloud" width="1"
                                 height="1"  layout="responsive"></amp-img>
-                        </picture>
+                      
+                  
                     </div>
                     <div class="cloudsview2">
-                        <picture>
+                      
                             <!-- <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.webp" type="image/webp">
                             
                             <source data-srcset="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" type="image/jpeg"> -->
                             <!-- <amp-img src="<?= base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Clouds Server" class="lazyload wh-image" layout="intrinsic"></amp-img> -->
                             <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Odessa-cloud"  width="1"
                                 height="1" layout="responsive" ></amp-img>
-                        </picture>
+                      
+                   
                          
                     </div>
                     <h2 class="text-center">Cloud or Server</h2>
@@ -239,7 +229,7 @@
     <!--Cloud or Server End Here--> 
     
     <!--Integrate with the Tools Start-->
-    <div class="integratewithtools">
+    <div class="integratewithtools home-side">
         <div class="container clearfix">
             <div class="integratecon">
                 <div class="integrateconmidCon">
@@ -264,7 +254,7 @@
     <!--Integrate with the Tools End--> 
     
     <!--Testimonials Section Start Here-->
-    <div class="testimonialswrap">
+    <div class="testimonialswrap home-side">
         <div class="container clearfix">
             <div id="clients_view">
                 <div class="row equalHMWrap eqWrap clearfix">
@@ -286,14 +276,14 @@
                     </div>
                     <div class="col-sm-6 col-lg-5">
                         <div class="clientsimgbx">
-                            <picture>
+                            
                                 <!-- <source data-srcset="<?= base_url(); ?>assets/images/jeff.webp" type="image/webp">
                                 
                                 <source data-srcset="<?= base_url(); ?>assets/images/jeff.jpg" type="image/jpeg">
                                 <amp-img src="<?= base_url(); ?>assets/images/jeff.jpg" alt="" class="lazyload wh-image" layout="intrinsic"></amp-img> -->
                                 <amp-img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud"  width="1"
                                     height="1" layout="responsive" ></amp-img>
-                            </picture>
+                            
                         </div>
                     </div>
                 </div>
@@ -369,8 +359,9 @@
             </div>
         </div>
     </div>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet' /> 
+    <!-- <script async src="<?php echo base_url(); ?>assets/js/v0.js"></script> -->
+    <!-- <link href="<?php echo base_url(); ?>assets/css/aos.css" rel='stylesheet preload' />  -->
+    </div>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

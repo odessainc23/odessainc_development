@@ -36,9 +36,10 @@
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+ 
+	<script async src="<?php echo base_url(); ?>assets/js/v0.js"></script>
+    <script async custom-element="amp-bind" src="<?php echo base_url(); ?>assets/js/amp-bind-0.1.js"></script>
+	<script async custom-element="amp-script" src="<?php echo base_url(); ?>assets/js/amp-script-0.1.js"></script>
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet preload" as="style" type="text/css" />
 	<?php } ?>
@@ -144,13 +145,15 @@
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Servicing</a></li>
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Lease Management</a></li>
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Loan Management</a></li>
+														
 													</ul>
 													<ul>
-														<li class="category-dot category-bx">Developer Tools</li>
-														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
-													</ul>
+                                                        <li class="category-dot category-bx"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
+                                                    </ul>
+													
+													
 												</div>
+												
 												<div class="col-xs-6 col-sm-3 menuwd20">
 													<ul>
 														<li class="category-dot category-bxd">Omnichannel + Mobility</li>
@@ -170,6 +173,11 @@
 														<li><a href="<?php echo base_url(); ?>cloud">App Monitoring</a></li>
 														<li><a href="<?php echo base_url(); ?>cloud">Security Monitoring</a></li>
 														<li><a href="<?php echo base_url(); ?>cloud">Autoscaling</a></li>
+													</ul>
+													<ul>
+														<li class="category-dot category-bx">Developer Tools</li>
+														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
+														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
 													</ul>
 												</div>
 												<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
@@ -211,7 +219,7 @@
 														<div class="col-xs-6 col-sm-6">
 															<ul>
 																<li class="category-dot category-bxd">LEARN MORE</li>
-																<li><a href="<?php echo base_url(); ?>platform/core">Pay Per Use</a></li>
+																<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Pay Per Use</a></li>
 																<li><a href="<?php echo base_url(); ?>platform/core">Business Agility</a></li>
 																<li><a href="<?php echo base_url(); ?>cloud">Migrate to Cloud</a></li>
 															</ul>

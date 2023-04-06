@@ -53,7 +53,7 @@ $config['js_dir'] = 'assets/js';
 $config['css_file'] = 'styles.css';
 
 // default file name for js (default value: 'scripts.js')
-$config['js_file'] = 'bundle.js';
+// $config['js_file'] = 'bundle.js';
 
 // default tag for css (default value: '<link href="%s" rel="stylesheet" type="text/css" />')
 $config['css_tag'] = '<link href="%s" rel="stylesheet" type="text/css" />';

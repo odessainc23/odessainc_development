@@ -1,6 +1,6 @@
 <!--rooban-->
-<link href="<?php echo base_url(); ?>assets/css/platform.css" rel='stylesheet' />
-	<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel='stylesheet' />
+<link href="https://www.odessainc.com/assets/css/platform.css" rel='stylesheet' />
+	<link href="https://www.odessainc.com/assets/css/modular_styles.css" rel='stylesheet' />
 <style>
 	.navbar-default {
 		background-color: #0075a2;
@@ -16,14 +16,19 @@
 		 background-color: #fff;
 	}
 	.navbar-default .navbar-brand {
-		background: url('<?php echo base_url(); ?>assets/images/logo_wt.png') no-repeat;
+		background: url('https://www.odessainc.com/assets/images/logo_wt.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.navbar-default .xm-nav .xm-bg-desktop,
 	.navbar-default .xm-nav .primary-nav li a::before{
 		background:none;
 	}
+	.platform .pgplat__banner {
+    height: calc(100vh - 120px);
+    max-height: 568px;
+  }
 </style>
+
 
 <script type="text/javascript">
  
@@ -73,7 +78,8 @@
 	</script>
 	
 	
-	<div id="wrapper">
+	<div id="wrapper" class="platform">
+		<div class="">
 		<section class="pg_banner pgplat__banner">
 			<div class="odc-gd__container">
 				<div class="odc-gd__row">
@@ -180,6 +186,7 @@
 						<h3 class="pgplat_ftgtitle">Developer Tools</h3>
 					</div>
 	
+		
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Buidic.svg" alt="Odessa Build" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
@@ -215,7 +222,7 @@
 		</div>
 	
 		<div class="pgplat_cloud">
-			<div class="odc-gd__container">
+			<div class="">
 				<div class="pgplat_cldwrap">
 					<h2 class="pgplat_cldtitle">Odessa in the Cloud</h2>
 					<p class="pgplat_cldtext">Designed with features that meet the needs of enterprises, Odessa’s SaaS solution offers the business critical functionality, premier support, and strategic services you need to get the most out of your Odessa applications.</p>
@@ -312,6 +319,7 @@
 				</div>
 			</div>
 		</section>
+	</div>
 	</div>
 	
 	<script type="application/ld+json">{

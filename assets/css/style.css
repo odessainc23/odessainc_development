@@ -111,7 +111,7 @@ p {
 .container {
   padding: 0;
   width: 90%;
-  max-width: 1920px;
+  max-width: 90%;
 }
 .container.pos:after {
   display: block;
@@ -265,8 +265,9 @@ section.awards .email_div {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
+.headerchildnav.lzer,
 .menuwrap ul li.pdl a {
-  padding-left: 0px;
+  padding-left: 0;
 }
 .menuwrap ul li:first-child {
   font-size: 13px;
@@ -318,9 +319,6 @@ section.awards .email_div {
 .headerchildnav {
   padding: 50px 15px 50px 20px;
 }
-.headerchildnav.lzer {
-  padding-left: 0;
-}
 .headerchildnav a {
   display: block;
   font-size: 14px;
@@ -348,7 +346,11 @@ section.awards .email_div {
   color: #555b6d;
   text-decoration: none;
 }
-.colmenubg {
+.btmlinegrey,
+.colmenubg,
+section.different,
+section.morelikethis,
+section.news {
   background-color: #f3f3f5;
 }
 .navbar-default {
@@ -356,7 +358,7 @@ section.awards .email_div {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
   background-color: #fff;
   min-height: 64px;
-  max-width: 1920px;
+  max-width: 100%;
   margin: auto;
 }
 .navbar > .container .navbar-brand,
@@ -396,8 +398,8 @@ section.awards .email_div {
   margin-right: 0;
 }
 #wrapper {
-  max-width: 1920px;
-  margin: 0 auto auto;
+  max-width: 100%;
+  margin: 64px auto auto;
 }
 section.banner .banner_inner {
   position: relative;
@@ -531,18 +533,23 @@ section.banner .banner_textdiv p {
 }
 .assetsfinancebox {
   padding: 20px;
-  max-width: 564px;
+  max-width: 600px;
   margin: 50px auto 70px;
   background-color: #0076a3;
   box-shadow: 0 10px 30px 6px rgba(0, 0, 0, 0.1);
 }
 .assetsfinancebox h3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #fff;
+  margin-bottom: 25px;
 }
 .finance_assets_row {
   margin-top: 25px;
   margin-bottom: 10px;
+ 
+}
+.finance_assets_row .row{
+  margin: 0;
 }
 .fin_ass_logo {
   width: 32px;
@@ -558,7 +565,7 @@ section.banner .banner_textdiv p {
   background-position: 0 -64px;
 }
 .finassname {
-  margin-left: 40px;
+  margin-left: 35px;
   font-size: 0.8125rem;
   color: #fff;
   line-height: 36px;
@@ -622,8 +629,7 @@ section.awards .heading_div span.award_icon {
   padding-top: 100px;
   padding-bottom: 140px;
   position: relative;
-  background: url(../images/cloud_server.webp) right bottom no-repeat;
-  background-size: 472px;
+  background: url(../images/cloud_server.webp) right bottom/472px no-repeat;
 }
 .cloudserverCon .normaltxt {
   max-width: 70%;
@@ -820,7 +826,12 @@ footer .footer_menuwr ul {
   padding: 0;
 }
 .footermenu_strip {
-  background: url(../images/footer_strip.png) left top/100% no-repeat #f3f3f5;
+  /* background: url(../images/footer_strip.png) left top/100% no-repeat #f3f3f5; */
+  background: url(../images/footer_strip.png) 100% 100% no-repeat #f3f3f5;
+}
+.platform .pgplat__banner {
+  height: calc(100vh - 120px);
+  max-height: 568px;
 }
 .footermenu_strip_inner {
   padding: 50px 0 40px;
@@ -886,6 +897,7 @@ footer .footer_li_wrap {
   float: left;
   width: 20%;
 }
+.googletagmanager,
 .home-hero-ctitle br,
 .mobileviewmenu,
 footer .mobile_view_footer {
@@ -928,6 +940,7 @@ section.awards .email_div h4 a:hover {
   clear: both;
   display: none;
 }
+h2.footer_li_heading,
 h4.footer_li_heading {
   font-size: 1.125rem;
   margin-top: 5px;
@@ -1067,7 +1080,8 @@ h4.footer_li_heading {
   z-index: 1;
 }
 .buildinnovation,
-.howweworksection {
+.howweworksection,
+section.morelikethis {
   padding: 60px 0;
 }
 h2.lefttext {
@@ -1222,6 +1236,11 @@ section.news .upperdiv .nopad {
 .choose_vacancy {
   padding-top: 60px;
   max-width: 800px;
+  margin: auto;
+}
+.latestboxCon,
+.letstalkSecondryform .secnformCon {
+  max-width: 64%;
   margin: auto;
 }
 .choose_vacancy
@@ -1416,7 +1435,9 @@ section.news .upperdiv {
   float: left;
   margin-right: 30px;
 }
-.countryAddinfo p {
+.countryAddinfo p,
+.covid-alert .alert,
+.thankyoupage .letstalkform h3:last-of-type {
   margin-bottom: 0;
 }
 .countryAddinfo p span {
@@ -1453,10 +1474,6 @@ section.news .upperdiv {
 .letstalkSecondryform {
   padding: 90px 0;
   background-color: #233746;
-}
-.letstalkSecondryform .secnformCon {
-  max-width: 64%;
-  margin: auto;
 }
 .letstalkSecondryform .secnformCon .form-control {
   padding: 0 10px;
@@ -1504,8 +1521,6 @@ section.news .upperdiv {
   padding: 20px 0 40px;
 }
 .latestboxCon {
-  max-width: 64%;
-  margin: auto;
   background-color: #fff;
 }
 .latestboxCon .getconbx {
@@ -1543,12 +1558,6 @@ section.news .upperdiv {
   padding-bottom: 360px;
   margin-top: -210px;
   background-color: #233746;
-}
-.btmlinegrey,
-section.different,
-section.morelikethis,
-section.news {
-  background-color: #f3f3f5;
 }
 .plateformspeedbox .build_tabs {
   max-width: 720px;
@@ -1663,10 +1672,8 @@ section.news {
 .header_banner {
   position: relative;
   height: calc(100vh);
-  background: url(../images/cloud_ban.jpg) no-repeat #0075a2;
+  background: url(../images/cloud_ban.jpg) center center/100% no-repeat #0075a2;
   max-height: 1000px;
-  background-size: 100%;
-  background-position: center center;
   overflow: hidden;
 }
 .header_banner .cloud_1 {
@@ -2396,6 +2403,7 @@ section.awards .email_div h4 {
   font-size: 18px;
   color: #2a2d36;
 }
+#cookie-msg span a,
 section.awards .email_div h4 a {
   color: #2a2d36;
 }
@@ -2508,9 +2516,6 @@ div.content .content_socialicons a:hover {
 #morelikethis_slider .owl-stage {
   padding-left: 0 !important;
 }
-section.morelikethis {
-  padding: 60px 0;
-}
 section.morelikethis h3.headingh {
   color: #2a2d36;
   font: 27px MaisonNeue-Bold;
@@ -2591,6 +2596,7 @@ section.video_section .videoplaybtn img {
 }
 section.video_section {
   height: calc(100vh - 120px);
+    max-height: 568px;
   overflow: hidden;
   position: relative;
 }
@@ -2877,10 +2883,6 @@ section.innovate_section .btns_style:hover {
 }
 .thankyoupage .letstalkform {
   padding: 90px 50px;
-}
-.covid-alert .alert,
-.thankyoupage .letstalkform h3:last-of-type {
-  margin-bottom: 0;
 }
 .legal-pcontent .sub-heading,
 .legal-pcontent .sub-heading-italic {
@@ -3487,9 +3489,6 @@ section.innovate_section .btns_style:hover {
     top: -10px;
   }
 }
-.googletagmanager {
-  display: none;
-}
 #cookie-msg {
   display: flex;
   flex-direction: column;
@@ -3504,9 +3503,6 @@ section.innovate_section .btns_style:hover {
   font-size: 15px;
   z-index: 99999;
 }
-#cookie-msg span a {
-  color: #2a2d36;
-}
 #cookie-msg a.btn-aceptar {
   color: #2a2d36;
   text-decoration: none;
@@ -3517,6 +3513,18 @@ section.innovate_section .btns_style:hover {
   font-size: 15px;
   min-width: 120px;
   display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+  .ordr{
+  order:2
+}
+.finance_assets_row .row{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+} 
+  
 }
 @media only screen and (min-width: 767px) {
   .cloudserverCon .nextrw span {
@@ -3614,7 +3622,8 @@ section.innovate_section .btns_style:hover {
 }
 .home-hero {
   width: 100%;
-  height: 100vh;
+  max-width:100%;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
@@ -3932,22 +3941,29 @@ section.innovate_section .btns_style:hover {
   width: 100% !important;
   height: auto !important;
 }
-
-/* platform/core and home seo */
 .footer_li_wrap .platform_size {
   font-size: 1.25rem !important;
-}
-h2.footer_li_heading {
-  font-size: 1.125rem;
-  margin-top: 5px;
 }
 @media only screen and (max-width: 1023px) {
   .footer_li_wrap .platform_size {
     font-size: 16px !important;
   }
 }
-
 .navbar-nav .hideview {
   cursor: pointer;
 }
-/** platform/core complete */
+
+.assetsfinancebox .fin_ass_valrw {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.buildinnovation {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.clearfix .service{
+  color:black !important;
+  font-size: 13px !important;
+}

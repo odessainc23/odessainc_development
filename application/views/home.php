@@ -84,44 +84,31 @@ url_redirect( {url: url,
 			<h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
 			<p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence <br>
 				and extensibility in one seamless platform for better business performance.</p>
-				<div class="assetsfinancebox">
-                    <!-- <h3>Asset Finance</h3> -->
-                    <div class="finance_assets_row">
-                        <div class="row clearfix">
-                           
-                            <div class="col-xs-12 col-sm-4">
-                                <h3>Auto Finance</h3>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <h3>Equipment Finance</h3>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <h3>As-a-Service</h3>
-                            </div>
-                            </div>
-                        <div class="row clearfix">
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
-                                    <div class="fin_ass_logo"></div>
-                                    <div class="finassname">Origination</div>
-                                    </a> </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 ordr" >
-                                <div class="fin_ass_valrw lastrw"> <a href="<?= base_url(); ?>platform">
-                                    <div class="fin_ass_logo ass_man"></div>
-                                    <div class="finassname">Asset Management</div>
-                                    </a> </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
-                                    <div class="fin_ass_logo servicing"></div>
-                                    <div class="finassname">Servicing</div>
-                                    </a> </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
+			<div class="assetsfinancebox">
+				<h3>Asset Finance</h3>
+				<div class="finance_assets_row">
+					<div class="row clearfix">
+						<div class="col-xs-12 col-sm-4">
+							<div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
+								<div class="fin_ass_logo"></div>
+								<div class="finassname">Origination</div>
+								</a> </div>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
+								<div class="fin_ass_logo servicing"></div>
+								<div class="finassname">Servicing</div>
+								</a> </div>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<div class="fin_ass_valrw lastrw"> <a href="<?= base_url(); ?>platform">
+								<div class="fin_ass_logo ass_man"></div>
+								<div class="finassname">Asset Management</div>
+								</a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="assets_fin_service">
 				<div class="row equalHMWrap eqWrap clearfix">
 					<div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">

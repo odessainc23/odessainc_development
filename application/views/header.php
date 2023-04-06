@@ -32,8 +32,7 @@
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
 
-	<!-- <link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg"> -->
-	<link rel="preload" as="image" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" imagesrcset="" imagesizes="50vw">
+	<link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg">
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>
@@ -92,12 +91,12 @@
 
 		echo $this->minify->deploy_css(TRUE);
 	?>
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/style.css?v=2001"  />
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/media.css?v=3001" />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2001" rel='stylesheet' />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel='stylesheet' />
 	
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
-		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet preload" type="text/css" />
+		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet" type="text/css" />
 	<?php } ?>
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=3001" />

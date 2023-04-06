@@ -43,7 +43,9 @@
 						<h1 class="platform_size">Why Odessa</h1>
 						<ul>
 							<li><a href="<?php echo base_url(); ?>design-principles">Design Principles</a></li>
-							<li><a href="<?php echo base_url(); ?>platform/core">Pay Per Use</a></li>
+							<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">As-a-Service</a></li>
+							<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Pay Per Use</a></li>
+							<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Subscription Management</a></li>
 							<li><a href="<?php echo base_url(); ?>cloud">Migrate to Cloud</a></li>
 						</ul>
 					</div>
@@ -109,9 +111,16 @@
 		}, 4000);
 		
 	</script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4da41fc07fb2a379" async></script>
-	<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
-	
+	 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
+	 <script async>
+
+function initAddThis(){
+	 addthis.init()
+}
+// After the DOM has loaded...
+initAddThis();
+</script>
+<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>	
 </body>
 
 </html>

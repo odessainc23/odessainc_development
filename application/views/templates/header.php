@@ -29,7 +29,7 @@
 		echo $this->minify->deploy_css(TRUE);
 	?>
 	<?php
-		$this->minify->css(array('rs6.css', 'buttons.css'));
+		$this->minify->css(array('buttons.css'));
 
 		echo $this->minify->deploy_css(TRUE);
 	?>
@@ -142,13 +142,14 @@
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Servicing</a></li>
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Lease Management</a></li>
 														<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Loan Management</a></li>
+														
 													</ul>
 													<ul>
-														<li class="category-dot category-bx">Developer Tools</li>
-														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
-													</ul>
+												<li class="category-dot category-bx"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
+												</ul>
+													
 												</div>
+												
 												<div class="col-xs-6 col-sm-3 menuwd20">
 													<ul>
 														<li class="category-dot category-bxd">Omnichannel + Mobility</li>
@@ -168,6 +169,11 @@
 														<li><a href="<?php echo base_url(); ?>cloud">App Monitoring</a></li>
 														<li><a href="<?php echo base_url(); ?>cloud">Security Monitoring</a></li>
 														<li><a href="<?php echo base_url(); ?>cloud">Autoscaling</a></li>
+													</ul>
+													<ul>
+														<li class="category-dot category-bx">Developer Tools</li>
+														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
+														<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
 													</ul>
 												</div>
 												<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
@@ -209,7 +215,7 @@
 														<div class="col-xs-6 col-sm-6">
 															<ul>
 																<li class="category-dot category-bxd">LEARN MORE</li>
-																<li><a href="<?php echo base_url(); ?>platform/core">Pay Per Use</a></li>
+																<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Pay Per Use</a></li>
 																<li><a href="<?php echo base_url(); ?>platform/core">Business Agility</a></li>
 																<li><a href="<?php echo base_url(); ?>cloud">Migrate to Cloud</a></li>
 															</ul>
