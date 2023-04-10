@@ -5405,6 +5405,7 @@ svg {
 	}
 
 	.pglead__btext {
+
 		max-width: 90%
 	}
 
@@ -6559,7 +6560,7 @@ div.leader_person .leader_info div.leaderexp span.leadericon a.twitter {
 
 	.pgcar__btext,
 	.pglead__btext {
-		max-width: 70%
+		max-width: 75%
 	}
 
 	.leader_person .leader_img {
