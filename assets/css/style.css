@@ -544,7 +544,7 @@ section.banner .banner_textdiv p {
   margin-bottom: 25px;
 }
 .finance_assets_row {
-  margin-top: 25px;
+  margin-top:15px;
   margin-bottom: 10px;
  
 }
@@ -1671,9 +1671,11 @@ section.news .upperdiv {
 }
 .header_banner {
   position: relative;
-  height: calc(100vh);
+  /* height: calc(100vh); */
+  height: calc(100vh - 50px);
+  max-height: 568px;
   background: url(../images/cloud_ban.jpg) center center/100% no-repeat #0075a2;
-  max-height: 1000px;
+  /* max-height: 1000px; */
   overflow: hidden;
 }
 .header_banner .cloud_1 {
@@ -1806,7 +1808,7 @@ div.leader_person {
   background: url(../images/header_banner_principles.png) top center/cover
     no-repeat;
   height: calc(100vh - 50px);
-  max-height: 632px;
+  max-height: 568px;
   z-index: 2;
 }
 .page_banner .tab_arrow_wrap {
@@ -3961,6 +3963,6 @@ section.innovate_section .btns_style:hover {
   margin: 0 auto;
 }
 .clearfix .service{
-  color:black;
+  color:black !important;
   font-size: 13px !important;
 }

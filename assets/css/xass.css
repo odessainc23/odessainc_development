@@ -13,6 +13,9 @@
 .xassbox .plateformCon .normaltxt.pdright,.xassbox .plateformCon .listpoints .normaltxt{
     font-size: 16px;
 }
+.buildinnovation.xassconbox{
+    max-width: 85%;
+}
 .xassconbox .buildinnovationConbx .inoiconrw .innoicon.recoding{
     margin-right: 0;
 }
@@ -192,7 +195,7 @@ padding-top:0
 }
 }
 
-@media only screen and (max-width:767px){
+@media only screen and (max-width:900px){
    
     .xas-section .devOpsCon{
         padding-left: 0; 
