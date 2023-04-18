@@ -108,7 +108,7 @@ women" /> </div>
 							<h3>Meet the team behind our teams</h3>
 							<p>People are at the heart of Odessa’s mission.<br>
 								Meet the unique innovators leading the way.</p>
-							<a href="<?= base_url(); ?>leadership" class="odc__btn--more odc__btn--xl">Our Leadership team</a> </div>
+							<a href="<?= base_url(); ?>careers" class="odc__btn--more odc__btn--xl">Our Leadership team</a> </div>
 					</div>
 					<div class="col-sm-6 col-xs-12 thirtypad">
 						<div class="tilescontent">
