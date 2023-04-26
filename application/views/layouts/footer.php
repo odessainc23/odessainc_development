@@ -111,7 +111,7 @@
 		}, 4000);
 		
 	</script>
-	 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/addthis_widget.js?v=900232"></script> 
 	 <script async>
 
 function initAddThis(){
