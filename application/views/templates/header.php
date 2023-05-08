@@ -48,7 +48,7 @@
 	<script src="<?php echo base_url(); ?>assets/js/rs6.min.js"></script>
 	<script type="text/javascript">
 		$.cookieMessage({
-			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy" rel="nofollow">Learn More</a>. ',
+			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy" >Learn More</a>. ',
 			'acceptButton': 'Got It!',
 		});
 	</script>
@@ -127,7 +127,7 @@
 				</ul>
 				<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
 							<!--Services Menu Start Here-->
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -196,7 +196,7 @@
 							</ul>
 							<!--Services Menu End Here--> 
 						</li>
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview"
 					data-toggle="dropdown">Why Odessa</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -240,7 +240,7 @@
 								</div>
 							</ul>
 						</li>
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview"
 				  data-toggle="dropdown">Company</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -294,9 +294,9 @@
 					<div class="container">
 						<div class="mobile_view_menu">
 							<ul>
-								<li><a class="active" href="#" rel="nofollow" onclick="tabBx('platformmenu')">Platform</a></li>
-								<li><a href="#" rel="nofollow" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
-								<li><a href="#" rel="nofollow" onclick="tabBx('companymenu')">Company</a></li>
+								<li><a class="active" href="#"  onclick="tabBx('platformmenu')">Platform</a></li>
+								<li><a href="#"  onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
+								<li><a href="#"  onclick="tabBx('companymenu')">Company</a></li>
 								<li><a href="<?php echo base_url(); ?>lets-talk">Let's Talk</a></li>
 							</ul>
 						</div>

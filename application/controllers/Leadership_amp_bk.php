@@ -14,9 +14,14 @@ class Leadership_amp extends CI_Controller {
 		$data['tc_description']		= 'Our leadership team is comprised of industry leaders and domain experts, bringing decades of cumulative insight and experience to our company and customers.';
 
 		$data['leaders_list']		= $this->get_list();
-		
+		// Route::get('/company', function () {
+		// 	return redirect('/home/company');
+		// 	});
+// 		$url = 'http://www.sitepoint.com/community/t/redirect-302-response/101550';
+//  header('Location: ' . $url, true, 500);
+// header("HTTP/1.1 404 Not Found");
 		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
-		$this->load->view('pages/amp_pages/leadership.amp.html', $data);
+		$this->load->view('pages/amp_pages/company.amp.html', $data);
 		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 		
 	}
