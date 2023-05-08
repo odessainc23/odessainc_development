@@ -46,7 +46,9 @@
 					<h4>Why Odessa</h4>
 					<ul>
 						<li><a href="<?php echo OD_BASE_URL ?>design-principles">Design Principles</a></li>
-						<li><a href="<?php echo OD_BASE_URL ?>platform/core">Pay Per Use</a></li>
+						<li><a href="<?php echo OD_BASE_URL ?>xaas-everything-as-a-service">As-a-Service</a></li>
+						<li><a href="<?php echo OD_BASE_URL ?>xaas-everything-as-a-service">Pay Per Use</a></li>
+						<li><a href="<?php echo OD_BASE_URL ?>xaas-everything-as-a-service">Subscription Management</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>cloud">Migrate to Cloud</a></li>
 					</ul>
 				</div>
