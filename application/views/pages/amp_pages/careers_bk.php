@@ -1,8 +1,3 @@
-<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
-<!-- <link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet" type="text/css" /> -->
-<!-- <style amp-custom>
-	
-</style> -->
 <!--Business Analysis start here-->
 <div id="business_analysis" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
 	<div class="modal-dialog">
@@ -43,17 +38,14 @@
 <!--Technical Architecture End here-->
 
 <div id="wrapper"> 
-	<div class="">
 	<!--Career banner section start here-->
 	<section class="pg_banner pgcar__banner careerpgban">
 		<div class="odc-gd__container">
 			<div class="pgcar__btop">
-				<h1 class="pgcar__btitle">Be a part of our story</h1>
-				<!-- <p class="pgcar__btext">We believe in software that’s functionally rich and easy to use, smart technology that launches business forward, and a workplace that’s a joy to be a part of every day. Come join a group of incredibly talented and friendly people who care about building something amazing.</p> -->
-				<p class="pgcar__btext">At Odessa, you'll play a pivotal role in driving digital transformations for the world's leading brands. Immerse yourself in a community of enthusiastic professionals dedicated to crafting intelligent technology, nurturing exceptional tech talent, and delivering results-driven strategic services. Above all, embrace a workplace committed to investing in programs and initiatives designed to make you feel valued and supported every day.
-				</p>
+				<h1 class="pgcar__btitle">Your best work starts here</h1>
+				<p class="pgcar__btext">We believe in software that’s functionally rich and easy to use, smart technology that launches business forward, and a workplace that’s a joy to be a part of every day. Come join a group of incredibly talented and friendly people who care about building something amazing.</p>
 				<a href="javascript:void(0)" class="pgcar__baction odc__btn odc__btn--lg odc__btn--primary scroll-down">See Positions</a> </div>
-			<div class="carbanimg"> <amp-img src="<?php echo base_url(); ?>assets/images/career_ban.png" alt="Odessa careers"  layout="intrinsic" width="1000" height="550"/> </div>
+			<div class="carbanimg"> <img src="<?php echo base_url(); ?>assets/images/career_ban.png" alt="Odessa careers" /> </div>
 		</div>
 	</section>
 	<!--Career banner section end here--> 
@@ -65,24 +57,24 @@
 			<div class="pgcar__hwcontent howweworkCon">
 				<div class="odc-gd__row">
 					<div class="odc-gd__col-xxs-12 odc-gd__col-xs-5">
-						<div class="pgcar__hwimage"><amp-img src="<?php echo base_url(); ?>assets/images/howwework_img.png" alt="odessa-how-we-work" width="1" height="1.5" layout="intrinsic"/></div>
+						<div class="pgcar__hwimage"><img src="<?php echo base_url(); ?>assets/images/howwework_img.png" alt="odessa-how-we-work" /></div>
 					</div>
 					<div class="odc-gd__col-xxs-12 odc-gd__col-xs-7">
 						<div class="pgcar__hwitem">
-							<h5>Dare to dream big</h5>
-							<p>We champion a culture of bold thinking, where employees are encouraged to imagine the seemingly impossible and challenge the conventional. Our teams work together, creating a vibrant and inspiring atmosphere that fosters the development of the next big thing in the digital world.</p>
+							<h5>There's no inner circle.</h5>
+							<p>Everyone from the C-suite to interns share information, knowledge, and ideas. Being radically transparent helps us all think like founders, and stay focused on solving for our customers.</p>
 						</div>
 						<div class="pgcar__hwitem">
-							<h5>Grow without limit</h5>
-							<p>We believe in nurturing each individuals talents and providing them with the resources to thrive. By offering tailored learning opportunities, mentorship programs, and an environment that celebrates personal achievements, we empower our team members to constantly expand their skills and reach new heights in their careers.</p>
+							<h5>Everyone's empowered to work autonomously.</h5>
+							<p>We trust amazing people to do amazing things. At Odessa, you have ownership over work that directly impacts the business. You can move fast, and learn even faster.</p>
 						</div>
 						<div class="pgcar__hwitem">
-							<h5>Make real-world impact</h5>
-							<p>Our work revolves around crafting transformative solutions that genuinely improve how businesses work. As part of our team, you'll contribute to projects with far-reaching effects, harnessing the power of technology to create positive change in the world. Together, we'll shape the future with purpose and passion.</p>
+							<h5>Diverse perspectives are celebrated.</h5>
+							<p>We believe different perspectives make Odessa a better company. We're committed to building a diverse and inclusive environment where you feel you belong.</p>
 						</div>
 						<div class="pgcar__hwitem">
-							<h5>Stay agile, stay ahead</h5>
-							<p>In the ever-evolving landscape of digital innovation, our teams thrive on adaptability and resilience. We encourage our employees to embrace change, experiment with new ideas, and learn from failures. By fostering a culture of agility and continuous improvement, we empower our teams to stay ahead of the curve and build what's next with confidence.</p>
+							<h5>Employees are treated like people, not line items.</h5>
+							<p>Employees are whole people, with families, hobbies, and lives outside of work. In the office or at home, we each create work-life "fit" for us and the people we love.</p>
 						</div>
 					</div>
 				</div>
@@ -92,12 +84,12 @@
 	<!--How We Work Section End Here--> 
 	
 	<!--Memeber Position Section Start Here-->
-	<!-- <div class="team_member_position clearfix">
+	<div class="team_member_position clearfix">
 		<div class="col-sm-4 colpd0">
 			<div class="team_member_box">
                     <div class="teammemberscaleview">
                     <div class="postextbx"><h4 class="postext wtcol">Software Engineering</h4></div>
-					<amp-img src="<?php echo base_url(); ?>assets/images/software_engineer.jpg" alt="Software Engineer" width="1" height="1" layout="responsive"></amp-img>
+                    <img src="<?php echo base_url(); ?>assets/images/software_engineer.jpg" alt="Software Engineer" />
 					<span class="wistia_embed wistia_async_nc4adk1m4c popover=true">&nbsp;</span>
                     </div>
 			</div>
@@ -106,7 +98,7 @@
                 <div class="team_member_box">
                 <div class="teammemberscaleview">
                     <div class="postextbx"><h4 class="postext wtcol">Technical Architecture</h4></div>
-                    <amp-img src="<?php echo base_url(); ?>assets/images/technical_architecture.jpg" alt="Technical Architecture" width="1" height="1" layout="responsive"></amp-img>
+                    <img src="<?php echo base_url(); ?>assets/images/technical_architecture.jpg" alt="Technical Architecture" />
 					<span class="wistia_embed wistia_async_y2monu9q9e popover=true">&nbsp;</span>
                 </div>
                 </div>
@@ -115,12 +107,12 @@
                 <div class="team_member_box" id="business_analysis">
                   <div class="teammemberscaleview">
                     <div class="postextbx"><h4 class="postext wtcol">Business Analysis</h4></div>
-                    <amp-img src="<?php echo base_url(); ?>assets/images/business_analysis.jpg" alt="Business Analysis" width="1" height="1" layout="responsive"></amp-img>
+                    <img src="<?php echo base_url(); ?>assets/images/business_analysis.jpg" alt="Business Analysis" />
 					<span class="wistia_embed wistia_async_iwy2651351 popover=true">&nbsp;</span>
                 </div>
                 </div>
 		</div>
-	</div> -->
+	</div>
 	<!--Memeber Position Section End Here--> 
 	
 	<!--Got Perks Section Start Here-->
@@ -173,58 +165,44 @@
 		</div>
 	</div>
 	<!--Got Perks Section End Here--> 
-
+	
 	<!--Job Opening Start Here-->
-	<div class="jobopening" id="SkillateJobOpening">
+	<div class="jobopening">
 		<div class="odc-gd__container">
 			<h2 class="text-center">Job Openings</h2>
-			<!-- <p class="subtitle text-center">We're problem solvers, risk-takers, musicians, artists, athletes, activists, parents, <br>
-				and we all know what a “jark” is. Come join us.</p> -->
+			<p class="subtitle text-center">We're problem solvers, risk-takers, musicians, artists, athletes, activists, parents, <br>
+				and we all know what a “jark” is. Come join us.</p>
 			<div class="careers-filters">
 				<div class="dropdownlist">
 					<div class="list-link"> <span class="label">Location</span> <i class="fa fa-chevron-down"></i> </div>
-					<ul class="dropdown-select">
+					<ul>
 						<li data-key="data-filter-location" data-value="All" class="selected">All</li>
 						<?php echo $location_filter;?>
 					</ul>
 				</div>
 				<div class="dropdownlist">
 					<div class="list-link"> <span class="label">Department</span> <i class="fa fa-chevron-down"></i> </div>
-					<ul class="dropdown-select">
+					<ul>
 						<li data-key="data-filter-department" class="selected" data-value="All">All</li>
 						<?php echo $department_filter;?>
 					</ul>
 				</div>
 			</div>
-
-			<?php
-			$group_dept = array();
-			foreach($lists as $listd) { 
-				$group_dept[$listd['department']][] = $listd;   
-			}
-			?> 
-
 			<div class="openingList">
-				<?php 
-				foreach($group_dept as $key => $list) { 
-					//$group[$list['department']][] = $list;
-					?>
+				<?php foreach($lists as $k => $list) { ?>
 					<div class="openinglist_grp">
-					<h5 class="openinglist_title"><?php echo $key; ?></h5>
-					
-					<?php foreach($list as $data){	 ?>
-						<a class="odc-gd__row opening_item" data-filter-location="<?php echo $data['office']['country']; ?>" data-filter-department="<?php echo $data['department']; ?>" href="<?php echo $data['link']; ?>" target="_blank" title="<?php echo $data['title']; ?>">
-						
-						<span class="odc-gd__col-xs-6"><span class="opening_itemtitle"><?php echo $data['title']?></span></span>
-							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation">
-							
-								<?php	
-								$workplace = str_replace(['_'], [' '], $data['workplace_type']);	
-								$type =  ($data['workplace_type'] == 'HYBRID' ? $workplace .' Remote' : $workplace);			
-								echo $data['office']['city'] .(($data['workplace_type'] === "ONSITE") ? ', ' : ' or ')." ".ucwords(strtolower($type));
-								?>
-							</span></span>
-							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php echo $data['office']['country']; ?></span></span>
+						<h5 class="openinglist_title"><?php echo $k; ?></h5>
+						<?php foreach($list as $item) { ?>
+						<a class="odc-gd__row opening_item" href="<?php echo $item['hosted_url']; ?>" target="_blank" data-filter-location="<?php echo $item['location']['country']; ?>" data-filter-department="<?php echo $item['team']; ?>" title="<?php echo $item['title']; ?>">
+							<span class="odc-gd__col-xs-6"><span class="opening_itemtitle"><?php echo $item['title']; ?></span></span>
+							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php
+								if($item['is_remote_allowed']==1){
+									echo "Fully Remote";
+								}else{
+									echo $item['location']['city'] .', '."COVID-19 Remote" ;
+								}
+							?></span></span>
+							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php echo $item['location']['country']; ?></span></span>
 						</a>
 						<?php } ?>
 					</div>
@@ -237,10 +215,9 @@
 	<!--Open Position Box Start Here-->
 	<div class="open_position_box">
 		<h2 class="text-center wtcol">Didn’t see an open position <span>for you?</span></h2>
-		<div class="seeposbtnrw"><a href="mailto:odessainc_candidate@resumebox.skillate.com" class="odc__btn odc__btn--lg odc__btn--primary">Tell us more about you</a></div>
+		<div class="seeposbtnrw"><a href="mailto:odessainc-dssn0329@applications.recruiterbox.com" class="odc__btn odc__btn--lg odc__btn--primary">Tell us more about you</a></div>
 	</div>
 	<!--Open Position Box End Here--> 
-</div>
 </div>
 <script>
 	$(".careers-filters .dropdownlist .list-link").click(function () {
@@ -289,6 +266,8 @@
 
 		$('.openingList .openinglist_grp').each(function () {
 			var visibleItems	= $(this).find('.opening_item:visible').length;
+
+			console.log(typeof visibleItems);
 
 			if (visibleItems == 0) {
 				$(this).addClass('hide-group');

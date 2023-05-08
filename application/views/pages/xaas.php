@@ -220,10 +220,10 @@
 				<div class="seeposbtnrw"><a href="<?php echo base_url();?>get-started" class="odc__btn odc__btn--primary odc__btn--xl">Get started</a></div>
 				<div class="trusted_brands_logo">
 					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " class="wh-image-ratio" width="100%" height="100%"  /> </div>
-					<div class="brlogo"> <img style="max-width:100px" src="<?php echo base_url(); ?>assets/images/xass/lenovo-logo-web.png" alt="Leaf Logo " width="40" height="100%" class="wh-image-ratio"/> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " class="wh-image-ratio" width="100%" height="100%" /> </div>
-					<div class="brlogo"> <img  src="<?php echo base_url(); ?>assets/images/xass/johnsoncontrols-logo-web.png" alt="Sasfin Logo " width="120" height="100%"  /> </div>
-					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/xass/hpe-logo-web.png" alt="FCL Logo " width="100" height="100%" /> </div>
+					<div class="brlogo"> <img style="max-width:100px" src="<?php echo base_url(); ?>assets/images/xass/lenovo-logo-web.svg" alt="Leaf Logo " width="40" height="100%" class="wh-image-ratio"/> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/xass/dell_logo.svg" alt="Dell Logo " class="wh-image-ratio" width="100%" height="100%" /> </div>
+					<div class="brlogo"> <img  src="<?php echo base_url(); ?>assets/images/xass/johnsoncontrols-logo-web.svg" alt="Sasfin Logo " width="120" height="100%"  /> </div>
+					<div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/xass/hpe-logo-web.svg" alt="FCL Logo " width="100" height="100%" /> </div>
 				</div>
 			</div>
 		</div>
@@ -235,5 +235,19 @@
 	<script src="https://www.odessainc.com/assets/js/owl.carousel.js"></script> 
     <!-- <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 	<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script> -->
+	<script type="application/ld+json"> 
+		{ 
+		  "@context": "https://schema.org/",  
+		  "@type": "Product",  
+		  "name": "Everything as a service", 
+		  "image": "", 
+		  "description": "Provide flexible finance with As-a-Service Unlock the power of everything as a service to your business strategy with speed, scale, and agility.", 
+		  "brand": { 
+			"@type": "Brand", 
+			"name": "Odessa" 
+		  } 
+		} 
+		
+		</script> 
 
 
