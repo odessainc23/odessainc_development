@@ -67,11 +67,11 @@
 				<div class="socailicons_newsletter">
 					<!-- <div class="social_icon"> <a href="https://www.facebook.com/OdessaInc/" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://twitter.com/OdessaTech" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/odessa-inc-/" target="blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/odessainc/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://www.youtube.com/odessainc" target="blank"><i class="fa fa-youtube" aria-hidden="true"></i></a> </div> -->
 					<div class="social_icon"> 
-						<a href="https://www.facebook.com/OdessaInc/" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a> 
-						<a href="https://twitter.com/OdessaTech" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a> 
-						<a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a> 
-						<a href="https://www.instagram.com/odessainc/" target="_blank" rel="nofollow"><i class="fa fa-instagram" ></i></a> 
-						<a href="https://www.youtube.com/odessainc" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a> </div>
+						<a href="https://www.facebook.com/OdessaInc/" target="_blank" ><i class="fa fa-facebook"></i></a> 
+						<a href="https://twitter.com/OdessaTech" target="_blank"><i class="fa fa-twitter"></i></a> 
+						<a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank" ><i class="fa fa-linkedin"></i></a> 
+						<a href="https://www.instagram.com/odessainc/" target="_blank"><i class="fa fa-instagram" ></i></a> 
+						<a href="https://www.youtube.com/odessainc" target="_blank" ><i class="fa fa-youtube"></i></a> </div>
 				</div>
 				<div id="desktop_social" class="footerbottommenu">
 					<ul class="list-unstyled list-inline">
