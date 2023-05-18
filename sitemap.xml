@@ -13,12 +13,19 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://www.odessainc.com/xaas-everything-as-a-service</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/xaas-everything-as-a-service" />
+  <lastmod>2021-05-25T11:51:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.odessainc.com/covid-help/</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/lets-talk</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/lets-talk" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -29,31 +36,36 @@
 </url>
 <url>
   <loc>https://www.odessainc.com/platform/developer-tools</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/platform/developer-tools" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/platform</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/platform" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/cloud</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/cloud" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/design-principles</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/design-principles" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/reimagined-technology-role-during-covid/</loc>
+  <loc>https://www.odessainc.com/blog/reimagined-technology-role-during-covid</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/company</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/company" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -64,6 +76,7 @@
 </url> -->
 <url>
   <loc>https://www.odessainc.com/careers</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/careers" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
