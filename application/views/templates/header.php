@@ -15,24 +15,14 @@
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css"  rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css" rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2024" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/buttons.css" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/rs6.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=1001" rel='stylesheet'/>
-	<?php
-		$this->minify->css(array('bootstrap.css', 'owl.carousel.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
-	<?php
-		$this->minify->css(array('buttons.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() ?>"  rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2?>" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 3?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 4?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/buttons.css?v=<?php echo time() + 5?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/rs6.css?v=<?php echo time() + 6?>" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() + 7?>" rel='stylesheet'/>
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
