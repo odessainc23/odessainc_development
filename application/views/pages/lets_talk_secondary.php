@@ -24,7 +24,10 @@
 	
 	@media only screen and (max-width: 1200px) {
 		.g-recaptcha, #rc-imageselect{
-		transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"
+		transform:scale(0.77);
+		-webkit-transform:scale(0.77);
+		transform-origin:0 0;
+		-webkit-transform-origin:0 0;
 	}
 	.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
 		border: 0 !important;
@@ -569,7 +572,7 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
 			return false;
 		}
    
-	})
+	});
 
     $("#first_name").keypress(function(event){
               var regex = new RegExp("^[a-zA-Z ]*$");

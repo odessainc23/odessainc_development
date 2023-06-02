@@ -53,7 +53,7 @@ url_redirect( {url: url,
 		<div class="odc-gd__container">
 			<div class="odc-gd__row">
 				<div class="pgplat__bleft odc-gd__col-xxs-12 odc-gd__col-xs-6">
-					<h1 class="pgplat__btitle">A smarter way to do asset finance</h1>
+					<h1 class="pgplat__btitle">A smarter way to do lease management</h1>
 					<p class="pgplat__btext">Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.</p>
 				 <div class="pgplat__bform" >   
 						<input type="email" placeholder="What’s your email?" name="email" id="email1" required=""><button class="odc__btn odc__btn--primary odc__btn--md" type="submit" onclick="letstalkclick('email1'); return;">Let’s Talk</button>
@@ -76,7 +76,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Core: Origination</h4>
 					<p class="pgplat_ftgstext">Seamlessly bring sales and operations together for efficiency in pricing, documents, funding - everything you need to close the deal.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -84,7 +84,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Core: Servicing</h4>
 					<p class="pgplat_ftgstext">Simplify and automate core asset management processes so you can boost productivity, and focus on bringing new products to market.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 			</div>
 			<div class="pgplat_ftgroup odc-gd__row">
@@ -98,7 +98,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Customer Portal</h4>
 					<p class="pgplat_ftgstext">Delight your customers with the gift of omnichannel intelligence and self-service to increase efficiency.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -106,7 +106,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Partner Portal</h4>
 					<p class="pgplat_ftgstext">Accelerate the speed of funding for your broker network through an intuitive, mobile-enabled portal.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -114,7 +114,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Mobility</h4>
 					<p class="pgplat_ftgstext">Harness the full power of Odessa Build to extend or create beautifully simple mobile apps.</p>
-					<a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 			</div>
 			<div class="pgplat_ftgroup odc-gd__row">
@@ -127,7 +127,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Reportbuilder</h4>
 					<p class="pgplat_ftgstext">Reduce the time it takes to transform data into insights, empowering you to make more informed strategic decisions.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -135,7 +135,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Insights</h4>
 					<p class="pgplat_ftgstext">Maximize the value of your data collected to enable more detailed business analysis.</p>
-					<a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/core" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 			</div>
 			<div class="pgplat_ftgroup odc-gd__row">
@@ -149,7 +149,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Build</h4>
 					<p class="pgplat_ftgstext">Access the same technology and framework that our developers use to build Odessa applications.</p>
-					<a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -157,7 +157,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa Test</h4>
 					<p class="pgplat_ftgstext">Bring efficiency to your application development lifecycle with comprehensive test automation.</p>
-					<a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 				<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 					<div class="pgplat_ftgsicon">
@@ -165,7 +165,7 @@ url_redirect( {url: url,
 					</div>
 					<h4 class="pgplat_ftgstitle">Odessa APIs</h4>
 					<p class="pgplat_ftgstext">Connect Odessa to your critical business tools to automate cross-platform workflow.</p>
-					<a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a>
+					<p><a href="<?php echo base_url();?>platform/developer-tools" class="odc__btn odc__btn--more odc__btn--xl pgplat_ftgslink">Learn more</a></p>
 				</div>
 			</div>
 		</div>
@@ -176,7 +176,7 @@ url_redirect( {url: url,
 			<div class="pgplat_cldwrap">
 				<h2 class="pgplat_cldtitle">Odessa in the Cloud</h2>
 				<p class="pgplat_cldtext">Designed with features that meet the needs of enterprises, Odessa’s SaaS solution offers the business critical functionality, premier support, and strategic services you need to get the most out of your Odessa applications.</p>
-				<a href="<?php echo base_url();?>cloud" class="odc__btn odc__btn--lg odc__btn--primary">Learn more</a>
+				<p><a href="<?php echo base_url();?>cloud" class="odc__btn odc__btn--lg odc__btn--primary">Learn more</a></p>
 			</div>
 		</div>
 	</div>

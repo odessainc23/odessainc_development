@@ -11,14 +11,13 @@ class Platform_amp extends CI_Controller {
 		$res[ '1' ][ 'post_image' ] = 'https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Reimagined-Technology-resource-01.svg';
 
 		$data	= array();
-
-		$data['meta_title']			= 'Meet your organization needs with the Odessa Platform in Cloud.';
-		$data['meta_description']	= 'Scale confidently in the cloud with Odessa, and leave the security, governance, and administration to us for enhanced lease management capabilities.';
-		$data['meta_keyword']		= 'lease adminstration software,asset finance software,fleet management software';
-		$data['og_title']			= 'Meet your organization needs with the Odessa Platform in Cloud.';
-		$data['og_description']		= 'Scale confidently in the cloud with Odessa, and leave the security, governance, and administration to us for enhanced lease management capabilities.';
-		$data['tc_title']			= 'Meet your organization needs with the Odessa Platform in Cloud.';
-		$data['tc_description']		= 'Scale confidently in the cloud with Odessa, and leave the security, governance, and administration to us for enhanced lease management capabilities.';
+		$data['meta_title']			= 'Lease and Loan Management Software from Odessa';
+		$data['meta_description']	= 'Easily manage high-volume transactions in any region and currency with lease accounting software that powers you from point of sale to remarketing.';
+		$data['meta_keyword']		= 'loan management software,lease accounting software,lease management software,lease administration software,lease tracking software';
+		$data['og_title']			= 'Lease and Loan Management Software from Odessa';
+		$data['og_description']		= 'Easily manage high-volume transactions in any region and currency with lease accounting software that powers you from point of sale to remarketing.';
+		$data['tc_title']			= 'Lease and Loan Management Software from Odessa';
+		$data['tc_description']		= 'Easily manage high-volume transactions in any region and currency with lease accounting software that powers you from point of sale to remarketing.';
 		$data['result']				= $res;
 
 			// $this->load->view( 'layouts/amp_pages/header_amp.php', $data );
@@ -32,9 +31,9 @@ class Platform_amp extends CI_Controller {
 
 	public function core() {
 		$data = array(
-			'page_title' => 'Build on our flexible asset management platform',
-			'description' => 'Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform',
-			'keywords' => 'digital asset management system,asset management system,asset management tools ',
+			'page_title' => 'Equipment Leasing Software from Odessa',
+			'description' => 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.',
+			'keywords' => 'equipment lease accounting,equipment leasing software,equipment finance solution,equipment finance software,equipment finance Platform,equipment leasing Platform ',
 			'canonical_tag' => '',
 			'og' => '<meta name="revisit-after" content="7 days" />	
 	<meta name="allow-search" content="yes" />

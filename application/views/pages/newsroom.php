@@ -16,7 +16,7 @@
 										<div class="newsroomimg" style="background:url(<?php echo $result1[$i]->image; ?>) no-repeat;"> </div>
 										<div class="newsroominfo">
 											<div class="newsroomcontent"><?php echo $result1[$i]->post_title; ?> </div>
-											<a href="<?php echo base_url(); ?>blog/<?php echo $result1[$i]->post_name; ?>" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Read more</a>
+											<a href="<?php echo base_url(); ?>blog/<?php echo $result1[$i]->post_name; ?>" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Read more</a></p>
 										</div>
 									</div>
 								</div>
@@ -59,7 +59,7 @@
 												echo substr( $result[ $i ]->post_content, 0, $pos ) . ' ...';
 												?>
 											</p>
-											<a href="<?php echo base_url(); ?>blog/<?= $result[$i]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a> </div>
+											<p><a href="<?php echo base_url(); ?>blog/<?= $result[$i]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a></p> </div>
 									</div>
 									<?php } ?>
 								</div>
@@ -72,7 +72,7 @@
 											<h3>
 												<?= $result[$i+1]->post_title; ?>
 											</h3>
-											<a href="<?php echo base_url(); ?>blog/<?= $result[$i+1]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a> </div>
+											<p><a href="<?php echo base_url(); ?>blog/<?= $result[$i+1]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a></p> </div>
 									</div>
 									<?php } ?>
 									<?php if(isset($result[$i+2])) { ?>
@@ -83,7 +83,7 @@
 											<h3>
 												<?= $result[$i+2]->post_title; ?>
 											</h3>
-											<a href="<?php echo base_url(); ?>blog/<?= $result[$i+2]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a> </div>
+											<p><a href="<?php echo base_url(); ?>blog/<?= $result[$i+2]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a></p> </div>
 									</div>
 									<?php } ?>
 									<?php if(isset($result[$i+3])) { ?>
@@ -94,7 +94,7 @@
 											<h3>
 												<?= $result[$i+3]->post_title; ?>
 											</h3>
-											<a href="<?php echo base_url(); ?>blog/<?= $result[$i+3]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a> </div>
+											<p><a href="<?php echo base_url(); ?>blog/<?= $result[$i+3]->post_name; ?>" class="odc__btn--more odc__btn--xl" target="_blank">Read more </a> </p></div>
 									</div>
 									<?php } ?>
 								</div>
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 				<div class="center-change">
-					<a href="<?php echo base_url();?>newsroom/announcements" class="odc__btn--more odc__btn--xl">See All Announcements</a>
+					<p><a href="<?php echo base_url();?>newsroom/announcements" class="odc__btn--more odc__btn--xl">See All Announcements</a></p>
 				</div>
 			</div>
 		</div>
@@ -131,7 +131,7 @@
 								<span class="date">Jan/Feb 2023</span>
 								<!-- <h3></h3> -->
 								<h3>Odessa named Most Innovative in Asset Finance 2023</h3>
-								<a href="https://www.monitordaily.com/issue/2023-innovation-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/issue/2023-innovation-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 					</div>
@@ -142,7 +142,7 @@
 								<!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
 								<h3>Odessa named Most Innovative in Asset Finance 2022 </h3>
 								
-								<a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
@@ -151,14 +151,14 @@
 								<!-- <h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3> -->
 								<h3>Odessa secures investment from Boston private equity</h3>
 								
-								<a href="https://www.bizjournals.com/philadelphia/news/2021/09/17/fast-growing-local-fintech-secures-investment.html" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.bizjournals.com/philadelphia/news/2021/09/17/fast-growing-local-fintech-secures-investment.html" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">May 15, 2021</span>
 								<h3>Mission Critical Technology Delivers Flexibility for Asset Finance</h3>
-								<a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						
@@ -171,21 +171,21 @@
 							<div class="news_div">
 								<span class="date">January 9, 2021</span>
 								<h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3>
-								<a href="https://www.magazine.monitordaily.com/the-equipment-finance-ecosystems-journey-toward-inclusion" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.magazine.monitordaily.com/the-equipment-finance-ecosystems-journey-toward-inclusion" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">January 10, 2021</span>
 								<h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3>
-								<a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
 								<h3>Accelerating Digital Transformation After COVID-19 </h3>
-								<a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div> 
 						</div>
 					</div>
@@ -194,21 +194,21 @@
 							<div class="news_div">
 								<span class="date">February 20, 2020</span>
 								<h3>Odessa SVP Keelie Fitzgerald Named Top 50 Women in Equipment Finance</h3>
-								<a href="https://www.magazine.monitordaily.com/keelie-fitzgerald" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.magazine.monitordaily.com/keelie-fitzgerald" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 10, 2019</span>
 								<h3>Living in the Future: The Monitor 2019 Tech Roundtable </h3>
-								<a href="https://www.monitordaily.com/article-posts/living-in-the-future-the-monitor-2019-tech-roundtable/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/article-posts/living-in-the-future-the-monitor-2019-tech-roundtable/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 1, 2018</span>
 								<h3>The Next Big Trend: Equipment Finance is Ready for a Platform</h3>
-								<a href="https://www.monitordaily.com/article-posts/next-big-trend-equipment-finance-ready-platform/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a>
+								<p><a href="https://www.monitordaily.com/article-posts/next-big-trend-equipment-finance-ready-platform/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 					</div>
