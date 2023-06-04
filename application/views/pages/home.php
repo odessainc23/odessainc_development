@@ -66,7 +66,8 @@ url_redirect( {url: url,
 					<p class="home-hero-cstitle" style="font-family: MaisonNeue-Bold;
     color: #2a2d36;margin: 0 0 10px">BUILT TO PERFORM</p>
 					<div class="home-hero-ctitlewrap">
-						<h1 class="home-hero-ctitle">Your Proven Leasing <br>Platform</h1>
+					<h1 class="home-hero-ctitle">Your Proven <br>Asset Finance<br> Solution</h1>
+						<!-- <h1 class="home-hero-ctitle">Your Proven Leasing <br>Platform</h1> -->
 					</div>
 					<p class="home-hero-cdesc">Asset-based by design, backed by a robust tech stack. Odessa leverages cross-platform workflow enabled by APIs and integrations.</p>
 					<!-- <a class="odc__btn odc__btn--primary odc__btn--md" href="https://www.odessainc.com/platform" target="_self">Explore the platform</a> -->

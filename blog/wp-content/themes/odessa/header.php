@@ -100,6 +100,10 @@
 				min-width: 150px;
 			}
 		}
+		.clearfix .service {
+			color: black !important;
+			font-size: 13px !important;
+		}
 	</style>
 </head>
 <body data-gr-c-s-loaded="true">
@@ -137,16 +141,15 @@
 												<ul>
 													<li class="category-dot category-cx">Asset Finance</li>
 													<li><a href="<?php echo OD_BASE_URL; ?>platform/core">Odessa Core</a></li>
-													<li class="pdl"><a href="<?php echo OD_BASE_URL; ?>platform/core">Origination</a></li>
-													<li class="pdl"><a href="<?php echo OD_BASE_URL; ?>platform/core">Servicing</a></li>
-													<li class="pdl"><a href="<?php echo OD_BASE_URL; ?>platform/core">Lease Management</a></li>
-													<li class="pdl"><a href="<?php echo OD_BASE_URL; ?>platform/core">Loan Management</a></li>
+													<li><a href="<?php echo OD_BASE_URL; ?>platform/core">Origination</a></li>
+													<li><a href="<?php echo OD_BASE_URL; ?>platform/core">Servicing</a></li>
+													<li><a href="<?php echo OD_BASE_URL; ?>platform/core">Lease Management</a></li>
+													<li><a href="cplatform/core">Loan Management</a></li>
 												</ul>
 												<ul>
-													<li class="category-dot category-bx">Developer Tools</li>
-													<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Build</a></li>
-													<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Test</a></li>
+													<li class="category-dot category-bx"><a href="<?php echo OD_BASE_URL; ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
 												</ul>
+												
 											</div>
 											<div class="col-xs-6 col-sm-3 menuwd20">
 												<ul>
@@ -167,6 +170,11 @@
 													<li><a href="<?php echo OD_BASE_URL; ?>cloud">App Monitoring</a></li>
 													<li><a href="<?php echo OD_BASE_URL; ?>cloud">Security Monitoring</a></li>
 													<li><a href="<?php echo OD_BASE_URL; ?>cloud">Autoscaling</a></li>
+												</ul>
+												<ul>
+													<li class="category-dot category-bx">Developer Tools</li>
+													<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Build</a></li>
+													<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Test</a></li>
 												</ul>
 											</div>
 											<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
@@ -246,7 +254,7 @@
 														<ul>
 															<li class="category-dot category-bx">Company</li>
 															<li><a href="<?php echo OD_BASE_URL; ?>company">About Odessa</a></li>
-															<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
+															<!-- <li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li> -->
 															<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
 														</ul>
 													</div>
@@ -310,6 +318,11 @@
 								</div>
 								<div class="col-xs-6">
 									<ul>
+										<li><a href="<?php echo OD_BASE_URL; ?>xaas-everything-as-a-service" class="service"><b>As-a-Service</b></a></li>
+									</ul>
+								</div>
+								<div class="col-xs-6">
+									<ul>
 										<li>Developer Tools</li>
 										<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Build</a></li>
 										<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Test</a></li>
@@ -365,7 +378,7 @@
 								<div class="col-xs-6">
 									<ul>
 										<li>Get to know us</li>
-										<li><a href="<?php echo OD_BASE_URL; ?>design-principles"">Why Odessa</a></li>
+										<li><a href="<?php echo OD_BASE_URL; ?>design-principles">Why Odessa</a></li>
 										<li><a href="<?php echo OD_BASE_URL; ?>design-principles">Design Principles</a></li>
 									</ul>
 								</div>
@@ -391,7 +404,7 @@
 									<ul>
 										<li>Company</li>
 										<li><a href="<?php echo OD_BASE_URL; ?>company">About Odessa</a></li>
-										<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
+										<!-- <li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li> -->
 										<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
 									</ul>
 								</div>

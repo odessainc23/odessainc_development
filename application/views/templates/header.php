@@ -15,24 +15,14 @@
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css"  rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css" rel="stylesheet preload" as="style" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2024" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/buttons.css" rel="stylesheet"  type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/rs6.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=1001" rel='stylesheet'/>
-	<?php
-		$this->minify->css(array('bootstrap.css', 'owl.carousel.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
-	<?php
-		$this->minify->css(array('buttons.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() ?>"  rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2?>" rel="stylesheet preload" as="style" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 3?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 4?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/buttons.css?v=<?php echo time() + 5?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/rs6.css?v=<?php echo time() + 6?>" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() + 7?>" rel='stylesheet'/>
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
@@ -48,7 +38,7 @@
 	<script src="<?php echo base_url(); ?>assets/js/rs6.min.js"></script>
 	<script type="text/javascript">
 		$.cookieMessage({
-			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy" rel="nofollow">Learn More</a>. ',
+			'mainMessage': 'This website uses cookies to ensure you get the best experience. <a href="<?php echo base_url(); ?>privacy-policy" >Learn More</a>. ',
 			'acceptButton': 'Got It!',
 		});
 	</script>
@@ -127,7 +117,7 @@
 				</ul>
 				<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
 							<!--Services Menu Start Here-->
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -196,7 +186,7 @@
 							</ul>
 							<!--Services Menu End Here--> 
 						</li>
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview"
 					data-toggle="dropdown">Why Odessa</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -240,7 +230,7 @@
 								</div>
 							</ul>
 						</li>
-						<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview"
+						<li class="dropdown mega-dropdown"><a href="#"  class="dropdown-toggle hideview"
 				  data-toggle="dropdown">Company</a>
 							<ul class="dropdown-menu mega-dropdown-menu">
 								<div class="container pos">
@@ -253,7 +243,7 @@
 															<ul>
 																<li class="category-dot category-bx">Company</li>
 																<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-																<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+																<!-- <li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li> -->
 																<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 															</ul>
 														</div>
@@ -294,9 +284,9 @@
 					<div class="container">
 						<div class="mobile_view_menu">
 							<ul>
-								<li><a class="active" href="#" rel="nofollow" onclick="tabBx('platformmenu')">Platform</a></li>
-								<li><a href="#" rel="nofollow" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
-								<li><a href="#" rel="nofollow" onclick="tabBx('companymenu')">Company</a></li>
+								<li><a class="active" href="#"  onclick="tabBx('platformmenu')">Platform</a></li>
+								<li><a href="#"  onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
+								<li><a href="#"  onclick="tabBx('companymenu')">Company</a></li>
 								<li><a href="<?php echo base_url(); ?>lets-talk">Let's Talk</a></li>
 							</ul>
 						</div>
@@ -315,6 +305,11 @@
 											<li><a href="<?php echo base_url(); ?>platform/core">Loan Management</a></li>
 										</ul>
 									</div>
+									<div class="col-xs-6">
+                                        <ul>
+                                            <li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="service"><b>As-a-Service</b></a></li>
+                                        </ul>
+                                    </div>
 									<div class="col-xs-6">
 										<ul>
 											<li>Developer Tools</li>
@@ -398,7 +393,7 @@
 										<ul>
 											<li>Company</li>
 											<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-											<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+											<!-- <li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li> -->
 											<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 										</ul>
 									</div>

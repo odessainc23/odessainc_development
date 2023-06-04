@@ -12,7 +12,7 @@
 <div id="wrapper">
 	<div class="pg_banner pgcor__banner">
 		<div class="odc-gd__container">
-			<h1 class="pgcor__btitle">The #1 asset finance system used by teams</h1>
+			<h1 class="pgcor__btitle">The #1 equipment leasing software used by teams</h1>
 			<a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Schedule a demo</a>
 		</div>
 	</div>
@@ -206,7 +206,7 @@
 						<div class="pgcor_tmbcontent">
 							<div class="pgcor_tmbclogo"><img src="<?php echo base_url(); ?>assets/images/icons/CSI.png" alt="CSI Leasing"></div>
 							<p class="pgcor_tmbctext">This high growth independent equipment finance company is innovating with Odessa across the United States, UK and Mexico </p>
-							<a href="#" rel="nofollow" class="pgcor_tmbaction" data-toggle="modal" data-target="#companyvideoplay"><i class="fa fa-play-circle" aria-hidden="true"></i>Play video</a>
+							<a href="#" rel="" class="pgcor_tmbaction" data-toggle="modal" data-target="#companyvideoplay"><i class="fa fa-play-circle" aria-hidden="true"></i>Play video</a>
 						</div>
 					</div>
 				</div>

@@ -5,13 +5,13 @@ class Home_amp extends CI_Controller {
 	public function index() {
 		$data	= array();
 
-		$data['meta_title']			= 'Providers of the Odessa Platform, the world\'s leading asset finance software. Book A Demo.';
-		$data['meta_description']	= 'Odessa\'s cross-platform workflow brings efficiency to your operations. Get started with our lease administration software or fleet management software.';
-		$data['meta_keyword']		= 'lease adminstration software,asset finance software,fleet management software';
-		$data['og_title']			= 'Providers of the Odessa Platform, the world\'s leading asset finance software. Book A Demo.';
+		$data['meta_title']			= 'Asset Finance Software | Odessa';
+		$data['meta_description']	= 'Odessa\'s cross-platform workflow brings efficiency to your asset finance operations. Get started with your digital transformation journey today.';
+		$data['meta_keyword']		= 'asset finance software,asset leasing software,asset finance solution,asset finance management software';
+		$data['og_title']			= 'Asset Finance Software | Odessa';
 		$data['og_description']		= 'Odessa\'s cross-platform workflow brings efficiency to your operations. Get started with our lease administration software or fleet management software.';
-		$data['tc_title']			= 'Providers of the Odessa Platform, the world\'s leading asset finance software. Book A Demo.';
-		$data['tc_description']		= 'Odessa\'s cross-platform workflow brings efficiency to your operations. Get started with our lease administration software or fleet management software.';
+		$data['tc_title']			= 'Asset Finance Software | Odessa';
+		$data['tc_description']		= 'Odessa\'s cross-platform workflow brings efficiency to your asset finance operations. Get started with your digital transformation journey today.';
 
 		// $this->load->view('layouts/header',$data);
 		// $this->load->view('pages/home');

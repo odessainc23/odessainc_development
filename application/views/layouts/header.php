@@ -77,30 +77,22 @@
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Bold.otf" as="font" type="font/otf" crossorigin>
 
 
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" as="style" crossorigin />
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/bootstrap.css" as="style" crossorigin />
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/owl.carousel.css" as="style" crossorigin />
+	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() ?>" as="style" crossorigin />
+	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" as="style" crossorigin />
+	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2?>" as="style" crossorigin />
+	<link href="<?php echo base_url(); ?>assets/css/buttons.css?v=<?php echo time() + 3?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/rs6.css?v=<?php echo time() + 4?>" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() + 5?>" rel='stylesheet'/>
 
-	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=1001" rel='stylesheet'/>
-	<?php
-		$this->minify->css(array('bootstrap.css', 'owl.carousel.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
-	<?php
-		$this->minify->css(array('rs6.css', 'buttons.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/style.css?v=2001"  />
-	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/media.css?v=3001" />
+	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 6?>"  />
+	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 7?>" />
 	
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
-		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=3452345" rel="stylesheet preload" type="text/css" />
+		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=<?php echo time() + 8?>" rel="stylesheet preload" type="text/css" />
 	<?php } ?>
 
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=3001" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=<?php echo time() + 9?>" />
 
 
 	<!-- Google Tag Manager --> 

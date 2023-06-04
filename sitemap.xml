@@ -13,12 +13,19 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://www.odessainc.com/xaas-everything-as-a-service</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/xaas-everything-as-a-service" />
+  <lastmod>2021-05-25T11:51:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.odessainc.com/covid-help/</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/lets-talk</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/lets-talk" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -29,41 +36,47 @@
 </url>
 <url>
   <loc>https://www.odessainc.com/platform/developer-tools</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/platform/developer-tools" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/platform</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/platform" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/cloud</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/cloud" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/design-principles</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/design-principles" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/reimagined-technology-role-during-covid/</loc>
+  <loc>https://www.odessainc.com/blog/reimagined-technology-role-during-covid</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.odessainc.com/company</loc>
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/company" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
+<!-- <url>
   <loc>https://www.odessainc.com/leadership</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
-</url>
+</url> -->
 <url>
   <loc>https://www.odessainc.com/careers</loc>
+   <xhtml:link rel="alternate" hreflang="en-us" href="https://www.odessainc.com/careers" />
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -72,11 +85,7 @@
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://www.odessainc.com/platform/core/</loc>
-  <lastmod>2021-05-25T11:51:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+
 <url>
   <loc>https://www.odessainc.com/terms-of-use</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
@@ -303,72 +312,72 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/odessa-joins-leaseurope-as-associate-member/</loc>
+  <loc>https://www.odessainc.com/blog/odessa-joins-leaseurope-as-associate-member</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/tcf-winthrop-goes-live-with-major-upgrade-from-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/tcf-winthrop-goes-live-with-major-upgrade-from-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/bbt-equipment-finance-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/bbt-equipment-finance-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/meridian-leasing-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/meridian-leasing-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/bennington-financial-selects-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/bennington-financial-selects-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/pacific-rim-capital-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/pacific-rim-capital-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/cole-taylor-equipment-finance-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/cole-taylor-equipment-finance-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/leasewave-implementation-wins-elfa-technology-award-2013/</loc>
+  <loc>https://www.odessainc.com/blog/leasewave-implementation-wins-elfa-technology-award-2013</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/snap-financial-group-selects-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/snap-financial-group-selects-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/hatton-national-bank-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/hatton-national-bank-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/pacific-rim-capital-selects-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/pacific-rim-capital-selects-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/odessa-announces-end-of-lease-management-product/</loc>
+  <loc>https://www.odessainc.com/blog/odessa-announces-end-of-lease-management-product</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/merchants-leasing-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/merchants-leasing-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/csi-leasing-goes-live-with-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/csi-leasing-goes-live-with-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -383,7 +392,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.odessainc.com/blog/kaizen-auto-group-selects-odessa/</loc>
+  <loc>https://www.odessainc.com/blog/kaizen-auto-group-selects-odessa</loc>
   <lastmod>2021-05-25T11:51:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>

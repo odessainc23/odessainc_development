@@ -165,9 +165,9 @@
 		</div>
 	</div>
 	<!--Got Perks Section End Here--> 
-
+	
 	<!--Job Opening Start Here-->
-	<div class="jobopening" id="SkillateJobOpening">
+	<div class="jobopening">
 		<div class="odc-gd__container">
 			<h2 class="text-center">Job Openings</h2>
 			<p class="subtitle text-center">We're problem solvers, risk-takers, musicians, artists, athletes, activists, parents, <br>
@@ -175,48 +175,34 @@
 			<div class="careers-filters">
 				<div class="dropdownlist">
 					<div class="list-link"> <span class="label">Location</span> <i class="fa fa-chevron-down"></i> </div>
-					<ul class="dropdown-select">
+					<ul>
 						<li data-key="data-filter-location" data-value="All" class="selected">All</li>
 						<?php echo $location_filter;?>
 					</ul>
 				</div>
 				<div class="dropdownlist">
 					<div class="list-link"> <span class="label">Department</span> <i class="fa fa-chevron-down"></i> </div>
-					<ul class="dropdown-select">
+					<ul>
 						<li data-key="data-filter-department" class="selected" data-value="All">All</li>
 						<?php echo $department_filter;?>
 					</ul>
 				</div>
 			</div>
-
-			<?php
-			$group_dept = array();
-			foreach($lists as $listd) { 
-				$group_dept[$listd['department']][] = $listd;   
-			}
-			?> 
-
 			<div class="openingList">
-				<?php 
-				foreach($group_dept as $key => $list) { 
-					//$group[$list['department']][] = $list;
-					?>
+				<?php foreach($lists as $k => $list) { ?>
 					<div class="openinglist_grp">
-					<h5 class="openinglist_title"><?php echo $key; ?></h5>
-					
-					<?php foreach($list as $data){	 ?>
-						<a class="odc-gd__row opening_item" data-filter-location="<?php echo $data['office']['country']; ?>" data-filter-department="<?php echo $data['department']; ?>" href="<?php echo $data['link']; ?>" target="_blank" title="<?php echo $data['title']; ?>">
-						
-						<span class="odc-gd__col-xs-6"><span class="opening_itemtitle"><?php echo $data['title']?></span></span>
-							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation">
-							
-								<?php	
-								$workplace = str_replace(['_'], [' '], $data['workplace_type']);	
-								$type =  ($data['workplace_type'] == 'HYBRID' ? $workplace .' Remote' : $workplace);			
-								echo $data['office']['city'] .(($data['workplace_type'] === "ONSITE") ? ', ' : ' or ')." ".ucwords(strtolower($type));
-								?>
-							</span></span>
-							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php echo $data['office']['country']; ?></span></span>
+						<h5 class="openinglist_title"><?php echo $k; ?></h5>
+						<?php foreach($list as $item) { ?>
+						<a class="odc-gd__row opening_item" href="<?php echo $item['hosted_url']; ?>" target="_blank" data-filter-location="<?php echo $item['location']['country']; ?>" data-filter-department="<?php echo $item['team']; ?>" title="<?php echo $item['title']; ?>">
+							<span class="odc-gd__col-xs-6"><span class="opening_itemtitle"><?php echo $item['title']; ?></span></span>
+							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php
+								if($item['is_remote_allowed']==1){
+									echo "Fully Remote";
+								}else{
+									echo $item['location']['city'] .', '."COVID-19 Remote" ;
+								}
+							?></span></span>
+							<span class="odc-gd__col-xs-3"><span class="opening_itemlocation"><?php echo $item['location']['country']; ?></span></span>
 						</a>
 						<?php } ?>
 					</div>
@@ -229,7 +215,7 @@
 	<!--Open Position Box Start Here-->
 	<div class="open_position_box">
 		<h2 class="text-center wtcol">Didn’t see an open position <span>for you?</span></h2>
-		<div class="seeposbtnrw"><a href="mailto:odessainc_candidate@resumebox.skillate.com" class="odc__btn odc__btn--lg odc__btn--primary">Tell us more about you</a></div>
+		<div class="seeposbtnrw"><a href="mailto:odessainc-dssn0329@applications.recruiterbox.com" class="odc__btn odc__btn--lg odc__btn--primary">Tell us more about you</a></div>
 	</div>
 	<!--Open Position Box End Here--> 
 </div>
@@ -281,6 +267,8 @@
 		$('.openingList .openinglist_grp').each(function () {
 			var visibleItems	= $(this).find('.opening_item:visible').length;
 
+			console.log(typeof visibleItems);
+
 			if (visibleItems == 0) {
 				$(this).addClass('hide-group');
 			} else {
@@ -306,8 +294,7 @@
     "@type": "WebPage",
     "name": "Odessainc-Careers",
     "description": "Your best work starts here. We believe in software that’s functionally rich and easy to use, smart technology that launches business forward, and a workplace that’s a joy to be a part of every day. Come join a group of incredibly talented and friendly people who care about building something amazing.",
-    "uploadDate": "2016-03-31T08:00:00+08:00",
-	"publisher": {
+    "publisher": {
         "@type": "WebPage",
         "name": "Job Openings at Odessainc"
     }

@@ -74,16 +74,18 @@
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
-
-	<!-- Minify and Output CSS -->
-	<?php
-		$this->minify->css(array('font-awesome.min.css', 'bootstrap.css', 'owl.carousel.css', 'rs6.css', 'buttons.css', 'style.css', 'media.css', 'turns22.css'));
-
-		echo $this->minify->deploy_css(TRUE);
-	?>
+	
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time()  ?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2 ?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/rs6.css?v=<?php echo time() + 3?>" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/buttons.css?v=<?php echo time() + 4?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 5 ?>" rel="stylesheet"  type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 6?>" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url(); ?>assets/css/turns22.css?v=<?php echo time() + 7?>" rel="stylesheet" type="text/css" />
 	
 	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
-		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=<?php echo time() + 8?>" rel="stylesheet" type="text/css" />
 	<?php } ?>
 
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

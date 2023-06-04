@@ -30,7 +30,7 @@ if($is_home){?>
 			</ul>
 			<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="dropdown mega-dropdown"><a href="#" rel="nofollow" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
+					<li class="dropdown mega-dropdown"><a href="#" rel="" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
 						<!--Services Menu Start Here-->
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<div class="container pos">
@@ -164,7 +164,7 @@ if($is_home){?>
 														<ul>
 															<li class="category-dot category-bx">Company</li>
 															<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-															<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+															<!-- <li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li> -->
 															<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 														</ul>
 													</div>
@@ -324,7 +324,7 @@ if($is_home){?>
 									<ul>
 										<li>Company</li>
 										<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-										<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+										<!-- <li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li> -->
 										<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 									</ul>
 								</div>
