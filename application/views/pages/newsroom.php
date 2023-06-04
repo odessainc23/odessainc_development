@@ -1,6 +1,6 @@
 
 
-<div id="wrapper">
+<div id="wrapper"> 
 	<section class="newsroom">
 		<div class="container">
 			<div class="section_width">
