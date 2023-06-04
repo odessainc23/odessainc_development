@@ -227,7 +227,7 @@
 												<div class="row eqWrap equalHMWrap clearfix">
 													<div class="col-sm-7 col-md-8 colmenubg">
 														<div class="menuimgbox"> <img src="<?php echo OD_BASE_URL; ?>assets/images/covid_distance.jpg" alt="" />
-															<div class="imgdownlink"> <a href="https://odessainc.com/blog/reimagined-technology-role-during-covid/">From the blog: Digital Transformation in the time of COVID</a> </div>
+															<div class="imgdownlink"> <a href="https://www.odessainc.com/blog/reimagined-technology-role-during-covid/">From the blog: Digital Transformation in the time of COVID</a> </div>
 														</div>
 													</div>
 													<div class="col-sm-5 col-md-4 colmenubg">

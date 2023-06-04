@@ -7,8 +7,8 @@ class Cloud extends CI_Controller {
 		$query = $this->db->query( $sql );
 		$res = $query->result_array();
 
-		$res[ '0' ][ 'post_image' ] = 'https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Cloud-CLFP-resource.svg';
-		$res[ '1' ][ 'post_image' ] = 'https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Reimagined-Technology-resource-01.svg';
+		$res[ '0' ][ 'post_image' ] = 'https://www.odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Cloud-CLFP-resource.svg';
+		$res[ '1' ][ 'post_image' ] = 'https://www.odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Reimagined-Technology-resource-01.svg';
 
 		$data	= array();
 
