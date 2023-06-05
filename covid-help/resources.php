@@ -13,13 +13,13 @@
 
         <meta name="sitelock-site-verification" content="168" />
         <meta name="yandex-verification" content="d7962e7f3953689e">
-
-        <link rel="prefetch" href="https://www.odessainc.com/assets/images/odessa-partner-banner-bkmenu.jpg">
+        <?php define('base_url', 'https://www.odessainc.com/'); ?>
+        <link rel="prefetch" href="<?= base_url ?>assets/images/odessa-partner-banner-bkmenu.jpg">
 
         <!-- Open Graph Tags -->
         <meta property="og:title" content="Local COVID Relief Resources | Odessa ">
         <meta property="og:description" content="At Odessa our core value is improving the communities where we live and work. Check this space for local resources and information regarding medical oxygen, hospital beds, ventilators and other medical supplies.">
-        <meta property="og:image" content="https://www.odessainc.com/assets/images/default.jpg">
+        <meta property="og:image" content="<?= base_url ?>assets/images/default.jpg">
         <meta property="og:site_name" content="OdessaInc.Com">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="en_US">
@@ -27,21 +27,21 @@
         <!-- Twitter Cards -->
         <meta property="twitter:title" content="Local COVID Relief Resources | Odessa ">
         <meta property="twitter:description" content="At Odessa our core value is improving the communities where we live and work. Check this space for local resources and information regarding medical oxygen, hospital beds, ventilators and other medical supplies.">
-        <meta property="twitter:image" content="https://www.odessainc.com/assets/images/default.jpg">
+        <meta property="twitter:image" content="<?= base_url ?>assets/images/default.jpg">
         <meta property="twitter:site" content="OdessaInc.Com">
         <meta property="twitter:card" content="summary">
         
         <!-- Canonical URL -->
-        <link rel="canonical" href="https://www.odessainc.com/covid-help/resources" />
+        <link rel="canonical" href="<?= base_url ?>covid-help/resources" />
 
         <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="https://www.odessainc.com/favicon.ico">
-        <link rel="shortcut icon" type="image/x-icon" href="https://www.odessainc.com/favicon.ico">
-        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/buttons.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/modular_styles.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="<?= base_url ?>favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="<?= base_url ?>favicon.ico">
+        <link href="<?= base_url ?>covid-help/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url ?>covid-help/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url ?>covid-help/assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url ?>covid-help/assets/css/buttons.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url ?>covid-help/assets/css/modular_styles.css" rel="stylesheet" type="text/css">
         
     </head>
 
@@ -50,14 +50,14 @@
         <nav class="navbar navbar-default navbar-fixed-top cm-menu">
             <div class="container">
                 <div class="navbar_wrapper">
-                    <a class="navbar-brand" href="https://www.odessainc.com/">Odessa</a>
+                    <a class="navbar-brand" href="<?= base_url ?>">Odessa</a>
                     <ul class="nav navbar-nav navbar-right cm-menu__r">
                         <li class="hidden-xs">
                             <a target="_blank" href="https://fundraisers.giveindia.org/fundraisers/help-india-fight-covid-19-06klzabas" class="pgcor__baction odc__btn odc__btn--blue odc__btn--md">Donate for COVID Relief</a>
                         </li>
                         <li class="hidden-xs"><a href="resources"  class="pgcor__baction odc__btn odc__btn--blue odc__btn--md">Local COVID Resources</a></li>
                         <li>
-                            <img src="assets/images/covid-help/redheart.svg" alt="Covid Fund Raiser" class="img-fluid cm-menu__r-imgsize od-ml-40 od-ml-xxxl-10" />
+                            <img src="<?= base_url ?>covid-help/assets/images/covid-help/redheart.svg" alt="Covid Fund Raiser" class="img-fluid cm-menu__r-imgsize od-ml-40 od-ml-xxxl-10" />
                         </li>
                     </ul>
                 </div>

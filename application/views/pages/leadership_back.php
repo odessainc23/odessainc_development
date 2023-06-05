@@ -294,8 +294,8 @@
   "@context": "https://schema.org/",
   "@type": "Person",
   "name": "Madhu Natarajan",
-  "url": "https://www.odessainc.com/leadership",
-  "image": "https://www.odessainc.com/assets/images/leadership/madhu_natarajan_odessa.jpg",
+  "url": "<?php echo base_url(); ?>leadership",
+  "image": "<?php echo base_url(); ?>assets/images/leadership/madhu_natarajan_odessa.jpg",
   "sameAs": "https://www.linkedin.com/in/madhu-natarajan-501254170/",
   "jobTitle": "Co-Founder + CEO",
   "worksFor": {
@@ -309,8 +309,8 @@
   "@context": "https://schema.org/",
   "@type": "Person",
   "name": "Jay Mehra",
-  "url": "https://www.odessainc.com/leadership",
-  "image": "https://www.odessainc.com/assets/images/leadership/jay-mehra-odessa.jpg",
+  "url": "<?php echo base_url(); ?>leadership",
+  "image": "<?php echo base_url(); ?>assets/images/leadership/jay-mehra-odessa.jpg",
   "sameAs": "https://www.linkedin.com/in/jay-mehra-b8b254170/",
   "jobTitle": "Co-Founder + CTO",
   "worksFor": {

@@ -54,7 +54,7 @@
 				<div class="block-copy">
 					<h3 class="block-header">Business teams are made of people, and those people have care and compassion for their communities.</h3>
 					<p class="block-paragraph">Keep community engagement front and center. Be mindful, responsible, and generous with time and profit.</p>
-					<p class="block-paragraph block-paragraph-bold"><a class="text-link" href="https://www.odessainc.com/blog/non-profit-foundation-launch/" target="_blank">See what we’re doing</a></p>
+					<p class="block-paragraph block-paragraph-bold"><a class="text-link" href="<?php echo base_url();?>blog/non-profit-foundation-launch/" target="_blank">See what we’re doing</a></p>
 				</div>
 			</div>
 		</div>
@@ -100,7 +100,7 @@
 				<div class="block-number">07</div>
 				<div class="block-copy">
 					<h3 class="block-header">Ups and downs are great for trampolines. In business, aim for a straight line up and to the right.</h3>
-					<p class="block-paragraph block-paragraph-bold"><a class="text-link" href="https://www.odessainc.com/blog/odessa-recognized-on-inc5000-list" target="_blank">Just ask Inc 5000</a></p>
+					<p class="block-paragraph block-paragraph-bold"><a class="text-link" href="<?php echo base_url();?>blog/odessa-recognized-on-inc5000-list" target="_blank">Just ask Inc 5000</a></p>
 				</div>
 			</div>
 		</div>
@@ -109,7 +109,7 @@
 				<div class="block-number">08</div>
 				<div class="block-copy">
 					<h3 class="block-header">Being good people attracts more good people.</h3>
-					<p class="block-paragraph"><a class="text-link" href="https://www.odessainc.com/blog/navigating-virtual-interviews-remote-work/" target="_blank">Here’s how we pick ‘em</a></p>
+					<p class="block-paragraph"><a class="text-link" href="<?php echo base_url();?>blog/navigating-virtual-interviews-remote-work/" target="_blank">Here’s how we pick ‘em</a></p>
 				</div>
 			</div>
 		</div>
@@ -145,7 +145,7 @@
 				<div class="block-copy">
 					<h3 class="block-header">Be innovative. Think bigger. Build solutions that work well together.</h3>
 					<p class="block-paragraph">Like a masterful game of Tetris, but for asset finance.</p>
-					<a href="https://www.odessainc.com/platform" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Explore the Platform</a>
+					<a href="<?php echo base_url();?>platform" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Explore the Platform</a>
 				</div>
 			</div>
 		</div>
@@ -160,7 +160,7 @@
 					<img class="complicated-relationships handhelds-show" src="<?php echo base_url(); ?>assets/images/turns22/lesson_11_bg.png" alt="Illustration: people working together">
 					<h3 class="block-header">Growth can get complicated. Keep it simple.</h3>
 					<p class="block-paragraph">We’ve shared ours. Now your turn. Let us be a part of your transformation.</p>
-					<a href="https://www.odessainc.com/get-started" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Get Started</a>
+					<a href="<?php echo base_url();?>get-started" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Get Started</a>
 				</div>
 			</div>
 		</div>

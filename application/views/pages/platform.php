@@ -290,7 +290,7 @@ url_redirect( {url: url,
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Odessa Platform",
-  "image": "https://www.odessainc.com/assets/images/platformheaderimg.png",
+  "image": "<?= base_url(); ?>assets/images/platformheaderimg.png",
   "description": "Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.",
   "brand": "Odessa",
   "review": {

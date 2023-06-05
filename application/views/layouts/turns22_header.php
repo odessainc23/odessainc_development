@@ -35,7 +35,7 @@
 
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 
-	<link rel="prefetch" href="https://www.odessainc.com/assets/images/odessa-partner-banner-bkmenu.jpg">
+	<link rel="prefetch" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg">
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>

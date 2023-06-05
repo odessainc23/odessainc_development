@@ -240,7 +240,7 @@
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Odessa Core",
-  "image": "https://www.odessainc.com/assets/images/code-prin-circle.webp",
+  "image": "<?php echo base_url(); ?>assets/images/code-prin-circle.webp",
   "description": "Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform",
   "brand": "Odessa",
 "review": {

@@ -1,7 +1,7 @@
 <script>
 	$.ajax({
 		type: 'GET',
-		url: 'https://www.odessainc.com/blog/wp-json/odc/v2/pr_by_year',
+		url: '<?php echo base_url(); ?>blog/wp-json/odc/v2/pr_by_year',
 		error: function(res) {
 
 		},

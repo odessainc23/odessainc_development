@@ -27,8 +27,8 @@ class Thankyou extends CI_Controller {
 		$res = $query->result_array();
 
 
-		$res[ '0' ][ 'post_image' ] = 'https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-Reimagined-Technology-resource-01.svg';
-		$res[ '0' ][ 'post_image' ] = 'https://odessainc.com/blog/wp-content/uploads/2020/07/Odessa-DevOps-resource.svg';
+		$res[ '0' ][ 'post_image' ] = '<?php echo base_url(); ?>blog/wp-content/uploads/2020/07/Odessa-Reimagined-Technology-resource-01.svg';
+		$res[ '0' ][ 'post_image' ] = '<?php echo base_url(); ?>blog/wp-content/uploads/2020/07/Odessa-DevOps-resource.svg';
 		$data = array(
 			'page_title' => 'Thank you',
 			'description' => '',

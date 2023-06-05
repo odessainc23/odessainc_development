@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="platformheaderimg_div">
-			   <img src="assets/images/platformheaderimg.png" alt=""/> 
+			   <img src="<?= base_url(); ?>assets/images/platformheaderimg.png" alt=""/> 
 			</div>
 		</div>
 	  </div>
