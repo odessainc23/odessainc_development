@@ -11,7 +11,7 @@
             <div class="legal-ppnavtitle">TABLE OF CONTENTS</div>
             <div class="legal-ppnavlist">
               <a href="#OnPremise" class="active">On-Premise SLA’s</a>
-              <a href="#PrivateCloud">Private Cloud Hosted SLA’s</a>
+              <a href="#PrivateCloud">Service Level Availability</a>
               <a>Data Privacy
                 <a href="#Privacy" style="display: block;padding: 10px 20px;">a. Privacy Policy</a>
               
@@ -238,9 +238,15 @@
               <span class="highlight">2.</span>
               <span class="sub-heading-italic">Service Level Agreement Warranty. </span> As long as applicable Fees are paid as they become due and Customer has not breached the terms of the Agreement, Odessa warrants to Customer (the “SLA Warranty”) that the Uptime SLA Percentage, as calculated below, for the Odessa Solution will be not less than 99.5% (the “SLA Target”).
             </p>
-            <p>Uptime SLA Percentage=((n-y)*100)/n where: "n" is the total number of hours in a given calendar month excluding Scheduled Downtime, and Exception Times; and "y" is the total number of Downtime hours in the given calendar month. For months in which services commence on other than the first day of the month, the calculation of Uptime SLA Percentage will be prorated accordingly.</p>
+			<div style="text-align:center">
+            <p> <img src="<?= base_url(); ?>assets/images/update.jpg" alt="Thousand two fifty Odessa employee around the globe" /></p>
             <p>
-              <span class="highlight">3.</span>
+				<p>where:</p>
+				<p>"n" is the total number of hours in a given calendar month excluding Scheduled Downtime, and Exception Times; and</p>
+				<p> "y" is the total number of Downtime hours in the given calendar month. For months in which services commence on other than the first day of the month, the calculation of Uptime SLA Percentage will be prorated accordingly.</p>
+</div>
+				
+				<span class="highlight">3.</span>
               <span class="sub-heading-italic">Exclusions.</span> Odessa will have no liability hereunder to the extent any non-conformance arises due to: (a) any modification, reconfiguration or maintenance of the Odessa Solution or Odessa Software performed by any party other than Odessa or at Odessa’s direction; (b) any use of the Odessa Solution on a system that does not meet Odessa’s minimum standards shown in the Documentation; (c) any software other than the Odessa Software, or (d) any hardware not provided by Odessa.
             </p>
             <p>
@@ -249,19 +255,19 @@
             </p>
             <div class="inner">
               <p>
-                <i>a.</i>First month of missed availability: 5% of the Fee paid for the applicable month for the Odessa Solution
+                <i>.</i>First month of missed availability: 5% of the Fee paid for the applicable month for the Odessa Solution
               </p>
               <p>
-                <i>b.</i>Second consecutive month: 15% of the Fee paid for the applicable month for the Odessa Solution
+                <i>.</i>Second consecutive month: 15% of the Fee paid for the applicable month for the Odessa Solution
               </p>
               <p>
-                <i>c.</i>Third consecutive month: 20% of the Fee paid for the applicable month for the Odessa Solution
+                <i>.</i>Third consecutive month: 20% of the Fee paid for the applicable month for the Odessa Solution
               </p>
               <p>
-                <i>d.</i>Fourth consecutive month: 25% of the Fee paid for the applicable month for the Odessa Solution
+                <i>.</i>Fourth consecutive month: 25% of the Fee paid for the applicable month for the Odessa Solution
               </p>
               <p>
-                <i>e.</i>Fifth consecutive month: 30% of the Fee paid for the applicable month for the Odessa Solution
+                <i>.</i>Fifth consecutive month: 30% of the Fee paid for the applicable month for the Odessa Solution
               </p>
             </div>
             <p>In order to receive credit hereunder, Customer must make a written request to Odessa within thirty (30) days of the end of the applicable month.</p>
@@ -271,40 +277,41 @@
             </p>
           </div>
           <div id="Privacy" class="legal-pcontent legal-ppcontab">
+			<h3>Privacy policy</h3>
             <p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows you care about how your Personal Information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing Odessa’s Website or by using any of Odessa’s hosted products (the “Odessa Solution”) or through communicating with Odessa regarding its software (the “Odessa Software”) in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we may collect, use, and share your information in the following ways.</p>
             <h4>Changes to this Privacy Policy</h4>
             <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at https://www.odessainc.com/legal/confidential-terms If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the address Odessa has on file for your account, if applicable.</p>
             <p>This Privacy Policy explains:</p>
             <div class="inner">
               <p>
-                <span class="highlight">1.</span> The type of information we collect
+                <span class="">1.</span> The type of information we collect
               </p>
               <p>
-                <span class="highlight">2.</span> How Odessa collects your information, including tracking and cookies
+                <span class="">2.</span> How Odessa collects your information, including tracking and cookies
               </p>
               <p>
-                <span class="highlight">3.</span> How Odessa uses your personal information
+                <span class="">3.</span> How Odessa uses your personal information
               </p>
               <p>
-                <span class="highlight">4.</span> How you can correct or update the information Odessa has
+                <span class="">4.</span> How you can correct or update the information Odessa has
               </p>
               <p>
-                <span class="highlight">5.</span> Rights to object or restrict processing of Personal Information
+                <span class="">5.</span> Rights to object or restrict processing of Personal Information
               </p>
               <p>
-                <span class="highlight">6.</span> Who we may share information with
+                <span class="">6.</span> Who we may share information with
               </p>
               <p>
-                <span class="highlight">7.</span> How we handle Do Not Track requests
+                <span class="">7.</span> How we handle Do Not Track requests
               </p>
               <p>
-                <span class="highlight">8.</span> Linked sites and services
+                <span class="">8.</span> Linked sites and services
               </p>
               <p>
-                <span class="highlight">9.</span> Data security
+                <span class="">9.</span> Data security
               </p>
               <p>
-                <span class="highlight">10.</span> Retention of your information
+                <span class="">10.</span> Retention of your information
               </p>
               <p>
                 <span class="highlight">11.</span> Notice of privacy rights to California residents
@@ -801,7 +808,9 @@
             </div>
             <p>18. <span class="sub-heading-italic">Resilience and Odessa Solution Continuity. </span>Odessa infrastructure for the Odessa Solution uses a variety of tools and mechanisms to achieve high availability and resiliency. For the Odessa Solution, Odessa’s infrastructure spans multiple fault-independent Azure availability regions. For the Odessa Solution, there are manual or automatic capabilities to re-route and regenerate hosts within Odessa’s infrastructure. Odessa leverages specialized tools that monitor server performance, data, and traffic load capacity within each availability zone.. Odessa will also be notified immediately and have the ability to take prompt action to correct the cause(s) behind these issues. </p>
             <p>19. <span class="sub-heading-italic">Backups and Recovery.</span> Odessa performs regular backups of the Odessa Solution account information, message templates, message logs and other critical data using Azure cloud storage. Backup data are retained redundantly across availability zones and are encrypted in transit and at rest using 256-bit Advanced Encryption Standard (AES-256) server-side encryption. </p>
-            <h3>SCHEDULE 3</h3>
+            <br>
+			<br>
+			<h3>SCHEDULE 3</h3>
             <h4>Subprocessors</h4>
             <p>Microsoft Azure</p>
             <p>WhatFix</p>
