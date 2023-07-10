@@ -133,7 +133,7 @@ if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
 		'char_set' => 'utf8',
 		'dbcollat' => 'utf8_general_ci',
 		'swap_pre' => '',
-		'encrypt' => FALSE,
+		'encrypt' => ['ssl_verify' => FALSE],
 		'compress' => FALSE,
 		'stricton' => FALSE,
 		'failover' => array(),
