@@ -120,10 +120,10 @@ if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
 } else if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' ) {
 	$db['default'] = array(
 		'dsn'	=> '',
-		'hostname' => 'mysqlcluster16',
-		'username' => 'odessa_main',
-		'password' => 'B2`u+2D<e-hF',
-		'database' => 'odessa_main',
+		'hostname' => '10.72.1.36',
+		'username' => 'odeadmin',
+		'password' => 'DeKJSyT%%123F',
+		'database' => 'odessa_dev',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
