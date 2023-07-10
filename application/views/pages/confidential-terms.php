@@ -238,14 +238,16 @@
               <span class="highlight">2.</span>
               <span class="sub-heading-italic">Service Level Agreement Warranty. </span> As long as applicable Fees are paid as they become due and Customer has not breached the terms of the Agreement, Odessa warrants to Customer (the “SLA Warranty”) that the Uptime SLA Percentage, as calculated below, for the Odessa Solution will be not less than 99.5% (the “SLA Target”).
             </p>
-			<div style="text-align:center">
+			<div style="width:700px;margin:0 auto">
             <p> <img src="<?= base_url(); ?>assets/images/update.jpg" alt="Thousand two fifty Odessa employee around the globe" /></p>
-            <p>
-				<p>where:</p>
-				<p>"n" is the total number of hours in a given calendar month excluding Scheduled Downtime, and Exception Times; and</p>
-				<p> "y" is the total number of Downtime hours in the given calendar month. For months in which services commence on other than the first day of the month, the calculation of Uptime SLA Percentage will be prorated accordingly.</p>
-</div>
-				
+           
+			<p>
+
+				<p style="font-size:14px">where:</p>
+				<p style="font-size:14px">"n" is the total number of hours in a given calendar month excluding Scheduled Downtime, and Exception Times; and</p>
+				<p style="font-size:14px"> "y" is the total number of Downtime hours in the given calendar month. For months in which services commence on other than the first day of the month, the calculation of Uptime SLA Percentage will be prorated accordingly.</p>
+				</div>
+				<p>
 				<span class="highlight">3.</span>
               <span class="sub-heading-italic">Exclusions.</span> Odessa will have no liability hereunder to the extent any non-conformance arises due to: (a) any modification, reconfiguration or maintenance of the Odessa Solution or Odessa Software performed by any party other than Odessa or at Odessa’s direction; (b) any use of the Odessa Solution on a system that does not meet Odessa’s minimum standards shown in the Documentation; (c) any software other than the Odessa Software, or (d) any hardware not provided by Odessa.
             </p>
@@ -314,13 +316,13 @@
                 <span class="">10.</span> Retention of your information
               </p>
               <p>
-                <span class="highlight">11.</span> Notice of privacy rights to California residents
+                <span class="">11.</span> Notice of privacy rights to California residents
               </p>
               <p>
-                <span class="highlight">12.</span> Notice of privacy rights to residents of the European Union Area
+                <span class="">12.</span> Notice of privacy rights to residents of the European Union Area
               </p>
               <p>
-                <span class="highlight">13.</span> How to contact us
+                <span class="">13.</span> How to contact us
               </p>
             </div>
             <h4>1. Information Collected</h4>
@@ -745,14 +747,16 @@
             <p>12. <span class="sub-heading-italic">General Provisions </span>
             </p>
             <p>With regard to the subject matter of this DPA, in the event of inconsistencies between the provisions of this DPA and the Agreement, the provisions of this DPA shall prevail. In the event of inconsistencies between the DPA and the EU or UK SCCs, the EU OR UK SCCs will prevail.</p>
-            <h3>SCHEDULE 1</h3>
+            <br>
+			<h3>SCHEDULE 1</h3>
             <h4>Details of Processing</h4>
             <p>1. <span class="sub-heading">Categories of Data Subjects.</span> This DPA applies to Odessa’s Processing of Customer Personal Data relating to Customer’s employees, contractors, and end users of the Odessa Solution (“Data Subjects”). </p>
             <p>2. <span class="sub-heading">Types of Personal Data.</span> The extent of Customer Personal Data Processed by Odessa is determined and controlled by Customer in its sole discretion and includes names, contact information, employer, title, image, location, language preference, IP address, and any other Personal Data that may be transmitted through the Odessa Solution by Data Subjects. </p>
             <p>3. <span class="sub-heading">Subject-Matter and Nature of the Processing.</span> Customer Personal Data will be subject to the Processing activities that Odessa needs to perform in order to provide the Odessa Solution pursuant to the Agreement. </p>
             <p>4. <span class="sub-heading">Purpose of the Processing.</span> Odessa will Process Customer Personal Data for purposes of providing the Odessa Solution as set out in the Agreement. </p>
             <p>5. <span class="sub-heading">Duration of the Processing.</span> Customer Personal Data will be Processed for the duration of the Agreement, subject to Section 9 of the DPA. </p>
-            <h3>SCHEDULE 2</h3>
+            <br>
+			<h3>SCHEDULE 2</h3>
             <h4>Security Overview</h4>
             <p>1. <span class="sub-heading-italic">Purpose.</span> Odessa is committed to maintaining customer trust. The purpose of this Security Overview is to describe the security program for the Odessa Solution. This Security Overview describes the minimum security standards that Odessa maintains in order to protect Customer Personal Data from unauthorized use, access, disclosure, theft, or manipulation. As security threats shift and evolve, Odessa continues to update its security program and strategy to help protect Customer Personal Data. Odessa reserves the right to update this Security Overview from time to time; provided, however, any update will not materially reduce the overall protections set forth in this Security Overview. Any capitalized term not defined in this Security Overview will have the meaning given in the Agreement or the DPA. </p>
             <p>2. <span class="sub-heading-italic">Odessa Solution Covered. </span>This Security Overview describes the architecture, administrative, technical and physical controls as well as third party security audit certifications that are applicable to the Odessa Solution. </p>
@@ -809,7 +813,7 @@
             <p>18. <span class="sub-heading-italic">Resilience and Odessa Solution Continuity. </span>Odessa infrastructure for the Odessa Solution uses a variety of tools and mechanisms to achieve high availability and resiliency. For the Odessa Solution, Odessa’s infrastructure spans multiple fault-independent Azure availability regions. For the Odessa Solution, there are manual or automatic capabilities to re-route and regenerate hosts within Odessa’s infrastructure. Odessa leverages specialized tools that monitor server performance, data, and traffic load capacity within each availability zone.. Odessa will also be notified immediately and have the ability to take prompt action to correct the cause(s) behind these issues. </p>
             <p>19. <span class="sub-heading-italic">Backups and Recovery.</span> Odessa performs regular backups of the Odessa Solution account information, message templates, message logs and other critical data using Azure cloud storage. Backup data are retained redundantly across availability zones and are encrypted in transit and at rest using 256-bit Advanced Encryption Standard (AES-256) server-side encryption. </p>
             <br>
-			<br>
+			
 			<h3>SCHEDULE 3</h3>
             <h4>Subprocessors</h4>
             <p>Microsoft Azure</p>
