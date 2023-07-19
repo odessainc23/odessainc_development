@@ -15,8 +15,8 @@ class Newsroom extends CI_Controller {
 
 
 		$res[ '2' ]->image = '/blog/wp-content/uploads/2021/09/Odessa-investor-THL.png';
-		$res[ '0' ]->image = '/blog/wp-content/uploads/2023/06/sgef-feature.png';
-		$res[ '1' ]->image = '/blog/wp-content/uploads/2023/06/training-feature.png';
+		$res[ '0' ]->image = '/blog/wp-content/uploads/2023/06/cover.svg';
+		$res[ '1' ]->image = '/blog/wp-content/uploads/2023/06/sgef-feature.png';
 
 		$data['meta_title']			= 'Get the latest updates about Odessa in the news.';
 		$data['meta_description']	= 'Odessa\'s market-leading asset finance software is at the heart of many notable businesses such as Dell Financial Services, Truist, and PNC Bank.';
