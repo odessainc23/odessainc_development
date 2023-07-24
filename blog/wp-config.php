@@ -39,16 +39,16 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 	define( 'DB_HOST', 'localhost' );
 } else if ( $_SERVER['HTTP_HOST'] == 'dev.odessainc.com' ) {
 	/** The name of the database for WordPress */
-	define( 'DB_NAME', 'odessa_dev' );
+	define( 'DB_NAME', 'dev_odessainc' );
 
 	/** MySQL database username */
-	define( 'DB_USER', 'odessa_dev' );
+	define( 'DB_USER', 'devdbuser' );
 
 	/** MySQL database password */
-	define( 'DB_PASSWORD', 'Y][HE5Uqg?Aa' );
+	define( 'DB_PASSWORD', 'DevU$Er@23' );
 
 	/** MySQL hostname */
-	define( 'DB_HOST', 'mysqlcluster17' );
+	define( 'DB_HOST', '127.0.0.1' );
 } else {
 	/** The name of the database for WordPress */
 	define( 'DB_NAME', 'odessa_main' );
