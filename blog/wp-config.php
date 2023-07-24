@@ -25,9 +25,9 @@ if (! empty($_SERVER['HTTPS'])) {
 }
 
 
-if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
+if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 	/** The name of the database for WordPress */
-	define( 'DB_NAME', 'odessain' );
+	define( 'DB_NAME', 'odessa' );
 
 	/** MySQL database username */
 	define( 'DB_USER', 'root' );
@@ -67,7 +67,7 @@ if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
 define( 'DB_CHARSET', 'utf8mb4' );
 define('WP_MEMORY_LIMIT', '256M');
 define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
-
+define('FS_METHOD', 'direct');
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 

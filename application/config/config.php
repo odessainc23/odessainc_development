@@ -24,10 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' ) {
+if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' || $_SERVER['HTTP_HOST'] == 'dev.odessainc.com') {
 	$config['base_url'] = 'https://'.$_SERVER['HTTP_HOST'].'/';
 } else {
-	$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/';
+	$config['base_url'] = 'http://localhost:8000';
 }
 /*
 |--------------------------------------------------------------------------

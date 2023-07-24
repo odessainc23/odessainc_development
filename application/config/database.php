@@ -73,13 +73,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
+if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 	$db['default'] = array(
 		'dsn'	=> '',
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'odessain',
+		'database' => 'odessa',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
@@ -95,31 +95,31 @@ if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) {
 		'failover' => array(),
 		'save_queries' => TRUE
 	);
-} else if ( $_SERVER['HTTP_HOST'] == 'dev.odessainc.com' || $_SERVER['HTTP_HOST'] == 'dev2.odessainc.com' ) {
+} else if ($_SERVER['HTTP_HOST'] == '10.72.1.21' || $_SERVER['HTTP_HOST'] == 'dev.odessainc.com') {
 	$db['default'] = array(
-		'dsn'	=> '',
-		'hostname' => 'mysqlcluster17',
-		'username' => 'odessa_dev',
-		'password' => 'Y][HE5Uqg?Aa',
-		'database' => 'odessa_dev',
+		'dsn'   => '',
+		'hostname' => '127.0.0.1',
+		'username' => 'devdbuser',
+		'password' => 'DevU$Er@23',
+		'database' => 'dev_odessainc',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
-		'db_debug' => (ENVIRONMENT !== 'production'),
+		'db_debug' => FALSE,
 		'cache_on' => FALSE,
 		'cachedir' => '',
 		'char_set' => 'utf8',
 		'dbcollat' => 'utf8_general_ci',
 		'swap_pre' => '',
-		'encrypt' => FALSE,
+		'encrypt' => ['ssl_verify' => FALSE],
 		'compress' => FALSE,
 		'stricton' => FALSE,
 		'failover' => array(),
 		'save_queries' => TRUE
 	);
-} else if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' ) {
+} else if ( $_SERVER['HTTP_HOST'] == 'https://www.odessainc.com' ) {
 	$db['default'] = array(
-		'dsn'	=> '',
+		'dsn'   => '',
 		'hostname' => '10.72.1.36',
 		'username' => 'odeadmin',
 		'password' => 'DeKJSyT%%123F',

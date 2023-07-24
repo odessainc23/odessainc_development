@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://'.$_SERVER['HTTP_HOST'].'/events/innovate/';
+if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' || $_SERVER['HTTP_HOST'] == 'dev.odessainc.com') {
+    $config['base_url'] = 'https://'.$_SERVER['HTTP_HOST'].'/events/innovate/';
+}else{
+    $config['base_url'] = 'http://localhost:8000/events/innovate/';
+}
 
 /*
 |--------------------------------------------------------------------------
