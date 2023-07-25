@@ -33,7 +33,10 @@ class EditProfileTag extends FormProcessor
     {
         do_action('ppress_edit_profile_before_parse_shortcode');
 
-        $id       = absint($atts['id']);
+        $id = absint($atts['id']);
+
+        do_action('ppress_edit_profile_form_before', $id, $atts);
+
         $redirect = isset($atts['redirect']) ? esc_url_raw($atts['redirect']) : '';
 
         $response = '';

@@ -26,6 +26,8 @@ class PasswordResetTag extends FormProcessor
     {
         $id = absint($atts['id']);
 
+        do_action('ppress_password_reset_form_before', $id, $atts);
+
         $password_reset_status = '';
 
         if (is_string($this->password_reset_form_error) && ! empty($this->password_reset_form_error)) {

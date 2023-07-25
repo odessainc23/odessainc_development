@@ -19,6 +19,8 @@ class LoginFormTag extends FormProcessor
 
         $id = absint($atts['id']);
 
+        do_action('ppress_login_form_before', $id, $atts);
+
         $login_error = '';
 
         if (is_string($this->login_form_error) && ! empty($this->login_form_error)) {
@@ -95,6 +97,8 @@ class LoginFormTag extends FormProcessor
         $login_structure .= "<input type='hidden' name='login_form_id' value='$id'>";
         $login_structure .= '<input type="hidden" name="pp_current_url" value="' . esc_attr(ppress_get_current_url_query_string()) . '">';
         $login_structure .= '<input type="hidden" name="login_referrer_page" value="' . esc_attr($referrer_url) . '">';
+
+        $login_structure = apply_filters('ppress_login_form_field_structure', $login_structure, $id);
 
         $form_tag = "<form data-pp-form-submit=\"login\" id='pp_login_$id' method=\"post\"" . apply_filters('ppress_login_form_tag', '', $id) . ">";
 

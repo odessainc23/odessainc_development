@@ -203,7 +203,7 @@ class PasswordReset
         // remove the username/email address after password reset ish is successful.
         unset($_POST['user_login']);
 
-        $success_msg = ! empty($success_message) ? $success_message : apply_filters('ppress_default_password_reset_text', '<h4>' . esc_html__('Check your email for further instruction.', 'wp-user-avatar') . '</h4>');
+        $success_msg = ! empty($success_message) ? $success_message : apply_filters('ppress_default_password_reset_text', '<h4>' . esc_html__('Check your email for further instructions.', 'wp-user-avatar') . '</h4>');
 
         if (self::is_ajax()) return [$success_msg];
 

@@ -168,6 +168,8 @@ class ElementorRestriction
 
         if ($visibility == 'loggedout' && ! is_user_logged_in()) return true;
 
+        if ($visibility == 'loggedout' && is_user_logged_in()) return false;
+
         // if we got here, rule is for logged in users. return false of not logged in.
         if ( ! is_user_logged_in()) return false;
 

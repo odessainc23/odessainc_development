@@ -4,6 +4,7 @@ namespace ProfilePress\Core\Membership\Models\Customer;
 
 use ProfilePress\Core\Membership\CheckoutFields;
 use ProfilePress\Core\Membership\Models\AbstractModel;
+use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\ModelInterface;
 use ProfilePress\Core\Membership\Models\Order\OrderEntity as OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
@@ -220,15 +221,16 @@ class CustomerEntity extends AbstractModel implements ModelInterface
             }
         }
 
-        return $result;
+        return apply_filters('ppress_customer_active_subscriptions', $result, $this);
     }
 
     /**
-     * @param $plan_id
+     * @param null $plan_id
+     * @param bool $return_sub set to true to return the act
      *
-     * @return bool
+     * @return bool|SubscriptionEntity
      */
-    public function has_active_subscription($plan_id = null)
+    public function has_active_subscription($plan_id = null, $return_sub = false)
     {
         $active_subs = $this->get_active_subscriptions();
 
@@ -237,6 +239,48 @@ class CustomerEntity extends AbstractModel implements ModelInterface
         $plan_id = (int)$plan_id;
 
         foreach ($active_subs as $sub) {
+
+            if ((int)$sub->plan_id === $plan_id) {
+                return $return_sub === true ? $sub : true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * @param int $group_id
+     *
+     * @return bool
+     */
+    public function has_active_group_subscription($group_id)
+    {
+        $plans = GroupFactory::fromId($group_id)->get_plan_ids();
+
+        if (is_array($plans) && ! empty($plans)) {
+            foreach ($plans as $plan_id) {
+                if ($this->has_active_subscription($plan_id)) return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if customer has any subscription regardless of the subscription status.
+     *
+     * @param $plan_id
+     * @param array $status
+     *
+     * @return bool
+     */
+    public function has_any_status_subscription($plan_id, $status = [])
+    {
+        $subs = $this->get_subscriptions($status);
+
+        $plan_id = (int)$plan_id;
+
+        foreach ($subs as $sub) {
 
             if ((int)$sub->plan_id === $plan_id) return true;
         }

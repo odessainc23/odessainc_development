@@ -77,7 +77,9 @@ class UserAvatar
 
             // First checking custom avatar.
             if ($wpua_disable_gravatar == '1') {
-                $url = $wpua_functions->wpua_get_default_avatar_url($size);
+                if (is_object($wpua_functions) && method_exists($wpua_functions, 'wpua_get_default_avatar_url')) {
+                    $url = $wpua_functions->wpua_get_default_avatar_url($size);
+                }
             } else {
 
                 $has_valid_url = false;

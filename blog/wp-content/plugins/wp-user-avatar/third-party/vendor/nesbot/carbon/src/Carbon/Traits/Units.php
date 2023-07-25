@@ -16,6 +16,7 @@ use ProfilePressVendor\Carbon\CarbonInterval;
 use ProfilePressVendor\Carbon\Exceptions\UnitException;
 use Closure;
 use DateInterval;
+use ProfilePressVendor\DateMalformedStringException;
 use ReturnTypeWillChange;
 /**
  * Trait Units.
@@ -239,11 +240,17 @@ trait Units
             $unit = 'second';
             $value = $second;
         }
-        $date = $date->modify("{$value} {$unit}");
-        if (isset($timeString)) {
-            $date = $date->setTimeFromTimeString($timeString);
-        } elseif (isset($canOverflow, $day) && $canOverflow && $day !== $date->day) {
-            $date = $date->modify('last day of previous month');
+        try {
+            $date = $date->modify("{$value} {$unit}");
+            if (isset($timeString)) {
+                $date = $date->setTimeFromTimeString($timeString);
+            } elseif (isset($canOverflow, $day) && $canOverflow && $day !== $date->day) {
+                $date = $date->modify('last day of previous month');
+            }
+        } catch (DateMalformedStringException $ignoredException) {
+            // @codeCoverageIgnore
+            $date = null;
+            // @codeCoverageIgnore
         }
         if (!$date) {
             throw new UnitException('Unable to add unit ' . \var_export($originalArgs, \true));

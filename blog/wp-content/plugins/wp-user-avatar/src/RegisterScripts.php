@@ -88,6 +88,9 @@ class RegisterScripts
         if (ppress_is_my_account_page()) {
             $frontend_dependencies[] = 'wp-util';
         }
+
+        $frontend_dependencies = apply_filters('ppress_public_js_dependencies', $frontend_dependencies);
+
         wp_enqueue_script('ppress-frontend-script', PPRESS_ASSETS_URL . "/js/frontend.min.js", $frontend_dependencies, PPRESS_VERSION_NUMBER, true);
         wp_localize_script('ppress-frontend-script', 'pp_ajax_form', [
             'ajaxurl'                 => admin_url('admin-ajax.php'),

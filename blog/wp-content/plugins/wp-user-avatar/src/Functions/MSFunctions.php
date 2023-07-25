@@ -567,7 +567,9 @@ function ppress_is_test_mode()
 
 function ppress_get_payment_mode()
 {
-    return ppress_is_test_mode() ? OrderMode::TEST : OrderMode::LIVE;
+    return ppress_cache_transform('ppress_get_payment_mode', function () {
+        return ppress_is_test_mode() ? OrderMode::TEST : OrderMode::LIVE;
+    });
 }
 
 /**

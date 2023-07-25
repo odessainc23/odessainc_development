@@ -1258,9 +1258,7 @@ class DragDropBuilder
                         <# } else { #>
                         <# _.each(data.fields, function(field, key) {#>
                         <li class="pp-draggable-field">
-                            <a href="#" class="button" data-field-category="{{{data.fieldsBlockType}}}" data-field-type="{{{ key }}}">{{{
-                                    field
-                                    .fieldTitle}}}</a>
+                            <a href="#" class="button" data-field-category="{{{data.fieldsBlockType}}}" data-field-type="{{{ key }}}">{{{field.fieldTitle}}}</a>
                         </li>
                         <# }); #>
                         <# } #>

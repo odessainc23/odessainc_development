@@ -6,7 +6,6 @@ use ProfilePress\Core\Admin\SettingsPages\AbstractSettingsPage;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods as PaymentGateways;
 use ProfilePress\Custom_Settings_Page_Api;
 
-/** @todo make payment method drag and drop to work */
 class PaymentMethods
 {
     public function __construct()

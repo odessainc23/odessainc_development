@@ -62,6 +62,8 @@ class AdminNotices
         $this->review_plugin_notice();
 
         $this->wp_user_avatar_now_ppress_notice();
+
+        $this->addons_promo_notices();
     }
 
     public function act_on_request()
@@ -182,6 +184,36 @@ class AdminNotices
         echo '<div data-dismissible="wp_user_avatar_now_ppress_notice-forever" class="update-nag notice notice-warning is-dismissible">';
         echo "<p>$notice</p>";
         echo '</div>';
+    }
+
+    public function addons_promo_notices()
+    {
+        $notices = [
+            'learndash' => [
+                'message'   => esc_html__('Did you know that you can sell access to LearnDash courses and groups and enroll users after registration?', 'wp-user-avatar'),
+                'url'       => 'https://profilepress.com/article/setting-up-learndash-addon/',
+                'condition' => class_exists('\SFWD_LMS')
+            ]
+        ];
+
+        foreach ($notices as $notice_id => $notice) {
+
+            if (true === $notice['condition']) {
+
+                $notice_pand_key = sprintf('ppress_addons_promo_%s_notice-forever', $notice_id);
+
+                $url = $notice['url'] . '?utm_source=wp_dashboard&utm_medium=addons-promo&utm_campaign=admin-notice';
+
+                if (PAnD::is_admin_notice_active($notice_pand_key)) {
+
+                    echo '<div data-dismissible="' . $notice_pand_key . '" class="notice notice-info is-dismissible">';
+                    printf(
+                        '<p>%s <a target="_blank" href="%s">%s</a></p>',
+                        $notice['message'], $url, esc_html__('Learn more', 'wp-user-avatar'));
+                    echo '</div>';
+                }
+            }
+        }
     }
 
     public function create_plugin_pages()

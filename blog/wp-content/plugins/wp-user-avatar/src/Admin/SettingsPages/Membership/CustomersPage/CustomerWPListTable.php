@@ -147,11 +147,7 @@ class CustomerWPListTable extends \WP_List_Table
             );
         }, $subs);
 
-        return sprintf(
-            '<a target="_blank" href="%s">%s</a>',
-            add_query_arg(['by_ci' => $customer->id], PPRESS_MEMBERSHIP_SUBSCRIPTIONS_SETTINGS_PAGE),
-            implode(', ', $subs)
-        );
+        return sprintf('%s', implode(', ', $subs));
     }
 
     public function get_views()

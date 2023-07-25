@@ -3,6 +3,7 @@
 namespace ProfilePress\Core\Classes;
 
 use ProfilePress\Core\Base;
+use ProfilePress\Core\Classes\FormRepository as FR;
 use ProfilePress\Core\Themes\DragDrop\AbstractTheme;
 
 class FormRepository
@@ -556,6 +557,21 @@ class FormRepository
         return json_encode($field_settings);
     }
 
+    public static function get_dnd_metabox_setting($key, $form_id, $form_type, $default = '')
+    {
+        static $cache = [];
+
+        $cache_key = sprintf('%s:%s', $form_id, $form_type);
+
+        if ( ! isset($cache[$cache_key])) {
+
+            $metabox_settings = FR::get_form_meta($form_id, $form_type, FR::METABOX_FORM_BUILDER_SETTINGS);
+
+            $cache[$cache_key] = empty($metabox_settings) ? [] : $metabox_settings;
+        }
+
+        return isset($cache[$cache_key][$key]) ? $cache[$cache_key][$key] : $default;
+    }
 
     public static function dnd_class_instance($id, $form_type)
     {

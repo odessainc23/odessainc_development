@@ -2,7 +2,6 @@
 
 namespace ProfilePress\Core\Classes;
 
-use ProfilePress\Core\Membership\CheckoutFields;
 use ProfilePress\Core\ShortcodeParser\Builder\FieldsShortcodeCallback;
 
 trait WPProfileFieldParserTrait
@@ -53,7 +52,7 @@ trait WPProfileFieldParserTrait
                     <?php $countries = ppress_array_of_world_countries(); ?>
                     <?php $value = esc_attr(get_the_author_meta($field_key, $user->ID)); ?>
                     <select name="<?= $field_key; ?>">
-                        <option value=""><?php esc_html__('Select a country&hellip;', 'profilepress-pro'); ?></option>
+                        <option value=""><?php esc_html__('Select a country&hellip;', 'wp-user-avatar'); ?></option>
                         <?php foreach ($countries as $ckey => $cvalue) : ?>
                             <option value="<?= $ckey; ?>" <?php selected($value, $ckey); ?>><?= $cvalue; ?> </option>';
                         <?php endforeach; ?>

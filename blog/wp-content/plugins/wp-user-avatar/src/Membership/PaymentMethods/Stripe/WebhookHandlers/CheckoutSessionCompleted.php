@@ -13,6 +13,11 @@ class CheckoutSessionCompleted implements WebhookHandlerInterface
     {
         if ( ! in_array($event_data['mode'], ['subscription', 'payment'], true)) return;
 
+        /** ensures checkout is paid for because of delayed payment methods
+         * @see https://stripe.com/docs/payments/checkout/fulfill-orders#delayed-notification
+         */
+        if ($event_data['payment_status'] != 'paid') return;
+
         $order = OrderFactory::fromOrderKey($event_data['client_reference_id']);
 
         $subscription = SubscriptionFactory::fromId($order->subscription_id);
@@ -30,7 +35,9 @@ class CheckoutSessionCompleted implements WebhookHandlerInterface
             $transaction_id = $event_data['payment_intent'];
         }
 
-        $order->complete_order($transaction_id);
+        if ($order->exists() && ! $order->is_completed()) {
+            $order->complete_order($transaction_id);
+        }
 
         if ( ! $subscription->is_active()) {
 

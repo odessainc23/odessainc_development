@@ -55,7 +55,7 @@ class ProfileCustomFields
 
             $billing_fields = CheckoutFields::standard_billing_fields();
 
-            echo '<h3>' . apply_filters('ppress_billing_details_wp_profile_header', esc_html__('Billing Address (ProfilePress)', 'profilepress-pro')) . '</h3>';
+            echo '<h3>' . apply_filters('ppress_billing_details_wp_profile_header', esc_html__('Billing Address (ProfilePress)', 'wp-user-avatar')) . '</h3>';
 
             echo '<table class="form-table">';
 

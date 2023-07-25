@@ -115,7 +115,7 @@ abstract class AbstractTheme implements ThemeInterface
                 break;
             case FR::PASSWORD_RESET_TYPE:
                 $button_text     = esc_html__('Reset Password', 'wp-user-avatar');
-                $success_message = esc_html__('Check your email for further instruction.', 'wp-user-avatar');
+                $success_message = esc_html__('Check your email for further instructions.', 'wp-user-avatar');
                 break;
         }
 

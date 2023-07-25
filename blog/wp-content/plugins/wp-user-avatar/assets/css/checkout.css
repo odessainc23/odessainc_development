@@ -128,7 +128,7 @@
     display: flex;
     flex-wrap: nowrap;
     padding: 5px 0;
-    font-size: 16px;
+    font-size: var(--ppress-body-fs);
 }
 
 .ppress-checkout__form .checkout_order_summary__fee_structure__item dt {
@@ -608,14 +608,16 @@
     }
 }
 
-.ppress-checkout__form .ppress-checkout-alert {
+.ppress-checkout__form .ppress-checkout-alert,
+.ppress-checkout__form .ppress-alert {
     width: 100%;
     padding: 12px 16px;
     border-radius: 6px;
     margin: 10px 0;
 }
 
-.ppress-checkout__form .ppress-checkout-alert ul {
+.ppress-checkout__form .ppress-checkout-alert ul,
+.ppress-checkout__form .ppress-alert ul {
     margin: 0;
     margin-left: 16px;
     padding: 0;
@@ -623,8 +625,11 @@
 }
 
 .ppress-checkout__form .ppress-checkout-alert li,
+.ppress-checkout__form .ppress-alert li,
 .ppress-checkout__form .ppress-checkout-alert p,
-.ppress-checkout__form .ppress-checkout-alert li strong {
+.ppress-checkout__form .ppress-alert p,
+.ppress-checkout__form .ppress-checkout-alert li strong,
+.ppress-checkout__form .ppress-alert li strong {
     font-size: var(--ppress-body-fs);
     font-weight: normal;
     margin: 0 !important;
@@ -632,33 +637,95 @@
     line-height: 22px;
 }
 
-.ppress-checkout__form .ppress-checkout-alert li strong {
+.ppress-checkout__form .ppress-checkout-alert li strong,
+.ppress-checkout__form .ppress-alert li strong {
     font-weight: bold;
 }
 
-.ppress-checkout__form .ppress-checkout-alert.ppress-error {
+.ppress-checkout__form .ppress-checkout-alert.ppress-error,
+.ppress-checkout__form .ppress-alert.ppress-error {
     background-color: rgb(254, 242, 242);
     color: rgb(185, 28, 28);
 }
 
-.ppress-checkout__form .ppress-checkout-alert.ppress-success {
+.ppress-checkout__form .ppress-checkout-alert.ppress-success,
+.ppress-checkout__form .ppress-alert.ppress-success {
     background-color: rgb(236, 253, 245);
     color: rgb(6, 95, 70);
 }
 
-.ppress-checkout-alert.ppress-warning {
+.ppress-checkout-alert.ppress-warning,
+.ppress-alert.ppress-warning {
     border-left: 4px solid rgb(250 204 21);
     border-radius: 0;
     background-color: rgb(254 252 232);
     color: rgb(161 98 7);
 }
 
-.ppress-checkout__form .ppress-checkout-alert p {
+.ppress-checkout__form .ppress-checkout-alert p,
+.ppress-checkout__form .ppress-alert p {
     font-weight: 500;
 }
 
 .ppress-checkout__form .ppress-checkout_order_summary #ppress-checkout-coupon-code-wrap {
     display: none;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector_label {
+    display: flex !important;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__span_wrap {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__span {
+    display: flex;
+    font-size: 1rem;
+    line-height: 20px;
+    flex-direction: column;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__title {
+    font-weight: 500;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__price_wrap {
+    display: flex;
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 20px;
+    margin-left: auto;
+    order: 2;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__price_amount {
+    font-weight: 500;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector__price_duration {
+    margin-left: 4px;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector_label:not(:first-child) {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector_label input[type=radio] {
+    height: auto !important;
+}
+
+.ppress-main-checkout-form__block__fieldset .ppress-main-checkout-form__block__group_selector_label:has(input[type=radio]:checked) {
+    border-width: 2.5px;
 }
 
 /* Responsive styling */

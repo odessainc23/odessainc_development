@@ -7,6 +7,23 @@ class CheckoutSessionData
     const COUPON_CODE = 'ppress_checkout_coupon_code';
     const TAX_RATE = 'ppress_checkout_tax_rate';
     const EU_VAT_NUMBER = 'ppress_checkout_eu_vat_number';
+    const ORDER_TYPE = 'ppress_checkout_order_type';
+
+    /**
+     * @param $plan_id
+     *
+     * @return false|string
+     */
+    public static function get_order_type($plan_id)
+    {
+        $val = ppress_session()->get(CheckoutSessionData::ORDER_TYPE);
+
+        if (isset($val['plan_id']) && $plan_id == $val['plan_id']) {
+            return sanitize_text_field($val['order_type']);
+        }
+
+        return false;
+    }
 
     /**
      * @param $plan_id

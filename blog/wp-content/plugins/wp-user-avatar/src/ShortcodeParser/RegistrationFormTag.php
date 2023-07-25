@@ -17,7 +17,10 @@ class RegistrationFormTag extends FormProcessor
     {
         $atts = shortcode_atts(['id' => '', 'redirect' => '', 'no-login-redirect' => ''], $atts);
 
-        $id                     = absint($atts['id']);
+        $id = absint($atts['id']);
+
+        do_action('ppress_registration_form_before', $id, $atts);
+
         $redirect               = sanitize_text_field($atts['redirect']);
         $no_login_redirect      = sanitize_text_field($atts['no-login-redirect']);
         $registration_structure = self::get_registration_structure($id, $redirect, $no_login_redirect);
@@ -102,6 +105,8 @@ class RegistrationFormTag extends FormProcessor
         $registration_structure .= "<input type='hidden' name='signup_form_id' value='$id'>";
         $registration_structure .= sprintf("<input type='hidden' name='signup_referrer_page' value='%s'>", ! empty($referrer_url) ? $referrer_url : '');
 
+
+        $registration_structure = apply_filters('ppress_registration_form_field_structure', $registration_structure, $id);
         $registration_structure = apply_filters('ppress_form_field_structure', $registration_structure, $id);
 
         return $form_tag . $registration_structure . '</form>';

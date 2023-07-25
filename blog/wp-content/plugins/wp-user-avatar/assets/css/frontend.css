@@ -2572,3 +2572,16 @@ html .select2.select2-container .select2-selection.select2-selection--multiple i
 p:has(+ .ppress-paywall-message-wrap) {
     margin-bottom: 0;
 }
+
+/* Restricted template CSS */
+.ppress-main-container {
+    width: 100%;
+}
+
+.ppress-container-div {
+    margin: 3em 0;
+    padding: 3em;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}

@@ -476,6 +476,9 @@
 
         $('.wp-csa-select2').select2();
 
+        $('.pp-color-field').wpColorPicker();
+        $('.ppselect2').select2();
+
         var tmpl = wp.template('ppress-plan-summary'),
             cache = $('.ppview .billing_details .ppress-plan-billing-details'),
             billing_data;

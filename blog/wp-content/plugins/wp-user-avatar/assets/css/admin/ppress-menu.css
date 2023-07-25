@@ -27,3 +27,9 @@
 #adminmenu li[class*="ppress-"] ul.wp-submenu-wrap li {
     clear: both
 }
+
+.ppress-menu-new-indicator {
+    color: #f18200;
+    vertical-align: super;
+    font-size: 9px
+}

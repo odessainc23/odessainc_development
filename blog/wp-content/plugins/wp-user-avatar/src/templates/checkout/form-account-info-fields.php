@@ -8,6 +8,8 @@ foreach (CheckoutFields::account_info_fields() as $field_key => $field) {
 
     if (is_user_logged_in() && (in_array($field_key, $skip_fields) || ppress_var($field, 'logged_in_hide') == 'true')) continue;
 
+    if (apply_filters('ppress_checkout_field_disable_' . $field_key, false)) continue;
+
     $field_type  = ppress_var($field, 'field_type', '');
     $is_required = ppress_var($field, 'required') == 'true';
     $width_class = $field['width'] == 'full' ? '' : $field['width'];

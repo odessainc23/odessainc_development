@@ -2,9 +2,11 @@
 
 namespace ProfilePress\Core\Membership\Services;
 
+use ProfilePress\Core\Classes\PROFILEPRESS_sql;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionBillingFrequency;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
 use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 use ProfilePress\Core\ShortcodeParser\MyAccount\MyAccountTag;
@@ -51,7 +53,7 @@ class SubscriptionService
             }
         }
 
-        return $period->toDateTimeString();
+        return apply_filters('ppress_plan_expiration_datetime', $period->toDateTimeString(), $plan_id);
     }
 
     /**
@@ -61,9 +63,19 @@ class SubscriptionService
      */
     public function delete_subscription($sub_id)
     {
-        SubscriptionFactory::fromId($sub_id)->remove_plan_role_from_customer();
+        $sub = SubscriptionFactory::fromId($sub_id);
 
-        return SubscriptionRepository::init()->delete($sub_id);
+        $sub->remove_plan_role_from_customer();
+
+        $result = SubscriptionRepository::init()->delete($sub_id);
+
+        if ($result) {
+            PROFILEPRESS_sql::delete_meta_data_by_flag($sub->get_meta_flag_id());
+        }
+
+        do_action('ppress_subscription_deleted', $sub_id, $sub);
+
+        return $result;
     }
 
     public function frontend_view_sub_url($subscription_id)

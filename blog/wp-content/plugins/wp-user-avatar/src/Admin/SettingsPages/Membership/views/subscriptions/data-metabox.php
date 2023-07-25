@@ -1,6 +1,7 @@
 <?php
 
 use ProfilePress\Core\Admin\SettingsPages\Membership\CustomersPage\CustomerWPListTable;
+use ProfilePress\Core\Admin\SettingsPages\Membership\SubscriptionsPage\SubscriptionWPListTable;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
@@ -38,6 +39,11 @@ if ( ! empty($profile_id)) {
     $payment_method_string .= ' (' . wp_kses_post($profile_id) . ')';
 }
 
+$plan_group_id = $subscription_data->get_plan()->get_group_id();
+
+$upgraded_from = $subscription_data->get_meta('_upgraded_from_sub_id');
+$upgraded_to   = $subscription_data->get_meta('_upgraded_to_sub_id');
+
 echo '<div class="ppress-membership-subscription-details">';
 
 printf('<h2 class="ppress-metabox-data-heading">' . esc_html__('Subscription #%s', 'wp-user-avatar') . '</h2>', $subscription_id);
@@ -60,6 +66,28 @@ if ( ! empty($payment_method_string)) {
                 <strong><?php _e('Terms:', 'wp-user-avatar'); ?></strong>
                 <?php echo $subscription_data->get_subscription_terms(); ?>
             </p>
+
+            <?php if ( ! empty($upgraded_from)): ?>
+                <p class="mb-form-field sub_terms">
+                    <?php printf(
+                        '<strong>%s:</strong> <a href="%s">#%s</a>',
+                        __('Upgraded from', 'wp-user-avatar'),
+                        SubscriptionWPListTable::view_edit_subscription_url($upgraded_from),
+                        $upgraded_from
+                    ); ?>
+                </p>
+            <?php endif; ?>
+
+            <?php if ( ! empty($upgraded_to)): ?>
+                <p class="mb-form-field sub_terms">
+                    <?php printf(
+                        '<strong>%s:</strong> <a href="%s">#%s</a>',
+                        __('Upgraded to', 'wp-user-avatar'),
+                        SubscriptionWPListTable::view_edit_subscription_url($upgraded_to),
+                        $upgraded_to
+                    ); ?>
+                </p>
+            <?php endif; ?>
 
             <?php if ($subscription_data->get_total_payments() > 0) : ?>
                 <p class="mb-form-field completed_payments">
@@ -142,6 +170,13 @@ if ( ! empty($payment_method_string)) {
                 <label for="sub_profile_id"><?php printf(esc_html__('%sSubscription ID:', 'wp-user-avatar'), $payment_method_title . ' '); ?></label>
                 <input id="sub_profile_id" type="text" name="sub_profile_id" value="<?= $subscription_data->get_profile_id() ?>">
             </p>
+
+            <?php if ( ! $subscription_data->is_pending() && is_int($plan_group_id)) : ?>
+                <p class="mb-form-field change_plan_url">
+                    <label for="change_plan_url"><?php esc_html_e('Change Plan URL:', 'wp-user-avatar'); ?></label>
+                    <input id="change_plan_url" type="text" name="change_plan_url" value="<?= ppress_plan_checkout_url($subscription_id, true) ?>" readonly>
+                </p>
+            <?php endif; ?>
         </div>
 
     </div>

@@ -9,7 +9,7 @@ use ProfilePress\Core\Classes\Installer\PPress_Install_Skin;
 
 class MailOptin
 {
-    const SLUG = 'pp-mailoptin';
+    const SLUG = 'ppress-mailoptin';
 
     private $config = array(
         'lite_plugin'        => 'mailoptin/mailoptin.php',
@@ -67,7 +67,7 @@ class MailOptin
         }
 
         // Set the current screen to avoid undefined notices.
-        set_current_screen('profilepress_page_pp-mailoptin');
+        set_current_screen('profilepress_page_ppress-mailoptin');
 
         // Prepare variables.
         $url = esc_url_raw(

@@ -42,7 +42,7 @@ $total_pages = ceil(absint($total_subs) / absint($per_page));
                 <?php foreach ($subs as $sub) :
                     $plan = ppress_get_plan($sub->plan_id);
                     $parent_order = OrderFactory::fromId($sub->parent_order_id);
-                    $view_order_url = add_query_arg(['sub_id' => $sub->id], MyAccountTag::get_endpoint_url('list-subscriptions'));
+                    $view_sub_url = add_query_arg(['sub_id' => $sub->id], MyAccountTag::get_endpoint_url('list-subscriptions'));
                     ?>
                     <div class="ppress-my-account-order-sub-wrap">
                         <div class="ppress-my-account-order-sub-header-wrap">
@@ -67,7 +67,7 @@ $total_pages = ceil(absint($total_subs) / absint($per_page));
                                 </div>
                             </dl>
                             <div class="ppress-my-account-order-sub-header--actions">
-                                <a href="<?php echo esc_url($view_order_url) ?>" class="ppress-my-account-order-sub-header--actions--link">
+                                <a href="<?php echo esc_url($view_sub_url) ?>" class="ppress-my-account-order-sub-header--actions--link">
                                     <span><?= esc_html__('View Subscription', 'wp-user-avatar') ?></span>
                                 </a>
                             </div>

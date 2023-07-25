@@ -19,7 +19,7 @@ function Frontend() {
             $(".pp_wc_login").slideToggle();
         });
 
-        $(window).on('load resize', function () {
+        $(window).on('load resize ppress_updated_checkout', function () {
             _this.defaultUserProfileResponsive();
         });
 

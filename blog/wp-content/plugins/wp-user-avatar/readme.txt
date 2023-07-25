@@ -4,8 +4,8 @@ Donate link: https://profilepress.com/pricing/
 Tags: membership, ecommerce, user registration, user profile, membership plugin, members, stripe, paypal, razorpay, mollie, paystack, login form, login, registration, password reset, member, users, profile, front-end profile, avatar
 Requires at least: 5.3
 Requires PHP: 7.2.0
-Tested up to: 6.1
-Stable tag: 4.7.0
+Tested up to: 6.2
+Stable tag: 4.12.0
 License: GPLv2 or later
 
 Paid membership plugin: accept payments, sell subscriptions & digital downloads, paywall & restrict content, create user registration form & login form, user profile & member directory.
@@ -36,7 +36,9 @@ ProfilePress can prevent spam registrations and abuse by [blocking user registra
 
 = Multiple Payment Processors =
 
-Easily connect to Stripe (supports Stripe hosted checkout page and on-site payment form), PayPal, RazorPay, Paystack & Mollie to collect payments with our membership plugin. We are working on adding additional gateways (Square, PayStack, Mercado Pago) in the future.
+Easily connect to Stripe (supports Stripe-hosted checkout page and on-site payment form), PayPal, RazorPay, Paystack & Mollie to collect payments with our membership plugin. We are working on adding additional gateways in the future.
+
+Because we use the Stripe payment element, our integration gives your membership site visitors the option to pay using Apple Pay, Google Pay, Microsoft Pay as well as Stripe Link, ACH Direct Debit, Alipay, Bancontact, Bank transfers, BLIK, EPS, FPX, Giropay, iDEAL, Sofort, P24, Affirm, Afterpay, Clearpay, Klarna, CashApp Pay, GrabPay, WeChat Pay, SEPA debit, Bacs Direct Debit and more.
 
 = Powerful Payment Options =
 
@@ -98,6 +100,10 @@ We provide a complete reports section where you can Keep track of your earnings,
 
 Customize the email templates for each email that can be sent to users and administrators. You also have the flexibility of changing the sender name and email address and activating and deactivating the email type that can be sent.
 
+= Tutor LMS Integration =
+
+Our [Tutor LMS integration](https://profilepress.com/addons/tutor-lms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) lets you sell access to Tutor LMS courses, enroll users after registration to specific courses and create custom student and instructor WordPress registration forms.
+
 ### Powerful Premium Features
 
 Extend the capabilities of ProfilePress with our powerful addons and remove the additional 2% Stripe processing fee.
@@ -115,12 +121,13 @@ Extend the capabilities of ProfilePress with our powerful addons and remove the 
 * [Two-Factor Authentication (2FA)](https://profilepress.com/addons/2fa/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Adds an additional layer of security to users accounts by requiring more than just a password to log in.
 * [Passwordless Login](https://profilepress.com/addons/passwordless-login/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Let users log in to your site via a one-time URL sent to their email addresses.
 * [WooCommerce](https://profilepress.com/addons/woocommerce/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Manage WooCommerce billing and shipping fields, replace WooCommerce login and edit account forms in checkout and "My Account" pages with that of ProfilePress.
+* [LearnDash](https://profilepress.com/addons/learndash/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to LearnDash courses and groups, enroll users after signup via a custom LearnDash registration form, and let users view their enrolled courses on the My Account page.
 * [Google reCAPTCHA](https://profilepress.com/addons/recaptcha/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Protect your user registration, login, checkout and password reset forms against spam and bot attacks.
 * [Site Creation](https://profilepress.com/addons/site-creation/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Allow users to create new sites on a multisite network via a user registration form powered by ProfilePress.
 * [Mailchimp](https://profilepress.com/addons/mailchimp/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Subscribe members to your Mailchimp audiences after they register, made a purchase and payment, subscribe to membership plans and automatically sync profile changes with Mailchimp.
 * [Campaign Monitor](https://profilepress.com/addons/campaign-monitor/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Subscribe members to your Campaign Monitor lists when they register, subscribe to membership plans via checkout form, and automatically sync profile changes with Campaign Monitor.
-* [BuddyPress Profile Sync](https://profilepress.com/addons/buddypress-profile-sync/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  This addon provides 2-way synchronization between WordPress profile fields and BuddyPress extended profile.
-* [Join BuddyPress Groups](https://profilepress.com/addons/join-buddypress-groups/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Let users select the BuddyPress groups to join during registration.
+* [BuddyBoss/BuddyPress Profile Sync](https://profilepress.com/addons/buddypress-profile-sync/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  This addon provides 2-way synchronization between WordPress profile fields and BuddyBoss/BuddyPress extended profile.
+* [Join BuddyPress Groups](https://profilepress.com/addons/join-buddypress-groups/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Let users select the BuddyBoss/BuddyPress groups to join during registration.
 * [Akismet](https://profilepress.com/addons/akismet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Block spam and bot user registrations with Akismet and keep your membership site safe and secured.
 * [Polylang](https://profilepress.com/addons/polylang/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Build multilingual login, registration, password reset, and edit profile forms.
 
@@ -133,7 +140,7 @@ If you're looking to build a business out of your membership site by creating pa
 If you like this plugin, then consider checking out our other products:
 
 * <a href="https://mailoptin.io/">MailOptin</a> - Create popups and optin forms for capturing email newsletter subscribers. Integrates with Mailchimp, ConvertKit, Infusionsoft, ActiveCampaign, Campaign Monitor, Constant Contact & more.
-* <a href="https://loginwp.com/">LoginWP</a> - Redirect users to different URLs after they log in, log out and register based on different conditions including user role, capability and more.
+* <a href="https://fusewp.com/">FuseWP</a> - Connect wordPress to marketing platforms and sync users to your email list.
 
 == Installation ==
 
@@ -178,23 +185,18 @@ Any file type can be sold using ProfilePress ecommerce and membership plugin, in
 
 == Changelog ==
 
-= Paid Membership, Ecommerce & User Registration 4.7.0 =
-* Pro: [Paystack addon](https://profilepress.com/addons/paystack/?ref=changelog).
-* Fixed bug where subscription was still active even when order was refunded.
-* Fixed bug with checkout not working when Password reset is not allowed for user.
+= Paid Membership, Ecommerce & User Registration 4.12.0 =
+* Added setting for [disabling subscription auto-renewals](https://profilepress.com/article/auto-renewal-settings/).
+* Extended Tutor LMS addon to include [creating custom student](https://profilepress.com/article/custom-tutor-lms-student-registration-form/) and [instructor registration forms](https://profilepress.com/article/custom-tutor-lms-instructor-registration-form/).
+* Added ppress_stripe_disable_maybe_update_webhook filter to disable automatic stripe webhook regeneration.
+* Fixed form preview bug when using a block theme.
 
-= Paid Membership, Ecommerce & User Registration 4.6.0 =
-* Added [RazorPay addon](https://profilepress.com/addons/razorPay/?ref=changelog).
-* Added support for 'url' config when adding myaccount page menu tabs.
-* Added color fields to settings API.
-* Fixed bug where admin couldn't delete other users cover photo in the admin dashboard.
-* Fixed incorrect currency in order listing display.
-
-= Paid Membership, Ecommerce & User Registration 4.5.5 =
-* Fixed PHP Warning: Undefined array key "user_login".
-* Added missing text domain to strings.
-* Bumped Stripe API version to latest.
-* Fixed XSS in shortcode & content protection admin page.
-* Added settings button to [addons page](https://profilepress.com/addons/?ref=changelog).
+= Paid Membership, Ecommerce & User Registration 4.11.0 =
+* Added [Tutor LMS](https://profilepress.com/addons/tutor-lms/) integration.
+* Added [Stripe Tax](https://profilepress.com/article/setting-up-stripe/#Stripe_Tax_Support) support.
+* Security Fix: DOM-based XSS on registration form.
+* Fixed Stripe bug where webhook details are missing after disconnection and reconnection.
+* Fixed Stripe bug where billing details not shown when tax is enabled and is offsite checkout.
+* Improved PHP 8 compatibility.
 
 See the [changelog file](https://plugins.svn.wordpress.org/wp-user-avatar/trunk/changelog.txt) for full change log information.

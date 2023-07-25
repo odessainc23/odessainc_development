@@ -65,7 +65,7 @@ class PROFILEPRESS_sql
 
         $table = Base::meta_data_db_table();
 
-        $sql = "SELECT meta_value FROM $table WHERE id= %d AND meta_key = %s";
+        $sql = "SELECT meta_value FROM $table WHERE id = %d AND meta_key = %s";
 
         // get the profile fields row for the id and save as array
         $result = $wpdb->get_var($wpdb->prepare($sql, $meta_id, $meta_key));

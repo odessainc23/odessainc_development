@@ -273,7 +273,7 @@ abstract class AbstractSettingsPage
         return $content;
     }
 
-    protected function page_dropdown($id, $appends = [], $args = ['skip_append_default_select' => false])
+    public static function page_dropdown($id, $appends = [], $args = ['skip_append_default_select' => false])
     {
         $default_args = [
             'name'             => PPRESS_SETTINGS_DB_OPTION_NAME . "[$id]",

@@ -10,9 +10,6 @@ export default Backbone.View.extend({
 
     initialize() {
 
-        $('.pp-color-field', this.$el).wpColorPicker();
-        $('.ppselect2', this.$el).select2();
-
         new jBox('Tooltip', {
             attach: '.pp-form-builder-help-tip',
             maxWidth: 200,

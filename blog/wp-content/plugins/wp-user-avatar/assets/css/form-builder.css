@@ -193,22 +193,15 @@ h2 .pp-form-builder-help-tip {
     margin-right: .618em
 }
 
-#pp-form-builder-metabox ul.pp-tabs li a::before, .pp-form-builder ul.pp-tabs li a::before {
-    font-family: Dashicons;
-    speak: none;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    content: "";
-    text-decoration: none
-}
-
 #pp-form-builder-metabox ul.pp-tabs li.active a, .pp-form-builder ul.pp-tabs li.active a {
     color: #555;
     position: relative;
     background-color: #eee
+}
+
+.ppress-pro-features-wrap .ppress-pro-features {
+    font-size: 13px;
+    padding: 2px 0;
 }
 
 #pp-form-builder-metabox .inside {

@@ -5,13 +5,15 @@ namespace ProfilePress\Core\ShortcodeParser;
 use ProfilePress\Core\Membership\Controllers\CheckoutSessionData;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
+use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
 
 class MembershipShortcodes
 {
     public function __construct()
     {
-        add_shortcode('profilepress-checkout', [$this, 'checkout_page']);
+        add_shortcode('profilepress-checkout', [$this, 'checkout_page_wrapper']);
         add_shortcode('profilepress-receipt', [$this, 'success_page']);
 
         add_filter('the_content', [$this, 'filter_success_page_content'], 99999);
@@ -34,13 +36,23 @@ class MembershipShortcodes
         return $content;
     }
 
-    public function checkout_page()
+    public function checkout_page_wrapper()
     {
         ob_start();
 
         echo '<div class="ppress-checkout__form">';
+        $this->checkout_page();
+        echo '</div>';
 
-        if ( ! isset($_GET['plan']) || ! is_numeric($_GET['plan'])) {
+        return ob_get_clean();
+    }
+
+    public function checkout_page()
+    {
+        if (
+            ( ! isset($_GET['plan']) || ! is_numeric($_GET['plan'])) &&
+            ( ! isset($_GET['group']) || ! is_numeric($_GET['group']))
+        ) {
 
             do_action('ppress_membership_checkout_empty_cart');
 
@@ -52,51 +64,97 @@ class MembershipShortcodes
             );
             echo '</p>';
 
-        } else {
+            return;
+        }
 
-            $planObj = ppress_get_plan(absint($_GET['plan']));
+        $isGroupCheckout = ! empty($_GET['group']);
 
-            if (
-                is_user_logged_in() &&
-                CustomerFactory::fromUserId(get_current_user_id())->has_active_subscription($planObj->id)) {
+        $isChangePlanCheckout = ! empty($_GET['change_plan']);
+
+        if ($isChangePlanCheckout) {
+
+            if ( ! is_user_logged_in()) {
                 echo '<p>';
-                printf(
-                    esc_html__('It looks like you’re already subscribed to this plan. Please go to %syour account%s to manage your subscription.', 'wp-user-avatar'),
-                    '<a href="' . ppress_my_account_url() . '">', '</a>'
-                );
+                esc_html_e('You must be logged in to switch to another plan.', 'wp-user-avatar');
                 echo '</p>';
-            } else {
 
-                if ($planObj->is_active()) {
+                return;
+            }
 
-                    add_filter('ppress_logout_url_enable_redirect_get_query', '__return_true');
+            $sub = SubscriptionFactory::fromId(absint($_GET['change_plan']));
 
-                    if ( ! empty($_GET['coupon'])) {
+            if ( ! $sub->exists() || ! ppress_get_plan($sub->plan_id)->get_group_id()) {
 
-                        $coupon = CouponFactory::fromCode(sanitize_text_field($_GET['coupon']));
+                echo '<p>';
+                esc_html_e('You can not switch to another plan because this plan does not belong to any group.', 'wp-user-avatar');
+                echo '</p>';
 
-                        if ($coupon->exists()) {
-
-                            ppress_session()->set(CheckoutSessionData::COUPON_CODE, [
-                                'plan_id'     => $planObj->id,
-                                'coupon_code' => $coupon->code,
-                            ]);
-                        }
-                    }
-
-                    ppress_render_view('checkout/form-checkout', [
-                        'planObj' => $planObj
-                    ]);
-
-                } else {
-                    do_action('ppress_membership_checkout_invalid_plan');
-                    echo '<p>' . esc_html__('Invalid subscription plan.', 'wp-user-avatar') . '</p>';
-                }
+                return;
             }
         }
-        echo '</div>';
 
-        return ob_get_clean();
+        if ($isGroupCheckout) {
+
+            $group = GroupFactory::fromId(absint($_GET['group']));
+
+            if ( ! $group->exists()) {
+                esc_html_e('Invalid plan group.', 'wp-user-avatar');
+
+                return;
+            }
+
+            if (empty($group->get_plan_ids())) {
+                esc_html_e('Error: group has no membership plans.', 'wp-user-avatar');
+
+                return;
+            }
+        }
+
+        $planObj  = ppress_get_plan(absint(ppressGET_var('plan', 0)));
+        $groupObj = GroupFactory::fromId(absint(ppressGET_var('group', 0)));
+
+        if (
+            is_user_logged_in() &&
+            ! $isGroupCheckout &&
+            ! $isChangePlanCheckout &&
+            CustomerFactory::fromUserId(get_current_user_id())->has_active_subscription($planObj->id)) {
+            echo '<p>';
+            printf(
+                esc_html__('You have an active subscription to this plan. Please go to %syour account%s to manage your subscription.', 'wp-user-avatar'),
+                '<a href="' . ppress_my_account_url() . '">', '</a>'
+            );
+            echo '</p>';
+
+            return;
+        }
+
+        if ( ! $planObj->is_active()) {
+            do_action('ppress_membership_checkout_invalid_plan');
+            echo '<p>' . esc_html__('Invalid subscription plan.', 'wp-user-avatar') . '</p>';
+
+            return;
+        }
+
+        add_filter('ppress_logout_url_enable_redirect_get_query', '__return_true');
+
+        if ( ! empty($_GET['coupon'])) {
+
+            $coupon = CouponFactory::fromCode(sanitize_text_field($_GET['coupon']));
+
+            if ($coupon->exists()) {
+
+                ppress_session()->set(CheckoutSessionData::COUPON_CODE, [
+                    'plan_id'     => $planObj->id,
+                    'coupon_code' => $coupon->code,
+                ]);
+            }
+        }
+
+        ppress_render_view('checkout/form-checkout', [
+            'planObj'         => $planObj,
+            'groupObj'        => $groupObj,
+            'changePlanSubId' => absint(ppressGET_var('change_plan', 0)),
+        ]);
     }
 
     public function success_page()

@@ -213,7 +213,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'set_login_url'                => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Login Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('set_login_url'),
+                        'data'        => self::page_dropdown('set_login_url'),
                         'description' => sprintf(
                             esc_html__('Select the page you wish to make WordPress default Login page. %3$s This should be the page that contains a %1$slogin form shortcode%2$s.', 'wp-user-avatar'),
                             '<a href="' . add_query_arg('form-type', 'login', PPRESS_FORMS_SETTINGS_PAGE) . '">', '</a>', '<br/>'),
@@ -221,7 +221,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'set_registration_url'         => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Registration Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('set_registration_url'),
+                        'data'        => self::page_dropdown('set_registration_url'),
                         'description' => sprintf(
                             esc_html__('Select the page you wish to make WordPress default Registration page. %3$s This should be the page that contains a %1$sregistration form shortcode%2$s.', 'wp-user-avatar'),
                             '<a href="' . add_query_arg('form-type', 'registration', PPRESS_FORMS_SETTINGS_PAGE) . '">', '</a>', '<br/>'),
@@ -229,7 +229,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'set_lost_password_url'        => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Password Reset Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('set_lost_password_url'),
+                        'data'        => self::page_dropdown('set_lost_password_url'),
                         'description' => sprintf(
                             esc_html__('Select the page you wish to make WordPress default "Lost Password page". %3$s This should be the page that contains a %1$spassword reset form shortcode%2$s.', 'wp-user-avatar'),
                             '<a href="' . add_query_arg('form-type', 'password-reset', PPRESS_FORMS_SETTINGS_PAGE) . '">', '</a>', '<br/>'),
@@ -237,7 +237,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'edit_user_profile_url'        => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('My Account Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('edit_user_profile_url'),
+                        'data'        => self::page_dropdown('edit_user_profile_url'),
                         'description' => sprintf(
                             esc_html__('Select a page that contains %3$s shortcode. You can also use an %1$sedit profile shortcode%2$s on the My Account page in case you want something custom.', 'wp-user-avatar'),
                             '<a href="' . add_query_arg('form-type', 'edit-profile', PPRESS_FORMS_SETTINGS_PAGE) . '">', '</a>', '<code>[profilepress-my-account]</code>'),
@@ -248,7 +248,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'checkout_page_id'        => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Checkout Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('checkout_page_id'),
+                        'data'        => self::page_dropdown('checkout_page_id'),
                         'description' => sprintf(
                             esc_html__('The checkout page where members will complete their payments. %2$sThe shortcode %1$s must be on this page.', 'wp-user-avatar'),
                             '<code>[profilepress-checkout]</code>', '<br>'
@@ -257,7 +257,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'payment_success_page_id' => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Order Success Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('payment_success_page_id'),
+                        'data'        => self::page_dropdown('payment_success_page_id'),
                         'description' => sprintf(
                             esc_html__('The page customers are sent to after completing their orders.%2$sThe shortcode %1$s must be on this page.', 'wp-user-avatar'),
                             '<code>[profilepress-receipt]</code>', '<br>'
@@ -266,14 +266,14 @@ class GeneralSettings extends AbstractSettingsPage
                     'payment_failure_page_id' => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Order Failure Page', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('payment_failure_page_id'),
+                        'data'        => self::page_dropdown('payment_failure_page_id'),
                         'description' => esc_html__('The page customers are sent to after a failed order.', 'wp-user-avatar')
                     ],
                     'terms_page_id'           => [
                         'label'       => esc_html__('Terms & Conditions Page', 'wp-user-avatar'),
                         'description' => esc_html__('If you select a "Terms" page, customers will be asked if they accept them when checking out.', 'wp-user-avatar'),
                         'type'        => 'custom_field_block',
-                        'data'        => $this->page_dropdown('terms_page_id'),
+                        'data'        => self::page_dropdown('terms_page_id'),
                     ],
                 ]
             ]),
@@ -349,7 +349,7 @@ class GeneralSettings extends AbstractSettingsPage
                     'set_user_profile_shortcode'        => [
                         'type'        => 'custom_field_block',
                         'label'       => esc_html__('Page with Profile Shortcode', 'wp-user-avatar'),
-                        'data'        => $this->page_dropdown('set_user_profile_shortcode'),
+                        'data'        => self::page_dropdown('set_user_profile_shortcode'),
                         'description' => sprintf(__('Select the page that contains your <a href="%s">Frontend user profile shortcode</a>.', 'wp-user-avatar'), PPRESS_USER_PROFILES_SETTINGS_PAGE),
                     ],
                     'set_user_profile_slug'             => [
@@ -393,7 +393,7 @@ class GeneralSettings extends AbstractSettingsPage
                 'set_log_out_url'             => [
                     'type'        => 'custom_field_block',
                     'label'       => esc_html__('Log out', 'wp-user-avatar'),
-                    'data'        => $this->page_dropdown('set_log_out_url',
+                    'data'        => self::page_dropdown('set_log_out_url',
                             [
                                 ['key' => 'default', 'label' => esc_html__('Select...', 'wp-user-avatar')],
                                 ['key' => 'current_view_page', 'label' => esc_html__('Currently viewed page', 'wp-user-avatar')]
@@ -409,7 +409,7 @@ class GeneralSettings extends AbstractSettingsPage
                 'set_login_redirect'          => [
                     'type'        => 'custom_field_block',
                     'label'       => esc_html__('Login', 'wp-user-avatar'),
-                    'data'        => $this->page_dropdown('set_login_redirect', $login_redirect_page_dropdown_args) . $this->custom_text_input('custom_url_login_redirect'),
+                    'data'        => self::page_dropdown('set_login_redirect', $login_redirect_page_dropdown_args) . $this->custom_text_input('custom_url_login_redirect'),
                     'description' => sprintf(
                         esc_html__('Select the page or custom URL users will be redirected to after login. To redirect to a custom URL instead of a selected page, enter the URL in input field directly above this description', 'wp-user-avatar') . '%s' .
                         esc_html__('Leave the "custom URL" field empty to fallback to the selected page.', 'wp-user-avatar'),
@@ -419,7 +419,7 @@ class GeneralSettings extends AbstractSettingsPage
                 'set_password_reset_redirect' => [
                     'type'        => 'custom_field_block',
                     'label'       => esc_html__('Password Reset', 'wp-user-avatar'),
-                    'data'        => $this->page_dropdown(
+                    'data'        => self::page_dropdown(
                             'set_password_reset_redirect',
                             [],
                             [
@@ -457,7 +457,7 @@ class GeneralSettings extends AbstractSettingsPage
                 'global_site_access_redirect_page'  => [
                     'type'        => 'custom_field_block',
                     'label'       => esc_html__('Redirect Page', 'wp-user-avatar'),
-                    'data'        => $this->page_dropdown('global_site_access_redirect_page') . $this->custom_text_input('global_site_access_custom_redirect_page'),
+                    'data'        => self::page_dropdown('global_site_access_redirect_page') . $this->custom_text_input('global_site_access_custom_redirect_page'),
                     'description' => esc_html__('Select the page or custom URL to redirect users that are not logged in to.', 'wp-user-avatar')
                 ],
                 'global_site_access_exclude_pages'  => [

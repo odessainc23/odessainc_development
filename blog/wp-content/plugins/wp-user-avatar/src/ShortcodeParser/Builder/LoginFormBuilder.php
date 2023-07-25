@@ -127,7 +127,7 @@ class LoginFormBuilder
         $title = 'title="' . esc_attr($atts['title']) . '"';
 
         $html = "<input name='login_remember' value='false' type='hidden'>";
-        $html .= "<input name='login_remember' value='true' type='checkbox' $title $class $id $other_atts_html checked='checked'>";
+        $html .= "<input name='login_remember' value='true' type='checkbox' $title $class $id $other_atts_html>";
 
         return apply_filters('ppress_login_remember_field', $html, $atts);
     }

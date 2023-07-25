@@ -50,10 +50,9 @@ $coupon_details = [
         'label'       => esc_html__('Coupon Application', 'wp-user-avatar'),
         'options'     => [
             'acquisition' => esc_html__('To new purchases only', 'wp-user-avatar'),
-            'retention'   => esc_html__('To existing purchase (upgrades)', 'wp-user-avatar'),
+            'retention'   => esc_html__('To existing purchase (upgrades & downgrades)', 'wp-user-avatar'),
             'any'         => esc_html__('To both new and existing purchases', 'wp-user-avatar')
         ],
-        /** @todo add support for when upgrade/downgrade is live */
         'description' => esc_html__('Select where members can apply this coupon.', 'wp-user-avatar')
     ]
 ];

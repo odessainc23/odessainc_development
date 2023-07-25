@@ -185,6 +185,13 @@ class CouponEntity extends AbstractModel implements ModelInterface
             return false;
         }
 
+        if (
+            in_array($order_type, [OrderType::UPGRADE, OrderType::DOWNGRADE]) &&
+            $this->get_coupon_application() == CouponApplication::NEW_PURCHASE
+        ) {
+            return false;
+        }
+
         $start_date = ! empty($this->get_start_date()) ? $this->get_start_date() . ' 00:00:00' : '';
         $end_date   = ! empty($this->get_end_date()) ? $this->get_end_date() . ' 23:59:59' : '';
 

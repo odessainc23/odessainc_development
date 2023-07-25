@@ -134,10 +134,10 @@ class DBUpdates
 
     public function update_routine_7()
     {
-        ppress_update_settings('wordpresscom_button_label', esc_html__('Sign in with WordPress.com', 'profilepress-pro'));
-        ppress_update_settings('yahoo_button_label', esc_html__('Sign in with Yahoo', 'profilepress-pro'));
-        ppress_update_settings('microsoft_button_label', esc_html__('Sign in with Microsoft', 'profilepress-pro'));
-        ppress_update_settings('amazon_button_label', esc_html__('Sign in with Amazon', 'profilepress-pro'));
+        ppress_update_settings('wordpresscom_button_label', esc_html__('Sign in with WordPress.com', 'wp-user-avatar'));
+        ppress_update_settings('yahoo_button_label', esc_html__('Sign in with Yahoo', 'wp-user-avatar'));
+        ppress_update_settings('microsoft_button_label', esc_html__('Sign in with Microsoft', 'wp-user-avatar'));
+        ppress_update_settings('amazon_button_label', esc_html__('Sign in with Amazon', 'wp-user-avatar'));
     }
 
     public function update_routine_8()

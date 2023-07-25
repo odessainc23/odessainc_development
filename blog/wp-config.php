@@ -19,13 +19,16 @@
  */
 
 if (! empty($_SERVER['HTTPS'])) {
+
 	define( 'OD_BASE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/' );
 } else {
-	define( 'OD_BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/' );
+	
+	define( 'OD_BASE_URL', 'http://localhost:8000/blog' );
 }
 
 
 if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
+	
 	/** The name of the database for WordPress */
 	define( 'DB_NAME', 'odessa' );
 
@@ -66,7 +69,7 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 define('WP_MEMORY_LIMIT', '256M');
-define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+// define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
 define('FS_METHOD', 'direct');
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );

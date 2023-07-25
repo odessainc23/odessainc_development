@@ -4,6 +4,7 @@ namespace ProfilePress\Core\Membership\Controllers;
 
 use ProfilePress\Core\Classes\LoginAuth;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
+use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderType;
 use ProfilePress\Core\Membership\Models\Plan\PlanEntity;
@@ -138,7 +139,11 @@ class CheckoutController extends BaseController
                 );
             }
 
-            if ( ! $coupon->is_valid($plan_id, OrderType::NEW_ORDER)) {
+            $order_type = CheckoutSessionData::get_order_type($plan_id);
+
+            if ( ! $order_type) $order_type = OrderType::NEW_ORDER;
+
+            if ( ! $coupon->is_valid($plan_id, $order_type)) {
 
                 throw new \Exception(
                     esc_html__('Sorry, this coupon is not valid.', 'wp-user-avatar')
@@ -205,6 +210,8 @@ class CheckoutController extends BaseController
 
             $plan_id = (int)$_POST['plan_id'];
 
+            $change_plan_sub_id = (int)$_POST['change_plan_sub_id'];
+
             if ( ! isset($_POST['_ppress_timestamp']) || intval($_POST['_ppress_timestamp']) > (time() - 2)) {
                 throw new \Exception('spam');
             }
@@ -226,9 +233,10 @@ class CheckoutController extends BaseController
             }
 
             $cart_vars = OrderService::init()->checkout_order_calculation([
-                'plan_id'     => $plan_id,
-                'coupon_code' => CheckoutSessionData::get_coupon_code($plan_id),
-                'tax_rate'    => CheckoutSessionData::get_tax_rate($plan_id)
+                'plan_id'            => $plan_id,
+                'coupon_code'        => CheckoutSessionData::get_coupon_code($plan_id),
+                'tax_rate'           => CheckoutSessionData::get_tax_rate($plan_id),
+                'change_plan_sub_id' => $change_plan_sub_id
             ]);
 
             $is_free_checkout = OrderService::init()->is_free_checkout($cart_vars);
@@ -289,6 +297,19 @@ class CheckoutController extends BaseController
                 $process_payment = (new CheckoutResponse())->set_is_success(true);
 
             } else {
+
+                $sub = SubscriptionFactory::fromId($change_plan_sub_id);
+
+                if ($sub->exists()) {
+
+                    $sub->cancel(true, true);
+                    if (apply_filters('ppress_checkout_change_plan_expiration', false)) {
+                        $sub->expire();
+                    }
+
+                    SubscriptionFactory::fromId($subscription_id)->update_meta('_upgraded_from_sub_id', $sub->get_id());
+                    $sub->update_meta('_upgraded_to_sub_id', $subscription_id);
+                }
 
                 /** @var CheckoutResponse $process_payment */
                 $process_payment = $payment_method->process_payment(
@@ -402,7 +423,23 @@ class CheckoutController extends BaseController
 
             global $cart_vars;
 
+            parse_str($_POST['post_data'], $post_data);
+
             $planObj = ppress_get_plan(absint($_POST['plan_id']));
+
+            $groupObj = GroupFactory::fromId(absint(ppress_var($post_data, 'group_id', 0)));
+
+            $changePlanSubId = false;
+
+            // if group selector input is changed/ticked/checked/toggled
+            if (ppressPOST_var('isChangePlanUpdate') == 'true') {
+
+                $changePlanSubId = absint(ppress_var($post_data, 'change_plan_sub_id', 0));
+
+                $selectedGroupPlanId = absint($post_data['group_selector']);
+
+                if ($selectedGroupPlanId > 0) $planObj = ppress_get_plan($selectedGroupPlanId);
+            }
 
             $country_code       = sanitize_text_field(ppressPOST_var('country', '', true));
             $country_state_code = sanitize_text_field(ppressPOST_var('state', '', true));
@@ -417,39 +454,59 @@ class CheckoutController extends BaseController
                 'state'    => $country_state_code
             ]);
 
-            $cart_vars = OrderService::init()->checkout_order_calculation([
-                'plan_id'     => $planObj->id,
-                'coupon_code' => CheckoutSessionData::get_coupon_code($planObj->id),
-                'tax_rate'    => CheckoutSessionData::get_tax_rate($planObj->id)
-            ]);
+            if (ppressPOST_var('isChangePlanUpdate') == 'true') {
 
-            ob_start();
-            ppress_render_view(
-                'checkout/form-checkout-sidebar', [
+                ob_start();
+                echo '<div class="ppress-checkout__form">';
+                ppress_render_view('checkout/form-checkout', [
+                    'groupObj'        => $groupObj,
+                    'planObj'         => $planObj,
+                    'changePlanSubId' => $changePlanSubId
+                ]);
+                echo '</div>';
+
+                $fragments = ['.ppress-checkout__form' => ob_get_clean()];
+
+            } else {
+
+                $cart_vars = OrderService::init()->checkout_order_calculation([
+                    'plan_id'            => $planObj->id,
+                    'coupon_code'        => CheckoutSessionData::get_coupon_code($planObj->id),
+                    'tax_rate'           => CheckoutSessionData::get_tax_rate($planObj->id),
+                    'change_plan_sub_id' => $changePlanSubId
+                ]);
+
+                ob_start();
+                ppress_render_view(
+                    'checkout/form-checkout-sidebar', [
+                        'plan'                   => $planObj,
+                        'cart_vars'              => $cart_vars,
+                        'isChangePlanIdSelected' => false
+                    ]
+                );
+                $checkout_sidebar_html = ob_get_clean();
+
+                ob_start();
+                ppress_render_view('checkout/form-payment-methods', [
                     'plan'      => $planObj,
                     'cart_vars' => $cart_vars
-                ]
-            );
-            $checkout_sidebar_html = ob_get_clean();
+                ]);
+                $checkout_payment_methods_html = ob_get_clean();
 
-            ob_start();
-            ppress_render_view('checkout/form-payment-methods', [
-                'plan'      => $planObj,
-                'cart_vars' => $cart_vars
-            ]);
-            $checkout_payment_methods_html = ob_get_clean();
+                ob_start();
+                ppress_render_view('checkout/form-checkout-submit-btn', ['order_total' => $cart_vars->total, 'plan' => $planObj]);
+                $checkout_submit_btn = ob_get_clean();
 
-            ob_start();
-            ppress_render_view('checkout/form-checkout-submit-btn', ['order_total' => $cart_vars->total, 'plan' => $planObj]);
-            $checkout_submit_btn = ob_get_clean();
+                $fragments = [
+                    '.ppress-checkout_order_summary-wrap'   => $checkout_sidebar_html,
+                    '.ppress-checkout_payment_methods-wrap' => $checkout_payment_methods_html,
+                    '.ppress-checkout-submit'               => $checkout_submit_btn
+                ];
+            }
 
             wp_send_json_success(
                 apply_filters('ppress_update_order_review_response', [
-                    'fragments' => apply_filters('ppress_update_order_review_fragments', [
-                        '.ppress-checkout_order_summary-wrap'   => $checkout_sidebar_html,
-                        '.ppress-checkout_payment_methods-wrap' => $checkout_payment_methods_html,
-                        '.ppress-checkout-submit'               => $checkout_submit_btn
-                    ])
+                    'fragments' => apply_filters('ppress_update_order_review_fragments', $fragments)
                 ], $cart_vars, $planObj)
             );
 

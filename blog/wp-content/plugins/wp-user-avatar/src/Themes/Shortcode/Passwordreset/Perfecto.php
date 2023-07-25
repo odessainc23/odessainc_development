@@ -14,7 +14,7 @@ class Perfecto implements PasswordResetThemeInterface
 
     public function success_message()
     {
-        return '<div class="profilepress-reset-status">Check your email for further instruction</div>';
+        return '<div class="profilepress-reset-status">Check your email for further instructions</div>';
     }
 
     public function password_reset_handler()

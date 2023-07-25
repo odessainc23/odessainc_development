@@ -289,7 +289,7 @@ class Custom_Settings_Page_Api
             return;
         }
 
-        $sanitize_callable = apply_filters('wp_cspa_sanitize_callback', 'self::sanitize_data');
+        $sanitize_callable = apply_filters('wp_cspa_sanitize_callback', [self::class, 'sanitize_data']);
 
         $sanitized_data = apply_filters(
             'wp_cspa_santized_data',
@@ -838,7 +838,7 @@ class Custom_Settings_Page_Api
         $description = @$args['description'];
         $tr_id       = isset($args['tr_id']) ? $args['tr_id'] : "{$key}_row";
         $option_name = $this->option_name;
-        $value       = ! empty($db_options[$key]) ? stripslashes($db_options[$key]) : @$args['value'];
+        $value       = ! empty($db_options[$key]) ? stripslashes($db_options[$key]) : ($args['value'] ?? '');
         $settings    = ! empty($args['settings']) ? $args['settings'] : ['wpautop'=> false];
 
         $settings = array_replace(['textarea_name' => $option_name . '[' . $key . ']'], $settings);

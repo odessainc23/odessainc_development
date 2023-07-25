@@ -110,7 +110,25 @@ class PaymentSettings extends AbstractSettingsPage
                         '<a href="' . PPRESS_SETTINGS_SETTING_GENERAL_PAGE . '#global_pages?terms_page_id_row" target="_blank">', '</a>'
                     ),
                     'type'        => 'text'
-                ]
+                ],
+                'proration_method'      => [
+                    'label'       => esc_html__('Proration Method', 'wp-user-avatar'),
+                    'description' => sprintf(
+                        esc_html__('Specify how to calculate proration for subscription downgrades and upgrades. %sCost-based calculation is where the value of an upgrade is calculated based on the cost difference between the current and new membership plans. %sTime-based calculation is true proration in which the amount of time remaining on the current subscription plan is calculated to adjust the cost of the new subscription.', 'wp-user-avatar'),
+                        '</p><p class="description">', '</p><p class="description">'
+                    ),
+                    'type'        => 'select',
+                    'options'     => [
+                        'cost-based' => esc_html__('Cost-Based Calculation', 'wp-user-avatar'),
+                        'time-based' => esc_html__('Time-Based Calculation', 'wp-user-avatar')
+                    ]
+                ],
+                'disable_auto_renew'    => [
+                    'label'          => esc_html__('Disable Auto-renewal', 'wp-user-avatar'),
+                    'checkbox_label' => esc_html__('Disable', 'wp-user-avatar'),
+                    'description'    => esc_html__('Check to disable automatic renewal of subscriptions at the end of a billing cycle', 'wp-user-avatar'),
+                    'type'           => 'checkbox'
+                ],
             ]
         ];
 

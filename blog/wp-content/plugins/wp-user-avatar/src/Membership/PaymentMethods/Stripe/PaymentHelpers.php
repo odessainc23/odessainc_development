@@ -135,7 +135,7 @@ class PaymentHelpers
 
         $plan = PlanFactory::fromId($subscription->plan_id);
 
-        $is_recurring = $subscription->is_recurring();
+        $is_recurring = $plan->is_auto_renew();
 
         try {
 
@@ -163,7 +163,6 @@ class PaymentHelpers
                 APIClass::stripeClient()->products->create($create_product_args)->toArray();
             } catch (\Exception $e) {
 
-
             }
         }
 
@@ -173,7 +172,7 @@ class PaymentHelpers
             'unit_amount' => self::process_amount($subscription->get_recurring_amount()),
         ];
 
-        if ( ! $subscription->is_recurring()) {
+        if ( ! $plan->is_auto_renew()) {
             $price_args['unit_amount'] = self::process_amount($subscription->initial_amount);
         }
 
@@ -202,6 +201,8 @@ class PaymentHelpers
         if ($is_recurring) {
             $price_search_args['recurring'] = array('interval' => $period);
         }
+
+        $price_search_args = apply_filters('ppress_stripe_price_search_args', $price_search_args, $subscription, $plan);
 
         $stripe_prices = APIClass::stripeClient()->prices->all($price_search_args)->toArray();
 
@@ -238,12 +239,21 @@ class PaymentHelpers
      */
     public static function get_stripe_customer_id($customer)
     {
-        $search_result = APIClass::stripeClient()->customers->search([
-            'query' => sprintf('email:\'%s\' AND metadata[\'ppress_customer_id\']:\'%s\'', $customer->get_email(), $customer->id)
-        ])->toArray();
+        try {
 
-        if ( ! empty($search_result['data']) && isset($search_result['data'][0]['id'])) {
-            return $search_result['data'][0]['id'];
+            $search_result = APIClass::stripeClient()->customers->search([
+                'query' => sprintf('email:\'%s\' AND metadata[\'ppress_customer_id\']:\'%s\'', $customer->get_email(), $customer->id)
+            ])->toArray();
+
+            if ( ! empty($search_result['data']) && isset($search_result['data'][0]['id'])) {
+                return $search_result['data'][0]['id'];
+            }
+
+        } catch (\Exception $e) {
+
+            $stripe_customer_id = $customer->get_meta('stripe_customer_id');
+
+            if ( ! empty($stripe_customer_id)) return $stripe_customer_id;
         }
 
         $pp_customer_billing = $customer->get_billing_details();
@@ -354,8 +364,16 @@ class PaymentHelpers
         /**
          * Do not add a fee if account country does not support application fees.
          * @see https://stripe.com/docs/connect/direct-charges#collecting-fees
+         * @see https://groups.google.com/a/lists.stripe.com/g/api-discuss/c/-Ezjn3roCiI/m/MYUpA4kUAQAJ
          */
-        if (in_array(strtolower($account_country), apply_filters('ppress_stripe_country_disallowed_list', ['br']), true)) {
+        $disallowed_list = [
+            'br'/** @see https://stripe.com/docs/connect/direct-charges#collecting-fees */,
+            'in', // Error: Stripe doesn't currently support application fees for platforms in US with connected accounts in IN|MY|MX
+            'mx',
+            'my'
+        ];
+
+        if (in_array(strtolower($account_country), $disallowed_list, true)) {
             return false;
         }
 

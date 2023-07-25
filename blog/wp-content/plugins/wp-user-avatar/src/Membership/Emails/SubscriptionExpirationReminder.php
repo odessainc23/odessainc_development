@@ -30,7 +30,7 @@ class SubscriptionExpirationReminder extends AbstractMembershipEmail
         $subDate = CarbonImmutable::now(wp_timezone())->addDays($reminder_days);
 
         $subscriptions = SubscriptionRepository::init()->retrieveBy([
-            'status'      => [SubscriptionStatus::ACTIVE],
+            'status'      => [SubscriptionStatus::ACTIVE, SubscriptionStatus::TRIALLING],
             'limit'       => 0,
             'date_column' => 'expiration_date',
             'start_date'  => $subDate->startOfDay()->utc()->toDateTimeString(),

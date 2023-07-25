@@ -4,7 +4,6 @@ namespace ProfilePress\Core\Classes;
 
 use ProfilePress\Core\Admin\SettingsPages\FormList;
 use ProfilePress\Core\Base;
-use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Themes\Shortcode\ThemesRepository as ShortcodeThemesRepository;
 use ProfilePress\Core\Themes\DragDrop\ThemesRepository as DragDropThemesRepository;
 use ProfilePress\Core\Widgets\TabbedWidgetDependency;

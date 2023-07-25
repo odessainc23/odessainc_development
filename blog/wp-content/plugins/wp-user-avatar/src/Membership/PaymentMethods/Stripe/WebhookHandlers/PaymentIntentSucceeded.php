@@ -28,7 +28,7 @@ class PaymentIntentSucceeded implements WebhookHandlerInterface
 
         $subscription = SubscriptionFactory::fromId($order->subscription_id);
 
-        if ($subscription->exists() && ! $subscription->is_recurring()) {
+        if ($subscription->exists() && ! $order->get_plan()->is_auto_renew()) {
             $subscription->activate_subscription();
         }
     }

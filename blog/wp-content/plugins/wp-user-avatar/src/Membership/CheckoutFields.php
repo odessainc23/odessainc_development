@@ -46,7 +46,7 @@ class CheckoutFields
 
     public static function standard_account_info_fields()
     {
-        return [
+        return apply_filters('ppress_standard_account_info_fields', [
             self::ACCOUNT_EMAIL_ADDRESS         => [
                 'label'          => esc_html__('Email Address', 'wp-user-avatar'),
                 'required'       => 'true',
@@ -124,12 +124,12 @@ class CheckoutFields
                 'logged_in_hide' => 'true',
                 'deletable'      => 'true'
             ],
-        ];
+        ]);
     }
 
     public static function standard_billing_fields()
     {
-        return [
+        return apply_filters('ppress_standard_billing_fields', [
             self::BILLING_ADDRESS      => [
                 'label'          => esc_html__('Street Address', 'wp-user-avatar'),
                 'required'       => 'true',
@@ -178,7 +178,7 @@ class CheckoutFields
                 'deletable'      => 'true',
                 'width'          => 'one-third'
             ]
-        ];
+        ]);
     }
 
     public static function standard_custom_fields()

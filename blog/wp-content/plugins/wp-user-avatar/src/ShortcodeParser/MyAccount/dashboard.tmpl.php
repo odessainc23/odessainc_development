@@ -7,6 +7,9 @@ if ( ! defined('ABSPATH')) {
 }
 
 $current_user = get_user_by('id', get_current_user_id());
+
+do_action('ppress_myaccount_dashboard_before');
+
 ?>
 
     <p>

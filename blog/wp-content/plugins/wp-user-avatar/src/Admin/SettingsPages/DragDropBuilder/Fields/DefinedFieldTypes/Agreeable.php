@@ -47,10 +47,10 @@ class Agreeable extends FieldBase
         return apply_filters('ppress_form_builder_textbox_field_settings', [
             parent::GENERAL_TAB  => [
                 'checked_state' => [
-                    'label'   => esc_html__('Checked by Default', 'profilepress-pro'),
+                    'label'   => esc_html__('Checked by Default', 'wp-user-avatar'),
                     'options' => [
-                        'false' => esc_html__('False', 'profilepress-pro'),
-                        'true'  => esc_html__('True', 'profilepress-pro'),
+                        'false' => esc_html__('False', 'wp-user-avatar'),
+                        'true'  => esc_html__('True', 'wp-user-avatar'),
                     ],
                     'field'   => self::SELECT_FIELD
                 ]

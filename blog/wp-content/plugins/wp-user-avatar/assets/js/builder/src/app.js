@@ -60,6 +60,8 @@ let App = {
 
     init() {
 
+        if(typeof pp_form_builder_fields_settings === 'undefined') return;
+
         let formSettings = new FormSettings(pp_form_builder_fields_settings);
         window.ppFormSettings = formSettings;
 

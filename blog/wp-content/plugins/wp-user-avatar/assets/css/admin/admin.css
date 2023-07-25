@@ -882,7 +882,7 @@
     padding-right: 15px;
 }
 
-pp-form-buider-settings-popup-tab-content .pp-form-double-column {
+.pp-form-buider-settings-popup-tab-content .pp-form-double-column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;

@@ -7,6 +7,7 @@ use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
 use ProfilePress\Core\Membership\Models\ModelInterface;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionStatus;
+use ProfilePress\Core\Membership\Services\SubscriptionService;
 
 class SubscriptionRepository extends BaseRepository
 {
@@ -131,15 +132,17 @@ class SubscriptionRepository extends BaseRepository
 
     public function delete_pending_subs($customer_id, $plan_id)
     {
-        return $this->wpdb()->delete(
-            $this->table,
-            [
-                'customer_id' => $customer_id,
-                'plan_id'     => $plan_id,
-                'status'      => SubscriptionStatus::PENDING
-            ],
-            ['%d', '%d', '%s']
-        );
+        $subs = $this->retrieveBy([
+            'customer_id' => $customer_id,
+            'plan_id'     => $plan_id,
+            'status'      => [SubscriptionStatus::PENDING]
+        ]);
+
+        if ( ! empty($subs)) {
+            foreach ($subs as $sub) {
+                SubscriptionService::init()->delete_subscription($sub->id);
+            }
+        }
     }
 
     /**

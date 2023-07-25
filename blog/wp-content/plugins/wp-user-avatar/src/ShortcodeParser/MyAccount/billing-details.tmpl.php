@@ -62,6 +62,8 @@ if (is_array($billing_details_fields) && ! empty($billing_details_fields)) :
             }
         }
 
+        if (apply_filters('ppress_myaccount_billing_details_disable_' . $field_key, false)) continue;
+
         // skip woocommerce core billing / shipping fields added to wordpress profile admin page.
         if (in_array($field_key, ppress_woocommerce_billing_shipping_fields())) continue;
 

@@ -53,13 +53,15 @@ class OrderRepository extends BaseRepository
                 'mode'             => $data->mode,
                 'currency'         => $data->currency,
                 'ip_address'       => $data->ip_address,
-                'date_created'     => empty($data->date_created) ? current_time('mysql', true) : $data->date_created
+                'date_created'     => empty($data->date_created) ? current_time('mysql', true) : $data->date_created,
+                'date_completed'   => $data->date_completed
             ],
             [
                 '%s',
                 '%d',
                 '%d',
                 '%d',
+                '%s',
                 '%s',
                 '%s',
                 '%s',
@@ -118,7 +120,8 @@ class OrderRepository extends BaseRepository
                 'billing_phone'    => $data->billing_phone,
                 'mode'             => $data->mode,
                 'currency'         => $data->currency,
-                'ip_address'       => $data->ip_address
+                'ip_address'       => $data->ip_address,
+                'date_completed'   => $data->date_completed
             ],
             ['id' => $data->id],
             [
@@ -126,6 +129,7 @@ class OrderRepository extends BaseRepository
                 '%d',
                 '%d',
                 '%d',
+                '%s',
                 '%s',
                 '%s',
                 '%s',

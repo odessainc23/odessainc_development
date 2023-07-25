@@ -2,9 +2,6 @@
 
 namespace ProfilePress\Core\Classes;
 
-
-use ProfilePress\Core\Classes\PROFILEPRESS_sql as PROFILEPRESS_sql;
-
 class GDPR
 {
     public function __construct()

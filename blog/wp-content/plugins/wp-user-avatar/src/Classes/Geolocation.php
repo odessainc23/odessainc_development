@@ -1,7 +1,7 @@
 <?php
 
 namespace ProfilePress\Core\Classes;
-
+/** @todo needed? */
 class Geolocation
 {
     /**

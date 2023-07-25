@@ -73,7 +73,8 @@ class PaymentMethods extends AbstractReport
             if (is_array($query_data) && ! empty($query_data)) {
                 foreach ($query_data as $datum) {
                     $payment_method          = $datum['payment_method'];
-                    $labels[$payment_method] = ppress_get_payment_method($payment_method)->get_method_title();
+                    $payment_method_obj      = ppress_get_payment_method($payment_method);
+                    $labels[$payment_method] = $payment_method_obj ? $payment_method_obj->get_method_title() : $payment_method;
                 }
             }
         }

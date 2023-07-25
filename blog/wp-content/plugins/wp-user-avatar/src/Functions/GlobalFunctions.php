@@ -736,29 +736,6 @@ function ppress_wp_new_user_notification($user_id, $deprecated = null, $notify =
 
             $title = ppress_get_setting('new_user_admin_email_email_subject', sprintf(__('[%s] New User Registration'), $blogname), true);
 
-            // handle support for custom fields placeholder.
-            preg_match_all('#({{[a-z_-]+}})#', $message, $matches);
-
-            if (isset($matches[1]) && ! empty($matches[1])) {
-
-                foreach ($matches[1] as $match) {
-                    $key = str_replace(['{', '}'], '', $match);
-
-                    $value = '';
-
-                    if (isset($user->{$key})) {
-
-                        $value = $user->{$key};
-
-                        if (is_array($value)) {
-                            $value = implode(', ', $value);
-                        }
-                    }
-
-                    $message = str_replace($match, $value, $message);
-                }
-            }
-
             $search = array(
                 '{{username}}',
                 '{{user_email}}',
@@ -788,6 +765,29 @@ function ppress_wp_new_user_notification($user_id, $deprecated = null, $notify =
                 str_replace($search, $replace, $title),
                 $user
             );
+
+            // handle support for custom fields placeholder.
+            preg_match_all('#({{[a-z_-]+}})#', $message, $matches);
+
+            if (isset($matches[1]) && ! empty($matches[1])) {
+
+                foreach ($matches[1] as $match) {
+                    $key = str_replace(['{', '}'], '', $match);
+
+                    $value = '';
+
+                    if (isset($user->{$key})) {
+
+                        $value = $user->{$key};
+
+                        if (is_array($value)) {
+                            $value = implode(', ', $value);
+                        }
+                    }
+
+                    $message = str_replace($match, $value, $message);
+                }
+            }
 
             $admin_email = apply_filters('ppress_signup_notification_admin_email', ppress_get_admin_notification_emails());
 
@@ -927,8 +927,9 @@ function ppress_generate_password_reset_url($user_login)
 
     $key = get_password_reset_key($user);
 
-    if(is_wp_error($key)) {
+    if (is_wp_error($key)) {
         ppress_log_error($key->get_error_message());
+
         return '';
     }
 
@@ -1613,11 +1614,21 @@ function ppress_is_base64($s)
     return true;
 }
 
-function ppress_plan_checkout_url($plan_id)
+/**
+ * @param int $plan_id Plan ID or Subscription ID if change plan URL
+ * @param bool $is_change_plan set to true to return checkout url to change plan
+ *
+ * @return false|string
+ */
+function ppress_plan_checkout_url($plan_id, $is_change_plan = false)
 {
     $page_id = ppress_settings_by_key('checkout_page_id');
+
     if ( ! empty($page_id)) {
-        return add_query_arg('plan', absint($plan_id), get_permalink($page_id));
+
+        $cid = $is_change_plan ? 'change_plan' : 'plan';
+
+        return add_query_arg($cid, absint($plan_id), get_permalink($page_id));
     }
 
     return false;
@@ -1673,4 +1684,20 @@ function ppress_maybe_define_constant($name, $value)
 function ppress_upgrade_urls_affilify($url)
 {
     return apply_filters('ppress_pro_upgrade_url', $url);
+}
+
+function ppress_cache_transform($cache_key, $callback)
+{
+    static $ppress_cache_transform_bucket = [];
+
+    $result = ppress_var($ppress_cache_transform_bucket, $cache_key, false);
+
+    if ( ! $result) {
+
+        $result = $callback();
+
+        $ppress_cache_transform_bucket[$cache_key] = $result;
+    }
+
+    return $result;
 }

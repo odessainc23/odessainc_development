@@ -56,7 +56,8 @@ class SettingsPage extends AbstractSettingsPage
     {
         $tabs = apply_filters('ppress_membership_plans_settings_page_tabs', [
             5  => ['id' => $this->default_header_menu(), 'url' => PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE, 'label' => esc_html__('Plans', 'wp-user-avatar')],
-            10 => ['id' => 'coupons', 'url' => PPRESS_MEMBERSHIP_COUPONS_SETTINGS_PAGE, 'label' => esc_html__('Coupons', 'wp-user-avatar')]
+            10 => ['id' => 'groups', 'url' => PPRESS_MEMBERSHIP_GROUPS_SETTINGS_PAGE, 'label' => esc_html__('Groups', 'wp-user-avatar')],
+            15 => ['id' => 'coupons', 'url' => PPRESS_MEMBERSHIP_COUPONS_SETTINGS_PAGE, 'label' => esc_html__('Coupons', 'wp-user-avatar')]
         ]);
 
         ksort($tabs);

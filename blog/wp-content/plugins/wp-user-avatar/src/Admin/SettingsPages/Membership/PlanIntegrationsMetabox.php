@@ -204,8 +204,8 @@ class PlanIntegrationsMetabox
         ?>
         <style>
             #pp-form-builder-metabox .ppress-plan-integrations ul.pp-tabs li a::before {
-                font-family:none;
-                content:none;
+                font-family: none;
+                content: none;
             }
 
             #pp-form-builder-metabox .pp-form-builder_options_panel label {
@@ -296,7 +296,7 @@ class PlanIntegrationsMetabox
             }
 
         </style>
-        <?php echo  ppress_minify_css(ob_get_clean()); ?>
+        <?php echo ppress_minify_css(ob_get_clean()); ?>
         <div class="panel-wrap pp-form-builder-mb-data">
             <ul class="pp-form-builder-mb-data_tabs pp-tabs" style="width:22%">
                 <?php foreach ($tabs as $key => $value) : $key = esc_attr($key); ?>
@@ -311,10 +311,10 @@ class PlanIntegrationsMetabox
                 echo '<div id="' . esc_attr($key) . '_data" class="panel pp-form-builder_options_panel hidden" style="width: 78%">';
 
                 foreach ($fields as $options) {
-                    $field_id = $options['id'];
+                    $field_id = $options['id'] ?? '';
 
                     echo sprintf('<div class="form-field %s_wrap">', $field_id);
-                    echo "<label for=\"$field_id\">" . wp_kses_post($options['label']) . '</label>';
+                    echo "<label for=\"$field_id\">" . wp_kses_post($options['label'] ?? '') . '</label>';
                     echo '<div class="pp-field-row-content">';
                     $this->{$options['type']}($field_id, $options);
                     echo '</div>';

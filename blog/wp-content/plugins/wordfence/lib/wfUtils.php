@@ -1655,10 +1655,11 @@ class wfUtils {
 		return date('D jS F \@ h:i:sA', time() + (3600 * get_option('gmt_offset')));
 	}
 	public static function funcEnabled($func){
-		if(! function_exists($func)){ return false; }
+		if (!function_exists($func)){ return false; }
+		if (!is_callable($func)) { return false; }
 		$disabled = explode(',', ini_get('disable_functions'));
-		foreach($disabled as $f){
-			if($func == $f){ return false; }
+		if (in_array($func, $disabled)) {
+			return false;
 		}
 		return true;
 	}
@@ -3097,6 +3098,55 @@ class wfUtils {
 		if (self::includeOnceIfPresent(ABSPATH . 'wp-includes/class-wp-http-curl.php'))
 			return WP_Http_Curl::test();
 		return false;
+	}
+
+	private static function isValidJsonValue($value) {
+		return json_encode($value) !== false;
+	}
+
+	private static function filterInvalidJsonValues($data, &$modified, &$valid = null) {
+		if (is_array($data)) {
+			$modified = array();
+			$filtered = array();
+			$valid = true;
+			foreach ($data as $key => $value) {
+				$value = self::filterInvalidJsonValues($value, $itemModified, $itemValid);
+				if (($itemValid || $itemModified) && self::isValidJsonValue(array($key => $value))) {
+					$filtered[$key] = $value;
+					if ($itemModified)
+						$modified[$key] = $itemModified;
+				}
+				else {
+					$valid = false;
+				}
+			}
+			return $filtered;
+		}
+		else {
+			$modified = false;
+			$valid = self::isValidJsonValue($data);
+			if ($valid) {
+				return $data;
+			}
+			else if (is_string($data)) {
+				$modified = true;
+				return base64_encode($data);
+			}
+			else {
+				return null;
+			}
+		}
+	}
+
+	public static function jsonEncodeSafely($data) {
+		$encoded = json_encode($data);
+		if ($encoded === false) {
+			$data = self::filterInvalidJsonValues($data, $modified);
+			if ($modified)
+				$data['__modified__'] = $modified;
+			$encoded = json_encode($data);
+		}
+		return $encoded;
 	}
 
 }

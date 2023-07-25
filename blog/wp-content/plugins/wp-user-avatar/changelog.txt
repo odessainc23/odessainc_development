@@ -1,5 +1,66 @@
 ﻿== Changelog ==
 
+= 4.12.0 =
+* Added setting for [disabling subscription auto-renewals](https://profilepress.com/article/auto-renewal-settings/).
+* Extended Tutor LMS addon to include [creating custom student](https://profilepress.com/article/custom-tutor-lms-student-registration-form/) and [instructor registration forms](https://profilepress.com/article/custom-tutor-lms-instructor-registration-form/).
+* Added ppress_stripe_disable_maybe_update_webhook filter to disable automatic stripe webhook regeneration.
+* Fixed form preview bug when using a block theme.
+
+= 4.11.0 =
+* Added [Tutor LMS](https://profilepress.com/addons/tutor-lms/) integration.
+* Added [Stripe Tax](https://profilepress.com/article/setting-up-stripe/#Stripe_Tax_Support) support.
+* Security Fix: DOM-based XSS on registration form.
+* Fixed Stripe bug where webhook details are missing after disconnection and reconnection.
+* Fixed Stripe bug where billing details not shown when tax is enabled and is offsite checkout
+* Improved PHP 8 compatibility
+
+= 4.10.3 =
+* Added ppress_myaccount_billing_details_disable_$field_key filter.
+* Added ppress_dpf_default_tab filter.
+* Updated the empty profile state text for visitors.
+* Fixed bug where subscription ID was not set after activation.
+* Updated charting library.
+
+= 4.10.2 =
+* Integrated Stripe Customer Portal for updating payment methods.
+* Fixed bug where stripe checkout might failed if phone field is not present.
+* Fixed bug where subscription expiration and renewal reminder didnt work for trial subscriptions.
+* Fixed bug where some placeholders weren't working for new user admin email notification.
+* Made remember me checkbox for login form unchecked by default.
+* Correct missing filter hook arguments.
+* Hardened security of myaccount subscription actions.
+* Added ppress_subscription_deleted action hook.
+* Added ppress_added_plan_role_to_customer and ppress_removed_plan_role_from_customer filters.
+* Added filter ppress_subscription_formatted_expiration_date.
+
+= 4.10.1 =
+* Fixed bug where stripe checkout doesn't work again on error.
+* Added Plan selection on group checkout as select dropdown.
+
+= 4.10.0 =
+* Migrated Stripe integration from card to payment element.
+* Fixed bug where logout redirect on group checkout goes to individual plan checkout url.
+* Fixed bug with stripe checkout not working when search is disabled in certain countries.
+
+= 4.9.0 =
+* New: [Membership plan group](https://profilepress.com/article/membership-plan-groups/?ref=changelog).
+* Added [Restricted Page Template](https://profilepress.com/article/adding-content-protection-rules/?ref=changelog#rpt) option for content protection.
+* Added ppress_public_js_dependencies filter.
+* Added filters to checkout fields.
+* Added ppress_customer_active_subscriptions filter.
+* Added ppress_checkout_sidebar_order_expiration_date_time filter.
+* Added ppress_stripe_price_search_args filter.
+* Added ppress_checkout_disable_validate_field filter.
+* Added has_any_status_subscription method to customer entity.
+
+= 4.8.0 =
+* Pro: [LearnDash addon](https://profilepress.com/addons/learndash/?ref=changelog).
+* Added filter for skipping custom fields in checkout.
+* Added ppress_plan_expiration_datetime filter.
+* Fixed bug where loggedout condition for elementor content restriction wasn’t working.
+* Fixed PHP Fatal error: Call to a member function wpua_get_default_avatar_url() on null.
+* Removed settings icon from form builder metabox form settings.
+
 = 4.7.0 =
 * Pro: [Paystack addon](https://profilepress.com/addons/paystack/?ref=changelog).
 * Fixed bug where subscription was still active even when order was refunded.

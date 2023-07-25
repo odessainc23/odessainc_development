@@ -16,7 +16,9 @@ if ( ! is_user_logged_in()) return;
 
 $sub = SubscriptionFactory::fromId(ppressGET_var('sub_id'));
 
-$customer_id = CustomerFactory::fromUserId(get_current_user_id())->id;
+$customer = CustomerFactory::fromUserId(get_current_user_id());
+
+$customer_id = $customer->id;
 
 $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_method());
 
@@ -29,6 +31,9 @@ $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_me
             printf('<p class="profilepress-myaccount-alert pp-alert-danger">%s</p>', esc_html__('Invalid subscription', 'wp-user-avatar'));
         else :
             $plan = ppress_get_plan($sub->plan_id);
+
+            $plan_group_id = $plan->get_group_id();
+
             $sub_orders = $sub->get_all_orders();
 
             $parent_order = OrderFactory::fromId($sub->parent_order_id);
@@ -39,12 +44,18 @@ $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_me
             }
 
             /**
-             * @todo when plan group launches, do not show resubscribe button if expired/cancelled plan belongs to
+             * When plan group launches, we do not want to show resubscribe button if expired/cancelled plan belongs to
              * a plan group where the customer has an active plan
              */
-            if ($sub->is_cancelled() || $sub->is_expired()) {
+            if ( ! $customer->has_active_group_subscription($plan_group_id) && ! $sub->is_active()) {
                 $actions['resubscribe'] = esc_html__('Resubscribe', 'wp-user-avatar');
             }
+
+            if ($plan_group_id && ! $sub->is_pending()) {
+                $actions['change_plan'] = esc_html__('Change Plan', 'wp-user-avatar');
+            }
+
+            $actions = apply_filters('ppress_myaccount_subscription_actions', $actions, $sub, $payment_method, $customer);
 
             do_action('ppress_myaccount_subscription_action_status', $sub, ppressGET_var('ppress-myac-sub-message'));
             ?>
@@ -90,7 +101,7 @@ $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_me
                                     <?php foreach ($actions as $action => $label) :
                                         $url = wp_nonce_url(
                                             remove_query_arg('ppress-myac-sub-message', add_query_arg(['ppress_myac_sub_action' => $action, 'sub_id' => $sub->id])),
-                                            $sub->id . $action
+                                            $sub->id . $action . get_current_user_id()
                                         ); ?>
                                         <a href="<?php echo esc_url($url); ?>" class="ppress-myac-action ppress-<?php echo sanitize_html_class($action) ?> ppress-confirm-delete"><?php echo esc_html($label); ?></a>
                                     <?php endforeach; ?>

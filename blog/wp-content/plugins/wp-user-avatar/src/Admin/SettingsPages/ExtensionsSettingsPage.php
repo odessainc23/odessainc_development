@@ -97,7 +97,7 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
                     <div class="notice-content">
                             <span>
                                 <?= sprintf(
-                                    esc_html__('Upgrade to Premium to unlock extensions and other great features. As a valued ProfilePress Lite user, you will %1$sreceive 10%3$s off%2$s your purchase, automatically applied at checkout!', 'wp-user-avatar'),
+                                    esc_html__('Upgrade to unlock premium extensions and other great features. As a valued ProfilePress Lite user, you will %1$sreceive 10%3$s off%2$s your purchase, automatically applied at checkout!', 'wp-user-avatar'),
                                     '<span class="ppress-extensions-upsell-highlight">', '</span>', '%'
                                 ) ?>
                             </span>
@@ -141,7 +141,7 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
                             </div>
                             <div class="ppress-extension-card-footer">
 
-                                <?php if (EM::is_premium() && class_exists($extension_class) && $extension_class::$instance_flag) : ?>
+                                <?php if (class_exists($extension_class) && $extension_class::$instance_flag) : ?>
 
                                     <?php if (true !== $dependency_available) : ?>
                                         <span class="ppress-extension-status">

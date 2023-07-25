@@ -279,7 +279,7 @@ CSS;
 
     public function password_reset_success_message()
     {
-        return '<div class="lucidSuccess">Check your email for further instruction.</div>';
+        return '<div class="lucidSuccess">Check your email for further instructions.</div>';
     }
 
     public function edit_profile_success_message()

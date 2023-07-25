@@ -8,9 +8,48 @@ use ProfilePress\Core\Classes\PROFILEPRESS_sql;
 
 class PostContent
 {
+    public $restrictedAccessConditions = [];
+
     public function __construct()
     {
         add_filter('the_content', [$this, 'the_content'], PHP_INT_MAX - 1);
+
+        add_action('wp', function () {
+
+            $is_restricted = $this->is_post_content_restricted();
+
+            if ($is_restricted && $this->can_use_restricted_template()) {
+
+                $this->restrictedAccessConditions = $is_restricted;
+
+                if (ppress_var($is_restricted, 'noaccess_action_message_style') == 'custom_template') {
+                    add_filter('template_include', [$this, 'restricted_page_template'], PHP_INT_MAX - 1);
+                }
+            }
+
+        }, -1);
+    }
+
+    /**
+     * Checks whether current page can use custom template.
+     *
+     * @return bool
+     */
+    public function can_use_restricted_template()
+    {
+        return apply_filters('ppress_content_protection_can_use_restricted_template', is_singular());
+    }
+
+    public function restricted_page_template($template)
+    {
+        $path = dirname(__FILE__) . '/restricted-template.php';
+        if (file_exists($path)) {
+            load_template($path, true, $this->restrictedAccessConditions);
+
+            return;
+        }
+
+        return $template;
     }
 
     public function protection_disabled()
@@ -28,50 +67,71 @@ class PostContent
         return in_array(true, $checks, true);
     }
 
-    public function the_content($content)
+    /**
+     * @return bool
+     */
+    public function is_post_content_restricted()
     {
-        if ( ! $this->protection_disabled()) {
+        static $is_restricted = null;
 
-            $metas = PROFILEPRESS_sql::get_meta_data_by_key(SettingsPage::META_DATA_KEY);
+        if (is_null($is_restricted)) {
 
-            if (is_array($metas)) {
+            $is_restricted = false;
 
-                foreach ($metas as $meta) {
+            if ( ! $this->protection_disabled()) {
 
-                    $meta = ppress_var($meta, 'meta_value', []);
+                $metas = PROFILEPRESS_sql::get_meta_data_by_key(SettingsPage::META_DATA_KEY);
 
-                    if ( ! in_array(ppress_var($meta, 'is_active', true), ['true', true], true)) continue;
+                if (is_array($metas)) {
 
-                    $access_condition = ppress_var($meta, 'access_condition', []);
+                    foreach ($metas as $meta) {
 
-                    $noaccess_action = ppress_var($access_condition, 'noaccess_action');
+                        $meta = ppress_var($meta, 'meta_value', []);
 
-                    if ('message' != $noaccess_action) continue;
+                        if ( ! in_array(ppress_var($meta, 'is_active', true), ['true', true], true)) continue;
 
-                    $who_can_access = ppress_var($access_condition, 'who_can_access', 'everyone');
+                        $access_condition = ppress_var($meta, 'access_condition', []);
 
-                    $access_roles = ppress_var($access_condition, 'access_roles', []);
+                        $noaccess_action = ppress_var($access_condition, 'noaccess_action');
 
-                    $access_wp_users = ppress_var($access_condition, 'access_wp_users', []);
+                        if ('message' != $noaccess_action) continue;
 
-                    $access_membership_plans = ppress_var($access_condition, 'access_membership_plans', []);
+                        $who_can_access = ppress_var($access_condition, 'who_can_access', 'everyone');
 
-                    $noaccess_message_type = ppress_var($access_condition, 'noaccess_action_message_type', 'global');
+                        $access_roles = ppress_var($access_condition, 'access_roles', []);
 
-                    $custom_message = ppress_var($access_condition, 'noaccess_action_message_custom', 'global');
+                        $access_wp_users = ppress_var($access_condition, 'access_wp_users', []);
 
-                    $noaccess_action_message_style = ppress_var($access_condition, 'noaccess_action_message_style', 'none');
+                        $access_membership_plans = ppress_var($access_condition, 'access_membership_plans', []);
 
-                    if (Checker::content_match($meta['content'])) {
+                        if (Checker::content_match($meta['content'])) {
 
-                        if (Checker::is_blocked($who_can_access, $access_roles, $access_wp_users, $access_membership_plans)) {
-                            $content = $this->get_restricted_message($noaccess_message_type, $custom_message, $noaccess_action_message_style);
-                        }
-
-                        break;
-                    };
+                            if (Checker::is_blocked($who_can_access, $access_roles, $access_wp_users, $access_membership_plans)) {
+                                $is_restricted = $access_condition;
+                            }
+                            break;
+                        };
+                    }
                 }
             }
+        }
+
+        return $is_restricted;
+    }
+
+    public function the_content($content)
+    {
+        $access_condition = $this->is_post_content_restricted();
+
+        if (false !== $access_condition) {
+
+            $noaccess_message_type = ppress_var($access_condition, 'noaccess_action_message_type', 'global');
+
+            $custom_message = ppress_var($access_condition, 'noaccess_action_message_custom', 'global');
+
+            $noaccess_action_message_style = ppress_var($access_condition, 'noaccess_action_message_style', 'none');
+
+            $content = $this->get_restricted_message($noaccess_message_type, $custom_message, $noaccess_action_message_style);
         }
 
         return $content;
@@ -111,7 +171,7 @@ class PostContent
 
     public function parse_message($message)
     {
-        return do_shortcode(wpautop($message));
+        return apply_filters('ppress_content_protection_parsed_message', do_shortcode(wpautop($message)), $message);
     }
 
     public function style_paywall_message($message, $style = 'none')

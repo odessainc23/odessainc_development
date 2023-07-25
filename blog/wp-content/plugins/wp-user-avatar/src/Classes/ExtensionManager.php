@@ -29,6 +29,8 @@ class ExtensionManager
     const CUSTOM_FIELDS = 'custom_fields';
     const TWOFA = 'TWOFA';
     const METERED_PAYWALL = 'metered_paywall';
+    const LEARNDASH = 'learndash';
+    const TUTORLMS = 'tutorlms';
 
     public static function is_premium()
     {
@@ -60,6 +62,8 @@ class ExtensionManager
             self::CUSTOM_FIELDS          => 'ProfilePress\Libsodium\CustomProfileFields\Init',
             self::TWOFA                  => 'ProfilePress\Libsodium\TWOFA\Init',
             self::METERED_PAYWALL        => 'ProfilePress\Libsodium\MeteredPaywall\Init',
+            self::LEARNDASH              => 'ProfilePress\Libsodium\Learndash\Init',
+            self::TUTORLMS               => 'ProfilePress\Core\Integrations\TutorLMS\Init'
         ];
     }
 
@@ -157,24 +161,6 @@ class ExtensionManager
                 'description' => esc_html__('Let guest and visitors view limited number of restricted content.', 'wp-user-avatar'),
                 'icon'        => '<span class="dashicons dashicons-welcome-view-site"></span>'
             ],
-            self::JOIN_BUDDYPRESS_GROUPS => [
-                'title'        => esc_html__('Join BuddyPress Groups', 'wp-user-avatar'),
-                'url'          => 'https://profilepress.com/addons/join-buddypress-groups/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
-                'description'  => esc_html__('Let users select the BuddyPress groups to join during registration.', 'wp-user-avatar'),
-                'icon'         => '<span class="dashicons dashicons-buddicons-buddypress-logo"></span>',
-                'is_available' => function () {
-                    return class_exists('BuddyPress') ? true : esc_html__('BuddyPress plugin is not active', 'wp-user-avatar');
-                }
-            ],
-            self::BUDDYPRESS_SYNC        => [
-                'title'        => esc_html__('BuddyPress Profile Sync', 'wp-user-avatar'),
-                'url'          => 'https://profilepress.com/addons/buddypress-profile-sync/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
-                'description'  => esc_html__('It provides a 2-way synchronization between WordPress profile fields and BuddyPress extended profile.', 'wp-user-avatar'),
-                'icon'         => '<span class="dashicons dashicons-buddicons-buddypress-logo"></span>',
-                'is_available' => function () {
-                    return class_exists('BuddyPress') ? true : esc_html__('BuddyPress plugin is not active', 'wp-user-avatar');
-                }
-            ],
             self::MULTISITE              => [
                 'title'        => esc_html__('Site Creation', 'wp-user-avatar'),
                 'url'          => 'https://profilepress.com/addons/site-creation/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
@@ -194,6 +180,26 @@ class ExtensionManager
                     return class_exists('WooCommerce') ? true : esc_html__('WooCommerce is not active', 'wp-user-avatar');
                 }
             ],
+            self::TUTORLMS               => [
+                'title'        => esc_html__('Tutor LMS', 'wp-user-avatar'),
+                'setting_url'  => PPRESS_SETTINGS_SETTING_GENERAL_PAGE . '#pp_tutorlms_settings',
+                'url'          => 'https://profilepress.com/addons/tutor-lms/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
+                'description'  => esc_html__('Sell access to Tutor LMS courses, and enroll users after registration to specific courses.', 'wp-user-avatar'),
+                'icon'         => '<span class="dashicons dashicons-welcome-learn-more"></span>',
+                'is_available' => function () {
+                    return class_exists('\TUTOR\TUTOR') ? true : esc_html__('Tutor LMS is not active', 'wp-user-avatar');
+                }
+            ],
+            self::LEARNDASH              => [
+                'title'        => esc_html__('LearnDash', 'wp-user-avatar'),
+                'setting_url'  => PPRESS_SETTINGS_SETTING_GENERAL_PAGE . '#pp_ld_settings',
+                'url'          => 'https://profilepress.com/addons/learndash/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
+                'description'  => esc_html__('Sell access to LearnDash courses and groups, enroll users after registration to specific courses and groups, and let users view their enrolled courses from the My Account page.', 'wp-user-avatar'),
+                'icon'         => '<svg fill="none" height="84" viewBox="0 0 70 84" width="70" xmlns="http://www.w3.org/2000/svg"><g fill="#1e1e1e"><path d="m34.5815 21.2887c-1.1646-.0025-2.3181.225-3.3945.6695s-2.0544 1.0972-2.8779 1.9206c-.8234.8235-1.4761 1.8015-1.9206 2.8778-.4445 1.0764-.672 2.23-.6694 3.3945v51.2478c.0121.4305.1885.84.4931 1.1445.3045.3046.714.481 1.1445.4931 4.2642-.0076 8.3516-1.705 11.3669-4.7202 3.0153-3.0153 4.7126-7.1027 4.7203-11.367v-36.7982c.0025-1.1645-.225-2.3181-.6695-3.3945-.4444-1.0763-1.0971-2.0543-1.9206-2.8778-.8235-.8234-1.8015-1.4761-2.8778-1.9206-1.0764-.4445-2.23-.672-3.3945-.6695z"/><path d="m8.86236 46.3348c-1.16454-.0025-2.31812.225-3.3945.6695-1.07638.4444-2.05437 1.0971-2.87783 1.9206-.82345.8235-1.47616 1.8014-1.920633 2.8778-.444478 1.0764-.6719769 2.23-.669437 3.3945v27.1652c.0121336.4305.188563.84.493085 1.1445s.714045.481 1.144535.4931c4.26423-.0076 8.35163-1.705 11.36692-4.7203 3.0153-3.0152 4.7126-7.1026 4.7202-11.3669v-12.7156c.0026-1.1645-.2249-2.3181-.6694-3.3945s-1.0972-2.0543-1.9206-2.8778c-.8235-.8235-1.8015-1.4762-2.8778-1.9206-1.0764-.4445-2.23-.672-3.39454-.6695z"/><path d="m60.3036.00002103c-1.1646-.00253989-2.3181.22495897-3.3945.66943597-1.0764.444473-2.0544 1.097183-2.8778 1.920633-.8235.82346-1.4762 1.80145-1.9207 2.87783s-.672 2.22996-.6694 3.3945v73.11478c.0121.4305.1885.84.4931 1.1445.3045.3045.714.481 1.1445.4931 4.2642-.0076 8.3516-1.705 11.3669-4.7203 3.0153-3.0152 4.7126-7.1027 4.7203-11.3669v-58.66518c.0025-1.16454-.225-2.31812-.6695-3.3945-.4444-1.07638-1.0971-2.05437-1.9206-2.87783-.8235-.82345-1.8015-1.47616-2.8778-1.920633-1.0764-.444477-2.23-.67197586-3.3945-.66943597z"/></g></svg>',
+                'is_available' => function () {
+                    return class_exists('\SFWD_LMS') ? true : esc_html__('LearnDash is not active', 'wp-user-avatar');
+                }
+            ],
             self::MAILCHIMP              => [
                 'title'       => esc_html__('Mailchimp', 'wp-user-avatar'),
                 'url'         => 'https://profilepress.com/addons/mailchimp/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
@@ -207,6 +213,24 @@ class ExtensionManager
                 'setting_url' => add_query_arg(['view' => 'integrations', 'section' => 'campaign-monitor'], PPRESS_SETTINGS_SETTING_PAGE),
                 'description' => esc_html__('Subscribe members to your Campaign Monitor lists when they register or subscribe to a membership plan. It can also automatically sync membership and profile changes with Campaign Monitor.', 'wp-user-avatar'),
                 'icon'        => '<span class="dashicons dashicons-email"></span>'
+            ],
+            self::JOIN_BUDDYPRESS_GROUPS => [
+                'title'        => esc_html__('Join BuddyPress Groups', 'wp-user-avatar'),
+                'url'          => 'https://profilepress.com/addons/join-buddypress-groups/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
+                'description'  => esc_html__('Let users select the BuddyPress groups to join during registration.', 'wp-user-avatar'),
+                'icon'         => '<span class="dashicons dashicons-buddicons-buddypress-logo"></span>',
+                'is_available' => function () {
+                    return class_exists('BuddyPress') ? true : esc_html__('BuddyPress plugin is not active', 'wp-user-avatar');
+                }
+            ],
+            self::BUDDYPRESS_SYNC        => [
+                'title'        => esc_html__('BuddyPress Profile Sync', 'wp-user-avatar'),
+                'url'          => 'https://profilepress.com/addons/buddypress-profile-sync/?utm_source=liteplugin&utm_medium=extension-page&utm_campaign=learn-more',
+                'description'  => esc_html__('It provides a 2-way synchronization between WordPress profile fields and BuddyPress extended profile.', 'wp-user-avatar'),
+                'icon'         => '<span class="dashicons dashicons-buddicons-buddypress-logo"></span>',
+                'is_available' => function () {
+                    return class_exists('BuddyPress') ? true : esc_html__('BuddyPress plugin is not active', 'wp-user-avatar');
+                }
             ],
             self::AKISMET                => [
                 'title'       => esc_html__('Akismet', 'wp-user-avatar'),
@@ -229,8 +253,7 @@ class ExtensionManager
 
     public static function is_enabled($extension_id)
     {
-        return ExtensionManager::is_premium() &&
-               class_exists(ppress_var(self::class_map(), $extension_id)) &&
+        return class_exists(ppress_var(self::class_map(), $extension_id)) &&
                ppress_var(get_option(self::DB_OPTION_NAME, []), $extension_id) == 'true';
     }
 }

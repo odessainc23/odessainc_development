@@ -334,6 +334,6 @@ HTML;
 
     public function password_reset_success_message()
     {
-        return '<div>Check your email for further instruction</div>';
+        return '<div>Check your email for further instructions</div>';
     }
 }

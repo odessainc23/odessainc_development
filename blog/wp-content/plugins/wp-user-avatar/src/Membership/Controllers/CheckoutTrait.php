@@ -168,10 +168,14 @@ trait CheckoutTrait
             }
         }
 
+        $order_type = CheckoutSessionData::get_order_type($plan_id);
+
+        if ( ! $order_type) $order_type = OrderType::NEW_ORDER;
+
         $order->order_key      = OrderService::init()->generate_order_key();
         $order->plan_id        = $plan_id;
         $order->customer_id    = $customer_id;
-        $order->order_type     = OrderType::NEW_ORDER;
+        $order->order_type     = $order_type;
         $order->mode           = ppress_get_payment_mode();
         $order->payment_method = sanitize_text_field($payment_method);
         $order->status         = OrderStatus::PENDING;
@@ -232,6 +236,8 @@ trait CheckoutTrait
         foreach ($account_info_fields as $field_key => $field_settings) {
 
             if ($this->should_skip_validation($field_key, $field_settings)) continue;
+
+            if (apply_filters('ppress_checkout_disable_validate_field_' . $field_key, false)) continue;
 
             $should_validate_fields[] = $field_key;
 
@@ -342,7 +348,7 @@ trait CheckoutTrait
         $valid_userdata_fields = array_keys(CF::standard_account_info_fields()) + ['ppmb_password_present'];
 
         $real_userdata = array_filter(apply_filters('ppress_checkout_registration_user_data', [
-            'user_login'   => isset($username) && ! empty($username) ? $username : $email,
+            'user_login'   => ! empty($username) ? $username : (is_user_logged_in() ? wp_get_current_user()->user_login : $email),
             'user_pass'    => isset($password) ? $password : '',
             'user_email'   => $email,
             'user_url'     => ppressPOST_var(CF::ACCOUNT_WEBSITE, ''),
@@ -388,11 +394,21 @@ trait CheckoutTrait
             $is_user_update      = true;
             $real_userdata['ID'] = $user_id;
             $user_id             = wp_update_user($real_userdata);
+
+            if (is_wp_error($user_id)) {
+                // because we sometimes save username the same as email, we dont want this error "Sorry, that username is not available" breaking checkout.
+                if ($user_id->get_error_code() == 'existing_user_email_as_login') {
+                    $user_id = get_current_user_id();
+                } else {
+                    return $user_id;
+                }
+            }
+
         } else {
             $user_id = wp_insert_user($real_userdata);
-        }
 
-        if (is_wp_error($user_id)) return $user_id;
+            if (is_wp_error($user_id)) return $user_id;
+        }
 
         $customer_id = $this->create_customer($user_id);
 

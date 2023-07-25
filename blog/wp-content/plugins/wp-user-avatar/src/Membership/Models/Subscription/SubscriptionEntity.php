@@ -2,6 +2,7 @@
 
 namespace ProfilePress\Core\Membership\Models\Subscription;
 
+use ProfilePress\Core\Base;
 use ProfilePress\Core\Classes\PROFILEPRESS_sql;
 use ProfilePress\Core\Membership\Models\AbstractModel;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
@@ -39,6 +40,8 @@ use ProfilePressVendor\Carbon\CarbonImmutable;
  */
 class SubscriptionEntity extends AbstractModel implements ModelInterface
 {
+    const DB_META_KEY = 'sbmeta';
+
     /**
      * Subscription ID
      *
@@ -168,6 +171,11 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         return absint($this->id);
     }
 
+    /**
+     * Check if a subscription is active and not expired.
+     *
+     * @return bool
+     */
     public function is_active()
     {
         $ret = false;
@@ -227,6 +235,11 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         }
 
         return apply_filters('ppress_subscription_is_expired', $ret, $this->id, $this);
+    }
+
+    public function is_pending()
+    {
+        return $this->status == SubscriptionStatus::PENDING;
     }
 
     public function is_cancelled()
@@ -381,7 +394,7 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
             $date = ppress_format_date($this->expiration_date);
         }
 
-        return $date;
+        return apply_filters('ppress_subscription_formatted_expiration_date', $date, $this);
     }
 
     public function get_notes()
@@ -458,6 +471,8 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         if ($user instanceof \WP_User) {
             $user->add_role($plan->user_role);
         }
+
+        do_action('ppress_added_plan_role_to_customer', $this);
     }
 
     public function remove_plan_role_from_customer()
@@ -470,6 +485,8 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         if ($user instanceof \WP_User) {
             $user->remove_role($plan->user_role);
         }
+
+        do_action('ppress_removed_plan_role_from_customer', $this);
     }
 
     /**
@@ -489,6 +506,8 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         }
 
         $sub_id = $this->save();
+
+        $this->id = $sub_id;
 
         $this->add_plan_role_to_customer();
 
@@ -516,6 +535,8 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         }
 
         $sub_id = $this->save();
+
+        $this->id = $sub_id;
 
         $this->add_plan_role_to_customer();
 
@@ -610,7 +631,7 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
      *
      * @return false|void
      */
-    public function cancel($gateway_cancel = false)
+    public function cancel($gateway_cancel = false, $cancel_immediately = false)
     {
         if ($this->is_cancelled()) return false;
 
@@ -621,7 +642,11 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         $this->update_status(SubscriptionStatus::CANCELLED);
 
         if ($gateway_cancel === true && $sub->can_cancel()) {
-            PaymentMethods::get_instance()->get_by_id($this->get_payment_method())->cancel($sub);
+            if ($cancel_immediately === true) {
+                PaymentMethods::get_instance()->get_by_id($this->get_payment_method())->cancel_immediately($sub);
+            } else {
+                PaymentMethods::get_instance()->get_by_id($this->get_payment_method())->cancel($sub);
+            }
         }
 
         if ($this->is_lifetime()) {
@@ -786,5 +811,74 @@ class SubscriptionEntity extends AbstractModel implements ModelInterface
         do_action('ppress_membership_add_subscription', $result, $this);
 
         return $result;
+    }
+
+    public function get_meta_flag_id()
+    {
+        return sprintf('%s_%d', self::DB_META_KEY, $this->get_id());
+    }
+
+    /**
+     * @param $meta_key
+     * @param $meta_value
+     *
+     * @return int|false
+     */
+    public function update_meta($meta_key, $meta_value)
+    {
+        global $wpdb;
+
+        $preflight = $this->get_meta($meta_key);
+
+        if ( ! $preflight) {
+
+            return $wpdb->insert(
+                Base::meta_data_db_table(),
+                ['flag' => $this->get_meta_flag_id(), 'meta_key' => $meta_key, 'meta_value' => $meta_value],
+                ['%s', '%s', '%s']
+            );
+
+        } else {
+
+            return $wpdb->update(
+                Base::meta_data_db_table(),
+                ['meta_value' => $meta_value],
+                ['flag' => $this->get_meta_flag_id(), 'meta_key' => $meta_key],
+                ['%s'],
+                ['%s', '%s']
+            );
+        }
+    }
+
+    /**
+     * @param $meta_key
+     *
+     * @return string|null
+     */
+    public function get_meta($meta_key)
+    {
+        global $wpdb;
+
+        $table = Base::meta_data_db_table();
+
+        return $wpdb->get_var(
+            $wpdb->prepare(
+                "SELECT meta_value FROM $table WHERE flag = %s AND meta_key = %s",
+                $this->get_meta_flag_id(), $meta_key
+            )
+        );
+    }
+
+    public function delete_meta($meta_key)
+    {
+        global $wpdb;
+
+        $result = $wpdb->delete(
+            Base::meta_data_db_table(),
+            ['flag' => $this->get_meta_flag_id(), 'meta_key' => $meta_key],
+            ['%s', '%s']
+        );
+
+        return $result !== false;
     }
 }

@@ -2,11 +2,60 @@
 
 namespace ProfilePress\Core\Membership\Controllers;
 
+use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
+use ProfilePress\Core\Membership\Models\Group\GroupFactory;
+use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
+use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
+
 class FrontendController extends BaseController
 {
     public function __construct()
     {
-        add_action('wp', array($this, 'prevent_caching'), 0);
+        add_action('wp', [$this, 'prevent_caching'], 0);
+        add_action('wp', [$this, 'change_plan_shim'], 0);
+    }
+
+    public function change_plan_shim()
+    {
+        if (ppress_is_checkout()) {
+
+            if (is_user_logged_in() && isset($_GET['plan'])) {
+
+                $plan_group_id = PlanFactory::fromId(intval($_GET['plan']))->get_group_id();
+
+                if (is_int($plan_group_id)) {
+
+                    $plan_group = GroupFactory::fromId($plan_group_id);
+
+                    $customer = CustomerFactory::fromUserId(get_current_user_id());
+
+                    foreach ($plan_group->get_plan_ids() as $plan_id) {
+                        if ($sub = $customer->has_active_subscription($plan_id, true)) {
+                            wp_safe_redirect(ppress_plan_checkout_url($sub->get_id(), true));
+                            exit;
+                        }
+                    }
+                }
+            }
+
+            if (isset($_GET['change_plan'])) {
+                $sub = SubscriptionFactory::fromId(intval($_GET['change_plan']));
+                if ($sub->exists()) {
+                    $_GET['plan'] = $sub->get_plan_id();
+                }
+            }
+
+            if (isset($_GET['group'])) {
+                $group = GroupFactory::fromId(intval($_GET['group']));
+                if ($group->exists()) {
+                    $group_plan_ids = $group->get_plan_ids();
+                    if ( ! empty($group_plan_ids)) {
+                        $_GET['plan'] = $group->get_default_plan_id();
+                    }
+                }
+            }
+        }
     }
 
     /**

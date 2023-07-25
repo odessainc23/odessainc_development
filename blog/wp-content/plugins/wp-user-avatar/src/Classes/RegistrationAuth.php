@@ -219,7 +219,7 @@ class RegistrationAuth
             foreach ($_POST['required-fields'] as $key => $value) {
 
                 if (empty($_POST[$key]) && empty($_FILES[$key])) {
-                    $reg_errors->add('required_field_empty', sprintf(__('%s field is required', 'wp-user-avatar'), $value));
+                    $reg_errors->add('required_field_empty', sprintf(__('%s field is required', 'wp-user-avatar'), sanitize_text_field($value)));
                     // stop looping if a required field is found empty.
                     break;
                 }

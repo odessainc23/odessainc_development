@@ -3,6 +3,7 @@
 namespace ProfilePress\Core\Membership\Services;
 
 use ProfilePress\Core\Base;
+use ProfilePress\Core\Membership\Controllers\CheckoutSessionData;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
 use ProfilePress\Core\Membership\Models\Coupon\CouponUnit;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
@@ -11,12 +12,15 @@ use ProfilePress\Core\Membership\Models\Order\OrderEntity as OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
 use ProfilePress\Core\Membership\Models\Order\OrderType;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionBillingFrequency;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionStatus;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionTrialPeriod;
 use ProfilePress\Core\Membership\Repositories\OrderRepository;
 use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 use ProfilePress\Core\ShortcodeParser\MyAccount\MyAccountTag;
+use ProfilePressVendor\Carbon\CarbonImmutable;
 
 class OrderService
 {
@@ -86,6 +90,135 @@ class OrderService
     }
 
     /**
+     * Handle calculating a percentage/fraction (proration) we should charge the
+     * user for based on the current day of the month before their next bill cycle.
+     * To use yourself, implement a getSubscription method which returns an object
+     * containing current_period_start and current_period_end DateTime objects.
+     *
+     * @param string|\Datetime $currentPeriodStart
+     * @param string|\Datetime $currentPeriodEnd
+     *
+     * @return  float
+     */
+    protected function prorateUpcomingBillingCycle($currentPeriodStart, $currentPeriodEnd)
+    {
+        $now = CarbonImmutable::now('UTC')->toDateTime();
+
+        if (is_string($currentPeriodStart)) {
+            $currentPeriodStart = CarbonImmutable::parse($currentPeriodStart, 'UTC')->toDateTime();
+        }
+
+        if (is_string($currentPeriodEnd)) {
+            $currentPeriodEnd = CarbonImmutable::parse($currentPeriodEnd, 'UTC')->toDateTime();
+        }
+
+        // get the number of second difference between the cycle start and end date
+        $currentPeriodStartEpoch = (int)$currentPeriodStart->format('U');
+        $currentPeriodEndEpoch   = (int)$currentPeriodEnd->format('U');
+        $nowEpoch                = (int)$now->format('U');
+
+        // if we aren't between the start and end of the subscription period, we have a problem
+        // hence we return 0.
+        if ($nowEpoch < $currentPeriodStartEpoch || $nowEpoch > $currentPeriodEndEpoch) {
+            return 0;
+        }
+
+        // get the difference of the start and end time in seconds
+        $epochDifference = $currentPeriodEndEpoch - $currentPeriodStartEpoch;
+
+        // get the prorated number of seconds till the end of the subscription period
+        $remainingSecondsInPeriod = $currentPeriodEndEpoch - $nowEpoch;
+
+        // return fraction of the total seconds in the current billing period
+        return $remainingSecondsInPeriod / $epochDifference;
+    }
+
+    /**
+     * @param int $from_sub_id Subscription ID being upgraded from
+     * @param int $to_plan_id Plan ID being upgraded to
+     * @param string $old_price
+     * @param string $new_price
+     *
+     * @return mixed|string|null
+     *
+     * @see https://gist.github.com/cballou/774c5a15f9771314f0d1
+     *
+     */
+    protected function get_time_based_pro_rated_upgrade_cost($from_sub_id, $to_plan_id, $old_price, $new_price)
+    {
+        $fromSub = SubscriptionFactory::fromId($from_sub_id);
+        $toPlan  = ppress_get_plan($to_plan_id);
+
+        // If the subscription being upgraded is lifetime, we cannot use time based pro-ration, so fall back to cost based.
+        if ($fromSub->is_lifetime()) {
+            return Calculator::init($new_price)->minus($old_price)->val();
+        }
+
+        $subscription_length_seconds = CarbonImmutable::parse($fromSub->created_date, 'UTC')->diffInSeconds(CarbonImmutable::parse($fromSub->expiration_date, 'UTC'));
+        $seconds_until_expires       = CarbonImmutable::parse($fromSub->expiration_date, 'UTC')->diffInSeconds(CarbonImmutable::now('UTC'));
+        $seconds_used                = Calculator::init($subscription_length_seconds)->minus($seconds_until_expires)->val();
+
+        // If the subscription has been purchased within the minimum time fall back on cost-based
+        if (apply_filters('ppress_get_time_based_pro_rated_minimum_time', DAY_IN_SECONDS) >= $seconds_used) {
+            return Calculator::init($new_price)->minus($old_price)->val();
+        }
+
+        $credit = 0;
+
+        if ($fromSub->is_active()) {
+            // "Unused" price of current subscription
+            $credit = Calculator::init($old_price)->multipliedBy(
+                $this->prorateUpcomingBillingCycle($fromSub->created_date, $fromSub->expiration_date)
+            )->val();
+        }
+
+        // Lifetime upgrades are calculated differently because the amount of time left is unlimited.
+        if ($toPlan->is_lifetime()) {
+            $prorated = Calculator::init($new_price)->minus($credit)->val();
+        } else {
+            $prorated = Calculator::init($new_price)->minus($credit)->val();
+        }
+
+        return apply_filters('ppress_get_time_based_pro_rated_upgrade_cost', $prorated, $from_sub_id, $to_plan_id);
+    }
+
+    /**
+     * Calculate the prorated cost to upgrade a subscription
+     *
+     * Calculations are based on the time remaining on a subscription instead of a price comparison.
+     *
+     * @param int $from_sub_id
+     * @param int $to_plan_id
+     *
+     * @return string The prorated cost to upgrade the subscription
+     */
+    public function get_pro_rated_upgrade_cost($from_sub_id, $to_plan_id)
+    {
+        $proration_method = ppress_settings_by_key('proration_method', 'cost-based', true);
+
+        $fromSub = SubscriptionFactory::fromId($from_sub_id);
+        $toPlan  = ppress_get_plan($to_plan_id);
+
+        $old_price = Calculator::init($fromSub->get_initial_amount())->minus($fromSub->get_initial_tax())->val();
+        $new_price = $toPlan->get_price();
+
+        $order_type = Calculator::init($old_price)->isGreaterThan($new_price) ? OrderType::DOWNGRADE : OrderType::UPGRADE;
+
+        ppress_session()->set(CheckoutSessionData::ORDER_TYPE, [
+            'plan_id'    => $to_plan_id,
+            'order_type' => $order_type,
+        ]);
+
+        if ($proration_method == 'cost-based') {
+            $prorated = Calculator::init($new_price)->minus($old_price)->val();
+        } else {
+            $prorated = $this->get_time_based_pro_rated_upgrade_cost($from_sub_id, $to_plan_id, $old_price, $new_price);
+        }
+
+        return Calculator::init($prorated)->isNegativeOrZero() ? '0' : $prorated;
+    }
+
+    /**
      * @param $args
      *
      * @return CartEntity
@@ -93,9 +226,10 @@ class OrderService
     public function checkout_order_calculation($args)
     {
         $defaults = [
-            'plan_id'     => 0,
-            'coupon_code' => '',
-            'tax_rate'    => '0'
+            'plan_id'            => 0,
+            'coupon_code'        => '',
+            'tax_rate'           => '0',
+            'change_plan_sub_id' => '0'
         ];
 
         $args = wp_parse_args($args, $defaults);
@@ -106,7 +240,20 @@ class OrderService
 
         $planObj = ppress_get_plan(absint($args['plan_id']));
 
-        $sub_total = $planObj->has_free_trial() ? '0' : $planObj->price;
+        $change_plan_sub_id = intval($args['change_plan_sub_id']);
+
+        $prorated_price_flag = false;
+        $prorated_price      = '0';
+
+        if (
+            $change_plan_sub_id > 0 &&
+            SubscriptionFactory::fromId($change_plan_sub_id)->exists()
+        ) {
+            $prorated_price_flag = true;
+            $prorated_price      = $this->get_pro_rated_upgrade_cost($change_plan_sub_id, absint($args['plan_id']));
+        }
+
+        $sub_total = $planObj->has_free_trial() ? '0' : (true === $prorated_price_flag ? $prorated_price : $planObj->price);
 
         if ($planObj->is_recurring() && ! empty($planObj->signup_fee) && Calculator::init($planObj->signup_fee)->isGreaterThan('0')) {
             $sub_total = Calculator::init($sub_total)->plus($planObj->signup_fee)->val();
@@ -190,6 +337,9 @@ class OrderService
         $recurring_amount = Calculator::init($recurring_tax_amount)->plus($recurring_amount)->val();
 
         $cart                      = new CartEntity();
+        $cart->prorated_price      = $prorated_price;
+        $cart->plan_id             = $planObj->id;
+        $cart->change_plan_sub_id  = $change_plan_sub_id;
         $cart->sub_total           = $sub_total;
         $cart->coupon_code         = $coupon_code;
         $cart->discount_amount     = $discount_amount;

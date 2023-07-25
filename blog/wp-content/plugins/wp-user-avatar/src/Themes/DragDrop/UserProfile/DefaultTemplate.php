@@ -243,7 +243,7 @@ class DefaultTemplate extends AbstractTheme
 
     private function active_tab()
     {
-        $active = 'main';
+        $active = apply_filters('ppress_dpf_default_tab', 'main', $this);
 
         if ( ! empty($_GET['tab'])) {
 
@@ -307,10 +307,15 @@ class DefaultTemplate extends AbstractTheme
             <p class="ppress-dpf-profile-note">
                 <span class="ppress-material-icons">sentiment_dissatisfied</span>
                 <span>
-                        <?= sprintf(
+
+                    <?php if (ppress_is_my_own_profile()) :
+                        printf(
                             __('Your profile is looking a little empty. Why not <a href="%s">add some information</a>?', 'wp-user-avatar'),
                             ppress_edit_profile_url()
-                        ); ?>
+                        );
+                    else :
+                        esc_html_e("This user hasn't added any information to their profile yet. Check back later.", 'wp-user-avatar');
+                    endif; ?>
                 </span>
             </p>
         <?php endif;

@@ -22,7 +22,10 @@ class SettingsFieldsParser
         $field_id    = sanitize_text_field($config['id']);
         $placeholder = esc_attr(ppress_var($config, 'placeholder', ''));
 
-        $field_data = ppressPOST_var($field_id, $this->dbData->$field_id);
+        $field_data = ppressPOST_var(
+            $field_id,
+            isset($this->dbData->$field_id) ? $this->dbData->$field_id : ''
+        );
 
         switch ($config['type']) {
             case 'text':
@@ -71,6 +74,23 @@ class SettingsFieldsParser
                     $is_multiple = ppress_var($config, 'multiple') === true;
                     $name        = $is_multiple ? $config['id'] . '[]' : $config['id'];
                     printf('<select class="%2$s" name="%1$s" id="%3$s"%4$s>', esc_attr($name), esc_attr($this->field_class), $config['id'], $is_multiple ? ' multiple' : '');
+                    foreach ($config['options'] as $option_id => $option_name) {
+                        if (is_array($field_data) || ppress_var($config, 'multiple') === true) {
+                            $field_data = is_array($field_data) ? $field_data : [];
+                            $selected   = in_array($option_id, $field_data) ? 'selected' : '';
+                        } else {
+                            $selected = selected($option_id, $field_data, false);
+                        }
+                        printf('<option value="%1$s" %3$s>%2$s</option>', $option_id, $option_name, $selected);
+                    }
+                    echo '</select>';
+                }
+                break;
+            case 'select2':
+                if (is_array($config['options']) && ! empty($config['options'])) {
+                    $is_multiple = ppress_var($config, 'multiple') === true;
+                    $name        = $is_multiple ? $config['id'] . '[]' : $config['id'];
+                    printf('<select class="ppselect2 %2$s" name="%1$s[]" id="%3$s" multiple>', esc_attr($name), esc_attr($this->field_class), $config['id']);
                     foreach ($config['options'] as $option_id => $option_name) {
                         if (is_array($field_data) || ppress_var($config, 'multiple') === true) {
                             $selected = in_array($option_id, $field_data) ? 'selected' : '';
