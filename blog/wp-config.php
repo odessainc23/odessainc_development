@@ -54,16 +54,16 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 	define( 'DB_HOST', '127.0.0.1' );
 } else {
 	/** The name of the database for WordPress */
-	define( 'DB_NAME', 'odessa_main' );
+	define( 'DB_NAME', 'odessa_dev' );
 
 	/** MySQL database username */
-	define( 'DB_USER', 'odessa_main' );
+	define( 'DB_USER', 'odeadmin' );
 
 	/** MySQL database password */
-	define( 'DB_PASSWORD', 'B2`u+2D<e-hF' );
+	define( 'DB_PASSWORD', 'DeKJSyT%%123F' );
 
 	/** MySQL hostname */
-	define( 'DB_HOST', 'mysqlcluster16' );
+	define( 'DB_HOST', '10.72.1.36' );
 }
 
 /** Database Charset to use in creating database tables. */
