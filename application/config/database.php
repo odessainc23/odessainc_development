@@ -117,7 +117,7 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost:8000' ) {
 		'failover' => array(),
 		'save_queries' => TRUE
 	);
-} else if ( $_SERVER['HTTP_HOST'] == 'https://www.odessainc.com' ) {
+} else if ( $_SERVER['HTTP_HOST'] == 'www.odessainc.com' ) {
 	$db['default'] = array(
 		'dsn'   => '',
 		'hostname' => '10.72.1.36',
