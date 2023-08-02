@@ -393,7 +393,7 @@
 										<ul>
 											<li>Company</li>
 											<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-											<!-- <li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li> -->
+											<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
 											<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 										</ul>
 									</div>
