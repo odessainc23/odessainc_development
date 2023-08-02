@@ -23,7 +23,7 @@ class Leadership extends CI_Controller {
 		// $this->load->view('pages/leadership', $data);
 		// $this->load->view('layouts/footer', $data);
 		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
-		$this->load->view('pages/amp_pages/company.amp.html', $data);
+		$this->load->view('pages/amp_pages/leadership.amp.html', $data);
 		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 	}
 

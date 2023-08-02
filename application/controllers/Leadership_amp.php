@@ -22,7 +22,7 @@ class Leadership_amp extends CI_Controller {
 //  header('Location: ' . $url, true, 500);
 // header("HTTP/1.1 404 Not Found");
 		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
-		$this->load->view('pages/amp_pages/company.amp.html', $data);
+		$this->load->view('pages/amp_pages/leadership.amp.html', $data);
 		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
 		
 	}
