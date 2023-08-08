@@ -13,6 +13,10 @@
     justify-content: center;
     align-items: flex-start;
     flex-flow: column;
+   opacity: 0;
+    }
+    .overlay.one{
+        opacity: 1;
     }
     .overlay img{
         margin: 50px auto 0px auto;
@@ -353,6 +357,7 @@ button {
 <script type="text/javascript">
 $(document).ready(function() {
     // Check if the user is already logged in
+    $(".overlay").addClass('one');
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (isLoggedIn) {
