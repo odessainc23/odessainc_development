@@ -65,7 +65,7 @@
 	<?php } ?>
 	<meta property="twitter:site" content="OdessaInc.Com">
 	<meta property="twitter:card" content="summary">
-	<meta name="msvalidate.01" content="2E3B87C44AEC742AECE33769FA55F63D" />
+	
 	<!-- Canonical URL -->
 	<link rel="canonical" href="<?php echo current_url(); ?>" />
 
