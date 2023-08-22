@@ -203,6 +203,11 @@ class PostContent
             $the_excerpt = $post->post_content;
         }
 
+        return apply_filters('ppress_content_protection_excerpt', self::trim_content($the_excerpt, $length, $more), $post, $length);
+    }
+
+    public static function trim_content($the_excerpt = '', $length = 100, $more = false)
+    {
         if ( ! empty($the_excerpt)) {
 
             $tags = apply_filters('ppress_content_protection_excerpt_tags', '<style><a><img><em><i><code><ins><del><strong><blockquote><ul><ol><li><h1><h2><h3><h4><h5><h6><b><div><span>');
@@ -226,10 +231,10 @@ class PostContent
                 }
             }
 
-            $the_excerpt = wpautop($this->close_tags($the_excerpt));
+            $the_excerpt = wpautop(self::close_tags($the_excerpt));
         }
 
-        return apply_filters('ppress_content_protection_excerpt', $the_excerpt, $post, $length);
+        return $the_excerpt;
     }
 
     /**
@@ -239,7 +244,7 @@ class PostContent
      *
      * @return false|mixed|string
      */
-    public function close_tags($content)
+    public static function close_tags($content)
     {
         if ( ! empty($content)) {
             // remove cos it can be unreliable

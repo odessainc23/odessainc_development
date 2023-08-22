@@ -40,9 +40,9 @@ $coupon_details = [
         'label'       => esc_html__('Coupon Type', 'wp-user-avatar'),
         'options'     => [
             'recurring' => esc_html__('Recurring', 'wp-user-avatar'),
-            'one_time'  => esc_html__('One-time', 'wp-user-avatar')
+            'one_time'  => esc_html__('First Payment Only', 'wp-user-avatar')
         ],
-        'description' => esc_html__('Selecting "One-time" applies the coupon discount only to the first payment while "Recurring" applies the discount to all payments.', 'wp-user-avatar')
+        'description' => esc_html__('Selecting "First Payment Only" applies the coupon discount only to the first payment while "Recurring" applies the discount to all payments.', 'wp-user-avatar')
     ],
     [
         'id'          => 'coupon_application',
@@ -54,6 +54,12 @@ $coupon_details = [
             'any'         => esc_html__('To both new and existing purchases', 'wp-user-avatar')
         ],
         'description' => esc_html__('Select where members can apply this coupon.', 'wp-user-avatar')
+    ],
+    [
+        'id'          => 'is_onetime_use',
+        'type'        => 'checkbox',
+        'label'       => esc_html__('Use Once Per Customer', 'wp-user-avatar'),
+        'checkbox_label' => esc_html__('Prevent customers from using this discount more than once.', 'wp-user-avatar')
     ]
 ];
 

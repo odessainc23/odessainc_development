@@ -19,11 +19,11 @@ interface LocaleAwareInterface
      *
      * @throws \InvalidArgumentException If the locale contains invalid characters
      */
-    public function setLocale($locale);
+    public function setLocale(string $locale);
     /**
      * Returns the current locale.
      *
-     * @return string The locale
+     * @return string
      */
     public function getLocale();
 }

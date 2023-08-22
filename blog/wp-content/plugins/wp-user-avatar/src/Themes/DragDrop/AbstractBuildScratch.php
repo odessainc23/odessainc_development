@@ -581,8 +581,8 @@ HTML;
     public function form_links()
     {
         $forgot_password_link  = ppress_password_reset_url();
-        $signup_link           = ppress_registration_url();
-        $login_link            = ppress_login_url();
+        $signup_link           = apply_filters('ppress_build_scratch_theme_registration_url', ppress_registration_url(), $this->form_id, $this->form_type);
+        $login_link            = apply_filters('ppress_build_scratch_theme_login_url', ppress_login_url(), $this->form_id, $this->form_type);
         $forgot_password_label = wp_kses_post($this->get_meta('buildscratch_forgot_password_label'));
         $signup_label          = wp_kses_post($this->get_meta('buildscratch_signup_label'));
         $login_label           = wp_kses_post($this->get_meta('buildscratch_login_label'));

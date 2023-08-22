@@ -30,6 +30,7 @@ class CouponRepository extends BaseRepository
                 'description'        => $data->description,
                 'coupon_type'        => $data->coupon_type,
                 'coupon_application' => $data->coupon_application,
+                'is_onetime_use'     => $data->is_onetime_use,
                 'amount'             => $data->amount,
                 'unit'               => $data->unit,
                 'plan_ids'           => $data->plan_ids,
@@ -39,6 +40,7 @@ class CouponRepository extends BaseRepository
                 'end_date'           => $data->end_date
             ),
             array(
+                '%s',
                 '%s',
                 '%s',
                 '%s',
@@ -70,6 +72,7 @@ class CouponRepository extends BaseRepository
                 'description'        => $data->description,
                 'coupon_type'        => $data->coupon_type,
                 'coupon_application' => $data->coupon_application,
+                'is_onetime_use'     => $data->is_onetime_use,
                 'amount'             => $data->amount,
                 'unit'               => $data->unit,
                 'plan_ids'           => $data->plan_ids,
@@ -80,6 +83,7 @@ class CouponRepository extends BaseRepository
             ],
             ['id' => $data->id],
             [
+                '%s',
                 '%s',
                 '%s',
                 '%s',

@@ -58,5 +58,5 @@ function getOpenCollectiveSponsors() : string
     }, $list)) . "\n";
 }
 \file_put_contents('readme.md', \preg_replace_callback('/(<!-- <open-collective-sponsors> -->)[\\s\\S]+(<!-- <\\/open-collective-sponsors> -->)/', static function (array $match) {
-    return $match[1] . \getOpenCollectiveSponsors() . $match[2];
+    return $match[1] . getOpenCollectiveSponsors() . $match[2];
 }, \file_get_contents('readme.md')));

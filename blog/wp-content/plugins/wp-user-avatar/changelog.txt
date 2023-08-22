@@ -1,5 +1,18 @@
 ﻿== Changelog ==
 
+= 4.13.0 =
+* Pro: [Sensei LMS](https://profilepress.com/addons/sensei-lms/?ref=changelog) integration.
+* Added [Data Export](https://profilepress.com/article/data-export-overview/) feature.
+* Added option to make coupon one-time use.
+* Added setting to disable sending email receipts for free orders.
+* Added Settings tab for enforcing password confirmation as required field.
+* Added filter to redirect to referrer url after checkout.
+* Added filter to conditionally enable user moderation based on registration form.
+* Reverted added "ppress_noaccess_action_message_custom_no_wp_kses_post" filter.
+* Fixed bug with plan switching checkout not working for certain payment methods.
+* Fixed bug where sub cancelled email was sent during upgrade.
+* Fixed bug with invalid "paid on" date on order edit screen.
+
 = 4.12.0 =
 * Added setting for [disabling subscription auto-renewals](https://profilepress.com/article/auto-renewal-settings/).
 * Extended Tutor LMS addon to include [creating custom student](https://profilepress.com/article/custom-tutor-lms-student-registration-form/) and [instructor registration forms](https://profilepress.com/article/custom-tutor-lms-instructor-registration-form/).

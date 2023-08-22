@@ -601,7 +601,7 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      *
      * @var string
      */
-    public const RFC7231_FORMAT = 'ProfilePressVendor\\D, d M Y H:i:s \\G\\M\\T';
+    public const RFC7231_FORMAT = 'D, d M Y H:i:s \\G\\M\\T';
     /**
      * Default format to use for __toString method when type juggling occurs.
      *

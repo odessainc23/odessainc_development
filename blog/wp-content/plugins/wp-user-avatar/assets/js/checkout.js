@@ -187,6 +187,11 @@ export default function () {
             _this.scroll_to_notices(scrollToSelector);
 
             _this.remove_spinner();
+
+            // it's important we re-init checkout to keep things working
+            if (isChangePlanUpdate === true) {
+                $(document.body).trigger('ppress_update_checkout');
+            }
         });
     };
 

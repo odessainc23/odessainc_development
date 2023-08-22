@@ -349,6 +349,15 @@ class EmailSettingsPage
             ]
         ];
 
+        if ($key == 'new_order_receipt') {
+            $email_settings[0][$key . '_disable_free_orders'] = [
+                'type'           => 'checkbox',
+                'checkbox_label' => esc_html__('Check to Disable', 'wp-user-avatar'),
+                'label'          => esc_html__('Disable for Free Orders', 'wp-user-avatar'),
+                'description'    => esc_html__('Optionally disable sending email receipts for free orders.', 'wp-user-avatar')
+            ];
+        }
+
         if ($key == 'subscription_renewal_reminder') {
             $email_settings[0][$key . '_reminder_days'] = [
                 'type'        => 'number',

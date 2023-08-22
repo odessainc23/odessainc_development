@@ -65,6 +65,7 @@ class SettingsPage extends AbstractSettingsPage
         $coupon->unit               = sanitize_text_field($_POST['unit']);
         $coupon->coupon_type        = sanitize_text_field($_POST['coupon_type']);
         $coupon->coupon_application = sanitize_text_field($_POST['coupon_application']);
+        $coupon->is_onetime_use     = sanitize_text_field($_POST['is_onetime_use']);
         $coupon->plan_ids           = ppress_clean(ppressPOST_var('plan_ids', [], true), 'absint');
         $coupon->start_date         = sanitize_text_field($_POST['start_date']);
         $coupon->end_date           = sanitize_text_field($_POST['end_date']);

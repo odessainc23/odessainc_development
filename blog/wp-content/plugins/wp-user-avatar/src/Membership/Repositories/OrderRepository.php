@@ -409,7 +409,7 @@ class OrderRepository extends BaseRepository
 
 
         if ($count === true) {
-            return $this->wpdb()->get_var($this->wpdb()->prepare($sql, $replacement));
+            return (int)$this->wpdb()->get_var($this->wpdb()->prepare($sql, $replacement));
         }
 
         $result = $this->wpdb()->get_results($this->wpdb()->prepare($sql, $replacement), 'ARRAY_A');

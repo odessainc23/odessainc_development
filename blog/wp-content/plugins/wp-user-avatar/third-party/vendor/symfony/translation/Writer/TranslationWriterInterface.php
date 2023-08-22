@@ -27,5 +27,5 @@ interface TranslationWriterInterface
      *
      * @throws InvalidArgumentException
      */
-    public function write(MessageCatalogue $catalogue, $format, $options = []);
+    public function write(MessageCatalogue $catalogue, string $format, array $options = []);
 }

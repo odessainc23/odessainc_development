@@ -44,12 +44,18 @@ if ( ! empty($transaction_id)) {
 if ( ! empty($payment_method_string)) $meta_list[] = $payment_method_string;
 
 if ($order_data->date_completed) {
-    /* translators: 1: date 2: time */
-    $meta_list[] = sprintf(
-        __('Paid on %1$s @ %2$s', 'wp-user-avatar'),
-        wp_date(get_option('date_format'), ppress_strtotime_utc($order_data->date_completed)),
-        wp_date(get_option('time_format'), ppress_strtotime_utc($order_data->date_completed))
-    );
+
+    $paid_on_date = ppress_strtotime_utc($order_data->date_completed);
+
+    // ensures completion date is not 0000-00-00 00:00:00
+    if ($paid_on_date > 0) {
+        /* translators: 1: date 2: time */
+        $meta_list[] = sprintf(
+            __('Paid on %1$s @ %2$s', 'wp-user-avatar'),
+            wp_date(get_option('date_format'), $paid_on_date),
+            wp_date(get_option('time_format'), $paid_on_date)
+        );
+    }
 }
 
 if ($ip_address = $order_data->ip_address) {

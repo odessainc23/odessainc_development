@@ -496,7 +496,11 @@
             });
         }
         // date picker for order filter
-        $('.ppress_datepicker').flatpickr({dateFormat: "Y-m-d", allowInput: true});
+        $('.ppress_datepicker').each(function () {
+            var _this = $(this),
+                format = _this.data('format');
+            _this.flatpickr({dateFormat: (typeof format !== 'undefined' ? format : 'Y-m-d'), allowInput: true});
+        });
 
         $('.ppress-color-picker').wpColorPicker();
 

@@ -4,7 +4,6 @@ namespace ProfilePress\Core\Admin\SettingsPages\Membership\CouponsPage;
 
 use ProfilePress\Core\Membership\Models\Coupon\CouponEntity;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
-use ProfilePress\Core\Membership\Models\Coupon\CouponType;
 use ProfilePress\Core\Membership\Models\Coupon\CouponUnit;
 use ProfilePress\Core\Membership\Repositories\CouponRepository;
 
@@ -79,7 +78,7 @@ class CouponWPListTable extends \WP_List_Table
 
         $a = '<a href="' . $edit_link . '">' . esc_html($item->code) . '</a>';
 
-        $coupon_type = $item->is_recurring() ? esc_html__('Recurring', 'wp-user-avatar') : esc_html__('One-time', 'wp-user-avatar');
+        $coupon_type = $item->is_recurring() ? esc_html__('Recurring', 'wp-user-avatar') : esc_html__('First Payment', 'wp-user-avatar');
 
         $a .= '&nbsp;<span class="post-state"> — ' . $coupon_type . '</span>';
 

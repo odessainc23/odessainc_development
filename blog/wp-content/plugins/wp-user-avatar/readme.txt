@@ -3,9 +3,9 @@ Contributors: properfraction, collizo4sky
 Donate link: https://profilepress.com/pricing/
 Tags: membership, ecommerce, user registration, user profile, membership plugin, members, stripe, paypal, razorpay, mollie, paystack, login form, login, registration, password reset, member, users, profile, front-end profile, avatar
 Requires at least: 5.3
-Requires PHP: 7.2.0
-Tested up to: 6.2
-Stable tag: 4.12.0
+Requires PHP: 7.2.5
+Tested up to: 6.3
+Stable tag: 4.13.0
 License: GPLv2 or later
 
 Paid membership plugin: accept payments, sell subscriptions & digital downloads, paywall & restrict content, create user registration form & login form, user profile & member directory.
@@ -85,7 +85,7 @@ You can also control the visibility of [navigation menus](https://profilepress.c
 
 = Detailed Ecommerce Reports =
 
-We provide a complete reports section where you can Keep track of your earnings, refunds, sales, download logs and more. You can view reports for any period or drill down to specific membership plans.
+We provide a complete reports section where you can Keep track of your earnings, refunds, sales, download logs and more. You can view and export reports for any period or drill down to specific membership plans.
 
 = Other Payment & Membership Plugin Features =
 
@@ -122,6 +122,7 @@ Extend the capabilities of ProfilePress with our powerful addons and remove the 
 * [Passwordless Login](https://profilepress.com/addons/passwordless-login/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Let users log in to your site via a one-time URL sent to their email addresses.
 * [WooCommerce](https://profilepress.com/addons/woocommerce/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Manage WooCommerce billing and shipping fields, replace WooCommerce login and edit account forms in checkout and "My Account" pages with that of ProfilePress.
 * [LearnDash](https://profilepress.com/addons/learndash/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to LearnDash courses and groups, enroll users after signup via a custom LearnDash registration form, and let users view their enrolled courses on the My Account page.
+* [Sensei LMS](https://profilepress.com/addons/sensei-lms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to Sensei LMS courses and groups, enroll users after registration, and let users view their enrolled courses on the My Account page.
 * [Google reCAPTCHA](https://profilepress.com/addons/recaptcha/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Protect your user registration, login, checkout and password reset forms against spam and bot attacks.
 * [Site Creation](https://profilepress.com/addons/site-creation/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Allow users to create new sites on a multisite network via a user registration form powered by ProfilePress.
 * [Mailchimp](https://profilepress.com/addons/mailchimp/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Subscribe members to your Mailchimp audiences after they register, made a purchase and payment, subscribe to membership plans and automatically sync profile changes with Mailchimp.
@@ -185,18 +186,17 @@ Any file type can be sold using ProfilePress ecommerce and membership plugin, in
 
 == Changelog ==
 
-= Paid Membership, Ecommerce & User Registration 4.12.0 =
-* Added setting for [disabling subscription auto-renewals](https://profilepress.com/article/auto-renewal-settings/).
-* Extended Tutor LMS addon to include [creating custom student](https://profilepress.com/article/custom-tutor-lms-student-registration-form/) and [instructor registration forms](https://profilepress.com/article/custom-tutor-lms-instructor-registration-form/).
-* Added ppress_stripe_disable_maybe_update_webhook filter to disable automatic stripe webhook regeneration.
-* Fixed form preview bug when using a block theme.
-
-= Paid Membership, Ecommerce & User Registration 4.11.0 =
-* Added [Tutor LMS](https://profilepress.com/addons/tutor-lms/) integration.
-* Added [Stripe Tax](https://profilepress.com/article/setting-up-stripe/#Stripe_Tax_Support) support.
-* Security Fix: DOM-based XSS on registration form.
-* Fixed Stripe bug where webhook details are missing after disconnection and reconnection.
-* Fixed Stripe bug where billing details not shown when tax is enabled and is offsite checkout.
-* Improved PHP 8 compatibility.
+= Paid Membership, Ecommerce & User Registration 4.13.0 =
+* Pro: [Sensei LMS](https://profilepress.com/addons/sensei-lms/?ref=changelog) integration.
+* Added [Data Export](https://profilepress.com/article/data-export-overview/) feature.
+* Added option to make coupon one-time use.
+* Added setting to disable sending email receipts for free orders.
+* Added Settings tab for enforcing password confirmation as required field.
+* Added filter to redirect to referrer url after checkout.
+* Added filter to conditionally enable user moderation based on registration form.
+* Reverted added "ppress_noaccess_action_message_custom_no_wp_kses_post" filter.
+* Fixed bug with plan switching checkout not working for certain payment methods.
+* Fixed bug where sub cancelled email was sent during upgrade.
+* Fixed bug with invalid "paid on" date on order edit screen.
 
 See the [changelog file](https://plugins.svn.wordpress.org/wp-user-avatar/trunk/changelog.txt) for full change log information.

@@ -21,7 +21,7 @@ abstract class FileLoader extends ArrayLoader
     /**
      * {@inheritdoc}
      */
-    public function load($resource, $locale, $domain = 'messages')
+    public function load($resource, string $locale, string $domain = 'messages')
     {
         if (!\stream_is_local($resource)) {
             throw new InvalidResourceException(\sprintf('This is not a local file "%s".', $resource));
@@ -45,11 +45,9 @@ abstract class FileLoader extends ArrayLoader
         return $catalogue;
     }
     /**
-     * @param string $resource
-     *
      * @return array
      *
      * @throws InvalidResourceException if stream content has an invalid format
      */
-    protected abstract function loadResource($resource);
+    protected abstract function loadResource(string $resource);
 }

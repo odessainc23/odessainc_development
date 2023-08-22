@@ -349,7 +349,11 @@ class RegistrationAuth
 
         // if moderation is active, set new registered users as pending
         if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
-            UserModeration::make_pending($user_id);
+            if (apply_filters('ppress_user_moderation_make_pending', true, $form_id, $user_data)) {
+                UserModeration::make_pending($user_id);
+                UserModerationNotification::pending($user_id);
+                UserModerationNotification::pending_admin_notification($user_id);
+            }
         }
 
         if ($flag_to_send_password_reset === true) {
@@ -361,12 +365,6 @@ class RegistrationAuth
             add_user_meta($user_id, '_pp_signup_melange_via', $form_id);
         } else {
             add_user_meta($user_id, '_pp_signup_via', $form_id);
-        }
-
-        // if user moderation is active, send pending notification.
-        if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
-            UserModerationNotification::pending($user_id);
-            UserModerationNotification::pending_admin_notification($user_id);
         }
 
         self::send_welcome_email($user_id, $password, $form_id);

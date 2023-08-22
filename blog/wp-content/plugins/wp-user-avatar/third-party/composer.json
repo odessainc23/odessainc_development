@@ -11,7 +11,8 @@
         "barryvdh\/composer-cleanup-plugin": "dev-master",
         "nesbot\/carbon": "^2.57",
         "stripe\/stripe-php": "^7.117",
-        "brick\/math": "^0.9.3"
+        "brick\/math": "^0.9.3",
+        "league\/csv": "^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +21,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.2"
+            "php": "7.2.5"
         },
         "allow-plugins": {
             "barryvdh\/composer-cleanup-plugin": true,

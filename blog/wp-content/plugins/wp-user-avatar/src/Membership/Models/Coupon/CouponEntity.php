@@ -3,6 +3,7 @@
 namespace ProfilePress\Core\Membership\Models\Coupon;
 
 use ProfilePress\Core\Membership\Models\AbstractModel;
+use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\Models\ModelInterface;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
 use ProfilePress\Core\Membership\Models\Order\OrderType;
@@ -17,6 +18,7 @@ use ProfilePressVendor\Carbon\CarbonImmutable;
  * @property string $description
  * @property string $coupon_type
  * @property string $coupon_application
+ * @property string $is_onetime_use
  * @property string $amount
  * @property string $unit
  * @property array $plan_ids
@@ -47,6 +49,8 @@ class CouponEntity extends AbstractModel implements ModelInterface
 
     protected $status = 'true';
 
+    protected $is_onetime_use = 'false';
+
     protected $start_date = '';
 
     protected $end_date = '';
@@ -76,6 +80,11 @@ class CouponEntity extends AbstractModel implements ModelInterface
     public function is_active()
     {
         return $this->status == 'true';
+    }
+
+    public function is_onetime_use()
+    {
+        return $this->is_onetime_use == 'true';
     }
 
     public function is_recurring()
@@ -190,6 +199,23 @@ class CouponEntity extends AbstractModel implements ModelInterface
             $this->get_coupon_application() == CouponApplication::NEW_PURCHASE
         ) {
             return false;
+        }
+
+        if (is_user_logged_in()) {
+
+            $current_user_id = get_current_user_id();
+
+            $customer = CustomerFactory::fromUserId($current_user_id);
+
+            if ($this->is_onetime_use() && $customer->exists()) {
+
+                $count = OrderRepository::init()->retrieveBy([
+                    'customer_id' => $customer->get_id(),
+                    'coupon_code' => $this->code
+                ], true);
+
+                if ($count > 0) return false;
+            }
         }
 
         $start_date = ! empty($this->get_start_date()) ? $this->get_start_date() . ' 00:00:00' : '';

@@ -10,7 +10,7 @@ class DBUpdates
 {
     public static $instance;
 
-    const DB_VER = 8;
+    const DB_VER = 9;
 
     public function init_options()
     {
@@ -145,6 +145,15 @@ class DBUpdates
         $a                            = get_option(ExtensionManager::DB_OPTION_NAME);
         $a[ExtensionManager::RECEIPT] = 'true';
         update_option(ExtensionManager::DB_OPTION_NAME, $a);
+    }
+
+    public function update_routine_9()
+    {
+        global $wpdb;
+
+        $table = DBTables::coupons_db_table();
+
+        $wpdb->query("ALTER TABLE $table ADD COLUMN is_onetime_use enum('true','false') NOT NULL DEFAULT 'false' AFTER coupon_type;");
     }
 
     public static function get_instance()

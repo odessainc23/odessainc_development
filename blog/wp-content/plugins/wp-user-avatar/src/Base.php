@@ -74,6 +74,7 @@ define('PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE', admin_url('admin.php?page=' . 
 define('PPRESS_EXTENSIONS_SETTINGS_PAGE', admin_url('admin.php?page=' . PPRESS_EXTENSIONS_SETTINGS_SLUG));
 define('PPRESS_DASHBOARD_SETTINGS_PAGE', admin_url('admin.php?page=' . PPRESS_DASHBOARD_SETTINGS_SLUG));
 define('PPRESS_MEMBERSHIP_DOWNLOAD_LOGS_SETTINGS_PAGE', add_query_arg('view', 'download-logs', PPRESS_DASHBOARD_SETTINGS_PAGE));
+define('PPRESS_MEMBERSHIP_EXPORT_SETTINGS_PAGE', add_query_arg('view', 'export', PPRESS_DASHBOARD_SETTINGS_PAGE));
 define('PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE', admin_url('admin.php?page=' . PPRESS_MEMBERSHIP_PLANS_SETTINGS_SLUG));
 define('PPRESS_MEMBERSHIP_COUPONS_SETTINGS_PAGE', add_query_arg('view', 'coupons', PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE));
 define('PPRESS_MEMBERSHIP_GROUPS_SETTINGS_PAGE', add_query_arg('view', 'groups', PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE));
@@ -203,6 +204,7 @@ class Base extends DBTables
 
         Admin\SettingsPages\Membership\DashboardPage\SettingsPage::get_instance();
         Admin\SettingsPages\Membership\DownloadLogsPage\SettingsPage::get_instance();
+        Admin\SettingsPages\Membership\ExportPage\SettingsPage::get_instance();
         PlansSettingsPage::get_instance();
         GroupsSettingsPageAlias::get_instance();
         OrdersPageSettingsPage::get_instance();

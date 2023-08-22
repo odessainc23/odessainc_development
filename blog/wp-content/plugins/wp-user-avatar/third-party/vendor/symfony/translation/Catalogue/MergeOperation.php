@@ -25,7 +25,7 @@ class MergeOperation extends AbstractOperation
     /**
      * {@inheritdoc}
      */
-    protected function processDomain($domain)
+    protected function processDomain(string $domain)
     {
         $this->messages[$domain] = ['all' => [], 'new' => [], 'obsolete' => []];
         $intlDomain = $domain . MessageCatalogueInterface::INTL_DOMAIN_SUFFIX;

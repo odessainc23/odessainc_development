@@ -6,7 +6,6 @@ use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
-use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 
 class FrontendController extends BaseController
 {

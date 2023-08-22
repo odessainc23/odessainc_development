@@ -92,7 +92,7 @@ class ServiceProvider extends \ProfilePressVendor\Illuminate\Support\ServiceProv
     }
     protected function getGlobalApp(...$args)
     {
-        return \function_exists('app') ? \app(...$args) : null;
+        return \function_exists('ProfilePressVendor\\app') ? \ProfilePressVendor\app(...$args) : null;
     }
     protected function isEventDispatcher($instance)
     {

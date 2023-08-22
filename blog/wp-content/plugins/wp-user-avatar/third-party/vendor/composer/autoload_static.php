@@ -4,11 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
+class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -26,6 +29,7 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
             'ProfilePressVendor\\Sabberworm\\CSS\\' => 34,
             'ProfilePressVendor\\ProfilePress\\Core\\' => 37,
             'ProfilePressVendor\\Pelago\\Emogrifier\\' => 37,
+            'ProfilePressVendor\\League\\Csv\\' => 30,
             'ProfilePressVendor\\Carbon\\' => 26,
             'ProfilePressVendor\\Brick\\Math\\' => 30,
             'ProfilePressVendor\\Barryvdh\\Composer\\' => 37,
@@ -68,6 +72,10 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
         'ProfilePressVendor\\Pelago\\Emogrifier\\' => 
         array (
             0 => __DIR__ . '/..' . '/pelago/emogrifier/src',
+        ),
+        'ProfilePressVendor\\League\\Csv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/csv/src',
         ),
         'ProfilePressVendor\\Carbon\\' => 
         array (
@@ -187,6 +195,28 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
         'ProfilePressVendor\\Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'ProfilePressVendor\\Carbon\\TranslatorImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
         'ProfilePressVendor\\Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
+        'ProfilePressVendor\\League\\Csv\\AbstractCsv' => __DIR__ . '/..' . '/league/csv/src/AbstractCsv.php',
+        'ProfilePressVendor\\League\\Csv\\ByteSequence' => __DIR__ . '/..' . '/league/csv/src/ByteSequence.php',
+        'ProfilePressVendor\\League\\Csv\\CannotInsertRecord' => __DIR__ . '/..' . '/league/csv/src/CannotInsertRecord.php',
+        'ProfilePressVendor\\League\\Csv\\CharsetConverter' => __DIR__ . '/..' . '/league/csv/src/CharsetConverter.php',
+        'ProfilePressVendor\\League\\Csv\\ColumnConsistency' => __DIR__ . '/..' . '/league/csv/src/ColumnConsistency.php',
+        'ProfilePressVendor\\League\\Csv\\EncloseField' => __DIR__ . '/..' . '/league/csv/src/EncloseField.php',
+        'ProfilePressVendor\\League\\Csv\\EscapeFormula' => __DIR__ . '/..' . '/league/csv/src/EscapeFormula.php',
+        'ProfilePressVendor\\League\\Csv\\Exception' => __DIR__ . '/..' . '/league/csv/src/Exception.php',
+        'ProfilePressVendor\\League\\Csv\\HTMLConverter' => __DIR__ . '/..' . '/league/csv/src/HTMLConverter.php',
+        'ProfilePressVendor\\League\\Csv\\InvalidArgument' => __DIR__ . '/..' . '/league/csv/src/InvalidArgument.php',
+        'ProfilePressVendor\\League\\Csv\\MapIterator' => __DIR__ . '/..' . '/league/csv/src/MapIterator.php',
+        'ProfilePressVendor\\League\\Csv\\Polyfill\\EmptyEscapeParser' => __DIR__ . '/..' . '/league/csv/src/Polyfill/EmptyEscapeParser.php',
+        'ProfilePressVendor\\League\\Csv\\RFC4180Field' => __DIR__ . '/..' . '/league/csv/src/RFC4180Field.php',
+        'ProfilePressVendor\\League\\Csv\\Reader' => __DIR__ . '/..' . '/league/csv/src/Reader.php',
+        'ProfilePressVendor\\League\\Csv\\ResultSet' => __DIR__ . '/..' . '/league/csv/src/ResultSet.php',
+        'ProfilePressVendor\\League\\Csv\\Statement' => __DIR__ . '/..' . '/league/csv/src/Statement.php',
+        'ProfilePressVendor\\League\\Csv\\Stream' => __DIR__ . '/..' . '/league/csv/src/Stream.php',
+        'ProfilePressVendor\\League\\Csv\\SyntaxError' => __DIR__ . '/..' . '/league/csv/src/SyntaxError.php',
+        'ProfilePressVendor\\League\\Csv\\TabularDataReader' => __DIR__ . '/..' . '/league/csv/src/TabularDataReader.php',
+        'ProfilePressVendor\\League\\Csv\\UnavailableFeature' => __DIR__ . '/..' . '/league/csv/src/UnavailableFeature.php',
+        'ProfilePressVendor\\League\\Csv\\Writer' => __DIR__ . '/..' . '/league/csv/src/Writer.php',
+        'ProfilePressVendor\\League\\Csv\\XMLConverter' => __DIR__ . '/..' . '/league/csv/src/XMLConverter.php',
         'ProfilePressVendor\\PAnD' => __DIR__ . '/..' . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
         'ProfilePressVendor\\Pelago\\Emogrifier\\Caching\\SimpleStringCache' => __DIR__ . '/..' . '/pelago/emogrifier/src/Caching/SimpleStringCache.php',
         'ProfilePressVendor\\Pelago\\Emogrifier\\CssInliner' => __DIR__ . '/..' . '/pelago/emogrifier/src/CssInliner.php',
@@ -535,6 +565,9 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => __DIR__ . '/..' . '/symfony/translation/Catalogue/MergeOperation.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => __DIR__ . '/..' . '/symfony/translation/Catalogue/OperationInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Catalogue\\TargetOperation' => __DIR__ . '/..' . '/symfony/translation/Catalogue/TargetOperation.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Command\\TranslationPullCommand' => __DIR__ . '/..' . '/symfony/translation/Command/TranslationPullCommand.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Command\\TranslationPushCommand' => __DIR__ . '/..' . '/symfony/translation/Command/TranslationPushCommand.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Command\\TranslationTrait' => __DIR__ . '/..' . '/symfony/translation/Command/TranslationTrait.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Command\\XliffLintCommand' => __DIR__ . '/..' . '/symfony/translation/Command/XliffLintCommand.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\DataCollectorTranslator' => __DIR__ . '/..' . '/symfony/translation/DataCollectorTranslator.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\DataCollector\\TranslationDataCollector' => __DIR__ . '/..' . '/symfony/translation/DataCollector/TranslationDataCollector.php',
@@ -555,23 +588,26 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Dumper\\XliffFileDumper' => __DIR__ . '/..' . '/symfony/translation/Dumper/XliffFileDumper.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Dumper\\YamlFileDumper' => __DIR__ . '/..' . '/symfony/translation/Dumper/YamlFileDumper.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/translation/Exception/ExceptionInterface.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\IncompleteDsnException' => __DIR__ . '/..' . '/symfony/translation/Exception/IncompleteDsnException.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/translation/Exception/InvalidArgumentException.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\InvalidResourceException' => __DIR__ . '/..' . '/symfony/translation/Exception/InvalidResourceException.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/translation/Exception/LogicException.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\MissingRequiredOptionException' => __DIR__ . '/..' . '/symfony/translation/Exception/MissingRequiredOptionException.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\NotFoundResourceException' => __DIR__ . '/..' . '/symfony/translation/Exception/NotFoundResourceException.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\ProviderException' => __DIR__ . '/..' . '/symfony/translation/Exception/ProviderException.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\ProviderExceptionInterface' => __DIR__ . '/..' . '/symfony/translation/Exception/ProviderExceptionInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/translation/Exception/RuntimeException.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Exception\\UnsupportedSchemeException' => __DIR__ . '/..' . '/symfony/translation/Exception/UnsupportedSchemeException.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Extractor\\AbstractFileExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/AbstractFileExtractor.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Extractor\\ChainExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/ChainExtractor.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Extractor\\ExtractorInterface' => __DIR__ . '/..' . '/symfony/translation/Extractor/ExtractorInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Extractor\\PhpExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpExtractor.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Extractor\\PhpStringTokenParser' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpStringTokenParser.php',
-        'ProfilePressVendor\\Symfony\\Component\\Translation\\Formatter\\ChoiceMessageFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/ChoiceMessageFormatterInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Formatter\\IntlFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatter.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Formatter\\IntlFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatterInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Formatter\\MessageFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/MessageFormatter.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Formatter\\MessageFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/MessageFormatterInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\IdentityTranslator' => __DIR__ . '/..' . '/symfony/translation/IdentityTranslator.php',
-        'ProfilePressVendor\\Symfony\\Component\\Translation\\Interval' => __DIR__ . '/..' . '/symfony/translation/Interval.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Loader\\ArrayLoader' => __DIR__ . '/..' . '/symfony/translation/Loader/ArrayLoader.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Loader\\CsvFileLoader' => __DIR__ . '/..' . '/symfony/translation/Loader/CsvFileLoader.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Loader\\FileLoader' => __DIR__ . '/..' . '/symfony/translation/Loader/FileLoader.php',
@@ -589,20 +625,30 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
         'ProfilePressVendor\\Symfony\\Component\\Translation\\LoggingTranslator' => __DIR__ . '/..' . '/symfony/translation/LoggingTranslator.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\MessageCatalogue' => __DIR__ . '/..' . '/symfony/translation/MessageCatalogue.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\MessageCatalogueInterface' => __DIR__ . '/..' . '/symfony/translation/MessageCatalogueInterface.php',
-        'ProfilePressVendor\\Symfony\\Component\\Translation\\MessageSelector' => __DIR__ . '/..' . '/symfony/translation/MessageSelector.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\MetadataAwareInterface' => __DIR__ . '/..' . '/symfony/translation/MetadataAwareInterface.php',
-        'ProfilePressVendor\\Symfony\\Component\\Translation\\PluralizationRules' => __DIR__ . '/..' . '/symfony/translation/PluralizationRules.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\AbstractProviderFactory' => __DIR__ . '/..' . '/symfony/translation/Provider/AbstractProviderFactory.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\Dsn' => __DIR__ . '/..' . '/symfony/translation/Provider/Dsn.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\FilteringProvider' => __DIR__ . '/..' . '/symfony/translation/Provider/FilteringProvider.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\NullProvider' => __DIR__ . '/..' . '/symfony/translation/Provider/NullProvider.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\NullProviderFactory' => __DIR__ . '/..' . '/symfony/translation/Provider/NullProviderFactory.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\ProviderFactoryInterface' => __DIR__ . '/..' . '/symfony/translation/Provider/ProviderFactoryInterface.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\ProviderInterface' => __DIR__ . '/..' . '/symfony/translation/Provider/ProviderInterface.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\TranslationProviderCollection' => __DIR__ . '/..' . '/symfony/translation/Provider/TranslationProviderCollection.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\Provider\\TranslationProviderCollectionFactory' => __DIR__ . '/..' . '/symfony/translation/Provider/TranslationProviderCollectionFactory.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\PseudoLocalizationTranslator' => __DIR__ . '/..' . '/symfony/translation/PseudoLocalizationTranslator.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Reader\\TranslationReader' => __DIR__ . '/..' . '/symfony/translation/Reader/TranslationReader.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Reader\\TranslationReaderInterface' => __DIR__ . '/..' . '/symfony/translation/Reader/TranslationReaderInterface.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatableMessage' => __DIR__ . '/..' . '/symfony/translation/TranslatableMessage.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Translator' => __DIR__ . '/..' . '/symfony/translation/Translator.php',
+        'ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatorBag' => __DIR__ . '/..' . '/symfony/translation/TranslatorBag.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatorBagInterface' => __DIR__ . '/..' . '/symfony/translation/TranslatorBagInterface.php',
-        'ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatorInterface' => __DIR__ . '/..' . '/symfony/translation/TranslatorInterface.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Util\\ArrayConverter' => __DIR__ . '/..' . '/symfony/translation/Util/ArrayConverter.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Util\\XliffUtils' => __DIR__ . '/..' . '/symfony/translation/Util/XliffUtils.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Writer\\TranslationWriter' => __DIR__ . '/..' . '/symfony/translation/Writer/TranslationWriter.php',
         'ProfilePressVendor\\Symfony\\Component\\Translation\\Writer\\TranslationWriterInterface' => __DIR__ . '/..' . '/symfony/translation/Writer/TranslationWriterInterface.php',
         'ProfilePressVendor\\Symfony\\Contracts\\Translation\\LocaleAwareInterface' => __DIR__ . '/..' . '/symfony/translation-contracts/LocaleAwareInterface.php',
         'ProfilePressVendor\\Symfony\\Contracts\\Translation\\Test\\TranslatorTest' => __DIR__ . '/..' . '/symfony/translation-contracts/Test/TranslatorTest.php',
+        'ProfilePressVendor\\Symfony\\Contracts\\Translation\\TranslatableInterface' => __DIR__ . '/..' . '/symfony/translation-contracts/TranslatableInterface.php',
         'ProfilePressVendor\\Symfony\\Contracts\\Translation\\TranslatorInterface' => __DIR__ . '/..' . '/symfony/translation-contracts/TranslatorInterface.php',
         'ProfilePressVendor\\Symfony\\Contracts\\Translation\\TranslatorTrait' => __DIR__ . '/..' . '/symfony/translation-contracts/TranslatorTrait.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
@@ -616,9 +662,9 @@ class ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5b2031ebf8eb1ae1e2ed1571a21a69f3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$classMap;
 
         }, null, ClassLoader::class);
     }

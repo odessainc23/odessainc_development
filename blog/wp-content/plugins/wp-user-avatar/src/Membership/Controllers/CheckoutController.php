@@ -3,6 +3,7 @@
 namespace ProfilePress\Core\Membership\Controllers;
 
 use ProfilePress\Core\Classes\LoginAuth;
+use ProfilePress\Core\Membership\Emails\SubscriptionCancelledNotification;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
 use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
@@ -39,8 +40,11 @@ class CheckoutController extends BaseController
 
         add_action('wp_ajax_ppress_contextual_state_field', [$this, 'contextual_state_field']);
         add_action('wp_ajax_nopriv_ppress_contextual_state_field', [$this, 'contextual_state_field']);
-    }
 
+
+        add_action('wp', [$this, 'validate_checkout_coupon']);
+        add_action('wp', [$this, 'redirect_to_referrer_after_checkout']);
+    }
 
     public function contextual_state_field()
     {
@@ -73,6 +77,24 @@ class CheckoutController extends BaseController
         }
 
         wp_send_json_success(ob_get_clean());
+    }
+
+    public function validate_checkout_coupon()
+    {
+        if ( ! ppress_is_checkout()) return;
+
+        $plan_id = (int)ppressGET_var('plan', 0);
+
+        $coupon = ppress_session()->get(CheckoutSessionData::COUPON_CODE);
+
+        if (isset($coupon['coupon_code'])) {
+
+            $coupon = CouponFactory::fromCode($coupon['coupon_code']);
+
+            if ( ! $coupon->is_valid($plan_id)) {
+                ppress_session()->set(CheckoutSessionData::COUPON_CODE, null);
+            }
+        }
     }
 
     public function process_checkout_login()
@@ -302,6 +324,9 @@ class CheckoutController extends BaseController
 
                 if ($sub->exists()) {
 
+                    // do not send subscription cancelled email
+                    remove_action('ppress_subscription_cancelled', [SubscriptionCancelledNotification::init(), 'dispatch_email'], 10);
+
                     $sub->cancel(true, true);
                     if (apply_filters('ppress_checkout_change_plan_expiration', false)) {
                         $sub->expire();
@@ -515,6 +540,19 @@ class CheckoutController extends BaseController
             wp_send_json_error(
                 $this->alert_message($e->getMessage())
             );
+        }
+    }
+
+    public function redirect_to_referrer_after_checkout()
+    {
+        if (ppress_is_redirect_to_referrer_after_checkout()) {
+
+            $referrer = ppress_session()->get('ppress_checkout_referrer');
+
+            if ( ! empty($referrer) && ppress_is_success_page()) {
+                wp_safe_redirect($referrer);
+                exit;
+            }
         }
     }
 }

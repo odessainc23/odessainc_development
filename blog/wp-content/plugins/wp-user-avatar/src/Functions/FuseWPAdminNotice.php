@@ -31,6 +31,8 @@ if ( ! class_exists('\FuseWPAdminNotice')) {
 
             if ($pagenow != 'index.php') return;
 
+            if ( ! current_user_can('manage_options')) return;
+
             if (get_option('fwp_dismiss_fwpadnotice', 'false') == 'true') {
                 return;
             }

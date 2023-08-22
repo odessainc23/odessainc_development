@@ -48,6 +48,7 @@ class SettingsPage extends AbstractSettingsPage
     {
         $tabs = apply_filters('ppress_membership_dashboard_settings_page_tabs', [
             5  => ['id' => $this->default_header_menu(), 'url' => PPRESS_DASHBOARD_SETTINGS_PAGE, 'label' => esc_html__('Reports', 'wp-user-avatar')],
+            7  => ['id' => 'export', 'url' => PPRESS_MEMBERSHIP_EXPORT_SETTINGS_PAGE, 'label' => esc_html__('Export', 'wp-user-avatar')],
             10 => ['id' => 'download-logs', 'url' => PPRESS_MEMBERSHIP_DOWNLOAD_LOGS_SETTINGS_PAGE, 'label' => esc_html__('Download Logs', 'wp-user-avatar')]
         ]);
 

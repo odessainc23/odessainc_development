@@ -145,7 +145,7 @@ if ( ! empty($payment_method_string)) {
                     <a href="<?= esc_url(CustomerWPListTable::view_customer_url($subscription_data->customer_id)) ?>"><?= esc_html__('Profile &rarr;', 'wp-user-avatar') ?></a>
                     <a href="<?= add_query_arg(['by_ci' => $subscription_data->customer_id], PPRESS_MEMBERSHIP_SUBSCRIPTIONS_SETTINGS_PAGE) ?>"><?= esc_html__('View all subscriptions &rarr;', 'wp-user-avatar') ?></a>
                 </label>
-                <select id="sub_customer_user" name="sub_customer_user" class="ppress-select2-field sub_customer_user">
+                <select id="sub_customer_user" name="sub_customer_user" class="ppress-select2-field customer_user">
                     <option value="<?= $subscription_data->customer_id ?>" selected>
                         <?php printf(esc_html__('%1$s (%2$s)', 'wp-user-avatar'), $customer->get_name(), $customer->get_email()) ?>
                     </option>

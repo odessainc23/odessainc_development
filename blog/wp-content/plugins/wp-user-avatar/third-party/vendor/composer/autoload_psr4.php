@@ -15,6 +15,7 @@ return array(
     'ProfilePressVendor\\Sabberworm\\CSS\\' => array($vendorDir . '/sabberworm/php-css-parser/src'),
     'ProfilePressVendor\\ProfilePress\\Core\\' => array($baseDir . '/src'),
     'ProfilePressVendor\\Pelago\\Emogrifier\\' => array($vendorDir . '/pelago/emogrifier/src'),
+    'ProfilePressVendor\\League\\Csv\\' => array($vendorDir . '/league/csv/src'),
     'ProfilePressVendor\\Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'ProfilePressVendor\\Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'ProfilePressVendor\\Barryvdh\\Composer\\' => array($vendorDir . '/barryvdh/composer-cleanup-plugin/src'),

@@ -23,7 +23,7 @@ class TranslationReader implements TranslationReaderInterface
     /**
      * Loaders used for import.
      *
-     * @var array
+     * @var array<string, LoaderInterface>
      */
     private $loaders = [];
     /**
@@ -31,14 +31,14 @@ class TranslationReader implements TranslationReaderInterface
      *
      * @param string $format The format of the loader
      */
-    public function addLoader($format, LoaderInterface $loader)
+    public function addLoader(string $format, LoaderInterface $loader)
     {
         $this->loaders[$format] = $loader;
     }
     /**
      * {@inheritdoc}
      */
-    public function read($directory, MessageCatalogue $catalogue)
+    public function read(string $directory, MessageCatalogue $catalogue)
     {
         if (!\is_dir($directory)) {
             return;

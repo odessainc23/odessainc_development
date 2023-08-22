@@ -38,6 +38,15 @@ class MembershipShortcodes
 
     public function checkout_page_wrapper()
     {
+        if (ppress_is_redirect_to_referrer_after_checkout()) {
+
+            $referrer = wp_get_referer();
+
+            if ( ! empty($referrer)) {
+                ppress_session()->set('ppress_checkout_referrer', esc_url_raw($referrer));
+            }
+        }
+
         ob_start();
 
         echo '<div class="ppress-checkout__form">';
