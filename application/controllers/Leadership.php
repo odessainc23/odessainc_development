@@ -44,7 +44,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Sumit Maheshwari',
 				'thumbnail'		=> base_url() .'assets/images/leadership/sumit-maheshwari.jpg',
 				'title'			=> 'CFO',
-				'description'	=> 'Sumit is Odessa’s SVP, Finance and has been with the company since 2017. He drives the company’s financial strategy and reporting, passionate about high growth metrics while also improving operating efficiency. Prior to joining Odessa, Sumit served as Head of Business Finance at AXISCADES and was instrumental in helping them scale for growth. Before that, Sumit held positions in corporate finance at JP Morgan and Genpact. He holds a Bachelors in Commerce from Patna University and has been a Chartered Accountant since 2005.',
+				'description'	=> 'Sumit is Odessa’s CFO, Finance and has been with the company since 2017. He drives the company’s financial strategy and reporting, passionate about high growth metrics while also improving operating efficiency. Prior to joining Odessa, Sumit served as Head of Business Finance at AXISCADES and was instrumental in helping them scale for growth. Before that, Sumit held positions in corporate finance at JP Morgan and Genpact. He holds a Bachelors in Commerce from Patna University and has been a Chartered Accountant since 2005.',
 				'experience'	=> '6 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/casumitmaheshwari/',
@@ -75,7 +75,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Roopa Jayaraman',
 				'thumbnail'		=> base_url() .'assets/images/leadership/roopa-jayaraman.jpg',
 				'title'			=> 'CTO',
-				'description'	=> 'Roopa is Odessa’s SVP, Product and Technology Development, responsible for defining product strategies, R&D, and implementing program blueprints to deliver solutions at scale. She is passionate about bridging the strategy-execution gap in the fintech space and leveraging agile methodologies and tools to build product management excellence across global teams. Roopa champions strategic programs that catalyze talent development and innovation at Odessa, instrumental in Odessa University and Communities of Practice. She holds a Bachelor of Arts in Sociology from Stella Maris College and a Master of Management from the University of Auckland. Committed to driving diversity and inclusion, Roopa is the executive sponsor of Women@Odessa in India.',
+				'description'	=> 'Roopa is Odessa’s CTO, responsible for defining product strategies, R&D, and implementing program blueprints to deliver solutions at scale. She is passionate about bridging the strategy-execution gap in the fintech space and leveraging agile methodologies and tools to build product management excellence across global teams. Roopa champions strategic programs that catalyze talent development and innovation at Odessa, instrumental in Odessa University and Communities of Practice. She holds a Bachelor of Arts in Sociology from Stella Maris College and a Master of Management from the University of Auckland. Committed to driving diversity and inclusion, Roopa is the executive sponsor of Women@Odessa in India.',
 				'experience'	=> '8 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/roopajayaraman/',
@@ -97,7 +97,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Andrew Baird',
 				'thumbnail'		=> base_url() .'assets/images/leadership/andrew.png',
 				'title'			=> 'SVP North American Sales & XaaS',
-				'description'	=> 'At Odessa, Andrew is responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
+				'description'	=> 'At Odessa, Andrew is SVP North American Sales & XaaS, responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
 				'experience'	=> '0 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/andrew-b-30300613/',
@@ -109,7 +109,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Campbell Clout',
 				'thumbnail'		=> base_url() .'assets/images/leadership/campbell.png',
 				'title'			=> 'SVP, Business Development',
-				'description'	=> 'Jim is Odessa’s SVP, Sales, responsible for global sales and business development since 2008. He oversees all aspects of sales strategy during the customer buying journey, leveraging his 35 years of experience in leasing to develop strategies that resonate with lessors. Prior to Odessa, Jim served as Vice President of Business Development for Genpact and spent 19 years at GE Capital, where he held various positions, including General Manager of GE Capital Equipment Finance in Ontario, Canada and Vice President of Sales. He holds a Bachelor of Science in Business Administration and Finance from the University of Connecticut.',
+				'description'	=> '',
 				'experience'	=> '0 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/campbell-clout-580541/',
@@ -213,7 +213,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Scott Frymire',
 				'thumbnail'		=> base_url() .'assets/images/leadership/scott.jpg',
 				'title'			=> 'SVP, Corporate Marketing',
-				'description'	=> 'Scott has 25+ years of experience in B2B marketing. His responsibilities include driving Odessa’s solution messaging, expanding the company’s brand presence, and building a best-in-class marketing organization. Scott has held marketing leadership roles with several fast-growing companies in the digital commerce, AI, and IT performance monitoring markets, including Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, a fractional CMO and marketing consulting business for emerging B2B companies. He also spent the first 15 years of his career contributing to the growth of ERP software companies such as Prophet 21 and Epicor.',
+				'description'	=> 'Scott is SVP, Corporate Marketing, has 25+ years of experience in B2B marketing. His responsibilities include driving Odessa’s solution messaging, expanding the company’s brand presence, and building a best-in-class marketing organization. Scott has held marketing leadership roles with several fast-growing companies in the digital commerce, AI, and IT performance monitoring markets, including Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, a fractional CMO and marketing consulting business for emerging B2B companies. He also spent the first 15 years of his career contributing to the growth of ERP software companies such as Prophet 21 and Epicor.',
 				'experience'	=> '0 Years in Delivery',
 				'social'		=> array(
 				'linkedin'	    => 'https://www.linkedin.com/in/scottfrymire/',
