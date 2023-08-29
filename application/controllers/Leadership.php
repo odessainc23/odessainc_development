@@ -211,7 +211,7 @@ class Leadership extends CI_Controller {
 			// ),
 			array(
 				'name'			=> 'Scott Frymire',
-				'thumbnail'		=> base_url() .'assets/images/leadership/scott.jpg',
+				'thumbnail'		=> base_url() .'assets/images/leadership/scott.png',
 				'title'			=> 'SVP, Corporate Marketing',
 				'description'	=> 'Scott is Odessa’s SVP of Corporate Marketing, responsible for driving  company’s solution messaging, expanding the brand presence, and building a best-in-class marketing organization. He has a diverse background with over 25 years of experience in B2B marketing. Scott has held marketing leadership roles in rapidly evolving industries like digital commerce, AI, and IT performance monitoring, shaping success stories at Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, where he provided fractional CMO services and strategic marketing consultation to emerging B2B enterprises.  Scott’s early career was marked by significant contributions to ERP software companies, including Prophet 21 and Epicor, reflecting his unwavering commitment to driving growth and innovation.',
 				'experience'	=> '0 Years in Delivery',
