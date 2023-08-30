@@ -44,7 +44,9 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Sumit Maheshwari',
 				'thumbnail'		=> base_url() .'assets/images/leadership/sumit-maheshwari.jpg',
 				'title'			=> 'CFO',
-				'description'	=> 'Sumit is Odessa’s CFO, Finance and has been with the company since 2017. He drives the company’s financial strategy and reporting, passionate about high growth metrics while also improving operating efficiency. Prior to joining Odessa, Sumit served as Head of Business Finance at AXISCADES and was instrumental in helping them scale for growth. Before that, Sumit held positions in corporate finance at JP Morgan and Genpact. He holds a Bachelors in Commerce from Patna University and has been a Chartered Accountant since 2005.',
+				'description'	=> 'Sumit is CFO at Odessa. Since joining the organization in 2017, Sumit has led the Finance function, including controllership, business finance, and pricing. Sumit focuses on delivering Odessa’s high growth while also improving operating margin.
+				Sumit has 15+ years of experience and a proven track record in setting up global finance functions for IT and IT Enabled Services businesses. He also has deep experience in leading fundraising, M&A, and IPO transactions for global organizations.
+				Before joining Odessa, Sumit served as Head of Business Finance at AXISCADES and Head of Corporate Financial Reporting at J.P. Morgan and Genpact. Sumit is a Chartered Accountant  from the ICAI.',
 				'experience'	=> '6 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/casumitmaheshwari/',
