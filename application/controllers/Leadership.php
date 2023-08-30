@@ -75,7 +75,9 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Roopa Jayaraman',
 				'thumbnail'		=> base_url() .'assets/images/leadership/roopa-jayaraman.jpg',
 				'title'			=> 'CTO',
-				'description'	=> 'Roopa is Odessa’s CTO, responsible for defining product strategies, R&D, and implementing program blueprints to deliver solutions at scale. She is passionate about bridging the strategy-execution gap in the fintech space and leveraging agile methodologies and tools to build product management excellence across global teams. Roopa champions strategic programs that catalyze talent development and innovation at Odessa, instrumental in Odessa University and Communities of Practice. She holds a Bachelor of Arts in Sociology from Stella Maris College and a Master of Management from the University of Auckland. Committed to driving diversity and inclusion, Roopa is the executive sponsor of Women@Odessa in India.',
+				'description'	=> 'Roopa is CTO at Odessa, responsible for product and technology leadership, spearheading global cross-functional teams, to deliver platform releases to our global customers. She is also the site leader for our India hub and champions an innovative, inclusive, and learning-centric workplace.
+				Roopa brings more than two decades of experience within the enterprise software realm, with a dedicated focus on financial services for over 10 years. Roopa is a seasoned leader, with deep expertise in product roadmaps, technology innovation, and R&D strategies at a global scale. 
+				Having joined Odessa in April 2014, Roopa has played pivotal roles as SVP, in product strategies and development for best-in-class customer experience. Prior to Odessa, she managed enterprise technology transformations at Unisys and Leadtec (now SPS Commerce).',
 				'experience'	=> '8 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/roopajayaraman/',
