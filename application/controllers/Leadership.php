@@ -100,7 +100,7 @@ class Leadership extends CI_Controller {
 			array(
 				'name'			=> 'Andrew Baird',
 				'thumbnail'		=> base_url() .'assets/images/leadership/andrew.png',
-				'title'			=> 'SVP North American Sales & XaaS',
+				'title'			=> 'SVP NA Sales & XaaS',
 				'description'	=> 'At Odessa, Andrew is SVP North American Sales & XaaS, responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
 				'experience'	=> '0 Years in Leasing',
 				'social'		=> array(
