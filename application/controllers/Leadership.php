@@ -34,7 +34,7 @@ class Leadership extends CI_Controller {
 				'thumbnail'		=> base_url() .'assets/images/leadership/eric.png',
 				'title'			=> 'CEO',
 				'description'	=> 'Eric joined Odessa in April 2023 as CEO, stepping into the role of founder Madhu Natarajan following his transition to Executive Chairman of the Board. Eric has 20+ years of experience leading global financial services software companies and a proven track record of scaling global organizations and delivering high growth. He joined Odessa from EquityZen, where he served as COO and oversaw EquityZen’s strategy and delivery of its solutions. Prior to EquityZen, Eric held roles as President of Broadridge Asset Management Solutions, COO of eFront, COO of Sophis, and Global Head of Sales and Product Management at LineData. In addition to his long tenured career in Financial Technology, Eric ran market-making and trading at PaineWebber and Melvin Securities. He is a tested leader who deeply understands enterprise software and differentiating customer experience.',
-				'experience'	=> '0 Years in Leasing',
+				'experience'	=> '14 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/eric-bernstein-7698a0/',
 					
@@ -102,7 +102,7 @@ class Leadership extends CI_Controller {
 				'thumbnail'		=> base_url() .'assets/images/leadership/andrew.png',
 				'title'			=> 'SVP NA Sales & XaaS',
 				'description'	=> 'At Odessa, Andrew is SVP North American Sales & XaaS, responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
-				'experience'	=> '0 Years in Leasing',
+				'experience'	=> '15 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/andrew-b-30300613/',
 
@@ -113,8 +113,8 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Campbell Clout',
 				'thumbnail'		=> base_url() .'assets/images/leadership/campbell.png',
 				'title'			=> 'SVP, Business Development',
-				'description'	=> '',
-				'experience'	=> '0 Years in Leasing',
+				'description'	=> 'Campbell is SVP of Business Development at Odessa. With a background spanning over 25 years in the Asset Finance industry, his scope of responsibility involves enterprise sales and new business development in the Asia Pacific, Middle East, and Africa regions. He joined Odessa in 2022, bringing in his extensive industry knowledge and expertise. Before joining Odessa, Campbell held a leadership positions, spearheading projects including go-to-market strategy, sales, project delivery, and product management at organizations including AGC/Westpac, Rabobank, International Decision Systems, and FIS.',
+				'experience'	=> '25 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/campbell-clout-580541/',
 				)
@@ -218,7 +218,7 @@ class Leadership extends CI_Controller {
 				'thumbnail'		=> base_url() .'assets/images/leadership/scott.png',
 				'title'			=> 'SVP, Corporate Marketing',
 				'description'	=> 'Scott is Odessa’s SVP of Corporate Marketing, responsible for driving  company’s solution messaging, expanding the brand presence, and building a best-in-class marketing organization. He has a diverse background with over 25 years of experience in B2B marketing. Scott has held marketing leadership roles in rapidly evolving industries like digital commerce, AI, and IT performance monitoring, shaping success stories at Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, where he provided fractional CMO services and strategic marketing consultation to emerging B2B enterprises.  Scott’s early career was marked by significant contributions to ERP software companies, including Prophet 21 and Epicor, reflecting his unwavering commitment to driving growth and innovation.',
-				'experience'	=> '0 Years in Delivery',
+				'experience'	=> '27 years in B2B software ',
 				'social'		=> array(
 				'linkedin'	    => 'https://www.linkedin.com/in/scottfrymire/',
 				)
