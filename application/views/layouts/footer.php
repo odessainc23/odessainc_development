@@ -124,7 +124,7 @@ function initAddThis(){
 // After the DOM has loaded...
 initAddThis();
 </script>
-<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>	
+<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
 </body>
 
 </html>

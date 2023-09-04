@@ -104,6 +104,7 @@
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
 	</script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001"></script>
+	
 </head>
 <body class="">
 	<!-- Google Tag Manager (noscript) -->
