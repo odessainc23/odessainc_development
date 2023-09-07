@@ -2,11 +2,6 @@
 	$current_url = $this->router->fetch_class() . '/' . $this->router->fetch_method();
 	$custom_css_list = array( 'leadership/index', 'careers/index', 'platform/index', 'platform/core' );
 ?>
-<?php
-// 301 Moved Permanently
-header("Location: https://www.odessainc.com/privacy-policy", true, 301);
-exit();
-?>
 <!doctype html>
 <html lang="en">
 <head>
