@@ -6,6 +6,7 @@
 # END WordPress
 
 Redirect /blog/the-time-is-now-madhu-natarajan/ https://www.odessainc.com/blog/the-time-is-now/
+Redirect 301 www.odessatechnologies.com/legal/terms.html https://www.odessainc.com/terms-of-use
 
 # Wordfence WAF
 <Files ".user.ini">
