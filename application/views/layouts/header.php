@@ -4,7 +4,7 @@
 ?>
 <?php
 // 301 Moved Permanently
-header("Location: https://www.odessainc.com/privacy-policy.php", true, 301);
+header("Location: https://www.odessainc.com/privacy-policy", true, 301);
 exit();
 ?>
 <!doctype html>
