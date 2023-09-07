@@ -106,14 +106,9 @@
 		addLoadEvent(preloader);
 	</script>
 	<script>
-		// Redirect www.odessatechnologies.com/legal/privacy.html
-		if (window.location.href.indexOf("https://www.odessatechnologies.com/legal/privacy.html") !== -1) {
+		// Redirect https://www.odessatechnologies.com/legal/privacy.html
+		if (window.location.href === "https://www.odessatechnologies.com/legal/privacy.html") {
 			window.location.href = "https://www.odessainc.com/privacy-policy";
-		}
-		
-		// Redirect www.odessatechnologies.com/legal/terms.html
-		if (window.location.href.indexOf("https://www.odessatechnologies.com/legal/terms.html") !== -1) {
-			window.location.href = "https://www.odessainc.com/terms-of-use";
 		}
 		</script>
     
