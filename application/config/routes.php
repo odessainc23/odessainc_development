@@ -68,6 +68,8 @@ $route['lets-talk'] = 'welcome/lets_talk_primary';
 $route['get-started'] = 'welcome/lets_talk_secondary';
 $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
+$route['legal/privacy-policy'] = 'welcome/privacy_policy';
+
 
 $route['turns22'] = 'home/turns22';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
