@@ -104,6 +104,12 @@
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
 	</script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001"></script>
+	<script>
+		// Redirect https://www.odessatechnologies.com/legal/privacy.html
+		if (window.location.href === "https://www.odessainc.com/legal/privacy.html") {
+			window.location.href = "https://www.odessainc.com/privacy-policy";
+		}
+		</script>
 </head>
 <body class="">
 	<!-- Google Tag Manager (noscript) -->
