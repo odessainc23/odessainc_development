@@ -87,10 +87,10 @@
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 6?>"  />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 7?>" />
 	
-	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
+	<!-- <?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=<?php echo time() + 8?>" rel="stylesheet preload" type="text/css" />
-	<?php } ?>
+	<?php } ?> -->
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=<?php echo time() + 9?>" />
 
