@@ -5,41 +5,42 @@
 	  display: none;
 	  visibility: hidden;
 	}
-	 .i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
+	.i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
         display: block;
         height:auto;
        min-height: auto;
        max-height: initial;
        min-width:auto
     }
-	
-		#page_number{
-			color:red;
-		}
-		.capt{
-			border-radius: 4px;
-			border: 2px solid transparent;
-		}
-		.capt.error{
-			border: 2px solid #ff495c;
-			width: 306px;
-			padding: 0;
-			height: 80px;
-		}
-		.letstalkSecondryform .secnformCon textarea.form-control{
-			height:92px;
-		}
+	#page_number{
+		color:red;
+	}
+	.capt{
+		border-radius: 4px;
+		border: 2px solid transparent;
+	}
+	.capt.error{
+		border: 2px solid #ff495c;
+		width: 306px;
+		padding: 0;
+		height: 80px;
+	}
+	.letstalkSecondryform .secnformCon textarea.form-control{
+		height:92px;
+	}
+	.customerInnerTitle{
+		font-size: 1.5rem;
+	}
 		
-		@media only screen and (max-width: 1200px) {
-			.g-recaptcha, #rc-imageselect{
+	@media only screen and (max-width: 1200px) {
+		.g-recaptcha, #rc-imageselect{
 			transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
 		}
 		.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
 			border: 0 !important;
 			box-shadow:none !important;
 			background:none !important
-		}
-		
+		}	
 	}
 	
 	</style>
@@ -86,7 +87,7 @@
 							<form id = "primaryForm" method="post" autocomplete="off">
 						
 							<label for="honeypot">Honeypot </label>
-							<input id="honeypot" name="honeypot" size="40" type="text" value="" /><br>
+							<input id="honeypot" name="honeypot" size="40" type="text"/><br>
 							<div class="form-group">
 								<input class="form-control" name="first-name" id = "first_name" type="text" placeholder="First Name" required/>
 							</div>
@@ -106,7 +107,8 @@
 								<input class="form-control" name="phone" type="text" placeholder="Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
 							</div>
 							<div class="form-group">
-								<select name="country" class="select selectpicker" onchange=""><option value=""></option>
+								<select name="country" class="select selectpicker">
+									<option value=""></option>
 									<option value="39461" selected="selected">Country</option>
 									<option value="39463">United States</option>
 									<option value="39465">Canada</option>
@@ -350,7 +352,7 @@
 									<option value="39941">Yemen</option>
 									<option value="39943">Zambia</option>
 									<option value="39945">Zimbabwe</option>
-									</select>
+								</select>
 							</div>
 							<div class="form-group">
 								<!--<select name="referring-source" class="select refer-source" onchange="">
@@ -406,7 +408,7 @@
 								<div class="customericonrw">
 									<div class="customericon"></div>
 								</div>
-								<h3>Customer Support</h3>
+								<h2 class="customerInnerTitle">Customer Support</h2>
 								<div class="boxnormaltxt">For help with your account and ensuring your experience is running
 									smoothly, reach out to our global customer success teams.</div>
 								<div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://odessainc.force.com/customer/">Chat with support</a> </div>
@@ -417,7 +419,7 @@
 								<div class="customericonrw">
 									<div class="customericon community"></div>
 								</div>
-								<h3>Customer Community</h3>
+								<h2 class="customerInnerTitle">Customer Community</h2>
 								<div class="boxnormaltxt">Catch up on our latest release notes packed with new features and
 									functionality, tap into our knowledge base, and join in on the conversation with Odessa
 									users!</div>
@@ -469,7 +471,7 @@
 						</div>
 						<div class="col-sm-5 col-md-6">
 							<div class="officeviewentrybx">
-								<amp-img src="<?php echo base_url(); ?>assets/images/odessa_ofice_view.jpg" alt="" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+								<amp-img src="<?php echo base_url(); ?>assets/images/odessa_ofice_view.jpg" alt="office-view" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
 
 								<!-- <img src="<?=base_url(); ?>assets/images/odessa_ofice_view.jpg" alt="Office View" /> </div> -->
 						</div>
@@ -519,133 +521,129 @@
 	
 	
 	
-		$("#primaryForm").validate({
-			rules: {
-				"first-name":{
-				  required: true,
-				  maxlength: 50,
-				  lettersonly:true
-				}, 
-				"last-name":{
-				  required: true,
-				  maxlength: 50,
-				  lettersonly:true
-				},
-				email: {
-					required: true,
-					myusername: true,
-				},
-				phone: {
-					required: true,
-					minlength:6,
-					maxlength:15,
-					mobile:true
-				  },
-				"job-title": {
-					required: true
-				  },
-				company: {
-					required: true
-				},
-				"software-used": {
-				  required: true
-				},
-				country: {
-				  required: true
-				}
+	$("#primaryForm").validate({
+		rules: {
+			"first-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
+			}, 
+			"last-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
 			},
-			   messages: {
-				"first-name": {
-				  required:"",
-				  maxlength:""
-				  }, 
-				"last-name": {
-				  required:"",
-				  maxlength:""
-				  },           
-				email: {
-					required: "",
-				   },
-				phone: {
-					required: "",
-					minlength:"",
-					maxlength:""
-				   },
-				"job-title": {
-					required: ""
+			email: {
+				required: true,
+				myusername: true,
+			},
+			phone: {
+				required: true,
+				minlength:6,
+				maxlength:15,
+				mobile:true
 				},
-				company: {
-					required: ""
+			"job-title": {
+				required: true
 				},
-				"software-used": {
-				  required: "",
+			company: {
+				required: true
+			},
+			"software-used": {
+				required: true
+			},
+			country: {
+				required: true
+			}
+		},
+			messages: {
+			"first-name": {
+				required:"",
+				maxlength:""
+				}, 
+			"last-name": {
+				required:"",
+				maxlength:""
+				},           
+			email: {
+				required: "",
 				},
-				country: {
-				  required: "",
-				}
-			  },
-			 submitHandler: function (form) {
-				
-				var honeypot_val = $("#honeypot").val();
-				if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-					if(honeypot_val != ''){
-						window.location.reload();
-						return false;
-					}else{
-						$(".capt").addClass("error");
-						return false;
-					}
-				} else {
-					if(honeypot_val == ''){
-						$("#secondaryForm").submit();
-						return true;
-					}else{
-						$(".capt").removeClass("error");
-						return true
-					}
-				}
-	
+			phone: {
+				required: "",
+				minlength:"",
+				maxlength:""
+				},
+			"job-title": {
+				required: ""
+			},
+			company: {
+				required: ""
+			},
+			"software-used": {
+				required: "",
+			},
+			country: {
+				required: "",
+			}
+			},
+			submitHandler: function (form) {
 			
-			}
-		});
-		$("#letstalk").click(function(){
-			//console.log($("#honeypot").val())
 			var honeypot_val = $("#honeypot").val();
-			if(honeypot_val == ''){
-				$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-				$("#primaryForm").submit();
-				return true;
-			}else{
-				window.location.reload();
-				return false;
+			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
+				if(honeypot_val != ''){
+					window.location.reload();
+					return false;
+				}else{
+					$(".capt").addClass("error");
+					return false;
+				}
+			} else {
+				if(honeypot_val == ''){
+					$("#secondaryForm").submit();
+					return true;
+				}else{
+					$(".capt").removeClass("error");
+					return true
+				}
 			}
-		})
-		
-		
+		}
+	});
+
+	$("#letstalk").click(function(){
+		var honeypot_val = $("#honeypot").val();
+		if(honeypot_val == ''){
+			$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+			$("#primaryForm").submit();
+			return true;
+		}else{
+			window.location.reload();
+			return false;
+		}
+	})	
 	
-		$("#first_name").keypress(function(event){
-				  var regex = new RegExp("^[a-zA-Z ]*$");
-					  console.log(regex);
-				  var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-				  if (!regex.test(key)) {
-				  event.preventDefault();
-				  return false;
-				  }
-			 });
-	
-			 $("#last_name").keypress(function(event){
-				  var regex = new RegExp("^[a-zA-Z ]*$");
-					  console.log(regex);
-				  var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-				  if (!regex.test(key)) {
-				  event.preventDefault();
-				  return false;
-				  }
-			 });
-	
-			 $('#primaryForm input').bind("cut copy paste",function(e) {
-			  e.preventDefault();
-			  });
+	$("#first_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
+
+	$("#last_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
+
+	$('#primaryForm input').bind("cut copy paste",function(e) {
+		e.preventDefault();
+	});
 	
 	
 		
@@ -672,15 +670,13 @@
 	
 	});
 	
-	function isNumberKey(evt)
-		  {
-			 var charCode = (evt.which) ? evt.which : event.keyCode
-			 if (charCode > 31 && (charCode < 48 || charCode > 57))
-				return false;
-	
-			 return true;
-		  
-		  }
+	function isNumberKey(evt){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+		if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
+
+		return true;
+	}
 	</script>
 	<link href="<?= base_url(); ?>assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
 	<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 

@@ -24,7 +24,7 @@
                     <li><a href="<?php echo base_url(); ?>careers" hreflang="en">Careers</a></li>
                     <li><a href="<?php echo base_url(); ?>newsroom" hreflang="en">Events + Webinars</a></li>
                     <li><a href="<?php echo base_url(); ?>newsroom" hreflang="en">Newsroom</a></li>
-                    <li><a id="features" class="active" href="<?php echo base_url(); ?>lets-talk" hreflang="en">Contact us</a></li>
+                    <li><a id="contactUs" class="active" href="<?php echo base_url(); ?>lets-talk" hreflang="en">Contact us</a></li>
                 </ul>
             </div>
         </div>
@@ -57,17 +57,18 @@
         </div>
     </div>
     </div>
-    </footer>
-    <div class="footermenu_strip">
+</footer>
+<div class="footermenu_strip">
     <div class="container">
     <div class="footermenu_strip_inner clearfix">
         <div class="stripfbox">
             <div class="socailicons_newsletter">
                 <div class="social_icon"> 
-                    <a href="https://www.facebook.com/OdessaInc/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
-                    <a href="https://twitter.com/OdessaTech" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                    <a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                    <a href="https://www.instagram.com/odessainc/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://www.youtube.com/odessainc" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a> </div>
+                    <a href="https://www.facebook.com/OdessaInc/" target="_blank" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                    <a href="https://twitter.com/OdessaTech" target="_blank" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                    <a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                    <a href="https://www.instagram.com/odessainc/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+                    <a href="https://www.youtube.com/odessainc" target="_blank" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a> </div>
             </div>
             <div id="desktop_social" class="footerbottommenu">
                 <ul class="list-unstyled list-inline">
@@ -79,20 +80,19 @@
         </div>
     </div>
     </div>
-    </div>
+</div>
     
     
-    <?php
-        $this->minify->js( array('owl.carousel.js', 'bootstrap.js', 'jquery.cookieMessage.min.js', 'stickySidebar.min.js', 'v1-script.js', 'script.js') );
+<?php
+    $this->minify->js( array('owl.carousel.js', 'bootstrap.js', 'jquery.cookieMessage.min.js', 'stickySidebar.min.js', 'v1-script.js', 'script.js') );
+
+    echo $this->minify->deploy_js();
+?>
     
-        echo $this->minify->deploy_js();
-    ?>
-    
-    <script src="<?php echo base_url(); ?>assets/js/aos.js?v=7001" async></script>
-    <script src="<?php echo base_url(); ?>assets/js/main.js?v=824334" async></script>
-    <script src="<?php echo base_url(); ?>assets/js/lazysizes.min.js?v=900232" async></script>
-    <script async>
-    
+<script src="<?php echo base_url(); ?>assets/js/aos.js?v=7001" async></script>
+<script src="<?php echo base_url(); ?>assets/js/main.js?v=824334" async></script>
+<script src="<?php echo base_url(); ?>assets/js/lazysizes.min.js?v=900232" async></script>
+<script async>
     
     setTimeout(function(){
     $.cookieMessage({
@@ -102,11 +102,10 @@
     AOS.init({
         throttleDelay: 0,
     });
-    }, 4000);
+    }, 4000); 
+</script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/addthis_widget.js?v=900232"></script> 
+<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
+</body>
     
-    </script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/addthis_widget.js?v=900232"></script> 
-    <script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
-    </body>
-    
-    </html>
+</html>
