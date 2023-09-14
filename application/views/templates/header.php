@@ -27,9 +27,9 @@
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 
-	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
+	<!-- <?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css" rel="stylesheet preload" as="style" type="text/css" />
-	<?php } ?>
+	<?php } ?> -->
 	<script src="<?php echo base_url(); ?>assets/js/jquery-2.1.1.js?v=6001"></script> 
 	<script src="<?php echo base_url(); ?>assets/js/owl.carousel.js"></script> 
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
