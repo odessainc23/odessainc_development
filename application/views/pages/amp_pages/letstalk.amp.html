@@ -678,7 +678,9 @@
 		return true;
 	}
 	</script>
-	<link href="<?= base_url(); ?>assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+	<style amp-custom>
+		@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
+	</style>
 	<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
