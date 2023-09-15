@@ -65,18 +65,13 @@
 	<?php } ?>
 	<meta property="twitter:site" content="OdessaInc.Com">
 	<meta property="twitter:card" content="summary">
-
 	<!-- Canonical URL -->
 	<link rel="canonical" href="<?php echo current_url(); ?>" />
-
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
-
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Book.otf" as="font" type="font/otf" crossorigin>
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Bold.otf" as="font" type="font/otf" crossorigin>
-
-
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() ?>" as="style" crossorigin />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" as="style" crossorigin />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2?>" as="style" crossorigin />
