@@ -13,7 +13,7 @@
 		box-shadow:none;
 	}
 	.navbar-default #nav-icon1 span{
-		 background-color: #fff;
+		background-color: #fff;
 	}
 	.navbar-default .navbar-brand {
 		background: url('/assets/images/logo_wt.png') no-repeat;
@@ -24,8 +24,8 @@
 		background:none;
 	}
 	.platform .pgplat__banner {
-    height: calc(100vh - 120px);
-    max-height: 568px;
+    	height: calc(100vh - 120px);
+    	max-height: 568px;
   }
 </style>
 
@@ -45,50 +45,42 @@
 	};
 	
 	function url_redirect(options){
-					var $form = $("<form />");
-					 
-					 $form.attr("action",options.url);
-					 $form.attr("method",options.method);
-					 
-					 for (var data in options.data)
-					 $form.append('<input type="hidden" name="email" value="'+options.data[data]+'" />');
-					  
-					 $("body").append($form);
-					 $form.submit(); 
-				}
-	
-	
+		var $form = $("<form />");
+		
+		$form.attr("action",options.url);
+		$form.attr("method",options.method);
+		
+		for (var data in options.data)
+		$form.append('<input type="hidden" name="email" value="'+options.data[data]+'" />');
+		
+		$("body").append($form);
+		$form.submit(); 
+	}
 	
 	function letstalkclick(emailId)
 	{
-	 
-	  var email = document.getElementById(emailId).value;
-	  
-	 var url="<?= base_url()?>get-started" ;
+		var email = document.getElementById(emailId).value;
+		var url="<?= base_url()?>get-started" ;
+		url_redirect( {url: url,
+		method: "post",
+		data: {"email":email.escape() }
+		});
+	}
 	
-	url_redirect( {url: url,
-					  method: "post",
-					  data: {"email":email.escape() }
-					 });
-	
-	 
-	  }
+</script>
 	
 	
-	</script>
-	
-	
-	<div id="wrapper" class="platform">
-		<div class="">
+<div id="wrapper" class="platform">
+	<div class="">
 		<section class="pg_banner pgplat__banner">
 			<div class="odc-gd__container">
 				<div class="odc-gd__row">
 					<div class="pgplat__bleft odc-gd__col-xxs-12 odc-gd__col-xs-6">
 						<h1 class="pgplat__btitle">A smarter way to do lease management</h1>
 						<p class="pgplat__btext">Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.</p>
-					 <div class="pgplat__bform" >   
+						<div class="pgplat__bform" >   
 							<input type="email" placeholder="What’s your email?" name="email" id="email1" required=""><button class="odc__btn odc__btn--primary odc__btn--md" type="submit" onclick="letstalkclick('email1'); return;">Let’s Talk</button>
-			 </div>  
+			 			</div>  
 					</div>
 				</div>
 			</div>
@@ -104,8 +96,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Origination.svg" alt="Odessa Core Origination" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/Origination.svg" alt="Odessa Core Origination" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Core: Origination</h4>
 						<p class="pgplat_ftgstext">Seamlessly bring sales and operations together for efficiency in pricing, documents, funding - everything you need to close the deal.</p>
@@ -114,8 +104,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Servicingic.svg" alt="Odessa Core Servicing" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/Servicingic.svg" alt="Odessa Core Servicing" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Core: Servicing</h4>
 						<p class="pgplat_ftgstext">Simplify and automate core asset management processes so you can boost productivity, and focus on bringing new products to market.</p>
@@ -130,7 +118,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/CustomerPortalic.svg" alt="Odessa Customer Portal" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/CustomerPortalic.svg" alt="Odessa Customer Portal" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Customer Portal</h4>
 						<p class="pgplat_ftgstext">Delight your customers with the gift of omnichannel intelligence and self-service to increase efficiency.</p>
@@ -139,7 +126,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/PartnerPortalic.svg" alt="Odessa Partner Portal" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/PartnerPortalic.svg" alt="Odessa Partner Portal" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Partner Portal</h4>
 						<p class="pgplat_ftgstext">Accelerate the speed of funding for your broker network through an intuitive, mobile-enabled portal.</p>
@@ -148,8 +134,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Mobilityic.svg" alt="Odessa Mobility" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/Mobilityic.svg" alt="Odessa Mobility" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Mobility</h4>
 						<p class="pgplat_ftgstext">Harness the full power of Odessa Build to extend or create beautifully simple mobile apps.</p>
@@ -163,8 +147,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Reporteric.svg" alt="Odessa Reportbuilder" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/Reporteric.svg" alt="Odessa Reportbuilder" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Reportbuilder</h4>
 						<p class="pgplat_ftgstext">Reduce the time it takes to transform data into insights, empowering you to make more informed strategic decisions.</p>
@@ -173,8 +155,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platform/datamart-flatten.svg" alt="Odessa Insights" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platform/datamart-flatten.svg" alt="Odessa Insights" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Insights</h4>
 						<p class="pgplat_ftgstext">Maximize the value of your data collected to enable more detailed business analysis.</p>
@@ -190,8 +170,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platformicon/Buidic.svg" alt="Odessa Build" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platformicon/Buidic.svg" alt="Odessa Build" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Build</h4>
 						<p class="pgplat_ftgstext">Access the same technology and framework that our developers use to build Odessa applications.</p>
@@ -200,8 +178,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platform/test-flatten.svg" alt="Odessa Test" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platform/test-flatten.svg" alt="Odessa Test" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa Test</h4>
 						<p class="pgplat_ftgstext">Bring efficiency to your application development lifecycle with comprehensive test automation.</p>
@@ -210,8 +186,6 @@
 					<div class="pgplat_ftgsub odc-gd__col-xxs-12 odc-gd__col-xs-3">
 						<div class="pgplat_ftgsicon">
 							<amp-img src="<?php echo base_url(); ?>assets/images/platform/api-flatten.svg" alt="Odessa Test" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-
-							<!-- <img src="<?php echo base_url(); ?>assets/images/platform/api-flatten.svg" alt="Odessa API" /> -->
 						</div>
 						<h4 class="pgplat_ftgstitle">Odessa APIs</h4>
 						<p class="pgplat_ftgstext">Connect Odessa to your critical business tools to automate cross-platform workflow.</p>
@@ -239,33 +213,25 @@
 						<div class="pgplat_tmctabnav owl-carousel owl-theme">
 							<div class="pgplat_tmctab-item tabactive" data-toggle="tab" href="#accounting">
 								<div class="pgplat_tmctabiimage">
-									<amp-img src="<?php echo base_url(); ?>assets/images/platform/accounting.png" alt="Lease Accounting" class="lazyload" width="120" height="118" ></amp-img>
-
-									<!-- <img src="<?php echo base_url(); ?>assets/images/platform/accounting.png" alt="Lease Accounting"> -->
+									<amp-img src="<?php echo base_url(); ?>assets/images/platform/accounting.webp" alt="Lease Accounting" class="lazyload" width="120" height="118" ></amp-img>
 								</div>
 								<div class="pgplat_tmctabitext">Accounting</div>
 							</div>
 							<div class="pgplat_tmctab-item" data-toggle="tab" href="#customerservice">
 								<div class="pgplat_tmctabiimage">
-									<amp-img src="<?php echo base_url(); ?>assets/images/platform/customerservice.png" alt="Customer Servicing" class="lazyload" width="120" height="118" ></amp-img>
-
-									<!-- <img src="<?php echo base_url(); ?>assets/images/platform/customerservice.png" alt="Customer Servicing"> -->
+									<amp-img src="<?php echo base_url(); ?>assets/images/platform/customerservice.webp" alt="Customer Servicing" class="lazyload" width="120" height="118" ></amp-img>
 								</div>
 								<div class="pgplat_tmctabitext">Customer Service</div>
 							</div>
 							<div class="pgplat_tmctab-item" data-toggle="tab" href="#it">
 								<div class="pgplat_tmctabiimage">
-									<amp-img src="<?php echo base_url(); ?>assets/images/platform/it.png" alt="Information Technology" class="lazyload" width="120" height="118"></amp-img>
-
-									<!-- <img src="<?php echo base_url(); ?>assets/images/platform/it.png" alt="Information Technology"> -->
+									<amp-img src="<?php echo base_url(); ?>assets/images/platform/it.webp" alt="Information Technology" class="lazyload" width="120" height="118"></amp-img>
 								</div>
 								<div class="pgplat_tmctabitext">IT</div>
 							</div>
 							<div class="pgplat_tmctab-item" data-toggle="tab" href="#management">
 								<div class="pgplat_tmctabiimage">
-									<amp-img src="<?php echo base_url(); ?>assets/images/platform/management.png" alt="Lease Management" class="lazyload"  width="120" height="118"></amp-img>
-
-									<!-- <img src="<?php echo base_url(); ?>assets/images/platform/management.png" alt="Lease Management"> -->
+									<amp-img src="<?php echo base_url(); ?>assets/images/platform/management.webp" alt="Lease Management" class="lazyload"  width="120" height="118"></amp-img>
 								</div>
 								<div class="pgplat_tmctabitext">Management</div>
 							</div>
@@ -320,22 +286,22 @@
 			</div>
 		</section>
 	</div>
-	</div>
+</div>
 	
-	<script type="application/ld+json">{
-	  "@context": "https://schema.org/",
-	  "@type": "Product",
-	  "name": "Odessa Platform",
-	  "image": "<?php echo base_url(); ?>assets/images/platformheaderimg.png",
-	  "description": "Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.",
-	  "brand": "Odessa",
-	  "review": {
-		"@type": "Review",
-		"reviewBody": "On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.",
-		"author": {"@type": "Person", "name": "Jeff Easton CFO, MedOne Capital"}
-	  }
+<script type="application/ld+json">{
+	"@context": "https://schema.org/",
+	"@type": "Product",
+	"name": "Odessa Platform",
+	"image": "<?php echo base_url(); ?>assets/images/platformheaderimg.png",
+	"description": "Learn why companies trust the Odessa Platform to help deliver great stakeholder experiences. Your single solution, from origination to remarketing.",
+	"brand": "Odessa",
+	"review": {
+	"@type": "Review",
+	"reviewBody": "On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.",
+	"author": {"@type": "Person", "name": "Jeff Easton CFO, MedOne Capital"}
 	}
-	</script>
+}
+</script>
 	
 	
 	
