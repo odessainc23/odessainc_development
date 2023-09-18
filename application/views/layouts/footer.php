@@ -63,11 +63,11 @@
 			<div class="footermenu_strip_inner clearfix">
 				<div class="stripfbox">
 					<div class="socailicons_newsletter">
-					<div class="social_icon"> <a href="https://www.facebook.com/OdessaInc/" target="_blank"><i class="fa fa-facebook" ></i></a> 
-					<a href="https://twitter.com/OdessaTech" target="_blank"><i class="fa fa-twitter" ></i></a> 
-					<a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank"><i class="fa fa-linkedin" ></i></a> 
-					<a href="https://www.instagram.com/odessainc/" target="_blank"><i class="fa fa-instagram" ></i></a>
-					 <a href="https://www.youtube.com/odessainc" target="_blank"><i class="fa fa-youtube" ></i></a> </div>
+					<div class="social_icon"> <a href="https://www.facebook.com/OdessaInc/" target="_blank" aria-label="Facebook"><i class="fa fa-facebook" ></i></a> 
+					<a href="https://twitter.com/OdessaTech" target="_blank" aria-label="Twitter"><i class="fa fa-twitter" ></i></a> 
+					<a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin" ></i></a> 
+					<a href="https://www.instagram.com/odessainc/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram" ></i></a>
+					 <a href="https://www.youtube.com/odessainc" target="_blank" aria-label="YouTube"><i class="fa fa-youtube" ></i></a> </div>
 					</div>
 					<div id="desktop_social" class="footerbottommenu">
 						<ul class="list-unstyled list-inline">
@@ -115,16 +115,8 @@
 		}, 4000);
 		
 	</script>
-	 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
-	 <script async>
-
-function initAddThis(){
-	 addthis.init()
-}
-// After the DOM has loaded...
-initAddThis();
-</script>
-<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>	
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
+	<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>	
 </body>
 
 </html>
