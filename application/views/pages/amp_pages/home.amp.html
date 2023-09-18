@@ -10,10 +10,10 @@
         height:100vh;
         z-index: 21474830001;
         display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-flow: column;
-   opacity: 0;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: column;
+        opacity: 0;
     }
     .overlay.one{
         opacity: 1;
@@ -29,8 +29,7 @@
         text-align: center;
         width: 40%;
         display: block;
-        margin: 30px auto;
-       
+        margin: 30px auto;      
         z-index: 9999999;
 }
 
@@ -53,10 +52,8 @@ button {
 }
 #footer{
     position: relative;
-    /* margin-top: -24px; */
     height: 24px;
     width: 100%;
-    /* clear: both; */
     text-align: center;
     font-size: 0.75rem;
     color: #fff;
@@ -73,7 +70,7 @@ button {
             <div class="home-hero-bg">
                 <div class="home-hero-bggrad"></div>
                 <div class="home-hero-bgimg">
-                    <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt=""
+                    <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt="Odessa-company"
                         class="lazyload" width="1" height="1" layout="responsive"></amp-img>
                 </div>
             </div>
@@ -337,6 +334,7 @@ button {
     </div>
 
 </div>
+<link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
 <script type="text/javascript">
 $(document).ready(function() {
     // Check if the user is already logged in
@@ -438,8 +436,6 @@ $(document).ready(function() {
 <script async>
 
     setTimeout(function () {
-
-
         AOS.init({
             throttleDelay: 0,
         });
