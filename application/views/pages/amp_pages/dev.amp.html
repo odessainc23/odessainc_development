@@ -1,4 +1,3 @@
-
 <style amp-custom>
     .buildscaleimgbx .i-amphtml-blurry-placeholder,.buildscaleimgbx .i-amphtml-fill-content {
         display: block;
@@ -15,40 +14,38 @@
         justify-content: center;
         align-items: center;
     }
+	amp-img{
+		height: auto;
+		width: 100%;
+	}
     @media only screen and (max-width: 1023px){
-            /* .trusted_brands_logo .brlogo amp-img {
-                max-width: 90%;
-                vertical-align: middle;
-                display: inline-block;
-            } */
-			.buildscaleimgbx i-amphtml-sizer {
-    padding-top: 0.6667% !important;
-}
-
-				.buildscaleimgbx .i-amphtml-blurry-placeholder,.buildscaleimgbx .i-amphtml-fill-content {
-					width: auto;
-					height: 160px;
-					margin: 0 auto;
-					position: relative;
-				}
-        }
-        @media only screen and (max-width: 767px){
-			.plateformCon .normaltxt.pdright {
-				padding-top: 0;
-				padding: 0;
-			}
-
-			.buildpgscalefector {
-    padding-top: 90px;
-}
-			.plateformCon .listpoints .normaltxt {
-				line-height: 24px;
-				margin-bottom: 20px;
-				padding-top: 0;
-				padding-bottom: 0;
-			}
-}
-    </style>
+		.buildscaleimgbx i-amphtml-sizer {
+    		padding-top: 0.6667% !important;
+		}
+		.buildscaleimgbx .i-amphtml-blurry-placeholder,.buildscaleimgbx .i-amphtml-fill-content {
+			width: auto;
+			height: 160px;
+			margin: 0 auto;
+			position: relative;
+		}
+    }
+	@media only screen and (max-width: 767px){
+		.plateformCon .normaltxt.pdright {
+			padding-top: 0;
+			padding: 0;
+		}
+		.buildpgscalefector {
+    		padding-top: 90px;
+		}
+		.plateformCon .listpoints .normaltxt {
+			line-height: 24px;
+			margin-bottom: 20px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+</style>
+<link rel="preload" href="<?php echo base_url(); ?>assets/images/buildscalebg.png" as="image" type="image/png">
 <div id="wrapper">
 	<div class="">
 	<!--Build Page Start Here-->
@@ -63,7 +60,7 @@
 					Odessa Platform to extend, build, test and ship business features more efficiently.</p>
 			</div>
 			<div class="buildscaleimgbx">
-                <amp-img src="<?php echo base_url(); ?>assets/images/buildscalebg.png" alt="" class="lazyload" width="780"
+                <amp-img src="<?php echo base_url(); ?>assets/images/buildscalebg.png" alt="" class="lazyload" loading="lazy" width="780"
                     height="481" layout="responsive"></amp-img>
 			<div class="buildtabsbackgbox"></div>
 		</div>
@@ -242,10 +239,8 @@
 			<div class="devOpsSection">
 				<div class="devOpsCon clearfix">
 					<div class="devopsimgbx">
-                        
-                        <amp-img src="<?php echo base_url(); ?>assets/images/opsdev.jpg" alt="" class="lazyload" width="1"
-                            height="1" layout="responsive"></amp-img>
-                            </div>
+                        <amp-img src="<?php echo base_url(); ?>assets/images/opsdev.webp" alt="" class="lazyload" width="1" height="1" layout="responsive" loading="lazy"></amp-img>
+                    </div>
 					<div class="devopsconbox">
 						<h3 class="headingsection wtcol">DevOps for the <span>modern enterprise</span></h3>
 						<div class="opstextrw"> DevOps is a profound shift in IT culture, demanding a rethink of IT processes, technology and the way people work. Adopting a combined DevOps and API-led approach to connectivity enables you to increase reliability and minimize disruption, enabling you to move faster and adjust to change. </div>
@@ -259,32 +254,21 @@
 				<h2 class="text-center">Start building your own great <span>solutions on Odessa</span></h2>
 				<div class="seeposbtnrw"><a href="<?php echo base_url();?>lets-talk" class="odc__btn odc__btn--primary odc__btn--xl">Get started</a></div>
 				<div class="trusted_brands_logo">
-
                     <div class="brlogo">
                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="canon Logo" width="87" height="19" layout="intrinsic"></amp-img>
-                        <!-- <img src="<?php echo base_url(); ?>assets/images/metabank-logo.png" alt="metabank Logo" /> -->
                     </div>
                     <div class="brlogo">
                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/leaf_icon.png" alt="leaf Logo" width="90" height="24" layout="intrinsic"></amp-img>
-                        <!-- <img src="<?php echo base_url(); ?>assets/images/metabank-logo.png" alt="metabank Logo" /> -->
                     </div>
                     <div class="brlogo">
                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="dell Logo" width="51" height="51" layout="intrinsic"></amp-img>
-                        <!-- <img src="<?php echo base_url(); ?>assets/images/metabank-logo.png" alt="metabank Logo" /> -->
                     </div>
                     <div class="brlogo">
                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/safin_logo.png" alt="safin Logo" width="90" height="28" layout="intrinsic"></amp-img>
-                        <!-- <img src="<?php echo base_url(); ?>assets/images/metabank-logo.png" alt="metabank Logo" /> -->
                     </div>
                     <div class="brlogo">
                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/fcl_logo.png" alt="fcl Logo" width="120" height="28" layout="intrinsic"></amp-img>
-                        <!-- <img src="<?php echo base_url(); ?>assets/images/metabank-logo.png" alt="metabank Logo" /> -->
                     </div>
-					<!-- <div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="Canon Logo " class="wh-image-ratio" width="100%" height="100%"  /> </div> -->
-					<!-- <div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/leaf_icon.png" alt="Leaf Logo " width="100%" height="100%" /> </div> -->
-					<!-- <div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="Dell Logo " class="wh-image-ratio" width="100%" height="100%" /> </div> -->
-					<!-- <div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/safin_logo.png" alt="Sasfin Logo " width="100%" height="100%"  /> </div> -->
-					<!-- <div class="brlogo"> <img src="<?php echo base_url(); ?>assets/images/icons/fcl_logo.png" alt="FCL Logo " width="100%" height="100%" /> </div> -->
 				</div>
 			</div>
 		</div>
