@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="custom_containerwidth">
 				<div class="different_inner">
-					<div class="different_Img"> <img src="<?= base_url(); ?>assets/images/MadhuNatarajan_JayMehra_Odessa.png" alt="JayMehra and Madhu Natarajan" />
+					<div class="different_Img"> <img src="<?= base_url(); ?>assets/images/MadhuNatarajan_JayMehra_Odessa.webp" alt="JayMehra and Madhu Natarajan" />
 						<p class="membername jay"> Jay Mehra <span>Co-Founder + CTO</span> </p>
 						<p class="membername madhu"> Madhu Natarajan <span>Co-Founder + CEO</span> </p>
 					</div>
