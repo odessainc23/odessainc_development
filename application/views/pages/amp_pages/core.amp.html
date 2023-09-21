@@ -267,66 +267,7 @@
 }
 </script>
 <script>
-	$('.pgcor_tdctabnav').owlCarousel({
-		loop: false,
-		margin: 0,
-		dots: false,
-		autoplay: false,
-		navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
-		animateOut: 'fadeOut',
-		responsive: {
-			0: {
-				items: 2,
-				nav:true,
-				mouseDrag: true,
-				touchDrag: true,
-			},
-			768: {
-				items: 2,
-				nav: true,
-				mouseDrag: true,
-				touchDrag: false
-			},
-			992: {
-				items: 3,
-				nav: false,
-				mouseDrag: false,
-				touchDrag: false
-			},
-			1024: {
-				items: 3,
-				nav: false,
-				mouseDrag: false,
-				touchDrag: false
-			}
-		}
-	});
-
-	$('.pgcor_tdctab-item').on('click',function(){
-		$('.pgcor_tdctab-item').removeClass('tabactive');
-		$(this).addClass('tabactive');
-	});
-	
-	$('.mob_keynav').owlCarousel({
-		 loop: false,
-		 margin: 10,
-		 dots: false,
-		 autoplay: false,
-		 animateOut: 'fadeOut',
-		 items: 2,
-		 nav:true,
-		 navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
-	});
-
-	$(function(){
-		$('#companyvideoplay').on('show.bs.modal', function () {
-			$('#companyvideoplay .modal-body .companypg').html('<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pbd8tgqbre videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>');
-		});
-
-		$('#companyvideoplay').on('hidden.bs.modal', function () {
-			$('#companyvideoplay .modal-body .companypg').empty();
-		});
-	})
+	$(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),$(function(){$("#companyvideoplay").on("show.bs.modal",function(){$("#companyvideoplay .modal-body .companypg").html('<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pbd8tgqbre videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>')}),$("#companyvideoplay").on("hidden.bs.modal",function(){$("#companyvideoplay .modal-body .companypg").empty()})});
 </script>
-<script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<!-- <script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script> -->
