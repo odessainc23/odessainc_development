@@ -65,18 +65,13 @@
 	<?php } ?>
 	<meta property="twitter:site" content="OdessaInc.Com">
 	<meta property="twitter:card" content="summary">
-	
 	<!-- Canonical URL -->
 	<link rel="canonical" href="<?php echo current_url(); ?>" />
-
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>favicon.ico">
-
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Book.otf" as="font" type="font/otf" crossorigin>
 	<link rel="preload" href="<?php echo base_url(); ?>assets/fonts/MaisonNeue-Bold.otf" as="font" type="font/otf" crossorigin>
-
-
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() ?>" as="style" crossorigin />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/bootstrap.css?v=<?php echo time() + 1?>" as="style" crossorigin />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/owl.carousel.css?v=<?php echo time() + 2?>" as="style" crossorigin />
@@ -87,10 +82,10 @@
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/style.css?v=<?php echo time() + 6?>"  />
 	<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/media.css?v=<?php echo time() + 7?>" />
 	
-	<!-- <?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
+	<?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
 		<link href="<?php echo base_url(); ?>assets/css/modular_styles.css?v=<?php echo time() + 8?>" rel="stylesheet preload" type="text/css" />
-	<?php } ?> -->
+	<?php } ?>
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=<?php echo time() + 9?>" />
 
@@ -99,15 +94,12 @@
 	<script defer>
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
 	</script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001"></script>
+	
 </head>
 <body class="">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSHM9KW" height="0" width="0" class="googletagmanager"></iframe>
-	</noscript>
 	<?php $this->load->view('layouts/navmenu'); ?>

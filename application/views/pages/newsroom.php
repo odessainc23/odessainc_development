@@ -1,5 +1,3 @@
-
-
 <div id="wrapper"> 
 	<section class="newsroom">
 		<div class="container">
@@ -32,7 +30,7 @@
 			<div class="section_width">
 				<div class="col-md-12">
 					<div class="heading_div text-center"> <span class="annoucement_icon"></span>
-						<h3 class="text-center">Announcements</h3>
+						<h1 class="text-center">Announcements</h1>
 					</div>
 				</div>
 				<div class="annoucementsliderwr">
@@ -120,7 +118,7 @@
 				<div class="col-md-12">
 					<div class="heading_div text-center">
 						<span class="news_icon"></span>
-						<h3>In the News</h3>
+						<h1>In the News</h1>
 					</div>
 				</div>
 				<div class="clearfix">
@@ -220,26 +218,24 @@
 		<div class="section_width">
 			<div class="col-md-12">
 				<div class="heading_div text-center"> <span class="award_icon"></span>
-					<h3>Awards and Recognition</h3>
+					<h1>Awards and Recognition</h1>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="awardswr">
 					<div class="awardswr_upperrow">
-						<img src="<?php echo base_url();?>assets/images/awards/elfa.png" alt="ELFA" />
-						<img src="<?php echo base_url();?>assets/images/awards/Monitor-Innovation-Badge.png" alt="Monitor Innovation Badge" />
-						<img src="<?php echo base_url();?>assets/images/awards/inc.png" alt="INC 5000" />
+						<img src="<?php echo base_url();?>assets/images/awards/elfa.webp" alt="ELFA" />
+						<img src="<?php echo base_url();?>assets/images/awards/Monitor-Innovation-Badge.webp" alt="Monitor Innovation Badge" />
+						<img src="<?php echo base_url();?>assets/images/awards/inc.webp" alt="INC 5000" />
 					</div>
 					<div class="awardswr_upperrow awardswr_middle">
-						<img src="<?php echo base_url();?>assets/images/awards/2020_Philadelphia_Badges_BTWC_Winner.png" alt="2020 Philadelphia Badges BTWC Winner" />
-						<img src="<?php echo base_url();?>assets/images/awards/philadelphia.png" alt="Philadelphia 100 fast growing company 2019" />
-						<img src="<?php echo base_url();?>assets/images/awards/workingmother.png" alt="100 best company for Working mothers" />
+						<img src="<?php echo base_url();?>assets/images/awards/2020_Philadelphia_Badges_BTWC_Winner.webp" alt="2020 Philadelphia Badges BTWC Winner" />
+						<img src="<?php echo base_url();?>assets/images/awards/philadelphia.webp" alt="Philadelphia 100 fast growing company 2019" />
+						<img src="<?php echo base_url();?>assets/images/awards/workingmother.webp" alt="100 best company for Working mothers" />
 
 					</div>
 					<div class="awardswr_bottomrow">
-						<img src="<?php echo base_url();?>assets/images/awards/workingmother.png" alt="100 best company for Working mothers" class="awardswr_img" />
-						<img src="<?php echo base_url();?>assets/images/awards/stpi.png" alt="STPI" />
-						<img src="<?php echo base_url();?>assets/images/awards/philadelphia.png" alt="Philadelphia 100 fast growing company 2019"  class="awardswr_img"/>
+						<img src="<?php echo base_url();?>assets/images/awards/stpi.webp" alt="STPI" />
 					</div>
 				</div>
 			</div>
@@ -249,3 +245,9 @@
 		</div>
 	</section>
 </div>
+<style>
+	img {
+  		width: 100%;
+  		height: auto;
+	}
+</style>
