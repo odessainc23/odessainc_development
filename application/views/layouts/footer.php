@@ -64,7 +64,9 @@
 				<div class="stripfbox">
 					<div class="socailicons_newsletter">
 					<div class="social_icon"> <a href="https://www.facebook.com/OdessaInc/" target="_blank" aria-label="Facebook"><i class="fa fa-facebook" ></i></a> 
-					<a href="https://twitter.com/OdessaTech" target="_blank" aria-label="Twitter"><i class="fa fa-twitter" ></i></a> 
+					<a href="https://twitter.com/OdessaTech" target="_blank" aria-label="Twitter">
+					<img data-src="<?= base_url(); ?>assets/images/x-twitter.svg" alt="" class="lazyload"/>
+					</a> 
 					<a href="https://www.linkedin.com/company/odessa-inc-/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin" ></i></a> 
 					<a href="https://www.instagram.com/odessainc/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram" ></i></a>
 					 <a href="https://www.youtube.com/odessainc" target="_blank" aria-label="YouTube"><i class="fa fa-youtube" ></i></a> </div>
