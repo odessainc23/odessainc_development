@@ -16,9 +16,9 @@ class Thankyou extends CI_Controller {
 			'result' => json_decode( $response )
 		);
 
-		$this->load->view( 'templates/header', $data );
-		$this->load->view( 'pages/thankyou',$data );
-		$this->load->view( 'templates/footer' );
+		$this->load->view('layouts/amp_pages/header.amp.html', $data);
+		$this->load->view('pages/amp_pages/thankyou.html', $data);
+		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 
 	public function thankusecondary() {
