@@ -17,7 +17,7 @@ class Thankyou extends CI_Controller {
 		);
 
 		$this->load->view( 'templates/header', $data );
-		$this->load->view( 'pages/thankyou' );
+		$this->load->view( 'pages/thankyou',$data );
 		$this->load->view( 'templates/footer' );
 	}
 
