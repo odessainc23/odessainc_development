@@ -44,7 +44,7 @@ function render_block_core_post_comments_form( $attributes, $content, $block ) {
 	// our wrapper attributes. This way, it is guaranteed that all styling applied
 	// to the block is carried along when the comment form is moved to the location
 	// of the 'Reply' link that the user clicked by Core's `comment-reply.js` script.
-	$form = str_replace( 'class="comment-respond"', $wrapper_attributes, $form );
+	//$form = str_replace( 'class="comment-respond"', $wrapper_attributes, $form );
 
 	// Enqueue the comment-reply script.
 	wp_enqueue_script( 'comment-reply' );

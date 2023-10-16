@@ -43,7 +43,7 @@ class RegisterScripts
     function public_css()
     {
         $suffix = self::asset_suffix();
-        wp_enqueue_style('ppress-frontend', PPRESS_ASSETS_URL . "/css/frontend{$suffix}.css", false, PPRESS_VERSION_NUMBER);
+        //wp_enqueue_style('ppress-frontend', PPRESS_ASSETS_URL . "/css/frontend{$suffix}.css", false, PPRESS_VERSION_NUMBER);
         wp_enqueue_style('ppress-flatpickr', PPRESS_ASSETS_URL . '/flatpickr/flatpickr.min.css', false, PPRESS_VERSION_NUMBER);
         wp_enqueue_style('ppress-select2', PPRESS_ASSETS_URL . '/select2/select2.min.css');
     }

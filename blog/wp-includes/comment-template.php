@@ -2666,7 +2666,8 @@ function comment_form( $args = array(), $post = null ) {
 	 */
 	do_action( 'comment_form_before' );
 	?>
-	<div id="respond" class="<?php echo esc_attr( $args['class_container'] ); ?>">
+	<!--comment reply code-->
+	<!-- <div id="respond" class="<?php echo esc_attr( $args['class_container'] ); ?>">
 		<?php
 		echo $args['title_reply_before'];
 
@@ -2869,7 +2870,8 @@ function comment_form( $args = array(), $post = null ) {
 
 		endif;
 		?>
-	</div><!-- #respond -->
+	</div> -->
+	<!-- #respond -->
 	<?php
 
 	/**

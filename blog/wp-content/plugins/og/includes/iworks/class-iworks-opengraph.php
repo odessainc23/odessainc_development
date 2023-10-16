@@ -302,7 +302,7 @@ class iWorks_OpenGraph {
 		/**
 		 *  plugin: Facebook Page Publish
 		 */
-		remove_action( 'wp_head', 'fpp_head_action' );
+		//remove_action( 'wp_head', 'fpp_head_action' );
 		/**
 		 * Plugin: Orphans - turn off replacement
 		 */
