@@ -6786,3 +6786,11 @@ body.mobile .main {min-height:0;}
 }
 
 /* FIN! */
+.content-masonry{
+	position: initial !important;
+	height: 0px  !important;
+}
+
+article.hentry {
+	position: initial !important;
+}

@@ -85,15 +85,15 @@ function anima_comments_on() {
 	$anima_meta_comment = cryout_get_option( 'anima_meta_comment' );
     // Only show comments if they're open, or are closed but with comments already posted, if the theme's meta comments are enabled and if it's not a single post
     if ( ( comments_open() || get_comments_number() ) && ! post_password_required() && $anima_meta_comment && ! is_single() ) :
-			echo '<span class="comments-link"><i class="icon-comments icon-metas" title="' . esc_attr__('Comments', 'anima') . '"></i>';
-			comments_popup_link(
-				 __( 'Leave a comment', 'anima' ),
-				sprintf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'anima' ), number_format_i18n( get_comments_number() ) ),
-				sprintf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'anima' ), number_format_i18n( get_comments_number() ) ),
-				'',
-				''
-			);
-			echo '</span>';
+			// echo '<span class="comments-link"><i class="icon-comments icon-metas" title="' . esc_attr__('Comments', 'anima') . '"></i>';
+			// comments_popup_link(
+			// 	 __( 'Leave a comment', 'anima' ),
+			// 	sprintf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'anima' ), number_format_i18n( get_comments_number() ) ),
+			// 	sprintf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'anima' ), number_format_i18n( get_comments_number() ) ),
+			// 	'',
+			// 	''
+			// );
+			// echo '</span>';
 		endif;
 } // anima_comments_on()
 endif;
