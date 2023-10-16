@@ -45,7 +45,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'single-
 	<div class="container">
 		<div class="section_width blogwd">
 			<div class="row displayflex">
-			
+			<?php if( the_field('image_text') || get_field('image') ||  get_field('image_link')) { ?>
 				<div class="col-md-4 col-sm-4 blogpad">
 					<div class="content_img"> <span>
 						<?php the_field('image_text'); ?>
@@ -58,8 +58,10 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'single-
 						<?php endif; ?>
 					</div>
 				</div>
-				
 				<div class="col-md-8 col-sm-8 blogpad">
+				<?php }else{ ?>
+					<div class="col-md-12 col-sm-12 blogpad">
+				<?php } ?>
 					<div class="content_text"> <?php echo the_content(); ?> </div>
 					<div class="addthis_responsive_sharing_37zh content_socialicons"></div>
 				</div>
