@@ -1,0 +1,95 @@
+
+/*Header Section Start Here*/
+.navbar-default {
+    min-height: 80px !important;
+}
+/*CSS Date 01-07-2020*/
+.fixed_data{
+     display: none;
+}
+/*Header Section End Here*/
+
+/*Footer Section Start Here*/
+footer .footer_li_wrap{
+	 float: left;
+	 width: 20%;
+}
+footer .mobile_view_footer{
+    display: none;
+}
+footer .footer_li_wrap span.footer_li_heading {
+    display: block;
+    font-size: 24px;
+    color: #2a2d36;
+    font-family: 'MaisonNeue-Bold';
+    margin-bottom: 20px;
+}
+
+footer .footer_menuwr .footer_li_wrap ul {
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+footer .footer_menuwr .footer_li_wrap ul li {
+    list-style: none;
+    margin-bottom:15px;
+}
+footer .footer_menuwr .footer_li_wrap a {
+    position: relative;
+    font-size: 16px;
+    color: #697188;
+    display: inline-block;
+}
+footer .footer_menuwr .footer_li_wrap p {
+    position: relative;
+    font-size: 16px;
+    color: #697188;
+    display: inline-block;
+    line-height: 30px;
+    margin: 0;
+    margin: 20px 0 10px 0;
+}
+footer .footer_menuwr .footer_li_wrap a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: transparent;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+footer .footer_menuwr .footer_li_wrap a:hover {
+       color: #697188 !important;
+}
+footer .footer_menuwr .footer_li_wrap a:hover:after {
+    width: 0 !important;
+    left: 0 !important;
+}
+.footerbottommenu {
+    float: none !important; 
+    padding-top: 40px !important;
+    padding-left: 20px !important;
+}
+.footerbottommenu ul li a:hover {
+ color: #697188 !important;
+}
+.footerbottommenu ul li a:hover:after {
+    width: 0 !important;
+    left: 0 !important;
+}
+.xm-nav .container {
+    padding: 0 30px 0 50px !important;
+}
+/*CSS Date 01-07-2020*/
+#features{
+    color:#00acc7;
+}
+#mobile_social{
+  display: none !important;
+}
+
+
+/*Footer Section End Here*/
