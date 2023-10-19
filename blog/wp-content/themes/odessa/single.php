@@ -62,9 +62,10 @@ $category_detail	= get_the_category( $postID );
 										<?php
 											foreach ( $blogContent as $con ) {
 												if ( isset($con[ 'title' ]) ) {
-													$goto1 = preg_replace( '/\s+/', '', $con[ 'title' ] );
+													$goto1 = preg_replace('/[^a-zA-Z0-9]+/', '', $con['title']);
+													$goto = str_replace([':', ','], '', $goto1);
 										?>
-													<a href="#<?php echo $goto1; ?>"><?php echo $con['title']; ?></a>
+													<a href="#<?php echo $goto; ?>"><?php echo $con['title']; ?></a>
 										<?php
 												}
 											}
