@@ -153,39 +153,40 @@ $sidebarS = absint( $anima_secondarysidebar );
 /////////// FONTS ///////////
 ?>
 html
-					{ font-family: <?php cryout_font_select( $anima_fgeneral, $anima_fgeneralgoogle, true) ?>;
+					{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_fgeneralsize ) ?>; font-weight: <?php echo esc_html( $anima_fgeneralweight ) ?>;
 					  line-height: <?php echo esc_html( floatval($anima_lineheight) ) ?>; }
 
-#site-title 		{ font-family: <?php cryout_font_select( $anima_fsitetitle, $anima_fsitetitlegoogle, true) ?>;
+#site-title 		{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_fsitetitlesize ) ?>; font-weight: <?php echo esc_html( $anima_fsitetitleweight ) ?>; }
 
-#access ul li a 	{ font-family: <?php cryout_font_select( $anima_fmenu, $anima_fmenugoogle, true) ?>;
+#access ul li a 	{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_fmenusize ) ?>; font-weight: <?php echo esc_html( $anima_fmenuweight ) ?>; }
 
-.widget-title 		{ font-family: <?php cryout_font_select( $anima_fwtitle, $anima_fwtitlegoogle, true) ?>;
+.widget-title 		{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_fwtitlesize ) ?>; font-weight: <?php echo esc_html( $anima_fwtitleweight ) ?>; }
-.widget-container 	{ font-family: <?php cryout_font_select( $anima_fwcontent, $anima_fwcontentgoogle, true) ?>;
+.widget-container 	{ font-family: MaisonNeue-Book;
 				      font-size: <?php echo esc_html( $anima_fwcontentsize ) ?>; font-weight: <?php echo esc_html( $anima_fwcontentweight ) ?>; }
 .entry-title, #reply-title
-					{ font-family: <?php cryout_font_select( $anima_ftitles, $anima_ftitlesgoogle, true) ?>;
-					  font-size: <?php echo esc_html( $anima_ftitlessize ) ?>; font-weight: <?php echo esc_html( $anima_ftitlesweight ) ?>; }
+					{ font-family: MaisonNeue-Book;
+					  font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.6 ) ?>%; font-weight: <?php echo esc_html( $anima_ftitlesweight ) ?>; }
 .entry-meta > span, .post-continue-container
-					{ font-family: <?php cryout_font_select( $anima_metatitles, $anima_metatitlesgoogle, true) ?>;
+					{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_metatitlessize ) ?>; font-weight: <?php echo esc_html( $anima_metatitlesweight ) ?>; }
 .page-link, .pagination, #author-info #author-link, .comment .reply a, .comment-meta, .byline
-					{ font-family: <?php cryout_font_select( $anima_metatitles, $anima_metatitlesgoogle, true) ?>; }
+					{ font-family: MaisonNeue-Book }
 .content-masonry .entry-title
- 	                { font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.7 ) ?>%; }
+ 	                { font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.6 ) ?>%; }
 
 					  <?php
 $font_root = 2.6; // headings font size root
 for ( $i = 1; $i <= 6; $i++ ) {
 		$size = round( ( $font_root - ( 0.27 * $i ) ) * ( preg_replace( "/[^\d]/", "", esc_html( $anima_fheadingssize ) ) / 100), 5 ); ?>
-		h<?php echo $i ?> { font-size: <?php echo $size ?>em; } <?php
+		
+		<?php
 } //for ?>
 h1, h2, h3, h4, h5, h6, .seriousslider-theme .seriousslider-caption-title
-					{ font-family: <?php cryout_font_select( $anima_fheadings, $anima_fheadingsgoogle, true) ?>;
+					{ font-family: MaisonNeue-Bold;
 					  font-weight: <?php echo esc_html( $anima_fheadingsweight ) ?>; }
 
 
@@ -294,8 +295,7 @@ endif; ?>
 #colophon, #footer 							{ background-color: <?php echo esc_html( $anima_footerbackground ) ?>;
  											  color: <?php echo esc_html( $anima_footertext ) ?>; }
 #footer 									{ background: <?php echo esc_html (cryout_hexdiff ($anima_footerbackground, -5 ) ) ?>; }
-.entry-title a:active, .entry-title a:hover { color: #00acc8 !important; }
-.entry-title a:hover						{ border-bottom-color:  #00acc8 !important; }
+.entry-title a:active, .entry-title a:hover { color: #00acc8; border-bottom-style: none; }
 span.entry-format 							{ color: <?php echo esc_html( $anima_accent1 ) ?>; }
 
 .format-aside 								{ border-top-color: <?php echo esc_html( $anima_contentbackground ) ?>; }
@@ -308,13 +308,12 @@ article.hentry .post-thumbnail-container
 
 .entry-content h5, .entry-content h6,
 .lp-text-content h5, .lp-text-content h6 	{ color: <?php echo esc_html( $anima_accent2 ) ?>; }
-.entry-content h1, .entry-content h2, 
-.entry-content h3, .entry-content h4,
+.entry-content h1, .entry-content h2, .entry-content h4,
 .lp-text-content h1, .lp-text-content h2, 
 .lp-text-content h3, .lp-text-content h4 	{ color: <?php echo esc_html( $anima_headingstext ) ?>; }
 
-a 											{ color: #00acc8; }
-a:hover, .entry-meta span a:hover			{ color: #00acc8 }
+a 											{ color: #767676; }
+a:hover, .entry-meta span a:hover	{ color: #00acc8; }
 
 .post-continue-container span.comments-link:hover, .post-continue-container span.comments-link a:hover
 											{ color: <?php echo esc_html( $anima_accent1 ) ?>; }
@@ -336,8 +335,8 @@ a:hover, .entry-meta span a:hover			{ color: #00acc8 }
 #nav-fixed i								{ color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 #toTop:hover								{ background-color: <?php echo esc_html( $anima_accent1 ) ?>;  color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 
-a.continue-reading-link 					{ background-color:<?php echo esc_html( cryout_hexdiff( $anima_contentbackground, 16 ) ) ?>; }
-.continue-reading-link::after 				{ background-color: <?php echo esc_html( $anima_accent1 ) ?>;  color: <?php echo esc_html( $anima_contentbackground ) ?>; }
+a.continue-reading-link 					{ background-color: #ff495c;  color: #fff; }
+.continue-reading-link::after 				{ background-color: #ff495c;  color: <?php echo esc_html( $anima_contentbackground ) ?>; }
 
 .entry-meta .icon-metas:before				{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, -69) ) ?>; }
 
@@ -546,7 +545,7 @@ body.woocommerce.woocommerce-page #breadcrumbs-nav,
 <?php
 /////////// HEADER LAYOUT ///////////
 ?>
-#site-header-main { height:<?php echo intval( $anima_menuheight ) ?>px; }
+
 #access .menu-search-animated .searchform { height: <?php echo intval( $anima_menuheight - 1 ) ?>px; line-height: <?php echo intval( $anima_menuheight - 1 ) ?>px; }
 .anima-over-menu .staticslider-caption-container { padding-top: <?php echo esc_html( $anima_menuheight ) ?>px; }
 .menu-search-animated, #sheader-container, .identity, #nav-toggle
@@ -574,9 +573,7 @@ body.woocommerce.woocommerce-page #breadcrumbs-nav,
 <?php /* if ( ! esc_html( $anima_menuposition ) ) { ?>
 	#header-image-main						{  margin-top: <?php echo intval( $anima_menuheight ) ?>px; }
 <?php };  */ ?>
-<?php if ( esc_html( $anima_menuposition ) == 0 ) { ?>
-	.anima-fixed-menu #header-image-main	{  margin-top: <?php echo intval( $anima_menuheight ) ?>px; }
-<?php };?>
+
 <?php if ( esc_html( $anima_menuposition ) ) { ?>
 	#header-widget-area						{ top: <?php echo intval( $anima_menuheight )+10 ?>px; }
 <?php }; ?>
@@ -701,7 +698,7 @@ body.mce-content-body, .block-editor .edit-post-visual-editor {
 	background-color: <?php echo esc_html( $anima_contentbackground ) ?>	}
 body.mce-content-body, .wp-block {	
 	max-width: <?php echo esc_html( $content_body ); ?>px;
-	font-family: <?php cryout_font_select( $anima_fgeneral, $anima_fgeneralgoogle, true) ?>;
+	font-family: MaisonNeue-Book;
 	font-size: <?php echo esc_html( $anima_fgeneralsize ) ?>;
 	line-height: <?php echo esc_html( floatval($anima_lineheight) ) ?>;
 	color: <?php echo esc_html( $anima_sitetext ); ?>; }
@@ -714,7 +711,7 @@ $size = round( ( $font_root - ( 0.27 * $i ) ) * ( preg_replace( "/[^\d]/", "", e
 h<?php echo $i ?> { font-size: <?php echo $size ?>em; } <?php
 } //for ?>
 %%scope%% h1, %%scope%% h2, %%scope%% h3, %%scope%% h4, %%scope%% h5, %%scope%% h6 {
-	font-family: <?php cryout_font_select( $anima_fheadings, $anima_fheadingsgoogle, true) ?>;
+	font-family: MaisonNeue-Book;
 	font-weight: <?php echo esc_html( $anima_fheadingsweight ) ?>; 
 	color: <?php echo esc_html( $anima_headingstext ) ?>; }
 

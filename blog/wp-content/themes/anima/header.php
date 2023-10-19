@@ -121,6 +121,7 @@
 							<span></span>
 						</div>
 						<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
+							<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 							<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Let's talk</a></li>
 							<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
 						</ul>
@@ -294,6 +295,7 @@
 										<li><a class="active" href="javascript:void(0)" onclick="tabBx('platformmenu')">Platform</a></li>
 										<li><a href="javascript:void(0)" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
 										<li><a href="javascript:void(0)" onclick="tabBx('companymenu')">Company</a></li>
+										<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 										<li><a href="javascript:void(0)">Let's Talk</a></li>
 									</ul>
 								</div>
@@ -431,6 +433,8 @@
 				<?php cryout_headerimage_hook(); ?>
 			</div><!-- #header-image-main-inside -->
 		</div><!-- #header-image-main -->
+	<?php }else{?>
+		<br/>
 	<?php } ?>
 </div>
 

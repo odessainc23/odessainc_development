@@ -40,7 +40,7 @@ $category_detail	= get_the_category( $postID );
 									<?php
 										foreach ( $blogContent as $con ) {
 											if ( isset($con[ 'title' ]) ) {
-												$goto1 = preg_replace( '/\s+/', '', $con[ 'title' ] );
+												$goto1 = preg_replace('/[^a-zA-Z0-9]+/', '', $con['title']);
 									?>
 												<a href="#<?php echo $goto1; ?>"><?php echo $con['title']; ?></a>
 									<?php
@@ -74,7 +74,7 @@ $category_detail	= get_the_category( $postID );
 								if( $blogContent ):
 									foreach ( $blogContent as $detail ) {
 										if( isset($detail['title']) ) :
-											$goto2 = preg_replace( '/\s+/', '', $detail[ 'title' ] );
+											$goto2 = preg_replace('/[^a-zA-Z0-9]+/', '', $detail['title']);
 							?>
 											<h3 class="scrollheading" id="<?php echo $goto2; ?>"><?php echo $detail['title']; ?></h3>
 							<?php

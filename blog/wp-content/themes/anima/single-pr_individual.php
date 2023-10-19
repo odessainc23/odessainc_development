@@ -20,14 +20,18 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'single-
 	<div class="container">
 		<div class="section_width">
 			<div class="row displayflex">
-				<div class="col-md-6 col-sm-6 col-xs-12 mbpad">
-					 <div class="pr_announcementimg">
-						<?php if(isset($image[0])):?>
-							<img src="<?php echo $image[0]; ?>" alt="">
-						<?php endif; ?> 
-					</div> 
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12 mbwidth pdzero">
+				<?php if(isset($image[0])) {?>
+					<div class="col-md-6 col-sm-6 col-xs-12 mbpad">
+						<div class="pr_announcementimg">
+							<?php if(isset($image[0])):?>
+								<img src="<?php echo $image[0]; ?>" alt="">
+							<?php endif; ?> 
+						</div> 
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12 mbwidth pdzero">
+				<?php } else { ?>
+					<div class="col-md-12 col-sm-12 col-xs-12 mbwidth pdzero">		
+				<?php } ?>
 					<div class="pr_announcementinfo"> <span>ANNOUNCEMENT</span>
 						<h1><?php echo the_title(); ?></h1>
 						<p>

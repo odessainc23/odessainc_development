@@ -122,9 +122,9 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/*font-size: 100%;*/
+	/* font-size: 100%;
 	font: inherit;
-	/*vertical-align: baseline;*/
+	vertical-align: baseline; */
 }
 
 html {
@@ -1567,8 +1567,7 @@ img#wpstats {
 }
 
 .entry-content h1, .entry-summary h1,
-.entry-content h2, .entry-summary h2,
-.entry-content h3, .entry-summary h3,
+.entry-content h2, .entry-summary h2, .entry-summary h3,
 .entry-content h4, .entry-summary h4,
 .entry-content h5, .entry-summary h5,
 .entry-content h6, .entry-summary h6 {
@@ -1633,7 +1632,6 @@ img#wpstats {
 
 .entry-title a {
 	font-weight: 400;
-	border-bottom: 1px solid transparent;
 	padding-bottom: .2em;
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
@@ -1877,7 +1875,7 @@ span.edit-link:hover {
 }
 
 .entry-meta .avatar {
-	position: relative;
+	position: initial;
 	top: .5em;
 	max-width: 2em;
 	margin-right: .3em;
@@ -1932,6 +1930,14 @@ span.edit-link:hover {
 #header-page-title .entry-meta i {
 	display: none;
 }
+/**custom css add for tag*/
+#header-page-title .entry-meta.entity-meta-tag i {
+	display: initial;
+}
+
+.entry-meta.entity-meta-tag .icon-metas:before{
+	color: white;
+}
 
 #header-page-title .searchform {
 	max-width: 80%;
@@ -1954,7 +1960,7 @@ span.edit-link:hover {
 }
 
 #header-page-title .byline {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #DDD;
 	font-weight: 300;
 }
@@ -6794,3 +6800,48 @@ body.mobile .main {min-height:0;}
 article.hentry {
 	position: initial !important;
 }
+
+
+@media (max-width: 768px) {
+	#masthead .header-image {
+		background-attachment: unset !important;	
+		background-repeat: no-repeat !important;
+	}
+}
+
+.scrollheading{
+	color: #555b6d !important;
+	font-size: 1.1875rem !important;
+}
+
+.entry-content ul{
+	font-size: 18px;
+}
+
+.entry-content a,.entry-content a:hover,.content_text a{
+	color: #00acc8 !important;
+}
+
+.entry-header .entry-meta p, .entry-summary p{
+	font-size: 14px !important;
+}
+
+.section_width .content_text{
+	line-height: 1.5 !important;
+}
+
+/* For detail page ul custom style*/
+.content_text li{
+	font-size: 1.1875rem;
+}
+.entry-title a{
+	color: #2a2d36 !important;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    font-family: MaisonNeue-Bold;
+}
+.entry-title a:hover{
+	color: #00acc8 !important;
+}
+
+/* FIN! */
