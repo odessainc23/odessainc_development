@@ -6834,5 +6834,14 @@ article.hentry {
 .content_text li{
 	font-size: 1.1875rem;
 }
+.entry-title a{
+	color: #2a2d36 !important;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    font-family: MaisonNeue-Bold;
+}
+.entry-title a:hover{
+	color: #00acc8 !important;
+}
 
 /* FIN! */
