@@ -169,14 +169,14 @@ html
 				      font-size: <?php echo esc_html( $anima_fwcontentsize ) ?>; font-weight: <?php echo esc_html( $anima_fwcontentweight ) ?>; }
 .entry-title, #reply-title
 					{ font-family: MaisonNeue-Book;
-					  font-size: <?php echo esc_html( $anima_ftitlessize ) ?>; font-weight: <?php echo esc_html( $anima_ftitlesweight ) ?>; }
+					  font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.6 ) ?>%; font-weight: <?php echo esc_html( $anima_ftitlesweight ) ?>; }
 .entry-meta > span, .post-continue-container
 					{ font-family: MaisonNeue-Book;
 					  font-size: <?php echo esc_html( $anima_metatitlessize ) ?>; font-weight: <?php echo esc_html( $anima_metatitlesweight ) ?>; }
 .page-link, .pagination, #author-info #author-link, .comment .reply a, .comment-meta, .byline
 					{ font-family: MaisonNeue-Book }
 .content-masonry .entry-title
- 	                { font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.7 ) ?>%; }
+ 	                { font-size: <?php echo esc_html( intval($anima_ftitlessize) * 0.6 ) ?>%; }
 
 					  <?php
 $font_root = 2.6; // headings font size root
@@ -335,8 +335,8 @@ a:hover, .entry-meta span a:hover	{ color: #00acc8; }
 #nav-fixed i								{ color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 #toTop:hover								{ background-color: <?php echo esc_html( $anima_accent1 ) ?>;  color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 
-a.continue-reading-link 					{ background-color:<?php echo esc_html( cryout_hexdiff( $anima_contentbackground, 16 ) ) ?>; }
-.continue-reading-link::after 				{ background-color: #2c9bc6;  color: <?php echo esc_html( $anima_contentbackground ) ?>; }
+a.continue-reading-link 					{ background-color: #ff495c;  color: #fff; }
+.continue-reading-link::after 				{ background-color: #ff495c;  color: <?php echo esc_html( $anima_contentbackground ) ?>; }
 
 .entry-meta .icon-metas:before				{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, -69) ) ?>; }
 
