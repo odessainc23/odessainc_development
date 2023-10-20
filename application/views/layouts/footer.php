@@ -13,7 +13,7 @@
 						<li><a href="<?php echo base_url(); ?>platform/core">Odessa Origination</a></li>
 						<li><a href="<?php echo base_url(); ?>platform/core/">Odessa Servicing</a></li>
 						<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-						<li><a  class="active" href="<?php echo base_url(); ?>platform">View all platform<span> features</span></a></li>
+						<li><a href="<?php echo base_url(); ?>platform">View all platform<span> features</span></a></li>
 					</ul>
 				</div>
 				<div class="footer_li_wrap">
@@ -24,7 +24,7 @@
 							<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 							<li><a href="<?php echo base_url(); ?>newsroom">Events + Webinars</a></li>
 							<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
-							<li><a  class="active" href="<?php echo base_url(); ?>lets-talk">Contact us</a></li>
+							<li><a  href="<?php echo base_url(); ?>lets-talk">Contact us</a></li>
 						</ul>
 					</div>
 				</div>
