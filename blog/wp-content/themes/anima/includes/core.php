@@ -101,45 +101,46 @@ function anima_header_image_url() {
 	// Check if this is a post or page, if it has a thumbnail, and if it's a big one
 	global $post;
 	$header_image = FALSE;
-	// if ( get_header_image() != '' ) { $header_image = get_header_image(); }
-	// if ( is_singular() && has_post_thumbnail( $post->ID ) && $anima_fheader &&
-	// 	( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'anima-header' ) )
-	// 	 ) :
+	if ( get_header_image() != '' ) { $header_image = get_header_image(); }
+	if ( is_singular() && has_post_thumbnail( $post->ID ) && $anima_fheader &&
+		( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'anima-header' ) )
+		 ) :
 		 	
-	// 		if ( ( absint($image[1]) >= $anima_headerw ) && ( absint($image[2]) >= $anima_headerh ) ) {
-	// 			// 'header' image is large enough
-	// 			$header_image = $image[0];
-	// 		} else {
-	// 			// 'header' image too small, try 'full' image instead
-	// 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-	// 			if ( ( absint($image[1]) >= $anima_headerw ) && ( absint($image[2]) >= $anima_headerh ) ) {
-	// 				// 'full' image is large enough
-	// 				$header_image = $image[0];
-	// 			} else {
-	// 				// even 'full' image is too small, don't return an image
-	// 				$header_image = $image[0];
-	// 			}
-	// 		}
-	//endif;
-	// Custom banner image
-	$args = array(
-		'order'       => 'DESC',
-	);
-	
-	if (!is_404() && has_post_thumbnail( $post->ID ) && $anima_fheader && ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'anima-header' ) )) :
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		$latest_posts = wp_get_blog_published_posts($args);
-		$latest_post_id = $paged > 1 ? $latest_posts[0]['ID'] : $post->ID;
-
-		if(( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $latest_post_id ), 'anima-header' ) )){
-			
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $latest_post_id ), 'anima-header' );
-			$header_image = $image[0];
-		}else{
-			if ( get_header_image() != '' ) { $header_image = get_header_image(); }
-		}
-	 	return $header_image;
+			if ( ( absint($image[1]) >= $anima_headerw ) && ( absint($image[2]) >= $anima_headerh ) ) {
+				// 'header' image is large enough
+				$header_image = $image[0];
+			} else {
+				// 'header' image too small, try 'full' image instead
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+				if ( ( absint($image[1]) >= $anima_headerw ) && ( absint($image[2]) >= $anima_headerh ) ) {
+					// 'full' image is large enough
+					$header_image = $image[0];
+				} else {
+					// even 'full' image is too small, don't return an image
+					$header_image = $image[0];
+				}
+			}
 	endif;
+	return $header_image;
+	// Custom banner image
+	// $args = array(
+	// 	'order'       => 'DESC',
+	// );
+	
+	// if (!is_404() && has_post_thumbnail( $post->ID ) && $anima_fheader && ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'anima-header' ) )) :
+	// 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	// 	$latest_posts = wp_get_blog_published_posts($args);
+	// 	$latest_post_id = $paged > 1 ? $latest_posts[0]['ID'] : $post->ID;
+
+	// 	if(( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $latest_post_id ), 'anima-header' ) )){
+			
+	// 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $latest_post_id ), 'anima-header' );
+	// 		$header_image = $image[0];
+	// 	}else{
+	// 		if ( get_header_image() != '' ) { $header_image = get_header_image(); }
+	// 	}
+	 //	return $header_image;
+	// endif;
 } //anima_header_image_url()
 endif;
 
