@@ -14,7 +14,7 @@
 					<li><a href="<?php echo OD_BASE_URL ?>platform/core">Odessa Origination</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>platform/core/">Odessa Servicing</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>platform/developer-tools">Odessa Build</a></li>
-					<li><a class="active" id="features" href="<?php echo OD_BASE_URL ?>platform">View all platform<span> features</span></a></li>
+					<li><a id="features" href="<?php echo OD_BASE_URL ?>platform">View all platform<span> features</span></a></li>
 				</ul>
 			</div>
 			<div class="footer_li_wrap">
@@ -25,7 +25,7 @@
 						<li><a href="<?php echo OD_BASE_URL ?>careers">Careers</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Events + Webinars</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Newsroom</a></li>
-						<li><a class="active" id="features" href="<?php echo OD_BASE_URL ?>lets-talk">Contact us</a></li>
+						<li><a id="features" href="<?php echo OD_BASE_URL ?>lets-talk">Contact us</a></li>
 					</ul>
 				</div>
 			</div>

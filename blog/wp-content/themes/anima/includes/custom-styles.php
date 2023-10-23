@@ -253,10 +253,10 @@ body:not(.anima-landing-page) article.hentry, body:not(.anima-landing-page) .mai
 .post-thumbnail-container .featured-image-meta,
 body:not(.single) article.hentry .post-thumbnail-container > a::after,
 #header-page-title-inside
-											{ background-color: rgba(<?php echo esc_html( cryout_hex2rgb( $anima_overlaybackground ) ) ;?>, <?php echo esc_html( $anima_overlayopacity/100 ); ?>); }
+											{ background-color: rgba(17,170,197,0.6509803921568628); }
 #header-page-title-inside					{ box-shadow: 0 -70px 70px rgba(<?php echo esc_html( cryout_hex2rgb( $anima_overlaybackground ) ) ;?>,0.2) inset; }
-#header-page-title .entry-meta .bl_categ a  { background-color: <?php echo esc_html(  $anima_accent1 ) ;?>; }
-#header-page-title .entry-meta .bl_categ a:hover
+#header-page-title .entry-meta .bl_categ a, #header-page-title .entry-meta .bl_categ span  { background-color: <?php echo esc_html(  $anima_accent1 ) ;?>; }
+#header-page-title .entry-meta .bl_categ a:hover, #header-page-title .entry-meta .bl_categ span:hover
 											{ background-color: <?php echo esc_html( cryout_hexdiff( $anima_accent1, -17 ) ) ?>; }
 .anima-normal-titles #breadcrumbs-container
 											{ background-color: <?php echo esc_html( cryout_hexdiff( $anima_contentbackground, 6 ) ) ?>; }
@@ -335,7 +335,7 @@ a:hover, .entry-meta span a:hover	{ color: #00acc8; }
 #nav-fixed i								{ color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 #toTop:hover								{ background-color: <?php echo esc_html( $anima_accent1 ) ?>;  color: <?php echo esc_html( $anima_sitebackground ) ?>; }
 
-a.continue-reading-link 					{ background-color: #ff495c;  color: #fff; }
+a.continue-reading-link 					{ background: 0 0;  color: #555b6d; border-color: transparent; }
 .continue-reading-link::after 				{ background-color: #ff495c;  color: <?php echo esc_html( $anima_contentbackground ) ?>; }
 
 .entry-meta .icon-metas:before				{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, -69) ) ?>; }
@@ -355,8 +355,8 @@ span.edit-link a.post-edit-link, span.edit-link a.post-edit-link:hover, span.edi
 											{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, 69) ) ?>; }
 
 .searchform 								{ border-color: <?php echo esc_html( cryout_hexdiff( $anima_contentbackground, 20) ) ?>; }
-.entry-meta span, .entry-meta a, .entry-utility span, .entry-utility a, .entry-meta time,
-#breadcrumbs-nav, #header-page-title .byline, .footermenu ul li span.sep
+.entry-meta a, .entry-utility span, .entry-utility a,
+#breadcrumbs-nav, .footermenu ul li span.sep
 											{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, -69) ) ?>; }
 .footermenu ul li a::after 					{ background: <?php echo esc_html( $anima_accent2 ); ?>; }
 #breadcrumbs-nav a							{ color: <?php echo esc_html( cryout_hexdiff( $anima_sitetext, -39) ) ?>; }
