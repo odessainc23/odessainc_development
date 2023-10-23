@@ -21,17 +21,17 @@
 }
 .section1.sec3{
     display: flex;
-	justify-content: flex-end;
-    height: 250px;
+	justify-content: flex-start;
+    height: auto;
 
 }
 .adapt img{
 	width: auto;
 	height: auto;
 }
-.improve_developer{
+/* .improve_developer{
 	margin:0 0 20px 0;
-}
+} */
 .adapt .pgcor_intitle {
     max-width: 100%;
     text-align: center;
@@ -48,10 +48,10 @@
 .two-section{
 	display: flex;
 	justify-content: space-between;
-	padding: 60px 0 0;
+	padding: 0px 0 100px;
 }
 .adapt{
-	max-width: 80%;
+	max-width: 85%;
     margin: 0 auto;
 
 }
@@ -59,12 +59,13 @@
 	flex-flow: row-reverse;
 }
 .section1{
-	width: calc(40% - 10px);
+	width: calc(70% - 10px);
     margin: 0 20px;
 }
 .section1 .pgcor_inwrap{
 	max-width: 90%;
 	margin-left: 0;
+	min-height: auto;
 }
 .brlogo{
 	display: flex;
@@ -79,8 +80,11 @@
 	margin:0;
 }
 .sec2{
-	width: calc(60% - 10px);
+	width: calc(30% - 10px);
     margin: 0 20px;
+}
+.adapt .improve_developer{
+	margin: 0 0 20px 0;
 }
 .capabilities1 p{
 	font-family: MaisonNeue-Book;
@@ -119,6 +123,10 @@
     margin-bottom: 0px;
     color: #555b6d;
 }
+.section1.sec3{
+		
+		width: calc(30% - 10px);
+	}
 .capabilities1 ul li:before {
 	content: "";
     display: inline-block;
@@ -144,6 +152,7 @@
 	.log .brlogo{
 		margin:0;
 	}
+	
 	.section1.sec3,.section1.sec2{
 		justify-content: center;
 		height: auto;
@@ -160,6 +169,9 @@
 }
 .capabilities-box h2{
 	font-size: 2em;
+}
+.improve_developer {
+    margin: 0 0 0 0;
 }
 .section1.sec2 .pgcor_inwrap{
 	max-width: 100%;
@@ -347,7 +359,7 @@
 						<div class="section1 sec2">
 							<div class="pgcor_inwrap text-center">
 								<div class="innoicon improve_developer">
-									<img src="<?php echo base_url(); ?>assets/images/icon1.png" alt="canon Logo" width="87" height="19" >
+									<img src="<?php echo base_url(); ?>assets/images/icon3.png" alt="canon Logo" width="87" height="19" >
 								</div>
 								<h4 class="pgplat_ftgstitle text-center">Integrate with the Tools <br> You Already Use</h4>
 								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
