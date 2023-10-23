@@ -17,8 +17,16 @@ $options = cryout_get_option( array( 'anima_excerptarchive', 'anima_excerptstick
 			<div class="entry-meta beforetitle-meta">
 				<?php cryout_post_title_hook(); ?>
 			</div><!-- .entry-meta -->
+
+			<?php
+			$title = get_the_title();
+			if (strlen(strip_tags($title)) > 35) {
+				$title = substr($title, 0, 35).'...';
+			}
 			
-			<?php the_title( sprintf( '<h2 class="entry-title"' . cryout_schema_microdata( 'entry-title', 0 )  . '><a href="%s" ' . cryout_schema_microdata( 'mainEntityOfPage', 0 ) . ' rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			echo '<h2 class="entry-title"' . cryout_schema_microdata('entry-title', 0) . '><a href="' . esc_url(get_permalink()) . '" ' . cryout_schema_microdata('mainEntityOfPage', 0) . ' rel="bookmark">' . esc_html($title) . '</a></h2>';
+			?>
+
 			<!-- /custom description show-->
 			<div class="entry-meta aftertitle-meta">
 				<?php
@@ -28,11 +36,11 @@ $options = cryout_get_option( array( 'anima_excerptarchive', 'anima_excerptstick
 				?>
 				<p>
 					<?php 
-					// $description = substr(strip_tags($blogContent[0]['description']), 0, 150);
-					// if (strlen(strip_tags($blogContent[0]['description'])) > 150) {
-					// 	$description .= '...';
-					// }
-					$description = $blogContent[0]['description'];
+					$description = substr(strip_tags($blogContent[0]['description']), 0, 150);
+					if (strlen(strip_tags($blogContent[0]['description'])) > 150) {
+						$description .= '...';
+					}
+					//$description = $blogContent[0]['description'];
 					echo $description;
 					?>
 					

@@ -96,7 +96,7 @@ if ( ! function_exists( 'anima_posted_static_title' ) ) :
 	
 		if ( $anima_meta_category && get_the_category_list() ) {
 			echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
-						<span> Blog </span></span>';
+						<span class="custom_blog_list"> Blog </span></span>';
 		}	
 	} // anima_posted_static_title()
 	endif;

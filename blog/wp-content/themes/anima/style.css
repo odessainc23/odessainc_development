@@ -6839,23 +6839,7 @@ article.hentry {
 .entry-title a:hover{
 	color: #00acc8 !important;
 }
-/**Restrict description display on 3 lines and title. widget display on one line */
-.entry-title, .widget-container li {
-	white-space: nowrap;
-  	overflow: hidden;
-  	text-overflow: ellipsis;
-  	max-width: 100%;
-}
-.entry-meta.aftertitle-meta, .article-inner .entry-summary{
-	max-height: 3 * 1.2em;
-	line-height: 1.2em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-}
-/** Read more content change*/
+
 
 .continue-reading-link{
 	position:relative;
@@ -6901,10 +6885,15 @@ article.hentry {
 	color: #00acc8;
 }
 
-/* #header-page-title-inside{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
+
+
+#header-page-title .entry-meta .bl_categ .custom_blog_list, #header-page-title .entry-meta .bl_categ .custom_blog_list:hover{
+	background-color: #D0422C !important;
+	border-color: #D0422C !important; 
+}
+
+a.continue-reading-link{
+	box-shadow: none !important;
+}
 
 /* FIN! */
