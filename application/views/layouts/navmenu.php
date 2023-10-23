@@ -1,9 +1,5 @@
 <!-- Nav Menu -->
-<style>
-	.menuwrap ul li.category-dot.auto:before{
-		top:30%
-	}
-	</style>
+
 <nav class="navbar navbar-default navbar-fixed-top navbar--js">
 <?php $is_home = $this->router->fetch_class() === 'home' ? true : false;
 if($is_home){?>
@@ -57,7 +53,7 @@ if($is_home){?>
 
                                                     </ul>
 													<ul>
-														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automative-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automative Finance Software</a></li>
+														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automative-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automative Finance</a></li>
 
                                                     </ul>
 											</div>
