@@ -26,7 +26,7 @@ if($is_home){?>
 		<div class="navbar_wrapper row"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
 			<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
 			<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
-				<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
+				<!-- <li><a href="<?php echo base_url(); ?>blog">Blog</a></li> -->
 				<li><a href="<?php echo base_url(); ?>lets-talk">Let's talk</a></li>
 				<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
 			</ul>
