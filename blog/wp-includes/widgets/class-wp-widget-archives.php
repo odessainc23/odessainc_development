@@ -154,7 +154,7 @@ class WP_Widget_Archives extends WP_Widget {
 					apply_filters(
 						'widget_archives_args',
 						array(
-							'type'            => 'monthly',
+							'type'            => 'yearly',
 							'show_post_count' => $count,
 						),
 						$instance

@@ -32,7 +32,7 @@ add_action( 'cryout_post_excerpt_hook', 'anima_custom_excerpt_more', 10 );
  */
 function anima_continue_reading_link() {
 	$anima_excerptcont = cryout_get_option( 'anima_excerptcont' );
-	return '<a class="continue-reading-link" href="'. esc_url( get_permalink() ) . '"><span>' . wp_kses_post( $anima_excerptcont ). '</span> <em class="screen-reader-text">"' . get_the_title() . '"</em> <i class="icon-continue-reading"></i></a>';
+	return '<a class="continue-reading-link" href="'. esc_url( get_permalink() ) . '">' . wp_kses_post( $anima_excerptcont ). '</a>';
 }
 add_filter( 'the_content_more_link', 'anima_continue_reading_link' );
 
@@ -88,6 +88,18 @@ function anima_posted_category() {
 	}
 } // anima_posted_category()
 endif;
+
+if ( ! function_exists( 'anima_posted_static_title' ) ) :
+	function anima_posted_static_title() {
+		if ( 'post' !== get_post_type() ) return;
+		$anima_meta_category = cryout_get_option( 'anima_meta_category' );
+	
+		if ( $anima_meta_category && get_the_category_list() ) {
+			echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
+						<span> Blog </span></span>';
+		}	
+	} // anima_posted_static_title()
+	endif;
 
 /**
  * Posted by author
@@ -226,12 +238,16 @@ function anima_meta_infos() {
 	add_action( 'cryout_featured_hook', 'anima_posted_edit', 50 ); // Edit button
 	add_action( 'cryout_post_excerpt_hook', 'anima_comments_on', 50 ); // Comments on excerpt
 	add_action( 'cryout_post_content_hook', 'anima_comments_on', 50 ); // Comments on full content
+	add_action( 'cryout_post_meta_hook',	'anima_posted_static_title', 30 );
+
 	//Custom condition for not showing author name, title for pr_individual type
 	if ( is_single() && get_post_type() !== 'pr_individual') { // If single, metas are shown after the title
 		
 		add_action( 'cryout_post_meta_hook',	'anima_posted_author_single', 10 );
 		add_action( 'cryout_post_meta_hook',	'anima_posted_date', 20 );
-		add_action( 'cryout_post_meta_hook',	'anima_posted_category', 30 );
+		if(!is_front_page() && !is_archive() && !is_search()){
+			add_action( 'cryout_post_meta_hook',	'anima_posted_category', 30 );
+		}
 		add_action( 'cryout_post_meta_hook', 'anima_posted_edit', 40 ); // Edit button
 
 	} else { // if blog page, metas are shown at the top of the article
@@ -239,7 +255,9 @@ function anima_meta_infos() {
 		add_action( 'cryout_featured_meta_hook',	'anima_posted_author', 15 );
 		add_action( 'cryout_featured_meta_hook',	'anima_posted_date', 20 );
 		add_action( 'cryout_featured_meta_hook',    'anima_posted_tags', 40 );//Custom add tag inside image
-		add_action( 'cryout_featured_meta_hook',	'anima_posted_category', 30 );
+		if(!is_front_page() && !is_archive() && !is_search()){
+			add_action( 'cryout_featured_meta_hook',	'anima_posted_category', 30 );
+		}
 		
 	}
 	//add_action( 'cryout_post_utility_hook',	'anima_posted_tags', 40 ); // Tags always at the bottom of the article
