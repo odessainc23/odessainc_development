@@ -90,7 +90,7 @@ $options = cryout_get_option( array( 'anima_excerptarchive', 'anima_excerptstick
 			default: ?>
 
 				<div class="entry-summary" <?php cryout_schema_microdata( 'entry-summary' ); ?>>
-					<?php the_excerpt(); ?>
+					<?php //the_excerpt(); ?>
 				</div><!-- .entry-summary -->
 				<div class="entry-meta entry-utility">
 					<?php cryout_meta_format_hook(); ?>
