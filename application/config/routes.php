@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['cloud.amp.html'] = 'Cloud_amp';
 $route['home.amp.html'] = 'Home_amp';
 $route['dev.amp.html'] = 'Dev_amp';
-$route['automative.amp.html'] = 'Automative_amp';
+$route['automotive-finance-software.amp.html'] = 'Automative_amp';
 $route['platform.amp.html'] = 'Platform_amp';
 $route['news.amp.html'] = 'News_amp';
 $route['design.amp.html'] = 'Design_amp';

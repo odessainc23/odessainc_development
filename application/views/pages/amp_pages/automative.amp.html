@@ -1,14 +1,36 @@
 <link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" type="text/css" />
-
 <style amp-custom>
-	.xas-banner .home-hero-bg amp-img{position:absolute;right:0;bottom:0;height:auto}
-	
+	.xas-banner .home-hero-bg amp-img{position:absolute;right:0;bottom:0;height:auto}	
 	.buildinnovation.xassconbox.autoconbox {
     max-width: 100%;
 }
+.xas-cont.auto-cont{
+	width: 90%;
+}
+.xassconbox.buildinnovation.xassconbox.autoconbox .buildinnovationboxConrw .col-sm-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .buildinnovation.xassconbox.autoconbox h3{
     font-size: 1.2rem;
+}
+.section1.sec2{
+    display: flex;
+    justify-content: flex-end;	
+}
+.section1.sec3{
+    display: flex;
+    justify-content: flex-start;	
+}
+.adapt img{
+	width: auto;
+	height: auto;
+}
+.adapt .pgcor_intitle {
+    max-width: 100%;
+    text-align: center;
+	margin-top: 30px;
 }
 .flex-box{
 	display: flex;
@@ -20,7 +42,11 @@
 	justify-content: space-between;
 	padding: 60px 0 0;
 }
+.adapt{
+    max-width:90%;
+    margin: 0 auto;
 
+}
 .reverse{
 	flex-flow: row-reverse;
 }
@@ -30,6 +56,7 @@
 }
 .section1 .pgcor_inwrap{
 	max-width: 90%;
+	margin-left: 0;
 }
 .brlogo{
 	display: flex;
@@ -48,14 +75,23 @@
     margin: 0 20px;
 }
 .capabilities1 p{
-	font-family: MaisonNeue-Bold;
-    color: #2a2d36;
+	font-family: MaisonNeue-Book;
+	color: #555b6d;
+    margin:0;
+    padding: 10px 0;
+    font-size: 15px;
+    width: max-content;
+	font-weight: 700;
 }
 .capabilities-box h2{
 	margin: 0 0 10px;
 }
 .capabilities-box{
 	padding: 0 0 60px 0;
+}
+.capabilities-box .flex-box{
+	margin: 30px auto 0 auto;
+    max-width: 85%;
 }
 .capabilities1 ul{
 	margin: 0 0 20px 0;
@@ -64,7 +100,25 @@
 	color: #555b6d;
 }
 .capabilities1 ul li{
-	list-style: disc;
+	list-style: none;
+    position: relative;
+	font-size: 15px;
+    padding-left: 20px;
+    flex: 0 0 100%;
+    position: relative;
+    margin-bottom: 0px;
+    color: #555b6d;
+}
+.capabilities1 ul li:before {
+	content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #0075a2;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 7px;
 }
 .buildinnovationboxConrw {
     padding: 60px 0;
@@ -78,6 +132,15 @@
 	}
 	.log .brlogo{
 		margin:0;
+	}
+	.section1.sec3,.section1.sec2{
+		justify-content: center;
+	}
+	.two-section.reverse,.two-section{
+		flex-flow: column-reverse;
+	}
+	.pgcor_intext{
+		text-align: center;
 	}
 	.section1 {
     width: 100%;
@@ -93,10 +156,12 @@
     padding: 0px 0;
 }
 .two-section{
-	padding: 0;
-}
+    padding: 0 0 60px 0;}
 .pgcor_intitle{
 	font-size: 2em;
+}
+.trusted_brands_logo .brlogo img {
+    max-width: 90%;
 }
 }
 	@media only screen and (min-width:768px){.xas-banner .home-hero-bg amp-img{height:80%}
@@ -119,7 +184,7 @@
 				<div class="home-hero-cwrap">
 					<div class="home-hero-ctitlewrap">
 						<h1 class="home-hero-ctitle">Driving the Future of 
-							 <br>Automotive Finance <br>Software</h1>
+							 <br>Automotive Finance Software</h1>
 					</div>
 					<p class="home-hero-cdesc">Asset-based and API-first, Odessa is taking a 
 						<span>modern approach to auto finance originations.</span></p>
@@ -136,96 +201,11 @@
 				<!-- <div class="xasstabsbackgbox"></div> -->
 			</div>
 			<!--Scale Fector Section Start Here-->
-			
-			<div class="container xas-cont"> 
+			<div class="container xas-cont auto-cont"> 
 				<div class="plateformspeedbox xassbox">
-					<!-- <div class="build_tabs owl-carousel bltabs owl-theme">
-						<div class="items build_tabactive"><a data-toggle="tab" href="#asaservice">Platform Consolidation</a></div>
-						<div class="items"><a data-toggle="tab" href="#payperuse">Speed to Market</a></div>
-						<div class="items subscriptionTab"><a data-toggle="tab" href="#subscription">Subscription Management</a></div>
-					</div> -->
-					<!-- <div class="tab-content">
-						<div id="asaservice" class="tab-pane fade in active">
-							<div class="plateformCon">
-								<div class="row clearfix">
-									<div class="col-md-6">
-										<h2>Monetize anything as-a-service</h2>
-									<div class="normaltxt pdright">Experience unparalleled flexibility, scalability, and innovation with Odessa's comprehensive everything as a service (XaaS) solution, designed to propel your business forward. Say goodbye to traditional IT constraints and embrace our powerful cloud-based services that will transform your enterprise.</div>
-									</div>
-									<div class="col-md-6">
-										<div class="listpoints">
-											<div class="row clearfix">
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span> Effortlessly scale your business operations</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Adapt to changing market demand for bundled services</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Harmonize processes across multiple systems and lines of business</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="payperuse" class="tab-pane fade">
-							<div class="plateformCon">
-							<div class="row clearfix">
-									<div class="col-md-6">
-										<h2>Deliver cost-effective growth</h2>
-									<div class="normaltxt pdright">Cater to the dynamic needs of your customers by providing value-driven solutions that align costs with actual usage. Odessa enables you to break down asset tracking to the SKU level from day one, enabling new possibilities for usage-based contracts.</div>
-									</div>
-									<div class="col-md-6">
-										<div class="listpoints">
-											<div class="row clearfix">
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Help customers eliminate unnecessary expenditures</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Support expansion with variable payment structures</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Enhance the customer experience with data insight</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="subscription" class="tab-pane fade">
-							<div class="plateformCon">
-							<div class="row clearfix">
-									<div class="col-md-6">
-										<h2>Streamline recurring revenue</h2>
-									<div class="normaltxt pdright">Strategically plan for the future, invest in new initiatives, and remain agile in a competitive market with subscription based business model. Drive predictable revenue that grows with your customers, and seamlessly manage accounting and billing, all in one place.</div>
-									</div>
-									<div class="col-md-6">
-										<div class="listpoints">
-											<div class="row clearfix">
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span> Bundle services with assets to unlock new revenue streams</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Simplify complex billing scenarios</div>
-												</div>
-												<div class="col-sm-12">
-													<div class="normaltxt"><span class="blbullets"></span>Automate renewals and retention efforts</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</div> -->
 					<div class="btmlinegrey"></div>
 				</div>
 				<!--Platform Speed Section End Here--> 
-				
 				<!--Build Innovation Start Here-->
 				<div class="buildinnovation xassconbox autoconbox">
 					<!-- <h2 class="text-center">Stay agile, pursue <span>new growth strategies</span></h2> -->
@@ -263,10 +243,9 @@
 					</div>
 				</div>
 				<!--Build Innovation End Here--> 
-				
 				<!--Development Opps Section Start Here-->
 				<div class="capabilities-box">
-					<h2>The Capabilities You Need to Succeed</h2>
+					<h2 class="text-center">The Capabilities You Need to Succeed</h2>
 					<div class="flex-box">
 						<div class="cap-box">
 						<div class="capabilities1">
@@ -330,13 +309,15 @@
 					<section class="two-section reverse adapt">
 						<div class="section1">
 							<div class="brlogo">
-								<img src="<?php echo base_url(); ?>assets/images/land.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-														</div>
-						</div>
-						<div class="section1 sec2">
-							<div class="pgcor_inwrap">
-								<h2 class="pgcor_intitle">Adapt to Industry Change</h2>
 								<p class="pgcor_intext"> Bring order to your existing auto finance operations and gain the flexibility to adapt to new forces shaping the customer experience.  Leverage our native asset-based and flexible products components to capitalize on emerging trends in auto finance, such as subscriptions or usage-based models.</p>
+							</div>
+						</div>
+						<div class="section1 sec3">
+							<div class="pgcor_inwrap text-center">
+								<div class="innoicon improve_developer">
+									<img src="<?php echo base_url(); ?>assets/images/icon1.png" alt="canon Logo" width="87" height="19" >
+								</div>
+								<h2 class="pgcor_intitle text-center">Adapt to Industry <br> Change</h2>
 								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
 							</div>
 						</div>
@@ -344,66 +325,51 @@
 					<section class="two-section adapt">
 						<div class="section1">
 							<div class="brlogo">
-								<img src="<?php echo base_url(); ?>assets/images/land.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-							</div>
-						</div>
-						<div class="section1 sec2">
-							<div class="pgcor_inwrap">
-								<h2 class="pgcor_intitle">Integrate with the Tools You Already Use</h2>
 								<p class="pgcor_intext"> Automate cross-platform workflows by connecting Odessa to your critical business tools, including your CRM and various third-party solutions for pricing, decisioning, and more. Odessa’s API-based architecture allows you to take a “best-in-breed” approach to your application landscape by integrating components of the platform with other popular solutions in the market. </p>
-								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
 							</div>
-						</div>
-					</section>
-					<section class="two-section reverse log">
-						<div class="section1">
-							<div class="brlogo">
-								<img src="<?php echo base_url(); ?>assets/images/auto-finance.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-								<img src="<?php echo base_url(); ?>assets/images/afsa.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-
-							</div>
-							
 						</div>
 						<div class="section1 sec2">
-							<div class="pgcor_inwrap">
-								<h2 class="pgcor_intitle">Partner with a Leader</h2>
-								<p class="pgcor_intext"> Odessa is a strong supporter of many industry associations and events dedicated to auto finance. We’re leading the charge to revolutionize the automotive finance market with a modern, cloud-based solution for your unique business needs.</p>
+							<div class="pgcor_inwrap text-center">
+								<div class="innoicon improve_developer">
+									<img src="<?php echo base_url(); ?>assets/images/icon1.png" alt="canon Logo" width="87" height="19" >
+								</div>
+								<h2 class="pgcor_intitle">Integrate with the Tools <br> You Already Use</h2>
 								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
 							</div>
 						</div>
 					</section>
-
-				<!--Development Opps Section End Here-->
-				<!-- <div class="testimonialswrap">
-					<h2 class="text-center">Partner with a Leader</h2>
-					<p class="text-center">Odessa is a strong supporter of many industry associations and events dedicated to auto finance. We’re leading the charge to revolutionize the automotive finance market with a modern, cloud-based solution for your unique business needs.</p>
-					<div class="trusted_brands_logo">
-						<div class="brlogo">
-							<img src="<?php echo base_url(); ?>assets/images/auto-finance.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-						</div>
-						<div class="brlogo">
-							<img src="<?php echo base_url(); ?>assets/images/afsa.png" alt="Sasfin Logo" width="100%" height="100%" layout="intrinsic">
-						</div>
-						
-					</div>
-				</div> -->
+			
+				
 			</div>
-				<div class="pgcor_dprin">
-					<div class="odc-gd__container">
-						<div class="odc-gd__row">
-							<div class="odc-gd__col-xxs-12">
-								<div class="pgcor_dpcontent">
-									<!-- <h2 class="pgcor_dpctitle">Our design principles</h2> -->
-									<p class="pgcor_dpctext">Together, we can shape the future of Automotive Finance Software!</p>
-									<a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Let's Talk</a>
+			<div class="pgcor_dprin">
+				<div class="odc-gd__container">
+					<div class="odc-gd__row">
+						<div class="odc-gd__col-xxs-12">
+							<div class="pgcor_dpcontent">
+								<!-- <h2 class="pgcor_dpctitle">Our design principles</h2> -->
+								<h2 class="text-center wtcol">Together, we can shape the future of <br>Automotive Finance Software!</h2>
+								<a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Let's Talk</a>
 
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			
-		</div>
+			</div>
+					
+					<div class="testimonialswrap">
+						<h2 class="text-center">Partner with a Leader</h2>
+						<div class="trusted_brands_logo">
+							<div class="brlogo">
+								<img src="<?php echo base_url(); ?>assets/images/auto-finance.png" alt="canon Logo" width="87" height="19" >
+							</div>
+							<div class="brlogo">
+								<img src="<?php echo base_url(); ?>assets/images/afsa.png" alt="leaf Logo" width="90" height="24">
+							</div>
+						</div>
+					</div>
+				
+			</div>
+
 		<!--Build Page End Here--> 
 	<!-- </div> -->
 	</div>
