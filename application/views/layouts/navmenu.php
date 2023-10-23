@@ -1,4 +1,5 @@
 <!-- Nav Menu -->
+
 <nav class="navbar navbar-default navbar-fixed-top navbar--js">
 <?php $is_home = $this->router->fetch_class() === 'home' ? true : false;
 if($is_home){?>
@@ -25,6 +26,7 @@ if($is_home){?>
 		<div class="navbar_wrapper row"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
 			<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
 			<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
+				<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 				<li><a href="<?php echo base_url(); ?>lets-talk">Let's talk</a></li>
 				<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
 			</ul>
@@ -48,6 +50,11 @@ if($is_home){?>
 												</ul>
 												<ul>
                                                         <li class="category-dot category-bx"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
+
+                                                    </ul>
+													<ul>
+														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automative-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automative Finance</a></li>
+
                                                     </ul>
 											</div>
 					
@@ -164,7 +171,7 @@ if($is_home){?>
 														<ul>
 															<li class="category-dot category-bx">Company</li>
 															<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-															<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+														<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
 															<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 														</ul>
 													</div>
@@ -217,6 +224,7 @@ if($is_home){?>
 							<li><a class="active" href="#" rel="nofollow" onclick="tabBx('platformmenu')">Platform</a></li>
 							<li><a href="#" rel="nofollow" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
 							<li><a href="#" rel="nofollow" onclick="tabBx('companymenu')">Company</a></li>
+							<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 							<li><a href="<?php echo base_url(); ?>lets-talk">Let's Talk</a></li>
 						</ul>
 					</div>
