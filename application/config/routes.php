@@ -52,7 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['cloud.amp.html'] = 'Cloud_amp';
 $route['home.amp.html'] = 'Home_amp';
 $route['dev.amp.html'] = 'Dev_amp';
-$route['automotive-finance-software.amp.html'] = 'Automative_amp';
 $route['platform.amp.html'] = 'Platform_amp';
 $route['news.amp.html'] = 'News_amp';
 $route['design.amp.html'] = 'Design_amp';
@@ -73,6 +72,8 @@ $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
+// $route['automative-finance-software'] = 'automative';
+$route['automative-finance-software'] = 'Automative_amp';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';

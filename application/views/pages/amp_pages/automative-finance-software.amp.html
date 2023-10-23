@@ -17,15 +17,20 @@
 }
 .section1.sec2{
     display: flex;
-    justify-content: flex-end;	
+    justify-content: center;	
 }
 .section1.sec3{
     display: flex;
-    justify-content: flex-start;	
+	justify-content: flex-end;
+    height: 250px;
+
 }
 .adapt img{
 	width: auto;
 	height: auto;
+}
+.improve_developer{
+	margin:0 0 20px 0;
 }
 .adapt .pgcor_intitle {
     max-width: 100%;
@@ -46,7 +51,7 @@
 	padding: 60px 0 0;
 }
 .adapt{
-    max-width:90%;
+	max-width: 80%;
     margin: 0 auto;
 
 }
@@ -132,6 +137,7 @@
 	.flex-box,.two-section{
 		flex-wrap: wrap;
 	}
+	
 	.log{
 		flex-flow: column-reverse;
 	}
@@ -140,6 +146,7 @@
 	}
 	.section1.sec3,.section1.sec2{
 		justify-content: center;
+		height: auto;
 	}
 	.two-section.reverse,.two-section{
 		flex-flow: column-reverse;
@@ -219,6 +226,15 @@
 							<div class="col-sm-4">
 								<div class="buildinnovationConbx">
 									<div class="inoiconrw">
+									<div class="innoicon recoding" style="background: url(assets/images/business_icn_6.svg);"></div>
+									<h3 class="mb-1">Speed to Market</h3>
+									</div>
+									<div class="xass_nor_text">Odessa allows you to adapt to changes in programs or business models and bring new offerings to market through self-service configuration tools.</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="buildinnovationConbx">
+									<div class="inoiconrw">
 									<div class="innoicon improve_developer" style="background: url(assets/images/platform/datamart-flatten.svg);"></div>
 									<h3 class="mb-1">Platform Consolidation</h3>
 									</div>
@@ -226,15 +242,7 @@
 										products, and services together in a single platform</div>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<div class="buildinnovationConbx">
-									<div class="inoiconrw">
-									<div class="innoicon recoding" style="background: url(assets/images/business_icn_6.svg);"></div>
-									<h3 class="mb-1">Speed to Market</h3>
-									</div>
-									<div class="xass_nor_text">Odessa allows you to adapt to changes in programs or business models and bring new offerings to market through self-service configuration tools.</div>
-								</div>
-							</div>
+						
 							<div class="col-sm-4">
 								<div class="buildinnovationConbx">
 									<div class="inoiconrw">
@@ -277,6 +285,7 @@
 								<li>Internal scorecard or integration to external providers.</li>
 								<li>Fraud checks and investigation.</li>
 								<li>Automated and manual credit review.</li>
+								<div>&nbsp;</div>
 							</ul>
 						</div>
 					</div>
@@ -287,6 +296,7 @@
 								<li>eContract integration.</li>
 								<li>Create, distribute, and e-sign documents.</li>
 								<li>Credit, tax, and compliance policy rule checks.</li>
+								<div>&nbsp;</div>
 							</ul>
 						</div>
 						<div class="capabilities1">
@@ -295,6 +305,7 @@
 								<li>Document checklists.</li>
 								<li>Stipulation and conditions review.</li>
 								<li>Held offering and contract return processing.</li>
+								<div>&nbsp;</div>
 							</ul>
 						</div>
 						<div class="capabilities1">
@@ -303,6 +314,7 @@
 								<li>Pricing and rate verification.</li>
 								<li>Calculate dealer disbursement and compensation.</li>
 								<li>Servicing system input file.</li>
+								<div>&nbsp;</div>
 							</ul>
 						</div>
 					</div>
@@ -321,7 +333,7 @@
 								<div class="innoicon improve_developer">
 									<img src="<?php echo base_url(); ?>assets/images/icon1.png" alt="canon Logo" width="87" height="19" >
 								</div>
-								<h2 class="pgcor_intitle text-center">Adapt to Industry <br> Change</h2>
+								<h4 class="pgplat_ftgstitle text-center">Adapt to Industry <br> Change</h4>
 								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
 							</div>
 						</div>
@@ -337,7 +349,7 @@
 								<div class="innoicon improve_developer">
 									<img src="<?php echo base_url(); ?>assets/images/icon1.png" alt="canon Logo" width="87" height="19" >
 								</div>
-								<h2 class="pgcor_intitle">Integrate with the Tools <br> You Already Use</h2>
+								<h4 class="pgplat_ftgstitle text-center">Integrate with the Tools <br> You Already Use</h4>
 								<!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
 							</div>
 						</div>
