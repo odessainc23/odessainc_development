@@ -253,7 +253,7 @@ body:not(.anima-landing-page) article.hentry, body:not(.anima-landing-page) .mai
 .post-thumbnail-container .featured-image-meta,
 body:not(.single) article.hentry .post-thumbnail-container > a::after,
 #header-page-title-inside
-											{ background-color: rgba(17,170,197,0.6509803921568628); }
+											{ background-color: rgb(38 55 70 / 73%) !important }
 #header-page-title-inside					{ box-shadow: 0 -70px 70px rgba(<?php echo esc_html( cryout_hex2rgb( $anima_overlaybackground ) ) ;?>,0.2) inset; }
 #header-page-title .entry-meta .bl_categ a, #header-page-title .entry-meta .bl_categ span  { background-color: <?php echo esc_html(  $anima_accent1 ) ;?>; }
 #header-page-title .entry-meta .bl_categ a:hover, #header-page-title .entry-meta .bl_categ span:hover
@@ -556,7 +556,7 @@ body.woocommerce.woocommerce-page #breadcrumbs-nav,
 .anima-responsive-headerimage #masthead #header-image-main-inside
 											{ max-height: <?php echo esc_html( $anima_headerheight ) ?>px; }
 .anima-cropped-headerimage #masthead #header-image-main-inside
-											{ height: <?php echo esc_html( $anima_headerheight ) ?>px; }
+											{ height: 500px; }
 <?php if ( is_front_page() && function_exists( 'the_custom_header_markup' ) && has_header_video() ) { ?>
 	.anima-responsive-headerimage #masthead #header-image-main-inside
 												{ max-height: none; }

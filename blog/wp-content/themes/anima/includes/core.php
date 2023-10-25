@@ -194,10 +194,10 @@ if ( ! function_exists( 'anima_header_title' ) ) :
 function anima_header_title() {
     if ( anima_header_title_check() ) : ?>
     <div id="header-page-title">
-        <div id="header-page-title-inside">
+        <div id="header-page-title-inside" class="<?php echo is_front_page() || is_archive() || is_404() ? 'header-title-inside-custom' : ''; ?>">
             <?php
 			if ( is_front_page() ) {
-				echo '<h2 class="entry-title" ' . cryout_schema_microdata('entry-title', 0) . '>' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '</h2><p class="byline">' . esc_attr( get_bloginfo( 'description', 'display' ) ) . '</p>';
+				echo '<h2 class="entry-title" ' . cryout_schema_microdata('entry-title', 0) . '>' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '</h2><p class="byline">' . esc_attr( get_bloginfo( 'description', 'display' ) ). '</p>';
 			} elseif ( is_singular() )  {
                 the_title( '<h1 class="entry-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h1>' );
             } else {

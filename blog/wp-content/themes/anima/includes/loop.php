@@ -96,7 +96,7 @@ if ( ! function_exists( 'anima_posted_static_title' ) ) :
 	
 		if ( $anima_meta_category && get_the_category_list() ) {
 			echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
-						<span class="custom_blog_list"> Blog </span></span>';
+						<span class="custom_blog_list"> BLOG </span></span>';
 		}	
 	} // anima_posted_static_title()
 	endif;
@@ -193,10 +193,37 @@ function anima_posted_tags() {
 	$anima_meta_tag  = cryout_get_option( 'anima_meta_tag' );
 
 	// Retrieves tag list of current post, separated by commas.
-	$tag_list = get_the_tag_list( '', ', ' );
-	if ( $anima_meta_tag || $tag_list ) { ?>
+	$tags  = get_the_tag_list( '', ', ' );
+	$tagArray = explode(',', $tags);
+
+	// Process each tag and capitalize the first letter of the tag while preserving the URL
+	$capitalizedTags = array_map(function($tag) {
+		// Use preg_replace_callback to capitalize the first letter of the tag
+		$tag = preg_replace_callback('/\b\w/', function($match) {
+			return ucfirst($match[0]);
+		}, $tag);
+
+		return $tag;
+	}, $tagArray);
+
+	// Join the tags back together with a comma
+	$capitalizedString = implode(', ', $capitalizedTags);
+
+	$capitalizedStringNew = preg_replace_callback('/<a\s+([^>]*)>([^<]+)<\/a>/i', function($match) {
+		$url = strtolower($match[1]); // Convert href to lowercase
+		$tag = $match[2];
+	
+		$tag = preg_replace_callback('/\b\w/', function($match) {
+			return ucfirst($match[0]);
+		}, $tag);
+	
+		return "<a $url>$tag</a>";
+	}, $capitalizedString);
+
+	
+	if ( $anima_meta_tag || $capitalizedString ) { ?>
 		<span class="tags" <?php cryout_schema_microdata( 'tags' ) ?>>
-				<i class="icon-tag icon-metas" title="<?php esc_attr_e( 'Tagged', 'anima' ) ?>"></i>&nbsp;<?php echo $tag_list ?>
+				<i class="icon-tag icon-metas" title="<?php esc_attr_e( 'Tagged', 'anima' ) ?>"></i>&nbsp;<?php echo ($capitalizedStringNew) ?>
 		</span>
 		<?php
 	}
