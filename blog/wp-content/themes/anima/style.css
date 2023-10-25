@@ -1824,7 +1824,7 @@ span.edit-link:hover {
 .post-thumbnail-container .featured-image-meta.entry-meta i::before,
 .post-thumbnail-container .featured-image-meta.entry-meta,
 .post-thumbnail-container .featured-image-meta.entry-meta time {
-	color: #DDD;
+	color: #FFF;
 }
 
 .post-thumbnail-container:hover .featured-image-meta.entry-meta a,
@@ -1937,7 +1937,7 @@ span.edit-link:hover {
 
 #header-page-title .searchform {
 	max-width: 80%;
-	margin: 1em auto 2.5em;
+	margin: 1em auto 0.5em;
 }
 
 #header-page-title .searchform input[type="search"] {
@@ -1957,7 +1957,7 @@ span.edit-link:hover {
 
 #header-page-title .byline {
 	font-size: 1em;
-	color: #DDD;
+	color: #FFF;
 	font-weight: 300;
 }
 
@@ -6819,7 +6819,7 @@ article.hentry {
 }
 
 .entry-header .entry-meta p, .entry-summary p{
-	font-size: 14px !important;
+	font-size: 16px !important;
 }
 
 .section_width .content_text{
@@ -6889,11 +6889,30 @@ article.hentry {
 
 #header-page-title .entry-meta .bl_categ .custom_blog_list, #header-page-title .entry-meta .bl_categ .custom_blog_list:hover{
 	background-color: #ff495c !important;
-	border-color: #ff495c !important; 
+	border-color: #ff495c !important;
+}
+
+.entry-meta .bl_categ{
+	font-size: 18px !important;
 }
 
 a.continue-reading-link{
 	box-shadow: none !important;
 }
 
+
+/** For remove spacing between readmore and description*/
+.entry-meta p{
+	margin-bottom: 0px !important;
+}
+
+#header-page-title-inside{
+	background-color: rgb(38 55 70 / 73%) !important;
+}
+
+.header-title-inside-custom{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 /* FIN! */

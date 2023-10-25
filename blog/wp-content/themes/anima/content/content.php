@@ -89,13 +89,15 @@ $options = cryout_get_option( array( 'anima_excerptarchive', 'anima_excerptstick
 			case 'excerpt':
 			default: ?>
 
-				<div class="entry-summary" <?php cryout_schema_microdata( 'entry-summary' ); ?>>
-					<?php //the_excerpt(); ?>
-				</div><!-- .entry-summary -->
+				<!-- <div class="entry-summary" <?php cryout_schema_microdata( 'entry-summary' ); ?>>
+					<?php the_excerpt(); ?>
+				</div> -->
+				<!-- .entry-summary -->
 				<div class="entry-meta entry-utility">
 					<?php cryout_meta_format_hook(); ?>
 					<?php cryout_post_utility_hook(); ?>
-				</div><!-- .entry-utility -->
+				</div>
+				<!-- .entry-utility -->
 				<footer class="post-continue-container">
 					<?php cryout_post_excerpt_hook(); ?>
 				</footer>
