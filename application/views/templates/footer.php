@@ -48,6 +48,8 @@
 					<ul>
 						<li><a href="<?php echo base_url(); ?>design-principles">Design Principles</a></li>
 						<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">As-a-Service</a></li>
+						<li><a href="<?php echo base_url(); ?>automotive-finance-software" hreflang="en">Automotive Finance</a></li>
+
 							<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Pay Per Use</a></li>
 							<li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service">Subscription Management</a></li>
 						<li><a href="<?php echo base_url(); ?>cloud">Migrate to Cloud</a></li>

@@ -249,6 +249,13 @@ if($is_home){?>
                                             <li><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="service"><b>As-a-Service</b></a></li>
                                         </ul>
                                     </div>
+									<div class="col-xs-6">
+                                        <ul>
+										<li><a href="<?php echo base_url(); ?>automotive-finance-software" hreflang="en"><b style="color: #000!important;
+                                                font-size: 13px!important;">Automotive Finance</b></a></li>
+
+                                        </ul>
+                                    </div>
 								<div class="col-xs-6">
 									<ul>
 										<li>Developer Tools</li>
