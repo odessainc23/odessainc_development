@@ -6915,4 +6915,8 @@ a.continue-reading-link{
 	justify-content: center;
 	align-items: center;
 }
+
+.post-thumbnail-container .featured-image-meta.entry-meta a, .post-thumbnail-container .featured-image-meta.entry-meta time, .post-thumbnail-container .featured-image-meta.entry-meta i::before{
+	font-size: 12px !important;
+}
 /* FIN! */
