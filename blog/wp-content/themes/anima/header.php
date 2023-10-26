@@ -146,6 +146,9 @@
 															<ul>
 																<li class="category-dot category-bx"><a href="<?php echo OD_BASE_URL; ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
 															</ul>
+															<ul>
+																<li class="category-dot category-bx auto"><a href="<?php echo OD_BASE_URL; ?>automotive-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automotive Finance</a></li>
+															</ul>
 															
 														</div>
 														<div class="col-xs-6 col-sm-3 menuwd20">
@@ -317,6 +320,11 @@
 											<div class="col-xs-6">
 												<ul>
 													<li><a href="<?php echo OD_BASE_URL; ?>xaas-everything-as-a-service" class="service"><b>As-a-Service</b></a></li>
+												</ul>
+											</div>
+											<div class="col-xs-6">
+												<ul>
+													<li><a href="<?php echo OD_BASE_URL; ?>automotive-finance-software" class="service"><b>Automotive Finance</b></a></li>
 												</ul>
 											</div>
 											<div class="col-xs-6">
