@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Automative_amp extends CI_Controller {
+class Automotive_amp extends CI_Controller {
 
 	public function index(){
 		$data['meta_title']			= 'Automotive Finance Software | Odessa';
@@ -13,7 +13,7 @@ class Automative_amp extends CI_Controller {
 		$data['tc_description']		= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/automative-finance-software.amp.html', $data);
+		$this->load->view('pages/amp_pages/automotive-finance-software.amp.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
