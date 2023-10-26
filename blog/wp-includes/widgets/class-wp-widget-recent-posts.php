@@ -117,9 +117,14 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 				if ( get_queried_object_id() === $recent_post->ID ) {
 					$aria_current = ' aria-current="page"';
 				}
+				$title_new = substr(strip_tags($title), 0, 30);
+				if (strlen(strip_tags($title)) > 30) {
+					$title_new .= '...';
+				}
+				
 				?>
 				<li>
-					<a href="<?php the_permalink( $recent_post->ID ); ?>"<?php echo $aria_current; ?>><?php echo $title; ?></a>
+					<a href="<?php the_permalink( $recent_post->ID ); ?>"<?php echo $aria_current; ?>><?php echo $title_new; ?></a>
 					<?php if ( $show_date ) : ?>
 						<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
 					<?php endif; ?>

@@ -137,10 +137,14 @@ class WP_Widget_Categories extends WP_Widget {
 				 * @param array $cat_args An array of Categories widget options.
 				 * @param array $instance Array of settings for the current widget.
 				 */
-				wp_list_categories( apply_filters( 'widget_categories_args', $cat_args, $instance ) );
+				//wp_list_categories( apply_filters( 'widget_categories_args', $cat_args, $instance ) );
 				?>
 			</ul>
-
+			<ul>
+				<li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#in-the-news">In the news</a></li>
+                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/announcements">Announcements</a></li>
+                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#awards-recognition">Awards and recognition</a></li>
+			</ul>
 			<?php
 			if ( 'html5' === $format ) {
 				echo '</nav>';
