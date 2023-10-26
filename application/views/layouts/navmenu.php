@@ -53,7 +53,7 @@ if($is_home){?>
 
                                                     </ul>
 													<ul>
-														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automative-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automative Finance</a></li>
+														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automotive-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automotive Finance</a></li>
 
                                                     </ul>
 											</div>

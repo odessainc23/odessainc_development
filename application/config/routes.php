@@ -73,7 +73,7 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
 // $route['automative-finance-software'] = 'automative';
-$route['automative-finance-software'] = 'Automative_amp';
+$route['automotive-finance-software'] = 'Automotive_amp';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';
