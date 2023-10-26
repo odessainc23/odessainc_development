@@ -36,8 +36,8 @@ $options = cryout_get_option( array( 'anima_excerptarchive', 'anima_excerptstick
 				?>
 				<p>
 					<?php 
-					$description = substr(strip_tags($blogContent[0]['description']), 0, 150);
-					if (strlen(strip_tags($blogContent[0]['description'])) > 150) {
+					$description = substr(strip_tags($blogContent[0]['description']), 0, 120);
+					if (strlen(strip_tags($blogContent[0]['description'])) > 120) {
 						$description .= '...';
 					}
 					//$description = $blogContent[0]['description'];
