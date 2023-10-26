@@ -4001,6 +4001,47 @@ function wp_get_recent_posts( $args = array(), $output = ARRAY_A ) {
 
 }
 
+//custom puhblished post tpye retrive function start 
+function wp_get_blog_published_posts( $args = array(), $output = ARRAY_A ) {
+
+	if ( is_numeric( $args ) ) {
+		deprecated_argument( _FUNCTION_, '3.1.0', _( 'Passing an integer number of posts is deprecated. Pass an array of arguments instead.' ) );
+		$args = array( 'numberposts' => absint( $args ) );
+	}
+
+	// Set default arguments.
+	$defaults = array(
+		'numberposts'      => 10,
+		'offset'           => 0,
+		'category'         => 0,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'include'          => '',
+		'exclude'          => '',
+		'meta_key'         => '',
+		'meta_value'       => '',
+		'post_type'        => 'post',
+		'post_status'      => 'publish',
+		'suppress_filters' => true,
+	);
+
+	$parsed_args = wp_parse_args( $args, $defaults );
+
+	$results = get_posts( $parsed_args );
+
+	// Backward compatibility. Prior to 3.1 expected posts to be returned in array.
+	if ( ARRAY_A === $output ) {
+		foreach ( $results as $key => $result ) {
+			$results[ $key ] = get_object_vars( $result );
+		}
+		return $results ? $results : array();
+	}
+
+	return $results ? $results : false;
+
+}
+//custom puhblished post tpye retrive function end
+
 /**
  * Inserts or update a post.
  *

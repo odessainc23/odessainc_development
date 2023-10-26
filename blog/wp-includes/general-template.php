@@ -1773,8 +1773,7 @@ function get_the_archive_title() {
 		$title = sprintf(
 			/* translators: 1: Title prefix. 2: Title. */
 			_x( '%1$s %2$s', 'archive title' ),
-			$prefix,
-			'<span>' . $title . '</span>'
+			$prefix, $title
 		);
 	}
 
