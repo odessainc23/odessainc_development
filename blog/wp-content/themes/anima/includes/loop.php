@@ -113,7 +113,7 @@ function anima_posted_author() {
 		echo sprintf(
 			'<span class="author vcard"' . cryout_schema_microdata( 'author', 0 ) . '>
 				<i class="icon-author icon-metas" title="' . esc_attr__( "Author", "anima" ) . '"></i>
-				<a class="url fn n" rel="author" href="%1$s" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
+				<a class="url fn n" rel="author" href="javascript:void(0)" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
 					<em' .  cryout_schema_microdata( 'author-name', 0 ) . '>%3$s</em>
 				</a>
 			</span>',
