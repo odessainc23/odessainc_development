@@ -94,10 +94,10 @@ if ( ! function_exists( 'anima_posted_static_title' ) ) :
 		if ( 'post' !== get_post_type() ) return;
 		$anima_meta_category = cryout_get_option( 'anima_meta_category' );
 	
-		if ( $anima_meta_category && get_the_category_list() ) {
-			echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
-						<span class="custom_blog_list"> BLOG </span></span>';
-		}	
+		// if ( $anima_meta_category && get_the_category_list() ) {
+		// 	echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
+		// 				<span class="custom_blog_list"> BLOG </span></span>';
+		// }	
 	} // anima_posted_static_title()
 	endif;
 
