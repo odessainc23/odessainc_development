@@ -277,6 +277,17 @@ hr {
 	clear: both;
 }
 
+.entry-title a:link, .entry-title a:visited{
+	text-transform:capitalize
+}
+#header-page-title-inside{
+	flex-wrap: wrap;
+}
+.header-page-title-inside .entry-title, #reply-title{
+	width:100%;
+	display: block;
+}
+
 /* Text elements */
 
 .main li > ul,

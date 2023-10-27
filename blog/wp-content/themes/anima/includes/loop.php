@@ -94,10 +94,10 @@ if ( ! function_exists( 'anima_posted_static_title' ) ) :
 		if ( 'post' !== get_post_type() ) return;
 		$anima_meta_category = cryout_get_option( 'anima_meta_category' );
 	
-		if ( $anima_meta_category && get_the_category_list() ) {
-			echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
-						<span class="custom_blog_list"> BLOG </span></span>';
-		}	
+		// if ( $anima_meta_category && get_the_category_list() ) {
+		// 	echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
+		// 				<span class="custom_blog_list"> BLOG </span></span>';
+		// }	
 	} // anima_posted_static_title()
 	endif;
 
@@ -113,7 +113,7 @@ function anima_posted_author() {
 		echo sprintf(
 			'<span class="author vcard"' . cryout_schema_microdata( 'author', 0 ) . '>
 				<i class="icon-author icon-metas" title="' . esc_attr__( "Author", "anima" ) . '"></i>
-				<a class="url fn n" rel="author" href="%1$s" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
+				<a style="cursor: none;text-decoration: none;border-bottom: none;" class="url fn n" rel="author" href="javascript:void(0)" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
 					<em' .  cryout_schema_microdata( 'author-name', 0 ) . '>%3$s</em>
 				</a>
 			</span>',
@@ -143,7 +143,7 @@ function anima_posted_author_single() {
 		echo sprintf(
 			'<span class="author vcard"' . cryout_schema_microdata( 'author', 0 ) . '>' .
 				get_avatar( $author_id ) . '<em>'. __("", "anima") . '</em>' .
-				'<a class="url fn n" rel="author" href="%1$s" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
+				'<a style="cursor: none;text-decoration: none;border-bottom: none;" class="url fn n" rel="author" href="javascript:void(0)" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
 					<em' .  cryout_schema_microdata( 'author-name', 0 ) . '>%3$s</em>
 				</a>  ['.$userdata['description']['0'].'] ' .$anima_meta_date .
 			'</span>',
