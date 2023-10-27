@@ -272,7 +272,13 @@ a img {
 	border: none;
 	vertical-align: middle;
 }
-
+#header-page-title-inside{
+	flex-wrap: wrap;
+}
+.header-page-title-inside .entry-title, #reply-title{
+	width:100%;
+	display: block;
+}
 hr {
 	height: 1px;
 	border: 0;
