@@ -265,9 +265,9 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 	border: 0;
 }
-.entry-title a:link, .entry-title a:visited{
+/* .entry-title a:link, .entry-title a:visited{
 	text-transform:capitalize
-}
+} */
 a img {
 	border: none;
 	vertical-align: middle;
