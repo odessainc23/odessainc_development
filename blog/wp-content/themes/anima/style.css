@@ -282,6 +282,9 @@ a img {
 #header-page-title-inside{
 	flex-wrap: wrap;
 }
+#header-page-title-inside .entry-meta{
+	margin: 0.5em 0;
+}
 #header-page-title .entry-meta span.author {
     margin-right: 0 !important;
 }
