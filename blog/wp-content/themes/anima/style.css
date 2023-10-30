@@ -282,6 +282,10 @@ a img {
 #header-page-title-inside{
 	flex-wrap: wrap;
 }
+#header-page-title .entry-meta span.author {
+    margin-right: 0 !important;
+}
+
 #header-page-title-inside h2{
 	font-size: 42px;
     font-family: MaisonNeue-Bold;
