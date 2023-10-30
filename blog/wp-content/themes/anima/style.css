@@ -272,10 +272,8 @@ img {
     font-size: 20px !important;
 }
 #header-page-title-inside {
-    position: relative;
-    min-height: 180px;
-    margin: 0 auto;
-    padding: 3em 1em;
+    min-height: 180px !important;
+    padding: 3em 1em !important;
 }
 a img {
 	border: none;
