@@ -275,6 +275,12 @@ a img {
 #header-page-title-inside{
 	flex-wrap: wrap;
 }
+#header-page-title-inside h2{
+	font-size: 42px;
+    font-family: MaisonNeue-Bold;
+    font-weight: 400;
+    line-height: 1.4;
+}
 .header-page-title-inside .entry-title, #reply-title{
 	width:100%;
 	display: block;
