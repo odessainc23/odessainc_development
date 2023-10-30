@@ -270,6 +270,9 @@ a img {
 	border: none;
 	vertical-align: middle;
 }
+#header-page-title .byline {
+    font-size: 20px !important;
+}
 #header-page-title-inside {
     min-height: 180px !important;
     padding: 3em 1em !important;
@@ -309,9 +312,9 @@ hr {
 	clear: both;
 }
 
-.entry-title a:link, .entry-title a:visited{
+/* .entry-title a:link, .entry-title a:visited{
 	text-transform:capitalize
-}
+} */
 #header-page-title-inside{
 	flex-wrap: wrap;
 }
