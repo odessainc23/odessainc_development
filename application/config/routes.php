@@ -63,6 +63,8 @@ $route['turns22.amp.html'] = 'home/turns22';
 $route['xaas-everything-as-a-service.amp.html'] = 'xaas_amp/xaas';
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
+// $route['odessa-modern-slavery-act-statement'] = 'welcome/odessa-modern-slavery-act-statement';
+
 $route['lets-talk'] = 'welcome/lets_talk_primary';
 $route['get-started'] = 'welcome/lets_talk_secondary';
 $route['terms-of-use'] = 'welcome/terms_condition';
@@ -71,6 +73,7 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
 $route['automotive-finance-software'] = 'Automotive_amp';
+$route['odessa-modern-slavery-act-statement'] = 'Modern';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';

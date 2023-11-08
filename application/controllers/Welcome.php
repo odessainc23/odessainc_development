@@ -107,6 +107,23 @@ class Welcome extends CI_Controller {
 		$this->load->view('layouts/footer', $data);
 	}
 
+
+	// public function modern_slavery() {
+	// 	$data	= array();
+
+	// 	$data['meta_title']			= 'Terms of Use | Odessa';
+	// 	$data['meta_description']	= 'Please review Odessa\'s legal notices, terms and conditions related to your use of the website.';
+	// 	$data['meta_keyword']		= 'lease adminstration software,asset finance software,fleet management software';
+	// 	$data['og_title']			= 'Terms of Use | Odessa';
+	// 	$data['og_description']		= 'Please review Odessa\'s legal notices, terms and conditions related to your use of the website.';
+	// 	$data['tc_title']			= 'Terms of Use | Odessa';
+	// 	$data['tc_description']		= 'Please review Odessa\'s legal notices, terms and conditions related to your use of the website.';
+
+	// 	$this->load->view('layouts/header', $data);
+	// 	$this->load->view('pages/amp_pages/odessa-modern-slavery-act-statement.amp.html', $data);
+	// 	$this->load->view('layouts/footer', $data);
+	// }
+
 	public function design_principles() {
 		$data	= array();
 
