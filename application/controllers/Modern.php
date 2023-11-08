@@ -6,7 +6,7 @@ class Modern extends CI_Controller {
 	public function index(){
 		$data['meta_title']			= 'Odessa Modern Slavery Act Statement';
 		$data['meta_description']	= 'Odessa herein elucidates its initiatives to mitigate/eradicate modern slavery and human trafficking from its business and supply chain';
-		$data['meta_keyword']		= 'auto finance solution, auto leasing software, vehicle leasing software, car leasing software, auto loan software, auto finance software, automotive finance software, auto lending software, auto loan management software, auto loan origination software, auto loan servicing software, automotive leasing software, automotive leasing software';
+		$data['meta_keyword']		= 'Odessa Modern Slavery Act Statement';
 		$data['og_title']			= 'Odessa Modern Slavery Act Statement';
 		$data['og_description']		= 'Odessa herein elucidates its initiatives to mitigate/eradicate modern slavery and human trafficking from its business and supply chain';
 		$data['tc_title']			= 'Odessa Modern Slavery Act Statement';
