@@ -73,7 +73,7 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
 $route['automotive-finance-software'] = 'Automotive_amp';
-$route['odessa-modern-slavery-act-statement'] = 'Modern';
+$route['odessa-modern-slavery-act-statement'] = 'Modern_amp';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';

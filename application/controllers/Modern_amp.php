@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Modern extends CI_Controller {
+class Modern_amp extends CI_Controller {
 
 	public function index(){
 		$data['meta_title']			= 'Odessa Modern Slavery Act Statement';
