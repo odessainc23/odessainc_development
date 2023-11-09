@@ -80,6 +80,7 @@
 						<li>2023 © Odessa</li>
 						<li><a href="<?php echo base_url(); ?>terms-of-use">Terms of Use</a></li>
 						<li><a href="<?php echo base_url(); ?>privacy-policy">Privacy</a></li>
+						<li><a href="<?php echo base_url(); ?>odessa-modern-slavery-act-statement">Modern Slavery Act Statement</a></li>
 					</ul>
 				</div>
 			</div>

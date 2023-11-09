@@ -71,6 +71,7 @@ $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 $route['automotive-finance-software'] = 'Automotive_amp';
+$route['odessa-modern-slavery-act-statement'] = 'Modern_amp';
 $route['turns22'] = 'home/turns22';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
