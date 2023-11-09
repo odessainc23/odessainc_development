@@ -25,7 +25,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="annoucement">
+	<section class="annoucement" id="announcements">
 		<div class="container">
 			<div class="section_width">
 				<div class="col-md-12">
@@ -112,7 +112,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="news">
+	<section class="news" id="inTheNews">
 		<div class="section_width">
 			<div class="innerwidth_section">
 				<div class="col-md-12">
@@ -214,7 +214,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="awards">
+	<section class="awards" id="awardsRecognition">
 		<div class="section_width">
 			<div class="col-md-12">
 				<div class="heading_div text-center"> <span class="award_icon"></span>
