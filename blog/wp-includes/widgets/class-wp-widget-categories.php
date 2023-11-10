@@ -141,9 +141,9 @@ class WP_Widget_Categories extends WP_Widget {
 				?>
 			</ul>
 			<ul>
-				<li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#in-the-news">In the news</a></li>
-                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/announcements">Announcements</a></li>
-                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#awards-recognition">Awards and recognition</a></li>
+				<li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#inTheNews">In the news</a></li>
+                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#announcements">Announcements</a></li>
+                <li class="cat-item cat-item-3"><a href="<?php echo OD_BASE_URL; ?>newsroom/#awardsRecognition">Awards and recognition</a></li>
 			</ul>
 			<?php
 			if ( 'html5' === $format ) {
