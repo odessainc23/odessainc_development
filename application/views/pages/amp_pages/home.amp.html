@@ -240,11 +240,39 @@ button {
                         cross-platform workflow.
                         DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
                     <div class="newsletter inlineform">
-                        <form id="pardotForm">
-                            <label for="email">Email:</label>
-                            <input type="email" id="emailInput" name="email">
-                            <button type="submit">Submit</button>
-                        </form>
+                      <!-- <form action ="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method ="post" onSubmit="return validateMyForm();" novalidate> 
+                        <div class="input">
+                            <input type="email" placeholder="What’s your email?" name="email" id="email1" required class="one-field-pardot-form-handler"/>
+                        </div>
+                        <div class="inputbtn">
+                            <input class="odc__btn odc__btn--primary odc__btn--md" id="pardot_extra_field" type="submit" value="Learn more" />
+                        </div>
+                    </form> -->
+
+
+                    <div class="letstalkform">
+                        <!--<iframe src="http://go.pardot.com/l/310001/2020-07-23/t159xm" width="100%" height="705" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>-->
+                        <!-- <form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post"> -->
+                    <form id = "primaryForm" method="post" autocomplete="off">
+                
+                  
+                  
+                    <div class="form-group">
+                        <input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
+                    </div>
+                  
+                    
+                    <div class="capt">
+                    <div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
+                        </div>
+                    
+                    <div class="clearfix">
+                        <button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Learn More</button>
+                    </div>
+                </form>
+                    </div>
+
+                  
                     </div>
                 </div>
             </div>
@@ -335,36 +363,152 @@ button {
 <script type="text/javascript">
 $(document).ready(function() {
 
-    $('#pardotForm').submit(function(event) {
-        event.preventDefault();
+    $.validator.addMethod("myusername", function(value,element) {
+		return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+	}, 'Free email addresses are not allowed.');
+	
+	$.validator.addMethod("lettersonly", function(value, element) {
+		 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
+	  );
+	
+	$.validator.addMethod("noSpace", function(value, element) { 
+		  return value == '' || value.trim().length != 0;  
+		}, "No spaces allowed !! please don't leave it empty.");
+	
+	
+		$.validator.addMethod("mobile", function(phone_number, element) {
+	phone_number = phone_number.replace(/\s+/g, ""); 
+	return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
+	phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
+	}, "Mobile number should be of 6 to 15 digits.");
+	
+	
+	
+	$("#primaryForm").validate({
+		rules: {
+			"first-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
+			}, 
+			"last-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
+			},
+			email: {
+				required: true,
+				myusername: true,
+			},
+			phone: {
+				required: true,
+				minlength:6,
+				maxlength:15,
+				mobile:true
+				},
+			"job-title": {
+				required: true
+				},
+			company: {
+				required: true
+			},
+			"software-used": {
+				required: true
+			},
+			country: {
+				required: true
+			}
+		},
+			messages: {
+			"first-name": {
+				required:"",
+				maxlength:""
+				}, 
+			"last-name": {
+				required:"",
+				maxlength:""
+				},           
+			email: {
+				required: "",
+				},
+			phone: {
+				required: "",
+				minlength:"",
+				maxlength:""
+				},
+			"job-title": {
+				required: ""
+			},
+			company: {
+				required: ""
+			},
+			"software-used": {
+				required: "",
+			},
+			country: {
+				required: "",
+			}
+			},
+			submitHandler: function (form) {
+			
+			var honeypot_val = $("#honeypot").val();
+			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
+				if(honeypot_val != ''){
+					window.location.reload();
+					return false;
+				}else{
+					$(".capt").addClass("error");
+					return false;
+				}
+			} else {
+				if(honeypot_val == ''){
+					$("#secondaryForm").submit();
+					return true;
+				}else{
+					$(".capt").removeClass("error");
+					return true
+				}
+			}
+		}
+	});
 
-        var email = $('#emailInput').val();
-        var personalDomains = ['gmail.com', 'yahoo.com', 'hotmail.com']; // Add more personal domains if needed
-        
-        // Check if the email is from a personal domain
-        var domain = email.split('@')[1];
-        if ($.inArray(domain, personalDomains) !== -1) {
-            alert("Personal email domain detected. Please use a business email.");
-            // You can add further UI feedback or prevent form submission for personal emails
-        } else {
-            // Proceed with Pardot form submission
-            // Use AJAX to submit the form data to Pardot
-            $.ajax({
-                type: 'POST',
-                url: 'https://go.pardot.com/l/123456/2023-11-15/abcdef', // Replace with your Pardot form endpoint
-                data: $('#pardotForm').serialize(), // Serialize the form data
-                success: function(response) {
-                    // Handle success response from Pardot
-                    console.log('Form submitted to Pardot:', response);
-                    // You can add further actions upon successful submission
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error:', status, error);
-                    // Handle error scenarios here
-                }
-            });
-        }
-    });
+	$("#letstalk").click(function(){
+		var honeypot_val = $("#honeypot").val();
+		if(honeypot_val == ''){
+			// $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+			$('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+			$("#primaryForm").submit();
+			return true;
+		}else{
+			window.location.reload();
+			return false;
+		}
+	})	
+	
+	$("#first_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
+
+	$("#last_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
+
+	$('#primaryForm input').bind("cut copy paste",function(e) {
+		e.preventDefault();
+	});
+	
 
 
 
@@ -372,16 +516,7 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
+    
     // Check if the user is already logged in
     $(".overlay").addClass('one');
     const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -417,6 +552,28 @@ $(document).ready(function() {
         }
     });
 });
+
+
+function validateAndSubmit() {
+  const emailInput = document.getElementById('emailInput').value;
+  validateEmail(emailInput)
+    .then(result => {
+      if (result) {
+        // Submit the form or perform further actions
+        alert('Form submitted successfully!');
+        // Add your submission logic here
+      } else {
+        // Handle invalid email
+        alert('Invalid email. Please enter a valid email.');
+      }
+    })
+    .catch(err => {
+      console.error('Validation error:', err);
+      alert('Validation error. Please try again.');
+    });
+}
+
+
 
 
 function validateMyForm() {
@@ -485,7 +642,40 @@ function validateMyForm() {
 
 
     }
+    $(function(){
+	  function rescaleCaptcha(){
+		var width = $('.g-recaptcha').parent().width();
+		var scale;
+		if (width < 302) {
+		  scale = width / 302;
+		} else{
+		  scale = 1; 
+		}
+	
+		$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+		$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+		$('.g-recaptcha').css('transform-origin', '0 0');
+		$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+	  }
+	
+	  rescaleCaptcha();
+	  $( window ).resize(function() { rescaleCaptcha(); });
+	
+	});
+	
+	function isNumberKey(evt){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+		if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
 
+		return true;
+	}
+	</script>
+	<style amp-custom>
+		@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
+	</style>
+	<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 
 </script>
 <script type="application/ld+json">
