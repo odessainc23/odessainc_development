@@ -15,6 +15,9 @@
         flex-flow: column;
         opacity: 0;
     }
+    input, button{
+        margin:0;
+    }
     .overlay.one{
         opacity: 1;
     }
@@ -34,7 +37,7 @@
 }
 
 input, button {
-    margin: 10px 0;
+    margin: 0 0;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -249,30 +252,11 @@ button {
                         </div>
                     </form> -->
 
-
-                    <div class="letstalkform">
-                        <!--<iframe src="http://go.pardot.com/l/310001/2020-07-23/t159xm" width="100%" height="705" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>-->
-                        <!-- <form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post"> -->
-                    <form id = "primaryForm" method="post" autocomplete="off">
-                
-                  
-                  
-                    <div class="form-group">
-                        <input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
-                    </div>
-                  
-                    
-                    <div class="capt">
-                    <div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
-                        </div>
-                    
-                    <div class="clearfix">
-                        <button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Learn More</button>
-                    </div>
-                </form>
-                    </div>
-
-                  
+                    <form id="myForm">
+                        <div class="input"><input type="email" id="emailInput" placeholder="Enter your email"></div>
+                        <div class="inputbtn"><button type="button" id="submitBtn" class="odc__btn odc__btn--primary odc__btn--md">Learn More</button></div>
+                      </form>
+                      
                     </div>
                 </div>
             </div>
@@ -360,165 +344,47 @@ button {
 
 </div>
 <link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
-<script type="text/javascript">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
 $(document).ready(function() {
+  $('#submitBtn').on('click', function() {
+    var personalDomains = ["yahoo.com", "gmail.com", "google.com", "hotmail.com", "me.com", "aol.com", "mac.com", "live.com", "comcast.com", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "verizon.net", "att.net", "gmz.com", "mail.com"]; // Personal domains to restrict
 
-    $.validator.addMethod("myusername", function(value,element) {
-		return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-	}, 'Free email addresses are not allowed.');
-	
-	$.validator.addMethod("lettersonly", function(value, element) {
-		 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
-	  );
-	
-	$.validator.addMethod("noSpace", function(value, element) { 
-		  return value == '' || value.trim().length != 0;  
-		}, "No spaces allowed !! please don't leave it empty.");
-	
-	
-		$.validator.addMethod("mobile", function(phone_number, element) {
-	phone_number = phone_number.replace(/\s+/g, ""); 
-	return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
-	phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
-	}, "Mobile number should be of 6 to 15 digits.");
-	
-	
-	
-	$("#primaryForm").validate({
-		rules: {
-			"first-name":{
-				required: true,
-				maxlength: 50,
-				lettersonly:true
-			}, 
-			"last-name":{
-				required: true,
-				maxlength: 50,
-				lettersonly:true
-			},
-			email: {
-				required: true,
-				myusername: true,
-			},
-			phone: {
-				required: true,
-				minlength:6,
-				maxlength:15,
-				mobile:true
-				},
-			"job-title": {
-				required: true
-				},
-			company: {
-				required: true
-			},
-			"software-used": {
-				required: true
-			},
-			country: {
-				required: true
-			}
-		},
-			messages: {
-			"first-name": {
-				required:"",
-				maxlength:""
-				}, 
-			"last-name": {
-				required:"",
-				maxlength:""
-				},           
-			email: {
-				required: "",
-				},
-			phone: {
-				required: "",
-				minlength:"",
-				maxlength:""
-				},
-			"job-title": {
-				required: ""
-			},
-			company: {
-				required: ""
-			},
-			"software-used": {
-				required: "",
-			},
-			country: {
-				required: "",
-			}
-			},
-			submitHandler: function (form) {
-			
-			var honeypot_val = $("#honeypot").val();
-			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-				if(honeypot_val != ''){
-					window.location.reload();
-					return false;
-				}else{
-					$(".capt").addClass("error");
-					return false;
-				}
-			} else {
-				if(honeypot_val == ''){
-					$("#secondaryForm").submit();
-					return true;
-				}else{
-					$(".capt").removeClass("error");
-					return true
-				}
-			}
-		}
-	});
+    var emailInput = $('#emailInput').val();
+    var emailDomain = emailInput.split('@')[1];
 
-	$("#letstalk").click(function(){
-		var honeypot_val = $("#honeypot").val();
-		if(honeypot_val == ''){
-			// $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-			$('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-			$("#primaryForm").submit();
-			return true;
-		}else{
-			window.location.reload();
-			return false;
-		}
-	})	
-	
-	$("#first_name").keypress(function(event){
-		var regex = new RegExp("^[a-zA-Z ]*$");
-			console.log(regex);
-		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-		if (!regex.test(key)) {
-		event.preventDefault();
-		return false;
-		}
-	});
+    // Check if the email domain is a personal domain
+    if (personalDomains.includes(emailDomain)) {
+      alert('Please use a corporate email address.');
+      return;
+    }
 
-	$("#last_name").keypress(function(event){
-		var regex = new RegExp("^[a-zA-Z ]*$");
-			console.log(regex);
-		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-		if (!regex.test(key)) {
-		event.preventDefault();
-		return false;
-		}
-	});
+    // Valid corporate or official email domain, proceed with Pardot API submission
+    var formData = new FormData();
+    formData.append('email', emailInput); // Adjust field names as per your Pardot form
 
-	$('#primaryForm input').bind("cut copy paste",function(e) {
-		e.preventDefault();
-	});
-	
+    $.ajax({
+      url: 'http://go.odessainc.com/l/310001/2023-10-10/3s387h9',
+      type: 'POST',
+      data: formData,
+      headers: {
+        'Authorization': 'Bearer YOUR_PARDOT_API_TOKEN_HERE', // Replace with your Pardot API token
+      },
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        alert('Email submitted to Pardot successfully!');
 
-
-
-
-
-
-
-    
-    // Check if the user is already logged in
-    $(".overlay").addClass('one');
+        // You can perform further actions upon successful submission if needed
+      },
+      error: function(xhr, status, error) {
+        console.error('Error submitting to Pardot:', error);
+        alert('Error submitting to Pardot. Please try again later.');
+      }
+    });
+  });
+  $(".overlay").addClass('one');
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (isLoggedIn) {
@@ -552,28 +418,6 @@ $(document).ready(function() {
         }
     });
 });
-
-
-function validateAndSubmit() {
-  const emailInput = document.getElementById('emailInput').value;
-  validateEmail(emailInput)
-    .then(result => {
-      if (result) {
-        // Submit the form or perform further actions
-        alert('Form submitted successfully!');
-        // Add your submission logic here
-      } else {
-        // Handle invalid email
-        alert('Invalid email. Please enter a valid email.');
-      }
-    })
-    .catch(err => {
-      console.error('Validation error:', err);
-      alert('Validation error. Please try again.');
-    });
-}
-
-
 
 
 function validateMyForm() {
@@ -642,40 +486,7 @@ function validateMyForm() {
 
 
     }
-    $(function(){
-	  function rescaleCaptcha(){
-		var width = $('.g-recaptcha').parent().width();
-		var scale;
-		if (width < 302) {
-		  scale = width / 302;
-		} else{
-		  scale = 1; 
-		}
-	
-		$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-		$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-		$('.g-recaptcha').css('transform-origin', '0 0');
-		$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-	  }
-	
-	  rescaleCaptcha();
-	  $( window ).resize(function() { rescaleCaptcha(); });
-	
-	});
-	
-	function isNumberKey(evt){
-		var charCode = (evt.which) ? evt.which : event.keyCode
-		if (charCode > 31 && (charCode < 48 || charCode > 57))
-			return false;
 
-		return true;
-	}
-	</script>
-	<style amp-custom>
-		@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
-	</style>
-	<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
-	<script src="https://www.google.com/recaptcha/api.js"></script>
 
 </script>
 <script type="application/ld+json">
@@ -704,3 +515,7 @@ function validateMyForm() {
     }, 4000);
 
 </script>
+
+</script>
+
+
