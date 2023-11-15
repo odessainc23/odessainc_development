@@ -240,13 +240,23 @@ button {
                         cross-platform workflow.
                         DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
                     <div class="newsletter inlineform">
-                      <form action ="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method ="post" onSubmit="return validateMyForm();" novalidate> 
+                      <!-- <form action ="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method ="post" onSubmit="return validateMyForm();" novalidate> 
                         <div class="input">
                             <input type="email" placeholder="What’s your email?" name="email" id="email1" required class="one-field-pardot-form-handler"/>
                         </div>
                         <div class="inputbtn">
                             <input class="odc__btn odc__btn--primary odc__btn--md" id="pardot_extra_field" type="submit" value="Learn more" />
                         </div>
+                    </form> -->
+                    <form action="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method="post" onSubmit="return validateMyForm();" novalidate>
+
+                        <input class="one-field-pardot-form-handler" maxlength="80" name="email" size="20" type="email" placeholder="Enter Email Address" required="required" />
+                        <div style="position:absolute; left:-9999px; top: -9999px;">
+                          <label for="pardot_extra_field">Comments</label>
+                          <input type="text" id="pardot_extra_field" name="pardot_extra_field">
+                        </div>
+    
+                        <button type="submit" name="submit">Submit</button>
                     </form>
                     </div>
                 </div>
@@ -338,6 +348,37 @@ button {
 <script type="text/javascript">
 $(document).ready(function() {
     // Check if the user is already logged in
+
+    function validateMyForm() {
+                            var sEmail = $('.one-field-pardot-form-handler').val();
+                            if ($.trim(sEmail).length == 0) {
+                                event.preventDefault();
+                                alert('Please enter valid email address.');
+                                return false;
+
+                            }
+
+                            if (validateEmail(sEmail)) {
+
+                            }
+
+                            else {
+                                event.preventDefault();
+                                alert('Invalid Email Address. Please try again.');                          }
+                    };
+
+                    function validateEmail(sEmail) {
+                        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                        if (filter.test(sEmail)) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    } 
+
+
+
     $(".overlay").addClass('one');
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
