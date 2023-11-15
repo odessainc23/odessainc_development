@@ -348,7 +348,7 @@ button {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-  $('#submitBtn').on('click', function() {
+    $('#submitBtn').on('click', function() {
     var personalDomains = ["yahoo.com", "gmail.com", "google.com", "hotmail.com", "me.com", "aol.com", "mac.com", "live.com", "comcast.com", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "verizon.net", "att.net", "gmz.com", "mail.com"]; // Personal domains to restrict
 
     var emailInput = $('#emailInput').val();
@@ -365,7 +365,7 @@ $(document).ready(function() {
     formData.append('email', emailInput); // Adjust field names as per your Pardot form
 
     $.ajax({
-      url: 'http://go.odessainc.com/l/310001/2023-10-10/3s387h9',
+      url: 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd',
       type: 'POST',
       data: formData,
       headers: {
@@ -375,12 +375,13 @@ $(document).ready(function() {
       contentType: false,
       success: function(response) {
         alert('Email submitted to Pardot successfully!');
-
         // You can perform further actions upon successful submission if needed
       },
       error: function(xhr, status, error) {
         console.error('Error submitting to Pardot:', error);
-        alert('Error submitting to Pardot. Please try again later.');
+        console.log('Status:', status);
+        console.log('Response:', xhr.responseText);
+        alert('Error submitting to Pardot. Please check the console for details.');
       }
     });
   });
