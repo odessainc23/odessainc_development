@@ -240,24 +240,11 @@ button {
                         cross-platform workflow.
                         DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
                     <div class="newsletter inlineform">
-                      <!-- <form action ="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method ="post" onSubmit="return validateMyForm();" novalidate> 
-                        <div class="input">
-                            <input type="email" placeholder="What’s your email?" name="email" id="email1" required class="one-field-pardot-form-handler"/>
-                        </div>
-                        <div class="inputbtn">
-                            <input class="odc__btn odc__btn--primary odc__btn--md" id="pardot_extra_field" type="submit" value="Learn more" />
-                        </div>
-                    </form> -->
-                    <form action="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method="post" onSubmit="return validateMyForm();" novalidate>
-
-                        <input class="one-field-pardot-form-handler" maxlength="80" name="email" size="20" type="email" placeholder="Enter Email Address" required="required" />
-                        <div style="position:absolute; left:-9999px; top: -9999px;">
-                          <label for="pardot_extra_field">Comments</label>
-                          <input type="text" id="pardot_extra_field" name="pardot_extra_field">
-                        </div>
-    
-                        <button type="submit" name="submit">Submit</button>
-                    </form>
+                        <form id="pardotForm">
+                            <label for="email">Email:</label>
+                            <input type="email" id="emailInput" name="email">
+                            <button type="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -347,38 +334,55 @@ button {
 <link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
 <script type="text/javascript">
 $(document).ready(function() {
+
+    $('#pardotForm').submit(function(event) {
+        event.preventDefault();
+
+        var email = $('#emailInput').val();
+        var personalDomains = ['gmail.com', 'yahoo.com', 'hotmail.com']; // Add more personal domains if needed
+        
+        // Check if the email is from a personal domain
+        var domain = email.split('@')[1];
+        if ($.inArray(domain, personalDomains) !== -1) {
+            alert("Personal email domain detected. Please use a business email.");
+            // You can add further UI feedback or prevent form submission for personal emails
+        } else {
+            // Proceed with Pardot form submission
+            // Use AJAX to submit the form data to Pardot
+            $.ajax({
+                type: 'POST',
+                url: 'https://go.pardot.com/l/123456/2023-11-15/abcdef', // Replace with your Pardot form endpoint
+                data: $('#pardotForm').serialize(), // Serialize the form data
+                success: function(response) {
+                    // Handle success response from Pardot
+                    console.log('Form submitted to Pardot:', response);
+                    // You can add further actions upon successful submission
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', status, error);
+                    // Handle error scenarios here
+                }
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Check if the user is already logged in
-
-    function validateMyForm() {
-                            var sEmail = $('.one-field-pardot-form-handler').val();
-                            if ($.trim(sEmail).length == 0) {
-                                event.preventDefault();
-                                alert('Please enter valid email address.');
-                                return false;
-
-                            }
-
-                            if (validateEmail(sEmail)) {
-
-                            }
-
-                            else {
-                                event.preventDefault();
-                                alert('Invalid Email Address. Please try again.');                          }
-                    };
-
-                    function validateEmail(sEmail) {
-                        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-                        if (filter.test(sEmail)) {
-                            return true;
-                        }
-                        else {
-                            return false;
-                        }
-                    } 
-
-
-
     $(".overlay").addClass('one');
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
