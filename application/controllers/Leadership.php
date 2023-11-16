@@ -87,7 +87,7 @@ class Leadership extends CI_Controller {
 			
 			array(
 				'name'			=> 'Robert W. Johnson ',
-				'thumbnail'		=> base_url() .'assets/images/leadership/job.png',
+				'thumbnail'		=> base_url() .'assets/images/leadership/bob.png',
 				'title'			=> 'EVP, Auto Finance',
 				'description'	=> 'Bob is Executive Vice President, Auto Finance at Odessa. With a background spanning over 26 years in the Auto Finance industry, he oversees enterprise sales and new business development in the North America Region. He joined Odessa in 2023, bringing in his extensive industry knowledge and expertise in the Auto Finance sector. Prior to his role at Odessa, he held leadership positions at EY, CEDAR CX Technologies, defi SOLUTIONS, Alfa Financial Software FIS, and Fiserv. In his various leadership positions, he led sales, client support, implementations, and practices of global automotive finance and provided insight and guidance on product development. ',
 				'experience'	=> '26 years in auto finance',
