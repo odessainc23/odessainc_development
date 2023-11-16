@@ -1,6 +1,7 @@
 <?php
 	$current_url = $this->router->fetch_class() . '/' . $this->router->fetch_method();
 	$custom_css_list = array( 'leadership/index', 'careers/index', 'platform/index', 'platform/core' );
+	
 ?>
 <!doctype html>
 <html>
@@ -24,7 +25,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta http-equiv="refresh" content="0.1; URL=https://dev.odessainc.com/">
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
 

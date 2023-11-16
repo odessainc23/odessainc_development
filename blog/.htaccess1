@@ -8,7 +8,6 @@
 Redirect /blog/the-time-is-now-madhu-natarajan/ https://www.odessainc.com/blog/the-time-is-now/
 Redirect 301 http://www.odessatechnologies.com/legal/privacy.html https://www.odessainc.com/privacy-policy
 
-
 # Wordfence WAF
 <Files ".user.ini">
 <IfModule mod_authz_core.c>

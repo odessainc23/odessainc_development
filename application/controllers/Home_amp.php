@@ -33,7 +33,7 @@ class Home_amp extends CI_Controller {
 		$data['tc_description']		= 'Odessa has been building technology for the leasing industry since 1998 with its lease administration software. We hope you’ll join us.';
 
 		$this->load->view('layouts/turns22_header', $data);
-		$this->load->view('pages/amp_pages/turns22.amp.html', $data);
+		$this->load->view('pages/amp_pages/home.amp.html', $data);
 		$this->load->view('layouts/footer', $data);
 	}
 

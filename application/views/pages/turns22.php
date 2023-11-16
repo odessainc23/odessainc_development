@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://dev.odessainc.com/">
 <article class="turns22">
 	<section class="section section-hero">
 		<div class="wrap-inner">
