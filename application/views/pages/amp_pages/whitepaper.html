@@ -14,11 +14,25 @@
   margin: 0 0 20px;
 }
 .whitepaper ul {
-  padding: 0 0 0 20px;
+	padding: 0 0 0 30px;
 }
 .whitepaper ul li {
   font-size: 16px;
   color: #555b6d;
+  margin: 0 0 10px 0;
+  position: relative;
+  list-style: none;
+}
+.whitepaper ul li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #0075a2;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 5px;
 }
 .author-title {
   color: #555b6d;
