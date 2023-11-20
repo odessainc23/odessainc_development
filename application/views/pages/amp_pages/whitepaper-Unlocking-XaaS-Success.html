@@ -8,13 +8,16 @@
   margin: 0 0 20px;
 }
 .whitepaper-section {
-  padding: 0px 50px 60px;
+  padding: 20px 0px 0px;
 }
 .whitepaper-section h2 {
   margin: 0 0 20px;
 }
 .whitepaper ul {
-	padding: 0 0 0 30px;
+	padding: 0 0 0 20px;
+}
+.letstalkformSection {
+    padding: 60px 0 60px;
 }
 .whitepaper ul li {
   font-size: 18px;
@@ -22,8 +25,19 @@
   margin: 0 0 10px 0;
   position: relative;
   list-style: none;
+  position: relative;
 }
 .whitepaper ul li:before {
+    position: absolute;
+	content: "";
+    top: 5px;
+    left: 0;
+    width: 22px;
+    height: 20px;
+    background: url(../assets/images/list_icon.png) 0 0/100% 100% no-repeat;
+    display: block;
+}
+/* .whitepaper ul li:before {
     content: "";
     display: inline-block;
     width: 10px;
@@ -33,7 +47,7 @@
     position: absolute;
     left: -20px;
     top: 8px;
-}
+} */
 .author-title {
   color: #555b6d;
   font-size: 16px;
@@ -55,7 +69,7 @@
 }
 .letstalkinfobox p{
 	color: #555b6d;
-	font-size: 18px;
+	font-size: 1.1875rem;
 }
 label[for="honeypot"], #honeypot {
     display: none;
@@ -68,6 +82,21 @@ label[for="honeypot"], #honeypot {
 .social-m a {
   display: block;
   margin-top: 10px;
+}
+.whitepaper .home-hero-cinner {
+    width: 100%;
+}
+.whitepaper .xas-banner{
+	height: 40vh;
+}
+.whitepaper .home-hero-cwrap{
+padding-left: 0;
+}
+.whitepaper .home-hero-ctitle{
+	text-align: center;
+	font-size: 2em;
+    line-height: 1.3em;
+	margin: 0;
 }
 .social-m svg {
   fill: #0f6fc6;
@@ -87,6 +116,7 @@ label[for="honeypot"], #honeypot {
 .letstalkinfobox h2,
 .author-section h2 {
   margin-bottom: 20px;
+  font-size: 22px;
 }
 .xas-banner .home-hero-bg amp-img {
   position: absolute;
@@ -160,16 +190,12 @@ label[for="honeypot"], #honeypot {
 	<!-- <div class="container"> -->
 	<!-- xass banner -->
 	<div class="home-hero xas-banner">
-		<div class="home-hero-bg">
-			<div class="home-hero-bgimg">   
-				<amp-img src="<?php echo base_url(); ?>assets/images/xass/xaas-header-pattern.svg" alt="" class="lazyload" layout="intrinsic" width="1" height="1"></amp-img>
-			</div>
-		</div>
+	
 		<div class="home-hero-content xas-content">
 			<div class="home-hero-cinner">
 				<div class="home-hero-cwrap">
 					<div class="home-hero-ctitlewrap">
-						<h1 class="home-hero-ctitle">Unlocking XaaS Success: <br>Transformative Insights  <br>for Asset Finance</h1>
+						<h1 class="home-hero-ctitle">Get the whitepaper:<br> Unlocking XaaS Success: <br> Transformative Insights for Asset Finance</h1>
 					</div>
 				</div> 
 			</div>
@@ -186,10 +212,17 @@ label[for="honeypot"], #honeypot {
 							<div class="row clearfix">
 								<div class="col-sm-8 col-md-8">
 									<div class="letstalkinfobox">
-										<h2>How This Guide Propels Your Success:</h2>
-										<p>It’s undeniable that subscription-based and pay-per-use models are transforming asset finance businesses into customer-centric. Yet, the challenge lies in not merely understanding these new frontiers but converting them into a viable model for your business. What prerequisites should your organization be aware of? What technological essentials and strategic shifts are critical for a successful XaaS initiative? What should you look for in the ideal XaaS solution for your organization?</p>
-										<p>Backed by industry insights and experiences, this whitepaper serves as a beginner's guide to the transformative journey and aims to help you to build a robust technology stack that ensures your organization's success in the evolving landscape of XaaS. </p>
 										
+										<p>Backed by industry insights and experiences, this whitepaper serves as a beginner's guide to the transformative journey and aims to help you to build a robust technology stack that ensures your organization's success in the evolving landscape of XaaS. </p>
+										<div class="whitepaper-section">
+										<h2 class="">What you’ll learn in this webinar:</h2>
+										<ul>
+											<li>The Top Ten Crucial Technological and Functional Capabilities for a Successful XaaS Implementation.</li>
+												<li>Strategic Guidance from Industry Leaders who've navigated the XaaS landscape.</li>
+											<li>Factors that Distinguish an Ideal XaaS Solution that Meets your Organization's Unique Needs.</li>
+												
+										</ul>
+										</div>
 									</div>
 								</div>
 								<div class="col-sm-4 col-md-4">
@@ -208,7 +241,7 @@ label[for="honeypot"], #honeypot {
 									</div>
 								
 									<div class="form-group">
-										<input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
+										<input class="form-control"  name="email" type="text" id="email" placeholder="Email" required />
 									</div>
 								
 									<div class="capt">
@@ -216,7 +249,7 @@ label[for="honeypot"], #honeypot {
 										</div>
 									
 									<div class="clearfix">
-										<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Submit</button>
+										<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Send Me Whitepaper</button>
 									</div>
 								</form>
 									</div>
@@ -225,16 +258,8 @@ label[for="honeypot"], #honeypot {
 						</div>
 					
 				</section>
-				<section class="whitepaper-section">
-					<h2 class="">What you’ll learn in this webinar:</h2>
-					<ul>
-						<li>The Top Ten Crucial Technological and Functional Capabilities for a Successful XaaS Implementation.</li>
-							<li>Strategic Guidance from Industry Leaders who've navigated the XaaS landscape.</li>
-						<li>Factors that Distinguish an Ideal XaaS Solution that Meets your Organization's Unique Needs.</li>
-							
-					</ul>
-				</section>
-				<section class="author-section">
+			
+				<!-- <section class="author-section">
 					<h2>Authors</h2>
 					<div class="d-flex">
 						<div class="author-sec">
@@ -272,7 +297,7 @@ label[for="honeypot"], #honeypot {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 			</div>
 		</div>
 		<!--Build Page End Here--> 
