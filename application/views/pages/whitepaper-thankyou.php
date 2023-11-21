@@ -42,7 +42,7 @@
 	padding: 0 0 0 20px;
 }
 .letstalkformSection {
-    padding: 60px 0 60px;
+    padding: 60px 0 200px;
 }
 .whitepaper ul li {
   font-size: 17px;
