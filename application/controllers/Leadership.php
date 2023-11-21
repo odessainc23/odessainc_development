@@ -86,10 +86,10 @@ class Leadership extends CI_Controller {
 			),
 			
 			array(
-				'name'			=> 'Robert W. Johnson ',
+				'name'			=> 'W. Johnson ',
 				'thumbnail'		=> base_url() .'assets/images/leadership/bob.png',
 				'title'			=> 'EVP, Auto Finance',
-				'description'	=> 'Bob is Executive Vice President, Auto Finance at Odessa. With a background spanning over 30 years in financial services, he oversees operations of Automotive Finance globally.  He joined Odessa in 2023, bringing in his extensive industry knowledge and expertise in operational strategy and in the development and implementation of software solutions for the Auto, Equipment and Captive Finance sectors. Prior to his role at Odessa, he held leadership positions at EY, CEDAR CX Technologies, defi SOLUTIONS, Alfa Financial Software and FIS. In his various leadership positions, he led sales, client relationship management, implementations, and provided insight and guidance on product development.',
+				'description'	=> 'Bob is Executive Vice President, Auto Finance at Odessa. With a background spanning over 30 years in financial services, he oversees global auto operations.  He joined Odessa in 2023, bringing in his extensive industry knowledge and expertise in operational strategy and in the development and implementation of software solutions for the Auto, Equipment and Captive Finance sectors. Prior to his role at Odessa, he held leadership positions at EY, defi SOLUTIONS, Alfa Financial Software and FIS. In his various leadership positions, he led sales, business development, client relationship management, implementations, and provided insight and guidance on product development.',
 				'experience'	=> '26 years in auto finance',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/robert-w-johnson-5ab31b1/',
@@ -99,8 +99,8 @@ class Leadership extends CI_Controller {
 			array(
 				'name'			=> 'Jeff Lezinski',
 				'thumbnail'		=> base_url() .'assets/images/leadership/jeff-lezinski.jpg',
-				'title'			=> 'SVP, Solution Architecture',
-				'description'	=> 'Jeff is Odessa’s SVP, Solution Architecture, instrumental in architecting Odessa’s functional solutions since he joined the company in 2004. Jeff currently serves on the ELFA Accounting Committee, and serves as a liaison to various industry and regulatory bodies. Prior to Odessa, Jeff worked for PricewaterhouseCoopers, LLP where he participated in and managed various engagements from a consulting and an audit perspective for a variety of industries, including financial services, pharmaceutical, and telecommunications. He holds a Bachelor of Science in Economics from Haverford College.',
+				'title'			=> 'EVP, Product Management',
+				'description'	=> 'Jeff is Odessa’s Executive Vice President, Product Management, instrumental in architecting Odessa’s functional solutions since he joined the company in 2004. Jeff currently serves on the ELFA Accounting Committee, and serves as a liaison to various industry and regulatory bodies. Prior to Odessa, Jeff worked for PricewaterhouseCoopers, LLP where he participated in and managed various engagements from a consulting and an audit perspective for a variety of industries, including financial services, pharmaceutical, and telecommunications. He holds a Bachelor of Science in Economics from Haverford College.',
 				'experience'	=> '19 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/jeffrey-lezinski-7144562a/',
