@@ -2,7 +2,7 @@
 
 <style>
 .whitepaper .letstalkformCon {
-  background: url(../images/lets_talk_form_bg.png) right bottom/500px no-repeat;
+  background: url(../assets/images/lets_talk_form_bg.png) right bottom/600px no-repeat;
 }
 .letstalkinfobox h3 {
   margin: 0 0 20px;
@@ -10,8 +10,32 @@
 .whitepaper-section {
   padding: 20px 0px 0px;
 }
+.download{
+	background: #00acc8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 5px 35px;
+    font-size: 17px;
+    color: #fff;
+}
+.download:before{
+	width: 20px;
+    height: 20px;
+    border-top: solid 20px #00acc8;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 50px;
+}
 .whitepaper-section h2 {
   margin: 0 0 20px;
+}
+.letstalkform{
+	position:relative
 }
 .whitepaper ul {
 	padding: 0 0 0 20px;
@@ -20,12 +44,15 @@
     padding: 60px 0 60px;
 }
 .whitepaper ul li {
-  font-size: 18px;
+  font-size: 17px;
   color: #555b6d;
   margin: 0 0 10px 0;
   position: relative;
   list-style: none;
   position: relative;
+}
+.whitepaper .odc__btn{
+	min-width: 100%;
 }
 .whitepaper ul li:before {
     position: absolute;
@@ -69,7 +96,7 @@
 }
 .letstalkinfobox p{
 	color: #555b6d;
-	font-size: 1.1875rem;
+	font-size: 17px;
 }
 label[for="honeypot"], #honeypot {
     display: none;
@@ -87,14 +114,14 @@ label[for="honeypot"], #honeypot {
     width: 100%;
 }
 .whitepaper .xas-banner{
-	height: 40vh;
+	height: 35vh;
 }
 .whitepaper .home-hero-cwrap{
 padding-left: 0;
 }
 .whitepaper .home-hero-ctitle{
 	text-align: center;
-	font-size: 2em;
+	font-size: 42px;
     line-height: 1.3em;
 	margin: 0;
 }
@@ -195,7 +222,7 @@ padding-left: 0;
 			<div class="home-hero-cinner">
 				<div class="home-hero-cwrap">
 					<div class="home-hero-ctitlewrap">
-						<h1 class="home-hero-ctitle">Get the whitepaper:<br> Unlocking XaaS Success: <br> Transformative Insights for Asset Finance</h1>
+						<h1 class="home-hero-ctitle">Download the Whitepaper:<br> Unlock XaaS Success with Transformative <br> Insights for Asset Finance</h1>
 					</div>
 				</div> 
 			</div>
@@ -210,25 +237,28 @@ padding-left: 0;
 				<section class="letstalkformSection">
 						<div class="letstalkformCon">
 							<div class="row clearfix">
-								<div class="col-sm-8 col-md-8">
+								<div class="col-sm-7 col-md-7">
 									<div class="letstalkinfobox">
 										
-										<p>Backed by industry insights and experiences, this whitepaper serves as a beginner's guide to the transformative journey and aims to help you to build a robust technology stack that ensures your organization's success in the evolving landscape of XaaS. </p>
+										<p>This whitepaper, supported by insights from industry practitioners and early adopters, serves as a beginner's guide to your XaaS journey. It aims to assist you in building a robust technology stack that ensures your organization's success in the evolving landscape of XaaS.</p>
 										<div class="whitepaper-section">
 										<h2 class="">What you’ll learn in this webinar:</h2>
 										<ul>
-											<li>The Top Ten Crucial Technological and Functional Capabilities for a Successful XaaS Implementation.</li>
-												<li>Strategic Guidance from Industry Leaders who've navigated the XaaS landscape.</li>
-											<li>Factors that Distinguish an Ideal XaaS Solution that Meets your Organization's Unique Needs.</li>
+											<li>The top ten crucial technological and functional capabilities for a successful XaaS implementation. </li>
+												<li>Strategic guidance from industry leaders who've navigated the XaaS landscape.</li>
+											<li>Factors that distinguish an ideal XaaS solution that meets your organization's unique needs.</li>
 												
 										</ul>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4 col-md-4">
+								<div class="col-sm-5 col-md-5">
 									<div class="letstalkform">
 										<!--<iframe src="http://go.pardot.com/l/310001/2020-07-23/t159xm" width="100%" height="705" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>-->
 										<!-- <form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post"> -->
+											<div class="download">
+												Request Whitepaper
+											</div>
 									<form id = "primaryForm" method="post" autocomplete="off">
 								
 									<label for="honeypot">Honeypot </label>
@@ -251,7 +281,11 @@ padding-left: 0;
 									<div class="clearfix">
 										<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Send Me Whitepaper</button>
 									</div>
-								</form>
+									</form>
+									<div class="thank-u" style="display: none;">
+										<h3> Thank you for your interest  in Odessa!</h3>
+										<h3>Someone will be touch shortly.</h3>
+									</div>
 									</div>
 								</div>
 							</div>
@@ -298,6 +332,7 @@ padding-left: 0;
 						</div>
 					</div>
 				</section> -->
+			
 			</div>
 		</div>
 		<!--Build Page End Here--> 
@@ -359,24 +394,7 @@ $("#primaryForm").validate({
 			required: true,
 			myusername: true,
 		},
-		phone: {
-			required: true,
-			minlength:6,
-			maxlength:15,
-			mobile:true
-			},
-		"job-title": {
-			required: true
-			},
-		company: {
-			required: true
-		},
-		"software-used": {
-			required: true
-		},
-		country: {
-			required: true
-		}
+		
 	},
 		messages: {
 		"first-name": {
@@ -390,23 +408,7 @@ $("#primaryForm").validate({
 		email: {
 			required: "",
 			},
-		phone: {
-			required: "",
-			minlength:"",
-			maxlength:""
-			},
-		"job-title": {
-			required: ""
-		},
-		company: {
-			required: ""
-		},
-		"software-used": {
-			required: "",
-		},
-		country: {
-			required: "",
-		}
+		
 		},
 		submitHandler: function (form) {
 		
@@ -435,7 +437,7 @@ $("#letstalk").click(function(){
 	var honeypot_val = $("#honeypot").val();
 	if(honeypot_val == ''){
 		// $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-		$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+		$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-11-21/3s3fv8w');
 		$("#primaryForm").submit();
 		return true;
 	}else{
