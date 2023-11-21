@@ -305,6 +305,7 @@ padding-left: 0;
 						</div>
 					</div>
 				</section> -->
+			
 			</div>
 		</div>
 		<!--Build Page End Here--> 
@@ -366,24 +367,7 @@ $("#primaryForm").validate({
 			required: true,
 			myusername: true,
 		},
-		phone: {
-			required: true,
-			minlength:6,
-			maxlength:15,
-			mobile:true
-			},
-		"job-title": {
-			required: true
-			},
-		company: {
-			required: true
-		},
-		"software-used": {
-			required: true
-		},
-		country: {
-			required: true
-		}
+		
 	},
 		messages: {
 		"first-name": {
@@ -397,23 +381,7 @@ $("#primaryForm").validate({
 		email: {
 			required: "",
 			},
-		phone: {
-			required: "",
-			minlength:"",
-			maxlength:""
-			},
-		"job-title": {
-			required: ""
-		},
-		company: {
-			required: ""
-		},
-		"software-used": {
-			required: "",
-		},
-		country: {
-			required: "",
-		}
+		
 		},
 		submitHandler: function (form) {
 		
@@ -442,7 +410,7 @@ $("#letstalk").click(function(){
 	var honeypot_val = $("#honeypot").val();
 	if(honeypot_val == ''){
 		// $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-		$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+		$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-11-21/3s3fv8w');
 		$("#primaryForm").submit();
 		return true;
 	}else{
