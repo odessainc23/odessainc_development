@@ -13,7 +13,7 @@ class Whitepaper_amp extends CI_Controller {
 		$data['tc_description']		= '';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/whitepaper-Unlocking-XaaS-Success.html', $data);
+		$this->load->view('pages/amp_pages/unlocking-xaas-success-signup.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
