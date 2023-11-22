@@ -86,12 +86,21 @@ class Leadership extends CI_Controller {
 
 				)
 			),
-			
+			array(
+				'name'			=> 'W. Johnson ',
+				'thumbnail'		=> base_url() .'assets/images/leadership/bob.png',
+				'title'			=> 'EVP, Auto Finance',
+				'description'	=> 'Bob is Executive Vice President, Auto Finance at Odessa. With a background spanning over 30 years in financial services, he oversees global auto operations.  He joined Odessa in 2023, bringing in his extensive industry knowledge and expertise in operational strategy and in the development and implementation of software solutions for the Auto, Equipment and Captive Finance sectors. Prior to his role at Odessa, he held leadership positions at EY, defi SOLUTIONS, Alfa Financial Software and FIS. In his various leadership positions, he led sales, business development, client relationship management, implementations, and provided insight and guidance on product development.',
+				'experience'	=> '26 years in auto finance',
+				'social'		=> array(
+					'linkedin'	=> 'https://www.linkedin.com/in/robert-w-johnson-5ab31b1/',
+				)
+			),
 			array(
 				'name'			=> 'Jeff Lezinski',
 				'thumbnail'		=> base_url() .'assets/images/leadership/jeff-lezinski.jpg',
-				'title'			=> 'SVP, Solution Architecture',
-				'description'	=> 'Jeff is Odessa’s SVP, Solution Architecture, instrumental in architecting Odessa’s functional solutions since he joined the company in 2004. Jeff currently serves on the ELFA Accounting Committee, and serves as a liaison to various industry and regulatory bodies. Prior to Odessa, Jeff worked for PricewaterhouseCoopers, LLP where he participated in and managed various engagements from a consulting and an audit perspective for a variety of industries, including financial services, pharmaceutical, and telecommunications. He holds a Bachelor of Science in Economics from Haverford College.',
+				'title'			=> 'EVP, Product Management',
+				'description'	=> 'As Odessa’s EVP, Product Management, Jeff is responsible for the overall strategy and vision of the Odessa Platform.  Since joining the organization in 2004, Jeff has performed in a variety of roles across Odessa, including delivery consulting and Presales.   He currently serves on the ELFA Finance & Accounting Committee,  and acts as a liaison to various industry and regulatory bodies.   He also plays a leadership role on the Customer Advisory Board at Odessa.  Prior to Odessa, Jeff worked for PricewaterhouseCoopers, LLP where he participated in and managed various engagements from a consulting and an audit perspective for a variety of industries, including financial services, pharmaceutical, and telecommunications. He holds a Bachelor of Science in Economics from Haverford College.',
 				'experience'	=> '19 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/jeffrey-lezinski-7144562a/',
