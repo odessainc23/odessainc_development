@@ -299,7 +299,7 @@ padding-left: 0;
 									<div class="letstalkform">
 									
 									<div class="thank-u">
-										<h3> Thank you for interest . We will send the whitepaper to the email shared by you. </h3>
+										<h3>Thank you for your interest! The whitepaper will be sent to the email you provided. </h3>
 										<h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3>
 									</div>
 									</div>
