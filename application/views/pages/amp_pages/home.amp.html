@@ -2,6 +2,70 @@
     .platformsectionwrap .dotsdesign img {
         width: 300px;
     }
+    .overlay{
+        position: fixed;
+        width: 100%;
+        background-color: #263746;
+        width: 100%;
+        height:100vh;
+        z-index: 21474830001;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: column;
+        opacity: 0;
+    }
+    input, button{
+        margin:0;
+    }
+    .overlay.one{
+        opacity: 1;
+    }
+    .overlay img{
+        margin: 50px auto 0px auto;
+    }
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 40%;
+        display: block;
+        margin: 30px auto;      
+        z-index: 9999999;
+}
+
+input, button {
+    margin: 0 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.letstalkform .form-control.red{
+    border: 2px solid #962424;  
+}
+#footer{
+    position: relative;
+    height: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+@media only screen and (min-width:340px) and (max-width:767px){
+    .login-container{
+        width:80%
+    }
+}
 </style>
 <div id="wrapper home-side">
     <div class="">
@@ -179,14 +243,14 @@
                         cross-platform workflow.
                         DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
                     <div class="newsletter inlineform">
-                        <form action ="http://go.odessainc.com/l/310001/2023-10-10/3s387h9" method ="post" onSubmit="return validateMyForm();" novalidate> 
-                        <div class="input">
-                            <input type="email" placeholder="What’s your email?" name="email" id="email1" required />
-                        </div>
-                        <div class="inputbtn">
-                            <input class="odc__btn odc__btn--primary odc__btn--md" type="submit" value="Learn more" />
-                        </div>
-                        		</form>
+                        <form id="learnMoreForm" method="post">
+                            <div class="input">
+                                <input type="email" placeholder="What’s your email?" name="email" id="emailInput"  class="one-field-pardot-form-handler"/>
+                            </div>
+                            <div class="inputbtn">
+                                <button id="submitBtn" class="odc__btn odc__btn--primary odc__btn--md">Learn More</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -274,8 +338,72 @@
 
 </div>
 <link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
-<script type="text/javascript">
 
+<script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
+<script>
+
+$(document).ready(function() {
+
+    $("#learnMoreForm").validate({
+        rules: {
+            "email":{
+                required: true
+            }
+        },
+        messages: {
+			"email": {
+				required: "Please enter email address.",
+			}, 
+        },
+        submitHandler: function (form) {
+            var emailInputData = $('#emailInput').val();
+            var emailDomain = emailInputData.split('@')[1];
+            var personalDomains = ["yahoo.com", "gmail.com", "google.com", "hotmail.com", "me.com", "aol.com", "mac.com", "live.com", "comcast.com", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "verizon.net", "att.net", "gmz.com", "mail.com"];
+            if (personalDomains.includes(emailDomain)) {
+                alert('Please use a corporate email address.');
+            }else {
+                $('#learnMoreForm').attr('action', 'http://go.odessainc.com/l/310001/2023-10-10/3s387h9');
+                $("#learnMoreForm").submit();
+				return true;
+            }
+        }
+    });
+
+  $(".overlay").addClass('one');
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn) {
+        // Hide the login form and display the welcome message
+        $("#welcomeMessage").show();
+        $(".overlay").hide();
+        $("#loginContainer").hide();
+        //$(".overlay").hide();
+    }
+
+    $("#loginForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const username = $("#username").val();
+        const password = $("#password").val();
+
+        // Check if the username and password match the expected values
+        if (username === "odessauser" && password === "password") {
+            alert("Access granted.");
+            $(".overlay").hide();
+            $("#loginContainer").hide();
+
+            // Store the login state in local storage
+            localStorage.setItem("isLoggedIn", true);
+
+            // Reload the page to show the welcome message without the login form
+            location.reload();
+        } else {
+            alert("Please enter correct username and password.");
+            $(".form-control").addClass('red');
+        }
+    });
+});
+                                                 
 
     String.prototype.escape = function () {
         var tagsToReplace = {
@@ -344,3 +472,6 @@
     }, 4000);
 
 </script>
+
+</script>
+
