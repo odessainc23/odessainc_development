@@ -2,7 +2,7 @@
 
 <style>
 .whitepaper .letstalkformCon {
-  background: url(../assets/images/lets_talk_form_bg.png) right bottom/600px no-repeat;
+  background: none;
 }
 .letstalkinfobox h3 {
   margin: 0 0 20px;
@@ -36,7 +36,8 @@
   margin: 0 0 20px;
 }
 .letstalkform{
-	position:relative
+	position:relative;
+  padding: 80px 40px;
 }
 .whitepaper ul {
 	padding: 0 0 0 20px;
@@ -65,17 +66,7 @@
     background: url(../assets/images/list_icon.png) 0 0/100% 100% no-repeat;
     display: block;
 }
-/* .whitepaper ul li:before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: #0075a2;
-    border-radius: 50%;
-    position: absolute;
-    left: -20px;
-    top: 8px;
-} */
+
 .author-title {
   color: #555b6d;
   font-size: 16px;
@@ -145,7 +136,7 @@ padding-left: 0;
   margin-top: 0;
 }
 .thank-u h3{
-    line-height:1.4
+    line-height:2
 }
 .letstalkinfobox h2,
 .author-section h2 {
@@ -300,7 +291,7 @@ padding-left: 0;
 									
 									<div class="thank-u">
 										<h3>Thank you for your interest! The whitepaper will be sent to the email you provided. </h3>
-										<h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3>
+										<!-- <h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3> -->
 									</div>
 									</div>
 								</div>
