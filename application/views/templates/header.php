@@ -108,6 +108,25 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<!--Header Start Here-->
 	<nav class="navbar navbar-default navbar-fixed-top">
+	
+        <div class="t-alert-covid bg-alert">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="covid-alert">
+                            <div class="alert  alert-dismissible fade in ">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <p class="covid-alert__para text-center">
+                                    Top 10 must haves for Xaas Success in Auto Finance - <a href="<?php echo base_url(); ?>whitepaper/unlocking-xaas-transformative-insights-asset-finance" class="covid-alert__link alert-link">Download the whitepaper now!</a> 
+                                                                <!-- <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a> -->
+                                                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
 		<div class="container">
 			<div class="navbar_wrapper"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
 				<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
