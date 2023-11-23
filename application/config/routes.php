@@ -74,6 +74,7 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 $route['turns22'] = 'home/turns22';
 $route['automotive-finance-software'] = 'Automotive_amp';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
+$route['whitepaper/unlocking-xaas-transformative-insights-asset-finance'] = 'Whitepaper';
 $route['whitepaper/thankyou'] = 'Thankyou_whitepaper';
 $route['odessa-modern-slavery-act-statement'] = 'Modern_amp';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
