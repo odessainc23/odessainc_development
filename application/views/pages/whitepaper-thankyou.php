@@ -1,6 +1,10 @@
 <link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
 
 <style>
+
+#wrapper.whitepaper{
+	margin-top: 0;
+}
 .whitepaper .letstalkformCon {
   background: none;
 }
@@ -113,12 +117,15 @@ padding-left: 0;
 }
 .whitepaper .home-hero-ctitle{
 	text-align: center;
-	font-size: 40px;
+	font-size:38px;
     line-height: 1.3em;
 	margin: 0;
 }
+.letstalkformSection {
+    padding: 40px 0 200px;
+}
 .whitepaper .home-hero-ctitle span{
-	font-size: 42px;
+	font-size: 40px;
 }
 .social-m svg {
   fill: #0f6fc6;
@@ -247,6 +254,7 @@ padding-left: 0;
 
 </style>
 
+
 <div id="wrapper" class="whitepaper">
 	<!-- <div class="container"> -->
 	<!-- xass banner -->
@@ -290,7 +298,7 @@ padding-left: 0;
 									<div class="letstalkform">
 									
 									<div class="thank-u">
-										<h3>Thank you for your interest! The whitepaper will be sent to the email you provided. </h3>
+										<h3>Thank you for your interest! The whitepaper has been sent to your email. </h3>
 										<!-- <h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3> -->
 									</div>
 									</div>
