@@ -31,6 +31,8 @@ require_once( get_template_directory() . "/includes/meta.php" );        	// Cust
 require_once( get_template_directory() . "/includes/landing-page.php" );	// Landing Page outputs
 
 // FIN
+
+
 // Custom hook for add description backend start 
 add_action( 'cmb2_admin_init', 'yourprefix_register_repeatable_group_field_metabox' );
 /**
@@ -86,4 +88,79 @@ function yourprefix_register_repeatable_group_field_metabox() {
 
 // Custom hook for add description backend end 
 
-  
+// function add_meta_tags() {
+// 	global $post;
+	
+// 	$meta = strip_tags( $post->post_content );
+// 	$meta = strip_shortcodes( $post->post_content );
+// 	$meta = str_replace( array("\n", "\r", "\t"), ' ', $meta );
+// 	$meta = substr( $meta, 0, 300 );
+// 	$keywords = get_the_category( $post->ID );
+// 	$metakeywords = '';
+// 	foreach ( $keywords as $keyword ) {
+// 	$metakeywords .= $keyword->cat_name . ", ";
+// 	}
+// 	$metaDescTag ="Discover industry insights, thought leadership, and the latest in enterprise technology. Dive into our informative blogs by industry experts, practioneers, and adopters, for in-depth knowledge about market, technology trends, and the latest in the asset finance."; 
+// 	echo '
+// 	<meta name="description" content="' . $metaDescTag . '" />' . "\n";
+	
+// 	}
+// 	add_action( 'wp_head', 'add_meta_tags' , 2 );
+
+
+// Rest API Route - PR by Year
+if ( !function_exists( 'odc_api_route_press_releases_by_year' ) ):
+	function odc_api_route_press_releases_by_year( $query ) {
+		register_rest_route( 'odc/v2', '/pr_by_year', array(
+			'methods' => 'GET',
+			'callback' => 'get_press_releases_by_year',
+		) );
+	}
+
+add_action( 'rest_api_init', 'odc_api_route_press_releases_by_year' );
+endif;
+
+if ( !function_exists( 'get_press_releases_by_year' ) ):
+	function get_press_releases_by_year() {
+		$args = array(
+			'post_type'			=> 'pr_individual',
+			'post_status'		=> 'publish',
+			'order'				=> 'ASC',
+			'posts_per_page'	=> '-1'
+		);
+
+		$group = array();
+
+		if ( $posts = get_posts( $args ) ) {
+			foreach ( $posts as $post ) {
+				$category_detail = get_the_category( $post->ID );
+				$cat = array();
+
+				foreach ( $category_detail as $cd ) {
+					$cat[] = $cd->cat_name;
+				}
+
+				$imagesrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false );
+				$year = get_the_date( 'Y', $post->ID );
+				if ( !isset( $group[ $year ] ) )$group[ $year ] = array();
+				$posttime = get_the_date( 'F j, Y', $post->ID );
+				$featured_img_url = $imagesrc[ 0 ];
+				$item = array(
+					'al_anon_id'		=> $post->ID,
+					'date'				=> $posttime,
+					'title'				=> $post->post_title,
+					'link'				=> get_post_permalink( $post->ID ),
+					'category'			=> $cat,
+					'author'			=> get_the_author_meta( 'display_name', $post->post_author ),
+					'content'			=> str_replace( "&nbsp;", " ", strip_tags( apply_filters( 'the_content', $post->post_content ) ) ),
+					'timezone'			=> get_option( 'timezone_string' ),
+					'image'				=> $featured_img_url,
+					'short_description' => get_field( 'pr_short_description', $post->ID )
+				);
+
+				array_push($group[ $year ], $item);
+			}
+		}
+		return $group;
+	}
+endif;
