@@ -3,7 +3,7 @@
 <style>
 
 #wrapper.whitepaper{
-	margin-top: 0;
+	margin-top: 120px;
 }
 .whitepaper .letstalkformCon {
   background: none;
