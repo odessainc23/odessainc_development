@@ -17,7 +17,7 @@ class Thankyou_whitepaper extends CI_Controller {
 		);
 
 		$this->load->view( 'templates/header', $data );
-		$this->load->view( 'pages/whitepaper-thankyou',$data );
+		$this->load->view( 'pages/unlocking-xaas-thankyou',$data );
 		$this->load->view( 'templates/footer' );
 	}
 

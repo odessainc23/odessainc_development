@@ -2,8 +2,11 @@
 
 <style>
 
-#wrapper.whitepaper{
-	margin-top: 120px;
+/* #wrapper.whitepaper{
+	margin-top: 0px;
+} */
+#bodyId .t-alert-covid{
+  display:none
 }
 .whitepaper .letstalkformCon {
   background: none;
@@ -111,13 +114,14 @@ label[for="honeypot"], #honeypot {
 }
 .whitepaper .xas-banner{
 	height: 35vh;
+  background: linear-gradient(to right,#41d5e0,#4f97ff);
 }
 .whitepaper .home-hero-cwrap{
 padding-left: 0;
 }
 .whitepaper .home-hero-ctitle{
 	text-align: center;
-	font-size:38px;
+	font-size:36px;
     line-height: 1.3em;
 	margin: 0;
 }
@@ -125,7 +129,7 @@ padding-left: 0;
     padding: 40px 0 200px;
 }
 .whitepaper .home-hero-ctitle span{
-	font-size: 40px;
+	font-size: 38px;
 }
 .social-m svg {
   fill: #0f6fc6;
@@ -253,7 +257,9 @@ padding-left: 0;
 }
 
 </style>
-
+<script>
+  document.body.setAttribute('id', 'bodyId');
+  </script>
 
 <div id="wrapper" class="whitepaper">
 	<!-- <div class="container"> -->
