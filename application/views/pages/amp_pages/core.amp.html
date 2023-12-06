@@ -14,7 +14,11 @@
 		<div class="modal-content">
 			<button type="button" class="close closebox" data-dismiss="modal">×</button>
 			<div class="modal-body">
-				<div class="companypg"></div>
+				<div class="companypg">
+					<video class="popuptext" id="myPopup" style="width:800px;">
+						<source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">
+						</video>
+				</div>
 			</div>
 		</div>
 	</div>  
@@ -267,7 +271,27 @@
 }
 </script>
 <script>
-	$(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),$(function(){$("#companyvideoplay").on("show.bs.modal",function(){$("#companyvideoplay .modal-body .companypg").html('<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pbd8tgqbre videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>')}),$("#companyvideoplay").on("hidden.bs.modal",function(){$("#companyvideoplay .modal-body .companypg").empty()})});
+	$(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),
+	$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),
+	$(function() {
+    $("#companyvideoplay").on("show.bs.modal", function() {
+        var videoPlayerHtml = '<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">' +
+            '<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">' +
+            '<div class="wistia_embed wistia_async_pbd8tgqbre videoFoam=true" style="height:100%;position:relative;width:100%;">' +
+            '<video class="popuptext" id="myPopup" style="width:100%;height:100%;" autoplay muted loop playsinline preload="metadata">' +
+            '<source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">' +
+            '</video></div></div></div>';
+
+        $("#companyvideoplay .modal-body .companypg").html(videoPlayerHtml);
+		// videoPlayerHtml.play(true);
+    });
+
+
+    $("#companyvideoplay").on("hidden.bs.modal", function() {
+        $("#companyvideoplay .modal-body .companypg").empty();
+    });
+});
+
 </script>
 <!-- <script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script> -->
