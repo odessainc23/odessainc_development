@@ -106,17 +106,17 @@ class Leadership extends CI_Controller {
 					'linkedin'	=> 'https://www.linkedin.com/in/jeffrey-lezinski-7144562a/',
 				)
 			),
-			array(
-				'name'			=> 'Andrew Baird',
-				'thumbnail'		=> base_url() .'assets/images/leadership/andrew.jpg',
-				'title'			=> 'SVP, NA Sales & XaaS',
-				'description'	=> 'Andrew is SVP of North American Sales & XaaS at Odessa, responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
-				'experience'	=> '15 Years in Leasing',
-				'social'		=> array(
-					'linkedin'	=> 'https://www.linkedin.com/in/andrew-b-30300613/',
+			// array(
+			// 	'name'			=> 'Andrew Baird',
+			// 	'thumbnail'		=> base_url() .'assets/images/leadership/andrew.jpg',
+			// 	'title'			=> 'SVP, NA Sales & XaaS',
+			// 	'description'	=> 'Andrew is SVP of North American Sales & XaaS at Odessa, responsible for new customer prospecting, sales strategy and execution, contract negotiation, and go-to-market activities. In addition to his sales leadership role, Andrew oversees Odessa’s business development efforts for its subscription and XaaS solution. He has 15+ years of experience encompassing go-to-market planning, pricing, negotiation, enterprise sale execution, and delivery of diverse software systems and consulting services. Prior to Odessa, Andrew served as VP, Head of Sales in North America for numerous FIS businesses including Automotive & Equipment Finance, Commercial Lending, Cross Asset Trading & Risk, and Banking Risk, Performance, & Compliance.',
+			// 	'experience'	=> '15 Years in Leasing',
+			// 	'social'		=> array(
+			// 		'linkedin'	=> 'https://www.linkedin.com/in/andrew-b-30300613/',
 
-				)
-			),
+			// 	)
+			// ),
 			
 			array(
 				'name'			=> 'Campbell Clout',
