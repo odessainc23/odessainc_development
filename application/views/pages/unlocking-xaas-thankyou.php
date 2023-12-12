@@ -289,7 +289,7 @@ padding-left: 0;
 								<div class="col-sm-7 col-md-7">
 									<div class="letstalkinfobox">
 										
-                  <p>This whitepaper is a practical guide to your XaaS (subscription-based services) journey, drawing on insights from industry practitioners and early adopters.</p>
+                  <p>This whitepaper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.</p>
 										<div class="whitepaper-section">
 										<h2 class="">Key Takeaways:</h2>
 										<ul>
