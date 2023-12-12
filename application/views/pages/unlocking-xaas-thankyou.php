@@ -147,7 +147,8 @@ padding-left: 0;
   margin-top: 0;
 }
 .thank-u h3{
-    line-height:2
+    line-height:1.5;
+    font-size:20px
 }
 .letstalkinfobox h2,
 .author-section h2 {
@@ -288,7 +289,7 @@ padding-left: 0;
 								<div class="col-sm-7 col-md-7">
 									<div class="letstalkinfobox">
 										
-										<p>This whitepaper is a beginner's guide to your XaaS journey, drawing on insights from industry practitioners and early adopters.</p>
+                  <p>This whitepaper is a practical guide to your XaaS (subscription-based services) journey, drawing on insights from industry practitioners and early adopters.</p>
 										<div class="whitepaper-section">
 										<h2 class="">Key Takeaways:</h2>
 										<ul>
@@ -304,7 +305,7 @@ padding-left: 0;
 									<div class="letstalkform">
 									
 									<div class="thank-u">
-										<h3>Thank you for your interest! The whitepaper has been sent to your email. </h3>
+										<h3>Thank you for your interest. The whitepaper has been sent to your email. </h3>
 										<!-- <h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3> -->
 									</div>
 									</div>
