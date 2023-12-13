@@ -383,16 +383,19 @@
  
  </style>
 <script type="text/javascript">
- $(document).ready(function() {
+$(document).ready(function() {
+    $("#myPopup").get(0).pause();
   $('.play-btn').click(function() {
     $('.video-popup').fadeIn();
+    $("#myPopup").get(0).play();
   });
 
   $('.close').click(function() {
     $('.video-popup').fadeOut();
     $('#myPopup').stop();
+    $("#myPopup").get(0).pause();
   });
-});
+
  
 	String.prototype.escape = function() {
 		var tagsToReplace = {
