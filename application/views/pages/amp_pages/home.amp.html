@@ -1,4 +1,76 @@
 <style>
+   .testimonial {
+  position: relative;
+  margin: 3em 0 0;
+    height: 100%;
+}
+.home-hero-bgimg {
+    width: 40%;
+    transform: translateX(150%) translateZ(0);
+}
+.home-hero-ctitle {
+    line-height: 1;
+    font-size: 3rem;
+}
+.home-hero-cdesc {
+    font-size: 16px;
+}
+.home-hero-cwrap{
+    padding-top: 120px;
+}
+.testimonial-content {
+  padding-bottom: 20px;
+    width: calc(50% - 150px);
+    margin-left: 150px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.play-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.video-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+}
+.video-popup .close{
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.8;
+}
+.video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+
     .platformsectionwrap .dotsdesign img {
         width: 300px;
     }
@@ -15,6 +87,153 @@
         flex-flow: column;
         opacity: 0;
     }
+    
+    .d-flex{
+        display: flex;
+    }
+    .video {
+  position: relative;
+  width: 50%;
+}
+.video-con{
+    width: 50%; 
+    font-size: 42px;
+    margin-left: 150px;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.video-con h2{
+    font-size: 32px;
+}
+.video-con span{
+    display: inline;
+}
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+.video img{
+    position: absolute;
+    width: 150px;
+
+}
+
+.videoWrapper169 {
+    padding-top: 56.25%;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: 243px;
+    margin-top: 100px;
+}
+.watch{
+    background: #FF495C;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    width: max-content;
+    margin: 20px 0 0;
+}
+.videoPoster:after{
+    background: none;
+}
+.videoPoster:after{
+    display: none;
+}
+.videoIframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.videoWrapperActive .videoPoster {
+  opacity: 0;
+  height: 0;
+  transition-delay: 0s, 0.8s;
+}
+
+.videoPoster {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 350px;
+    height: 350px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-size: cover;
+  text-indent: -999em;
+  overflow: hidden;
+  opacity: 0.9;
+  transition: opacity 0.8s ease, height 0s ease;
+  transition-delay: 0s, 0s;
+  background-size: cover;
+    border-radius: 50%;
+
+}
+
+.videoPoster:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: -25px 0 0 -14px;
+  border-left: 40px solid rgba(255, 255, 255, 0.75);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  box-shadow: 0 0 5px 0 transparent;
+}
+
+.home-video-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  display: block;
+  line-height: 0;
+  display: inline-block;
+  padding: 20px 10px;
+  font-size: 3em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 0.15s all;
+}
+.video-con span{
+   color:#00ACC8
+}
+.video-con{
+    font-size: 42px;
+}
+.home-video-close.is-hidden {
+  display: block;
+  transform: translateY(0);
+}
+
+#js-pointer-detector {
+  display: none;
+}
     input, button{
         margin:0;
     }
@@ -61,11 +280,69 @@ button {
     font-size: 0.75rem;
     color: #fff;
 }
+@media only screen and (max-width:1200px){
+    .home-hero-ctitle{
+        font-size: 2rem;
+    }
+    .video-con{
+        margin-left: 100px;
+    }
+    .testimonial-content,.videoPoster{
+        width: 300px;height: 300px;
+    }
+    #myPopup{
+        height: 100%;
+    width: 100%;
+    }
+}
 @media only screen and (min-width:340px) and (max-width:767px){
     .login-container{
         width:80%
     }
+    .home-hero-bgimg {
+    width: 100%;
+    transform: translateX(0) translateZ(0);
 }
+    .video {
+    width: 100%;
+}
+.video img{
+    width: 80px;
+}
+.d-flex{
+    flex-wrap: wrap;
+}
+.testimonial-content{
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.videoPoster{
+    width: 200px;
+    height: 200px;
+}
+.video-con{
+    width: 100%;text-align: center;margin:30px auto;
+}
+.watch{
+    margin: 20px auto 0 auto;
+}
+.video-container{
+    width: 90%;
+}
+.video-con h2 {
+    font-size: 25px;
+}
+.video-container iframe{
+    width: 100%;
+}
+.testimonial{
+    margin:6em 0 0;
+}
+}
+
+
 </style>
 
 <div id="wrapper home-side">
@@ -74,7 +351,7 @@ button {
             <div class="home-hero-bg">
                 <div class="home-hero-bggrad"></div>
                 <div class="home-hero-bgimg">
-                    <amp-img src="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" alt="Odessa-company"
+                    <amp-img src="<?php echo base_url(); ?>assets/images/awards/odessa-partner-banner-bkmenu.webp" alt="Odessa-company"
                         class="lazyload" width="1" height="1" layout="responsive"></amp-img>
                 </div>
             </div>
@@ -93,6 +370,41 @@ button {
                 </div>
             </div>
         </div>
+        <div class="testimonial">
+            <div class="container">
+                <div class="video">
+                    <img src="<?php echo base_url(); ?>assets/images/o-circle.png">
+                    </div>
+            <div class="d-flex">
+                
+            <div class="testimonial-content">
+               
+              <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/video.png');">Play Video</button>
+            </div>
+            
+            <div class="video-con">
+                <h2>Creating <span>Global Dominance</span>: Johnson Capital's Journey with Odessa</h2>
+                <a href="" class="watch">Watch Now</a>
+            </div>
+           
+          </div>
+          <div class="video-popup">
+            <div class="video-container">
+                <!-- <button id="playVideo">Play Video</button> -->
+                <div class="popup">
+                  <span class="close">&times;</span>
+                  <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
+                    <source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">
+                    <!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
+                  </video>
+                </div>
+            </div>
+          </div>
+          </div></div>
+          
+          
+
+      
 
         <!--Platform Solution Section Start-->
         <div style="clear:both"></div>
@@ -344,6 +656,26 @@ button {
 <script>
 
 $(document).ready(function() {
+  $('.play-btn').click(function() {
+    $('.video-popup').fadeIn();
+  });
+
+  $('.close').click(function() {
+    $('.video-popup').fadeOut();
+    $('#myPopup').stop();
+  });
+
+//   $('#playVideo').on('click', function() {
+//     $('.video-popup').show();
+//     $('#myPopup').show();
+//     $('#myPopup').play();
+//   });
+
+//   $('.close').on('click', function() {
+//     $('.video-popup').hide();
+//     $('#myPopup').hide();
+//     this.hide();
+//   });
 
     $("#learnMoreForm").validate({
         rules: {
@@ -444,6 +776,61 @@ $(document).ready(function() {
 
 
     }
+// play the targeted video (and hide the poster frame)
+function videoPlay($wrapper) {
+   var $iframe = $wrapper.find(".js-videoIframe");
+   var src = $iframe.data("src");
+   // hide poster
+   $wrapper.addClass("videoWrapperActive");
+   // add iframe src in, starting the video
+   $iframe.attr("src", src);
+   $(".home-video-close").removeClass("is-hidden");
+}
+
+// stop the targeted/all videos (and re-instate the poster frames)
+function videoStop($wrapper) {
+   // if we're stopping all videos on page
+   if (!$wrapper) {
+      var $wrapper = $(".js-videoWrapper");
+      var $iframe = $(".js-videoIframe");
+      // if we're stopping a particular video
+   } else {
+      var $iframe = $wrapper.find(".js-videoIframe");
+   }
+   // reveal poster
+   $wrapper.removeClass("videoWrapperActive");
+   // remove youtube link, stopping the video from playing in the background
+   $iframe.attr("src", "");
+   $(".home-video-close").addClass("is-hidden");
+}
+
+// Function to prevent double tap to play the video on touch devices. Hides poster image.
+function touchVideo() {
+   // Checks if #js-point-detector is made visible by the pointer:coarse media query
+   var isVisible = $("#js-pointer-detector").is(":visible");
+   // If it is visible...
+   if (isVisible === true) {
+      // Add active wrapper class
+      $(".videoWrapper").addClass("videoWrapperActive");
+      // Get video source
+      var source = $(".js-videoIframe").data("src");
+      // Load video source
+      $(".js-videoIframe").attr("src", source);
+   } else {
+   }
+}
+
+// poster frame click event
+$(document).on("click", ".js-videoPoster", function(ev) {
+   ev.preventDefault();
+   var $poster = $(this);
+   var $wrapper = $poster.closest(".js-videoWrapper");
+   videoPlay($wrapper);
+});
+
+$(document).ready(function() {
+   touchVideo();
+});
 
 
 </script>
