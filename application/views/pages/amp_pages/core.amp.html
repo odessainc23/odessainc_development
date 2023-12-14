@@ -113,7 +113,7 @@
 	 bottom: 0;
  }
  .video-con{
-	 width: 50%;
+	 width: 60%;
 	 font-size: 42px;
 	 /* padding-right: 200px; */
 	 display: flex;
@@ -371,21 +371,6 @@
  </style>
 
 
-<div id="companyvideoplay" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<button type="button" class="close closebox" data-dismiss="modal">×</button>
-			<div class="modal-body">
-				<div class="companypg">
-					<video class="popuptext" id="myPopup" style="width:800px;">
-						<source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">
-						</video>
-				</div>
-			</div>
-		</div>
-	</div>  
-</div>
-
 <div id="wrapper">
 	<div class="">
 	<div class="pg_banner pgcor__banner">
@@ -599,11 +584,11 @@
 							
 						<div class="testimonial-content">
 						   
-						  <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/video.png');">Play Video</button>
+						  <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.jpg');">Play Video</button>
 						</div>
 						
 						<div class="video-con">
-							<h2>Creating Global Dominance:<br> Johnson Capital's Journey with Odessa</h2>
+							<h2>Creating Global Dominance:<br> Johnson Controls' Journey with Odessa</h2>
 							<a href="" class="watch">Watch Now</a>
 						</div>
 					   
@@ -614,7 +599,7 @@
 							<div class="popup">
 							  <span class="close">&times;</span>
 							  <video class="popuptext" id="myPopup" style="height:100%;" loop controls id="video1">
-								<source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">
+								<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
 								<!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
 							  </video>
 							</div>
@@ -684,37 +669,62 @@
 
 	$(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),
 	$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),
-	$(function() {
-    $("#companyvideoplay").on("show.bs.modal", function() {
-        var videoPlayerHtml = '<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">' +
-            '<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">' +
-            '<div class="wistia_embed wistia_async_pbd8tgqbre videoFoam=true" style="height:100%;position:relative;width:100%;">' +
-            '<video class="popuptext" id="myPopup" style="height:100%;" autoplay loop controls id="video1">' +
-            '<source src="<?php echo base_url(); ?>assets/images/core_vid.mp4" type="video/mp4">' +
-            '</video></div></div></div>';
-			// $('#video1')[0].play();
-        $("#companyvideoplay .modal-body .companypg").html(videoPlayerHtml);
-		// videoPlayerHtml.play(true);
-    });
+	$(document).ready(function() {
+	// play the targeted video (and hide the poster frame)
+function videoPlay($wrapper) {
+   var $iframe = $wrapper.find(".js-videoIframe");
+   var src = $iframe.data("src");
+   // hide poster
+   $wrapper.addClass("videoWrapperActive");
+   // add iframe src in, starting the video
+   $iframe.attr("src", src);
+   $(".home-video-close").removeClass("is-hidden");
+}
 
+// stop the targeted/all videos (and re-instate the poster frames)
+function videoStop($wrapper) {
+   // if we're stopping all videos on page
+   if (!$wrapper) {
+      var $wrapper = $(".js-videoWrapper");
+      var $iframe = $(".js-videoIframe");
+      // if we're stopping a particular video
+   } else {
+      var $iframe = $wrapper.find(".js-videoIframe");
+   }
+   // reveal poster
+   $wrapper.removeClass("videoWrapperActive");
+   // remove youtube link, stopping the video from playing in the background
+   $iframe.attr("src", "");
+   $(".home-video-close").addClass("is-hidden");
+}
 
-    $("#companyvideoplay").on("hidden.bs.modal", function() {
-        $("#companyvideoplay .modal-body .companypg").empty();
-		
-    });
+// Function to prevent double tap to play the video on touch devices. Hides poster image.
+function touchVideo() {
+   // Checks if #js-point-detector is made visible by the pointer:coarse media query
+   var isVisible = $("#js-pointer-detector").is(":visible");
+   // If it is visible...
+   if (isVisible === true) {
+      // Add active wrapper class
+      $(".videoWrapper").addClass("videoWrapperActive");
+      // Get video source
+      var source = $(".js-videoIframe").data("src");
+      // Load video source
+      $(".js-videoIframe").attr("src", source);
+   } else {
+   }
+}
+
+// poster frame click event
+$(document).on("click", ".js-videoPoster", function(ev) {
+   ev.preventDefault();
+   var $poster = $(this);
+   var $wrapper = $poster.closest(".js-videoWrapper");
+   videoPlay($wrapper);
 });
-let video = document.getElementById('video');
-            document.getElementById('btn').addEventListener('click', button_action);
+touchVideo();
 
-            function button_action() {
-                if (video.paused) {
-                    video.play();
-                    btn.innerHTML = "Puase Video";
-                } else {
-                    video.pause();
-                    btn.innerHTML = "Play Video"
-                }
-            };
+	});
+
 
 </script>
 <!-- <script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
