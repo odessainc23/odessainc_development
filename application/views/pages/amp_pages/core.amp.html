@@ -14,7 +14,7 @@
    position: relative;
    margin: 3em 0 0;
 	 height: 100%;
-	 background-color: #b8e4ed;
+	 background-color: #085B7B;;
  }
  .testimonial .container{
 	
@@ -108,9 +108,8 @@
 		 display: flex;
 	 }
 	 .video {
-	
-	 width: 185px;
 	 bottom: 0;
+	 width: 158px;
  }
  .video-con{
 	 width: 60%;
@@ -125,7 +124,7 @@
  }
  .video-con h2{
 	 font-size: 22px;
-	 color: #085B7B;
+	 color: #fff;
 	 font-family: MaisonNeue-Book;
 	 font-weight: 600;
 	 line-height: 1.3;
@@ -142,11 +141,12 @@
    overflow: hidden;
  }
  .video img{
-	 position: absolute;
-	 bottom: 0;
-	 width: 185px;
-	 left: 0;
-	 height: auto;
+	height: auto;
+    position: absolute;
+    top: 55px;
+    width: 158px;
+    left: 0;
+
  }
  
  .videoWrapper169 {
@@ -356,8 +356,7 @@
 	 width: 90%;
  }
  .video-con h2 {
-	 font-size: 25px;
-	 color: #085B7B;
+	 font-size: 20px;
  }
  .video-container iframe{
 	 width: 100%;
@@ -578,17 +577,17 @@
 					<div class="testimonial">
 						<div class="container">
 							<div class="video">
-								<img src="<?php echo base_url(); ?>assets/images/Vector.png">
+								<img src="<?php echo base_url(); ?>assets/images/o-circle.png">
 								</div>
 						<div class="d-flex">
 							
 						<div class="testimonial-content">
 						   
-						  <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.jpg');">Play Video</button>
+						  <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button>
 						</div>
 						
 						<div class="video-con">
-							<h2>Creating Global Dominance:<br> Johnson Controls' Journey with Odessa</h2>
+							<h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
 							<a href="" class="watch">Watch Now</a>
 						</div>
 					   
@@ -598,7 +597,7 @@
 							<!-- <button id="playVideo">Play Video</button> -->
 							<div class="popup">
 							  <span class="close">&times;</span>
-							  <video class="popuptext" id="myPopup" style="height:100%;" loop controls id="video1">
+							  <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
 								<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
 								<!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
 							  </video>
