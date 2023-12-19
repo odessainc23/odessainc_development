@@ -23,8 +23,384 @@
 		}
 	}
 </style>
-<script type="text/javascript">
+<style>
+	    .testimonial {
+   position: relative;
+   margin:  0 0;
+     height: 100%;
+     background-color: #085B7B;
+ }
+ .testimonial .container{
+    
+ }
+ .home-hero-bgimg {
+     width: 40%;
+     transform: translateX(150%) translateZ(0);
+ }
+ .home-hero-ctitle {
+     line-height: 1;
+     font-size: 3rem;
+ }
+ .home-hero-cdesc {
+     font-size: 16px;
+ }
+ .home-hero-cwrap{
+     padding-top: 120px;
+ }
+ .testimonial-content {
+     padding-bottom: 20px;
+     width: calc(50% - 152px);
+     position: relative;
+     /* width: 350px; */
+     height: 450px;
+     margin: 50px 0 50px 152px;
+ }
  
+ .play-btn {
+   padding: 10px 20px;
+   background-color: #3498db;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+ }
+ .watch:hover,.watch:focus{
+     color:#fff;
+	 text-decoration: none;
+ }
+ .video-popup {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 2000;
+ }
+ .video-popup .close{
+     color: #fff;
+     text-shadow: 0 1px 0 #fff;
+     opacity: 0.8;
+ }
+ .video-container {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   max-width: 80%;
+ }
+ 
+ .close-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 24px;
+   color: #fff;
+   cursor: pointer;
+ }
+ 
+ 
+ 
+ 
+ 
+     .platformsectionwrap .dotsdesign img {
+         width: 300px;
+     }
+     .overlay{
+         position: fixed;
+         width: 100%;
+         background-color: #263746;
+         width: 100%;
+         height:100vh;
+         z-index: 21474830001;
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-flow: column;
+         opacity: 0;
+     }
+     
+     .d-flex{
+         display: flex;
+         justify-content: space-between;
+     }
+     .video {
+    
+     width: 220px;
+     
+ }
+ .video-con{
+     width: 50%;
+     font-size: 42px;
+     /* padding-right: 200px; */
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     padding-left: 50px;
+ 
+ }
+ .video-con h2{
+     font-size: 32px;
+     color: #fff;
+     font-family: MaisonNeue-Book;
+     font-weight: 500;
+     line-height: 1.3;
+ }
+ .video-con span{
+     display: inline;
+     color: #085B7B;
+ }
+ .videoWrapper {
+   position: relative;
+   width: 100%;
+   height: 0;
+   background-color: #000;
+   overflow: hidden;
+ }
+ .video img{
+     position: absolute;
+     top: 70px;
+     width: 220px;
+     left: -5px;
+ }
+ 
+ .videoWrapper169 {
+     padding-top: 56.25%;
+     border-radius: 50%;
+     width: 400px;
+     height: 400px;
+     margin-left: 243px;
+     margin-top: 100px;
+ }
+ .watch{
+     background: #FF495C;
+     padding: 10px 20px;
+     font-size: 14px;
+     color: #fff;
+     width: max-content;
+     margin: 20px 0 0;
+ }
+ .videoPoster:after{
+     background: none;
+ }
+ .videoPoster:after{
+     display: none;
+ }
+ .videoIframe {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   overflow: hidden;
+ }
+ 
+ .videoWrapperActive .videoPoster {
+   opacity: 0;
+   height: 0;
+   transition-delay: 0s, 0.8s;
+ }
+ 
+ .videoPoster {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+      width: 450px;
+     height: 450px;
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+   border: 0;
+   outline: none;
+   background-position: 50% 50%;
+   background-size: 100% 100%;
+   background-size: cover;
+   text-indent: -999em;
+   overflow: hidden;
+   opacity: 0.9;
+   transition: opacity 0.8s ease, height 0s ease;
+   transition-delay: 0s, 0s;
+   background-size: cover;
+     border-radius: 50%;
+ 
+ }
+ 
+ .videoPoster:after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 0;
+   height: 0;
+   margin: -25px 0 0 -14px;
+   border-left: 40px solid rgba(255, 255, 255, 0.75);
+   border-top: 25px solid transparent;
+   border-bottom: 25px solid transparent;
+   transition: all 0.3s ease;
+   transform: scale(1);
+   box-shadow: 0 0 5px 0 transparent;
+ }
+ 
+ .home-video-close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translateY(-100%);
+   display: block;
+   line-height: 0;
+   display: inline-block;
+   padding: 20px 10px;
+   font-size: 3em;
+   font-weight: 700;
+   color: white;
+   cursor: pointer;
+   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   transition: ease-in-out 0.15s all;
+ }
+ 
+ .video-con{
+     font-size: 42px;
+ }
+ .home-video-close.is-hidden {
+   display: block;
+   transform: translateY(0);
+ }
+ 
+ #js-pointer-detector {
+   display: none;
+ }
+     input, button{
+         margin:0;
+     }
+     .overlay.one{
+         opacity: 1;
+     }
+     .overlay img{
+         margin: 50px auto 0px auto;
+     }
+     .login-container {
+         background-color: white;
+         padding: 20px;
+         border-radius: 5px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         width: 40%;
+         display: block;
+         margin: 30px auto;      
+         z-index: 9999999;
+ }
+ 
+ input, button {
+     margin: 0 0;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+     width: 100%;
+ }
+ 
+ button {
+     background-color: #007bff;
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+ .letstalkform .form-control.red{
+     border: 2px solid #962424;  
+ }
+ #footer{
+     position: relative;
+     height: 24px;
+     width: 100%;
+     text-align: center;
+     font-size: 0.75rem;
+     color: #fff;
+ }
+ .testimonial{
+     margin:3em 0 0;
+ }
+ @media only screen and (max-width:1300px){
+     .home-hero-ctitle{
+         font-size: 2rem;
+     }
+    .video-con{
+     padding-right: 0;
+    }
+     .testimonial-content,.videoPoster{
+         width: 300px;height: 300px;
+     }
+     #myPopup{
+         height: 100%;
+     width: 100%;
+     }
+ }
+ @media only screen and (min-width:340px) and (max-width:1000px){
+     .login-container{
+         width:80%
+     }
+     .home-hero-bgimg {
+     width: 100%;
+     transform: translateX(0) translateZ(0);
+ }
+     .video {
+     width: 100%;
+ }
+ .video img{
+     width: 80px;
+ }
+ .d-flex{
+     flex-wrap: wrap;
+ }
+ .testimonial-content{
+     width: 100%;
+     width: 200px;
+     height: 200px;
+     margin: 50px auto 0 auto;
+ }
+ .videoPoster{
+     width: 200px;
+     height: 200px;
+ }
+ .video-con{
+     width: 100%;text-align: center;margin:30px auto;padding: 0;
+ }
+ .watch{
+     margin: 20px auto 0 auto;
+ }
+ .video-container{
+     width: 90%;
+ }
+ .video-con h2 {
+     font-size: 25px;
+ }
+ .video-container iframe{
+     width: 100%;
+ }
+ .testimonial{
+     margin:6em 0 0;
+ }
+ }
+ 
+ 
+ 
+ </style>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#myPopup").get(0).pause();
+  $('.play-btn').click(function() {
+    $('.video-popup').fadeIn();
+    $("#myPopup").get(0).play();
+  });
+
+  $('.close').click(function() {
+    $('.video-popup').fadeOut();
+    $('#myPopup').stop();
+    $("#myPopup").get(0).pause();
+  });
+});
  
 	String.prototype.escape = function() {
 		var tagsToReplace = {
@@ -205,6 +581,37 @@
 			</div>
 		</div>
 		<!-- Discover latest section End here -->
+		<div class="testimonial">
+			<div class="container">
+				<div class="video">
+					<img src="<?php echo base_url(); ?>assets/images/o-circle.png">
+					</div>
+			<div class="d-flex">
+				
+			<div class="testimonial-content">
+			   
+			  <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button>
+			</div>
+			
+			<div class="video-con">
+				<h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
+				<a href="javascript:void(0);" class="play-btn watch">Watch Now</a>
+			</div>
+		   
+		  </div>
+		  <div class="video-popup">
+			<div class="video-container">
+				<!-- <button id="playVideo">Play Video</button> -->
+				<div class="popup">
+				  <span class="close">&times;</span>
+				  <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
+					<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
+					<!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
+				  </video>
+				</div>
+			</div>
+		  </div>
+		  </div></div>
 		<!-- Have Question section Start here -->
 		<div class="have_question_wrap">
 			<h2 class="text-center">Have questions?</h2>
