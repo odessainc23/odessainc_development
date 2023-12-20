@@ -122,7 +122,7 @@ class Leadership extends CI_Controller {
 				'name'			=> 'Campbell Clout',
 				'thumbnail'		=> base_url() .'assets/images/leadership/campbell.jpg',
 				'title'			=> 'SVP, Business Development',
-				'description'	=> 'Campbell is SVP of Business Development at Odessa. With a background spanning over 25 years in the Asset Finance industry, his scope of responsibility involves enterprise sales and new business development in the Asia Pacific, Middle East, and Africa regions. He joined Odessa in 2022, bringing in his extensive industry knowledge and expertise. Before joining Odessa, Campbell held a leadership positions, spearheading projects including go-to-market strategy, sales, project delivery, and product management at AGC/Westpac, Rabobank, International Decision Systems, and FIS.',
+				'description'	=> 'Campbell is SVP of Business Development at Odessa. With a background spanning over 25 years in the Asset Finance industry, his scope of responsibility involves enterprise sales and new business development in the Asia Pacific, Middle East, and Africa regions. He joined Odessa in 2022, bringing in his extensive industry knowledge and expertise. Before joining Odessa, Campbell held several leadership positions, spearheading projects including go-to-market strategy, sales, project delivery, and product management at AGC/Westpac, Rabobank, International Decision Systems, and FIS.',
 				'experience'	=> '25 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/campbell-clout-580541/',
