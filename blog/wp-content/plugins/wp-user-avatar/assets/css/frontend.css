@@ -1000,6 +1000,7 @@ html .pp-form-container .select2 input.select2-search__field {
     bottom: 0 !important;
     right: 0 !important;
     left: 0 !important;
+    display: block;
 }
 
 .pp-form-container .pp-form-wrapper.ppBuildScratch.ppsbw-full-width .pp-form-submit-button-wrap input[type="submit"] {

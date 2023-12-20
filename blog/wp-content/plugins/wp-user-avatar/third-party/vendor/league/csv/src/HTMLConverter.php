@@ -17,31 +17,28 @@ use DOMException;
 use function preg_match;
 /**
  * Converts tabular data into an HTML Table string.
+ * @internal
  */
 class HTMLConverter
 {
+    /** table class attribute value. */
+    protected string $class_name = 'table-csv-data';
+    /** table id attribute value. */
+    protected string $id_value = '';
+    protected XMLConverter $xml_converter;
+    public static function create() : self
+    {
+        return new self();
+    }
     /**
-     * table class attribute value.
+     * DEPRECATION WARNING! This method will be removed in the next major point release.
      *
-     * @var string
-     */
-    protected $class_name = 'table-csv-data';
-    /**
-     * table id attribute value.
-     *
-     * @var string
-     */
-    protected $id_value = '';
-    /**
-     * @var XMLConverter
-     */
-    protected $xml_converter;
-    /**
-     * New Instance.
+     * @deprecated since version 9.7.0
+     * @see HTMLConverterTest::create()
      */
     public function __construct()
     {
-        $this->xml_converter = (new XMLConverter())->rootElement('table')->recordElement('tr')->fieldElement('td');
+        $this->xml_converter = XMLConverter::create()->rootElement('table')->recordElement('tr')->fieldElement('td');
     }
     /**
      * Converts a tabular data collection into a HTML table string.

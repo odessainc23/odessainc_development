@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * IcuResDumper generates an ICU ResourceBundle formatted string representation of a message catalogue.
  *
  * @author Stealth35
+ * @internal
  */
 class IcuResFileDumper extends FileDumper
 {

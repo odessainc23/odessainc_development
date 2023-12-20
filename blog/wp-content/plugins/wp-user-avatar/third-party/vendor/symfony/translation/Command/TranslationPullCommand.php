@@ -25,6 +25,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Reader\TranslationReaderInt
 use ProfilePressVendor\Symfony\Component\Translation\Writer\TranslationWriterInterface;
 /**
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
+ * @internal
  */
 final class TranslationPullCommand extends Command
 {

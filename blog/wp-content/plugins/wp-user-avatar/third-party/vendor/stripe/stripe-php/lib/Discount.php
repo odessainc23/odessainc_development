@@ -16,6 +16,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string $promotion_code The promotion code applied to create this discount.
  * @property int $start Date that the coupon was applied.
  * @property null|string $subscription The subscription that this coupon is applied to, if it is applied to a particular subscription.
+ * @internal
  */
 class Discount extends StripeObject
 {

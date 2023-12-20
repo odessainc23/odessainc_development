@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Component\DependencyInjection\Exception\RuntimeEx
 use ProfilePressVendor\Symfony\Component\DependencyInjection\Reference;
 /**
  * Adds tagged translation.extractor services to translation extractor.
+ * @internal
  */
 class TranslationExtractorPass implements CompilerPassInterface
 {

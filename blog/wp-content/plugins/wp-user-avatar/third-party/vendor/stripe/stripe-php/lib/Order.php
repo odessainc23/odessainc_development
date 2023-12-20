@@ -35,6 +35,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $status_transitions The timestamps at which the order status was updated.
  * @property null|int $updated Time at which the object was last updated. Measured in seconds since the Unix epoch.
  * @property string $upstream_id The user's order ID if it is different from the Stripe order ID.
+ * @internal
  */
 class Order extends ApiResource
 {

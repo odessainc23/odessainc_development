@@ -14,6 +14,7 @@ use ProfilePressVendor\Symfony\Component\DependencyInjection\Compiler\CompilerPa
 use ProfilePressVendor\Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;
 use ProfilePressVendor\Symfony\Component\DependencyInjection\ContainerBuilder;
 use ProfilePressVendor\Symfony\Component\DependencyInjection\Reference;
+/** @internal */
 class TranslatorPass implements CompilerPassInterface
 {
     private $translatorServiceId;

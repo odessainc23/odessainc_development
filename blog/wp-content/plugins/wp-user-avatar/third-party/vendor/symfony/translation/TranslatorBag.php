@@ -12,6 +12,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation;
 
 use ProfilePressVendor\Symfony\Component\Translation\Catalogue\AbstractOperation;
 use ProfilePressVendor\Symfony\Component\Translation\Catalogue\TargetOperation;
+/** @internal */
 final class TranslatorBag implements TranslatorBagInterface
 {
     /** @var MessageCatalogue[] */

@@ -12,6 +12,7 @@ namespace ProfilePressVendor\Carbon;
 
 use JsonSerializable;
 use ReturnTypeWillChange;
+/** @internal */
 class Language implements JsonSerializable
 {
     /**

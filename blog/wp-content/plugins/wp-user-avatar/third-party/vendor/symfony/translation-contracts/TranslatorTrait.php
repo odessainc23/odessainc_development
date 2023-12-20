@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidArgumentEx
  * A trait to help implement TranslatorInterface and LocaleAwareInterface.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @internal
  */
 trait TranslatorTrait
 {

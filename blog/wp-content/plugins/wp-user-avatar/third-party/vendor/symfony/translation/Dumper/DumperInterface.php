@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * There is no common option.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 interface DumperInterface
 {

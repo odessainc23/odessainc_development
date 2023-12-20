@@ -26,6 +26,7 @@ use ProfilePressVendor\Symfony\Contracts\Translation\TranslatorInterface;
 \class_exists(MessageCatalogue::class);
 /**
  * @author Fabien Potencier <fabien@symfony.com>
+ * @internal
  */
 class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleAwareInterface
 {

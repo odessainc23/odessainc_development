@@ -35,6 +35,7 @@ namespace ProfilePressVendor\Stripe\Issuing;
  * @property \Stripe\Issuing\Transaction[] $transactions List of <a href="https://stripe.com/docs/api/issuing/transactions">transactions</a> associated with this authorization.
  * @property \Stripe\StripeObject $verification_data
  * @property null|string $wallet The digital wallet used for this authorization. One of <code>apple_pay</code>, <code>google_pay</code>, or <code>samsung_pay</code>.
+ * @internal
  */
 class Authorization extends \ProfilePressVendor\Stripe\ApiResource
 {

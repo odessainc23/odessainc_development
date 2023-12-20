@@ -29,6 +29,7 @@ namespace ProfilePressVendor\Stripe;
  * @property \Stripe\Collection<\Stripe\BitcoinTransaction> $transactions A list with one entry for each time that the customer sent bitcoin to the receiver. Hidden when viewing the receiver with a publishable key.
  * @property bool $uncaptured_funds This receiver contains uncaptured funds that can be used for a payment or refunded.
  * @property null|bool $used_for_payment Indicate if this source is used for payment.
+ * @internal
  */
 class BitcoinReceiver extends ApiResource
 {

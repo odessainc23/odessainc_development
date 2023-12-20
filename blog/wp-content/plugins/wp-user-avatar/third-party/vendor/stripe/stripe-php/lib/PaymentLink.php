@@ -35,6 +35,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $subscription_data When creating a subscription, the specified configuration data will be used. There must be at least one line item with a recurring price to use <code>subscription_data</code>.
  * @property null|\Stripe\StripeObject $transfer_data The account (if any) the payments will be attributed to for tax reporting, and where funds from each payment will be transferred to.
  * @property string $url The public URL that can be shared with customers.
+ * @internal
  */
 class PaymentLink extends ApiResource
 {

@@ -25,6 +25,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string $title A user friendly title for the document.
  * @property null|string $type The type of the file returned (e.g., <code>csv</code>, <code>pdf</code>, <code>jpg</code>, or <code>png</code>).
  * @property null|string $url The URL from which the file can be downloaded using your live secret API key.
+ * @internal
  */
 class File extends ApiResource
 {

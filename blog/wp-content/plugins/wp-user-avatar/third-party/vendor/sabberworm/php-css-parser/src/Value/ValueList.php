@@ -3,6 +3,7 @@
 namespace ProfilePressVendor\Sabberworm\CSS\Value;
 
 use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
+/** @internal */
 abstract class ValueList extends Value
 {
     /**

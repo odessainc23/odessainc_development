@@ -64,6 +64,7 @@ namespace ProfilePressVendor\Stripe;
  * @property \Stripe\Service\TopupService $topups
  * @property \Stripe\Service\TransferService $transfers
  * @property \Stripe\Service\WebhookEndpointService $webhookEndpoints
+ * @internal
  */
 class StripeClient extends BaseStripeClient
 {

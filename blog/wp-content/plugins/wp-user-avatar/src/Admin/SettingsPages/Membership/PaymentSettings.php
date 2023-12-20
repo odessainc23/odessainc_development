@@ -97,13 +97,13 @@ class PaymentSettings extends AbstractSettingsPage
                 ]
             ],
             [
-                'section_title'         => esc_html__('Checkout Settings', 'wp-user-avatar'),
-                'one_time_trial'        => [
+                'section_title'             => esc_html__('Checkout Settings', 'wp-user-avatar'),
+                'one_time_trial'            => [
                     'label'       => esc_html__('One Time Trials', 'wp-user-avatar'),
                     'description' => esc_html__('Check this if you will like customers to be prevented from using the free trial of a plan multiple times.', 'wp-user-avatar'),
                     'type'        => 'checkbox'
                 ],
-                'terms_agreement_label' => [
+                'terms_agreement_label'     => [
                     'label'       => esc_html__('Terms & Conditions Label', 'wp-user-avatar'),
                     'description' => sprintf(
                         esc_html__('Label for the "Agree to Terms" checkbox where "[terms]" is a link to the %sterms and condition page%s', 'wp-user-avatar'),
@@ -111,7 +111,7 @@ class PaymentSettings extends AbstractSettingsPage
                     ),
                     'type'        => 'text'
                 ],
-                'proration_method'      => [
+                'proration_method'          => [
                     'label'       => esc_html__('Proration Method', 'wp-user-avatar'),
                     'description' => sprintf(
                         esc_html__('Specify how to calculate proration for subscription downgrades and upgrades. %sCost-based calculation is where the value of an upgrade is calculated based on the cost difference between the current and new membership plans. %sTime-based calculation is true proration in which the amount of time remaining on the current subscription plan is calculated to adjust the cost of the new subscription.', 'wp-user-avatar'),
@@ -123,10 +123,16 @@ class PaymentSettings extends AbstractSettingsPage
                         'time-based' => esc_html__('Time-Based Calculation', 'wp-user-avatar')
                     ]
                 ],
-                'disable_auto_renew'    => [
+                'disable_auto_renew'        => [
                     'label'          => esc_html__('Disable Auto-renewal', 'wp-user-avatar'),
                     'checkbox_label' => esc_html__('Disable', 'wp-user-avatar'),
                     'description'    => esc_html__('Check to disable automatic renewal of subscriptions at the end of a billing cycle', 'wp-user-avatar'),
+                    'type'           => 'checkbox'
+                ],
+                'enable_checkout_autologin' => [
+                    'label'          => esc_html__('Checkout Autologin', 'wp-user-avatar'),
+                    'checkbox_label' => esc_html__('Enable', 'wp-user-avatar'),
+                    'description'    => esc_html__('Check to automatically log in customers after checkout.', 'wp-user-avatar'),
                     'type'           => 'checkbox'
                 ],
             ]

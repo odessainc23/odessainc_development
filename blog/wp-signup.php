@@ -25,7 +25,7 @@ function do_signup_header() {
 	 *
 	 * @since 3.0.0
 	 */
-	//do_action( 'signup_header' );
+	do_action( 'signup_header' );
 }
 add_action( 'wp_head', 'do_signup_header' );
 

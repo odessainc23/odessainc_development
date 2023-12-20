@@ -11,6 +11,7 @@
 namespace ProfilePressVendor\Carbon\Exceptions;
 
 use Throwable;
+/** @internal */
 class UnknownUnitException extends UnitException
 {
     /**

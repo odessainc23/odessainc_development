@@ -17,6 +17,7 @@ use ReflectionFunction;
 use ProfilePressVendor\Symfony\Component\Translation;
 use ProfilePressVendor\Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 use ProfilePressVendor\Symfony\Component\Translation\Loader\ArrayLoader;
+/** @internal */
 abstract class AbstractTranslator extends Translation\Translator
 {
     /**

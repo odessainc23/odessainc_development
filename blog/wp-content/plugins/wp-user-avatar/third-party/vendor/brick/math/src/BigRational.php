@@ -13,6 +13,7 @@ use ProfilePressVendor\Brick\Math\Exception\RoundingNecessaryException;
  * This class is immutable.
  *
  * @psalm-immutable
+ * @internal
  */
 final class BigRational extends BigNumber
 {

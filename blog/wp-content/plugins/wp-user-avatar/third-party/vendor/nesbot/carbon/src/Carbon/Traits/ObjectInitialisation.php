@@ -10,6 +10,7 @@
  */
 namespace ProfilePressVendor\Carbon\Traits;
 
+/** @internal */
 trait ObjectInitialisation
 {
     /**

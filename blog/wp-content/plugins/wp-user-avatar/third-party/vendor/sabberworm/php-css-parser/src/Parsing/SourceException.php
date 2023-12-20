@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Sabberworm\CSS\Parsing;
 
+/** @internal */
 class SourceException extends \Exception
 {
     /**

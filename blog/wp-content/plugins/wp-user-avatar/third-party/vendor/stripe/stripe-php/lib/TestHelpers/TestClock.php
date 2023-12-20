@@ -19,6 +19,7 @@ namespace ProfilePressVendor\Stripe\TestHelpers;
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property null|string $name The custom name supplied at creation.
  * @property string $status The status of the Test Clock.
+ * @internal
  */
 class TestClock extends \ProfilePressVendor\Stripe\ApiResource
 {

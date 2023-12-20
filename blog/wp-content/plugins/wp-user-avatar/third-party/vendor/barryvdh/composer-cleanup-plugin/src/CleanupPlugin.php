@@ -11,6 +11,7 @@ use ProfilePressVendor\Composer\Installer\PackageEvent;
 use ProfilePressVendor\Composer\Script\CommandEvent;
 use ProfilePressVendor\Composer\Util\Filesystem;
 use ProfilePressVendor\Composer\Package\BasePackage;
+/** @internal */
 class CleanupPlugin implements PluginInterface, EventSubscriberInterface
 {
     /** @var  \Composer\Composer $composer */

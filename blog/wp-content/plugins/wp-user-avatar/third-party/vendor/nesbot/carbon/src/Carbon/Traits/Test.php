@@ -17,6 +17,7 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use InvalidArgumentException;
 use Throwable;
+/** @internal */
 trait Test
 {
     ///////////////////////////////////////////////////////////////////
@@ -110,8 +111,7 @@ trait Test
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
      * @param Closure(): T                                       $callback
      *
-     * @return mixed
-     * @phpstan-return T
+     * @return T
      */
     public static function withTestNow($testNow, $callback)
     {

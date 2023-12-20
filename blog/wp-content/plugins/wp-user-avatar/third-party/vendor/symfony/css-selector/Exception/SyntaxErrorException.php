@@ -18,6 +18,7 @@ use ProfilePressVendor\Symfony\Component\CssSelector\Parser\Token;
  * which is copyright Ian Bicking, @see https://github.com/SimonSapin/cssselect.
  *
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
+ * @internal
  */
 class SyntaxErrorException extends ParseException
 {

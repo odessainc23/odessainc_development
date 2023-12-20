@@ -20,6 +20,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * - path (mandatory): the directory where the files should be saved
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 abstract class FileDumper implements DumperInterface
 {

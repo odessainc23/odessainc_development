@@ -7,6 +7,7 @@ namespace ProfilePressVendor\Stripe\Service\TestHelpers\Terminal;
  * Service factory class for API resources in the Terminal namespace.
  *
  * @property ReaderService $readers
+ * @internal
  */
 class TerminalServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Contracts\Translation\LocaleAwareInterface;
 use ProfilePressVendor\Symfony\Contracts\Translation\TranslatorInterface;
 /**
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
+ * @internal
  */
 class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInterface, LocaleAwareInterface, WarmableInterface
 {

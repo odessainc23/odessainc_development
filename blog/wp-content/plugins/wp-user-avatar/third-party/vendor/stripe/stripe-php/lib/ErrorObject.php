@@ -32,6 +32,7 @@ namespace ProfilePressVendor\Stripe;
  *    request involving a source.
  * @property string $type The type of error returned. One of `api_error`,
  *   `card_error`, `idempotency_error`, or `invalid_request_error`.
+ * @internal
  */
 class ErrorObject extends StripeObject
 {

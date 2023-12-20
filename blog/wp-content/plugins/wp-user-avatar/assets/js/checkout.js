@@ -42,7 +42,7 @@ export default function () {
 
         // Update group selection change
         $(document.body).on('change', '#ppress_mb_checkout_form [name=group_selector]', function () {
-            _this.update_checkout(true);
+            _this.update_checkout();
         });
 
         // Update on page load.
@@ -91,9 +91,11 @@ export default function () {
         }
     };
 
-    this.update_checkout = function (isChangePlanUpdate) {
+    this.update_checkout = function (ignoreChangePlanRefresh) {
 
-        isChangePlanUpdate = isChangePlanUpdate || false;
+        ignoreChangePlanRefresh = ignoreChangePlanRefresh || false;
+
+        let isChangePlanUpdate = $('#ppress_mb_checkout_form [name=group_selector]').length > 0;
 
         _this.removeAllAlerts();
 
@@ -189,8 +191,8 @@ export default function () {
             _this.remove_spinner();
 
             // it's important we re-init checkout to keep things working
-            if (isChangePlanUpdate === true) {
-                $(document.body).trigger('ppress_update_checkout');
+            if (isChangePlanUpdate === true && ignoreChangePlanRefresh !== true) {
+                _this.update_checkout(true);
             }
         });
     };

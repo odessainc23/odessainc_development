@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string $customer_data
  * @property string $currency
  * @property string $type
+ * @internal
  */
 class SourceTransaction extends ApiResource
 {

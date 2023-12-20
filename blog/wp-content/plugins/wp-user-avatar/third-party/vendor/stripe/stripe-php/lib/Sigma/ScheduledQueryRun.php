@@ -21,6 +21,7 @@ namespace ProfilePressVendor\Stripe\Sigma;
  * @property string $sql SQL for the query.
  * @property string $status The query's execution status, which will be <code>completed</code> for successful runs, and <code>canceled</code>, <code>failed</code>, or <code>timed_out</code> otherwise.
  * @property string $title Title of the query.
+ * @internal
  */
 class ScheduledQueryRun extends \ProfilePressVendor\Stripe\ApiResource
 {

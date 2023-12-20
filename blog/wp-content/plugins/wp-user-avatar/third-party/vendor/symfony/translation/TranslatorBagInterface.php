@@ -17,6 +17,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidArgumentEx
  * @method MessageCatalogueInterface[] getCatalogues() Returns all catalogues of the instance
  *
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
+ * @internal
  */
 interface TranslatorBagInterface
 {

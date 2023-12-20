@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
+class ComposerStaticInita6255288c7c2d3d1ad657731500aedfe
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -27,9 +27,11 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
             'ProfilePressVendor\\Symfony\\Component\\CssSelector\\' => 49,
             'ProfilePressVendor\\Stripe\\' => 26,
             'ProfilePressVendor\\Sabberworm\\CSS\\' => 34,
+            'ProfilePressVendor\\Psr\\Clock\\' => 29,
             'ProfilePressVendor\\ProfilePress\\Core\\' => 37,
             'ProfilePressVendor\\Pelago\\Emogrifier\\' => 37,
             'ProfilePressVendor\\League\\Csv\\' => 30,
+            'ProfilePressVendor\\Carbon\\Doctrine\\' => 35,
             'ProfilePressVendor\\Carbon\\' => 26,
             'ProfilePressVendor\\Brick\\Math\\' => 30,
             'ProfilePressVendor\\Barryvdh\\Composer\\' => 37,
@@ -65,6 +67,10 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
+        'ProfilePressVendor\\Psr\\Clock\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
         'ProfilePressVendor\\ProfilePress\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -76,6 +82,10 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         'ProfilePressVendor\\League\\Csv\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/csv/src',
+        ),
+        'ProfilePressVendor\\Carbon\\Doctrine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
         ),
         'ProfilePressVendor\\Carbon\\' => 
         array (
@@ -122,13 +132,13 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         'ProfilePressVendor\\Carbon\\CarbonPeriodImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriodImmutable.php',
         'ProfilePressVendor\\Carbon\\CarbonTimeZone' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonTimeZone.php',
         'ProfilePressVendor\\Carbon\\Cli\\Invoker' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Cli/Invoker.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonDoctrineType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/CarbonDoctrineType.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonImmutableType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/CarbonImmutableType.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/CarbonType.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonTypeConverter' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/CarbonTypeConverter.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeDefaultPrecision' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeDefaultPrecision.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeImmutableType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeImmutableType.php',
-        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeType' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Doctrine/DateTimeType.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonDoctrineType' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonDoctrineType.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonImmutableType' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonImmutableType.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonType' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonType.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\CarbonTypeConverter' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonTypeConverter.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeDefaultPrecision' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/DateTimeDefaultPrecision.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeImmutableType' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/DateTimeImmutableType.php',
+        'ProfilePressVendor\\Carbon\\Doctrine\\DateTimeType' => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/DateTimeType.php',
         'ProfilePressVendor\\Carbon\\Exceptions\\BadComparisonUnitException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadComparisonUnitException.php',
         'ProfilePressVendor\\Carbon\\Exceptions\\BadFluentConstructorException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadFluentConstructorException.php',
         'ProfilePressVendor\\Carbon\\Exceptions\\BadFluentSetterException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadFluentSetterException.php',
@@ -204,9 +214,9 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         'ProfilePressVendor\\League\\Csv\\EscapeFormula' => __DIR__ . '/..' . '/league/csv/src/EscapeFormula.php',
         'ProfilePressVendor\\League\\Csv\\Exception' => __DIR__ . '/..' . '/league/csv/src/Exception.php',
         'ProfilePressVendor\\League\\Csv\\HTMLConverter' => __DIR__ . '/..' . '/league/csv/src/HTMLConverter.php',
+        'ProfilePressVendor\\League\\Csv\\Info' => __DIR__ . '/..' . '/league/csv/src/Info.php',
         'ProfilePressVendor\\League\\Csv\\InvalidArgument' => __DIR__ . '/..' . '/league/csv/src/InvalidArgument.php',
         'ProfilePressVendor\\League\\Csv\\MapIterator' => __DIR__ . '/..' . '/league/csv/src/MapIterator.php',
-        'ProfilePressVendor\\League\\Csv\\Polyfill\\EmptyEscapeParser' => __DIR__ . '/..' . '/league/csv/src/Polyfill/EmptyEscapeParser.php',
         'ProfilePressVendor\\League\\Csv\\RFC4180Field' => __DIR__ . '/..' . '/league/csv/src/RFC4180Field.php',
         'ProfilePressVendor\\League\\Csv\\Reader' => __DIR__ . '/..' . '/league/csv/src/Reader.php',
         'ProfilePressVendor\\League\\Csv\\ResultSet' => __DIR__ . '/..' . '/league/csv/src/ResultSet.php',
@@ -214,7 +224,9 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         'ProfilePressVendor\\League\\Csv\\Stream' => __DIR__ . '/..' . '/league/csv/src/Stream.php',
         'ProfilePressVendor\\League\\Csv\\SyntaxError' => __DIR__ . '/..' . '/league/csv/src/SyntaxError.php',
         'ProfilePressVendor\\League\\Csv\\TabularDataReader' => __DIR__ . '/..' . '/league/csv/src/TabularDataReader.php',
+        'ProfilePressVendor\\League\\Csv\\UnableToProcessCsv' => __DIR__ . '/..' . '/league/csv/src/UnableToProcessCsv.php',
         'ProfilePressVendor\\League\\Csv\\UnavailableFeature' => __DIR__ . '/..' . '/league/csv/src/UnavailableFeature.php',
+        'ProfilePressVendor\\League\\Csv\\UnavailableStream' => __DIR__ . '/..' . '/league/csv/src/UnavailableStream.php',
         'ProfilePressVendor\\League\\Csv\\Writer' => __DIR__ . '/..' . '/league/csv/src/Writer.php',
         'ProfilePressVendor\\League\\Csv\\XMLConverter' => __DIR__ . '/..' . '/league/csv/src/XMLConverter.php',
         'ProfilePressVendor\\PAnD' => __DIR__ . '/..' . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
@@ -228,6 +240,7 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
         'ProfilePressVendor\\Pelago\\Emogrifier\\HtmlProcessor\\HtmlPruner' => __DIR__ . '/..' . '/pelago/emogrifier/src/HtmlProcessor/HtmlPruner.php',
         'ProfilePressVendor\\Pelago\\Emogrifier\\Utilities\\ArrayIntersector' => __DIR__ . '/..' . '/pelago/emogrifier/src/Utilities/ArrayIntersector.php',
         'ProfilePressVendor\\Pelago\\Emogrifier\\Utilities\\CssConcatenator' => __DIR__ . '/..' . '/pelago/emogrifier/src/Utilities/CssConcatenator.php',
+        'ProfilePressVendor\\Psr\\Clock\\ClockInterface' => __DIR__ . '/..' . '/psr/clock/src/ClockInterface.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\CSSList\\CSSBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\CSSList\\CSSList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSList.php',
@@ -662,9 +675,9 @@ class ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit0a8532f9c34cb74e4ef0f6cf8dd1e755::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita6255288c7c2d3d1ad657731500aedfe::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita6255288c7c2d3d1ad657731500aedfe::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInita6255288c7c2d3d1ad657731500aedfe::$classMap;
 
         }, null, ClassLoader::class);
     }

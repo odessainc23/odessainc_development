@@ -10,6 +10,7 @@
  */
 namespace ProfilePressVendor\Carbon\Exceptions;
 
+/** @internal */
 interface InvalidArgumentException extends Exception
 {
     //

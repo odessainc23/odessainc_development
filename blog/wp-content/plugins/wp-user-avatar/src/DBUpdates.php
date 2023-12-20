@@ -10,7 +10,7 @@ class DBUpdates
 {
     public static $instance;
 
-    const DB_VER = 9;
+    const DB_VER = 10;
 
     public function init_options()
     {
@@ -61,7 +61,7 @@ class DBUpdates
 
     public function update_routine_1()
     {
-        $a                           = get_option(ExtensionManager::DB_OPTION_NAME);
+        $a                           = get_option(ExtensionManager::DB_OPTION_NAME, []);
         $a[ExtensionManager::PAYPAL] = 'true';
         update_option(ExtensionManager::DB_OPTION_NAME, $a);
     }
@@ -154,6 +154,15 @@ class DBUpdates
         $table = DBTables::coupons_db_table();
 
         $wpdb->query("ALTER TABLE $table ADD COLUMN is_onetime_use enum('true','false') NOT NULL DEFAULT 'false' AFTER coupon_type;");
+    }
+
+    public function update_routine_10()
+    {
+        global $wpdb;
+
+        $table = DBTables::profile_fields_db_table();
+
+        $wpdb->query("ALTER TABLE $table CHANGE options options longtext NULL;");
     }
 
     public static function get_instance()

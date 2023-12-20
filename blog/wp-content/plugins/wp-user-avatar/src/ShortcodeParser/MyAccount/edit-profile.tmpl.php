@@ -55,7 +55,7 @@ $sub_menus = apply_filters('ppress_my_account_settings_sub_menus', ['general' =>
             <?= $success_message ?>
         <?php endif; ?>
 
-        <?php if ( ! empty($this->edit_profile_form_error)) : ?>
+        <?php if ( ! empty($this->edit_profile_form_error) && is_string($this->edit_profile_form_error)) : ?>
 
             <?php if (strpos($this->edit_profile_form_error, 'profilepress-edit-profile-status') !== false) : ?>
                 <?= $this->edit_profile_form_error ?>
@@ -70,7 +70,10 @@ $sub_menus = apply_filters('ppress_my_account_settings_sub_menus', ['general' =>
         <?php
 
         if ('default' !== $custom_edit_profile) {
-            echo do_shortcode(sprintf('[profilepress-edit-profile id="%s"]', absint($custom_edit_profile)), true);
+            echo apply_filters(
+                'ppress_myaccount_edit_profile_custom_form',
+                do_shortcode(sprintf('[profilepress-edit-profile id="%s"]', absint($custom_edit_profile)), true)
+            );
         } elseif ( ! empty($_GET['epview']) && $_GET['epview'] != 'general') {
             do_action('ppress_myaccount_edit_profile_submenu_content', sanitize_text_field($_GET['epview']));
         } else {

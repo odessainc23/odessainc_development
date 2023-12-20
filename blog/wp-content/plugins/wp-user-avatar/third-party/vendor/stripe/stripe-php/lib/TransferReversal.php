@@ -31,6 +31,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $metadata Set of <a href="https://stripe.com/docs/api/metadata">key-value pairs</a> that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
  * @property null|string|\Stripe\Refund $source_refund ID of the refund responsible for the transfer reversal.
  * @property string|\Stripe\Transfer $transfer ID of the transfer that was reversed.
+ * @internal
  */
 class TransferReversal extends ApiResource
 {

@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Component\Translation\TranslatorBagInterface;
  * Filters domains and locales between the Translator config values and those specific to each provider.
  *
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
+ * @internal
  */
 class FilteringProvider implements ProviderInterface
 {

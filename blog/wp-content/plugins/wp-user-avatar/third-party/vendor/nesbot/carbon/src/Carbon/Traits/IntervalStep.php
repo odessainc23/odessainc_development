@@ -16,6 +16,7 @@ use ProfilePressVendor\Carbon\CarbonInterface;
 use Closure;
 use DateTimeImmutable;
 use DateTimeInterface;
+/** @internal */
 trait IntervalStep
 {
     /**

@@ -45,6 +45,11 @@ $success_message = apply_filters('ppress_password_change_confirmation_message', 
 
 
                 <div class="profilepress-myaccount-form-field">
+                    <div id="pp-pass-strength-result"><?php _e('Strength indicator', 'wp-user-avatar'); ?></div>
+                </div>
+
+
+                <div class="profilepress-myaccount-form-field">
                     <input name="submit-form" id="submit-form" type="submit" value="<?= esc_html__('Change password', 'wp-user-avatar') ?>">
                 </div>
             </div>

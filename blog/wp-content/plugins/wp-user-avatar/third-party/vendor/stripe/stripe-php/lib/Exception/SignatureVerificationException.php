@@ -5,6 +5,7 @@ namespace ProfilePressVendor\Stripe\Exception;
 /**
  * SignatureVerificationException is thrown when the signature verification for
  * a webhook fails.
+ * @internal
  */
 class SignatureVerificationException extends \Exception implements ExceptionInterface
 {

@@ -2170,6 +2170,10 @@ textarea.wp-editor-area {
     margin: 0 !important;
 }
 
+.ppress_payment_methods.remove_white_styling #post-body-content textarea {
+    min-height: 100px;
+}
+
 /* Tax rates UI */
 .ppress_taxes .ppress-tax-rates-wrap .ppress-tax-rate-table-actions {
     width: 1.5em !important;

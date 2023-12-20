@@ -84,7 +84,7 @@ class LoginFormTag extends FormProcessor
 
         $login_structure = do_shortcode($login_structure);
 
-        $referrer_url = wp_get_referer() ? wp_get_referer() : '';
+        $referrer_url = wp_get_referer() ?: '';
 
         if ( ! empty($_REQUEST['redirect_to'])) {
             $redirect = rawurldecode($_REQUEST['redirect_to']);

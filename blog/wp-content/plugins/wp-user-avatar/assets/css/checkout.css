@@ -23,6 +23,7 @@
 
 .ppress-checkout__form p {
     margin: 0 0 5px;
+    padding: 0;
 }
 
 .ppress-checkout__form .ppress-main-checkout-form__block .ppress-main-checkout-form__social_login_wrap {
@@ -318,7 +319,7 @@
     line-height: 20px;
     border-radius: 6px;
     box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    height:auto;
+    height: auto;
 }
 
 .ppress-checkout__form .ppress-checkout-section #ppress-stripe-card-element {
@@ -343,6 +344,7 @@
     -webkit-appearance: none;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .ppress-checkout__form .ppress-checkout-section.ppress-checkout_main input[type=submit]:disabled {
@@ -359,6 +361,7 @@
     width: 16px;
     color: rgb(79, 70, 229);
     padding: 0 5px;
+    margin: 0;
 }
 
 .ppress-checkout__form .ppress-checkout-section input[type=checkbox] {
@@ -477,6 +480,7 @@
     cursor: pointer;
     width: calc(100% - 30px);
     line-height: 1;
+    margin: 0;
 }
 
 .ppress-checkout__form .ppress-checkout-form__payment_method__icons {

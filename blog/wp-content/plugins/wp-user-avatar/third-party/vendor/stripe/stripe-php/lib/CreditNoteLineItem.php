@@ -18,6 +18,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string $type The type of the credit note line item, one of <code>invoice_line_item</code> or <code>custom_line_item</code>. When the type is <code>invoice_line_item</code> there is an additional <code>invoice_line_item</code> property on the resource the value of which is the id of the credited line item on the invoice.
  * @property null|int $unit_amount The cost of each unit of product being credited.
  * @property null|string $unit_amount_decimal Same as <code>unit_amount</code>, but contains a decimal value with at most 12 decimal places.
+ * @internal
  */
 class CreditNoteLineItem extends ApiResource
 {

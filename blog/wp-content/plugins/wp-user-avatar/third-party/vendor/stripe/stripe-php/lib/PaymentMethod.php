@@ -48,6 +48,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string $type The type of the PaymentMethod. An additional hash is included on the PaymentMethod with a name matching this value. It contains additional information specific to the PaymentMethod type.
  * @property \Stripe\StripeObject $us_bank_account
  * @property \Stripe\StripeObject $wechat_pay
+ * @internal
  */
 class PaymentMethod extends ApiResource
 {

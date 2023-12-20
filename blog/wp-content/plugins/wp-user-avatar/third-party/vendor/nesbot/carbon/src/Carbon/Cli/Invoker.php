@@ -10,6 +10,7 @@
  */
 namespace ProfilePressVendor\Carbon\Cli;
 
+/** @internal */
 class Invoker
 {
     public const CLI_CLASS_NAME = 'ProfilePressVendor\\Carbon\\Cli';

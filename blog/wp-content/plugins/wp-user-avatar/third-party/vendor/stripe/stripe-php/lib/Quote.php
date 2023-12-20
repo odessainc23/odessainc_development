@@ -43,6 +43,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string|\Stripe\TestHelpers\TestClock $test_clock ID of the test clock this quote belongs to.
  * @property \Stripe\StripeObject $total_details
  * @property null|\Stripe\StripeObject $transfer_data The account (if any) the payments will be attributed to for tax reporting, and where funds from each payment will be transferred to for each of the invoices.
+ * @internal
  */
 class Quote extends ApiResource
 {

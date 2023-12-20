@@ -18,6 +18,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string $currency Three-letter <a href="https://www.iso.org/iso-4217-currency-codes.html">ISO currency code</a>, in lowercase. Must be a <a href="https://stripe.com/docs/currencies">supported currency</a>.
  * @property string $funding_type The <code>funding_type</code> of the returned instructions
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
+ * @internal
  */
 class FundingInstructions extends ApiResource
 {

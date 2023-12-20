@@ -307,6 +307,12 @@ class GeneralSettings extends AbstractSettingsPage
                         'label'       => esc_html__('Login with Email or Username', 'wp-user-avatar'),
                         'description' => esc_html__('By default, WordPress allows users to log in using either an email address or username. This setting allows you to restrict logins to only accept email addresses or usernames.', 'wp-user-avatar')
                     ],
+                    'disable_concurrent_logins'     => [
+                        'type'           => 'checkbox',
+                        'checkbox_label' => esc_html__('Check to Disable', 'wp-user-avatar'),
+                        'label'          => esc_html__('Disable Concurrent Logins', 'wp-user-avatar'),
+                        'description'    => esc_html__('Prevent users from being logged into the same account from multiple computers at the same time.', 'wp-user-avatar')
+                    ],
                 ]
             ]),
             'my_account_settings'       => apply_filters('ppress_my_account_settings_page', [
@@ -492,6 +498,15 @@ class GeneralSettings extends AbstractSettingsPage
                         esc_html__('Block users from registering and checking out with email addresses in this list. You can use full email address (%1$suser@email.com%2$s), domains (%1$s@example.com%2$s), or TLDs (%1$s.gov%2$s). Use a new line for each item.', 'wp-user-avatar'),
                         '<code>', '</code>'
                     )
+                ],
+                'allowed_email_addresses'           => [
+                    'type'        => 'textarea',
+                    'placeholder' => "hello@example.com" . "\r\n" . '@domain.com' . "\r\n" . '.gov',
+                    'label'       => esc_html__('Allowed Email Addresses', 'wp-user-avatar'),
+                    'description' => sprintf(
+                        esc_html__('Ensures users with email addresses in this list are not blocked from registering and checking out. You can use full email address (%1$suser@email.com%2$s), domains (%1$s@example.com%2$s), or TLDs (%1$s.gov%2$s). Use a new line for each item.', 'wp-user-avatar'),
+                        '<code>', '</code>'
+                    )
                 ]
             ])
         ];
@@ -608,6 +623,9 @@ class GeneralSettings extends AbstractSettingsPage
     {
         $config = apply_filters('ppress_settings_custom_sanitize', [
             'global_restricted_access_message' => function ($val) {
+                return wp_kses_post($val);
+            },
+            'bank_transfer_account_details'    => function ($val) {
                 return wp_kses_post($val);
             },
             'uec_unactivated_error'            => function ($val) {

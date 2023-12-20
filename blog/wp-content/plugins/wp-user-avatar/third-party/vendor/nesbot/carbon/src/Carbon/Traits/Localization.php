@@ -21,13 +21,16 @@ use ProfilePressVendor\Symfony\Component\Translation\TranslatorBagInterface;
 use ProfilePressVendor\Symfony\Component\Translation\TranslatorInterface;
 use ProfilePressVendor\Symfony\Contracts\Translation\LocaleAwareInterface;
 use ProfilePressVendor\Symfony\Contracts\Translation\TranslatorInterface as ContractsTranslatorInterface;
+// @codeCoverageIgnoreStart
 if (\interface_exists('ProfilePressVendor\\Symfony\\Contracts\\Translation\\TranslatorInterface') && !\interface_exists('ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatorInterface')) {
     \class_alias('ProfilePressVendor\\Symfony\\Contracts\\Translation\\TranslatorInterface', 'ProfilePressVendor\\Symfony\\Component\\Translation\\TranslatorInterface');
 }
+// @codeCoverageIgnoreEnd
 /**
  * Trait Localization.
  *
  * Embed default and locale translators and translation base methods.
+ * @internal
  */
 trait Localization
 {

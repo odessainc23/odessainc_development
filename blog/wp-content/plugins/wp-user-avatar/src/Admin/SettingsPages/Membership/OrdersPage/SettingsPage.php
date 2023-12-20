@@ -9,20 +9,16 @@ use ProfilePress\Core\Membership\CheckoutFields;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
 use ProfilePress\Core\Membership\Models\Coupon\CouponUnit;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
-use ProfilePress\Core\Membership\Models\Order\OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
 use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
-use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
+use ProfilePress\Core\Membership\PaymentMethods\BankTransfer\BankTransfer;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods;
-use ProfilePress\Core\Membership\PaymentMethods\StoreGateway;
-use ProfilePress\Core\Membership\Repositories\OrderRepository;
 use ProfilePress\Core\Membership\Repositories\PlanRepository;
-use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 use ProfilePress\Core\Membership\Services\Calculator;
 use ProfilePress\Core\Membership\Services\CouponService;
 use ProfilePress\Core\Membership\Services\OrderService;
-use ProfilePress\Core\Membership\Services\SubscriptionService;
 use ProfilePress\Core\Membership\Services\TaxService;
 use ProfilePress\Custom_Settings_Page_Api;
 use ProfilePressVendor\Carbon\CarbonImmutable;
@@ -345,7 +341,17 @@ class SettingsPage extends AbstractSettingsPage
         $order_id = $order->save();
 
         if ($order_id && OrderStatus::PENDING == $old_status && OrderStatus::COMPLETED == $order->status) {
+
             $order->complete_order();
+
+            if ($order->payment_method == BankTransfer::get_instance()->get_id()) {
+
+                $sub = SubscriptionFactory::fromId($order->subscription_id);
+
+                if ($sub && $sub->exists()) {
+                    $sub->has_trial() ? $sub->enable_subscription_trial() : $sub->activate_subscription();
+                }
+            }
         }
 
         wp_safe_redirect(add_query_arg(['ppress_order_action' => 'edit', 'id' => $order_id, 'saved' => 'true'], PPRESS_MEMBERSHIP_ORDERS_SETTINGS_PAGE));
@@ -367,12 +373,24 @@ class SettingsPage extends AbstractSettingsPage
 
         $order_data = ppressPOST_var('ppress_orders', []);
 
+        if (empty($order_data['plan'])) {
+            wp_die(__('No plan was selected. Please try again.', 'wp-user-avatar'), __('Error', 'wp-user-avatar'), array('response' => 403));
+        }
+
+        if (empty($order_data['customer'])) {
+            wp_die(__('No customer was selected. Please try again.', 'wp-user-avatar'), __('Error', 'wp-user-avatar'), array('response' => 403));
+        }
+
         $date_created = current_time('mysql');
 
         if ( ! empty($order_data['order_date'])) {
             $date_created = CarbonImmutable::parse(sanitize_text_field($order_data['order_date']), wp_timezone())
                                            ->setTimeFromTimeString(CarbonImmutable::now(wp_timezone())->toTimeString())
                                            ->utc()->toDateTimeString();
+        }
+
+        if (empty($order_data['amount']) || Calculator::init($order_data['amount'])->isNegativeOrZero()) {
+            $order_data['amount'] = ppress_get_plan($order_data['plan'])->get_price();
         }
 
         $response = ppress_subscribe_user_to_plan(

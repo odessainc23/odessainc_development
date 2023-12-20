@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Sabberworm\CSS\Parsing;
 
 use ProfilePressVendor\Sabberworm\CSS\Comment\Comment;
 use ProfilePressVendor\Sabberworm\CSS\Settings;
+/** @internal */
 class ParserState
 {
     /**

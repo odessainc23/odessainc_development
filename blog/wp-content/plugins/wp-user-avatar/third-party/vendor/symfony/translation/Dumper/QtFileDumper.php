@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * QtFileDumper generates ts files from a message catalogue.
  *
  * @author Benjamin Eberlei <kontakt@beberlei.de>
+ * @internal
  */
 class QtFileDumper extends FileDumper
 {

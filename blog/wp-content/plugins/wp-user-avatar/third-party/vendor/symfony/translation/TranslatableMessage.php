@@ -14,6 +14,7 @@ use ProfilePressVendor\Symfony\Contracts\Translation\TranslatableInterface;
 use ProfilePressVendor\Symfony\Contracts\Translation\TranslatorInterface;
 /**
  * @author Nate Wiebe <nate@northern.co>
+ * @internal
  */
 class TranslatableMessage implements TranslatableInterface
 {

@@ -29,6 +29,7 @@ namespace ProfilePressVendor\Stripe\Issuing;
  * @property string $status Whether authorizations can be approved on this card.
  * @property string $type The type of the card.
  * @property null|\Stripe\StripeObject $wallets Information relating to digital wallets (like Apple Pay and Google Pay).
+ * @internal
  */
 class Card extends \ProfilePressVendor\Stripe\ApiResource
 {

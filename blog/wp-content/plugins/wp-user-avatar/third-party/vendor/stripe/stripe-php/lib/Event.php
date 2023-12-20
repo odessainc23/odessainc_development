@@ -51,6 +51,7 @@ namespace ProfilePressVendor\Stripe;
  * @property int $pending_webhooks Number of webhooks that have yet to be successfully delivered (i.e., to return a 20x response) to the URLs you've specified.
  * @property null|\Stripe\StripeObject $request Information on the API request that instigated the event.
  * @property string $type Description of the event (e.g., <code>invoice.created</code> or <code>charge.refunded</code>).
+ * @internal
  */
 class Event extends ApiResource
 {

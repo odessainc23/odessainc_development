@@ -20,6 +20,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $metadata Set of <a href="https://stripe.com/docs/api/metadata">key-value pairs</a> that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
  * @property \Stripe\StripeObject $restrictions
  * @property int $times_redeemed Number of times this promotion code has been used.
+ * @internal
  */
 class PromotionCode extends ApiResource
 {

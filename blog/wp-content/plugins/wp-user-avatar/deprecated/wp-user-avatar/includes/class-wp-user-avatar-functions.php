@@ -79,13 +79,13 @@ class WP_User_Avatar_Functions
 
             $gravatar = 'https://www.gravatar.com/avatar/' . $hash . '?d=404';
 
-            $data = wp_cache_get($hash);
+            $data = get_transient($hash);
 
             if (false === $data) {
                 $response = wp_remote_head($gravatar);
                 $data     = is_wp_error($response) ? 'not200' : $response['response']['code'];
 
-                wp_cache_set($hash, $data, "", MINUTE_IN_SECONDS);
+                set_transient($hash, $data, HOUR_IN_SECONDS);
             }
 
             return $data == '200';
@@ -273,7 +273,7 @@ class WP_User_Avatar_Functions
         }
 
         // User with no WPUA uses get_avatar
-        $avatar = get_avatar($id_or_email, $get_size,'','', ['ppress-full' => $original]);
+        $avatar = get_avatar($id_or_email, $get_size, '', '', ['ppress-full' => $original]);
         // Remove width and height for non-numeric sizes
         if (in_array($size, array('original', 'large', 'medium', 'thumbnail'))) {
             $avatar = preg_replace('/(width|height)=\"\d*\"\s/', "", $avatar);

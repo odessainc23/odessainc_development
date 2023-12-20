@@ -8,6 +8,7 @@ namespace ProfilePressVendor\Stripe\Service\BillingPortal;
  *
  * @property ConfigurationService $configurations
  * @property SessionService $sessions
+ * @internal
  */
 class BillingPortalServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

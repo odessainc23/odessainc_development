@@ -11,6 +11,7 @@ namespace ProfilePressVendor\Stripe\Service;
  * 1. Expose properties for all services through the `__get()` magic method.
  * 2. Lazily initialize each service instance the first time the property for
  *    a given service is used.
+ * @internal
  */
 abstract class AbstractServiceFactory
 {
