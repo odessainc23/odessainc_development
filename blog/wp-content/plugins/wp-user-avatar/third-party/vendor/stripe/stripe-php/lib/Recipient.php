@@ -30,6 +30,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string|\Stripe\Account $rolled_back_from
  * @property string $type Type of the recipient, one of <code>individual</code> or <code>corporation</code>.
  * @property bool $verified Whether the recipient has been verified. This field is non-standard, and maybe removed in the future
+ * @internal
  */
 class Recipient extends ApiResource
 {

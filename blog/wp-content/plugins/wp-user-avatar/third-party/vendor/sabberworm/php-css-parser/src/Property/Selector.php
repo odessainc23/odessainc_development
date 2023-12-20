@@ -5,6 +5,7 @@ namespace ProfilePressVendor\Sabberworm\CSS\Property;
 /**
  * Class representing a single CSS selector. Selectors have to be split by the comma prior to being passed into this
  * class.
+ * @internal
  */
 class Selector
 {

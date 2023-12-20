@@ -7,6 +7,7 @@ use ProfilePressVendor\Sabberworm\CSS\Parsing\SourceException;
 use ProfilePressVendor\Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use ProfilePressVendor\Sabberworm\CSS\Parsing\UnexpectedTokenException;
 use ProfilePressVendor\Sabberworm\CSS\Renderable;
+/** @internal */
 abstract class Value implements Renderable
 {
     /**

@@ -21,6 +21,7 @@ use ProfilePressVendor\Symfony\Component\CssSelector\XPath\Translator;
  * selectors to XPath expressions.
  *
  * @author Christophe Coevoet <stof@notk.org>
+ * @internal
  */
 class CssSelectorConverter
 {

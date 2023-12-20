@@ -197,28 +197,6 @@ trait CheckoutTrait
     }
 
     /**
-     * @param $user_id
-     *
-     * @return int|\WP_Error
-     */
-    public function create_customer($user_id)
-    {
-        $customer = CustomerFactory::fromUserId($user_id);
-
-        $customer_id = $customer->get_id();
-
-        if ( ! $customer->exists()) {
-            $customer->user_id = $user_id;
-            $customer_id       = $customer->save();
-            if ( ! $customer_id) {
-                return new \WP_Error('customer_creation_failure', esc_html__('Unable to create customer. Please try again', 'wp-user-avatar'));
-            }
-        }
-
-        return $customer_id;
-    }
-
-    /**
      * @return int|\WP_Error
      */
     public function register_update_user()
@@ -410,7 +388,7 @@ trait CheckoutTrait
             if (is_wp_error($user_id)) return $user_id;
         }
 
-        $customer_id = $this->create_customer($user_id);
+        $customer_id = ppress_create_customer($user_id);
 
         // --------START ---------   register custom field ----------------------//
 

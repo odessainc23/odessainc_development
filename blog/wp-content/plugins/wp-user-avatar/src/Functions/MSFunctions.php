@@ -865,6 +865,28 @@ function ppress_set_time_limit($ignore_user_abort = true, $time_limit = 21600)
 }
 
 /**
+ * @param $user_id
+ *
+ * @return int|WP_Error
+ */
+function ppress_create_customer($user_id)
+{
+    $customer = CustomerFactory::fromUserId($user_id);
+
+    $customer_id = $customer->get_id();
+
+    if ( ! $customer->exists()) {
+        $customer->user_id = $user_id;
+        $customer_id       = $customer->save();
+        if ( ! $customer_id) {
+            return new WP_Error('customer_creation_failure', esc_html__('Unable to create customer. Please try again', 'wp-user-avatar'));
+        }
+    }
+
+    return $customer_id;
+}
+
+/**
  * Subscribe a customer to a membership plan while creating the corresponding order and subscription entity.
  *
  * @param int $plan_id

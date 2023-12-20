@@ -36,6 +36,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string|\Stripe\TestHelpers\TestClock $test_clock ID of the test clock this invoice item belongs to.
  * @property null|int $unit_amount Unit amount (in the <code>currency</code> specified) of the invoice item.
  * @property null|string $unit_amount_decimal Same as <code>unit_amount</code>, but contains a decimal value with at most 12 decimal places.
+ * @internal
  */
 class InvoiceItem extends ApiResource
 {

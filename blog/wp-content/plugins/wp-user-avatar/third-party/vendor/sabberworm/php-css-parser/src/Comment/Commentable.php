@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Sabberworm\CSS\Comment;
 
+/** @internal */
 interface Commentable
 {
     /**

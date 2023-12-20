@@ -1098,7 +1098,7 @@ class FieldsShortcodeCallback
         $value      = esc_html__('Sign Up', 'wp-user-avatar');
 
         if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
-            $value = esc_html__('Save Changes', 'wp-user-avatar');;
+            $value = esc_html__('Save Changes', 'wp-user-avatar');
         }
 
         $atts          = apply_filters('ppress_' . $this->form_name . '_submit_field_atts', $this->valid_field_atts(ppress_normalize_attributes($atts)));

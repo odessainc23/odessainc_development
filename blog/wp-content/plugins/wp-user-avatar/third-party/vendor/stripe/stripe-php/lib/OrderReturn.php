@@ -21,6 +21,7 @@ namespace ProfilePressVendor\Stripe;
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property null|string|\Stripe\Order $order The order that this return includes items from.
  * @property null|string|\Stripe\Refund $refund The ID of the refund issued for this return.
+ * @internal
  */
 class OrderReturn extends ApiResource
 {

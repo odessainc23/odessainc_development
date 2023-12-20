@@ -29,7 +29,13 @@ class Checker
 
             if ( ! empty($roles)) {
 
-                $user_roles = wp_get_current_user()->roles;
+                $user = wp_get_current_user();
+
+                $user_roles = $user->roles;
+
+                if (is_array($roles) && in_array('administrator', $roles, true) && is_super_admin($user->ID)) {
+                    return self::fr(false, ...$function_args);
+                }
 
                 if ( ! empty(array_intersect($roles, $user_roles))) return self::fr(false, ...$function_args);
             }

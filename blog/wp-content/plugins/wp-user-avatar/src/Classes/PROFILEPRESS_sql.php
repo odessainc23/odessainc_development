@@ -33,6 +33,35 @@ class PROFILEPRESS_sql
         return ! $insert ? false : $wpdb->insert_id;
     }
 
+    /** @param $meta_key
+     * @param $meta_value
+     * @param $flag
+     *
+     * @return bool|int
+     */
+    public static function update_meta_data($id, $meta_key, $meta_value, $flag = '')
+    {
+        global $wpdb;
+
+        $insert = $wpdb->update(
+            Base::meta_data_db_table(),
+            [
+                'meta_key'   => $meta_key,
+                'meta_value' => serialize($meta_value),
+                'flag'       => $flag,
+            ],
+            ['id' => $id],
+            [
+                '%s',
+                '%s',
+                '%s',
+            ],
+            ['%d']
+        );
+
+        return ! $insert ? false : $wpdb->insert_id;
+    }
+
     /**
      * @param $meta_id
      * @param $meta_key
@@ -82,6 +111,35 @@ class PROFILEPRESS_sql
         $sql = "SELECT * FROM $table WHERE meta_key = %s";
 
         $result = $wpdb->get_results($wpdb->prepare($sql, $meta_key), 'ARRAY_A');
+
+        if (empty($result)) return false;
+
+        $output = [];
+        foreach ($result as $key => $meta) {
+            $output[$key] = array_reduce(array_keys($meta), function ($carry, $item) use ($meta) {
+                $carry[$item] = ($item == 'meta_value') ? unserialize($meta[$item], ['allowed_classes' => false]) : $meta[$item];
+
+                return $carry;
+            });
+        }
+
+        return $output;
+    }
+
+    /**
+     * @param $id
+     *
+     * @return array|false
+     */
+    public static function get_meta_data_by_id($id)
+    {
+        global $wpdb;
+
+        $table = Base::meta_data_db_table();
+
+        $sql = "SELECT * FROM $table WHERE id = %d";
+
+        $result = $wpdb->get_results($wpdb->prepare($sql, $id), 'ARRAY_A');
 
         if (empty($result)) return false;
 

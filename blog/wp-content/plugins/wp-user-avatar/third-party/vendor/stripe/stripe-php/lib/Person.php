@@ -47,6 +47,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $requirements Information about the requirements for this person, including what information needs to be collected, and by when.
  * @property bool $ssn_last_4_provided Whether the last four digits of the person's Social Security number have been provided (U.S. only).
  * @property \Stripe\StripeObject $verification
+ * @internal
  */
 class Person extends ApiResource
 {

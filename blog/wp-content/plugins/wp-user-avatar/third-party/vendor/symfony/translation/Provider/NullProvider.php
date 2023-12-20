@@ -14,6 +14,7 @@ use ProfilePressVendor\Symfony\Component\Translation\TranslatorBag;
 use ProfilePressVendor\Symfony\Component\Translation\TranslatorBagInterface;
 /**
  * @author Mathieu Santostefano <msantostefano@protonmail.com>
+ * @internal
  */
 class NullProvider implements ProviderInterface
 {

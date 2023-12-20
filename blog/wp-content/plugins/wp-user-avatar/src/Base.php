@@ -22,6 +22,7 @@ use ProfilePress\Core\Admin\SettingsPages\Membership\PlansPage\SettingsPage as P
 use ProfilePress\Core\Admin\SettingsPages\Membership\SubscriptionsPage\SettingsPage as SubscriptionsPageSettingsPage;
 use ProfilePress\Core\Admin\SettingsPages\ToolsSettingsPage;
 use ProfilePress\Core\Classes\BlockRegistrations;
+use ProfilePress\Core\Classes\DisableConcurrentLogins;
 use ProfilePress\Core\Classes\GlobalSiteAccess;
 use ProfilePress\Core\ContentProtection;
 use ProfilePress\Core\Admin\SettingsPages\EmailSettings\DefaultTemplateCustomizer;
@@ -160,6 +161,7 @@ class Base extends DBTables
         UserAvatar::get_instance();
         ModifyRedirectDefaultLinks::get_instance();
         UsernameEmailRestrictLogin::get_instance();
+        DisableConcurrentLogins::get_instance();
         BuddyPressBbPress::get_instance();
         AjaxHandler::get_instance();
         ShortcodeParser\Init::get_instance();

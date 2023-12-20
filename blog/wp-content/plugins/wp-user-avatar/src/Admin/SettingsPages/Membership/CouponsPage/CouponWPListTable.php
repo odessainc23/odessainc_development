@@ -11,11 +11,11 @@ class CouponWPListTable extends \WP_List_Table
 {
     public function __construct()
     {
-        parent::__construct(array(
+        parent::__construct([
             'singular' => 'ppress-coupon-code',
             'plural'   => 'ppress-coupon-codes',
             'ajax'     => false
-        ));
+        ]);
     }
 
     public function no_items()
@@ -165,7 +165,7 @@ class CouponWPListTable extends \WP_List_Table
 
         $this->process_bulk_action();
 
-        $per_page = $this->get_items_per_page('coupons_per_page', 10);;
+        $per_page = $this->get_items_per_page('coupons_per_page', 10);
         $current_page = $this->get_pagenum();
         $total_items  = $this->record_count();
 
@@ -210,9 +210,6 @@ class CouponWPListTable extends \WP_List_Table
         $coupon_id = absint(ppress_var($_GET, 'id', 0));
 
         $couponObj = CouponFactory::fromId($coupon_id);
-
-        // Bail if user is not an admin or without admin privileges.
-        if ( ! current_user_can('manage_options')) return;
 
         if ('deactivate' === $this->current_action()) {
 

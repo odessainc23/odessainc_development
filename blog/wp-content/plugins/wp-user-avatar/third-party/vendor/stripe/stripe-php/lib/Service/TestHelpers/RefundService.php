@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\TestHelpers;
 
+/** @internal */
 class RefundService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

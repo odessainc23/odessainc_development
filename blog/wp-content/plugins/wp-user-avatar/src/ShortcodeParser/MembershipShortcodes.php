@@ -139,7 +139,7 @@ class MembershipShortcodes
 
         if ( ! $planObj->is_active()) {
             do_action('ppress_membership_checkout_invalid_plan');
-            echo '<p>' . esc_html__('Invalid subscription plan.', 'wp-user-avatar') . '</p>';
+            echo '<p>' . esc_html__('Invalid membership plan.', 'wp-user-avatar') . '</p>';
 
             return;
         }

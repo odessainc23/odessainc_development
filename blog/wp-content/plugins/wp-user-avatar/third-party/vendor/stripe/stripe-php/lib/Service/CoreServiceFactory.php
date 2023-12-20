@@ -64,6 +64,7 @@ namespace ProfilePressVendor\Stripe\Service;
  * @property TopupService $topups
  * @property TransferService $transfers
  * @property WebhookEndpointService $webhookEndpoints
+ * @internal
  */
 class CoreServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

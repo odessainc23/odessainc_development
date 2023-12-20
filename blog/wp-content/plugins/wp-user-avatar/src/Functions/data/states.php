@@ -1998,9 +1998,12 @@ return array(
         'WV' => __('West Virginia', 'wp-user-avatar'),
         'WI' => __('Wisconsin', 'wp-user-avatar'),
         'WY' => __('Wyoming', 'wp-user-avatar'),
+        'AS' => __('American Samoa', 'wp-user-avatar'),
         'AA' => __('Armed Forces (AA)', 'wp-user-avatar'),
         'AE' => __('Armed Forces (AE)', 'wp-user-avatar'),
         'AP' => __('Armed Forces (AP)', 'wp-user-avatar'),
+        'PW' => __('Palau', 'wp-user-avatar'),
+        'PR' => __('Puerto Rico', 'wp-user-avatar'),
     ),
     'UY' => array( // Uruguayan states.
         'UY-AR' => __('Artigas', 'wp-user-avatar'),

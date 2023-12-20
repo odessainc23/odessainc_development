@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Sabberworm\CSS\Value;
 
+/** @internal */
 class RuleValueList extends ValueList
 {
     /**

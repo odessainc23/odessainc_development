@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Stripe;
 
 /**
  * Interface for a Stripe client.
+ * @internal
  */
 interface BaseStripeClientInterface
 {

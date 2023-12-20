@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\MissingRequiredOp
 /**
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Oskar Stark <oskarstark@googlemail.com>
+ * @internal
  */
 final class Dsn
 {
@@ -30,14 +31,14 @@ final class Dsn
     {
         $this->originalDsn = $dsn;
         if (\false === ($parsedDsn = \parse_url($dsn))) {
-            throw new InvalidArgumentException(\sprintf('The "%s" translation provider DSN is invalid.', $dsn));
+            throw new InvalidArgumentException('The translation provider DSN is invalid.');
         }
         if (!isset($parsedDsn['scheme'])) {
-            throw new InvalidArgumentException(\sprintf('The "%s" translation provider DSN must contain a scheme.', $dsn));
+            throw new InvalidArgumentException('The translation provider DSN must contain a scheme.');
         }
         $this->scheme = $parsedDsn['scheme'];
         if (!isset($parsedDsn['host'])) {
-            throw new InvalidArgumentException(\sprintf('The "%s" translation provider DSN must contain a host (use "default" by default).', $dsn));
+            throw new InvalidArgumentException('The translation provider DSN must contain a host (use "default" by default).');
         }
         $this->host = $parsedDsn['host'];
         $this->user = '' !== ($parsedDsn['user'] ?? '') ? \urldecode($parsedDsn['user']) : null;

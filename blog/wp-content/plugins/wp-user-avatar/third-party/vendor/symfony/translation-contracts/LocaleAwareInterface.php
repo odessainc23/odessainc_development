@@ -10,6 +10,7 @@
  */
 namespace ProfilePressVendor\Symfony\Contracts\Translation;
 
+/** @internal */
 interface LocaleAwareInterface
 {
     /**

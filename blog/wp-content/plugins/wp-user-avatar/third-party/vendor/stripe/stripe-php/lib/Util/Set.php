@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Stripe\Util;
 
 use ArrayIterator;
 use IteratorAggregate;
+/** @internal */
 class Set implements IteratorAggregate
 {
     private $_elts;

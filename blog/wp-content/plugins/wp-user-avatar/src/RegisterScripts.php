@@ -43,7 +43,7 @@ class RegisterScripts
     function public_css()
     {
         $suffix = self::asset_suffix();
-        //wp_enqueue_style('ppress-frontend', PPRESS_ASSETS_URL . "/css/frontend{$suffix}.css", false, PPRESS_VERSION_NUMBER);
+        wp_enqueue_style('ppress-frontend', PPRESS_ASSETS_URL . "/css/frontend{$suffix}.css", false, PPRESS_VERSION_NUMBER);
         wp_enqueue_style('ppress-flatpickr', PPRESS_ASSETS_URL . '/flatpickr/flatpickr.min.css', false, PPRESS_VERSION_NUMBER);
         wp_enqueue_style('ppress-select2', PPRESS_ASSETS_URL . '/select2/select2.min.css');
     }
@@ -78,6 +78,11 @@ class RegisterScripts
             ppress_post_content_has_shortcode('profilepress-my-account')
         ) {
             wp_enqueue_script('password-strength-meter');
+
+            // wp automatically localize pwsL10n object on the frontend for usage if password strength meter is enqueued.
+            wp_localize_script('password-strength-meter', 'myacPwsL10n', [
+                'disable_enforcement' => apply_filters('ppress_myac_password_meter_enforce_disable', 'false')
+            ]);
         }
 
         wp_enqueue_script('ppress-flatpickr', PPRESS_ASSETS_URL . '/flatpickr/flatpickr.min.js', array('jquery'), PPRESS_VERSION_NUMBER);
@@ -92,6 +97,7 @@ class RegisterScripts
         $frontend_dependencies = apply_filters('ppress_public_js_dependencies', $frontend_dependencies);
 
         wp_enqueue_script('ppress-frontend-script', PPRESS_ASSETS_URL . "/js/frontend.min.js", $frontend_dependencies, PPRESS_VERSION_NUMBER, true);
+
         wp_localize_script('ppress-frontend-script', 'pp_ajax_form', [
             'ajaxurl'                 => admin_url('admin-ajax.php'),
             'confirm_delete'          => esc_html__('Are you sure?', 'wp-user-avatar'),

@@ -18,36 +18,19 @@ use LimitIterator;
 use function array_reduce;
 /**
  * Criteria to filter a {@link Reader} object.
+ * @internal
  */
 class Statement
 {
+    /** @var array<callable> Callables to filter the iterator. */
+    protected array $where = [];
+    /** @var array<callable> Callables to sort the iterator. */
+    protected array $order_by = [];
+    /** iterator Offset. */
+    protected int $offset = 0;
+    /** iterator maximum length. */
+    protected int $limit = -1;
     /**
-     * Callables to filter the iterator.
-     *
-     * @var callable[]
-     */
-    protected $where = [];
-    /**
-     * Callables to sort the iterator.
-     *
-     * @var callable[]
-     */
-    protected $order_by = [];
-    /**
-     * iterator Offset.
-     *
-     * @var int
-     */
-    protected $offset = 0;
-    /**
-     * iterator maximum length.
-     *
-     * @var int
-     */
-    protected $limit = -1;
-    /**
-     * Named Constructor to ease Statement instantiation.
-     *
      * @throws Exception
      */
     public static function create(callable $where = null, int $offset = 0, int $limit = -1) : self
@@ -84,7 +67,7 @@ class Statement
     public function offset(int $offset) : self
     {
         if (0 > $offset) {
-            throw new InvalidArgument(\sprintf('%s() expects the offset to be a positive integer or 0, %s given', __METHOD__, $offset));
+            throw InvalidArgument::dueToInvalidRecordOffset($offset, __METHOD__);
         }
         if ($offset === $this->offset) {
             return $this;
@@ -101,7 +84,7 @@ class Statement
     public function limit(int $limit) : self
     {
         if (-1 > $limit) {
-            throw new InvalidArgument(\sprintf('%s() expects the limit to be greater or equal to -1, %s given', __METHOD__, $limit));
+            throw InvalidArgument::dueToInvalidLimit($limit, __METHOD__);
         }
         if ($limit === $this->limit) {
             return $this;
@@ -113,7 +96,7 @@ class Statement
     /**
      * Execute the prepared Statement on the {@link Reader} object.
      *
-     * @param string[] $header an optional header to use instead of the CSV document header
+     * @param array<string> $header an optional header to use instead of the CSV document header
      */
     public function process(TabularDataReader $tabular_data, array $header = []) : TabularDataReader
     {

@@ -7,6 +7,7 @@ namespace ProfilePressVendor\Stripe;
  *
  * @property string $error
  * @property string $error_description
+ * @internal
  */
 class OAuthErrorObject extends StripeObject
 {

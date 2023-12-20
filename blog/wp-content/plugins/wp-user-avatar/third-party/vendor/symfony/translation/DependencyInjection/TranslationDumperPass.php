@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\DependencyInjection\ContainerBuilder;
 use ProfilePressVendor\Symfony\Component\DependencyInjection\Reference;
 /**
  * Adds tagged translation.formatter services to translation writer.
+ * @internal
  */
 class TranslationDumperPass implements CompilerPassInterface
 {

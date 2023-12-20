@@ -28,6 +28,15 @@ class PostContent
             }
 
         }, -1);
+
+        // Avada theme incompatibility fix
+        add_action('awb_remove_third_party_the_content_changes', function () {
+            remove_filter('the_content', [$this, 'the_content'], PHP_INT_MAX - 1);
+        });
+
+        add_action('awb_readd_third_party_the_content_changes', function () {
+            add_filter('the_content', [$this, 'the_content'], PHP_INT_MAX - 1);
+        });
     }
 
     /**

@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * PhpFileDumper generates PHP files from a message catalogue.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 class PhpFileDumper extends FileDumper
 {

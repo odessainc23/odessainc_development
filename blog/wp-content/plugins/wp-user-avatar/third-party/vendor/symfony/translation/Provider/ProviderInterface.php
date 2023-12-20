@@ -12,6 +12,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Provider;
 
 use ProfilePressVendor\Symfony\Component\Translation\TranslatorBag;
 use ProfilePressVendor\Symfony\Component\Translation\TranslatorBagInterface;
+/** @internal */
 interface ProviderInterface
 {
     public function __toString() : string;

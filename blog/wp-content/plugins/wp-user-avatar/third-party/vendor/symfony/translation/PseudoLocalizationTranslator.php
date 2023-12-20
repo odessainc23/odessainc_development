@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation;
 use ProfilePressVendor\Symfony\Contracts\Translation\TranslatorInterface;
 /**
  * This translator should only be used in a development environment.
+ * @internal
  */
 final class PseudoLocalizationTranslator implements TranslatorInterface
 {

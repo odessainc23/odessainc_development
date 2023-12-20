@@ -113,7 +113,7 @@ class WPListTable extends \WP_List_Table
 
         $by_order_id = ppress_var($_GET, 'by_oid', 0, true);
 
-        $per_page = $this->get_items_per_page('download_logs_per_page', 10);;
+        $per_page = $this->get_items_per_page('download_logs_per_page', 10);
         $current_page = $this->get_pagenum();
         $total_items  = DownloadService::init()->get_download_log_count($by_order_id);
 

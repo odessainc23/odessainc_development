@@ -16,6 +16,7 @@ use ProfilePressVendor\Brick\Math\Internal\Calculator;
  * an integer, or a string representing an arbitrary size integer.
  *
  * @psalm-immutable
+ * @internal
  */
 final class BigInteger extends BigNumber
 {

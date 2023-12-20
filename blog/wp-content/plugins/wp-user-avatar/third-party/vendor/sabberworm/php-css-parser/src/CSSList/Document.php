@@ -12,6 +12,7 @@ use ProfilePressVendor\Sabberworm\CSS\Value\Value;
 /**
  * The root `CSSList` of a parsed file. Contains all top-level CSS contents, mostly declaration blocks,
  * but also any at-rules encountered.
+ * @internal
  */
 class Document extends CSSBlockList
 {

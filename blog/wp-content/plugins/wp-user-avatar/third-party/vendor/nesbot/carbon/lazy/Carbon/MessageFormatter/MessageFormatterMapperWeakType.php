@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Carbon\MessageFormatter;
 use ProfilePressVendor\Symfony\Component\Translation\Formatter\ChoiceMessageFormatterInterface;
 use ProfilePressVendor\Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 if (!\class_exists(LazyMessageFormatter::class, \false)) {
+    /** @internal */
     abstract class LazyMessageFormatter implements MessageFormatterInterface, ChoiceMessageFormatterInterface
     {
         protected abstract function transformLocale(?string $locale) : ?string;

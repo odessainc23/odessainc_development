@@ -64,6 +64,7 @@ namespace ProfilePressVendor\Stripe\Checkout;
  * @property \Stripe\StripeObject $tax_id_collection
  * @property null|\Stripe\StripeObject $total_details Tax and discount details for the computed total amount.
  * @property null|string $url The URL to the Checkout Session. Redirect customers to this URL to take them to Checkout. If you’re using <a href="https://stripe.com/docs/payments/checkout/custom-domains">Custom Domains</a>, the URL will use your subdomain. Otherwise, it’ll use <code>checkout.stripe.com.</code>
+ * @internal
  */
 class Session extends \ProfilePressVendor\Stripe\ApiResource
 {

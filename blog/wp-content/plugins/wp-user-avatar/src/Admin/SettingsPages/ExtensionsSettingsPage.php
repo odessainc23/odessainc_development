@@ -2,7 +2,6 @@
 
 namespace ProfilePress\Core\Admin\SettingsPages;
 
-use ProfilePress\Core\Classes\ExtensionManager;
 use ProfilePress\Core\Classes\ExtensionManager as EM;
 use ProfilePress\Custom_Settings_Page_Api;
 
@@ -17,7 +16,7 @@ class ExtensionsSettingsPage extends AbstractSettingsPage
             add_action('ppress_admin_settings_page_addons', [$this, 'settings_page_function']);
         });
 
-        if ( ! ExtensionManager::is_premium()) {
+        if ( ! EM::is_premium()) {
             add_filter('install_plugins_tabs', [$this, 'add_extension_tab']);
             add_action('install_plugins_ppress_extensions', [$this, 'extension_view']);
         }

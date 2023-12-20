@@ -34,6 +34,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\StripeObject $settings Options for customizing how the account functions within Stripe.
  * @property \Stripe\StripeObject $tos_acceptance
  * @property string $type The Stripe account type. Can be <code>standard</code>, <code>express</code>, or <code>custom</code>.
+ * @internal
  */
 class Account extends ApiResource
 {

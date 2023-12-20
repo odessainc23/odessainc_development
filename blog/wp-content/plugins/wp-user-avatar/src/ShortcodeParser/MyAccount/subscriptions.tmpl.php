@@ -9,7 +9,7 @@ if ( ! defined('ABSPATH')) {
     exit;
 }
 
-if ( ! is_user_logged_in() ) return;
+if ( ! is_user_logged_in()) return;
 
 $current_user_id = get_current_user_id();
 
@@ -70,6 +70,7 @@ $total_pages = ceil(absint($total_subs) / absint($per_page));
                                 <a href="<?php echo esc_url($view_sub_url) ?>" class="ppress-my-account-order-sub-header--actions--link">
                                     <span><?= esc_html__('View Subscription', 'wp-user-avatar') ?></span>
                                 </a>
+                                <?php do_action('ppress_myaccount_subscription_header_actions', $sub); ?>
                             </div>
                         </div>
 

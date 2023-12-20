@@ -31,6 +31,7 @@ namespace ProfilePressVendor\Stripe\BillingPortal;
  * @property null|string $on_behalf_of The account for which the session was created on behalf of. When specified, only subscriptions and invoices with this <code>on_behalf_of</code> account appear in the portal. For more information, see the <a href="https://stripe.com/docs/connect/charges-transfers#on-behalf-of">docs</a>. Use the <a href="https://stripe.com/docs/api/accounts/object#account_object-settings-branding">Accounts API</a> to modify the <code>on_behalf_of</code> account's branding settings, which the portal displays.
  * @property string $return_url The URL to redirect customers to when they click on the portal's link to return to your website.
  * @property string $url The short-lived URL of the session that gives customers access to the customer portal.
+ * @internal
  */
 class Session extends \ProfilePressVendor\Stripe\ApiResource
 {

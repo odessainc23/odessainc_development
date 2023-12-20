@@ -11,6 +11,7 @@ use ProfilePressVendor\Brick\Math\Exception\RoundingNecessaryException;
  * Common interface for arbitrary-precision rational numbers.
  *
  * @psalm-immutable
+ * @internal
  */
 abstract class BigNumber implements \Serializable, \JsonSerializable
 {

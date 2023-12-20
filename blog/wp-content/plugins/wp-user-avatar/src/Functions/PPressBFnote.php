@@ -30,6 +30,8 @@ if ( ! class_exists('\PPressBFnote')) {
                 return;
             }
 
+            if ( ! current_user_can('manage_options')) return;
+
             $url = admin_url();
             update_option('ppressbfnote_dismiss_adnotice_' . $this->this_year, 'true');
 
@@ -45,7 +47,7 @@ if ( ! class_exists('\PPressBFnote')) {
 
             if (ExtensionManager::is_premium()) return;
 
-            if ( ! current_user_can('administrator')) return;
+            if ( ! current_user_can('manage_options')) return;
 
             $now = time();
 

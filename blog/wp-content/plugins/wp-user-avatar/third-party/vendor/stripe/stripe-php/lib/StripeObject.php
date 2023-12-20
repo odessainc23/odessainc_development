@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Stripe;
 
 /**
  * Class StripeObject.
+ * @internal
  */
 class StripeObject implements \ArrayAccess, \Countable, \JsonSerializable
 {

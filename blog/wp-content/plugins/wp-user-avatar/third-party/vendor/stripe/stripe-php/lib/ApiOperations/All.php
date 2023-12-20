@@ -6,6 +6,7 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * Trait for listable resources. Adds a `all()` static method to the class.
  *
  * This trait should only be applied to classes that derive from StripeObject.
+ * @internal
  */
 trait All
 {

@@ -19,6 +19,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogueInterface;
  * Basically, the result contains messages from both catalogues.
  *
  * @author Jean-François Simon <contact@jfsimon.fr>
+ * @internal
  */
 class MergeOperation extends AbstractOperation
 {

@@ -16,6 +16,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|\Stripe\Price $price The price used to generate the line item.
  * @property null|int $quantity The quantity of products being purchased.
  * @property \Stripe\StripeObject[] $taxes The taxes applied to the line item.
+ * @internal
  */
 class LineItem extends ApiResource
 {

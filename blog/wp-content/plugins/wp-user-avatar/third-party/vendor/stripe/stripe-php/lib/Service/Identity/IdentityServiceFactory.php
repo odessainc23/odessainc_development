@@ -8,6 +8,7 @@ namespace ProfilePressVendor\Stripe\Service\Identity;
  *
  * @property VerificationReportService $verificationReports
  * @property VerificationSessionService $verificationSessions
+ * @internal
  */
 class IdentityServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

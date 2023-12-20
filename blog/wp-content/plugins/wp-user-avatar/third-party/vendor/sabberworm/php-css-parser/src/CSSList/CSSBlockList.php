@@ -14,6 +14,7 @@ use ProfilePressVendor\Sabberworm\CSS\Value\ValueList;
  * at-rules.
  *
  * Most `CSSList`s conform to this category but some at-rules (such as `@keyframes`) do not.
+ * @internal
  */
 abstract class CSSBlockList extends CSSList
 {

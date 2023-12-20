@@ -1774,7 +1774,7 @@ function get_the_archive_title() {
 			/* translators: 1: Title prefix. 2: Title. */
 			_x( '%1$s %2$s', 'archive title' ),
 			$prefix,
-			$title
+			'<span>' . $title . '</span>'
 		);
 	}
 
@@ -2622,7 +2622,6 @@ function the_modified_date( $format = '', $before = '', $after = '', $display = 
 	} else {
 		return $the_modified_date;
 	}
-
 }
 
 /**
@@ -4810,7 +4809,6 @@ function register_admin_color_schemes() {
 			'current' => '#fff',
 		)
 	);
-
 }
 
 /**

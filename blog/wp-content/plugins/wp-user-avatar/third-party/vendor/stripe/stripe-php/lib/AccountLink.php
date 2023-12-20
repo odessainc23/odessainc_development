@@ -16,6 +16,7 @@ namespace ProfilePressVendor\Stripe;
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
  * @property int $expires_at The timestamp at which this account link will expire.
  * @property string $url The URL for the account link.
+ * @internal
  */
 class AccountLink extends ApiResource
 {

@@ -31,6 +31,7 @@ namespace ProfilePressVendor\Stripe\Identity;
  * @property \Stripe\StripeObject $selfie Result from a selfie check
  * @property string $type Type of report.
  * @property null|string $verification_session ID of the VerificationSession that created this report.
+ * @internal
  */
 class VerificationReport extends \ProfilePressVendor\Stripe\ApiResource
 {

@@ -20,6 +20,7 @@ use ProfilePressVendor\Illuminate\Events\EventDispatcher;
 use ProfilePressVendor\Illuminate\Support\Carbon as IlluminateCarbon;
 use ProfilePressVendor\Illuminate\Support\Facades\Date;
 use Throwable;
+/** @internal */
 class ServiceProvider extends \ProfilePressVendor\Illuminate\Support\ServiceProvider
 {
     /** @var callable|null */

@@ -604,13 +604,13 @@ class Stripe extends AbstractPaymentMethod
      */
     public function get_order_metadata($order, $subscription)
     {
-        return [
+        return apply_filters('ppress_stripe_order_metadata', [
             'order_id'        => $order->id,
             'order_key'       => $order->order_key,
             'customer_id'     => $order->customer_id,
             'subscription_id' => $subscription->id,
             'caller'          => __CLASS__ . '|' . __METHOD__ . '|' . __LINE__ . '|' . PPRESS_VERSION_NUMBER,
-        ];
+        ], $order, $subscription);
     }
 
     /**
@@ -782,7 +782,7 @@ class Stripe extends AbstractPaymentMethod
                 PaymentHelpers::add_coupon_to_bucket($stripe_coupon['id']);
             }
 
-            $create_session_args = apply_filters('ppress_stripe_create_session_args', $create_session_args, $this);
+            $create_session_args = apply_filters('ppress_stripe_create_session_args', $create_session_args, $this, $customer, $order, $subscription);
 
             if (PaymentHelpers::has_application_fee()) {
 
@@ -899,7 +899,7 @@ class Stripe extends AbstractPaymentMethod
                     $create_subscription_args['coupon'] = $stripe_coupon['id'];
                 }
 
-                $create_subscription_args = apply_filters('ppress_stripe_create_subscription_args', $create_subscription_args, $this);
+                $create_subscription_args = apply_filters('ppress_stripe_create_subscription_args', $create_subscription_args, $this, $customer, $order, $subscription);
 
                 if (PaymentHelpers::has_application_fee()) {
                     $create_subscription_args['application_fee_percent'] = PaymentHelpers::application_fee_percent();
@@ -935,7 +935,7 @@ class Stripe extends AbstractPaymentMethod
                 $create_payment_intent_args['statement_descriptor'] = $statement_descriptor;
             }
 
-            $create_payment_intent_args = apply_filters('ppress_stripe_create_payment_intent_args', $create_payment_intent_args, $this);
+            $create_payment_intent_args = apply_filters('ppress_stripe_create_payment_intent_args', $create_payment_intent_args, $this, $customer, $order, $subscription);
 
             if (PaymentHelpers::has_application_fee()) {
                 $create_payment_intent_args['application_fee_amount'] = PaymentHelpers::application_fee_amount($order->total);

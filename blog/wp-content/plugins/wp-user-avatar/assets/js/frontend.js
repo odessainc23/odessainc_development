@@ -37,6 +37,8 @@ function Frontend() {
         $(document).on('submit', 'form[data-pp-form-submit="signup"]', this.ajax_registration);
         $(document).on('submit', 'form[data-pp-form-submit="passwordreset"]', this.ajax_password_reset);
         $(document).on('submit', 'form[data-pp-form-submit="editprofile"]', this.ajax_edit_profile);
+
+        this.myaccount_password_strength_meter();
     };
 
     this.recaptcha_processing = function () {
@@ -497,6 +499,70 @@ function Frontend() {
 
             elem.height(calcHeight);
             elem.find('.ppress-dpf-cover-add').height(calcHeight);
+        });
+    };
+
+    this.myaccount_password_strength_meter = function () {
+        function checkPasswordStrength($pass1,
+                                       $pass2,
+                                       $strengthResult,
+                                       $submitButton,
+                                       blacklistArray) {
+            var pass1 = $pass1.val();
+            var pass2 = $pass2.val();
+            // Reset the form & meter
+            $submitButton.attr('disabled', 'disabled');
+            $strengthResult.removeClass('short bad good strong');
+            // Extend our blacklist array with those from the inputs & site data
+            blacklistArray = blacklistArray.concat(wp.passwordStrength.userInputDisallowedList());
+            // Get the password strength
+            var strength = wp.passwordStrength.meter(pass1, blacklistArray, pass2);
+            // Add the strength meter results
+            switch (strength) {
+                case 2:
+                    $strengthResult.addClass('bad').html(pwsL10n.bad);
+                    break;
+                case 3:
+                    $strengthResult.addClass('good').html(pwsL10n.good);
+                    break;
+                case 4:
+                    $strengthResult.addClass('strong').html(pwsL10n.strong);
+                    break;
+                case 5:
+                    $strengthResult.addClass('short').html(pwsL10n.mismatch);
+                    break;
+                default:
+                    $strengthResult.addClass('short').html(pwsL10n.short);
+            }
+            // The meter function returns a result even if pass2 is empty,
+            // enable only the submit button if the password is strong and
+            // both passwords are filled up
+            if (myacPwsL10n.disable_enforcement === 'false' && 4 === strength && '' !== pass2.trim()) {
+                $submitButton.removeAttr('disabled');
+            }
+
+            return strength;
+        }
+
+        $(document).on('ready', function () {
+
+            var password1 = $('input[name=password_new]');
+            var password2 = $('input[name=password_confirm_new]');
+            var submitButton = $('input[name=submit-form]');
+            var strengthMeterId = $('#pp-pass-strength-result');
+
+            // Binding to trigger checkPasswordStrength
+            $('body').on('keyup', 'input[name=password_new], input[name=password_confirm_new]',
+                function (event) {
+                    checkPasswordStrength(
+                        password1,         // First password field
+                        password2, // Second password field
+                        strengthMeterId,           // Strength meter
+                        submitButton,           // Submit button
+                        []        // Blacklisted words
+                    );
+                }
+            );
         });
     };
 }

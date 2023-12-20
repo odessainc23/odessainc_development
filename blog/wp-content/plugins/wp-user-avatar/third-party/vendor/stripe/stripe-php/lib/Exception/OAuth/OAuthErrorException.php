@@ -5,6 +5,7 @@ namespace ProfilePressVendor\Stripe\Exception\OAuth;
 /**
  * Implements properties and methods common to all (non-SPL) Stripe OAuth
  * exceptions.
+ * @internal
  */
 abstract class OAuthErrorException extends \ProfilePressVendor\Stripe\Exception\ApiErrorException
 {

@@ -11,6 +11,7 @@
 namespace ProfilePressVendor\Symfony\Component\Translation\Provider;
 
 use ProfilePressVendor\Symfony\Component\Translation\Exception\IncompleteDsnException;
+/** @internal */
 abstract class AbstractProviderFactory implements ProviderFactoryInterface
 {
     public function supports(Dsn $dsn) : bool
@@ -24,7 +25,7 @@ abstract class AbstractProviderFactory implements ProviderFactoryInterface
     protected function getUser(Dsn $dsn) : string
     {
         if (null === ($user = $dsn->getUser())) {
-            throw new IncompleteDsnException('User is not set.', $dsn->getOriginalDsn());
+            throw new IncompleteDsnException('User is not set.', $dsn->getScheme() . '://' . $dsn->getHost());
         }
         return $user;
     }

@@ -14,6 +14,7 @@ namespace ProfilePressVendor\Carbon\PHPStan;
 use ProfilePressVendor\PHPStan\BetterReflection\Reflection;
 use ReflectionMethod;
 if (!\class_exists(AbstractReflectionMacro::class, \false)) {
+    /** @internal */
     abstract class AbstractReflectionMacro extends AbstractMacro
     {
         /**

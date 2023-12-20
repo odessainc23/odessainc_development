@@ -11,9 +11,11 @@
 declare (strict_types=1);
 namespace ProfilePressVendor\League\Csv;
 
+use Exception as PhpException;
 /**
  * League Csv Base Exception.
+ * @internal
  */
-class Exception extends \Exception
+class Exception extends PhpException implements UnableToProcessCsv
 {
 }

@@ -12,27 +12,13 @@ namespace ProfilePressVendor\League\Csv;
 
 /**
  * Defines constants for common BOM sequences.
+ * @internal
  */
 interface ByteSequence
 {
-    /**
-     *  UTF-8 BOM sequence.
-     */
     const BOM_UTF8 = "﻿";
-    /**
-     * UTF-16 BE BOM sequence.
-     */
     const BOM_UTF16_BE = "\xfe\xff";
-    /**
-     * UTF-16 LE BOM sequence.
-     */
     const BOM_UTF16_LE = "\xff\xfe";
-    /**
-     * UTF-32 BE BOM sequence.
-     */
     const BOM_UTF32_BE = "\x00\x00\xfe\xff";
-    /**
-     * UTF-32 LE BOM sequence.
-     */
     const BOM_UTF32_LE = "\xff\xfe\x00\x00";
 }

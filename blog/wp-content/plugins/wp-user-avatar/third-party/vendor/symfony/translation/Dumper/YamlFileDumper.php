@@ -18,6 +18,7 @@ use ProfilePressVendor\Symfony\Component\Yaml\Yaml;
  * YamlFileDumper generates yaml files from a message catalogue.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 class YamlFileDumper extends FileDumper
 {

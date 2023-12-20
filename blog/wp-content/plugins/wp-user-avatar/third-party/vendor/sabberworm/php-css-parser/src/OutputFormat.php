@@ -7,6 +7,7 @@ namespace ProfilePressVendor\Sabberworm\CSS;
  *
  * @method OutputFormat setSemicolonAfterLastRule(bool $bSemicolonAfterLastRule) Set whether semicolons are added after
  *     last rule.
+ * @internal
  */
 class OutputFormat
 {

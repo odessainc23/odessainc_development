@@ -9,6 +9,7 @@ namespace ProfilePressVendor\Stripe;
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
  * @property string $domain_name
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
+ * @internal
  */
 class ApplePayDomain extends ApiResource
 {

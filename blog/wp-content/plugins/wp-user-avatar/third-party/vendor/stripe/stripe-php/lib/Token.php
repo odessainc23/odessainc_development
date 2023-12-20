@@ -41,6 +41,7 @@ namespace ProfilePressVendor\Stripe;
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property string $type Type of the token: <code>account</code>, <code>bank_account</code>, <code>card</code>, or <code>pii</code>.
  * @property bool $used Whether this token has already been used (tokens can be used only once).
+ * @internal
  */
 class Token extends ApiResource
 {

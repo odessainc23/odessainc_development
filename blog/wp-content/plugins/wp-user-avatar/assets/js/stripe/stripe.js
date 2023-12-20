@@ -154,8 +154,17 @@
 
                         if (ppressCheckoutForm.is_var_defined(response.gateway_response.client_secret)) {
                             client_secret = response.gateway_response.client_secret;
-                        } else {
+                        } else if (
+                            ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice.payment_intent) &&
+                            ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice.payment_intent.client_secret)
+                        ) {
                             client_secret = response.gateway_response.latest_invoice.payment_intent.client_secret;
+                        }
+
+                        // client_secret can be undefined if it's free trial
+                        if (typeof client_secret === 'undefined') {
+                            $(document.body).trigger('ppress_checkout_success', [response, payment_method]);
+                            window.location.assign(response.order_success_url);
                         }
 
                         var cp_getBillingDetails = _this.getBillingDetails();

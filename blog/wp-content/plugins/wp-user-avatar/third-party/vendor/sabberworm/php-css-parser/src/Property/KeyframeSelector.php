@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Sabberworm\CSS\Property;
 
+/** @internal */
 class KeyframeSelector extends Selector
 {
     /**

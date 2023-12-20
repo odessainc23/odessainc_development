@@ -30,7 +30,10 @@ $customer_id = CustomerFactory::fromUserId(get_current_user_id())->id;
 
         else : $plan = ppress_get_plan($order->plan_id);
             $vat_number = $order->get_customer_tax_id();
-            $plan_purchase_note = $order->get_plan_purchase_note(); ?>
+            $plan_purchase_note = $order->get_plan_purchase_note();
+
+            do_action('ppress_myaccount_view_order_before_order_details_table', $order, $customer_id);
+            ?>
 
             <div class="profilepress-myaccount-order-details-wrap">
                 <div class="ppress-details-table-wrap">

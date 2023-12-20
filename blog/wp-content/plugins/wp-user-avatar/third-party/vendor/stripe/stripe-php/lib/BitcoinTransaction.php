@@ -11,6 +11,7 @@ namespace ProfilePressVendor\Stripe;
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
  * @property string $currency Three-letter <a href="https://stripe.com/docs/currencies">ISO code for the currency</a> to which this transaction was converted.
  * @property string $receiver The receiver to which this transaction was sent.
+ * @internal
  */
 class BitcoinTransaction extends ApiResource
 {

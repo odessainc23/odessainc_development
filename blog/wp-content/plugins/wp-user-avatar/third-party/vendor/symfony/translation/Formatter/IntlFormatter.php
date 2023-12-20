@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\LogicException;
 /**
  * @author Guilherme Blanco <guilhermeblanco@hotmail.com>
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
+ * @internal
  */
 class IntlFormatter implements IntlFormatterInterface
 {

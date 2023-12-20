@@ -12,6 +12,7 @@ namespace ProfilePressVendor\Stripe\Issuing;
  * @property int $exp_month
  * @property int $exp_year
  * @property string $number
+ * @internal
  */
 class CardDetails extends \ProfilePressVendor\Stripe\ApiResource
 {

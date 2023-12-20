@@ -40,6 +40,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string|\Stripe\Recipient $recipient The recipient that this card belongs to. This attribute will not be in the card object if the card belongs to a customer or account instead.
  * @property null|string $status For external accounts, possible values are <code>new</code> and <code>errored</code>. If a transfer fails, the status is set to <code>errored</code> and transfers are stopped until account details are updated.
  * @property null|string $tokenization_method If the card number is tokenized, this is the method that was used. Can be <code>android_pay</code> (includes Google Pay), <code>apple_pay</code>, <code>masterpass</code>, <code>visa_checkout</code>, or null.
+ * @internal
  */
 class Card extends ApiResource
 {

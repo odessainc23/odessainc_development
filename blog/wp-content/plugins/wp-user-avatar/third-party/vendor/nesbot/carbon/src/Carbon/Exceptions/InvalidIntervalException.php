@@ -11,6 +11,7 @@
 namespace ProfilePressVendor\Carbon\Exceptions;
 
 use InvalidArgumentException as BaseInvalidArgumentException;
+/** @internal */
 class InvalidIntervalException extends BaseInvalidArgumentException implements InvalidArgumentException
 {
     //

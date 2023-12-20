@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Stripe;
  * @property string $customer The ID of the customer whose cash balance this object represents.
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property \Stripe\StripeObject $settings
+ * @internal
  */
 class CashBalance extends ApiResource
 {
