@@ -19,8 +19,11 @@
 				<span class="legal-phicon"></span>
 			</div>
 			<div class="legal-pcontent">
+			<section>
 				<h3>Scope</h3>
 				<p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows you care about how your Personal Information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing Odessa’s Website or by using any of Odessa’s hosted products (the “Odessa Solution”) or through communicating with Odessa regarding its software (the “Odessa Software”) in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we may collect, use, and share your information in the following ways.</p>
+</section>
+				<section>
 				<h3>Personal Information</h3>
 				<p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at  https://www.odessainc.com/legal/confidential-terms If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the address Odessa has on file for your account, if applicable.</p>
 				<p>This Privacy Policy explains:</p>
@@ -38,6 +41,7 @@
 					<a href="#european"><li>Notice of privacy rights to residents of the European Union Area.</li></a>
 					<a href="#contact"><li>How to contact us.</li></a>
 				</ul>
+				</section>
 
 			<section id="information-collect">
 					<h3>1.Information Collection</h3>
