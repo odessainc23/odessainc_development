@@ -3,7 +3,7 @@
   <div class="container">
     <div class="legal-page">
       <div class="legal-pheader">
-        <h1 class="legal-phtitle">Confidential Terms</h1>
+        <h1 class="legal-phtitle">Privacy policy</h1>
         <span class="legal-phicon"></span>
       </div>
       <section class="legal-ppost">
@@ -34,7 +34,7 @@
 		<div class="legal-ppcontent">
         
           <div id="Privacy" class="legal-pcontent legal-ppcontab">
-			<h3>Privacy policy</h3>
+			<!-- <h3></h3> -->
             <p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows you care about how your Personal Information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing Odessa’s Website or by using any of Odessa’s hosted products (the “Odessa Solution”) or through communicating with Odessa regarding its software (the “Odessa Software”) in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we may collect, use, and share your information in the following ways.</p>
             <h4>Changes to this Privacy Policy</h4>
             <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at https://www.odessainc.com/legal/confidential-terms If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the address Odessa has on file for your account, if applicable.</p>
