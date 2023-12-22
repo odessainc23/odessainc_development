@@ -10,7 +10,7 @@
     <div class="legal-page">
       <div class="legal-pheader">
         <h1 class="legal-phtitle">Privacy policy</h1>
-        <span class="legal-phicon"></span>
+        <!-- <span class="legal-phicon"></span> -->
       </div>
       <section class="legal-ppost">
         <div class="legal-ppnav">
