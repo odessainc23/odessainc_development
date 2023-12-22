@@ -1,3 +1,9 @@
+<style>
+	.legal-page{
+		margin:120px 0 0
+	}
+	</style>
+
 
 <div id="wrapper">
   <div class="container">
