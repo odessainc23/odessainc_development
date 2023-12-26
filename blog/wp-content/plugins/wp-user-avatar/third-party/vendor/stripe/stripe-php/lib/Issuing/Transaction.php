@@ -32,6 +32,7 @@ namespace ProfilePressVendor\Stripe\Issuing;
  * @property null|\Stripe\StripeObject $purchase_details Additional purchase information that is optionally provided by the merchant.
  * @property string $type The nature of the transaction.
  * @property null|string $wallet The digital wallet used for this transaction. One of <code>apple_pay</code>, <code>google_pay</code>, or <code>samsung_pay</code>.
+ * @internal
  */
 class Transaction extends \ProfilePressVendor\Stripe\ApiResource
 {

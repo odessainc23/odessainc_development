@@ -9,20 +9,16 @@ use ProfilePress\Core\Membership\CheckoutFields;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
 use ProfilePress\Core\Membership\Models\Coupon\CouponUnit;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
-use ProfilePress\Core\Membership\Models\Order\OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
 use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
-use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
+use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
+use ProfilePress\Core\Membership\PaymentMethods\BankTransfer\BankTransfer;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods;
-use ProfilePress\Core\Membership\PaymentMethods\StoreGateway;
-use ProfilePress\Core\Membership\Repositories\OrderRepository;
 use ProfilePress\Core\Membership\Repositories\PlanRepository;
-use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 use ProfilePress\Core\Membership\Services\Calculator;
 use ProfilePress\Core\Membership\Services\CouponService;
 use ProfilePress\Core\Membership\Services\OrderService;
-use ProfilePress\Core\Membership\Services\SubscriptionService;
 use ProfilePress\Core\Membership\Services\TaxService;
 use ProfilePress\Custom_Settings_Page_Api;
 use ProfilePressVendor\Carbon\CarbonImmutable;
@@ -345,7 +341,17 @@ class SettingsPage extends AbstractSettingsPage
         $order_id = $order->save();
 
         if ($order_id && OrderStatus::PENDING == $old_status && OrderStatus::COMPLETED == $order->status) {
+
             $order->complete_order();
+
+            if ($order->payment_method == BankTransfer::get_instance()->get_id()) {
+
+                $sub = SubscriptionFactory::fromId($order->subscription_id);
+
+                if ($sub && $sub->exists()) {
+                    $sub->has_trial() ? $sub->enable_subscription_trial() : $sub->activate_subscription();
+                }
+            }
         }
 
         wp_safe_redirect(add_query_arg(['ppress_order_action' => 'edit', 'id' => $order_id, 'saved' => 'true'], PPRESS_MEMBERSHIP_ORDERS_SETTINGS_PAGE));
@@ -365,9 +371,15 @@ class SettingsPage extends AbstractSettingsPage
 
         check_admin_referer('wp-csa-nonce', 'wp_csa_nonce');
 
-        global $wpdb;
-
         $order_data = ppressPOST_var('ppress_orders', []);
+
+        if (empty($order_data['plan'])) {
+            wp_die(__('No plan was selected. Please try again.', 'wp-user-avatar'), __('Error', 'wp-user-avatar'), array('response' => 403));
+        }
+
+        if (empty($order_data['customer'])) {
+            wp_die(__('No customer was selected. Please try again.', 'wp-user-avatar'), __('Error', 'wp-user-avatar'), array('response' => 403));
+        }
 
         $date_created = current_time('mysql');
 
@@ -377,81 +389,33 @@ class SettingsPage extends AbstractSettingsPage
                                            ->utc()->toDateTimeString();
         }
 
-        $plan_obj = ppress_get_plan((int)$order_data['plan']);
+        if (empty($order_data['amount']) || Calculator::init($order_data['amount'])->isNegativeOrZero()) {
+            $order_data['amount'] = ppress_get_plan($order_data['plan'])->get_price();
+        }
 
-        $customer_id = (int)$order_data['customer'];
+        $response = ppress_subscribe_user_to_plan(
+            $order_data['plan'],
+            $order_data['customer'],
+            [
+                'amount'         => $order_data['amount'],
+                'order_status'   => $order_data['order_status'],
+                'payment_method' => $order_data['payment_method'],
+                'transaction_id' => $order_data['transaction_id'],
+                'date_created'   => $date_created
+            ],
+            $order_data['send_receipt'] == 'true'
+        );
 
-        if (CustomerFactory::fromId($customer_id)->has_active_subscription($plan_obj->id)) {
+        if (is_wp_error($response)) {
+
             wp_die(
-                sprintf(__('Customer already has an active subscription for %s.', 'wp-user-avatar'), $plan_obj->name),
-                __('Error', 'wp-user-avatar'),
-                ['response' => 403]
-            );
-        }
-
-        $order_data['payment_method'] = ! empty($order_data['payment_method']) ?
-            $order_data['payment_method'] :
-            StoreGateway::get_instance()->get_id();
-
-        $order                 = new OrderEntity();
-        $order->plan_id        = $plan_obj->id;
-        $order->customer_id    = $customer_id;
-        $order->total          = ppress_sanitize_amount($order_data['amount']);
-        $order->status         = sanitize_text_field($order_data['order_status']);
-        $order->payment_method = sanitize_text_field($order_data['payment_method']);
-        $order->transaction_id = sanitize_text_field($order_data['transaction_id']);
-        $order->date_created   = $date_created;
-        $order_id              = $order->save();
-
-        if ( ! $order_id) {
-
-            wp_die(! empty($wpdb->last_error) ? $wpdb->last_error : esc_html__('Unable to add new order. Please try again', 'wp-user-avatar'),
+                $response->get_error_message(),
                 __('Error', 'wp-user-avatar'),
                 array('response' => 400)
             );
         }
 
-        $subscription                    = new SubscriptionEntity();
-        $subscription->parent_order_id   = $order_id;
-        $subscription->customer_id       = $customer_id;
-        $subscription->plan_id           = (int)$order_data['plan'];
-        $subscription->billing_frequency = $plan_obj->billing_frequency;
-        $subscription->initial_amount    = ppress_sanitize_amount($order_data['amount']);
-        $subscription->recurring_amount  = $plan_obj->price;
-        $subscription->expiration_date   = SubscriptionService::init()->get_plan_expiration_datetime($plan_obj->id);
-
-        if ($order->is_completed()) {
-            if ($subscription->has_trial()) {
-                $subscription_id = $subscription->enable_subscription_trial();
-            } else {
-                $subscription_id = $subscription->activate_subscription();
-            }
-
-        } else {
-            $subscription_id = $subscription->save();
-        }
-
-        if ( ! $subscription_id) {
-
-            wp_die(! empty($wpdb->last_error) ? $wpdb->last_error : esc_html__('Unable to add new subscription. Please try again', 'wp-user-avatar'),
-                __('Error', 'wp-user-avatar'),
-                array('response' => 400)
-            );
-        }
-
-        $order->id              = $order_id;
-        $order->subscription_id = $subscription_id;
-        if ($order->is_completed()) {
-            $order->date_completed = current_time('mysql', true);
-        }
-        $order->save();
-
-        if ($order_data['send_receipt'] == 'true' && $order->is_completed()) {
-            // important we call complete_order with synced/updated order object.
-            OrderFactory::fromId($order_id)->complete_order();
-        }
-
-        wp_safe_redirect(esc_url_raw(OrderWPListTable::view_edit_order_url($order_id)));
+        wp_safe_redirect(esc_url_raw(OrderWPListTable::view_edit_order_url($response['order_id'])));
         exit;
     }
 

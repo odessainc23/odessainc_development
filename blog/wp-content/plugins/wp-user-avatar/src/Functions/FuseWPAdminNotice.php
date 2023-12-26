@@ -18,6 +18,10 @@ if ( ! class_exists('\FuseWPAdminNotice')) {
                 return;
             }
 
+            if ( ! current_user_can('manage_options')) return;
+
+            check_admin_referer('fwp_dismiss_fwpadnotice', 'csrf');
+
             $url = admin_url();
             update_option('fwp_dismiss_fwpadnotice', 'true');
 
@@ -31,6 +35,8 @@ if ( ! class_exists('\FuseWPAdminNotice')) {
 
             if ($pagenow != 'index.php') return;
 
+            if ( ! current_user_can('manage_options')) return;
+
             if (get_option('fwp_dismiss_fwpadnotice', 'false') == 'true') {
                 return;
             }
@@ -40,12 +46,10 @@ if ( ! class_exists('\FuseWPAdminNotice')) {
             }
 
             $dismiss_url = esc_url_raw(
-                add_query_arg(
-                    array(
-                        'fwp-adaction' => 'fwp_dismiss_fwpadnotice'
-                    ),
-                    admin_url()
-                )
+                add_query_arg([
+                    'fwp-adaction' => 'fwp_dismiss_fwpadnotice',
+                    'csrf'         => wp_create_nonce('fwp_dismiss_fwpadnotice')
+                ], admin_url())
             );
             $this->notice_css();
             $install_url = wp_nonce_url(

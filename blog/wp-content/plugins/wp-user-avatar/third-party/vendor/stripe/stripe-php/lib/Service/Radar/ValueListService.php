@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Radar;
 
+/** @internal */
 class ValueListService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

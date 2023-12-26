@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Stripe\Util;
 
+/** @internal */
 class RequestOptions
 {
     /**

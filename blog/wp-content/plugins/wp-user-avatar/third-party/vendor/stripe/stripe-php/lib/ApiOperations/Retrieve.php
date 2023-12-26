@@ -7,6 +7,7 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * class.
  *
  * This trait should only be applied to classes that derive from StripeObject.
+ * @internal
  */
 trait Retrieve
 {

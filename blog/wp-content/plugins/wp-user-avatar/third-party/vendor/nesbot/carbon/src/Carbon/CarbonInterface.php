@@ -514,6 +514,7 @@ use Throwable;
  * @method        string           longRelativeToOtherDiffForHumans(DateTimeInterface $other = null, int $parts = 1)  Get the difference (long format, 'RelativeToOther' mode) in a human readable format in the current locale. ($other and $parts parameters can be swapped.)
  *
  * </autodoc>
+ * @internal
  */
 interface CarbonInterface extends DateTimeInterface, JsonSerializable
 {
@@ -601,7 +602,7 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      *
      * @var string
      */
-    public const RFC7231_FORMAT = 'ProfilePressVendor\\D, d M Y H:i:s \\G\\M\\T';
+    public const RFC7231_FORMAT = 'D, d M Y H:i:s \\G\\M\\T';
     /**
      * Default format to use for __toString method when type juggling occurs.
      *
@@ -4747,8 +4748,7 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
      * @param Closure(): T                                       $callback
      *
-     * @return mixed
-     * @phpstan-return T
+     * @return T
      */
     public static function withTestNow($testNow, $callback);
     /**

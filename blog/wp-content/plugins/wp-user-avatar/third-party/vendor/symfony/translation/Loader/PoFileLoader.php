@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Loader;
 /**
  * @copyright Copyright (c) 2010, Union of RAD https://github.com/UnionOfRAD/lithium
  * @copyright Copyright (c) 2012, Clemens Tolboom
+ * @internal
  */
 class PoFileLoader extends FileLoader
 {
@@ -59,7 +60,7 @@ class PoFileLoader extends FileLoader
      *
      * {@inheritdoc}
      */
-    protected function loadResource($resource)
+    protected function loadResource(string $resource)
     {
         $stream = \fopen($resource, 'r');
         $defaults = ['ids' => [], 'translated' => null];

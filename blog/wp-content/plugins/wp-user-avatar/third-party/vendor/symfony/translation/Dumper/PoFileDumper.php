@@ -15,13 +15,14 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * PoFileDumper generates a gettext formatted string representation of a message catalogue.
  *
  * @author Stealth35
+ * @internal
  */
 class PoFileDumper extends FileDumper
 {
     /**
      * {@inheritdoc}
      */
-    public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = [])
+    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
     {
         $output = 'msgid ""' . "\n";
         $output .= 'msgstr ""' . "\n";

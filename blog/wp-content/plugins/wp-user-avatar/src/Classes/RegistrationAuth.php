@@ -93,7 +93,7 @@ class RegistrationAuth
      * @param bool $is_melange
      * @param string $no_login_redirect
      *
-     * @return string|void
+     * @return string|mixed|void
      */
     public static function register_new_user($post, $form_id = 0, $redirect = '', $is_melange = false, $no_login_redirect = '')
     {
@@ -347,11 +347,6 @@ class RegistrationAuth
         }
         // --------END ---------   register custom field ----------------------//
 
-        // if moderation is active, set new registered users as pending
-        if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
-            UserModeration::make_pending($user_id);
-        }
-
         if ($flag_to_send_password_reset === true) {
             PasswordReset::retrieve_password_func($username);
         }
@@ -363,16 +358,26 @@ class RegistrationAuth
             add_user_meta($user_id, '_pp_signup_via', $form_id);
         }
 
-        // if user moderation is active, send pending notification.
+        $should_send_welcome_email = true;
+
+        // if moderation is active, set new registered users as pending
         if (class_exists('ProfilePress\Libsodium\UserModeration\UserModeration') && UserModeration::moderation_is_active()) {
-            UserModerationNotification::pending($user_id);
-            UserModerationNotification::pending_admin_notification($user_id);
+
+            if (apply_filters('ppress_user_moderation_make_pending', true, $form_id, $user_data)) {
+
+                $should_send_welcome_email = false;
+
+                UserModeration::make_pending($user_id);
+                UserModerationNotification::pending($user_id);
+                UserModerationNotification::pending_admin_notification($user_id);
+            }
         }
 
-        self::send_welcome_email($user_id, $password, $form_id);
+        if ($should_send_welcome_email) {
+            self::send_welcome_email($user_id, $password, $form_id);
+        }
 
         if (is_int($user_id)) {
-
             ppress_wp_new_user_notification($user_id, null, 'admin');
         }
 
@@ -436,14 +441,13 @@ class RegistrationAuth
 
             $settings = FormRepository::form_builder_fields_settings($form_id, FormRepository::REGISTRATION_TYPE);
 
-            $reg_select_field = array_values(
-                wp_list_pluck(
-                    wp_list_filter($settings, ['fieldType' => 'reg-select-role']),
-                    'options'
-                )
-            );
+            $found_field = wp_list_filter($settings, ['fieldType' => 'reg-select-role']);
 
-            $options = isset($reg_select_field[0]) ? $reg_select_field[0] : [];
+            if (empty($found_field)) return [];
+
+            $reg_select_field_options = array_values(wp_list_pluck($found_field, 'options'));
+
+            $options = isset($reg_select_field_options[0]) ? $reg_select_field_options[0] : [];
 
         } else {
 
@@ -452,7 +456,7 @@ class RegistrationAuth
             // find the first occurrence of reg-select-role shortcode.
             preg_match('/\[reg-select-role.*\]/', $registration_structure, $matches);
 
-            if (empty($matches) || ! isset($matches[0])) return;
+            if (empty($matches) || ! isset($matches[0])) return [];
 
             preg_match('/options="([,\s\w]+)"/', $matches[0], $matches2);
 

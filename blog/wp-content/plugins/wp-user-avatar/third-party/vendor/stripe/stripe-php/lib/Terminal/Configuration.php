@@ -14,6 +14,7 @@ namespace ProfilePressVendor\Stripe\Terminal;
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property \Stripe\StripeObject $tipping
  * @property \Stripe\StripeObject $verifone_p400
+ * @internal
  */
 class Configuration extends \ProfilePressVendor\Stripe\ApiResource
 {

@@ -125,21 +125,12 @@ foreach (PlanRepository::init()->retrieveAll() as $plan) {
                 remove_all_filters('mce_buttons', 10);
                 remove_all_filters('mce_external_plugins', 10);
                 remove_all_actions('after_wp_tiny_mce');
-                if ( ! apply_filters('ppress_noaccess_action_message_custom_no_wp_kses_post', false)) {
-                    wp_editor(wp_kses_post($noaccess_action_message_custom), 'pp-cc-access-noaccess-action-message-custom', [
-                        'textarea_name' => 'ppress_cc_data[access_condition][noaccess_action_message_custom]',
-                        'textarea_rows' => 20,
-                        'wpautop'       => false,
-                        'media_buttons' => false,
-                    ]);
-                } else {
-                    wp_editor($noaccess_action_message_custom, 'pp-cc-access-noaccess-action-message-custom', [
-                        'textarea_name' => 'ppress_cc_data[access_condition][noaccess_action_message_custom]',
-                        'textarea_rows' => 20,
-                        'wpautop'       => false,
-                        'media_buttons' => false,
-                    ]);
-                }
+                wp_editor(wp_kses_post($noaccess_action_message_custom), 'pp-cc-access-noaccess-action-message-custom', [
+                    'textarea_name' => 'ppress_cc_data[access_condition][noaccess_action_message_custom]',
+                    'textarea_rows' => 20,
+                    'wpautop'       => false,
+                    'media_buttons' => false,
+                ]);
                 ?>
             </td>
         </tr>

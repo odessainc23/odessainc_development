@@ -10,6 +10,7 @@ use ProfilePressVendor\Symfony\Component\CssSelector\CssSelectorConverter;
 use ProfilePressVendor\Symfony\Component\CssSelector\Exception\ParseException;
 /**
  * This class provides functions for converting CSS styles into inline style attributes in your HTML code.
+ * @internal
  */
 class CssInliner extends AbstractHtmlProcessor
 {

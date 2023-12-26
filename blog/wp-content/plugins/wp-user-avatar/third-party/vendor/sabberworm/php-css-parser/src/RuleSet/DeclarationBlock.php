@@ -21,6 +21,7 @@ use ProfilePressVendor\Sabberworm\CSS\Value\Value;
  * Declaration blocks are the parts of a CSS file which denote the rules belonging to a selector.
  *
  * Declaration blocks usually appear directly inside a `Document` or another `CSSList` (mostly a `MediaQuery`).
+ * @internal
  */
 class DeclarationBlock extends RuleSet
 {

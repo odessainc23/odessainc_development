@@ -6,6 +6,7 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * Trait for resources that have nested resources.
  *
  * This trait should only be applied to classes that derive from StripeObject.
+ * @internal
  */
 trait NestedResource
 {

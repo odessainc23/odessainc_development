@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Identity;
 
+/** @internal */
 class VerificationReportService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

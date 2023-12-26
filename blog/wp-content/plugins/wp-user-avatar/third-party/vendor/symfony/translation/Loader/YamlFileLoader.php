@@ -19,6 +19,7 @@ use ProfilePressVendor\Symfony\Component\Yaml\Yaml;
  * YamlFileLoader loads translations from Yaml files.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @internal
  */
 class YamlFileLoader extends FileLoader
 {
@@ -26,7 +27,7 @@ class YamlFileLoader extends FileLoader
     /**
      * {@inheritdoc}
      */
-    protected function loadResource($resource)
+    protected function loadResource(string $resource)
     {
         if (null === $this->yamlParser) {
             if (!\class_exists(\ProfilePressVendor\Symfony\Component\Yaml\Parser::class)) {

@@ -101,7 +101,7 @@ class Frontend
                     $item = apply_filters('pp_nav_editprofile_item', $item);
                     break;
             }
-            $item->url = esc_url($item->url);
+            $item->url = esc_url_raw($item->url);
         }
 
         return apply_filters('pp_nav_item', $item);

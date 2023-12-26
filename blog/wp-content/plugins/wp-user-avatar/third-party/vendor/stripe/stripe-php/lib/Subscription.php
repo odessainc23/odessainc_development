@@ -47,6 +47,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string|\Stripe\TestHelpers\TestClock $test_clock ID of the test clock this subscription belongs to.
  * @property null|int $trial_end If the subscription has a trial, the end of that trial.
  * @property null|int $trial_start If the subscription has a trial, the beginning of that trial.
+ * @internal
  */
 class Subscription extends ApiResource
 {

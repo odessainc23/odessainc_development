@@ -20,13 +20,14 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogueInterface;
  * Basically, the result contains messages from the target catalogue.
  *
  * @author Michael Lee <michael.lee@zerustech.com>
+ * @internal
  */
 class TargetOperation extends AbstractOperation
 {
     /**
      * {@inheritdoc}
      */
-    protected function processDomain($domain)
+    protected function processDomain(string $domain)
     {
         $this->messages[$domain] = ['all' => [], 'new' => [], 'obsolete' => []];
         $intlDomain = $domain . MessageCatalogueInterface::INTL_DOMAIN_SUFFIX;

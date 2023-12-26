@@ -11,6 +11,7 @@ namespace ProfilePressVendor\Stripe;
  * @property \Stripe\StripeObject $period
  * @property string $subscription_item The ID of the subscription item this summary is describing.
  * @property int $total_usage The total usage within this usage period.
+ * @internal
  */
 class UsageRecordSummary extends ApiResource
 {

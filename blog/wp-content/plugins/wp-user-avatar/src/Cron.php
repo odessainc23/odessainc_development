@@ -28,7 +28,7 @@ class Cron
     public function check_for_expired_subscriptions()
     {
         $subs = SubscriptionRepository::init()->retrieveBy([
-            'status'      => [SubscriptionStatus::ACTIVE, SubscriptionStatus::TRIALLING],
+            'status'      => [SubscriptionStatus::ACTIVE, SubscriptionStatus::TRIALLING, SubscriptionStatus::CANCELLED],
             'date_column' => 'expiration_date',
             'start_date'  => CarbonImmutable::now('UTC')->subDay()->startOfDay()->toDateTimeString(),
             'end_date'    => CarbonImmutable::now('UTC')->subDay()->endOfDay()->toDateTimeString(),

@@ -2170,6 +2170,10 @@ textarea.wp-editor-area {
     margin: 0 !important;
 }
 
+.ppress_payment_methods.remove_white_styling #post-body-content textarea {
+    min-height: 100px;
+}
+
 /* Tax rates UI */
 .ppress_taxes .ppress-tax-rates-wrap .ppress-tax-rate-table-actions {
     width: 1.5em !important;
@@ -2722,4 +2726,74 @@ textarea.wp-editor-area {
     text-decoration: none;
     font-weight: bold;
     color: #00a32a;
+}
+
+/* Export page CSS */
+.ppress-export-card-item-wrap {
+    display: grid;
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+.ppress-export-cards-wrap * {
+    box-sizing: border-box;
+}
+
+.ppress-export-cards-wrap p {
+    font-size: 14px;
+}
+
+.ppress-export-card-item {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    padding: 1.5rem;
+}
+
+.ppress-export-card-item-header p {
+    color: #6b7280;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ppress-export-card-item {
+    margin: 0;
+}
+
+.ppress-export-card-item form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.ppress-export-card-item .ppress-from-to-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.ppress-export-card-item .ppress-from-to-wrapper span {
+    flex-grow: 1;
+}
+
+.ppress-export-card-item .ppress-from-to-wrapper input {
+    width: 100%;
+}
+
+.ppress-export-cards-wrap dd {
+    margin-inline-start: 0;
+}
+
+.ppress-export-cards-wrap select,
+.ppress-export-cards-wrap .select2-container {
+    margin-bottom: 16px;
 }

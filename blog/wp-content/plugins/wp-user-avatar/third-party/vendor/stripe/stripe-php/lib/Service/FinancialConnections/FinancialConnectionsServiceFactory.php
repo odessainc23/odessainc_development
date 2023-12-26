@@ -8,6 +8,7 @@ namespace ProfilePressVendor\Stripe\Service\FinancialConnections;
  *
  * @property AccountService $accounts
  * @property SessionService $sessions
+ * @internal
  */
 class FinancialConnectionsServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

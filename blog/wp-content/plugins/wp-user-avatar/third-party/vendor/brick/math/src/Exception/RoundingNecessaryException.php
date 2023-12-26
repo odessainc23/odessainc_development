@@ -5,6 +5,7 @@ namespace ProfilePressVendor\Brick\Math\Exception;
 
 /**
  * Exception thrown when a number cannot be represented at the requested scale without rounding.
+ * @internal
  */
 class RoundingNecessaryException extends MathException
 {

@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service;
 
+/** @internal */
 class ReviewService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

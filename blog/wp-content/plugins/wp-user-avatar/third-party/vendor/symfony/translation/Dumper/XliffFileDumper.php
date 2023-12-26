@@ -16,13 +16,14 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * XliffFileDumper generates xliff files from a message catalogue.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 class XliffFileDumper extends FileDumper
 {
     /**
      * {@inheritdoc}
      */
-    public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = [])
+    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
     {
         $xliffVersion = '1.2';
         if (\array_key_exists('xliff_version', $options)) {

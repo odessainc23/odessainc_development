@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Sabberworm\CSS\CSSList;
 
 use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
 use ProfilePressVendor\Sabberworm\CSS\Property\AtRule;
+/** @internal */
 class KeyFrame extends CSSList implements AtRule
 {
     /**

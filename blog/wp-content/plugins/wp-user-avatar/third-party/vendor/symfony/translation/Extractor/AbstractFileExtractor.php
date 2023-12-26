@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidArgumentEx
  * Base class used by classes that extract translation messages from files.
  *
  * @author Marcos D. Sánchez <marcosdsanchez@gmail.com>
+ * @internal
  */
 abstract class AbstractFileExtractor
 {
@@ -44,13 +45,11 @@ abstract class AbstractFileExtractor
         return new \SplFileInfo($file);
     }
     /**
-     * @param string $file
-     *
      * @return bool
      *
      * @throws InvalidArgumentException
      */
-    protected function isFile($file)
+    protected function isFile(string $file)
     {
         if (!\is_file($file)) {
             throw new InvalidArgumentException(\sprintf('The "%s" file does not exist.', $file));
@@ -58,15 +57,13 @@ abstract class AbstractFileExtractor
         return \true;
     }
     /**
-     * @param string $file
-     *
      * @return bool
      */
-    protected abstract function canBeExtracted($file);
+    protected abstract function canBeExtracted(string $file);
     /**
      * @param string|array $resource Files, a file or a directory
      *
-     * @return iterable files to be extracted
+     * @return iterable
      */
     protected abstract function extractFromDirectory($resource);
 }

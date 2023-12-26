@@ -4,6 +4,7 @@ namespace ProfilePressVendor\Stripe;
 
 /**
  * Class SingletonApiResource.
+ * @internal
  */
 abstract class SingletonApiResource extends ApiResource
 {

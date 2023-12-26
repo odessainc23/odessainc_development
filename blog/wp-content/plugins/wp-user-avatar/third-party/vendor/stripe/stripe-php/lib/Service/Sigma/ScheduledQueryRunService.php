@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Sigma;
 
+/** @internal */
 class ScheduledQueryRunService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

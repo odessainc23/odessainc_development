@@ -3,6 +3,7 @@
 namespace ProfilePress\Core\Membership\Emails;
 
 use ProfilePress\Core\Membership\Models\Order\OrderEntity;
+use ProfilePress\Core\Membership\Services\Calculator;
 
 class NewOrderReceipt extends AbstractMembershipEmail
 {
@@ -23,6 +24,10 @@ class NewOrderReceipt extends AbstractMembershipEmail
         if (ppress_get_setting(self::ID . '_email_enabled', 'on') !== 'on') return;
 
         if ($order->is_new_order()) {
+
+            $disable_for_free_orders = ppress_settings_by_key('new_order_receipt_disable_free_orders');
+
+            if ($disable_for_free_orders == 'true' && Calculator::init($order->get_total())->isNegativeOrZero()) return;
 
             $placeholders_values = $this->get_order_placeholders_values($order);
 

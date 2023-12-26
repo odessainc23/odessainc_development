@@ -14,19 +14,24 @@ use ProfilePressVendor\Symfony\Component\Config\Resource\FileResource;
 use ProfilePressVendor\Symfony\Component\Config\Util\XmlUtils;
 use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidResourceException;
 use ProfilePressVendor\Symfony\Component\Translation\Exception\NotFoundResourceException;
+use ProfilePressVendor\Symfony\Component\Translation\Exception\RuntimeException;
 use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
 /**
  * QtFileLoader loads translations from QT Translations XML files.
  *
  * @author Benjamin Eberlei <kontakt@beberlei.de>
+ * @internal
  */
 class QtFileLoader implements LoaderInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function load($resource, $locale, $domain = 'messages')
+    public function load($resource, string $locale, string $domain = 'messages')
     {
+        if (!\class_exists(XmlUtils::class)) {
+            throw new RuntimeException('Loading translations from the QT format requires the Symfony Config component.');
+        }
         if (!\stream_is_local($resource)) {
             throw new InvalidResourceException(\sprintf('This is not a local file "%s".', $resource));
         }

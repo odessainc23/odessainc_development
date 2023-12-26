@@ -18,6 +18,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|int $requested_at Time at which the capability was requested. Measured in seconds since the Unix epoch.
  * @property \Stripe\StripeObject $requirements
  * @property string $status The status of the capability. Can be <code>active</code>, <code>inactive</code>, <code>pending</code>, or <code>unrequested</code>.
+ * @internal
  */
 class Capability extends ApiResource
 {

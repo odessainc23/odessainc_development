@@ -27,6 +27,7 @@ use ReflectionParameter;
 use ReflectionType;
 use stdClass;
 use Throwable;
+/** @internal */
 abstract class AbstractMacro implements BuiltinMethodReflection
 {
     /**
@@ -62,11 +63,9 @@ abstract class AbstractMacro implements BuiltinMethodReflection
     /**
      * Macro constructor.
      *
-     * @param string $className
-     * @phpstan-param class-string $className
-     *
-     * @param string   $methodName
-     * @param callable $macro
+     * @param class-string $className
+     * @param string       $methodName
+     * @param callable     $macro
      */
     public function __construct(string $className, string $methodName, $macro)
     {

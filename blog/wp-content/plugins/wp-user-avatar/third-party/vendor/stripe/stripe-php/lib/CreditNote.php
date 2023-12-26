@@ -35,6 +35,7 @@ namespace ProfilePressVendor\Stripe;
  * @property int $total The integer amount in %s representing the total amount of the credit note, including tax and all discount.
  * @property string $type Type of this credit note, one of <code>pre_payment</code> or <code>post_payment</code>. A <code>pre_payment</code> credit note means it was issued when the invoice was open. A <code>post_payment</code> credit note means it was issued when the invoice was paid.
  * @property null|int $voided_at The time that the credit note was voided.
+ * @internal
  */
 class CreditNote extends ApiResource
 {

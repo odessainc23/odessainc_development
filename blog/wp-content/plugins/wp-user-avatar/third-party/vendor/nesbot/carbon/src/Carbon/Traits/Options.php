@@ -21,6 +21,7 @@ use Throwable;
  * Depends on the following methods:
  *
  * @method static shiftTimezone($timezone) Set the timezone
+ * @internal
  */
 trait Options
 {
@@ -358,7 +359,7 @@ trait Options
         $map = ['localStrictModeEnabled' => 'strictMode', 'localMonthsOverflow' => 'monthOverflow', 'localYearsOverflow' => 'yearOverflow', 'localHumanDiffOptions' => 'humanDiffOptions', 'localToStringFormat' => 'toStringFormat', 'localSerializer' => 'toJsonFormat', 'localMacros' => 'macros', 'localGenericMacros' => 'genericMacros', 'locale' => 'locale', 'tzName' => 'timezone', 'localFormatFunction' => 'formatFunction'];
         foreach ($map as $property => $key) {
             $value = $this->{$property} ?? null;
-            if ($value !== null) {
+            if ($value !== null && ($key !== 'locale' || $value !== 'en' || $this->localTranslator)) {
                 $settings[$key] = $value;
             }
         }
@@ -371,7 +372,7 @@ trait Options
      */
     public function __debugInfo()
     {
-        $infos = \array_filter(\get_object_vars($this), function ($var) {
+        $infos = \array_filter(\get_object_vars($this), static function ($var) {
             return $var;
         });
         foreach (['dumpProperties', 'constructedObjectId', 'constructed'] as $property) {

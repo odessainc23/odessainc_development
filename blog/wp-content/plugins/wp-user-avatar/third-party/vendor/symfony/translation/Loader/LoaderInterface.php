@@ -17,6 +17,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * LoaderInterface is the interface implemented by all translation loaders.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @internal
  */
 interface LoaderInterface
 {
@@ -27,10 +28,10 @@ interface LoaderInterface
      * @param string $locale   A locale
      * @param string $domain   The domain
      *
-     * @return MessageCatalogue A MessageCatalogue instance
+     * @return MessageCatalogue
      *
      * @throws NotFoundResourceException when the resource cannot be found
      * @throws InvalidResourceException  when the resource cannot be loaded
      */
-    public function load($resource, $locale, $domain = 'messages');
+    public function load($resource, string $locale, string $domain = 'messages');
 }

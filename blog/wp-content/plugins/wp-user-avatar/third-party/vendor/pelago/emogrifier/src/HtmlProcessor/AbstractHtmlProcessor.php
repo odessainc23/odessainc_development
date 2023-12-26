@@ -9,6 +9,7 @@ namespace ProfilePressVendor\Pelago\Emogrifier\HtmlProcessor;
  * The "vanilla" subclass is the HtmlNormalizer.
  *
  * @psalm-consistent-constructor
+ * @internal
  */
 abstract class AbstractHtmlProcessor
 {

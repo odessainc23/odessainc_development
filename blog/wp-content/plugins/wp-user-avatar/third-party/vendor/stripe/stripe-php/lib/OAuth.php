@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Stripe;
 
+/** @internal */
 abstract class OAuth
 {
     /**

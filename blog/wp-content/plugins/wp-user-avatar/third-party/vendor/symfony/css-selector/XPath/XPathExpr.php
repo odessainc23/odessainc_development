@@ -38,6 +38,9 @@ class XPathExpr
     {
         return $this->element;
     }
+    /**
+     * @return $this
+     */
     public function addCondition(string $condition) : self
     {
         $this->condition = $this->condition ? \sprintf('(%s) and (%s)', $this->condition, $condition) : $condition;
@@ -47,6 +50,9 @@ class XPathExpr
     {
         return $this->condition;
     }
+    /**
+     * @return $this
+     */
     public function addNameTest() : self
     {
         if ('*' !== $this->element) {
@@ -55,6 +61,9 @@ class XPathExpr
         }
         return $this;
     }
+    /**
+     * @return $this
+     */
     public function addStarPrefix() : self
     {
         $this->path .= '*/';

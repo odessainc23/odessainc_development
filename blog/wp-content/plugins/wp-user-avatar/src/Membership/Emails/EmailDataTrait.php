@@ -54,8 +54,8 @@ trait EmailDataTrait
             '{{last_name}}'              => esc_html__('Last name of the customer.', 'wp-user-avatar'),
             '{{subscription_id}}'        => esc_html__("Subscription ID.", 'wp-user-avatar'),
             '{{subscription_url}}'       => esc_html__("URL to view subscription.", 'wp-user-avatar'),
-            '{{renew_subscription_url}}' => esc_html__("URL to re-subscribe to the subscription plan.", 'wp-user-avatar'),
-            '{{plan_name}}'              => esc_html__("Name or title of subscription plan.", 'wp-user-avatar'),
+            '{{renew_subscription_url}}' => esc_html__("URL to re-subscribe to the membership plan.", 'wp-user-avatar'),
+            '{{plan_name}}'              => esc_html__("Name or title of membership plan.", 'wp-user-avatar'),
             '{{amount}}'                 => esc_html__("The recurring amount of the subscription.", 'wp-user-avatar'),
             '{{expiration_date}}'        => esc_html__("The expiration or renewal date for the subscription.", 'wp-user-avatar'),
             '{{site_title}}'             => esc_html__('Name or title of this website.', 'wp-user-avatar')

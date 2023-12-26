@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Issuing;
 
+/** @internal */
 class DisputeService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

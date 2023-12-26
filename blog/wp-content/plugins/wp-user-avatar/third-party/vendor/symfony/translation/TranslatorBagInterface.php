@@ -14,7 +14,10 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidArgumentEx
 /**
  * TranslatorBagInterface.
  *
+ * @method MessageCatalogueInterface[] getCatalogues() Returns all catalogues of the instance
+ *
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
+ * @internal
  */
 interface TranslatorBagInterface
 {
@@ -27,5 +30,5 @@ interface TranslatorBagInterface
      *
      * @throws InvalidArgumentException If the locale contains invalid characters
      */
-    public function getCatalogue($locale = null);
+    public function getCatalogue(string $locale = null);
 }

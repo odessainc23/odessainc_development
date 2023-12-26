@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Component\DependencyInjection\Exception\RuntimeEx
 use ProfilePressVendor\Symfony\Component\DependencyInjection\Reference;
 /**
  * Adds tagged translation.extractor services to translation extractor.
+ * @internal
  */
 class TranslationExtractorPass implements CompilerPassInterface
 {
@@ -23,6 +24,9 @@ class TranslationExtractorPass implements CompilerPassInterface
     private $extractorTag;
     public function __construct(string $extractorServiceId = 'translation.extractor', string $extractorTag = 'translation.extractor')
     {
+        if (0 < \func_num_args()) {
+            trigger_deprecation('symfony/translation', '5.3', 'Configuring "%s" is deprecated.', __CLASS__);
+        }
         $this->extractorServiceId = $extractorServiceId;
         $this->extractorTag = $extractorTag;
     }

@@ -18,34 +18,28 @@ use ProfilePressVendor\Symfony\Component\CssSelector\Parser\Token;
  * which is copyright Ian Bicking, @see https://github.com/SimonSapin/cssselect.
  *
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
+ * @internal
  */
 class SyntaxErrorException extends ParseException
 {
     /**
-     * @param string $expectedValue
-     *
      * @return self
      */
-    public static function unexpectedToken($expectedValue, Token $foundToken)
+    public static function unexpectedToken(string $expectedValue, Token $foundToken)
     {
         return new self(\sprintf('Expected %s, but %s found.', $expectedValue, $foundToken));
     }
     /**
-     * @param string $pseudoElement
-     * @param string $unexpectedLocation
-     *
      * @return self
      */
-    public static function pseudoElementFound($pseudoElement, $unexpectedLocation)
+    public static function pseudoElementFound(string $pseudoElement, string $unexpectedLocation)
     {
         return new self(\sprintf('Unexpected pseudo-element "::%s" found %s.', $pseudoElement, $unexpectedLocation));
     }
     /**
-     * @param int $position
-     *
      * @return self
      */
-    public static function unclosedString($position)
+    public static function unclosedString(int $position)
     {
         return new self(\sprintf('Unclosed/invalid string at %s.', $position));
     }

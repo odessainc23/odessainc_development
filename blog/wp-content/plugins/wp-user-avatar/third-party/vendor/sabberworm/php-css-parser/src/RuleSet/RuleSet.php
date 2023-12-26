@@ -13,6 +13,7 @@ use ProfilePressVendor\Sabberworm\CSS\Rule\Rule;
 /**
  * RuleSet is a generic superclass denoting rules. The typical example for rule sets are declaration block.
  * However, unknown At-Rules (like `@font-face`) are also rule sets.
+ * @internal
  */
 abstract class RuleSet implements Renderable, Commentable
 {

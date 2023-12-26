@@ -26,6 +26,7 @@ namespace ProfilePressVendor\Stripe;
  * @property \Stripe\StripeObject[] $tax_amounts The amount of tax calculated per tax rate for this line item
  * @property \Stripe\TaxRate[] $tax_rates The tax rates which apply to the line item.
  * @property string $type A string identifying the type of the source of this line item, either an <code>invoiceitem</code> or a <code>subscription</code>.
+ * @internal
  */
 class InvoiceLineItem extends ApiResource
 {

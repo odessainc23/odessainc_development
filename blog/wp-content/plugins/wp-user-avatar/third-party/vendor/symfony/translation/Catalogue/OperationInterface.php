@@ -29,6 +29,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogueInterface;
  * Result: also called 'result', is the resulting catalogue for the given domain that holds the same messages as 'all'.
  *
  * @author Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
+ * @internal
  */
 interface OperationInterface
 {
@@ -41,27 +42,21 @@ interface OperationInterface
     /**
      * Returns all valid messages ('all') after operation.
      *
-     * @param string $domain
-     *
      * @return array
      */
-    public function getMessages($domain);
+    public function getMessages(string $domain);
     /**
      * Returns new messages ('new') after operation.
      *
-     * @param string $domain
-     *
      * @return array
      */
-    public function getNewMessages($domain);
+    public function getNewMessages(string $domain);
     /**
      * Returns obsolete messages ('obsolete') after operation.
      *
-     * @param string $domain
-     *
      * @return array
      */
-    public function getObsoleteMessages($domain);
+    public function getObsoleteMessages(string $domain);
     /**
      * Returns resulting catalogue ('result').
      *

@@ -45,6 +45,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Extractor;
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+/** @internal */
 class PhpStringTokenParser
 {
     protected static $replacements = ['\\' => '\\', '$' => '$', 'n' => "\n", 'r' => "\r", 't' => "\t", 'f' => "\f", 'v' => "\v", 'e' => "\x1b"];
@@ -53,9 +54,9 @@ class PhpStringTokenParser
      *
      * @param string $str String token content
      *
-     * @return string The parsed string
+     * @return string
      */
-    public static function parse($str)
+    public static function parse(string $str)
     {
         $bLength = 0;
         if ('b' === $str[0]) {
@@ -73,9 +74,9 @@ class PhpStringTokenParser
      * @param string      $str   String without quotes
      * @param string|null $quote Quote type
      *
-     * @return string String with escape sequences parsed
+     * @return string
      */
-    public static function parseEscapeSequences($str, $quote)
+    public static function parseEscapeSequences(string $str, string $quote = null)
     {
         if (null !== $quote) {
             $str = \str_replace('\\' . $quote, $quote, $str);
@@ -99,9 +100,9 @@ class PhpStringTokenParser
      * @param string $startToken Doc string start token content (<<<SMTHG)
      * @param string $str        String token content
      *
-     * @return string Parsed string
+     * @return string
      */
-    public static function parseDocString($startToken, $str)
+    public static function parseDocString(string $startToken, string $str)
     {
         // strip last newline (thanks tokenizer for sticking it into the string!)
         $str = \preg_replace('~(\\r\\n|\\n|\\r)$~', '', $str);

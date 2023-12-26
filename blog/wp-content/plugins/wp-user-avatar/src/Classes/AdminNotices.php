@@ -193,6 +193,11 @@ class AdminNotices
                 'message'   => esc_html__('Did you know that you can sell access to LearnDash courses and groups and enroll users after registration?', 'wp-user-avatar'),
                 'url'       => 'https://profilepress.com/article/setting-up-learndash-addon/',
                 'condition' => class_exists('\SFWD_LMS')
+            ],
+            'sensei'    => [
+                'message'   => esc_html__('Did you know that you can sell access to Sensei LMS courses and groups and enroll users after registration?', 'wp-user-avatar'),
+                'url'       => 'https://profilepress.com/article/setting-up-sensei-lms-addon/',
+                'condition' => function_exists('Sensei')
             ]
         ];
 

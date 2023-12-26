@@ -2,6 +2,7 @@
 
 namespace ProfilePress\Core\Membership\PaymentMethods;
 
+use ProfilePress\Core\Membership\PaymentMethods\BankTransfer\BankTransfer;
 use ProfilePress\Core\Membership\PaymentMethods\Stripe\Stripe;
 
 class PaymentMethods
@@ -18,7 +19,8 @@ class PaymentMethods
     {
         $methods = [
             StoreGateway::get_instance(),
-            Stripe::get_instance()
+            Stripe::get_instance(),
+            BankTransfer::get_instance()
         ];
 
         return apply_filters('ppress_payment_methods', $methods);

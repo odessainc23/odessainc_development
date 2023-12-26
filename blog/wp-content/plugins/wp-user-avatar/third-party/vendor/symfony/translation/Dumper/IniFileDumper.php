@@ -15,13 +15,14 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * IniFileDumper generates an ini formatted string representation of a message catalogue.
  *
  * @author Stealth35
+ * @internal
  */
 class IniFileDumper extends FileDumper
 {
     /**
      * {@inheritdoc}
      */
-    public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = [])
+    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
     {
         $output = '';
         foreach ($messages->all($domain) as $source => $target) {

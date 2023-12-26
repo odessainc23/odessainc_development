@@ -3,6 +3,7 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\BillingPortal;
 
+/** @internal */
 class SessionService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

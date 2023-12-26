@@ -3,7 +3,9 @@
 namespace ProfilePress\Core\Membership\Controllers;
 
 use ProfilePress\Core\Classes\LoginAuth;
+use ProfilePress\Core\Membership\Emails\SubscriptionCancelledNotification;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
+use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\Models\Group\GroupFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderType;
@@ -39,8 +41,11 @@ class CheckoutController extends BaseController
 
         add_action('wp_ajax_ppress_contextual_state_field', [$this, 'contextual_state_field']);
         add_action('wp_ajax_nopriv_ppress_contextual_state_field', [$this, 'contextual_state_field']);
-    }
 
+
+        add_action('wp', [$this, 'validate_checkout_coupon']);
+        add_action('wp', [$this, 'redirect_to_referrer_after_checkout']);
+    }
 
     public function contextual_state_field()
     {
@@ -73,6 +78,24 @@ class CheckoutController extends BaseController
         }
 
         wp_send_json_success(ob_get_clean());
+    }
+
+    public function validate_checkout_coupon()
+    {
+        if ( ! ppress_is_checkout()) return;
+
+        $plan_id = (int)ppressGET_var('plan', 0);
+
+        $coupon = ppress_session()->get(CheckoutSessionData::COUPON_CODE);
+
+        if (isset($coupon['coupon_code'])) {
+
+            $coupon = CouponFactory::fromCode($coupon['coupon_code']);
+
+            if ( ! $coupon->is_valid($plan_id)) {
+                ppress_session()->set(CheckoutSessionData::COUPON_CODE, null);
+            }
+        }
     }
 
     public function process_checkout_login()
@@ -212,6 +235,15 @@ class CheckoutController extends BaseController
 
             $change_plan_sub_id = (int)$_POST['change_plan_sub_id'];
 
+            if (empty($change_plan_sub_id) && $plan_id > 0) {
+
+                if ( ! ppress_get_plan($plan_id)->is_active()) {
+                    throw new \Exception(
+                        esc_html__('Invalid membership plan.', 'wp-user-avatar')
+                    );
+                }
+            }
+
             if ( ! isset($_POST['_ppress_timestamp']) || intval($_POST['_ppress_timestamp']) > (time() - 2)) {
                 throw new \Exception('spam');
             }
@@ -302,6 +334,9 @@ class CheckoutController extends BaseController
 
                 if ($sub->exists()) {
 
+                    // do not send subscription cancelled email
+                    remove_action('ppress_subscription_cancelled', [SubscriptionCancelledNotification::init(), 'dispatch_email'], 10);
+
                     $sub->cancel(true, true);
                     if (apply_filters('ppress_checkout_change_plan_expiration', false)) {
                         $sub->expire();
@@ -320,6 +355,17 @@ class CheckoutController extends BaseController
             }
 
             $order = OrderFactory::fromId($order_id);
+
+            $is_checkout_autologin = ppress_settings_by_key('enable_checkout_autologin') == 'true';
+
+            if (apply_filters('ppress_autologin_after_checkout', $is_checkout_autologin, $order, $subscription_id)) {
+
+                if ( ! is_user_logged_in()) {
+                    $user_id = CustomerFactory::fromId($customer_id)->get_user_id();
+                    wp_set_auth_cookie($user_id, true);
+                    wp_set_current_user($user_id);
+                }
+            }
 
             wp_send_json([
                 'success'           => $process_payment->is_success,
@@ -454,6 +500,13 @@ class CheckoutController extends BaseController
                 'state'    => $country_state_code
             ]);
 
+            $cart_vars = OrderService::init()->checkout_order_calculation([
+                'plan_id'            => $planObj->id,
+                'coupon_code'        => CheckoutSessionData::get_coupon_code($planObj->id),
+                'tax_rate'           => CheckoutSessionData::get_tax_rate($planObj->id),
+                'change_plan_sub_id' => $changePlanSubId
+            ]);
+
             if (ppressPOST_var('isChangePlanUpdate') == 'true') {
 
                 ob_start();
@@ -468,13 +521,6 @@ class CheckoutController extends BaseController
                 $fragments = ['.ppress-checkout__form' => ob_get_clean()];
 
             } else {
-
-                $cart_vars = OrderService::init()->checkout_order_calculation([
-                    'plan_id'            => $planObj->id,
-                    'coupon_code'        => CheckoutSessionData::get_coupon_code($planObj->id),
-                    'tax_rate'           => CheckoutSessionData::get_tax_rate($planObj->id),
-                    'change_plan_sub_id' => $changePlanSubId
-                ]);
 
                 ob_start();
                 ppress_render_view(
@@ -515,6 +561,19 @@ class CheckoutController extends BaseController
             wp_send_json_error(
                 $this->alert_message($e->getMessage())
             );
+        }
+    }
+
+    public function redirect_to_referrer_after_checkout()
+    {
+        if (ppress_is_redirect_to_referrer_after_checkout()) {
+
+            $referrer = ppress_session()->get('ppress_checkout_referrer');
+
+            if ( ! empty($referrer) && ppress_is_success_page()) {
+                wp_safe_redirect($referrer);
+                exit;
+            }
         }
     }
 }

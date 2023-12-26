@@ -4,7 +4,6 @@ namespace ProfilePress\Core\Admin\SettingsPages\Membership\CouponsPage;
 
 use ProfilePress\Core\Membership\Models\Coupon\CouponEntity;
 use ProfilePress\Core\Membership\Models\Coupon\CouponFactory;
-use ProfilePress\Core\Membership\Models\Coupon\CouponType;
 use ProfilePress\Core\Membership\Models\Coupon\CouponUnit;
 use ProfilePress\Core\Membership\Repositories\CouponRepository;
 
@@ -12,11 +11,11 @@ class CouponWPListTable extends \WP_List_Table
 {
     public function __construct()
     {
-        parent::__construct(array(
+        parent::__construct([
             'singular' => 'ppress-coupon-code',
             'plural'   => 'ppress-coupon-codes',
             'ajax'     => false
-        ));
+        ]);
     }
 
     public function no_items()
@@ -79,7 +78,7 @@ class CouponWPListTable extends \WP_List_Table
 
         $a = '<a href="' . $edit_link . '">' . esc_html($item->code) . '</a>';
 
-        $coupon_type = $item->is_recurring() ? esc_html__('Recurring', 'wp-user-avatar') : esc_html__('One-time', 'wp-user-avatar');
+        $coupon_type = $item->is_recurring() ? esc_html__('Recurring', 'wp-user-avatar') : esc_html__('First Payment', 'wp-user-avatar');
 
         $a .= '&nbsp;<span class="post-state"> — ' . $coupon_type . '</span>';
 
@@ -166,7 +165,7 @@ class CouponWPListTable extends \WP_List_Table
 
         $this->process_bulk_action();
 
-        $per_page = $this->get_items_per_page('coupons_per_page', 10);;
+        $per_page = $this->get_items_per_page('coupons_per_page', 10);
         $current_page = $this->get_pagenum();
         $total_items  = $this->record_count();
 
@@ -211,9 +210,6 @@ class CouponWPListTable extends \WP_List_Table
         $coupon_id = absint(ppress_var($_GET, 'id', 0));
 
         $couponObj = CouponFactory::fromId($coupon_id);
-
-        // Bail if user is not an admin or without admin privileges.
-        if ( ! current_user_can('manage_options')) return;
 
         if ('deactivate' === $this->current_action()) {
 

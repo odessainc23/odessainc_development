@@ -28,6 +28,7 @@ namespace ProfilePressVendor\Stripe;
  * @property float $percentage This represents the tax rate percent out of 100.
  * @property null|string $state <a href="https://en.wikipedia.org/wiki/ISO_3166-2:US">ISO 3166-2 subdivision code</a>, without country prefix. For example, &quot;NY&quot; for New York, United States.
  * @property null|string $tax_type The high-level tax type, such as <code>vat</code> or <code>sales_tax</code>.
+ * @internal
  */
 class TaxRate extends ApiResource
 {

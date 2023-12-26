@@ -2,6 +2,7 @@
 
 namespace ProfilePressVendor\Stripe\Service;
 
+/** @internal */
 class OAuthService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**

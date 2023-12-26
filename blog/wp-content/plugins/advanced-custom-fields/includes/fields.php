@@ -136,7 +136,6 @@ if ( ! class_exists( 'acf_fields' ) ) :
 
 	// initialize
 	acf()->fields = new acf_fields();
-
 endif; // class_exists check
 
 
@@ -409,6 +408,7 @@ function acf_get_combined_field_type_settings_tabs() {
 		'validation'        => __( 'Validation', 'acf' ),
 		'presentation'      => __( 'Presentation', 'acf' ),
 		'conditional_logic' => __( 'Conditional Logic', 'acf' ),
+		'advanced'          => __( 'Advanced', 'acf' ),
 	);
 
 	$field_type_settings_tabs = (array) apply_filters( 'acf/field_group/additional_field_settings_tabs', array() );

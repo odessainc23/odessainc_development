@@ -288,10 +288,10 @@ class PaymentHelpers
             }
         }
 
-        $create_customer_args['metadata'] = [
+        $create_customer_args['metadata'] = apply_filters('ppress_stripe_customer_metadata', [
             'ppress_customer_id' => $customer->id,
             'caller'             => __CLASS__ . '|' . __METHOD__ . '|' . __LINE__ . '|' . PPRESS_VERSION_NUMBER,
-        ];
+        ], $customer, $create_customer_args);
 
         $create_customer_args = apply_filters('ppress_create_customer_args', $create_customer_args, $customer);
 

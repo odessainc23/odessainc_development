@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Loader;
 use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidResourceException;
 /**
  * @copyright Copyright (c) 2010, Union of RAD http://union-of-rad.org (http://lithify.me/)
+ * @internal
  */
 class MoFileLoader extends FileLoader
 {
@@ -36,7 +37,7 @@ class MoFileLoader extends FileLoader
      *
      * {@inheritdoc}
      */
-    protected function loadResource($resource)
+    protected function loadResource(string $resource)
     {
         $stream = \fopen($resource, 'r');
         $stat = \fstat($stream);

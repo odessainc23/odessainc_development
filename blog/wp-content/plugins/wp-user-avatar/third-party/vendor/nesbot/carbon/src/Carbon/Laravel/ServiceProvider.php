@@ -20,6 +20,7 @@ use ProfilePressVendor\Illuminate\Events\EventDispatcher;
 use ProfilePressVendor\Illuminate\Support\Carbon as IlluminateCarbon;
 use ProfilePressVendor\Illuminate\Support\Facades\Date;
 use Throwable;
+/** @internal */
 class ServiceProvider extends \ProfilePressVendor\Illuminate\Support\ServiceProvider
 {
     /** @var callable|null */
@@ -92,7 +93,7 @@ class ServiceProvider extends \ProfilePressVendor\Illuminate\Support\ServiceProv
     }
     protected function getGlobalApp(...$args)
     {
-        return \function_exists('app') ? \app(...$args) : null;
+        return \function_exists('ProfilePressVendor\\app') ? \ProfilePressVendor\app(...$args) : null;
     }
     protected function isEventDispatcher($instance)
     {

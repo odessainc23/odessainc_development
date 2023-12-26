@@ -13,6 +13,7 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Formatter;
 /**
  * @author Guilherme Blanco <guilhermeblanco@hotmail.com>
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
+ * @internal
  */
 interface MessageFormatterInterface
 {
@@ -25,5 +26,5 @@ interface MessageFormatterInterface
      *
      * @return string
      */
-    public function format($message, $locale, array $parameters = []);
+    public function format(string $message, string $locale, array $parameters = []);
 }

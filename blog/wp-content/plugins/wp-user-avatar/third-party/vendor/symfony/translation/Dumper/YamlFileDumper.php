@@ -18,6 +18,7 @@ use ProfilePressVendor\Symfony\Component\Yaml\Yaml;
  * YamlFileDumper generates yaml files from a message catalogue.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 class YamlFileDumper extends FileDumper
 {
@@ -29,7 +30,7 @@ class YamlFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-    public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = [])
+    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
     {
         if (!\class_exists(Yaml::class)) {
             throw new LogicException('Dumping translations in the YAML format requires the Symfony Yaml component.');

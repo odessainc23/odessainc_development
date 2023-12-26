@@ -17,6 +17,7 @@ use ProfilePressVendor\Symfony\Component\Translation\Exception\InvalidResourceEx
  * their contents according to the XSD schema.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @internal
  */
 class XliffUtils
 {

@@ -17,6 +17,7 @@ namespace ProfilePressVendor\Stripe;
  * @property \Stripe\StripeObject $single_use
  * @property string $status The status of the mandate, which indicates whether it can be used to initiate a payment.
  * @property string $type The type of the mandate.
+ * @internal
  */
 class Mandate extends ApiResource
 {

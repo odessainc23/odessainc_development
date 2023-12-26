@@ -20,6 +20,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * - path (mandatory): the directory where the files should be saved
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 abstract class FileDumper implements DumperInterface
 {
@@ -34,28 +35,14 @@ abstract class FileDumper implements DumperInterface
      *
      * @param string $relativePathTemplate A template for the relative paths to files
      */
-    public function setRelativePathTemplate($relativePathTemplate)
+    public function setRelativePathTemplate(string $relativePathTemplate)
     {
         $this->relativePathTemplate = $relativePathTemplate;
     }
     /**
-     * Sets backup flag.
-     *
-     * @param bool $backup
-     *
-     * @deprecated since Symfony 4.1
-     */
-    public function setBackup($backup)
-    {
-        @\trigger_error(\sprintf('The "%s()" method is deprecated since Symfony 4.1.', __METHOD__), \E_USER_DEPRECATED);
-        if (\false !== $backup) {
-            throw new \LogicException('The backup feature is no longer supported.');
-        }
-    }
-    /**
      * {@inheritdoc}
      */
-    public function dump(MessageCatalogue $messages, $options = [])
+    public function dump(MessageCatalogue $messages, array $options = [])
     {
         if (!\array_key_exists('path', $options)) {
             throw new InvalidArgumentException('The file dumper needs a path option.');
@@ -90,15 +77,13 @@ abstract class FileDumper implements DumperInterface
     /**
      * Transforms a domain of a message catalogue to its string representation.
      *
-     * @param string $domain
-     *
-     * @return string representation
+     * @return string
      */
-    public abstract function formatCatalogue(MessageCatalogue $messages, $domain, array $options = []);
+    public abstract function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []);
     /**
      * Gets the file extension of the dumper.
      *
-     * @return string file extension
+     * @return string
      */
     protected abstract function getExtension();
     /**

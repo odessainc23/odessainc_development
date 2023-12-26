@@ -98,12 +98,12 @@ $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_me
                             <tr>
                                 <td><?php esc_html_e('Actions', 'wp-user-avatar'); ?></td>
                                 <td>
-                                    <?php foreach ($actions as $action => $label) :
+                                    <?php foreach ($actions as $action => $label) : $attr = $action == 'cancel' ? ' ppress-confirm-delete' : '';
                                         $url = wp_nonce_url(
                                             remove_query_arg('ppress-myac-sub-message', add_query_arg(['ppress_myac_sub_action' => $action, 'sub_id' => $sub->id])),
                                             $sub->id . $action . get_current_user_id()
                                         ); ?>
-                                        <a href="<?php echo esc_url($url); ?>" class="ppress-myac-action ppress-<?php echo sanitize_html_class($action) ?> ppress-confirm-delete"><?php echo esc_html($label); ?></a>
+                                        <a href="<?php echo esc_url($url); ?>" class="ppress-myac-action ppress-<?php echo sanitize_html_class($action) ?><?php echo $attr ?>"><?php echo esc_html($label); ?></a>
                                     <?php endforeach; ?>
                                 </td>
                             </tr>

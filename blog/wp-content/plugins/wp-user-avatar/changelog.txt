@@ -1,5 +1,64 @@
 ﻿== Changelog ==
 
+= 4.14.1 =
+* Added setting for enabling autologin after checkout.
+* Added ppress_myaccount_edit_profile_custom_form filter.
+* Fixed bug with checkout of free trials via Stripe.
+* Fixed bug with multisite login redirect to wrong network site.
+* Fixed bug where order was 0 when amount was not entered during manual order creation.
+* Bumped stripe api version to 2023-10-16.
+* Improved caching of gravatar API calls.
+* Added more US states: American Samoa, Puerto Rico, Palau.
+* Switch to esc_url_raw in NavigationMenuLinks::Frontend.
+
+= 4.14.0 =
+* Added feature to disable concurrent login by users.
+* Added password strength meter to "change password" myaccount section.
+* Added Allowlist option for restricting registration to specific email addresses.
+* Added Bank Transfer payment method.
+* Added filter to stripe customer metadata array.
+* added ppress_author_post_after_title filter.
+* Fixed fatal error: Uncaught TypeError: array_filter(): Argument 1 ($array) must be of type array.
+
+= 4.13.4 =
+* Pro: [Invite Codes](https://profilepress.com/addons/invite-codes/?ref=changelog) addon.
+* Enhancement: Only add confirm prompt on cancel action button on view subscription page.
+* Fixed bug where material icons weren't showing in form builder.
+
+= 4.13.3 =
+* Fixed Fatal error: Uncaught TypeError: strpos(): Argument #1 must be of type string, array given.
+* Fixed bug where cancelled sub didn’t change to expire after expiration.
+* Fixed bug where inactive membership plan could be purchased.
+* Fixed bug where checkout proration wasn't working.
+* Renamed log file to be unique to avoid public access.
+
+= 4.13.2 =
+* Fixed security issue where user can specify their own non-admin user role.
+* Added filters for the Member Directory search field and button.
+* Fixed bug where country field IDs instead of the name were displayed in user profile.
+* Added filter to implement checkout auto-login.
+* Added nonce check to admin notice dismissal url.
+
+= 4.13.1 =
+* Pro: [LifterLMS](https://profilepress.com/addons/lifterlms/?ref=changelog) integration.
+* Added content protection compatibility with Avada theme.
+* Added "ppress_myaccount_subscription_header_actions" action hook.
+* Check capability before dismissing admin notice.
+* Do not send welcome email if user moderation is active for a registering users.
+
+= 4.13.0 =
+* Pro: [Sensei LMS](https://profilepress.com/addons/sensei-lms/?ref=changelog) integration.
+* Added [Data Export](https://profilepress.com/article/data-export-overview/) feature.
+* Added option to make coupon one-time use.
+* Added setting to disable sending email receipts for free orders.
+* Added Settings tab for enforcing password confirmation as required field.
+* Added filter to redirect to referrer url after checkout.
+* Added filter to conditionally enable user moderation based on registration form.
+* Reverted added "ppress_noaccess_action_message_custom_no_wp_kses_post" filter.
+* Fixed bug with plan switching checkout not working for certain payment methods.
+* Fixed bug where sub cancelled email was sent during upgrade.
+* Fixed bug with invalid "paid on" date on order edit screen.
+
 = 4.12.0 =
 * Added setting for [disabling subscription auto-renewals](https://profilepress.com/article/auto-renewal-settings/).
 * Extended Tutor LMS addon to include [creating custom student](https://profilepress.com/article/custom-tutor-lms-student-registration-form/) and [instructor registration forms](https://profilepress.com/article/custom-tutor-lms-instructor-registration-form/).

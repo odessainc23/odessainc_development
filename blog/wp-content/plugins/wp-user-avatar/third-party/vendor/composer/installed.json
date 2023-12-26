@@ -7,18 +7,18 @@
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/mailoptin\/composer-cleanup-plugin.git",
-                "reference": "74d878666436c99f5b671b90312e85479afeedb0"
+                "reference": "e9e4b361f2e872a0bf4933c6218c35ad48c56075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/mailoptin\/composer-cleanup-plugin\/zipball\/74d878666436c99f5b671b90312e85479afeedb0",
-                "reference": "74d878666436c99f5b671b90312e85479afeedb0",
+                "url": "https:\/\/api.github.com\/repos\/mailoptin\/composer-cleanup-plugin\/zipball\/e9e4b361f2e872a0bf4933c6218c35ad48c56075",
+                "reference": "e9e4b361f2e872a0bf4933c6218c35ad48c56075",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.0"
             },
-            "time": "2022-03-15T13:35:33+00:00",
+            "time": "2023-08-18T07:18:15+00:00",
             "default-branch": true,
             "type": "composer-plugin",
             "extra": {
@@ -44,7 +44,7 @@
             ],
             "description": "A composer cleanup plugin, to remove tests and documentation to save space",
             "support": {
-                "source": "https:\/\/github.com\/mailoptin\/composer-cleanup-plugin\/tree\/master"
+                "source": "https:\/\/github.com\/mailoptin\/composer-cleanup-plugin\/tree\/0.1.1"
             },
             "install-path": "..\/barryvdh\/composer-cleanup-plugin"
         },
@@ -112,6 +112,78 @@
             "install-path": "..\/brick\/math"
         },
         {
+            "name": "carbonphp\/carbon-doctrine-types",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/CarbonPHP\/carbon-doctrine-types.git",
+                "reference": "67a77972b9f398ae7068dabacc39c08aeee170d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/CarbonPHP\/carbon-doctrine-types\/zipball\/67a77972b9f398ae7068dabacc39c08aeee170d5",
+                "reference": "67a77972b9f398ae7068dabacc39c08aeee170d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "conflict": {
+                "doctrine\/dbal": "<3.7.0 || >=4.0.0"
+            },
+            "require-dev": {
+                "doctrine\/dbal": "^3.7.0",
+                "nesbot\/carbon": "^2.71.0 || ^3.0.0",
+                "phpunit\/phpunit": "^10.3"
+            },
+            "time": "2023-10-01T14:29:01+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ProfilePressVendor\\Carbon\\Doctrine\\": "src\/Carbon\/Doctrine\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KyleKatarn",
+                    "email": "kylekatarnls@gmail.com"
+                }
+            ],
+            "description": "Types to use Carbon in Doctrine",
+            "keywords": [
+                "carbon",
+                "date",
+                "datetime",
+                "doctrine",
+                "time"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/CarbonPHP\/carbon-doctrine-types\/issues",
+                "source": "https:\/\/github.com\/CarbonPHP\/carbon-doctrine-types\/tree\/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/github.com\/kylekatarnls",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/opencollective.com\/Carbon",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https:\/\/tidelift.com\/funding\/github\/packagist\/nesbot\/carbon",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "..\/carbonphp\/carbon-doctrine-types"
+        },
+        {
             "name": "collizo4sky\/persist-admin-notices-dismissal",
             "version": "1.4.4",
             "version_normalized": "1.4.4.0",
@@ -156,30 +228,122 @@
             "install-path": "..\/collizo4sky\/persist-admin-notices-dismissal"
         },
         {
-            "name": "nesbot\/carbon",
-            "version": "2.68.1",
-            "version_normalized": "2.68.1.0",
+            "name": "league\/csv",
+            "version": "9.8.0",
+            "version_normalized": "9.8.0.0",
             "source": {
                 "type": "git",
-                "url": "https:\/\/github.com\/briannesbitt\/Carbon.git",
-                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da"
+                "url": "https:\/\/github.com\/thephpleague\/csv.git",
+                "reference": "9d2e0265c5d90f5dd601bc65ff717e05cec19b47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/briannesbitt\/Carbon\/zipball\/4f991ed2a403c85efbc4f23eb4030063fdbe01da",
-                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da",
+                "url": "https:\/\/api.github.com\/repos\/thephpleague\/csv\/zipball\/9d2e0265c5d90f5dd601bc65ff717e05cec19b47",
+                "reference": "9d2e0265c5d90f5dd601bc65ff717e05cec19b47",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "friendsofphp\/php-cs-fixer": "^v3.4.0",
+                "phpstan\/phpstan": "^1.3.0",
+                "phpstan\/phpstan-phpunit": "^1.0.0",
+                "phpstan\/phpstan-strict-rules": "^1.1.0",
+                "phpunit\/phpunit": "^9.5.11"
+            },
+            "suggest": {
+                "ext-dom": "Required to use the XMLConverter and or the HTMLConverter classes",
+                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+            },
+            "time": "2022-01-04T00:13:07+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src\/functions_include.php"
+                ],
+                "psr-4": {
+                    "ProfilePressVendor\\League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https:\/\/github.com\/nyamsprod\/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV data manipulation made easy in PHP",
+            "homepage": "https:\/\/csv.thephpleague.com",
+            "keywords": [
+                "convert",
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "transform",
+                "write"
+            ],
+            "support": {
+                "docs": "https:\/\/csv.thephpleague.com",
+                "issues": "https:\/\/github.com\/thephpleague\/csv\/issues",
+                "rss": "https:\/\/github.com\/thephpleague\/csv\/releases.atom",
+                "source": "https:\/\/github.com\/thephpleague\/csv"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/github.com\/sponsors\/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "install-path": "..\/league\/csv"
+        },
+        {
+            "name": "nesbot\/carbon",
+            "version": "2.72.0",
+            "version_normalized": "2.72.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/briannesbitt\/Carbon.git",
+                "reference": "a6885fcbad2ec4360b0e200ee0da7d9b7c90786b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/briannesbitt\/Carbon\/zipball\/a6885fcbad2ec4360b0e200ee0da7d9b7c90786b",
+                "reference": "a6885fcbad2ec4360b0e200ee0da7d9b7c90786b",
+                "shasum": ""
+            },
+            "require": {
+                "carbonphp\/carbon-doctrine-types": "*",
+                "ext-json": "*",
                 "php": "^7.1.8 || ^8.0",
+                "psr\/clock": "^1.0",
                 "symfony\/polyfill-mbstring": "^1.0",
                 "symfony\/polyfill-php80": "^1.16",
                 "symfony\/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
             },
+            "provide": {
+                "psr\/clock-implementation": "1.0"
+            },
             "require-dev": {
-                "doctrine\/dbal": "^2.0 || ^3.1.4",
-                "doctrine\/orm": "^2.7",
+                "doctrine\/dbal": "^2.0 || ^3.1.4 || ^4.0",
+                "doctrine\/orm": "^2.7 || ^3.0",
                 "friendsofphp\/php-cs-fixer": "^3.0",
                 "kylekatarnls\/multi-tester": "^2.0",
                 "ondrejmirtes\/better-reflection": "*",
@@ -190,7 +354,7 @@
                 "phpunit\/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
                 "squizlabs\/php_codesniffer": "^3.4"
             },
-            "time": "2023-06-20T18:29:04+00:00",
+            "time": "2023-11-28T10:13:25+00:00",
             "bin": [
                 "bin\/carbon"
             ],
@@ -342,6 +506,57 @@
             "install-path": "..\/pelago\/emogrifier"
         },
         {
+            "name": "psr\/clock",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/php-fig\/clock.git",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/php-fig\/clock\/zipball\/e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0"
+            },
+            "time": "2022-11-25T14:36:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ProfilePressVendor\\Psr\\Clock\\": "src\/"
+                }
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https:\/\/www.php-fig.org\/"
+                }
+            ],
+            "description": "Common interface for reading the clock.",
+            "homepage": "https:\/\/github.com\/php-fig\/clock",
+            "keywords": [
+                "clock",
+                "now",
+                "psr",
+                "psr-20",
+                "time"
+            ],
+            "support": {
+                "issues": "https:\/\/github.com\/php-fig\/clock\/issues",
+                "source": "https:\/\/github.com\/php-fig\/clock\/tree\/1.0.0"
+            },
+            "install-path": "..\/psr\/clock"
+        },
+        {
             "name": "sabberworm\/php-css-parser",
             "version": "8.4.0",
             "version_normalized": "8.4.0.0",
@@ -399,26 +614,26 @@
         },
         {
             "name": "sniccowp\/php-scoper-wordpress-excludes",
-            "version": "6.2.1",
-            "version_normalized": "6.2.1.0",
+            "version": "6.4.1",
+            "version_normalized": "6.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes.git",
-                "reference": "2fd202ff7b315fa074343aadb98cd3a62fea1d6c"
+                "reference": "1703ee763b2e46669beebe08c277e105c26c8957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/snicco\/php-scoper-wordpress-excludes\/zipball\/2fd202ff7b315fa074343aadb98cd3a62fea1d6c",
-                "reference": "2fd202ff7b315fa074343aadb98cd3a62fea1d6c",
+                "url": "https:\/\/api.github.com\/repos\/snicco\/php-scoper-wordpress-excludes\/zipball\/1703ee763b2e46669beebe08c277e105c26c8957",
+                "reference": "1703ee763b2e46669beebe08c277e105c26c8957",
                 "shasum": ""
             },
             "require-dev": {
                 "php": "^7.4",
                 "php-stubs\/wordpress-globals": "0.2.0",
-                "php-stubs\/wordpress-stubs": "6.2.0",
+                "php-stubs\/wordpress-stubs": "6.4.1",
                 "sniccowp\/php-scoper-excludes": "dev-master"
             },
-            "time": "2023-04-01T00:20:59+00:00",
+            "time": "2023-11-11T00:19:14+00:00",
             "type": "library",
             "installation-source": "dist",
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -443,7 +658,7 @@
             ],
             "support": {
                 "issues": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes\/issues",
-                "source": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes\/tree\/6.2.1"
+                "source": "https:\/\/github.com\/snicco\/php-scoper-wordpress-excludes\/tree\/6.4.1"
             },
             "install-path": "..\/sniccowp\/php-scoper-wordpress-excludes"
         },
@@ -512,24 +727,24 @@
         },
         {
             "name": "symfony\/css-selector",
-            "version": "v4.4.44",
-            "version_normalized": "4.4.44.0",
+            "version": "v5.4.26",
+            "version_normalized": "5.4.26.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/symfony\/css-selector.git",
-                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed"
+                "reference": "0ad3f7e9a1ab492c5b4214cf22a9dc55dcf8600a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/symfony\/css-selector\/zipball\/bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
-                "reference": "bd0a6737e48de45b4b0b7b6fc98c78404ddceaed",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/css-selector\/zipball\/0ad3f7e9a1ab492c5b4214cf22a9dc55dcf8600a",
+                "reference": "0ad3f7e9a1ab492c5b4214cf22a9dc55dcf8600a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3",
+                "php": ">=7.2.5",
                 "symfony\/polyfill-php80": "^1.16"
             },
-            "time": "2022-06-27T13:16:42+00:00",
+            "time": "2023-07-07T06:10:25+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -561,7 +776,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https:\/\/symfony.com",
             "support": {
-                "source": "https:\/\/github.com\/symfony\/css-selector\/tree\/v4.4.44"
+                "source": "https:\/\/github.com\/symfony\/css-selector\/tree\/v5.4.26"
             },
             "funding": [
                 {
@@ -580,18 +795,88 @@
             "install-path": "..\/symfony\/css-selector"
         },
         {
-            "name": "symfony\/polyfill-mbstring",
-            "version": "v1.27.0",
-            "version_normalized": "1.27.0.0",
+            "name": "symfony\/deprecation-contracts",
+            "version": "v2.5.2",
+            "version_normalized": "2.5.2.0",
             "source": {
                 "type": "git",
-                "url": "https:\/\/github.com\/symfony\/polyfill-mbstring.git",
-                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
+                "url": "https:\/\/github.com\/symfony\/deprecation-contracts.git",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-mbstring\/zipball\/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
-                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/deprecation-contracts\/zipball\/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "time": "2022-01-02T09:53:40+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony\/contracts",
+                    "url": "https:\/\/github.com\/symfony\/contracts"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https:\/\/packagist.org\/downloads\/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https:\/\/symfony.com\/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https:\/\/symfony.com",
+            "support": {
+                "source": "https:\/\/github.com\/symfony\/deprecation-contracts\/tree\/v2.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https:\/\/symfony.com\/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https:\/\/github.com\/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https:\/\/tidelift.com\/funding\/github\/packagist\/symfony\/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "..\/symfony\/deprecation-contracts"
+        },
+        {
+            "name": "symfony\/polyfill-mbstring",
+            "version": "v1.28.0",
+            "version_normalized": "1.28.0.0",
+            "source": {
+                "type": "git",
+                "url": "https:\/\/github.com\/symfony\/polyfill-mbstring.git",
+                "reference": "42292d99c55abe617799667f454222c54c60e229"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-mbstring\/zipball\/42292d99c55abe617799667f454222c54c60e229",
+                "reference": "42292d99c55abe617799667f454222c54c60e229",
                 "shasum": ""
             },
             "require": {
@@ -603,11 +888,11 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2022-11-03T14:55:06+00:00",
+            "time": "2023-07-28T09:04:16+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.27-dev"
+                    "dev-main": "1.28-dev"
                 },
                 "thanks": {
                     "name": "symfony\/polyfill",
@@ -647,7 +932,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https:\/\/github.com\/symfony\/polyfill-mbstring\/tree\/v1.27.0"
+                "source": "https:\/\/github.com\/symfony\/polyfill-mbstring\/tree\/v1.28.0"
             },
             "funding": [
                 {
@@ -667,27 +952,27 @@
         },
         {
             "name": "symfony\/polyfill-php80",
-            "version": "v1.27.0",
-            "version_normalized": "1.27.0.0",
+            "version": "v1.28.0",
+            "version_normalized": "1.28.0.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/symfony\/polyfill-php80.git",
-                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
+                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-php80\/zipball\/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/polyfill-php80\/zipball\/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2022-11-03T14:55:06+00:00",
+            "time": "2023-01-26T09:26:14+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.27-dev"
+                    "dev-main": "1.28-dev"
                 },
                 "thanks": {
                     "name": "symfony\/polyfill",
@@ -733,7 +1018,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https:\/\/github.com\/symfony\/polyfill-php80\/tree\/v1.27.0"
+                "source": "https:\/\/github.com\/symfony\/polyfill-php80\/tree\/v1.28.0"
             },
             "funding": [
                 {
@@ -753,54 +1038,62 @@
         },
         {
             "name": "symfony\/translation",
-            "version": "v4.4.47",
-            "version_normalized": "4.4.47.0",
+            "version": "v5.4.31",
+            "version_normalized": "5.4.31.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/symfony\/translation.git",
-                "reference": "45036b1d53accc48fe9bab71ccd86d57eba0dd94"
+                "reference": "ba72f72fceddf36f00bd495966b5873f2d17ad8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/symfony\/translation\/zipball\/45036b1d53accc48fe9bab71ccd86d57eba0dd94",
-                "reference": "45036b1d53accc48fe9bab71ccd86d57eba0dd94",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/translation\/zipball\/ba72f72fceddf36f00bd495966b5873f2d17ad8f",
+                "reference": "ba72f72fceddf36f00bd495966b5873f2d17ad8f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3",
+                "php": ">=7.2.5",
+                "symfony\/deprecation-contracts": "^2.1|^3",
                 "symfony\/polyfill-mbstring": "~1.0",
                 "symfony\/polyfill-php80": "^1.16",
-                "symfony\/translation-contracts": "^1.1.6|^2"
+                "symfony\/translation-contracts": "^2.3"
             },
             "conflict": {
-                "symfony\/config": "<3.4",
-                "symfony\/dependency-injection": "<3.4",
-                "symfony\/http-kernel": "<4.4",
-                "symfony\/yaml": "<3.4"
+                "symfony\/config": "<4.4",
+                "symfony\/console": "<5.3",
+                "symfony\/dependency-injection": "<5.0",
+                "symfony\/http-kernel": "<5.0",
+                "symfony\/twig-bundle": "<5.0",
+                "symfony\/yaml": "<4.4"
             },
             "provide": {
-                "symfony\/translation-implementation": "1.0|2.0"
+                "symfony\/translation-implementation": "2.3"
             },
             "require-dev": {
                 "psr\/log": "^1|^2|^3",
-                "symfony\/config": "^3.4|^4.0|^5.0",
-                "symfony\/console": "^3.4|^4.0|^5.0",
-                "symfony\/dependency-injection": "^3.4|^4.0|^5.0",
-                "symfony\/finder": "~2.8|~3.0|~4.0|^5.0",
-                "symfony\/http-kernel": "^4.4",
-                "symfony\/intl": "^3.4|^4.0|^5.0",
-                "symfony\/service-contracts": "^1.1.2|^2",
-                "symfony\/yaml": "^3.4|^4.0|^5.0"
+                "symfony\/config": "^4.4|^5.0|^6.0",
+                "symfony\/console": "^5.4|^6.0",
+                "symfony\/dependency-injection": "^5.0|^6.0",
+                "symfony\/finder": "^4.4|^5.0|^6.0",
+                "symfony\/http-client-contracts": "^1.1|^2.0|^3.0",
+                "symfony\/http-kernel": "^5.0|^6.0",
+                "symfony\/intl": "^4.4|^5.0|^6.0",
+                "symfony\/polyfill-intl-icu": "^1.21",
+                "symfony\/service-contracts": "^1.1.2|^2|^3",
+                "symfony\/yaml": "^4.4|^5.0|^6.0"
             },
             "suggest": {
                 "psr\/log-implementation": "To use logging capability in translator",
                 "symfony\/config": "",
                 "symfony\/yaml": ""
             },
-            "time": "2022-10-03T15:15:11+00:00",
+            "time": "2023-11-03T16:16:43+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
+                "files": [
+                    "Resources\/functions.php"
+                ],
                 "psr-4": {
                     "ProfilePressVendor\\Symfony\\Component\\Translation\\": ""
                 },
@@ -825,7 +1118,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https:\/\/symfony.com",
             "support": {
-                "source": "https:\/\/github.com\/symfony\/translation\/tree\/v4.4.47"
+                "source": "https:\/\/github.com\/symfony\/translation\/tree\/v5.4.31"
             },
             "funding": [
                 {
@@ -845,30 +1138,30 @@
         },
         {
             "name": "symfony\/translation-contracts",
-            "version": "v1.1.13",
-            "version_normalized": "1.1.13.0",
+            "version": "v2.5.2",
+            "version_normalized": "2.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/symfony\/translation-contracts.git",
-                "reference": "7462e5c4cb8b9cd152f992e8f10963b5641921f6"
+                "reference": "136b19dd05cdf0709db6537d058bcab6dd6e2dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/symfony\/translation-contracts\/zipball\/7462e5c4cb8b9cd152f992e8f10963b5641921f6",
-                "reference": "7462e5c4cb8b9cd152f992e8f10963b5641921f6",
+                "url": "https:\/\/api.github.com\/repos\/symfony\/translation-contracts\/zipball\/136b19dd05cdf0709db6537d058bcab6dd6e2dbe",
+                "reference": "136b19dd05cdf0709db6537d058bcab6dd6e2dbe",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3"
+                "php": ">=7.2.5"
             },
             "suggest": {
                 "symfony\/translation-implementation": ""
             },
-            "time": "2022-06-27T13:16:42+00:00",
+            "time": "2022-06-27T16:58:25+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.1-dev"
+                    "dev-main": "2.5-dev"
                 },
                 "thanks": {
                     "name": "symfony\/contracts",
@@ -906,7 +1199,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https:\/\/github.com\/symfony\/translation-contracts\/tree\/v1.1.13"
+                "source": "https:\/\/github.com\/symfony\/translation-contracts\/tree\/v2.5.2"
             },
             "funding": [
                 {

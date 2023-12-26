@@ -6,6 +6,7 @@ use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
 use ProfilePressVendor\Sabberworm\CSS\Property\AtRule;
 /**
  * A RuleSet constructed by an unknown at-rule. `@font-face` rules are rendered into AtRuleSet objects.
+ * @internal
  */
 class AtRuleSet extends RuleSet implements AtRule
 {

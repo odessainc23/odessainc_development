@@ -21,6 +21,7 @@ namespace ProfilePressVendor\Stripe;
  * @property null|string $tax_behavior Specifies whether the rate is considered inclusive of taxes or exclusive of taxes. One of <code>inclusive</code>, <code>exclusive</code>, or <code>unspecified</code>.
  * @property null|string|\Stripe\TaxCode $tax_code A <a href="https://stripe.com/docs/tax/tax-categories">tax code</a> ID. The Shipping tax code is <code>txcd_92010001</code>.
  * @property string $type The type of calculation to use on the shipping rate. Can only be <code>fixed_amount</code> for now.
+ * @internal
  */
 class ShippingRate extends ApiResource
 {

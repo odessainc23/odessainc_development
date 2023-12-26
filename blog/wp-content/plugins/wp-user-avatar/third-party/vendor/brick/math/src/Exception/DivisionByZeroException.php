@@ -5,6 +5,7 @@ namespace ProfilePressVendor\Brick\Math\Exception;
 
 /**
  * Exception thrown when a division by zero occurs.
+ * @internal
  */
 class DivisionByZeroException extends MathException
 {

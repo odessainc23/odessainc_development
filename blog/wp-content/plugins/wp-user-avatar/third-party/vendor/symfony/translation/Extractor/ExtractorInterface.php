@@ -16,6 +16,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * New found messages are injected to the catalogue using the prefix.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 interface ExtractorInterface
 {
@@ -27,8 +28,6 @@ interface ExtractorInterface
     public function extract($resource, MessageCatalogue $catalogue);
     /**
      * Sets the prefix that should be used for new found messages.
-     *
-     * @param string $prefix The prefix
      */
-    public function setPrefix($prefix);
+    public function setPrefix(string $prefix);
 }

@@ -132,7 +132,7 @@ do_action('add_meta_boxes', 'ppmembershiporder', new WP_Post(new stdClass()));
 </div>
 <script type="text/javascript">
     var ppress_order_replace_modal_title = '<?php esc_html_e('Add or Replace Order Item', 'wp-user-avatar'); ?>';
-    var ppress_modal_empty_plan_error = '<?php esc_html_e('Please select a subscription plan', 'wp-user-avatar'); ?>';
+    var ppress_modal_empty_plan_error = '<?php esc_html_e('Please select a membership plan', 'wp-user-avatar'); ?>';
 </script>
 <script type="text/html" id="tmpl-add-replace-order-template">
     <div class="ppress-order-item-modal-wrap">

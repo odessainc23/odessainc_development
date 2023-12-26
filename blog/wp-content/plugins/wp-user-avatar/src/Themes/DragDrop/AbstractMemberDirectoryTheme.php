@@ -842,7 +842,9 @@ abstract class AbstractMemberDirectoryTheme extends AbstractTheme
     {
         if ($this->get_meta('ppress_md_enable_search') != 'true') return;
 
-        $search_string = esc_html__('Search', 'wp-user-avatar');
+        $search_string = apply_filters( 'ppressmd_member_directory_search_string', esc_html__( 'Search', 'wp-user-avatar' ) );
+	    
+        $search_string_placeholder = apply_filters( 'ppressmd_member_directory_search_placeholder', esc_html__( 'Search', 'wp-user-avatar' ) );
 
         $entered_search_term = ppress_var($this->search_filter_query_params(), 'search-' . $this->form_id, '');
 
@@ -850,7 +852,7 @@ abstract class AbstractMemberDirectoryTheme extends AbstractTheme
         <div class="ppressmd-member-directory-header-row ppressmd-member-directory-search-row">
             <div class="ppressmd-member-directory-search-line">
                 <label>
-                    <input name="search-<?= $this->form_id ?>" type="search" class="ppressmd-search-line" placeholder="<?= $search_string ?>" value="<?= esc_attr($entered_search_term) ?>">
+                    <input name="search-<?= $this->form_id ?>" type="search" class="ppressmd-search-line" placeholder="<?= $search_string_placeholder ?>" value="<?= esc_attr($entered_search_term) ?>">
                 </label>
                 <input type="submit" class="ppressmd-do-search ppressmd-button" value="<?= $search_string ?>">
             </div>

@@ -15,6 +15,7 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * ChainExtractor extracts translation messages from template files.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
+ * @internal
  */
 class ChainExtractor implements ExtractorInterface
 {
@@ -26,17 +27,15 @@ class ChainExtractor implements ExtractorInterface
     private $extractors = [];
     /**
      * Adds a loader to the translation extractor.
-     *
-     * @param string $format The format of the loader
      */
-    public function addExtractor($format, ExtractorInterface $extractor)
+    public function addExtractor(string $format, ExtractorInterface $extractor)
     {
         $this->extractors[$format] = $extractor;
     }
     /**
      * {@inheritdoc}
      */
-    public function setPrefix($prefix)
+    public function setPrefix(string $prefix)
     {
         foreach ($this->extractors as $extractor) {
             $extractor->setPrefix($prefix);

@@ -16,6 +16,7 @@ use ProfilePressVendor\Carbon\CarbonImmutable;
  * Trait Mutability.
  *
  * Utils to know if the current object is mutable or immutable and convert it.
+ * @internal
  */
 trait Mutability
 {
