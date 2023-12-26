@@ -1,8 +1,7 @@
 <!-- Nav Menu -->
 
 <nav class="navbar navbar-default navbar-fixed-top navbar--js">
-<?php $is_home = $this->router->fetch_class() === 'home' ? true : false;
-if($is_home){?>
+
 	<!-- <div class="t-alert-covid bg-alert">
 		<div class="container">
 			<div class="row">
@@ -20,7 +19,24 @@ if($is_home){?>
 			</div>
 		</div>
 	</div> -->
-<?php } ?> 
+	<div class="t-alert-covid bg-alert">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="covid-alert">
+                            <div class="alert  alert-dismissible fade in ">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <p class="covid-alert__para text-center" style="text-transform: capitalize;font-size: 18px;">
+                                     Whitepaper Out Now! 'Top 10 must haves for XaaS Success in Asset Finance' <a href="<?php echo base_url(); ?>whitepaper/unlocking-xaas-transformative-insights-asset-finance" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Download</a> 
+                                                                <!-- <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a> -->
+                                                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 	<div class="container">
 		
 		<div class="navbar_wrapper row"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
@@ -37,68 +53,66 @@ if($is_home){?>
 						<ul class="dropdown-menu mega-dropdown-menu">
 							<div class="container pos">
 								<div class="servicemenuwrap">
-									<div class="menuwrap">
-										<div class="row eqWrap equalHMWrap clearfix">
-											<div class="col-xs-6 col-sm-3 menuwd20">
-												<ul>
-													<li class="category-dot category-cx">Asset Finance</li>
-													<li><a href="<?php echo base_url(); ?>platform/core">Odessa Core</a></li>
-													<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Origination</a></li>
-													<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Servicing</a></li>
-													<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Lease Management</a></li>
-													<li class="pdl"><a href="<?php echo base_url(); ?>platform/core">Loan Management</a></li>
-												</ul>
-												<ul>
-                                                        <li class="category-dot category-skb"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
-
+								<div class="menuwrap">
+                                            <div class="row eqWrap equalHMWrap clearfix">
+                                                <div class="col-xs-6 col-sm-3 menuwd20">
+                                                    <ul>
+                                                        <li class="category-dot category-cx">Asset Finance</li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/core" hreflang="en">Odessa Core</a></li>
+                                                        <li class="pdl"><a href="<?php echo base_url(); ?>platform/core" hreflang="en">Origination</a></li>
+                                                        <li class="pdl"><a href="<?php echo base_url(); ?>platform/core" hreflang="en">Servicing</a></li>
+                                                        <li class="pdl"><a href="<?php echo base_url(); ?>platform/core" hreflang="en">Lease Management</a></li>
+                                                        <li class="pdl"><a href="<?php echo base_url(); ?>platform/core" hreflang="en">Loan Management</a></li>
                                                     </ul>
-													<ul>
+                                                    <ul>
+                                                        <li class="category-dot category-skb"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" hreflang="en" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
+                                                    </ul>
+                                                    <ul>
 														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>automotive-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Automotive Finance</a></li>
 
                                                     </ul>
-											</div>
-					
-											<div class="col-xs-6 col-sm-3 menuwd20">
-												<ul>
-													<li class="category-dot category-bxd">Omnichannel + Mobility</li>
-													<li><a href="<?php echo base_url(); ?>platform">Customer Portal</a></li>
-													<li><a href="<?php echo base_url(); ?>platform">Partner Portal</a></li>
-													<li><a href="<?php echo base_url(); ?>platform">Odessa Mobility</a></li>
-												</ul>
-												<ul>
-													<li class="category-dot category-skb">Data Intelligence</li>
-													<li><a href="<?php echo base_url(); ?>platform">Odessa Reportbuilder</a></li>
-													<li><a href="<?php echo base_url(); ?>platform">Odessa Insights</a></li>
-												</ul>
-											</div>
-											<div class="col-xs-6 col-sm-3 menuwd20">
-												<ul>
-													<li class="category-dot category-skb">Cloud Services</li>
-													<li><a href="<?php echo base_url(); ?>cloud">App Monitoring</a></li>
-													<li><a href="<?php echo base_url(); ?>cloud">Security Monitoring</a></li>
-													<li><a href="<?php echo base_url(); ?>cloud">Autoscaling</a></li>
-												</ul>
-												<ul>
-													<li class="category-dot category-cx">Developer Tools</li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Test</a></li>
-												</ul>
-											</div>
-											<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
-												<ul>
-													<li class="category-dot category-bx">LEARN MORE</li>
-													<li><a href="<?php echo base_url(); ?>design-principles">Design Principles</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa APIs</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Workflow</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Security + Compliance</a></li>
-													<li><a href="<?php echo base_url(); ?>platform/developer-tools">Integrations</a></li>
-												</ul>
-											</div>
-											<div class="col-xs-6 col-sm-3 menuwd20 colmenubg">
-												<div class="headerchildnav"> <a href="https://odessainc.force.com/customer/s/" target="blank">Customer Community</a> <a href="https://odessainc.talentlms.com/" target="blank">Odessa University</a> </div>
-											</div>
-										</div>
-									</div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3 menuwd20">
+                                                    <ul>
+                                                        <li class="category-dot category-bxd">Omnichannel + Mobility</li>
+                                                        <li><a href="<?php echo base_url(); ?>platform" hreflang="en">Customer Portal</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform" hreflang="en">Partner Portal</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform" hreflang="en">Odessa Mobility</a></li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="category-dot category-skb">Data Intelligence</li>
+                                                        <li><a href="<?php echo base_url(); ?>platform" hreflang="en">Odessa Reportbuilder</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform" hreflang="en">Odessa Insights</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3 menuwd20">
+                                                    <ul>
+                                                        <li class="category-dot category-skb">Cloud Services</li>
+                                                        <li><a href="<?php echo base_url(); ?>cloud" hreflang="en">App Monitoring</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>cloud" hreflang="en">Security Monitoring</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>cloud" hreflang="en">Autoscaling</a></li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="category-dot category-cx">Developer Tools</li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Odessa Build</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Odessa Test</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
+                                                    <ul>
+                                                        <li class="category-dot category-bx">LEARN MORE</li>
+                                                        <li><a href="<?php echo base_url(); ?>design-principles" hreflang="en">Design Principles</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Odessa APIs</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Workflow</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Security + Compliance</a></li>
+                                                        <li><a href="<?php echo base_url(); ?>platform/developer-tools" hreflang="en">Integrations</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3 menuwd20 colmenubg">
+                                                    <div class="headerchildnav"> <a href="https://odessainc.force.com/customer/s/" hreflang="en" target="_blank">Customer Community</a> <a href="https://odessainc.talentlms.com/" target="_blank">Odessa University</a> </div>
+                                                </div>
+                                            </div>
+                                        </div>
 								</div>
 							</div>
 						</ul>
