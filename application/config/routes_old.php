@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['cloud.amp.html'] = 'Cloud_amp';
 $route['home.amp.html'] = 'Home_amp';
+// $route['elfa'] = 'elfa';
 $route['dev.amp.html'] = 'Dev_amp';
 $route['platform.amp.html'] = 'Platform_amp';
 $route['news.amp.html'] = 'News_amp';
@@ -59,24 +60,19 @@ $route['letstalk.amp.html'] = 'Letstalk_amp';
 $route['company.amp.html'] = 'company_amp';
 $route['platform/core.amp.html'] = 'platform_amp/core';
 $route['careers.amp.html'] = 'Careers_amp';
+//$route['leadership.amp.html'] = 'leadership_amp';
 $route['turns22.amp.html'] = 'home/turns22';
 $route['xaas-everything-as-a-service.amp.html'] = 'xaas_amp/xaas';
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
-// $route['odessa-modern-slavery-act-statement'] = 'welcome/odessa-modern-slavery-act-statement';
-
 $route['lets-talk'] = 'welcome/lets_talk_primary';
 $route['get-started'] = 'welcome/lets_talk_secondary';
 $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
-
-$route['turns22'] = 'home/turns22';
 $route['automotive-finance-software'] = 'Automotive_amp';
-$route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
-$route['whitepaper/unlocking-xaas-transformative-insights-asset-finance'] = 'Whitepaper';
-$route['whitepaper/unlocking-xaas-thankyou'] = 'Thankyou_whitepaper';
 $route['odessa-modern-slavery-act-statement'] = 'Modern_amp';
+$route['turns22'] = 'home/turns22';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
 $route['platform/developer-tools'] = 'platform/build';
