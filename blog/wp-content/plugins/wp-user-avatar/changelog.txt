@@ -1,5 +1,10 @@
 ﻿== Changelog ==
 
+= 4.14.2 =
+* Improved Avada theme compatibility.
+* Fixed bug with expired subscription not expiring.
+* Fixed a couple of PHP errors.
+
 = 4.14.1 =
 * Added setting for enabling autologin after checkout.
 * Added ppress_myaccount_edit_profile_custom_form filter.

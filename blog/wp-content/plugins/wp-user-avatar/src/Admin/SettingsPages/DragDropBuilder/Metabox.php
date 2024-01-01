@@ -191,8 +191,11 @@ class Metabox
             $googleApi = 'https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=AIzaSyA-iyjXck3LdOsAcGBDBfmlMtXM6jUp1Fk';
             $response  = wp_remote_retrieve_body(wp_remote_get($googleApi, array('sslverify' => false)));
             $fp        = fopen($fontFile, 'w');
-            fwrite($fp, $response);
-            fclose($fp);
+            if ($fp) {
+                fwrite($fp, $response);
+                fclose($fp);
+            }
+
             $content = json_decode($response);
         }
 

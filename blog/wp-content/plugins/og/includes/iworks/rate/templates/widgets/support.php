@@ -1,3 +1,4 @@
+<?php defined( 'ABSPATH' ) || exit; // Exit if accessed directly ?>
 <p>
 	<?php
 	echo wp_kses_post(

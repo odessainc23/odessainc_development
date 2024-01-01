@@ -2,11 +2,12 @@
 Contributors: iworks
 Donate link: https://ko-fi.com/iworks?utm_source=og&utm_medium=readme-donate
 Tags: OpenGraph, Open Graph, social, share, Facebook, meta, graph API, Twitter, social share, share links, meta headers, Pinterest
-Requires at least: 5.0
-Tested up to: 6.2
-Stable tag: 3.2.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 6.0
+Tested up to: 6.4
+Stable tag: 3.2.7
+Requires PHP: 8.0
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 The simple method to add Open Graph metadata to your entries so that they look great when shared on sites.
 
@@ -15,6 +16,16 @@ The simple method to add Open Graph metadata to your entries so that they look g
 ***No configuration, pure power.***
 
 We believe this plugin is the best option for beginners because it has no configuration, you need only install and activate it - all magic will be done!
+
+= See room for improvement? =
+
+Great! There are several ways you can get involved to help make OG better:
+
+1. **Report Bugs:** If you find a bug, error or other problem, please report it! You can do this by [creating a new topic](https://wordpress.org/support/plugin/og/) in the plugin forum. Once a developer can verify the bug by reproducing it, they will create an official bug report in GitHub where the bug will be worked on.
+2. **Suggest New Features:** Have an awesome idea? Please share it! Simply [create a new topic](https://wordpress.org/support/plugin/og/) in the plugin forum to express your thoughts on why the feature should be included and get a discussion going around your idea.
+3. **Issue Pull Requests:** If you're a developer, the easiest way to get involved is to help out on [issues already reported](https://github.com/iworks/og/issues) in GitHub. Be sure to check out the [contributing guide](https://github.com/iworks/og/blob/master/contributing.md) for developers.
+
+Thank you for wanting to make OG better for everyone!
 
 == Installation ==
 
@@ -113,6 +124,10 @@ The plugin grabs data from the content, and if it contains a YouTube URL, it tri
 
 If the post contains YouTube or Vimeo links, this plugin saves it as a post meta video thumbnail link and adds it to og:image as a post thumbnail.
 
+= I want to set og:image manually =
+
+Please install small add-on: [OG — Addon: og:image](https://github.com/iworks/og-plugin-addon-image/releases). The new meta box on the side should allow you to choose the og:image manually.
+
 = If I need to change some values? =
 
 You can use the [Simple SEO Improvements](https://wordpress.org/plugins/simple-seo-improvements/) plugin, which is integrated with OG, to:
@@ -132,6 +147,26 @@ You can use not supported meta tags:
 Rich filter implementation allows you to change almost every output of this plugin, but this is for technicians: Learn more on the [OG Plugin Documentation Site](http://og.iworks.pl/).
 
 == Changelog ==
+
+Project maintained on github at [iworks/og](https://github.com/iworks/og).
+
+= 3.2.7 (2023-12-21) =
+* The filter `og/term/meta/thumbnail_id_name` has been added. It allows you to change the term meta name with a thumbnail ID (the default is `image`). Props for [John](https://wordpress.org/support/users/thesun2012/). [#14](https://github.com/iworks/og/issues/14)
+* The filter `og/term/meta/thumbnail_url` has been added. It allows you to change the term meta name with a thumbnail src (the default is `image_url`).
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to version 2.1.6.
+
+= 3.2.6 (2023-12-01) =
+* Quotations have been removed from `$wpdb->prepare()`.
+* The function `date()` has been replaced by the function `gmdate()`.
+* The function `strip_tags()` has been replaced by the function `wp_strip_all_tags()`.
+* The [iWorks Rate](https://github.com/iworks/iworks-rate) module has been updated to version 2.1.4. [#13](https://github.com/iworks/og/issues/13)
+* The usage of WPDB objects has been improved.
+
+= 3.2.5 (2023-11-20) =
+* When a site was in debug mode, the `set_transient()` function was called improperly. It has been fixed. Props for [X-Raym](https://wordpress.org/support/users/x-raym/) & [John Blackbourn](https://wordpress.org/support/users/johnbillion/).
+
+= 3.2.4 (2023-11-02) =
+* Schema "tagline" has been removed by default. Use the `og_allow_to_use_schema_tagline` filter to turn it on (not recommended).
 
 = 3.2.3 (2023-06-09) =
 * Schema "tagline" has been set as the site slogan.

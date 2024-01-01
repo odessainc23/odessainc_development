@@ -1,14 +1,21 @@
-<p><?php
+<?php
+defined( 'ABSPATH' ) || exit; // Exit if accessed directly
+?>
+<p>
+<?php
 	esc_html_e( 'Would you like to boost your website sharing abilities?', 'og ' );
-?></p>
+?>
+</p>
 <p>
 <?php
 printf(
+/* translators: %s is a plugin name with url */
 	esc_html__( 'Don\'t wait, install plugin %s!', 'og' ),
+	/* translators: %s is a plugin wp home name, %s plugin name */
 	sprintf(
 		'<a href="%s" target="_blank"><strong>%s</strong></a>',
-		$args['plugin_wp_home'],
-		$args['plugin_name']
+		esc_url( $args['plugin_wp_home'] ),
+		esc_html( $args['plugin_name'] )
 	)
 );
 ?>

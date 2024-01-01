@@ -28,17 +28,16 @@ class Cron
     public function check_for_expired_subscriptions()
     {
         $subs = SubscriptionRepository::init()->retrieveBy([
-            'status'      => [SubscriptionStatus::ACTIVE, SubscriptionStatus::TRIALLING, SubscriptionStatus::CANCELLED],
-            'date_column' => 'expiration_date',
-            'start_date'  => CarbonImmutable::now('UTC')->subDay()->startOfDay()->toDateTimeString(),
-            'end_date'    => CarbonImmutable::now('UTC')->subDay()->endOfDay()->toDateTimeString(),
-            'number'      => 0
+            'status'          => [SubscriptionStatus::ACTIVE, SubscriptionStatus::TRIALLING, SubscriptionStatus::CANCELLED],
+            'expiration_date' => CarbonImmutable::now('UTC')->endOfDay()->toDateTimeString(),
+            'date_compare'    => '<=',
+            'number'          => 100
         ]);
 
         if ( ! empty($subs)) {
 
             foreach ($subs as $sub) {
-                $sub->expire(true);
+                $sub->expire(true, true);
             }
         }
     }
