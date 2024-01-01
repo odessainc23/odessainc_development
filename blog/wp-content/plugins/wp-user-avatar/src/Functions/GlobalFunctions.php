@@ -597,8 +597,10 @@ function ppress_create_index_file($location)
 {
     $content = "You are not allowed here!";
     $fp      = fopen($location . "/index.php", "wb");
-    fwrite($fp, $content);
-    fclose($fp);
+    if ($fp) {
+        fwrite($fp, $content);
+        fclose($fp);
+    }
 }
 
 /**

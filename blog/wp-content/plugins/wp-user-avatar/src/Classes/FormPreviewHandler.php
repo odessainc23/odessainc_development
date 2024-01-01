@@ -30,6 +30,15 @@ class FormPreviewHandler
         }
 
         add_filter('post_thumbnail_html', '__return_empty_string');
+
+        // Avada theme incompatibility fix
+        add_action('awb_remove_third_party_the_content_changes', function () {
+            remove_filter('the_content', [$this, 'the_content'], 9001);
+        });
+
+        add_action('awb_readd_third_party_the_content_changes', function () {
+            add_filter('the_content', [$this, 'the_content'], 9001);
+        });
     }
 
     public function pre_get_posts($query)

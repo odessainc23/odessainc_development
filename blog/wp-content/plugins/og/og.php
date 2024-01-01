@@ -11,9 +11,9 @@
  * Plugin Name:       OG — Better Share on Social Media
  * Plugin URI:        http://og.iworks.pl/
  * Description:       Very tiny Open Graph plugin - add featured image as facebook image. This plugin do not have any configuration - you can check how it works looking into page source.
- * Version:           3.2.3
- * Requires at least: 5.0
- * Requires PHP:      7.0
+ * Version:           3.2.7
+ * Requires at least: 6.0
+ * Requires PHP:      8.0
  * Author:            Marcin Pietrzak
  * Author URI:        http://iworks.pl/
  * Text Domain:       og

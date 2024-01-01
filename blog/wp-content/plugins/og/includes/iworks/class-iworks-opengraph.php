@@ -1,7 +1,7 @@
 <?php
 class iWorks_OpenGraph {
 	private $youtube_meta_name = 'iworks_yt_thumbnails';
-	private $version           = '3.2.3';
+	private $version           = '3.2.7';
 	private $debug             = false;
 	private $locale            = null;
 
@@ -258,7 +258,7 @@ class iWorks_OpenGraph {
 	 */
 	private function strip_white_chars( $content ) {
 		if ( $content ) {
-			$content = strip_tags( $content );
+			$content = wp_strip_all_tags( $content );
 			$content = preg_replace( '/\s+/', ' ', $content );
 			$content = trim( $content );
 		}
@@ -302,7 +302,7 @@ class iWorks_OpenGraph {
 		/**
 		 *  plugin: Facebook Page Publish
 		 */
-		//remove_action( 'wp_head', 'fpp_head_action' );
+		remove_action( 'wp_head', 'fpp_head_action' );
 		/**
 		 * Plugin: Orphans - turn off replacement
 		 */
@@ -540,7 +540,7 @@ class iWorks_OpenGraph {
 						 *
 						 */
 						$number_of_words         = apply_filters( 'og_description_words', 55 );
-						$og['og']['description'] = wp_trim_words( strip_tags( strip_shortcodes( $post->post_content ) ), $number_of_words, '...' );
+						$og['og']['description'] = wp_trim_words( wp_strip_all_tags( strip_shortcodes( $post->post_content ) ), $number_of_words, '...' );
 					}
 					$og['og']['description'] = $this->strip_white_chars( $og['og']['description'] );
 					if ( empty( $og['og']['description'] ) ) {
@@ -555,8 +555,8 @@ class iWorks_OpenGraph {
 							$og['article']['tag'][] = esc_attr( $tag->name );
 						}
 					}
-					$og['article']['published_time'] = date( 'c', strtotime( $post->post_date_gmt ) );
-					$og['article']['modified_time']  = date( 'c', strtotime( $post->post_modified_gmt ) );
+					$og['article']['published_time'] = gmdate( 'c', strtotime( $post->post_date_gmt ) );
+					$og['article']['modified_time']  = gmdate( 'c', strtotime( $post->post_modified_gmt ) );
 					/**
 					 * last update time
 					 *
@@ -765,7 +765,10 @@ class iWorks_OpenGraph {
 				 *
 				 * @param integer expire time, default DAY_IN_SECONDS
 				 */
-				if ( ! empty( $og ) ) {
+				if (
+					! empty( $og )
+					&& ! $this->debug
+				) {
 					set_transient( $cache_key, $og, apply_filters( 'og_set_transient_expiration', DAY_IN_SECONDS ) );
 				}
 			} else {
@@ -788,7 +791,7 @@ class iWorks_OpenGraph {
 			 *
 			 * @since 2.9.2
 			 */
-			$og['og']['description'] = $this->strip_white_chars( strip_tags( get_the_author_meta( 'description' ) ) );
+			$og['og']['description'] = $this->strip_white_chars( wp_strip_all_tags( get_the_author_meta( 'description' ) ) );
 		} elseif ( is_search() ) {
 			$og['og']['url'] = get_search_link();
 		} elseif ( is_archive() ) {
@@ -796,11 +799,36 @@ class iWorks_OpenGraph {
 			if ( is_a( $obj, 'WP_Term' ) ) {
 				$og['og']['url']         = get_term_link( $obj->term_id );
 				$og['og']['description'] = $this->strip_white_chars( term_description( $obj->term_id, $obj->taxonomy ) );
-				$image_id                = intval( get_term_meta( $obj->term_id, 'image', true ) );
+				/**
+				 * allow to change term meta name for term thumbnail_id
+				 *
+				 * https://github.com/iworks/og/issues/14
+				 *
+				 * @since 3.2.7
+				 */
+				$term_meta_name = apply_filters(
+					'og/term/meta/thumbnail_id_name',
+					'image'
+				);
+				$image_id       = intval( get_term_meta( $obj->term_id, $term_meta_name, true ) );
 				if ( 0 < $image_id ) {
 					$thumbnail_src     = wp_get_attachment_image_src( $image_id, $this->image_size );
 					$src               = $thumbnail_src[0];
 					$og['og']['image'] = $this->get_image_dimensions( $thumbnail_src, $image_id );
+				} else {
+					/**
+					 * allow to change term meta name for term image url
+					 *
+					 * @since 3.2.7
+					 */
+					$term_meta_name = apply_filters(
+						'og/term/meta/thumbnail_url',
+						'image_url'
+					);
+					$image_url      = get_term_meta( $obj->term_id, $term_meta_name, true );
+					if ( wp_http_validate_url( $image_url ) ) {
+						$og['og']['image'] = $image_url;
+					}
 				}
 			} elseif ( is_a( $obj, 'WP_Post_Type' ) ) {
 				$og['og']['url'] = get_post_type_archive_link( $obj->name );
@@ -907,11 +935,15 @@ class iWorks_OpenGraph {
 			 * site slogan
 			 *
 			 * @since 3.2.3
+			 *
+			 * @since 3.2.4 - removed by default
 			 */
-			$og['schema']['tagline'] = apply_filters(
-				'og_schema_tagline',
-				get_option( 'blogdescription' )
-			);
+			if ( apply_filters( 'og_allow_to_use_schema_tagline', false ) ) {
+				$og['schema']['tagline'] = apply_filters(
+					'og_schema_tagline',
+					get_option( 'blogdescription' )
+				);
+			}
 		}
 		/**
 		 * Produce image extra tags
@@ -1144,7 +1176,7 @@ class iWorks_OpenGraph {
 				'<meta %s="%s" content="%s">%s',
 				esc_attr( $name ),
 				esc_attr( $meta_property ),
-				esc_attr( strip_tags( $value ) ),
+				esc_attr( wp_strip_all_tags( $value ) ),
 				$this->debug ? PHP_EOL : ''
 			)
 		);
@@ -1246,8 +1278,12 @@ class iWorks_OpenGraph {
 			return 0;
 		}
 		global $wpdb;
-		$query      = $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid='%s';", $url );
-		$attachment = $wpdb->get_col( $query );
+		$attachment = $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT ID FROM $wpdb->posts WHERE guid=%s",
+				$url
+			)
+		);
 		if ( empty( $attachment ) ) {
 			$url2 = preg_replace( '/\-\d+x\d+(.[egjnp]+)$/', '$1', $url );
 			if ( $url != $url2 ) {
@@ -1266,9 +1302,6 @@ class iWorks_OpenGraph {
 	 * @since 2.6.0
 	 */
 	private function get_transient_key( $post_id ) {
-		if ( $this->debug ) {
-			return false;
-		}
 		$key    = sprintf( 'og_%d_%s', $post_id, $this->version );
 		$locale = $this->get_locale();
 		if ( ! empty( $locale ) ) {
@@ -1293,7 +1326,7 @@ class iWorks_OpenGraph {
 	 * @since 2.9.3
 	 */
 	public function filter_og_schema_datepublished( $date ) {
-		return date( 'Y-m-d', strtotime( $date ) );
+		return gmdate( 'Y-m-d', strtotime( $date ) );
 	}
 
 	/**
@@ -1465,6 +1498,22 @@ class iWorks_OpenGraph {
 	 * @since 2.9.8
 	 */
 	public function filter_add_html_itemscope_itemtype( $output, $doctype ) {
+		/**
+		 * Avoid changes in admin
+		 *
+		 * @since 3.2.4
+		 */
+		if ( is_admin() ) {
+			return $output;
+		}
+		/**
+		 * Avoid changes by doctype
+		 *
+		 * @since 3.2.4
+		 */
+		if ( 'html' !== $doctype ) {
+			return $output;
+		}
 		if ( ! apply_filters( 'og_is_schema_org_enabled', $this->is_schema_org_enabled ) ) {
 			return $output;
 		}

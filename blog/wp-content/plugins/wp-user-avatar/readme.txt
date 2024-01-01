@@ -5,7 +5,7 @@ Tags: membership, ecommerce, user registration, user profile, memberships, membe
 Requires at least: 5.3
 Requires PHP: 7.4
 Tested up to: 6.4
-Stable tag: 4.14.1
+Stable tag: 4.14.2
 License: GPLv2 or later
 
 Setup paid membership, accept payments, sell subscriptions & digital products, paywall & content restriction, create registration form, login form, user profile & member directory.
@@ -188,6 +188,11 @@ Any file type can be sold using ProfilePress ecommerce and membership plugin, in
 11. Content Protection
 
 == Changelog ==
+
+= Paid Membership, Ecommerce & User Registration 4.14.2 =
+* Improved avada theme compatibility.
+* Fixed bug with expired subscription not expiring.
+* Fixed a couple of PHP errors.
 
 = Paid Membership, Ecommerce & User Registration 4.14.1 =
 * Added setting for enabling autologin after checkout.

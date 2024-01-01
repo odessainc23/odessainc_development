@@ -1,16 +1,17 @@
-jQuery(
-    function() {
-        var $parent = jQuery('.notice-iworks-rate');
-        jQuery('.iworks-rate-button, .notice-dismiss', $parent).on('click', function(e) {
+jQuery(document).ready(
+    function($) {
+        var $parent = $('.notice-iworks-rate');
+        $('.iworks-rate-button, .notice-dismiss', $parent).on('click', function(e) {
             var data = {
                 action: 'iworks_rate_button',
                 plugin_id: $parent.data('id'),
-                button: jQuery(this).data('action')
+                button: $(this).data('action'),
+                _wpnonce: $parent.data('nonce')
             };
-            if ('get-help' === jQuery(this).data('action')) {
+            if ('get-help' === $(this).data('action')) {
                 return true;
             }
-            jQuery.post(
+            $.post(
                 $parent.data('ajax-url'),
                 data,
                 function(response) {
