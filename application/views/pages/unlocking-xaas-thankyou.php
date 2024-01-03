@@ -271,7 +271,7 @@ padding-left: 0;
 			<div class="home-hero-cinner">
 				<div class="home-hero-cwrap">
 					<div class="home-hero-ctitlewrap">
-						<h1 class="home-hero-ctitle"><span>Download the White paper:</span>Unlock XaaS Success with Transformative <br> Insights for Asset Finance</h1>
+						<h1 class="home-hero-ctitle"><span>Download the white paper:</span>Unlock XaaS Success with Transformative <br> Insights for Asset Finance</h1>
 					</div>
 				</div> 
 			</div>
