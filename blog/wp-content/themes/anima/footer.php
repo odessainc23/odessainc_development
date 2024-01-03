@@ -68,7 +68,7 @@
 			</div>
 			<div id="desktop_social" class="footerbottommenu">
 				<ul class="list-unstyled list-inline">
-					<li>2023 © Odessa</li>
+					<li>2024 © Odessa</li>
 					<li><a href="<?php echo OD_BASE_URL ?>terms-of-use">Terms of Use</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>privacy-policy">Privacy</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>odessa-modern-slavery-act-statement">Modern Slavery Act Statement</a></li>

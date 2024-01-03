@@ -4,14 +4,14 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 class Thankyou_whitepaper extends CI_Controller {
 	public function index() {
 		$data = array(
-			'page_title' => 'Thank you',
-			'description' => '',
+			'page_title' => 'Thank you for your interest in the white paper',
+			'description' => 'Thank you for your interest. The white paper has been sent to your email.',
 			'keywords' => '',
 			'canonical_tag' => '',
 			'og' => '<meta name="revisit-after" content="7 days" />	
 					 <meta name="allow-search" content="yes" />
-					 <title>Thank you</title>
-					 <meta name="description" content="" />
+					 <title>Thank you for your interest in the white paper</title>
+					 <meta name="description" content="Thank you for your interest. The white paper has been sent to your email." />
 					 <meta property="og:locale" content="en_US" />',
 			'result' => json_decode( $response )
 		);
