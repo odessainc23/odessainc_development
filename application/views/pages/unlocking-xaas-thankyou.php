@@ -271,7 +271,7 @@ padding-left: 0;
 			<div class="home-hero-cinner">
 				<div class="home-hero-cwrap">
 					<div class="home-hero-ctitlewrap">
-						<h1 class="home-hero-ctitle"><span>Download the Whitepaper:</span>Unlock XaaS Success with Transformative <br> Insights for Asset Finance</h1>
+						<h1 class="home-hero-ctitle"><span>Download the white paper:</span>Unlock XaaS Success with Transformative <br> Insights for Asset Finance</h1>
 					</div>
 				</div> 
 			</div>
@@ -289,7 +289,7 @@ padding-left: 0;
 								<div class="col-sm-7 col-md-7">
 									<div class="letstalkinfobox">
 										
-                  <p>This whitepaper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.</p>
+                  <p>This white paper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.</p>
 										<div class="whitepaper-section">
 										<h2 class="">Key Takeaways:</h2>
 										<ul>
@@ -305,7 +305,7 @@ padding-left: 0;
 									<div class="letstalkform">
 									
 									<div class="thank-u">
-										<h3>Thank you for your interest. The whitepaper has been sent to your email. </h3>
+										<h3>Thank you for your interest. The white paper has been sent to your email. </h3>
 										<!-- <h3>If you don’t receive it, please check your junk, or mail us on <a href="mailto:marketing@odessainc.com">marketing@odessainc.com</a></h3> -->
 									</div>
 									</div>
