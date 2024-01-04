@@ -96,7 +96,7 @@
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
-	
+	</script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -110,6 +110,7 @@
 			<div class="navbar_wrapper"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
 				<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
 				<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
+				<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 					<li><a href="<?php echo base_url(); ?>lets-talk">Let's talk</a></li>
 					<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
 				</ul>
