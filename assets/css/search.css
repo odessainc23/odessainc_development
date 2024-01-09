@@ -16,6 +16,9 @@
     padding-right: 0 !important;
 
 }
+ .ss360-custom-search .ss360-custom-search__searchbox{
+    font-size: 14px !important;
+}
 
 .navbar-brand .ss360-custom-search .ss360-custom-search__searchbutton {
     align-items: center;
@@ -43,6 +46,13 @@
     background-image: none !important;
     height:35px !important;
 }
+.ss360-layer--wide-overlay {
+    flex-wrap: wrap;
+    left: 0 !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
+    right: 0;
+}
 .ss360-custom-search .ss360-custom-search__searchbutton{
     height:35px !important;
 }
@@ -50,5 +60,21 @@
     padding: 15px 0 15px 10px !important;
 }
 #unibox-suggest-box{
-    display: none;
+    display: none !important;
+}
+.ss360-grid--lg .ss360-suggests__header {
+    min-height: 54px !important;
+}
+#searchButton svg,#ss360-custom-searchbutton svg{
+    width: 24px;
+    height: 24px;
+}
+
+.ss360-custom-search{
+    justify-content: center;
+    max-width: 300px !important;
+    padding: 8px 0;
+    position: relative;
+    width: auto !important;
+    margin: 0 auto !important;
 }
