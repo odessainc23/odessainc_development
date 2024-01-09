@@ -91,5 +91,7 @@
 	</div>
 </div>
 <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
+<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
+
 </body>
 </html>
