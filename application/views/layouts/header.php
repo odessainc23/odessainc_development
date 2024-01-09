@@ -88,7 +88,7 @@
 	<?php } ?>
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=<?php echo time() + 9?>" />
-
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/search.css?v=<?php echo time() + 9?>" />
 
 	<!-- Google Tag Manager --> 
 	<script defer>
