@@ -123,7 +123,7 @@
 				</div>
 				<div class="clearfix">
 					<div class="news_div upperdiv">
-						<div class="col-md-6 col-sm-6 col-xs-12 news_lt"><img src="<?php echo base_url(); ?>assets/images/news.png" alt="Monitor news" /></div>
+						<div class="col-md-6 col-sm-6 col-xs-12 news_lt"><img src="<?php echo base_url(); ?>assets/images/motor-finance.png" alt="Monitor news" /></div>
 						<div class="col-md-6 col-sm-6 col-xs-12 nopad">
 							<div class="news_rt">
 								<span class="date">January 8, 2024</span>
