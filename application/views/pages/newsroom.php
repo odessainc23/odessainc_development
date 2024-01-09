@@ -162,7 +162,15 @@
 								<p><a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12  pd10">
+					
+						
+						
+						
+					</div>
+				
+			 
+					<div class="bottomdiv">
+					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">Sep 17, 2021</span>
 								<!-- <h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3> -->
@@ -171,13 +179,6 @@
 								<p><a href="https://www.bizjournals.com/philadelphia/news/2021/09/17/fast-growing-local-fintech-secures-investment.html" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						
-						
-						
-					</div>
-				
-			 
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">May 15, 2021</span>
@@ -192,16 +193,17 @@
 								<p><a href="https://www.magazine.monitordaily.com/the-equipment-finance-ecosystems-journey-toward-inclusion" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
+						
+						
+					</div>
+					<div class="bottomdiv">
+					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">January 10, 2021</span>
 								<h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3>
 								<p><a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						
-					</div>
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
@@ -216,16 +218,17 @@
 								<p><a href="https://www.magazine.monitordaily.com/keelie-fitzgerald" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
+						
+						
+					</div>
+					<div class="bottomdiv">
+					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 10, 2019</span>
 								<h3>Living in the Future: The Monitor 2019 Tech Roundtable </h3>
 								<p><a href="https://www.monitordaily.com/article-posts/living-in-the-future-the-monitor-2019-tech-roundtable/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						
-					</div>
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 1, 2018</span>
