@@ -126,14 +126,23 @@
 						<div class="col-md-6 col-sm-6 col-xs-12 news_lt"><img src="<?php echo base_url(); ?>assets/images/news.png" alt="Monitor news" /></div>
 						<div class="col-md-6 col-sm-6 col-xs-12 nopad">
 							<div class="news_rt">
-								<span class="date">Sept/Oct 2023</span>
+								<span class="date">January 8, 2024</span>
 								<!-- <h3></h3> -->
-								<h3>Fear Not: The Only Way to Fail with Technology is to Do Nothing</h3>
-								<p><a href="https://www.monitordaily.com/article-posts/monitor-tech-roundtable-fall-conference-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+								<h3>The five key trends transforming auto finance in 2024</h3>
+								<p><a href="https://www.motorfinanceonline.com/comment/the-five-key-trends-transforming-auto-finance-in-2024/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 					</div>
 					<div class="bottomdiv">
+					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
+						<div class="news_div">
+								<span class="date">Sept/Oct 2023</span>
+								<!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
+								<h3>Fear Not: The Only Way to Fail with Technology is to Do Nothing</h3>
+								
+								<p><a href="https://www.monitordaily.com/article-posts/monitor-tech-roundtable-fall-conference-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+							</div>
+					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 						<div class="news_div">
 								<span class="date">Jan/Feb 2023</span>
