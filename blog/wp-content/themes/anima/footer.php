@@ -80,6 +80,7 @@
 </div>
 <?php wp_footer(); ?>
 </body>
+<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
 <script>
 	window.intercomSettings = {
 	app_id: "b24vf5ox"
