@@ -1,0 +1,42 @@
+.navbar-brand .ss360-custom-search {
+    justify-content: center;
+    max-width: 100%;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.navbar-brand .ss360-custom-search .ss360-custom-search__searchbox{
+    height: 35px;
+    margin: 0;
+    max-width: 90px !important;
+    padding: 0 8px;
+    width: 100%;
+    padding-right: 0 !important;
+
+}
+
+.navbar-brand .ss360-custom-search .ss360-custom-search__searchbutton {
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.12);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    font-size: 1em;
+    height: 35px;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0 0;
+    transition: background-color .3s ease-in-out,border-color .3s ease-in-out;
+    width: 40px;
+}
+
+.ss360-voice-search{
+    display: none !important;
+}
+
+.ss360-custom-search .ss360-custom-search__searchbox{
+    padding-right: 0 !important;
+    max-width: 100px !important;
+}
