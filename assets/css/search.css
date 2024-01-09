@@ -24,7 +24,7 @@
     cursor: pointer;
     display: flex;
     font-size: 1em;
-    height: 35px;
+    height: 35px !important;
     justify-content: center;
     margin-top: 0;
     padding: 0 0;
@@ -39,4 +39,16 @@
 .ss360-custom-search .ss360-custom-search__searchbox{
     padding-right: 0 !important;
     max-width: 100px !important;
+    padding-left:10px !important;
+    background-image: none !important;
+    height:35px !important;
+}
+.ss360-custom-search .ss360-custom-search__searchbutton{
+    height:35px !important;
+}
+.ss360-custom-search{
+    padding: 15px 10px !important;
+}
+#unibox-suggest-box{
+    display: none;
 }
