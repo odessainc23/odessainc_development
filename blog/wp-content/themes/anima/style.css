@@ -6,8 +6,9 @@
         right: -33px;
         left: auto !important;
 }
-.ss360-custom-search .ss360-custom-search__searchbutton{
-    width:20px
+
+.nav-flex .ss360-custom-search--no-margin{
+    display: flex;
 }
 .ss360-layer--wide-overlay{
     max-width: 90%!important;
