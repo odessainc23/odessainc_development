@@ -94,10 +94,33 @@
 
     echo $this->minify->deploy_js();
 ?>
-<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
+    <script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/aos.js?v=7001" async></script>
 <script src="<?php echo base_url(); ?>assets/js/main.js?v=824334" async></script>
 <script src="<?php echo base_url(); ?>assets/js/lazysizes.min.js?v=900232" async></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.search-box').hide();
+$('.search').click(function() {
+    // $('.search-box').toggleClass("op");
+    $('.search-box').toggleClass("ser");
+    $(".close-search").toggleClass("op");
+    $('.search-overlay').toggleClass("op");
+    $('.close-search').toggleClass("op");
+});
+
+$(".close-search").click(function() {
+    $('.search-box').removeClass("ser");
+    $(this).removeClass("op"); // Corrected this line
+    $('.search-overlay').removeClass("op");
+});
+    });
+
+//     window.onload = function(event) {
+//     event.stopPropagation(true);
+//     window.location.href="http://www.google.com";
+// };
+</script>
 <script async>
     
     setTimeout(function(){
