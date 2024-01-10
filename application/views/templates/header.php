@@ -23,6 +23,7 @@
 	<link href="<?php echo base_url(); ?>assets/css/buttons.css?v=<?php echo time() + 5?>" rel="stylesheet"  type="text/css" />
 	<link href="<?php echo base_url(); ?>assets/css/rs6.css?v=<?php echo time() + 6?>" rel="stylesheet" type="text/css" />
 	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css?v=<?php echo time() + 7?>" rel='stylesheet'/>
+	<link href="<?php echo base_url(); ?>assets/css/search.css?v=<?php echo time() + 7 ?>" rel='stylesheet'/>
 
 	<meta name="sitelock-site-verification" content="168" />
 	<meta name="yandex-verification" content="d7962e7f3953689e">
@@ -128,8 +129,13 @@
         </div>
   
 		<div class="container">
-			<div class="navbar_wrapper"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
-				<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
+			<div class="navbar_wrapper">  <div class="nav-flex">
+                <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
+                <div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
+                <section role="search" data-ss360="true">
+                    <input type="search" id="searchBox" placeholder="Search…">
+                    <button id="searchButton"></button>
+                 </section></div>
 				<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
 				<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 					<li><a href="<?php echo base_url(); ?>lets-talk">Let's talk</a></li>
