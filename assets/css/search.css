@@ -195,4 +195,7 @@ border: 1px solid #dedede !important;
     right: -48px;
     left: 0 !important;
 }
+.ss360-custom-search .ss360-custom-search__searchbox {
+  color:#000 !important
+}
 }
