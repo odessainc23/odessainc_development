@@ -6,7 +6,7 @@
 .nav-flex .ss360-custom-search--no-margin{
     display: none;
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:767px){
     .ss360-custom-search{
         top: 0;
         max-width: 100px !important;
