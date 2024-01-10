@@ -135,6 +135,9 @@ border: 1px solid #dedede !important;
   .ss360-loader .ss360-loader__bounce{
     background-color: #00abc8 !important;
   }
+  #ss360-layer .ss360-acl-bg{
+    background-color: #d63d4d !important;
+  }
   .ss360-more-results{
     height: 45px !important;
     padding: 0 20px !important;
