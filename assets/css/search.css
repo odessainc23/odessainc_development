@@ -123,9 +123,19 @@ border: 1px solid #dedede !important;
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     width: 40px;
   }
+  .ss360-grid--lg .ss360-suggests__content{
+    padding: 10px;
+  }
+  #ss360-layer .ss360-ac-c, #ss360-layer .ss360-ac-c--hover:hover, #ss360-layer .ss360-ac-c--hover:focus{
+    color: #555b6d !important;
+    font-size: 16px !important
+  }
   #unibox-suggest-box,
   .ss360-voice-search {
     display: none !important;
+  }
+  .ss360-suggests__url{
+    color: #00acc8 !important;
   }
   .ss360-layer--wide-overlay {
     flex-wrap: wrap;
@@ -134,6 +144,9 @@ border: 1px solid #dedede !important;
     margin: 0 auto !important;
     right: 0;
   }
+  .ss360-grid--lg .ss360-suggests__header {
+    min-height: 30px !important;
+}
   .ss360-custom-search .ss360-custom-search__searchbutton {
     height: 35px !important;
   }
