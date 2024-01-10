@@ -126,6 +126,9 @@ border: 1px solid #dedede !important;
   .ss360-grid--lg .ss360-suggests__content{
     padding: 10px;
   }
+  #ss360-layer .ss360-acl-bg, #ss360-layer .ss360-acl-bg--hover:hover, #ss360-layer .ss360-acl-bg--hover:focus{
+    background-color: #d63d4d;
+  }
   #ss360-layer .ss360-ac-c, #ss360-layer .ss360-ac-c--hover:hover, #ss360-layer .ss360-ac-c--hover:focus{
     color: #555b6d !important;
     font-size: 16px !important
