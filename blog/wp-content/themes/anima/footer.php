@@ -99,6 +99,7 @@ $(".close-search").click(function() {
     $('.search-overlay').removeClass("op");
 	$('input[type="search"]').val();
 });
+$(".s").attr("placeholder", "variable");
     });
 
 //     window.onload = function(event) {
