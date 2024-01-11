@@ -187,11 +187,21 @@ color: #fff !important;
 .ss360-grid--lg .ss360-suggests__snippet{
   display: none;
 }
+.ss360-layer__heading{
+  padding: 5px 0 !important;
+}
+.ss360-layer--overlay{
+  padding: 20px !important;
+}
+.ss360-suggests
+{
+  margin: 4px 0 4px !important
+}
   .ss360-custom-search .ss360-custom-search__searchbutton {
     height: 35px !important;
   }
   .ss360-custom-search {
-    padding: 15px 0 15px 10px !important;
+    padding: 0px 0 15px 10px !important;
     justify-content: center;
     max-width: 300px !important;
     position: relative;
