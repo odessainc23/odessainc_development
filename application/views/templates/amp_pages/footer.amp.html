@@ -93,6 +93,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.search-box').hide();
+		$('input[type="search"]').val();
 $('.search').click(function() {
     // $('.search-box').toggleClass("op");
     $('.search-box').toggleClass("ser");
@@ -105,6 +106,7 @@ $(".close-search").click(function() {
     $('.search-box').removeClass("ser");
     $(this).removeClass("op"); // Corrected this line
     $('.search-overlay').removeClass("op");
+	$('input[type="search"]').val();
 });
     });
 

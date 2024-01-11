@@ -59,7 +59,7 @@ border: 1px solid #dedede !important;
   .close-search .fa{
     font-size: 40px;
     opacity: .8;
-
+color: #fff !important;
   }
   
   .op{
@@ -136,7 +136,13 @@ border: 1px solid #dedede !important;
     background-color: #00abc8 !important;
   }
   #ss360-layer .ss360-acl-bg{
-    background-color: #d63d4d !important;
+    background-color: #ff495c !important;
+  }
+
+  #ss360-layer .ss360-acd-b--hover:hover{
+    border-color: #ff495c !important;
+    box-shadow: inset 0 -4px 0 #db455a !important;
+    background-color: #ff495c !important ;
   }
   .ss360-more-results{
     height: 45px !important;
