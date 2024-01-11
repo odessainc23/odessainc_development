@@ -2330,7 +2330,7 @@ function get_theme_starter_content() {
 			'search'             => array(
 				'search',
 				array(
-					'title' => _x( 'Search', 'Theme starter content' ),
+					'title' => _x( 'Search Blog', 'Theme starter content' ),
 				),
 			),
 		),
