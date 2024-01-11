@@ -81,6 +81,21 @@ color: #fff !important;
     
   display: none;
   }
+  .search-box{
+    background-color: #fefefe;
+    box-sizing: content-box;
+    height: 80%;
+    left: calc(10% - 28px);
+    max-width: 800px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 32px 24px 32px 32px;
+    position: fixed;
+    top: calc(10% - 30px);
+    width: 80%;
+    z-index: 99999999999;
+  display: none;
+  }
   .search-li .ss360-custom-search.ser{
     display: flex !important;
   }
