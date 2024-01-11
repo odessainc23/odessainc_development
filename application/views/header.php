@@ -101,7 +101,7 @@
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=3001" />
 
-
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/search.css?v=3001" />
 	<!-- Google Tag Manager --> 
 	<script defer>
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
