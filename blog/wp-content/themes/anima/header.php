@@ -112,27 +112,6 @@
 	<div id="site-header-main">
 		<div id="site-header-main-inside">
 			<nav class="navbar navbar-default navbar-fixed-top" >
-			<div class="t-alert-covid bg-alert">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="covid-alert">
-								<div class="alert  alert-dismissible fade in ">
-									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-									<!-- <p class="covid-alert__para text-center" style="text-transform: capitalize;font-size: 18px;">
-										 Whitepaper Out Now! 'Top 10 must haves for XaaS Success in Asset Finance' <a href="<?php echo base_url(); ?>whitepaper/unlocking-xaas-transformative-insights-asset-finance" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Download</a> 
-																	 <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a> 
-																</p> -->
-																<p class="covid-alert__para text-center" style="font-size: 18px;">
-																	New White Paper! Top 10 Must Haves For XaaS Success In Asset Finance <a href="<?php echo base_url(); ?>whitepaper/unlocking-xaas-success-signup" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Get it Now</a> 
-																									<!-- <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a> -->
-																								</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 				<div class="container">
 					<div class="navbar_wrapper">
 					<div class="nav-flex">
