@@ -258,12 +258,15 @@ color: #fff !important;
 @media only screen and (max-width:767px){
     .ss360-custom-search{
         top: 0;
-        max-width: 100px !important;
+        max-width: 120px !important;
         right: -33px;
         left: auto !important;
 }
 .nav-flex .ss360-custom-search--no-margin {
   display: flex !important;
+}
+.search-box{
+  top:15px !important;
 }
 .search{
   position: absolute;
