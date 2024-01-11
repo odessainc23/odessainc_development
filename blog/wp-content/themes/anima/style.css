@@ -119,7 +119,7 @@ color: #fff !important;
     width: 18px !important;
     height: 18px !important;
   }
-  .ss360-n-section {
+  .ss360-n-section.search-box {
     background: transparent;
     background-image: none;
     border: 0;
