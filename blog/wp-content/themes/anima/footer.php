@@ -99,7 +99,7 @@ $(".close-search").click(function() {
     $('.search-overlay').removeClass("op");
 	$('input[type="search"]').val();
 });
-$(".s").attr("placeholder", "variable");
+$(".s").attr("placeholder", "Search Blog");
     });
 
 //     window.onload = function(event) {
