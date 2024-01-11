@@ -219,9 +219,9 @@ color: #fff !important;
   #ss360-layer .ss360-ac-bg {
     width: 50px !important;
   }
-  .ss360-custom-search .ss360-custom-search__searchbutton{
+  /* .ss360-custom-search .ss360-custom-search__searchbutton{
     width:20px
-}
+} */
 .nav-flex .ss360-custom-search--no-margin{
     display: none;
 }
