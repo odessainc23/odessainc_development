@@ -254,7 +254,7 @@ color: #fff !important;
     display: none !important;
 }
 .nav-flex .ss360-custom-search--no-margin{
-    display: none;
+    display: none !important;
 }
 @media only screen and (max-width:767px){
     .ss360-custom-search{
