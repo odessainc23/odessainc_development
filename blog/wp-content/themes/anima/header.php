@@ -17,6 +17,8 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="<?php bloginfo('template_url'); ?>/assets/css/search.css" rel="stylesheet" type="text/css">
+
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet" type="text/css">
 
