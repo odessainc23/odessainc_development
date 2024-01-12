@@ -14,6 +14,8 @@
     width: 100%;
     padding-right: 0 !important;
   }
+  a.ss360-suggests__link.ss360-ac-c{
+    text-transform: capitalize !important;}
   .search{
     font-size: 1rem;
     color: #545b6d;
