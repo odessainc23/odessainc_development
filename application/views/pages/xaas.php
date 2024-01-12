@@ -13,7 +13,7 @@
                 <div class="home-hero-cinner">
                     <div class="home-hero-cwrap">
                         <div class="home-hero-ctitlewrap">
-                            <h1 class="home-hero-ctitle">Provide flexible finance <br>with As-a-Service</h1>
+                            <h1 class="home-hero-ctitle">Provide flexible finance<br>with As-a-Service</h1>
                         </div>
                         <p class="home-hero-cdesc">Unlock the power of everything as a service to <span>your business strategy with speed, scale, and agility.</span></p>
                        
