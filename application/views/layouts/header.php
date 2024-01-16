@@ -33,7 +33,7 @@
 	<meta http-equiv='pragma' content='no-cache'>
 
 	<!-- <link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg"> -->
-	<link rel="preload" as="image" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" imagesrcset="" imagesizes="50vw">
+	<link rel="preload" as="image" href="<?php echo base_url(); ?>assets/images/awards/odessa-partner-banner-bkmenu.webp" imagesrcset="" imagesizes="50vw">
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>
