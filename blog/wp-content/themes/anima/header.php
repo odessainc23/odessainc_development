@@ -129,12 +129,10 @@
 							<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
 							<li> 
                         <i class="fa fa-search search" aria-hidden="true"></i>
-                    
                     </li>
                     <li class="search-li"><section role="search" data-ss360="true" class="search-box">
                         <input type="search" id="searchBox" placeholder="Search…">
                         <button id="searchButton"></button>
-                       
                      </section>
                      
                     </li>
