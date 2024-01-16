@@ -32,7 +32,7 @@
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
 
-	<link rel="prefetch" href="<?= base_url(); ?>assets/images/odessa-partner-banner-bkmenu.jpg">
+	<link rel="prefetch" href="<?= base_url(); ?>assets/images/awards/odessa-partner-banner-bkmenu.webp">
 
 	<!-- Open Graph Tags -->
 	<?php if ( isset($og_title) && !empty($og_title) ) { ?>
