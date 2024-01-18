@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="<?php bloginfo('template_url'); ?>/assets/css/search.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet" type="text/css">
 
@@ -114,12 +115,13 @@
 			<nav class="navbar navbar-default navbar-fixed-top" >
 				<div class="container">
 					<div class="navbar_wrapper">
+					<div class="nav-flex">
 						<a class="navbar-brand" href="<?php echo OD_BASE_URL; ?>"></a>
-						<div id="nav-icon1">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+						<div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
+				<section role="search" data-ss360="true" class="search-box">
+                    <input type="search" id="searchBox" placeholder="Search…">
+                    <button id="searchButton"></button>
+                 </section></div>
 						<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
 							<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 							<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Let's talk</a></li>
