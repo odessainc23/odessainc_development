@@ -100,6 +100,7 @@
 	<?php } ?> -->
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/aos.css?v=3001" />
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/search.css?v=3001" />
 
 
 	<!-- Google Tag Manager --> 

@@ -81,4 +81,31 @@
 </body>
 <script src="<?php bloginfo('template_url'); ?>/assets/js/script.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4da41fc07fb2a379"></script>
+<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.search-box').hide();
+		$('input[type="search"]').val();
+$('.search').click(function() {
+    // $('.search-box').toggleClass("op");
+    $('.search-box').toggleClass("ser");
+    $(".close-search").toggleClass("op");
+    $('.search-overlay').toggleClass("op");
+    $('.close-search').toggleClass("op");
+});
+
+$(".close-search").click(function() {
+    $('.search-box').removeClass("ser");
+    $(this).removeClass("op"); // Corrected this line
+    $('.search-overlay').removeClass("op");
+	$('input[type="search"]').val();
+});
+$(".s").attr("placeholder", "Search Blog");
+    });
+
+//     window.onload = function(event) {
+//     event.stopPropagation(true);
+//     window.location.href="http://www.google.com";
+// };
+</script>
 </html>

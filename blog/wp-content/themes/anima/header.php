@@ -19,7 +19,7 @@
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet" type="text/css">
-
+	<link href="<?php bloginfo('template_url'); ?>/assets/css/search.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/media.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/cmsstyle.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/cmsmedia.css" rel="stylesheet" type="text/css">
@@ -124,7 +124,18 @@
 							<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 							<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Let's talk</a></li>
 							<li><a href="https://odessainc.force.com/customer/" target="_blank">Log in</a></li>
+							<li> 
+                        <i class="fa fa-search search" aria-hidden="true"></i>
+                    </li>
+                    <li class="search-li"><section role="search" data-ss360="true" class="search-box">
+                        <input type="search" id="searchBox" placeholder="Search…">
+                        <button id="searchButton"></button>
+                     </section>
+                     
+                    </li>
 						</ul>
+						<div class="search-overlay"> <div class="close-search"> <i class="fa fa-close close" aria-hidden="true"></i></div></div>
+						
 						<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 							<ul class="nav navbar-nav">
 								<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
