@@ -114,12 +114,18 @@
 			<nav class="navbar navbar-default navbar-fixed-top" >
 				<div class="container">
 					<div class="navbar_wrapper">
-						<a class="navbar-brand" href="<?php echo OD_BASE_URL; ?>"></a>
+					<div class="nav-flex"><a class="navbar-brand" href="<?php echo OD_BASE_URL; ?>"></a>
 						<div id="nav-icon1">
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
+                <section role="search" data-ss360="true" class="search-box">
+                    <input type="search" id="searchBox" placeholder="Search…">
+                    <button id="searchButton"></button>
+                 </section>
+                </div>
+						
 						<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
 							<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 							<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Let's talk</a></li>
@@ -306,9 +312,9 @@
 							<div class="container">
 								<div class="mobile_view_menu">
 									<ul>
-										<li><a class="active" href="javascript:void(0)" onclick="tabBx('platformmenu')">Platform</a></li>
-										<li><a href="javascript:void(0)" onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
-										<li><a href="javascript:void(0)" onclick="tabBx('companymenu')">Company</a></li>
+									<li><a class="active" href="<?php echo base_url(); ?>platform"  onclick="tabBx('platformmenu')">Platform</a></li>
+								<li><a href="<?php echo base_url(); ?>design-principles"  onclick="tabBx('whyodessamenu')">Why Odessa</a></li>
+								<li><a href="<?php echo base_url(); ?>company"  onclick="tabBx('companymenu')">Company</a></li>
 										<li><a href="<?php echo OD_BASE_URL; ?>blog">Blog</a></li>
 										<li><a href="javascript:void(0)">Let's Talk</a></li>
 									</ul>
