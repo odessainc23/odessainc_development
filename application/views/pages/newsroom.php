@@ -123,17 +123,25 @@
 				</div>
 				<div class="clearfix">
 					<div class="news_div upperdiv">
-						<div class="col-md-6 col-sm-6 col-xs-12 news_lt"><img src="<?php echo base_url(); ?>assets/images/efa-logo.png" alt="Monitor news" /></div>
+						<div class="col-md-6 col-sm-6 col-xs-12 news_lt"><img src="<?php echo base_url(); ?>assets/images/news.png" alt="Monitor news" /></div>
 						<div class="col-md-6 col-sm-6 col-xs-12 nopad">
 							<div class="news_rt">
-								<span class="date">January 05, 2024</span>
+								<span class="date">January 2024</span>
 								<!-- <h3></h3> -->
-								<h3>Four Use Cases for AI in Asset Finance</h3>
-								<p><a href="https://www.equipmentfa.com/blogs/37470/four-use-cases-for-ai-in-asset-finance" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+								<h3>Five Factors Shaping Equipment Finance’s Shift to Subscriptions</h3>
+								<p><a href="https://www.monitordaily.com/opinion-posts/five-factors-shaping-equipment-finances-shift-to-subscriptions/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
 					</div>
 					<div class="bottomdiv">
+					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
+						<div class="news_div">
+						<span class="date">January 05, 2024</span>
+								<!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
+								<h3>Four Use Cases for AI in Asset Finance</h3>
+								<p><a href="https://www.equipmentfa.com/blogs/37470/four-use-cases-for-ai-in-asset-finance" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+							</div>
+					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 						<div class="news_div">
 						<span class="date">January 8, 2024</span>
@@ -151,6 +159,13 @@
 								<p><a href="https://www.monitordaily.com/article-posts/monitor-tech-roundtable-fall-conference-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 					</div>
+					
+						
+					
+					</div>
+				
+			 
+					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 						<div class="news_div">
 								<span class="date">Jan/Feb 2023</span>
@@ -160,12 +175,6 @@
 								<p><a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 					</div>
-						
-					
-					</div>
-				
-			 
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 						
 						<div class="news_div">
@@ -185,6 +194,12 @@
 								<p><a href="https://www.bizjournals.com/philadelphia/news/2021/09/17/fast-growing-local-fintech-secures-investment.html" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
+					
+						
+						
+						
+					</div>
+					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">May 15, 2021</span>
@@ -192,11 +207,6 @@
 								<p><a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						
-						
-						
-					</div>
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">January 9, 2021</span>
@@ -211,6 +221,12 @@
 								<p><a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
+					
+						
+						
+						
+					</div>
+					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
@@ -218,11 +234,6 @@
 								<p><a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div> 
 						</div>
-						
-						
-						
-					</div>
-					<div class="bottomdiv">
 					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">February 20, 2020</span>
@@ -237,7 +248,10 @@
 								<p><a href="https://www.monitordaily.com/article-posts/living-in-the-future-the-monitor-2019-tech-roundtable/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
+				
+			 </div>
+			 <div class="bottomdiv">
+			 <div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 1, 2018</span>
 								<h3>The Next Big Trend: Equipment Finance is Ready for a Platform</h3>
@@ -245,7 +259,6 @@
 							</div>
 						</div>
 					</div>
-			 </div>
 			</div>
 		</div>
 	</section>
