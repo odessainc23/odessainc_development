@@ -42,10 +42,16 @@
 		<div class="navbar_wrapper row">  <div class="nav-flex">
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
                 <div id="nav-icon1"> <span></span> <span></span> <span></span> </div>
-				<section role="search" data-ss360="true" class="search-box">
-                    <input type="search" id="searchBox" placeholder="Search…">
-                    <button id="searchButton"></button>
-                 </section></div>
+				<div class="mobile-men"> 
+                    <i class="fa fa-search search" aria-hidden="true"></i>
+                    <div class="search-li"><section role="search" data-ss360="true" class="search-box">
+                        <input type="search" id="searchBox" placeholder="Search…">
+                        <button id="searchButton"></button>
+                       
+                     </section>
+                     
+                    </div>
+                </div></div>
 			<ul class="nav navbar-nav navbar-right alwaysvisiblemenu">
 				<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 				<li><a href="<?php echo base_url(); ?>lets-talk">Let's talk</a></li>
