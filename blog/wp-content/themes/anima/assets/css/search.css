@@ -262,6 +262,9 @@ color: #fff !important;
 .ss360-search-term-highlight, .ss360-search-term-highlight, .z-search-highlight{
   background: transparent !important;
 }
+.ss360-related-queries__list{
+  display: none !important;
+}
 @media only screen and (max-width:767px){
   .mobile-men{
     display: block;

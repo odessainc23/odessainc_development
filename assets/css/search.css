@@ -120,6 +120,9 @@ display: none;
   width: 18px !important;
   height: 18px !important;
 }
+.ss360-related-queries__list{
+  display: none !important;
+}
 .navbar-brand .ss360-custom-search .ss360-custom-search__searchbutton {
   align-items: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
