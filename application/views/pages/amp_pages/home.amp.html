@@ -179,6 +179,12 @@
    height: 0;
    transition-delay: 0s, 0.8s;
  }
+ #wistia_41.thumb_container{
+    width: 100%;
+ }
+ .testimonial-content img{
+    width:100%
+ }
  
  .videoPoster {
    position: absolute;
@@ -400,13 +406,22 @@
                  
              <div class="testimonial-content">
                 <!-- <iframe src="https://odessainc.wistia.com/medias/kndvnc3z5u"></iframe> -->
-               <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button>
+               <!-- <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button> -->
+               <!-- <a href="https://fast.wistia.com/embed/iframe/zs8hlyi5xz?autoPlay=true&controlsVisibleOnLoad=true&playerColor=990000&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-tumblr-googlePlus&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" class="wistia-popover[height=388,playerColor=990000,width=640]">
+                <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" />
+            </a> -->
+            <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
+                <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
+            </span>
              </div>
              
              <div class="video-con">
                  <h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
-                 <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
-             </div>
+                 <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
+                    <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
+                </span>
+                 
+            </div>
             
            </div>
            <div class="video-popup">
@@ -886,8 +901,8 @@
      }, 4000);
  
  </script>
+ <script src="https://fast.wistia.com/embed/medias/kndvnc3z5u.jsonp" async></script>
  
- </script>
  
  
  
