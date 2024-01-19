@@ -8,10 +8,10 @@
 <div id="wrapper">
   <div class="container">
     <div class="legal-page">
-      <div class="legal-pheader">
-        <h1 class="legal-phtitle">Privacy policy</h1>
-        <!-- <span class="legal-phicon"></span> -->
-      </div>
+    <div class="legal-pheader">
+				<h1 class="legal-phtitle">Privacy Policy</h1>
+				<span class="legal-phicon"></span>
+			</div>
       <section class="legal-ppost">
         <div class="legal-ppnav">
           <div class="legal-ppnav__inner">
@@ -121,9 +121,9 @@
 
 			<section id="Correct">
 			<h4>4. Correcting and Updating Your Information</h4>
-            <p>Customers may update or change their account information through their account settings accessible using the Customer account page included in the Odessa Solution. Access to your Odessa account page will require your Odessa Solution username and password or any other supported authentication mechanism. To update your Information or to delete your account information, please email <a href="mailto:notices@Odessainc.com">notices@Odessainc.com</a>. </p>
+            <p>Customers may update or change their account information through their account settings accessible using the Customer account page included in the Odessa Solution. Access to your Odessa account page will require your Odessa Solution username and password or any other supported authentication mechanism. To update your Information or to delete your account information, please email <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. </p>
             <p>You can access or change your profile and contact information or delete your account through the Odessa settings page. If you choose to delete or deactivate your account, you can no longer retrieve content or reactivate your account.</p>
-            <p>You have the right to request access to any Personal Information which Odessa may have about you by contacting <a href="mailto:notices@Odessainc.com">notices@Odessainc.com</a>. The information will be provided in a machine-readable format. You may also ask that we transfer the Personal Information to a third party, which we will do if technically feasible. </p>
+            <p>You have the right to request access to any Personal Information which Odessa may have about you by contacting <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. The information will be provided in a machine-readable format. You may also ask that we transfer the Personal Information to a third party, which we will do if technically feasible. </p>
             <p>In addition, each Customer’s administrator of the Odessa Solution can retrieve or delete the data from the Odessa Solution. </p>
             <p>You also have the right to review, add and update your Personal Information. You may also request the deletion of your Personal Information where:</p>
             <div class="inner">
@@ -154,13 +154,13 @@
             <p>50 S 16th Street</p>
             <p>Suite 1900</p>
             <p>Philadelphia, PA 19102</p>
-            <p>Attention: Privacy Officer or by emailing notices@Odessainc.com </p>
-            <p>In addition, you may opt out of receiving Commercial Electronic Messages at any time by emailing <a href="mailto:notices@Odessainc.com">notices@Odessainc.com</a>. </p>
+            <p>Attention: Privacy Officer or by emailing notices@odessainc.com </p>
+            <p>In addition, you may opt out of receiving Commercial Electronic Messages at any time by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. </p>
 			</section>
 			
 			<section id="Restrict">
 			<h4>6. Rights to Object or Restrict Processing of Personal Information</h4>
-            <p>If Odessa has your Personal Information as a result of your relationship with one of Odessa’s Customers, you should first contact that Customer before contacting Odessa. You may, however, at any time revoke your consent to the collection, processing and use of your Personal Information by emailing notices@Odessainc.com. Upon receipt of your request, Odessa will delete your personal data provided Odessa may retain any data which is required for billing and accounting purposes or which is subject to legal retention requirements. In addition, if you discover any errors in data, you may contact us by emailing notices@Odessainc.com and we will correct it. You can always opt not to disclose information to us, but keep in mind some information may be needed to take advantage of product features or may be required by your relationship with one of Odessa’s customers.</p>
+            <p>If Odessa has your Personal Information as a result of your relationship with one of Odessa’s Customers, you should first contact that Customer before contacting Odessa. You may, however, at any time revoke your consent to the collection, processing and use of your Personal Information by emailing notices@odessainc.com. Upon receipt of your request, Odessa will delete your personal data provided Odessa may retain any data which is required for billing and accounting purposes or which is subject to legal retention requirements. In addition, if you discover any errors in data, you may contact us by emailing notices@odessainc.com and we will correct it. You can always opt not to disclose information to us, but keep in mind some information may be needed to take advantage of product features or may be required by your relationship with one of Odessa’s customers.</p>
             
 			</section>
 
@@ -235,7 +235,7 @@
 
 			<section id="Rights">
 			<h4>14. Notice of Privacy Rights to Residents of the European Economic Area and of the United Kingdom</h4>
-            <p>You have the right to ask us not to process your personal data for marketing purposes. We will usually inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your information to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data. You can also exercise the right at any time by contacting us at <a href="mailto:notices@Odessainc.com">notices@Odessainc.com.</a>
+            <p>You have the right to ask us not to process your personal data for marketing purposes. We will usually inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your information to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data. You can also exercise the right at any time by contacting us at <a href="mailto:notices@odessainc.com">notices@odessainc.com.</a>
             </p>
             <p>Odessa may be contacted in the European Union for data protection matters, pursuant to Article 27 of the General Data Protection Regulation of the European Union at: <a href="mailto:dataprivacy@odessainc.com">dataprivacy@odessainc.com</a>
             </p>
@@ -245,12 +245,11 @@
 
 			<section id="Contact">
             <h4>15. How to Contact Us</h4>
-            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@Odessainc.com">notices@Odessainc.com</a>notices@Odessainc.com or via postal mail at </p>
-            <p>Odessa Technologies, Inc. 50 S 16th Street</p>
-            <p>Suite 1900</p>
-            <p>Philadelphia, PA 19102</p>
-            <p>Attention: Privacy Officer.</p>
-            <p>Effective July , 2023</p>
+            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at </p>
+            <p>Odessa Technologies, <br>Inc. 50 S 16th Street Suite 1900<br>
+            Philadelphia, PA 19102<br>
+            Attention: Privacy Officer.<br></p>
+            <p>Effective December , 2024</p>
 
 			</section>
             
