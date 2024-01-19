@@ -150,10 +150,10 @@
 			<section id="">
 			<h4>5. Consent to Commercial Electronic Messages</h4>
             <p>If you provide us with an email address, you expressly consent to receiving Commercial Electronic Messages from Odessa about your use of the Website, the Odessa Solution, the Odessa Software and our Products. If you have any questions about Odessa’s Commercial Electronic Messages, you can contact Odessa at:</p>
-            <p>Odessa Technologies, Inc. </p>
-            <p>50 S 16th Street</p>
-            <p>Suite 1900</p>
-            <p>Philadelphia, PA 19102</p>
+            <p>Odessa Technologies, Inc. <br>
+            50 S 16th Street<br>
+            Suite 1900<br>
+            Philadelphia, PA 19102<br></p>
             <p>Attention: Privacy Officer or by emailing notices@odessainc.com </p>
             <p>In addition, you may opt out of receiving Commercial Electronic Messages at any time by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. </p>
 			</section>
@@ -249,7 +249,7 @@
             <p>Odessa Technologies, <br>Inc. 50 S 16th Street Suite 1900<br>
             Philadelphia, PA 19102<br>
             Attention: Privacy Officer.<br></p>
-            <p>Effective December , 2024</p>
+            <p>Effective January , 2024</p>
 
 			</section>
             
