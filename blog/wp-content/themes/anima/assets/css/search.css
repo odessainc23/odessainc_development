@@ -250,6 +250,9 @@ color: #fff !important;
   /* .ss360-custom-search .ss360-custom-search__searchbutton{
     width:20px
 } */
+.mobile-men{
+  display: none;
+}
 .ss360-data-points{
     display: none !important;
 }
