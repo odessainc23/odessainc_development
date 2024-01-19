@@ -43,7 +43,7 @@
 			<!-- <h3></h3> -->
             <p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows you care about how your Personal Information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing Odessa’s Website or by using any of Odessa’s hosted products (the “Odessa Solution”) or through communicating with Odessa regarding its software (the “Odessa Software”) in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we may collect, use, and share your information in the following ways.</p>
             <h4>Changes to this Privacy Policy</h4>
-            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at https://www.odessainc.com/legal/confidential-terms If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the address Odessa has on file for your account, if applicable.</p>
+            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at <a href="https://www.odessainc.com/legal/confidential-terms">https://www.odessainc.com/legal/confidential-terms</a>. If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the address Odessa has on file for your account, if applicable.</p>
             <p>This Privacy Policy explains:</p>
            <section id="Collect">
             <h4>1. Information Collected</h4>
@@ -154,13 +154,13 @@
             50 S 16th Street<br>
             Suite 1900<br>
             Philadelphia, PA 19102<br></p>
-            <p>Attention: Privacy Officer or by emailing notices@odessainc.com </p>
+            <p>Attention: Privacy Officer or by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> </p>
             <p>In addition, you may opt out of receiving Commercial Electronic Messages at any time by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. </p>
 			</section>
 			
 			<section id="Restrict">
 			<h4>6. Rights to Object or Restrict Processing of Personal Information</h4>
-            <p>If Odessa has your Personal Information as a result of your relationship with one of Odessa’s Customers, you should first contact that Customer before contacting Odessa. You may, however, at any time revoke your consent to the collection, processing and use of your Personal Information by emailing notices@odessainc.com. Upon receipt of your request, Odessa will delete your personal data provided Odessa may retain any data which is required for billing and accounting purposes or which is subject to legal retention requirements. In addition, if you discover any errors in data, you may contact us by emailing notices@odessainc.com and we will correct it. You can always opt not to disclose information to us, but keep in mind some information may be needed to take advantage of product features or may be required by your relationship with one of Odessa’s customers.</p>
+            <p>If Odessa has your Personal Information as a result of your relationship with one of Odessa’s Customers, you should first contact that Customer before contacting Odessa. You may, however, at any time revoke your consent to the collection, processing and use of your Personal Information by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a>. Upon receipt of your request, Odessa will delete your personal data provided Odessa may retain any data which is required for billing and accounting purposes or which is subject to legal retention requirements. In addition, if you discover any errors in data, you may contact us by emailing <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> and we will correct it. You can always opt not to disclose information to us, but keep in mind some information may be needed to take advantage of product features or may be required by your relationship with one of Odessa’s customers.</p>
             
 			</section>
 
@@ -245,11 +245,11 @@
 
 			<section id="Contact">
             <h4>15. How to Contact Us</h4>
-            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at </p>
+            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at:</p>
             <p>Odessa Technologies, <br>Inc. 50 S 16th Street Suite 1900<br>
             Philadelphia, PA 19102<br>
             Attention: Privacy Officer.<br></p>
-            <p>Effective January , 2024</p>
+            <p>Effective January, 2024</p>
 
 			</section>
             
