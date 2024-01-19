@@ -156,6 +156,15 @@
      width: max-content;
      margin: 20px 0 0;
  }
+
+ .wistia_click_to_play{
+    height: 100%;
+    width: 100%;
+ }
+ .testimonial-content img{
+    width:300px;
+    height:300px
+ }
  .videoPoster:after{
      background: none;
  }
@@ -324,6 +333,10 @@
      width: 100%;
      transform: translateX(0) translateZ(0);
  }
+ .testimonial-content img{
+    width:100%;
+    height:auto
+ }
      .video {
      width: 100%;
  }
@@ -400,12 +413,16 @@
                  
              <div class="testimonial-content">
                 
-               <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button>
+                <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
+                    <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
+                </span>            
              </div>
              
              <div class="video-con">
                  <h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
-                 <a href="javascript:void(0);" class="play-btn watch">Watch Now</a>
+                 <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
+                    <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
+                </span>
              </div>
             
            </div>

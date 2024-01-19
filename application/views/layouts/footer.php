@@ -122,6 +122,7 @@
 	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script> 
 	<script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
 	<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
+	<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 	<script type="text/javascript">
     $(document).ready(function(){
         $('.search-box').hide();
