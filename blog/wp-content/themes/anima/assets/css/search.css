@@ -275,6 +275,9 @@ display: flex !important;
 .search-box{
 top:15px !important;
 }
+.ss360-search-term-highlight, .ss360-search-term-highlight, .z-search-highlight{
+  background: transparent !important;
+}
 .search{
 position: absolute;
 right: 80px;
