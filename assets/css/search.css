@@ -231,7 +231,7 @@ margin: 4px 0 4px !important
   width:20px
 }
 .nav-flex .ss360-custom-search--no-margin{
-  display: none;
+  display: none !important;
 }
 @media only screen and (max-width:767px){
   .mobile-men{
