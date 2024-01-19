@@ -277,6 +277,8 @@ top:15px !important;
 }
 .ss360-search-term-highlight, .ss360-search-term-highlight, .z-search-highlight{
   background: transparent !important;
+  display: inline;
+  padding: 0;
 }
 .search{
 position: absolute;

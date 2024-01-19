@@ -136,6 +136,8 @@ display: none;
 }
 .ss360-search-term-highlight, .ss360-search-term-highlight, .z-search-highlight{
   background: transparent !important;
+  display: inline;
+  padding: 0;
 }
 .ss360-grid--lg .ss360-suggests__content{
   padding: 10px;
