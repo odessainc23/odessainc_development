@@ -251,8 +251,11 @@ top:15px !important;
 }
 .search{
 position: absolute;
-right: 60px;
+right: 80px;
 cursor: pointer;
+}
+.navbar-default .search{
+  color: #545b6d;
 }
 .ss360-layer--wide-overlay{
   max-width: 90%!important;
