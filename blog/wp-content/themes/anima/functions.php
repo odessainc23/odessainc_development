@@ -35,6 +35,22 @@ require_once( get_template_directory() . "/includes/landing-page.php" );	// Land
 
 // Custom hook for add description backend start 
 add_action( 'cmb2_admin_init', 'yourprefix_register_repeatable_group_field_metabox' );
+
+
+function heateor_sss_customize_shared_url($postUrl, $sharingType, $standardWidget) {
+    // Check if the sharing type is Facebook
+    if ($sharingType === 'facebook') {
+        // Customize the URL for Facebook shares
+        $postUrl = $postUrl . 'https://www.facebook.com/OdessaInc/';
+    }
+
+    // Return the modified or original URL
+    return $postUrl;
+}
+
+// Hook the custom function into the social share icons' URL generation process
+add_filter('heateor_sss_target_share_url_filter', 'heateor_sss_customize_shared_url', 10, 3);
+
 /**
  * Hook in and add a metabox to demonstrate repeatable grouped fields
  */
