@@ -100,8 +100,8 @@ $(".close-search").click(function() {
 	$('input[type="search"]').val();
 });
 $(".s").attr("placeholder", "Search Blog");
-// $(".heateor_sss_facebook").attr("href", "https://www.facebook.com/OdessaInc/");
-// $(".heateor_sss_button_linkedin").attr("href", "https://www.linkedin.com/company/odessa-inc-/mycompany/verification/");
+// $(".heateor_sss_facebook").attr("href", "https://www.facebook.com/sharer/sharer.php?u=YourArticleURL");
+// $(".heateor_sss_button_linkedin").attr("href", "https://www.linkedin.com/sharing/share-offsite/?url=YourArticleURL");
     });
 
 //     window.onload = function(event) {
