@@ -109,5 +109,5 @@ $(".s").attr("placeholder", "Search Blog");
 
 
 <script src="<?php bloginfo('template_url'); ?>/assets/js/script.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4da41fc07fb2a379"></script>
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4da41fc07fb2a379"></script> -->
 </html>
