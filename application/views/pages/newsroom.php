@@ -30,7 +30,7 @@
 			<div class="section_width">
 				<div class="col-md-12">
 					<div class="heading_div text-center"> <span class="annoucement_icon"></span>
-						<h1 class="text-center">Announcements</h1>
+						<h3 class="text-center">Announcements</h3>
 					</div>
 				</div>
 				<div class="annoucementsliderwr">
@@ -118,7 +118,7 @@
 				<div class="col-md-12">
 					<div class="heading_div text-center">
 						<span class="news_icon"></span>
-						<h1>In the News</h1>
+						<h3>In the News</h3>
 					</div>
 				</div>
 				<div class="clearfix">
@@ -273,7 +273,7 @@
 		<div class="section_width">
 			<div class="col-md-12">
 				<div class="heading_div text-center"> <span class="award_icon"></span>
-					<h1>Awards and Recognition</h1>
+					<h3>Awards and Recognition</h3>
 				</div>
 			</div>
 			<div class="col-md-12">
