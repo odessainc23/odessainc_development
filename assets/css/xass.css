@@ -59,14 +59,20 @@
   .card-body {
     margin: 2rem 1rem 2rem 1rem;
   }
-  
+  .auto-page .odc__btn--more:focus;.auto-page .odc__btn--more:hover,.auto-page .odc__btn--more{
+    text-decoration: none;
+  }
+  .auto-fin h2{
+    font-size: 1.2rem;
+    line-height: 1;
+  }
   .blog-hashtag {
     font-size: 0.9rem;
     font-weight: 500;
     color: #4d97b2;
   }
   .card-banner{
-    height: 270px;
+    height: 190px;
     overflow: hidden;
     object-fit: cover;
   }
