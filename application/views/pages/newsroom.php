@@ -118,7 +118,7 @@
 				<div class="col-md-12">
 					<div class="heading_div text-center">
 						<span class="news_icon"></span>
-						<h3>In the News</h3>
+						<h1>In the News</h1>
 					</div>
 				</div>
 				<div class="clearfix">
@@ -203,14 +203,8 @@
 					<div class="bottomdiv">
 				
 					
-					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
-							<div class="news_div">
-								<span class="date">May 15, 2021</span>
-								<h3>Mission Critical Technology Delivers Flexibility for Asset Finance</h3>
-								<p><a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
-							</div>
-						</div>
-					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
+					
+					<!-- <div class="col-md-4 col-sm-4 col-xs-12  pd10">
 							<div class="news_div">
 								<span class="date">January 9, 2021</span>
 								<h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3>
@@ -225,12 +219,18 @@
 								<p><a href="https://www.magazine.monitordaily.com/sumandeep-kaur" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
 						</div>
-						
+						 -->
 						
 						
 					</div>
 					<div class="bottomdiv">
-					
+					<div class="col-md-4 col-sm-4 col-xs-12  pd10">
+							<div class="news_div">
+								<span class="date">May 15, 2021</span>
+								<h3>Mission Critical Technology Delivers Flexibility for Asset Finance</h3>
+								<p><a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+							</div>
+						</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">June 25, 2020</span>
@@ -238,13 +238,13 @@
 								<p><a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div> 
 						</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 pd10">
+					<!-- <div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">February 20, 2020</span>
 								<h3>Odessa SVP Keelie Fitzgerald Named Top 50 Women in Equipment Finance</h3>
 								<p><a href="https://www.magazine.monitordaily.com/keelie-fitzgerald" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
 							</div>
-						</div>
+						</div> -->
 						<div class="col-md-4 col-sm-4 col-xs-12 pd10">
 							<div class="news_div">
 								<span class="date">July 10, 2019</span>
