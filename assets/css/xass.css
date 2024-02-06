@@ -76,8 +76,8 @@
     margin-bottom: 0.5em;
     font-family: MaisonNeue-Bold;
     text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
   }
   
   .blog-description {
