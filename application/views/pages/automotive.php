@@ -230,7 +230,7 @@
 	</div>
 	<!--Build Page End Here--> 
 </div>
-<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=099988888"  />
 	<!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
 	<script src="<?php echo base_url();?>assets/js/owl.carousel.js"></script> 
     <!-- <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
