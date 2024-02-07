@@ -1,4 +1,4 @@
-<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=9999999"  />
 
 <style>
 
