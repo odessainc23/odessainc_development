@@ -91,8 +91,8 @@
 
 		echo $this->minify->deploy_css(TRUE);
 	?>
-	<link href="<?php echo base_url(); ?>assets/css/style.css?v=2001" rel='stylesheet' />
-	<link href="<?php echo base_url(); ?>assets/css/media.css?v=3001" rel='stylesheet' />
+	<link href="<?php echo base_url(); ?>assets/css/style.css?v=1999999" rel='stylesheet' />
+	<link href="<?php echo base_url(); ?>assets/css/media.css?v=66666" rel='stylesheet' />
 	
 	<!-- <?php if ( in_array( $current_url, $custom_css_list ) ) { ?>
 		<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" crossorigin />
