@@ -111,7 +111,8 @@ color: #fff !important;
     border-bottom: 2px solid #fff !important;
     background: transparent !important;
     box-shadow: none !important;
-    color:#fff !important
+    color:#fff !important;
+    border-radius: 0 !important;
   }
   #ss360-layer .ss360-custom-search .ss360-custom-search__searchbox {
     color:#000 !important
