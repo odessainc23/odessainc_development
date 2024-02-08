@@ -79,7 +79,8 @@
 </div>
 <?php wp_footer(); ?>
 </body>
-<script async src="https://js.sitesearch360.com/plugin/bundle/49770.js"></script>
+
+<script async src="https://js.sitesearch360.com/plugin/bundle/50238.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('.search-box').hide();
