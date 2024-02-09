@@ -106,6 +106,7 @@ class Leadership extends CI_Controller {
 					'linkedin'	=> 'https://www.linkedin.com/in/jeffrey-lezinski-7144562a/',
 				)
 			),
+			
 			// array(
 			// 	'name'			=> 'Andrew Baird',
 			// 	'thumbnail'		=> base_url() .'assets/images/leadership/andrew.jpg',
@@ -139,6 +140,7 @@ class Leadership extends CI_Controller {
 				)
 			),
 			
+			
 			array(
 				'name'			=> 'Scott Frymire',
 				'thumbnail'		=> base_url() .'assets/images/leadership/scott.jpg',
@@ -147,6 +149,17 @@ class Leadership extends CI_Controller {
 				'experience'	=> '27 years in B2B software ',
 				'social'		=> array(
 				'linkedin'	    => 'https://www.linkedin.com/in/scottfrymire/',
+				)
+			),
+			array(
+				'name'			=> 'Steve Nippak ',
+				'thumbnail'		=> base_url() .'assets/images/leadership/steve.png',
+				'title'			=> 'SVP Sales, North America',
+				'description'	=> 'Steve has over 25 years of experience in sales, customer success, and business leadership within enterprise financial software solutions. He has a proven track record of driving revenue and sustainable profitability. Steve is dedicated to building strong cultures and meeting customer needs with market-leading solutions. As a skilled enterprise sales leader, he is known for his insight, thoughtfulness, influence, and collaborative nature. He consistently achieves positive results by tailoring sales strategies to complex environments, encouraging team collaboration, ensuring clear communication, and addressing challenges directly. Before joining Odessa, Steve was the EVP of Sales at startup Uptiq. Prior to that, he held senior positions at companies including Argo, Linedata, and FIS. Steve began his career in Leasing, spending 10 years at AT&T Capital. He has been actively involved with ELFA and CFLA for over 20 years, serving on steering committees for both associations.
+				',
+				'experience'	=> '34 years in FinTech',
+				'social'		=> array(
+					'linkedin'	=> 'https://www.linkedin.com/in/stevenippak2020/',
 				)
 			),
 		);
