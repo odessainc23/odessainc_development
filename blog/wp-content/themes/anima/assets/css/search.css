@@ -244,6 +244,7 @@ color: #fff !important;
   #ss360-custom-searchbutton svg {
     width: 24px;
     height: 24px;
+    position: absolute;
   }
   #ss360-layer .ss360-ac-bg {
     width: 50px !important;
