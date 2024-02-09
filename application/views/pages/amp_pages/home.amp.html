@@ -258,49 +258,65 @@
      input, button{
          margin:0;
      }
-     .overlay.one{
-         opacity: 1;
-     }
-     .overlay img{
-         margin: 50px auto 0px auto;
-     }
-     .login-container {
-         background-color: white;
-         padding: 20px;
-         border-radius: 5px;
-         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-         text-align: center;
-         width: 40%;
-         display: block;
-         margin: 30px auto;      
-         z-index: 9999999;
- }
- 
- input, button {
-     margin: 0 0;
-     padding: 8px;
-     border: 1px solid #ccc;
-     border-radius: 3px;
-     width: 100%;
- }
- 
- button {
-     background-color: #007bff;
-     color: white;
-     border: none;
-     cursor: pointer;
- }
- .letstalkform .form-control.red{
-     border: 2px solid #962424;  
- }
- #footer{
-     position: relative;
-     height: 24px;
-     width: 100%;
-     text-align: center;
-     font-size: 0.75rem;
-     color: #fff;
- }
+     .overlay.ov{
+        position: fixed;
+        width: 100%;
+        background-color: #263746;
+        width: 100%;
+        height:100vh;
+        z-index: 9999999;
+        display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+   
+    }
+    .overlay.ov{
+        opacity: 1;
+    }
+    .overlay img{
+        margin: 50px auto 0px auto;
+    }
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 40%;
+        display: block;
+        margin: 30px auto;
+
+        z-index: 9999999;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.letstalkform .form-control.red{
+    border: 2px solid #962424;  
+}
+#footer{
+    position: relative;
+    /* margin-top: -24px; */
+    height: 24px;
+    width: 100%;
+    /* clear: both; */
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
  .testimonial{
      margin:3em 0 0;
  }
@@ -743,39 +759,7 @@
          }
      });
  
-   $(".overlay").addClass('one');
-     const isLoggedIn = localStorage.getItem("isLoggedIn");
  
-     if (isLoggedIn) {
-         // Hide the login form and display the welcome message
-         $("#welcomeMessage").show();
-         $(".overlay").hide();
-         $("#loginContainer").hide();
-         //$(".overlay").hide();
-     }
- 
-     $("#loginForm").submit(function(event) {
-         event.preventDefault(); // Prevent form submission
- 
-         const username = $("#username").val();
-         const password = $("#password").val();
- 
-         // Check if the username and password match the expected values
-         if (username === "odessauser" && password === "password") {
-             alert("Access granted.");
-             $(".overlay").hide();
-             $("#loginContainer").hide();
- 
-             // Store the login state in local storage
-             localStorage.setItem("isLoggedIn", true);
- 
-             // Reload the page to show the welcome message without the login form
-             location.reload();
-         } else {
-             alert("Please enter correct username and password.");
-             $(".form-control").addClass('red');
-         }
-     });
  });
                                                   
  

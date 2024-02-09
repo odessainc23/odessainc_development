@@ -111,6 +111,65 @@
 		})(window,document,'script','dataLayer','GTM-PSHM9KW');
 	</script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.1.min.js?v=6001"></script>
+	<style>
+		.overlay{
+        position: fixed;
+        width: 100%;
+        background-color: #263746;
+        width: 100%;
+        height:100vh;
+        z-index: 9999999;
+        display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    }
+    .overlay img{
+        margin: 50px auto 0px auto;
+		width: auto;
+    height: auto;
+    }
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 40%;
+        display: block;
+        margin: 30px auto;
+
+        z-index: 9999999;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.letstalkform .form-control.red{
+    border: 2px solid #962424;  
+}
+#footer{
+    position: relative;
+    /* margin-top: -24px; */
+    height: 24px;
+    width: 100%;
+    /* clear: both; */
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
+		</style>
 </head>
 <body class="">
 	<!-- Google Tag Manager (noscript) -->
@@ -118,3 +177,15 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSHM9KW" height="0" width="0" class="googletagmanager"></iframe>
 	</noscript>
 	<?php $this->load->view('layouts/navmenu'); ?>
+	<div class="overlay">
+        <img src="<?php echo base_url(); ?>assets/images/logo.png">
+    <div class="login-container letstalkform" id="loginContainer">
+        <h2 class="home-hero-cstitle">Login</h2>
+        <form id="loginForm" class=" ">
+            <input type="text" id="username" placeholder="Username" class="form-control">
+            <input type="password" id="password" placeholder="Password" class="form-control">
+            <button type="submit" class="odc__btn odc__btn--primary odc__btn--xl btnmar">Login</button>
+        </form>
+    </div>
+    <div id="footer">© 2023 Odessa. All rights reserved.</div>
+</div>

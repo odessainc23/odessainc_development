@@ -115,7 +115,45 @@ $(".close-search").click(function() {
     $(this).removeClass("op"); // Corrected this line
     $('.search-overlay').removeClass("op");
 });
-    });
+
+$(".overlay").addClass('ov');
+     const isLoggedIn = localStorage.getItem("isLoggedIn");
+ 
+     if (isLoggedIn) {
+         // Hide the login form and display the welcome message
+         $("#welcomeMessage").show();
+         $(".overlay").hide();
+         $(".overlay").removeClass('ov');
+         $("#loginContainer").hide();
+         //$(".overlay").hide();
+     }
+ 
+     $("#loginForm").submit(function(event) {
+         event.preventDefault(); // Prevent form submission
+ 
+         const username = $("#username").val();
+         const password = $("#password").val();
+ 
+         // Check if the username and password match the expected values
+         if (username === "odessauser" && password === "password") {
+             alert("Access granted.");
+             $(".overlay").hide();  
+             $(".overlay").removeClass('ov');
+             $("#loginContainer").hide();
+ 
+             // Store the login state in local storage
+             localStorage.setItem("isLoggedIn", true);
+ 
+             // Reload the page to show the welcome message without the login form
+             location.reload();
+         } else {
+             alert("Please enter correct username and password.");
+             $(".form-control").addClass('red');
+         }
+     });
+ });
+
+
 
 //     window.onload = function(event) {
 //     event.stopPropagation(true);
