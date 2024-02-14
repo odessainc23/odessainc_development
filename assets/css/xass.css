@@ -305,7 +305,7 @@ max-width: 800px;
   padding-left: 0;
 }
 .xas-banner .home-hero-bg img{
-  display: none;
+  display: none !important;
 }
 .auto-fin {
   padding-top: 30px !important;
