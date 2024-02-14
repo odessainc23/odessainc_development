@@ -1309,9 +1309,14 @@
     .getthelatestwrap,
     .integratewithtools,
     .letstalkSecondryform,
-    .letstalkformSection,
-    .testimonialswrap {
+    .letstalkformSection{
       padding: 140px 0;
+    }
+    .testimonialswrap {
+        padding: 40px 0;
+      }
+      .platform .pgplat__banner .odc-gd__row {
+        padding: 40px 0 0px !important;
     }
     .page_banner {
       padding-top: 130px !important;
