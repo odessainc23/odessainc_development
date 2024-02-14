@@ -142,7 +142,7 @@ $(".close-search").click(function() {
 });
 
 
-$(".overlay").addClass('ov');
+	$(".overlay").addClass('ov');
      const isLoggedIn = localStorage.getItem("isLoggedIn");
  
      if (isLoggedIn) {
