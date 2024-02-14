@@ -304,6 +304,9 @@ max-width: 800px;
 .xas-section .devOpsCon {
   padding-left: 0;
 }
+.xas-banner .home-hero-bg img{
+  display: none;
+}
 .auto-fin {
   padding-top: 30px !important;
 }
@@ -365,6 +368,7 @@ h3 {
 .xas-content .home-hero-cwrap {
   height: 100%;
   padding-top: 130px;
+  padding-bottom: 0;
 }
 .xas-content .home-hero-ctitle {
   font-size: 2rem;
