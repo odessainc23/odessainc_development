@@ -1377,6 +1377,9 @@
     .vacancyCon {
       padding-top: 20px;
     }
+    .footermenu_strip{
+        background-color: #eaeaee;
+    }
     .assetsfinancebox,
     .buildpgscalefector .normaltxt,
     section.annoucement .upperdiv .annoucement_rt,
@@ -1384,7 +1387,7 @@
       padding: 20px;
     }
     .footermenu_strip_inner {
-      padding: 30px 0 20px;
+      padding: 20px 0 20px;
     }
     .footermenu_strip_inner .stripfbox,
     .navbar-default #navbar ul li {
