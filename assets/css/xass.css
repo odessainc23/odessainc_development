@@ -304,6 +304,9 @@ max-width: 800px;
 .xas-section .devOpsCon {
   padding-left: 0;
 }
+.auto-page .xas-banner {
+  height: 75vh;
+}
 .xas-banner .home-hero-bg img{
   display: none !important;
 }
