@@ -72,7 +72,8 @@ $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
-$route['automotive-finance-software'] = 'Automotive_amp';
+$route['auto-finance-software'] = 'Automotive_amp';
+$route['automotive-finance-software'] = 'Redirect_amp';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
 $route['whitepaper/unlocking-xaas-transformative-insights-asset-finance'] = 'Whitepaper';
 $route['whitepaper/unlocking-xaas-thankyou'] = 'Thankyou_whitepaper';

@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Automotive_amp extends CI_Controller {
+class Redirect_amp extends CI_Controller {
 
 	public function index(){
 		$data['meta_title']			= 'Auto Finance Software | Odessa';
@@ -13,8 +13,8 @@ class Automotive_amp extends CI_Controller {
 		$data['tc_description']		= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/auto-finance-software.amp.html', $data);
-		// $this->load->view('pages/amp_pages/automotive-finance-software.html', $data);
+		// $this->load->view('pages/amp_pages/redirection.html', $data);
+		$this->load->view('pages/amp_pages/automotive-finance-software.amp.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
