@@ -15,7 +15,8 @@
     margin:0;
     background:url('../images/api/banner-bg.png') 0 0 no-repeat #213847;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    height: 100%;
 }
 .api-body #primaryForm{
     margin-top: 40px;
@@ -35,6 +36,9 @@
     font-size: 0;
     line-height: 0;
 }
+.api-header .navbar_wrapper{
+    margin: 0;
+}    
 .whitepaper-tag{
     margin-left: 33px;
     position: relative;
@@ -63,7 +67,7 @@
 .api-banner{
     width: 100%;
     margin-bottom: 38px;
-    margin-top: 80px;
+    margin-top: 50px;
     position: relative;
     z-index: 1;
     max-width: 848px;
@@ -74,7 +78,8 @@
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.2;
+    margin: 0 0 20px;
 }
 .api-banner p{
 color: #FFF;
@@ -150,7 +155,7 @@ padding-left: 16px;
     top: -2px;
 }
 .key-takeways-section{
-    margin:38px 0 0;
+    margin:40px 0 ;
   
 }
 .get-copy{
@@ -160,13 +165,15 @@ padding-left: 16px;
     width: calc(50% - 85px);
     max-width: 703px;
     margin-left: 85px;
-    position: relative;
+    position: absolute;
     top: -380px;
-    padding: 37px 40px 40px 40px;
+    padding: 30px 40px 40px 40px;
+    right: 0;
 }
 .take-flex{
     display: flex;
     flex-flow: row;
+    position: relative;
 }
 .get-copy .btnmar{
     width: 100%;
@@ -194,22 +201,25 @@ padding-left: 16px;
 } */
 @media only screen and (max-width: 1700px) {
     .api-banner{
-        max-width: 600px;
+        max-width: 550px;
+    }
+    #wrapper .api-wrapper{
+      
     }
     .key-takeaways{
-        width: calc(55% - 25px);
+        width: calc(58% - 25px);
         margin-right: 25px;
         max-width:100%;
     }
     .get-copy{
-    width: calc(45% - 25px);
+    width: calc(42% - 25px);
     max-width: 100%;
     margin-left: 25px;
 }
 }
 @media only screen and (max-width: 1400px) {
     .api-banner{
-        width:55%;
+        width:100%;
     }
 
 }
