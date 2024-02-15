@@ -17,10 +17,11 @@
     position: relative;
     overflow: hidden
 }
-
+.api-body #primaryForm{
+    margin-top: 40px;
+}
 .api-header .api-logo{
-    width: 165px;
-    height: 52px;
+ 
     margin: 38px 0 0;
     padding: 0;
     font-size: 0;
@@ -60,11 +61,12 @@
     z-index: 0;
 }
 .api-banner{
-    width:80%;
+    width: 100%;
     margin-bottom: 38px;
-    margin-top: 40px;
+    margin-top: 80px;
     position: relative;
     z-index: 1;
+    max-width: 848px;
 }
 .api-heading{
     color: #FFF;
@@ -90,9 +92,10 @@ margin-bottom: 20px;
     border-radius: 20px;
     background: #F3F3F5;
     padding: 40px;
-    width: calc(55% - 25px);
-    margin-right: 25px;
+    width: calc(50% - 85px);
+    margin-right: 85px;
     height: max-content;
+    max-width: 848px 
 }
 .h3-head{
     color: #00ACC8;
@@ -106,8 +109,8 @@ line-height: 26px;
     margin-bottom: 24px;
 }
 .plane{
-    width: 160px;
-    margin: 0 auto 27px 78px;
+    width: 238px;
+    margin: 0 auto 27px auto;
     display: block;
 }
 .get-copy .h3-head{
@@ -152,12 +155,14 @@ padding-left: 16px;
 }
 .get-copy{
     border-radius: 20px;
-background: #FFF;
-backdrop-filter: blur(25px);
-width: calc(45% - 25px);
-margin-left: 25px;
-position: relative;
-top: -300px;
+    background: #FFF;
+    backdrop-filter: blur(25px);
+    width: calc(50% - 85px);
+    max-width: 703px;
+    margin-left: 85px;
+    position: relative;
+    top: -380px;
+    padding: 37px 40px 40px 40px;
 }
 .take-flex{
     display: flex;
@@ -175,6 +180,10 @@ top: -300px;
     background: #FF495C;
     text-transform: uppercase;
 }
+.api-logo svg{
+    width: 165px;
+    height: 52px;
+}
 .get-copy .capt{
     margin: 0 auto;
     width: 300px;
@@ -183,15 +192,36 @@ top: -300px;
     width: 20px !important;
     height: 20px !important;
 } */
+@media only screen and (max-width: 1700px) {
+    .api-banner{
+        max-width: 600px;
+    }
+    .key-takeaways{
+        width: calc(55% - 25px);
+        margin-right: 25px;
+        max-width:100%;
+    }
+    .get-copy{
+    width: calc(45% - 25px);
+    max-width: 100%;
+    margin-left: 25px;
+}
+}
 @media only screen and (max-width: 1400px) {
     .api-banner{
         width:55%;
     }
 
 }
+@media only screen and (max-width: 1200px) {
+    .api-banner {
+        max-width: 600px;
+    }
+}
 @media only screen and (max-width: 1024px) {
     .api-banner {
         width: 100%;
+        max-width: 100%;
     }
     .take-flex{
         flex-wrap: wrap;
@@ -203,4 +233,43 @@ top: -300px;
     .get-copy{
         top:0
     }
+    .key-takeaways{
+        margin: 40px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+.whitepaper-name {
+    top: 20%;
+    font-size: 14px;
+}
+.whitepaper{
+    width: 100%;
+}
+.api-header .navbar_wrapper{
+    margin: 0;
+    padding: 0;
+}
+.api-logo svg {
+    width: 100px;}
+    .api-heading{
+        font-size: 2rem;
+    }
+    .api-banner p{
+        font-size: 16px;
+    }
+    #wrapper .api-wrapper{
+        background-image: none;
+    }
+    .gradient svg{
+        width: 100%;
+    }
+    .plane {
+        width: 100px;}
+        .get-copy{
+            padding: 30px 15px;
+        }
+        .key-takeaways{
+            padding: 30px 15px;
+        }
 }
