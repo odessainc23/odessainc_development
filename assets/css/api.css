@@ -1,0 +1,206 @@
+
+#bodyId .navbar {
+    display: none;
+    }
+ #bodyId footer {
+    display: none;
+}
+#bodyId .footermenu_strip{
+    display: none;
+}
+#wrapper.api-body{
+    margin: 0;
+}
+#wrapper .api-wrapper{
+    margin:0;
+    background:url('../images/api/banner-bg.png') 0 0 no-repeat #213847;
+    position: relative;
+    overflow: hidden
+}
+
+.api-header .api-logo{
+    width: 165px;
+    height: 52px;
+    margin: 38px 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+}
+.api-header .navbar-brand{
+    padding: 0;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+}
+.whitepaper-tag{
+    margin-left: 33px;
+    position: relative;
+}
+.whitepaper-name{
+    top: 25%;
+    left: 0;
+    color: #FFF;
+    font-family: "Maison Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+}
+.gradient{
+    position: absolute;
+    z-index: 0;
+}
+.api-banner{
+    width:80%;
+    margin-bottom: 38px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+.api-heading{
+    color: #FFF;
+    font-family: "Maison Neue";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.api-banner p{
+color: #FFF;
+font-family: "Maison Neue";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+margin-bottom: 20px;
+}
+.api-banner span.blue{
+    color: #00ACC8;
+}
+.key-takeaways{
+    border-radius: 20px;
+    background: #F3F3F5;
+    padding: 40px;
+    width: calc(55% - 25px);
+    margin-right: 25px;
+    height: max-content;
+}
+.h3-head{
+    color: #00ACC8;
+font-family: "Maison Neue";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+}
+.letstalkform.get-copy .form-group{
+    margin-bottom: 24px;
+}
+.plane{
+    width: 160px;
+    margin: 0 auto 27px 78px;
+    display: block;
+}
+.get-copy .h3-head{
+    margin: 0;
+    text-align: center;
+}
+label[for="honeypot"], #honeypot {
+    display: none;
+    visibility: hidden;
+}
+.key-takeaways ul{
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+.key-takeaways ul li{
+    color: #555B6D;
+font-family: "Maison Neue";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+margin: 0 0 20px 0;
+position: relative;
+list-style: none;
+padding-left: 16px;
+}
+.key-takeaways ul li:last-child{
+    margin: 0;
+}
+.key-takeaways ul li:after{
+    content: url(../images/api/stroke.svg);
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    top: -2px;
+}
+.key-takeways-section{
+    margin:38px 0 0;
+  
+}
+.get-copy{
+    border-radius: 20px;
+background: #FFF;
+backdrop-filter: blur(25px);
+width: calc(45% - 25px);
+margin-left: 25px;
+position: relative;
+top: -300px;
+}
+.take-flex{
+    display: flex;
+    flex-flow: row;
+}
+.get-copy .btnmar{
+    width: 100%;
+    color: #FFF;
+    font-family: "Maison Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 10px;
+    background: #FF495C;
+    text-transform: uppercase;
+}
+.get-copy .capt{
+    margin: 0 auto;
+    width: 300px;
+}
+/* .recaptcha-checkbox-border{
+    width: 20px !important;
+    height: 20px !important;
+} */
+@media only screen and (max-width: 1400px) {
+    .api-banner{
+        width:55%;
+    }
+
+}
+@media only screen and (max-width: 1024px) {
+    .api-banner {
+        width: 100%;
+    }
+    .take-flex{
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+    }
+    .key-takeaways,.get-copy{
+        width: 100%;margin: 0;
+    }
+    .get-copy{
+        top:0
+    }
+}
