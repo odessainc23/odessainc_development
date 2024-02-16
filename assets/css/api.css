@@ -265,15 +265,10 @@ padding-left: 16px;
     
 }
 @media only screen and (max-width: 1200px) {
-    /* .api-banner {
-        max-width: 600px;
+   
+    .get-copy {
+        max-width: 45%;
     }
-    .key-takeaways{
-        max-width: 600px;
-    }
-    .get-copy{
-        max-width: 400px;
-    } */
 }
 @media only screen and (max-width: 1024px) {
     .api-banner {
