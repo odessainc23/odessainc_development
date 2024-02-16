@@ -326,5 +326,6 @@ padding-left: 16px;
         }
         .key-takeaways{
             padding: 30px 15px;
+            margin-bottom: 0;
         }
 }
