@@ -5,6 +5,9 @@
  #bodyId footer {
     display: none;
 }
+#bodyId::-webkit-scrollbar {
+        display: none;
+}
 #bodyId .footermenu_strip{
     display: none;
 }
