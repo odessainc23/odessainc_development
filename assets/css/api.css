@@ -46,11 +46,10 @@
 .whitepaper-name{
     top: 25%;
     left: 0;
-    color: #FFF;
-    font-family: "Maison Neue";
+    color: #FFF; 
+font-family:MaisonNeue-Bold;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
     position: absolute;
@@ -73,8 +72,8 @@
     max-width: 848px;
 }
 .api-heading{
-    color: #FFF;
-    font-family: "Maison Neue";
+    color: #FFF;  
+    font-family:MaisonNeue-Bold;
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
@@ -83,7 +82,8 @@
 }
 .api-banner p{
 color: #FFF;
-font-family: "Maison Neue";
+
+font-family:MaisonNeue-Book;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -104,10 +104,10 @@ margin-bottom: 20px;
 }
 .h3-head{
     color: #00ACC8;
-font-family: "Maison Neue";
+    font-family:MaisonNeue-Bold;
 font-size: 24px;
 font-style: normal;
-font-weight: 700;
+
 line-height: 26px;
 }
 .letstalkform.get-copy .form-group{
@@ -133,7 +133,7 @@ label[for="honeypot"], #honeypot {
 }
 .key-takeaways ul li{
     color: #555B6D;
-font-family: "Maison Neue";
+    font-family:MaisonNeue-Book;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -178,7 +178,7 @@ padding-left: 16px;
 .get-copy .btnmar{
     width: 100%;
     color: #FFF;
-    font-family: "Maison Neue";
+    font-family:MaisonNeue-Book;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
