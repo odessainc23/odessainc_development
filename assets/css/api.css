@@ -1,7 +1,7 @@
 
-body{
+html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     scroll-behavior: auto;
-    overscroll-behavior: none;
+    overscroll-behavior: none !important;
 }
 #bodyId .navbar {
     display: none;
