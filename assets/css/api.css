@@ -1,4 +1,8 @@
 
+body{
+    scroll-behavior: auto;
+    overscroll-behavior: none;
+}
 #bodyId .navbar {
     display: none;
     }
