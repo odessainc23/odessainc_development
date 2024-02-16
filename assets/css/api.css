@@ -26,6 +26,11 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     overflow: hidden;
     height: 100%;
 }
+.api-body .container {
+        padding: 0;
+       
+    }
+
 .api-body #primaryForm{
     margin-top: 40px;
 }
@@ -104,7 +109,7 @@ margin-bottom: 20px;
     border-radius: 20px;
     background: #F3F3F5;
     padding: 40px;
-    width: calc(50% - 85px);
+    width:calc(100% - 85px);
     margin-right: 85px;
     height: max-content;
     max-width: 848px 
@@ -169,7 +174,7 @@ padding-left: 16px;
     border-radius: 20px;
     background: #FFF;
     backdrop-filter: blur(25px);
-    width: calc(50% - 85px);
+    width: calc(100% - 85px);
     max-width: 703px;
     margin-left: 85px;
     position: absolute;
@@ -206,9 +211,16 @@ padding-left: 16px;
     width: 20px !important;
     height: 20px !important;
 } */
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width: 2000px) {
+    /* .api-body .container {
+        padding: 0;
+        width: 90%;
+        max-width: 90%;
+    } */
+}
+@media only screen and (max-width: 1750px) {
     .api-banner{
-        max-width: 550px;
+        max-width: 750px;
     }
     .whitepaper-tag{
         margin-left: 23px;
@@ -226,40 +238,57 @@ padding-left: 16px;
       
     }
     .key-takeaways{
-        width: calc(58% - 25px);
+        max-width: 750px;
+    }
+    .get-copy{
+        max-width: 500px;
+    }
+    .key-takeaways{
         margin-right: 25px;
-        max-width:100%;
+        width:100%;
         bottom: 0;
     }
     .get-copy{
-    width: calc(42% - 25px);
-    max-width: 100%;
+    width: 100%;
+    margin-left: 25px;
+    /* max-width: 100%; */
     margin-left: 25px;
 }
 }
 @media only screen and (max-width: 1400px) {
-    .api-banner{
-        width:100%;
+    .api-banner,.key-takeaways{
+        max-width: 50%;
     }
-
+    .whitepaper{
+        width: 80%;
+    }
+    
 }
 @media only screen and (max-width: 1200px) {
-    .api-banner {
+    /* .api-banner {
         max-width: 600px;
     }
+    .key-takeaways{
+        max-width: 600px;
+    }
+    .get-copy{
+        max-width: 400px;
+    } */
 }
 @media only screen and (max-width: 1024px) {
     .api-banner {
         width: 100%;
         max-width: 100%;
     }
-    
+    .key-takeaways,.get-copy{
+        max-width: 100%;
+    }
     .take-flex{
         flex-wrap: wrap;
         flex-flow: column-reverse;
     }
     .key-takeaways,.get-copy{
-        width: 100%;margin: 0;position: relative;
+       margin: 0;position: relative;
     }
     .get-copy{
         top:0
