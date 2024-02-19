@@ -314,8 +314,8 @@ line-height: normal;
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
-    max-height: 300px;
-    height: 300px;
+    max-height: 200px;
+    height: 200px;
     border-radius: 5px;
 }
 
