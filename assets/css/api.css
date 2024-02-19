@@ -26,6 +26,11 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     overflow: hidden;
     height: 100%;
 }
+#wrapper .api-thanku-wrapper{
+    background: url(../images/api/thank-you-banner.png) bottom center no-repeat #ffffff;
+    background-size: cover;
+    height: 100vh;
+}
 .api-body .container {
         padding: 0;
        
@@ -92,6 +97,9 @@ font-family:MaisonNeue-Bold;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px;
+}
+.blue {
+    color: #00ABC8;
 }
 .api-banner p{
 color: #FFF;
@@ -207,10 +215,213 @@ padding-left: 16px;
     margin: 0 auto;
     width: 300px;
 }
-/* .recaptcha-checkbox-border{
-    width: 20px !important;
-    height: 20px !important;
-} */
+/* thank you */
+.api-thank-conent{
+    max-width: 838px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.api-header-thank{
+    top: 50%;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.api-h5{
+    color: #555B6D;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+}
+.api-h6{
+    color: #555B6D;
+font-family: "Maison Neue";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.party{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 0;
+    width: 70%;
+}
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+#bodyMen .t-alert-covid.bg-alert{
+    display: none;
+}
+.section-products .header h3 {
+    color: #2a2d36!important;
+    text-align: center;
+    font-family: "Maison Neue";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-height: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("../images/api/practice.png") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("../images/api/practice.png") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("../images/api/practice.png") no-repeat center;
+    background-size: cover;
+}
+
+
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    color: #2a2d36!important;
+    font-family: "Maison Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 0 24px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    color: #2a2d36!important;
+    font-family: "Maison Neue";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.api-thankyou .footermenu_strip_inner .social_icon{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.social_icon li{
+    list-style:none;
+}
+.api-thankyou .footermenu_strip_inner {
+    padding: 0;
+}
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
         padding: 0;
@@ -259,8 +470,25 @@ padding-left: 16px;
     .api-banner,.key-takeaways{
         max-width: 50%;
     }
+    .api-heading{
+        font-size: 42px;
+    }
+    .section-products .single-product .part-2 .product-old-price{
+        font-size: 16px!important;
+        line-height: 1.8;
+        
+    }
     .whitepaper{
         width: 80%;
+    }
+    .section-products .header h3{
+        font-size: 1.9rem; 
+    }
+    .section-products .single-product .part-2 .product-title{
+        font-size: 150%;
+    line-height: 1.1;
+    margin-bottom: 7px;
+    color: #2a2d36!important;
     }
     
 }
@@ -291,12 +519,32 @@ padding-left: 16px;
     .key-takeaways{
         margin: 40px 0;
     }
+    .api-thank-conent h2{
+        font-size: 25px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
 .whitepaper-name {
     top: 20%;
     font-size: 14px;
+}
+#wrapper .api-thanku-wrapper{
+    height: 90vh;
+}
+.api-header-thank {
+    top: 185px;
+}
+.api-thank-conent h1,.api-thank-conent h2{
+    position: relative;z-index: 2;
+}
+
+.party{
+    top: -144px;
+    width: 400px;
+}
+.api-thank-conent {
+    max-width: 90%;
 }
 .whitepaper{
     width: 100%;
@@ -308,7 +556,7 @@ padding-left: 16px;
 .api-logo svg {
     width: 100px;}
     .api-heading{
-        font-size: 2rem;
+        font-size: 30px;
     }
     .api-banner p{
         font-size: 16px;
@@ -328,4 +576,11 @@ padding-left: 16px;
             padding: 30px 15px;
             margin-bottom: 0;
         }
+}
+
+@media only screen and (max-width: 480px) {
+    .party {
+        top: -91px;
+        width: 300px;
+    }
 }
