@@ -125,8 +125,12 @@ font-family:MaisonNeue-Bold;
     line-height: 1.2;
     margin: 0 0 20px;
 }
+.footermenu_strip_inner .social_icon a:focus{
+    text-decoration: none;
+}
 .blue {
     color: #00ABC8;
+    margin-bottom: 10px;
 }
 .api-banner p{
 color: #FFF;
@@ -450,6 +454,15 @@ overflow: hidden;
 .api-thankyou .footermenu_strip_inner {
     padding: 0;
 }
+.api-thank-conent svg{
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 85px;
+    height: 175px;
+}
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
         padding: 0;
@@ -493,13 +506,14 @@ overflow: hidden;
     /* max-width: 100%; */
     margin-left: 25px;
 }
+
 }
 @media only screen and (max-width: 1400px) {
     .api-banner,.key-takeaways{
         max-width: 50%;
     }
     .api-heading{
-        font-size: 42px;
+        font-size: 3rem;
     }
     .section-products .single-product .part-2 .product-old-price{
         font-size: 16px!important;
