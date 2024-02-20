@@ -19,6 +19,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 #wrapper.api-body{
     margin: 0;
 }
+#wrapper.api-thankyou{
+    background: url(../images/api/thank-you-banner.png) 0px 0px no-repeat #ffffff;
+    background-size: 100%;
+}
 #wrapper .api-wrapper{
     margin: 0;
     background: url(../images/api/banner-bg.png) right 0 no-repeat #213847;
@@ -27,10 +31,9 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     height: 100%;
     background-size: contain;
 }
+
 #wrapper .api-thanku-wrapper{
-    background: url(../images/api/thank-you-banner.png) 0px 0px no-repeat #ffffff;
-    background: url(../images/api/thank-you-banner.png) 0px 0px no-repeat #ffffff;
-    background-size: 100%;
+    background: none;
     /* height: 100vh; */
     margin-top: 60px;
     
