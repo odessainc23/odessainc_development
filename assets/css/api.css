@@ -20,8 +20,8 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     margin: 0;
 }
 #wrapper.api-thankyou{
-    background: url(../images/api/thank-you-banner.png) 0px -54px no-repeat #ffffff;
-    background-size: contain;
+    /* background: url(../images/api/thank-you-banner.png) 0px -54px no-repeat #ffffff;
+    background-size: contain; */
 }
 #wrapper .api-wrapper{
     margin: 0;
@@ -529,8 +529,8 @@ overflow: hidden;
         font-size: 3rem;
     }
     #wrapper.api-thankyou{
-        background: url(../images/api/thank-you.png) 0px -54px no-repeat #ffffff;
-        background-size: contain;
+        /* background: url(../images/api/thank-you.png) 0px -54px no-repeat #ffffff;
+        background-size: contain; */
     }
     .section-products .single-product .part-2 .product-old-price{
         font-size: 16px!important;
