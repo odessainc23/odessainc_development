@@ -20,8 +20,8 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     margin: 0;
 }
 #wrapper.api-thankyou{
-    background: url(../images/api/thank-you-banner.png) 0px 0px no-repeat #ffffff;
-    background-size: 100%;
+    background: url(../images/api/thank-you-banner.png) 0px -54px no-repeat #ffffff;
+    background-size: contain;
 }
 #wrapper .api-wrapper{
     margin: 0;
@@ -574,6 +574,9 @@ overflow: hidden;
 .whitepaper-name {
     top: 20%;
     font-size: 14px;
+}
+#wrapper.api-thankyou{
+    background: none;
 }
 /* #wrapper .api-thanku-wrapper{
     height: 90vh;
