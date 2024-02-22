@@ -44,7 +44,7 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     }
 
 .api-body #primaryForm{
-    margin-top: 40px;
+    margin-top: 15px;
 }
 .api-header .api-logo{
  
@@ -169,8 +169,8 @@ line-height: 26px;
     margin-bottom: 24px;
 }
 .plane{
-    width: 238px;
-    margin: 0 auto 27px auto;
+    width: 130px;
+    margin: 0 auto 12px auto;
     display: block;
 }
 .get-copy .h3-head{
@@ -185,6 +185,13 @@ label[for="honeypot"], #honeypot {
     list-style-position: inside;
     margin: 0;
     padding: 0;
+}
+#wrapper .letstalkform .form-control{
+    padding: 10px;
+
+}
+#wrapper .letstalkform.get-copy .form-group {
+    margin-bottom: 15px;
 }
 .key-takeaways ul li{
     color: #555B6D;
@@ -220,10 +227,11 @@ padding-left: 16px;
     width: calc(100% - 85px);
     max-width: 703px;
     margin-left: 85px;
-    position: absolute;
-    bottom:0px;
-    padding: 30px 40px 40px 40px;
-    right: 0;
+    position: fixed;
+    bottom: 0;
+    padding: 25px 25px 0 25px;
+    right: 40px;
+    top: 33px;
 }
 .take-flex{
     display: flex;
@@ -497,7 +505,8 @@ overflow: hidden;
         max-width: 750px;
     }
     .get-copy{
-        max-width: 500px;
+        max-width: 450px;
+        height: 530px;
     }
     .key-takeaways{
         margin-right: 25px;
@@ -518,6 +527,10 @@ overflow: hidden;
     }
     .api-heading{
         font-size: 3rem;
+    }
+    #wrapper.api-thankyou{
+        background: url(../images/api/thank-you.png) 0px -54px no-repeat #ffffff;
+        background-size: contain;
     }
     .section-products .single-product .part-2 .product-old-price{
         font-size: 16px!important;
@@ -560,7 +573,7 @@ overflow: hidden;
        margin: 0;position: relative;
     }
     .get-copy{
-        top:0
+        top:0;left: 0;
     }
     .key-takeaways{
         margin: 40px 0;
