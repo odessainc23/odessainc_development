@@ -581,6 +581,9 @@ overflow: hidden;
     .api-thank-conent h2{
         font-size: 25px;
     }
+    #wrapper .api-wrapper{
+        background-image: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -588,6 +591,7 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
+
 #wrapper.api-thankyou{
     background: none;
 }
