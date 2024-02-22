@@ -524,9 +524,9 @@ overflow: hidden;
         line-height: 1.8;
         
     }
-    .whitepaper{
+    /* .whitepaper{
         width: 80%;
-    }
+    } */
     .section-products .header h3{
         font-size: 1.9rem; 
     }
