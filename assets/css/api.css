@@ -470,6 +470,7 @@ overflow: hidden;
 .api-thankyou .footermenu_strip_inner .social_icon a{
     width: 30px;height: 30px;border: 2px solid #00acc8;background: none;
 }
+
 .api-thankyou .footermenu_strip_inner .social_icon a .fa{color: #00acc8;}
 .social_icon li{
     list-style:none;
