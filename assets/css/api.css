@@ -282,7 +282,7 @@ padding-left: 16px;
 }
 .api-h6{
     color: #555B6D;
-font-family: "Maison Neue";
+    font-family:MaisonNeue-Book;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -310,10 +310,9 @@ line-height: normal;
 .section-products .header h3 {
     color: #2a2d36!important;
     text-align: center;
-    font-family: "Maison Neue";
+    font-family:MaisonNeue-Bold;
     font-size: 40px;
     font-style: normal;
-    font-weight: 700;
     line-height: 26px;
 }
 
@@ -432,10 +431,9 @@ line-height: normal;
 
 .section-products .single-product .part-2 .product-title {
     color: #2a2d36!important;
-    font-family: "Maison Neue";
+    font-family:MaisonNeue-Bold;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
     line-height: 26px;
     margin: 0 0 24px 0;
     display: -webkit-box;
@@ -452,10 +450,9 @@ line-height: normal;
 
 .section-products .single-product .part-2 .product-old-price {
     color: #2a2d36!important;
-    font-family: "Maison Neue";
+    font-family:MaisonNeue-Book;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
     line-height: 26px;
     display: -webkit-box;
 -webkit-line-clamp: 3;
@@ -486,6 +483,8 @@ overflow: hidden;
     margin: 0 auto;
     width: 75px;
     height: 175px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 }
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
