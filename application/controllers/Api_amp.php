@@ -13,7 +13,7 @@ class Api_amp extends CI_Controller {
 		$data['tc_description']		= "Dive into our comprehensive whitepaper, 'Banking on APIs: The Asset Finance Edition', and learn how to harness the power of APIs to build a future-ready asset finance system";
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/future-ready-asset-fianance-api.html', $data);
+		$this->load->view('pages/amp_pages/future-ready-asset-finance-api.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }

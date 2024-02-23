@@ -17,7 +17,7 @@ class Thankyou_api extends CI_Controller {
 		);
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/future-ready-asset-fianance-api-thankyou.html', $data);
+		$this->load->view('pages/amp_pages/future-ready-asset-finance-api-thankyou.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 
