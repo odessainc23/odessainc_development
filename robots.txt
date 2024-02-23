@@ -1,7 +1,8 @@
 User-agent: *
 Disallow: /leadership/
 
-
+User-agent: *
+Disallow: /whitepaper/future-ready-asset-finance-api-thankyou
 
 Allow: /
 
