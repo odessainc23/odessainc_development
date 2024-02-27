@@ -47,7 +47,8 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     margin-top: 15px;
 }
 .api-header .api-logo{
- 
+    position: relative;
+    z-index: 2;
     margin: 38px 0 0;
     padding: 0;
     font-size: 0;
