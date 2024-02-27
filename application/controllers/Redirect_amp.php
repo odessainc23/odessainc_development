@@ -14,7 +14,7 @@ class Redirect_amp extends CI_Controller {
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
 		// $this->load->view('pages/amp_pages/redirection.html', $data);
-		$this->load->view('pages/amp_pages/automotive-finance-software.amp.html', $data);
+		$this->load->view('pages/amp_pages/automotive-finance-software.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
