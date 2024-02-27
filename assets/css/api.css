@@ -603,7 +603,9 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-
+.know-more{
+    font-size: 20px;margin-bottom: 20px;
+}
 #wrapper.api-thankyou{
     background: none;
 }
