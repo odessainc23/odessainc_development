@@ -89,7 +89,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'single-
 					?>
 					<div class="col-xs-12 col-md-4 col-sm-4 item">
 						<a href="<?php echo $singleperm; ?>" class="annoucement_div">
-							<div class="annoucement_thumb"><img src="<?php echo $singleimage[1]; ?>" /></div>
+							<div class="annoucement_thumb"><img src="<?php echo $singleimage[0]; ?>" /></div>
 							<div class="annoucement_content">
 								<h3><?php echo get_the_title($single->ID); ?></h3>
 							</div>
