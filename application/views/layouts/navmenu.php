@@ -290,8 +290,8 @@ New White Paper Release: Banking on APIs - The Asset Finance Edition <a href="<?
                                     </div>
 									<div class="col-xs-6">
                                         <ul>
-										<li><a href="<?php echo base_url(); ?>automotive-finance-software" hreflang="en"><b style="color: #000!important;
-                                                font-size: 13px!important;">Automotive Finance</b></a></li>
+										<li><a href="<?php echo base_url(); ?>auto-finance-software" hreflang="en"><b style="color: #000!important;
+                                                font-size: 13px!important;">Auto Finance</b></a></li>
 
                                         </ul>
                                     </div>
