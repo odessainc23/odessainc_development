@@ -73,7 +73,7 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
-$route['automotive-finance-software'] = 'Automotive_amp';
+$route['automotive-finance-software'] = 'Redirect_amp';
 $route['whitepaper/future-ready-asset-finance-api'] = 'Api_amp';
 $route['whitepaper/future-ready-asset-finance-api-thankyou'] = 'Thankyou_api';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
