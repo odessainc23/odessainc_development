@@ -22,22 +22,26 @@ class Platform extends CI_Controller {
 	}
 
 	public function core() {
-
-		$data	= array();
-		$data['meta_title']			= 'Equipment Leasing Software from Odessa';
-		$data['meta_description']	= 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.';
-		$data['meta_keyword']		= 'equipment lease accounting,equipment leasing software,equipment finance solution,equipment finance software,equipment finance Platform,equipment leasing Platform ';
-		$data['og_title']			= 'Equipment Leasing Software from Odessa';
-		$data['og_description']		= 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.';
-		$data['tc_title']			= 'Equipment Leasing Software from Odessa';
-		$data['tc_description']		= 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.';
-	
+		$data = array(
+			'page_title' => 'Equipment Leasing Software from Odessa',
+			'description' => 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.',
+			'keywords' => 'equipment lease accounting,equipment leasing software,equipment finance solution,equipment finance software,equipment finance Platform,equipment leasing Platform ',
+			'canonical_tag' => '',
+			'og' => '<meta name="revisit-after" content="7 days" />	
+	<meta name="allow-search" content="yes" />
+<title>Build on our flexible asset management platform</title><meta name="description" content="Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform"/>
+	<meta property="og:locale" content="en_US"/>'
+		);
+		// $this->load->view( 'templates/header', $data );
+		// $this->load->view( 'pages/core' );
+		// $this->load->view( 'templates/footer' );
 		$this->load->view( 'templates/amp_pages/header.amp.html', $data );
 		$this->load->view('pages/amp_pages/core.amp.html');
 		$this->load->view( 'templates/amp_pages/footer.amp.html' );
 	}
 	public function build() {
 		$data	= array();
+
 		$data['meta_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
 		$data['meta_description']	= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
 		$data['meta_keyword']		= 'equipment lease accounting, equipment leasing software,equipment finance software';
@@ -45,6 +49,10 @@ class Platform extends CI_Controller {
 		$data['og_description']		= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
 		$data['tc_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
 		$data['tc_description']		= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
+
+		// $this->load->view('layouts/header', $data);
+		// $this->load->view('pages/build_page', $data);
+		// $this->load->view('layouts/footer', $data);
 		$this->load->view( 'layouts/amp_pages/header.amp.html', $data );
 		$this->load->view( 'pages/amp_pages/dev.amp.html', $data );
 		$this->load->view( 'layouts/amp_pages/footer.amp.html', $data );
