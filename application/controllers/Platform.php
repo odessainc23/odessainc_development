@@ -27,10 +27,7 @@ class Platform extends CI_Controller {
 			'description' => 'Odessa provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.',
 			'keywords' => 'equipment lease accounting,equipment leasing software,equipment finance solution,equipment finance software,equipment finance Platform,equipment leasing Platform ',
 			'canonical_tag' => '',
-			'og' => '<meta name="revisit-after" content="7 days" />	
-	<meta name="allow-search" content="yes" />
-<title>Build on our flexible asset management platform</title><meta name="description" content="Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform"/>
-	<meta property="og:locale" content="en_US"/>'
+			
 		);
 		// $this->load->view( 'templates/header', $data );
 		// $this->load->view( 'pages/core' );
