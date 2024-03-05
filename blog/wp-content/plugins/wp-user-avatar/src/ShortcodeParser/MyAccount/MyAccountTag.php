@@ -27,6 +27,7 @@ class MyAccountTag extends FormProcessor
 
             add_action('wp', [$this, 'handle_subscription_actions']);
             add_action('wp', [$this, 'process_myaccount_change_password']);
+            add_action('wp', [$this, 'process_myaccount_delete_account']);
             add_action('wp', [$this, 'process_edit_profile_form'], 999999999);
         }
     }
@@ -103,11 +104,18 @@ class MyAccountTag extends FormProcessor
                     'icon'     => 'vpn_key',
                     'callback' => [$classInstance, 'change_password_callback']
                 ],
+                'delete-account'    => [
+                    'title'    => esc_html__('Delete Account', 'wp-user-avatar'),
+                    'endpoint' => apply_filters('ppress_my_account_dashboard_delete_account_endpoint', 'delete-account'),
+                    'priority' => 60,
+                    'icon'     => 'delete',
+                    'callback' => [$classInstance, 'delete_account_callback']
+                ],
                 'ppmyac-user-logout' => [
                     'title'    => esc_html__('Logout', 'wp-user-avatar'),
                     'priority' => 99,
                     'icon'     => 'exit_to_app'
-                ],
+                ]
             ];
 
             if ( ! empty(self::email_notification_endpoint_content())) {
@@ -177,6 +185,11 @@ class MyAccountTag extends FormProcessor
     public function change_password_callback()
     {
         require apply_filters('ppress_my_account_change_password_template', wp_normalize_path(dirname(__FILE__) . '/change-password.tmpl.php'));
+    }
+
+    public function delete_account_callback()
+    {
+        require apply_filters('ppress_my_account_delete_account_template', wp_normalize_path(dirname(__FILE__) . '/delete-account.tmpl.php'));
     }
 
     public function display_name_select_dropdown()

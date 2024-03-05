@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly
 ?>
 <p>
 <?php
-	esc_html_e( 'Would you like to boost your website sharing abilities?', 'og ' );
+	esc_html_e( 'Would you like to boost your website sharing abilities?', 'og' );
 ?>
 </p>
 <p>

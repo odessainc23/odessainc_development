@@ -90,7 +90,7 @@ class Gerbera extends AbstractMemberDirectoryTheme
 
                 <?php if ($profile_picture_enabled) : ?>
                     <div class="pppress_md_gerbera_members_avatar">
-                        <a href="<?= $profile_url ?>" title="<?= $display_name ?>">
+                        <a href="<?= esc_url($profile_url) ?>" title="<?= esc_attr($display_name) ?>">
                             [pp-user-avatar user="<?= $user->ID ?>" size=256]
                         </a>
                     </div>

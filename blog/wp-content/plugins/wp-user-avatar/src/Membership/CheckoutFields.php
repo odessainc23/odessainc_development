@@ -289,8 +289,8 @@ class CheckoutFields
                     $v['width']          = sanitize_text_field($v['width'] ?? ($standard_fields[$k]['width'] ?? ppress_var($custom_fields[$k], 'width', 'full')));
                     $v['required']       = sanitize_text_field($v['required'] ?? ($standard_fields[$k]['required'] ?? ppress_var($custom_fields[$k], 'required', 'false')));
                     $v['logged_in_hide'] = sanitize_text_field($v['logged_in_hide'] ?? ($standard_fields[$k]['logged_in_hide'] ?? ppress_var($custom_fields[$k], 'logged_in_hide', 'true')));
-                    $v['field_type']     = $standard_fields[$k]['field_type'] ?? ppress_var($custom_fields[$k], 'field_type', 'text');
-                    $v['deletable']      = $standard_fields[$k]['deletable'] ?? ppress_var($custom_fields[$k], 'deletable', 'true');
+                    $v['field_type']     = $standard_fields[$k]['field_type'] ?? ppress_var($custom_fields[$k] ?? [], 'field_type', 'text');
+                    $v['deletable']      = $standard_fields[$k]['deletable'] ?? ppress_var($custom_fields[$k] ?? [], 'deletable', 'true');
                 });
 
                 $fields = $collection;

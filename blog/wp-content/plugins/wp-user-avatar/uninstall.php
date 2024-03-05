@@ -21,12 +21,14 @@ function ppress_mo_uninstall_function()
         delete_option(PPRESS_FORMS_DB_OPTION_NAME);
         delete_option(PPRESS_PAYMENT_METHODS_OPTION_NAME);
         delete_option(PPRESS_TAXES_OPTION_NAME);
+        delete_option('ppress_checkout_fields');
+        delete_option('ppress_login_redirect_rules');
+        delete_option('ppress_extension_manager');
         delete_option('ppress_plugin_activated');
         delete_option('ppress_new_v4_install');
         delete_option('ppress_license_key');
         delete_option('ppress_license_status');
         delete_option('ppress_db_ver');
-        delete_option('ppress_extension_manager');
         delete_option('ppress_install_date');
         delete_option('ppress_dismiss_leave_review_forever');
         delete_site_option('pand-' . md5('ppress-create-plugin-pages-notice'));

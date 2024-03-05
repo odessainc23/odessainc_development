@@ -73,7 +73,7 @@ class EditProfileTag extends FormProcessor
         $structure = "<input type='hidden' name='editprofile_form_id' value='$id'>";
 
         if ( ! empty($redirect)) {
-            $structure .= "<input type='hidden' name='editprofile_redirect' value='$redirect'>";
+            $structure .= "<input type='hidden' name='editprofile_redirect' value='" . esc_attr($redirect) . "'>";
         }
 
         if (FR::is_drag_drop($id, FR::EDIT_PROFILE_TYPE)) {

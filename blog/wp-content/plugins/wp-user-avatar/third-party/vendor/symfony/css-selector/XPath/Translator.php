@@ -42,7 +42,7 @@ class Translator implements TranslatorInterface
     private $functionTranslators = [];
     private $pseudoClassTranslators = [];
     private $attributeMatchingTranslators = [];
-    public function __construct(ParserInterface $parser = null)
+    public function __construct(?ParserInterface $parser = null)
     {
         $this->mainParser = $parser ?? new Parser();
         $this->registerExtension(new Extension\NodeExtension())->registerExtension(new Extension\CombinationExtension())->registerExtension(new Extension\FunctionExtension())->registerExtension(new Extension\PseudoClassExtension())->registerExtension(new Extension\AttributeMatchingExtension());

@@ -571,16 +571,20 @@ function ppress_other_field_atts($atts)
     $other_atts = array();
 
     foreach ($atts as $key => $value) {
-        if ( ! in_array($key, $official_atts)) {
+        if ( ! in_array($key, $official_atts) && strpos($key, 'on') !== 0) {
             $other_atts[esc_attr($key)] = esc_attr($value);
         }
     }
 
     $other_atts_html = '';
 
-    foreach ($other_atts as $key => $value) {
-        if ( ! empty($value)) {
-            $other_atts_html .= "$key=\"$value\" ";
+    if (is_array($other_atts) && ! empty($other_atts)) {
+
+        foreach ($other_atts as $key => $value) {
+
+            if ( ! empty($value)) {
+                $other_atts_html = sprintf('%s="%s" ', esc_attr($key), esc_attr($value));
+            }
         }
     }
 

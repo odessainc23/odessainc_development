@@ -74,25 +74,6 @@ class RegistrationFormBuilder
         return ucfirst(str_replace('_', ' ', $key));
     }
 
-    public static function valid_field_atts($atts)
-    {
-        if ( ! is_array($atts)) {
-            return $atts;
-        }
-
-        $invalid_atts = array('enforce', 'key', 'field_key', 'limit', 'options', 'checkbox_text');
-
-        $valid_atts = array();
-
-        foreach ($atts as $key => $value) {
-            if ( ! in_array($key, $invalid_atts)) {
-                $valid_atts[esc_attr($key)] = esc_attr($value);
-            }
-        }
-
-        return $valid_atts;
-    }
-
     public static function field_attributes($field_name, $atts, $required = 'false')
     {
         $_POST = self::GET_POST();
@@ -136,7 +117,7 @@ class RegistrationFormBuilder
             $atts['enforce'] = 'true';
         }
 
-        $attributes = self::field_attributes('ignore_value', self::valid_field_atts(ppress_normalize_attributes($atts)));
+        $attributes = self::field_attributes('ignore_value', FieldsShortcodeCallback::sanitize_field_attributes(ppress_normalize_attributes($atts)));
 
         wp_localize_script('password-strength-meter', 'pwsL10n', array(
             'empty'    => esc_html__('Strength indicator', 'wp-user-avatar'),
@@ -238,7 +219,7 @@ class RegistrationFormBuilder
 
     public static function select_role($atts)
     {
-        $attributes = self::field_attributes('ignore_value', self::valid_field_atts(ppress_normalize_attributes($atts)));
+        $attributes = self::field_attributes('ignore_value', FieldsShortcodeCallback::sanitize_field_attributes(ppress_normalize_attributes($atts)));
 
         if ( ! empty($atts['options'])) {
             $selectible_roles = array_map('trim', explode(',', $atts['options']));
@@ -251,6 +232,7 @@ class RegistrationFormBuilder
 
                 return in_array($key, $selectible_roles);
             });
+
         } else {
             $wp_roles = ppress_get_editable_roles();
         }

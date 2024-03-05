@@ -1,14 +1,14 @@
 === Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress ===
 Contributors: properfraction, collizo4sky
 Donate link: https://profilepress.com/pricing/
-Tags: membership, ecommerce, user registration, user profile, memberships, members, stripe, paypal, razorpay, mollie, paystack, login form, login, registration, password reset, member, users, profile, front-end profile, avatar
+Tags: membership, ecommerce, user registration, user profile, stripe
 Requires at least: 5.3
 Requires PHP: 7.4
 Tested up to: 6.4
-Stable tag: 4.14.2
+Stable tag: 4.15.2
 License: GPLv2 or later
 
-Setup paid membership, accept payments, sell subscriptions & digital products, paywall & content restriction, create registration form, login form, user profile & member directory.
+Setup paid membership, accept payment, sell subscription & digital product, paywall, create login & registration form, user profile & member directory
 
 == Description ==
 
@@ -26,66 +26,65 @@ Our Drag-and-Drop form builder makes building forms easy. It is the perfect solu
 
 https://www.youtube.com/watch?v=OXkWVm53Xzo&rel=0
 
-### Excellent Membership Features of ProfilePress
+### Excellent Membership Features
 
-ProfilePress ecommerce plugin is suited for selling non-physical goods, including online courses, digital downloads, downloadable files, paid memberships, subscriptions, selling services, selling event tickets, accepting donations, selling digital downloads, etc.
+ProfilePress ecommerce plugin is suited for selling non-physical goods, including online courses, digital downloads, downloadable files, paid memberships, subscriptions, services, accepting donations, selling digital downloads, etc.
 
 = Protect Registration Forms Against Banned Email Addresses =
 
-ProfilePress can prevent spam registrations and abuse by [blocking user registration from a banned email address or email domain](https://profilepress.com/block-wordpress-registration-specific-email-domains/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) or restricting user registration to specific email addresses.
+Prevent spam registrations and abuse by [blocking user registration from a banned email address or email domain](https://profilepress.com/block-wordpress-registration-specific-email-domains/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) or restricting user registration to specific email addresses.
 
 = Multiple Payment Processors =
 
-Easily connect to Stripe (supports Stripe-hosted checkout page and on-site payment form), PayPal, RazorPay, Paystack, Mollie, Bank Transfer to collect payments with ProfilePress paid membership plugin. We are working on adding additional gateways in the future.
+Easily connect to Stripe (supports Stripe-hosted checkout page and on-site payment form), PayPal, RazorPay, Paystack, Mollie, Bank Transfer to collect payments.
 
-Because we use the Stripe payment element, our integration gives your membership site visitors the option to pay using Apple Pay, Google Pay, Microsoft Pay as well as Stripe Link, ACH Direct Debit, Alipay, Bancontact, Bank transfers, BLIK, EPS, FPX, Giropay, iDEAL, Sofort, P24, Affirm, Afterpay, Clearpay, Klarna, CashApp Pay, GrabPay, WeChat Pay, SEPA debit, Bacs Direct Debit and more.
-
-= Powerful Payment Options =
-
-One-time payments, subscriptions, subscriptions with free trials, payment plans (installments), donations. We cover ways you may want to get paid.
-
-= Coupon Discounts =
-
-Incentivize your buyers with a coupon discount to increase sales. With our ecommerce and membership plugin, you can easily create unlimited coupons and automatically add coupons with a URL parameter.
+Because we use the Stripe payment element, our integration gives your users the option to pay via Apple Pay, Google Pay, Microsoft Pay, Stripe Link, ACH Direct Debit, Alipay, Bancontact, Bank transfers, BLIK, EPS, FPX, Giropay, iDEAL, Sofort, P24, Affirm, Afterpay, Clearpay, Klarna, CashApp Pay, GrabPay, WeChat Pay, SEPA debit, Bacs Direct Debit and more.
 
 = Custom Frontend Forms =
 
-Create excellent checkout page, member login forms, user registration forms, password reset forms, and edit profile forms with our drag-and-drop builder. Your members will never have to see your WordPress admin panel. Everything is handled in the frontend.
+Create checkout page, member login form, user registration form, password reset and edit profile forms with our drag-and-drop builder.
 
 * **Conversion Optimized Checkout Form** – Let users make payments to you and subscribe to your membership plans.
 * **User Registration Forms** – Let users signup via a custom registration form.
 * **Login & Password Reset Forms** – Allow users to log in and reset their passwords via custom frontent forms.
-* **User Dashboard** – My Account page and edit profile forms for users to manage their profile details and account settings.
+* **User Dashboard** – My Account page and edit profile forms for users to manage their profile details, account settings, change password and delete their account account.
 * **Automatic Registration & Login Redirect** – Auto login users after they register and redirect them after they sign in, log out and reset their passwords.
-* Add login and logout links, register and profile links to your website navigation menu that will change based on whether the user is logged in.
 
 = User Profiles & Member Directories =
 
 Add beautiful user profiles to your site that display your users' profile pictures and information. And create searchable and filterable member directories allowing users to find each other on your membership website.
 
-We also provide shortcodes to display users' avatars and allow users to upload their profile pictures from the front-end of your membership site.
-
-= Advanced and Drag-and-Drop Form Builder =
+= Drag-and-Drop Form Builder =
 
 We took out the pain of creating user profiles, member directories, and forms with our intuitive drag-and-drop builder.
 
-We also provide an advanced form builder that gives you the flexibility to build any form. With knowledge of HTML, you code the form with our expressive shortcodes, make it pretty with CSS, and we handle the rest.
-
 = Customisable Pre-Built Templates =
 
-Never start from scratch again. ProfilePress comes with several beautiful, customizable pre-built templates for user profiles, member directory, and forms to help you save even more time.
+ProfilePress comes with beautiful, customizable pre-built templates for user profiles, member directory, and forms to help you save even more time.
 
 = Access Control, Paywall & Content Restriction =
 
 Hide any article, post and content behind a paywall. With a few clicks, you can set up a [WordPress paywall](https://profilepress.com/add-wordpress-paywall-content/) to protect members-only content.
 
-ProfilePress gives you fine-grained control over what content your users can see based on your [protection rules](https://profilepress.com/article/adding-content-protection-rules/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) and [shortcodes](https://profilepress.com/article/wordpress-content-restriction-shortcodes/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion). You can restrict content including pages, child pages, posts, custom post types, categories, tags and custom taxonomies based on their membership plans, user roles, usernames, and logged-in status.
+It gives you control over what content your users can see based on your [protection rules](https://profilepress.com/article/adding-content-protection-rules/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) and [shortcodes](https://profilepress.com/article/wordpress-content-restriction-shortcodes/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion). You can restrict content including pages, child pages, posts, custom post types, categories, tags and custom taxonomies based on their membership plans, user roles, usernames, and logged-in status.
 
 You can also control the visibility of [navigation menus](https://profilepress.com/article/wordpress-navigation-menu-restriction/) and widgets, modules & contents in the [block editor](https://profilepress.com/article/restrict-visibility-contents-wordpress-block-editor/), [Elementor](https://profilepress.com/article/restrict-elementor-sections-widgets/) & [Beaver Builder](https://profilepress.com/article/restrict-content-beaver-builder-visibility/) page builders.
 
 = Detailed Ecommerce & Membership Reports =
 
-We provide a complete reports section where you can Keep track of your earnings, refunds, sales, download logs and more. You can view and export reports for any period or drill down to specific membership plans.
+We provide a complete reports section where you can Keep track of your earnings, refunds, sales, download logs and more. You can view and export reports for any period.
+
+= Login Redirect =
+
+Do you want to redirect WordPress users after login to a specific page or URL? This feature lets you setup login redirect based on user role and subscribed membership plan.
+
+= Email Customizer =
+
+Customize the email templates for each email that can be sent to users and administrators.
+
+= Tutor LMS Integration =
+
+Our [Tutor LMS integration](https://profilepress.com/addons/tutor-lms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) lets you sell access to Tutor LMS courses, enroll users after registration to specific courses and create custom student and instructor WordPress registration forms.
 
 = Other Payment & Membership Plugin Features =
 
@@ -96,14 +95,6 @@ We provide a complete reports section where you can Keep track of your earnings,
 * Disable the admin bar and restrict access to the WordPress dashboard based on user roles.
 * Redirect the WordPress default login page (wp-login.php) to your custom login, registration page, and password reset pages.
 * Disable concurrent logins to prevent users from being logged into the same account from multiple computers at the same time.
-
-= Email Customizer =
-
-Customize the email templates for each email that can be sent to users and administrators. You also have the flexibility of changing the sender name and email address and activating and deactivating the email type that can be sent.
-
-= Tutor LMS Integration =
-
-Our [Tutor LMS integration](https://profilepress.com/addons/tutor-lms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) lets you sell access to Tutor LMS courses, enroll users after registration to specific courses and create custom student and instructor WordPress registration forms.
 
 ### Powerful Premium Features
 
@@ -134,17 +125,6 @@ Extend the capabilities of ProfilePress with our powerful addons and remove the 
 * [Join BuddyPress Groups](https://profilepress.com/addons/join-buddypress-groups/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Let users select the BuddyBoss/BuddyPress groups to join during registration.
 * [Akismet](https://profilepress.com/addons/akismet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Block spam and bot user registrations with Akismet and keep your membership site safe and secured.
 * [Polylang](https://profilepress.com/addons/polylang/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Build multilingual login, registration, password reset, and edit profile forms.
-
-ProfilePress is the Ecommerce platform of your dreams. It delivers a complete Ecommerce experience with everything needed for selling online.
-
-If you're looking to build a business out of your membership site by creating paid memberships, there's no better way than to use ProfilePress membership plugin which provide the ultimate member experience and will help you start and profit from your WordPress membership sites.
-
-= What's Next =
-
-If you like this plugin, then consider checking out our other products:
-
-* <a href="https://mailoptin.io/">MailOptin</a> - Create popups and optin forms for capturing email newsletter subscribers. Integrates with Mailchimp, ConvertKit, Infusionsoft, ActiveCampaign, Campaign Monitor, Constant Contact & more.
-* <a href="https://fusewp.com/">FuseWP</a> - Connect wordPress to marketing platforms and sync users to your email list.
 
 == Installation ==
 
@@ -189,34 +169,14 @@ Any file type can be sold using ProfilePress ecommerce and membership plugin, in
 
 == Changelog ==
 
-= Paid Membership, Ecommerce & User Registration 4.14.2 =
-* Improved avada theme compatibility.
-* Fixed bug with expired subscription not expiring.
-* Fixed a couple of PHP errors.
+= Paid Membership, Ecommerce & User Registration 4.15.2 =
+* Fixed XSS on edit profile form.
 
-= Paid Membership, Ecommerce & User Registration 4.14.1 =
-* Added setting for enabling autologin after checkout.
-* Added ppress_myaccount_edit_profile_custom_form filter.
-* Fixed bug with checkout of free trials via Stripe.
-* Fixed bug with multisite login redirect to wrong network site.
-* Fixed bug where order was 0 when amount was not entered during manual order creation.
-* Bumped stripe api version to 2023-10-16.
-* Improved caching of gravatar API calls.
-* Added more US states: American Samoa, Puerto Rico, Palau.
-* Switch to esc_url_raw in NavigationMenuLinks::Frontend.
+= Paid Membership, Ecommerce & User Registration 4.15.1 =
+* Fixed XSS on registration form with user role select field.
 
-= Paid Membership, Ecommerce & User Registration 4.14.0 =
-* Added feature to disable concurrent login by users.
-* Added password strength meter to "change password" myaccount section.
-* Added Allowlist option for restricting registration to specific email addresses.
-* Added Bank Transfer payment method.
-* Added filter to stripe customer metadata array.
-* added ppress_author_post_after_title filter.
-* Fixed fatal error: Uncaught TypeError: array_filter(): Argument 1 ($array) must be of type array.
-
-= Paid Membership, Ecommerce & User Registration 4.13.4 =
-* Pro: [Invite Codes](https://profilepress.com/addons/invite-codes/?ref=changelog) addon.
-* Enhancement: Only add confirm prompt on cancel action button on view subscription page.
-* Fixed bug where material icons weren't showing in form builder.
+= Paid Membership, Ecommerce & User Registration 4.15.0 =
+* Added [Login Redirect](https://profilepress.com/wordpress-user-redirection-after-login-role/#WordPress_Login_Redirect_Based_on_Membership_Level) feature.
+* Security Fix: XSS on forms.
 
 See the [changelog file](https://plugins.svn.wordpress.org/wp-user-avatar/trunk/changelog.txt) for full change log information.

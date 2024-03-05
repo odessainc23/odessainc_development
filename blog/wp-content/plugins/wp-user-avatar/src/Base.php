@@ -174,6 +174,8 @@ class Base extends DBTables
         NavigationMenuLinks\Init::init();
         Membership\Init::init();
 
+        LoginRedirect::get_instance();
+
         Integrations\TutorLMS\Init::get_instance();
 
         LicenseUpgrader::get_instance();

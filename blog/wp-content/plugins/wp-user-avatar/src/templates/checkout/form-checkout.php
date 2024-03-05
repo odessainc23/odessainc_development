@@ -60,7 +60,7 @@ $cart_vars = OrderService::init()->checkout_order_calculation([
                     <div class="ppress-main-checkout-form__block__fieldset">
                         <fieldset id="ppress_checkout_account_info">
                             <legend>
-                                <?php esc_html_e('Account Information', 'wp-user-avatar') ?>
+                                <span><?php esc_html_e('Account Information', 'wp-user-avatar') ?></span>
                                 <?php if ( ! is_user_logged_in()): ?>
                                     <a class="ppress-checkout-show-login-form" href="#">
                                         <?php esc_html_e('Already have an account?', 'wp-user-avatar') ?>

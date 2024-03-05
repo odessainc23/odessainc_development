@@ -183,6 +183,10 @@
     width: 100%;
 }
 
+.ppress-checkout__form .ppress-main-checkout-form__block legend span {
+    font-size: var(--ppress-heading-fs);
+}
+
 .ppress-checkout__form .ppress-main-checkout-form__block a.ppress-checkout-show-login-form {
     cursor: pointer;
     float: right;
