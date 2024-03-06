@@ -155,6 +155,7 @@ return array(
     'ProfilePressVendor\\Sabberworm\\CSS\\OutputFormat' => $vendorDir . '/sabberworm/php-css-parser/src/OutputFormat.php',
     'ProfilePressVendor\\Sabberworm\\CSS\\OutputFormatter' => $vendorDir . '/sabberworm/php-css-parser/src/OutputFormatter.php',
     'ProfilePressVendor\\Sabberworm\\CSS\\Parser' => $vendorDir . '/sabberworm/php-css-parser/src/Parser.php',
+    'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\Anchor' => $vendorDir . '/sabberworm/php-css-parser/src/Parsing/Anchor.php',
     'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\OutputException' => $vendorDir . '/sabberworm/php-css-parser/src/Parsing/OutputException.php',
     'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\ParserState' => $vendorDir . '/sabberworm/php-css-parser/src/Parsing/ParserState.php',
     'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\SourceException' => $vendorDir . '/sabberworm/php-css-parser/src/Parsing/SourceException.php',

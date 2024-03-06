@@ -164,7 +164,7 @@ class DefaultTemplate extends AbstractMemberDirectoryTheme
                     <?php if ($cover_image_enabled) : ?>
                         <div class="ppmd-member-cover">
                             <div class="ppress-md-member-cover-e">
-                                <a href="<?= $profile_url ?>">
+                                <a href="<?= esc_url($profile_url) ?>">
                                     <?php if ( ! empty($cover_image)) : ?>
                                         <?= sprintf('<img src="%s" alt="%s">', $cover_image, esc_attr($display_name)); ?>
                                     <?php endif; ?>
@@ -175,7 +175,7 @@ class DefaultTemplate extends AbstractMemberDirectoryTheme
 
                     <?php if ($profile_picture_enabled) : ?>
                         <div class="ppmd-member-photo">
-                            <a href="<?= $profile_url ?>">
+                            <a href="<?= esc_url($profile_url) ?>">
                                 [pp-user-avatar user="<?= $user->ID ?>" size=40 original=true]
                             </a>
                         </div>

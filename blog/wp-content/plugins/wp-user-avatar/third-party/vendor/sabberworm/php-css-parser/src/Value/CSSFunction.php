@@ -3,7 +3,12 @@
 namespace ProfilePressVendor\Sabberworm\CSS\Value;
 
 use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
-/** @internal */
+use ProfilePressVendor\Sabberworm\CSS\Parsing\ParserState;
+/**
+ * A `CSSFunction` represents a special kind of value that also contains a function name and where the values are the
+ * function’s arguments. It also handles equals-sign-separated argument lists like `filter: alpha(opacity=90);`.
+ * @internal
+ */
 class CSSFunction extends ValueList
 {
     /**
@@ -25,6 +30,25 @@ class CSSFunction extends ValueList
         $this->sName = $sName;
         $this->iLineNo = $iLineNo;
         parent::__construct($aArguments, $sSeparator, $iLineNo);
+    }
+    /**
+     * @param ParserState $oParserState
+     * @param bool $bIgnoreCase
+     *
+     * @return CSSFunction
+     *
+     * @throws SourceException
+     * @throws UnexpectedEOFException
+     * @throws UnexpectedTokenException
+     */
+    public static function parse(ParserState $oParserState, $bIgnoreCase = \false)
+    {
+        $mResult = $oParserState->parseIdentifier($bIgnoreCase);
+        $oParserState->consume('(');
+        $aArguments = Value::parseValue($oParserState, ['=', ' ', ',']);
+        $mResult = new CSSFunction($mResult, $aArguments, ',', $oParserState->currentLine());
+        $oParserState->consume(')');
+        return $mResult;
     }
     /**
      * @return string

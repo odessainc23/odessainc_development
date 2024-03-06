@@ -2081,12 +2081,14 @@ textarea.wp-editor-area {
     display: block;
 }
 
-.ppress-admin .ppress_checkout_fields .ppress-submit-wrap {
+.ppress-admin .ppress_checkout_fields .ppress-submit-wrap,
+.ppress-admin .ppress_login_redirect_rules .ppress-submit-wrap {
     text-align: right;
     padding: 0 0 1em;
 }
 
-.ppress-admin .ppress_checkout_fields .ppress-submit-wrap .button {
+.ppress-admin .ppress_checkout_fields .ppress-submit-wrap .button,
+.ppress-admin .ppress_login_redirect_rules .ppress-submit-wrap .button {
     min-height: 35px;
     padding: 0 15px;
 }
@@ -2733,7 +2735,7 @@ textarea.wp-editor-area {
     display: grid;
     margin-top: 1.25rem;
     gap: 1.25rem;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .ppress-export-cards-wrap * {
@@ -2749,7 +2751,7 @@ textarea.wp-editor-area {
     position: relative;
     background-color: #fff;
     border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
     padding: 1.5rem;
 }
 
@@ -2796,4 +2798,68 @@ textarea.wp-editor-area {
 .ppress-export-cards-wrap select,
 .ppress-export-cards-wrap .select2-container {
     margin-bottom: 16px;
+}
+
+/* login redirect admin page */
+.ppress-login-redirect--repeater-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    border-top: 1px solid #dedede;
+}
+
+.ppress-login-redirect--repeater-item:first-child {
+    border-top-width: 0;
+}
+
+.ppress-login-redirect--field-label {
+    width: 20%;
+}
+
+.ppress-login-redirect--field-control {
+    position: relative;
+    width: 80%;
+}
+
+.ppress-url-prefix-suffix-field {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ppress-login-redirect--field-control input {
+    width: 380px;
+}
+
+.ppress-login-redirect--remove-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border-width: 0;
+    transition: background-color .2s;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.ppress-login-redirect--close-icon {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.ppress-login-redirect--repeater-item + .ppress-no-login-redirect-rule-message {
+    display: none;
 }

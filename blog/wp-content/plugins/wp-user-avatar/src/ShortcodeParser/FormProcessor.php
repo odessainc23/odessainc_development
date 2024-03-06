@@ -59,9 +59,7 @@ class FormProcessor
      */
     public function process_myaccount_change_password()
     {
-        if ( ! isset($_POST['ppmyac_form_action']) || isset($_POST['ppmyac_form_action']) && $_POST['ppmyac_form_action'] !== 'changePassword') {
-            return;
-        }
+        if (ppressPOST_var('ppmyac_form_action') != 'changePassword') return;
 
         if ( ! ppress_verify_nonce()) return;
 
@@ -93,6 +91,42 @@ class FormProcessor
         }
 
         $this->myac_change_password_error = __('The password you entered is incorrect.', 'wp-user-avatar');
+    }
+
+    /**
+     * @return string|void
+     */
+    public function process_myaccount_delete_account()
+    {
+        if (ppressPOST_var('ppmyac_form_action') != 'deleteAccount') return;
+
+        if ( ! ppress_verify_nonce()) return;
+
+        $user = wp_get_current_user();
+
+        if ($user instanceof \WP_User && wp_check_password($_POST['password'], $user->user_pass, $user->ID) && is_user_logged_in()) {
+
+            if (is_multisite()) {
+
+                if ( ! function_exists('wpmu_delete_user')) {
+                    require_once ABSPATH . 'wp-admin/includes/ms.php';
+                }
+
+                wpmu_delete_user($user->ID);
+
+            } else {
+
+                if ( ! function_exists('wp_delete_user')) {
+                    require_once ABSPATH . 'wp-admin/includes/user.php';
+                }
+
+                wp_delete_user($user->ID);
+
+            }
+
+            wp_safe_redirect(home_url());
+            exit;
+        }
     }
 
     public function process_edit_profile_form()
@@ -177,7 +211,7 @@ class FormProcessor
 
                 self::set_global_state($state_key, $response, $form_id);
 
-                if(strpos($response, 'profilepress-reg-status success') !== false) {
+                if (strpos($response, 'profilepress-reg-status success') !== false) {
                     // clears form after registration
                     $_POST = [];
                 }

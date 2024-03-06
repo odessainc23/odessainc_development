@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab
+class ComposerStaticInit38b8a8a9c6655418dde57cfe93eb2b69
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -251,6 +251,7 @@ class ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab
         'ProfilePressVendor\\Sabberworm\\CSS\\OutputFormat' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/OutputFormat.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\OutputFormatter' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/OutputFormatter.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\Parser' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parser.php',
+        'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\Anchor' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/Anchor.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\OutputException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/OutputException.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\ParserState' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/ParserState.php',
         'ProfilePressVendor\\Sabberworm\\CSS\\Parsing\\SourceException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/SourceException.php',
@@ -675,9 +676,9 @@ class ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit895ec3ce2f0389a18f30295a4ba076ab::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit38b8a8a9c6655418dde57cfe93eb2b69::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit38b8a8a9c6655418dde57cfe93eb2b69::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit38b8a8a9c6655418dde57cfe93eb2b69::$classMap;
 
         }, null, ClassLoader::class);
     }

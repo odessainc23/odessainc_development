@@ -338,9 +338,7 @@ class CheckoutController extends BaseController
                     remove_action('ppress_subscription_cancelled', [SubscriptionCancelledNotification::init(), 'dispatch_email'], 10);
 
                     $sub->cancel(true, true);
-                    if (apply_filters('ppress_checkout_change_plan_expiration', false)) {
-                        $sub->expire();
-                    }
+                    $sub->expire();
 
                     SubscriptionFactory::fromId($subscription_id)->update_meta('_upgraded_from_sub_id', $sub->get_id());
                     $sub->update_meta('_upgraded_to_sub_id', $subscription_id);

@@ -99,9 +99,9 @@ class ProfileFieldListing
 
             $field_title = isset($field_setting['label']) ? $field_setting['label'] : '';
 
-            if ($field_type == 'profile-cpf') {
+            $field_key = '';
 
-                $field_key = '';
+            if ($field_type == 'profile-cpf') {
 
                 if ( ! empty($field_setting['field_key']) && ! empty($field_setting['label'])) {
                     $field_key = $field_setting['field_key'];
@@ -138,7 +138,11 @@ class ProfileFieldListing
                 }
             }
 
-            $parsed_shortcode = do_shortcode('[' . $field_type . ']', true);
+            $parsed_shortcode = apply_filters(
+                'ppress_drag_drop_profile_listing_item',
+                do_shortcode('[' . $field_type . ']', true),
+                $field_type, $field_key, $this
+            );
 
             if ( ! empty($parsed_shortcode)) {
 
@@ -149,6 +153,7 @@ class ProfileFieldListing
                 }
 
                 if ( ! empty($field_key) && strpos($field_type, 'profile-cpf') !== false) {
+
                     if (in_array($field_key, array_keys(ppress_social_network_fields()))) {
                         $parsed_shortcode = sprintf('<a href="%s">%s</a>', $parsed_shortcode, ppress_var(ppress_social_network_fields(), $field_key));
                     }

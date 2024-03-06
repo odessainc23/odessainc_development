@@ -1,5 +1,27 @@
 ﻿== Changelog ==
 
+= 4.15.2 =
+* Fixed XSS on edit profile form.
+
+= 4.15.1 =
+* Fixed XSS on registration form with user role select field.
+
+= 4.15.0 =
+* Added [Login Redirect](https://profilepress.com/wordpress-user-redirection-after-login-role/#WordPress_Login_Redirect_Based_on_Membership_Level) feature.
+* Security Fix: XSS on forms.
+
+= 4.14.4 =
+* Added account deletion tab to My Account page.
+* Move CC element below billing address when Taxes is enabled.
+* Security Fix: XSS on registration form.
+* Fixed a couple of PHP warnings.
+
+= 4.14.3 =
+* Added ppress_drag_drop_profile_listing_item filter.
+* Ensure subscription is expired on subscription upgrade.
+* Fixed bug with "Already have an account" checkout link not working.
+* Fixed a couple of PHP warnings
+
 = 4.14.2 =
 * Improved Avada theme compatibility.
 * Fixed bug with expired subscription not expiring.

@@ -26,7 +26,7 @@ use ProfilePressVendor\Symfony\Component\CssSelector\Parser\Tokenizer\Tokenizer;
 class Parser implements ParserInterface
 {
     private $tokenizer;
-    public function __construct(Tokenizer $tokenizer = null)
+    public function __construct(?Tokenizer $tokenizer = null)
     {
         $this->tokenizer = $tokenizer ?? new Tokenizer();
     }

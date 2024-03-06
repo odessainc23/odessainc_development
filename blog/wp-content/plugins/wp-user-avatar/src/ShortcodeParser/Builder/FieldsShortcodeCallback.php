@@ -2,7 +2,6 @@
 
 namespace ProfilePress\Core\ShortcodeParser\Builder;
 
-use ProfilePress\Core\Classes\ExtensionManager as EM;
 use ProfilePress\Core\Classes\FormRepository;
 use ProfilePress\Core\Classes\PROFILEPRESS_sql;
 use ProfilePress\Core\Classes\UserAvatar;
@@ -91,7 +90,7 @@ class FieldsShortcodeCallback
         return ucfirst(str_replace('_', ' ', $key));
     }
 
-    public function valid_field_atts($atts)
+    public static function sanitize_field_attributes($atts)
     {
         if ( ! is_array($atts)) return $atts;
 
@@ -100,12 +99,17 @@ class FieldsShortcodeCallback
         $valid_atts = array();
 
         foreach ($atts as $key => $value) {
-            if ( ! in_array($key, $invalid_atts)) {
+            if ( ! in_array($key, $invalid_atts) && strpos($key, 'on') !== 0 && is_string($key) && is_string($value)) {
                 $valid_atts[esc_attr($key)] = esc_attr($value);
             }
         }
 
         return $valid_atts;
+    }
+
+    public function valid_field_atts($atts)
+    {
+        return self::sanitize_field_attributes($atts);
     }
 
     public function field_attributes($field_name, $atts, $required = 'false')
@@ -117,21 +121,26 @@ class FieldsShortcodeCallback
         }
 
         if ( ! in_array($field_name, ['ignore_value'])) {
-            $atts['value'] = isset($_POST[$field_name]) ? esc_attr($_POST[$field_name]) : @esc_attr($atts['value']);
+            $atts['value'] = isset($_POST[$field_name]) ? esc_attr($_POST[$field_name]) :
+                (isset($atts['value']) && is_string($atts['value']) ? esc_attr($atts['value']) : '');
         }
 
         $output = [];
 
         foreach ($atts as $key => $value) {
+            // ensure no leading/trailing space
+            $key = sanitize_text_field(trim($key));
+
+            // skip all onXYZ attributes eg onclick, onmouseover etc
+            if(strpos($key, 'on') === 0) continue;
+
             // add class to submit button.
             if ($field_name == $this->tag_name . '_submit' && $key == 'class') {
                 $value = 'pp-submit-form ' . $value;
             }
 
             if ($key != 'required' && ! empty($value)) {
-                $value    = esc_attr($value);
-                $key      = esc_attr($key);
-                $output[] = "$key=\"$value\"";
+                $output[] = sprintf('%s="%s"', esc_attr($key), esc_attr($value));
             }
         }
 
@@ -525,7 +534,7 @@ class FieldsShortcodeCallback
 
         $attributes = $this->field_attributes($key, $this->valid_field_atts(ppress_normalize_attributes($atts)));
 
-        $html = "<input name='" . $key . "' type='$type' $attributes>";
+        $html = sprintf('<input name="%s" type="%s" %s>', esc_attr($key), esc_attr($type), $attributes);
 
         if ($this->form_type == FormRepository::REGISTRATION_TYPE && $this->is_field_required($atts)) {
             $value = apply_filters('ppress_custom_required_field', $this->human_readable_field_key($key), $key);
@@ -709,7 +718,7 @@ class FieldsShortcodeCallback
 
         $key = ppress_sanitize_key($atts['key']);
 
-        $value = isset($_POST[$key]) ? esc_textarea($_POST[$key]) : @esc_textarea($atts['value']);
+        $value = isset($_POST[$key]) ? esc_textarea($_POST[$key]) : esc_textarea($atts['value'] ?? '');
 
         if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
             $db_data = isset($atts['value']) ? esc_textarea($atts['value']) : ($this->current_user->$key ?? '');
@@ -771,13 +780,21 @@ class FieldsShortcodeCallback
                 $option_value = is_string($option_value) ? trim($option_value) : '';
                 $value        = is_string($value) ? trim($value) : '';
 
-                $selected = is_array(@$_POST[$key]) && in_array($option_value, @$_POST[$key]) ? 'selected="selected"' : @selected(@$_POST[$key], $option_value, false);
+                if (isset($_POST[$key]) && is_array($_POST[$key]) && in_array($option_value, $_POST[$key])) {
+                    $selected = 'selected="selected"';
+                } else {
+                    $selected = selected(
+                        $_POST[$key] ?? '',
+                        $option_value,
+                        false
+                    );
+                }
 
                 $db_data = isset($atts['value']) ? $atts['value'] : (isset($this->current_user->$key) ? $this->current_user->$key : '');
 
                 if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
                     $selected = '';
-                    if (is_array(@$_POST[$key]) && in_array($option_value, @$_POST[$key])) $selected = 'selected="selected"';
+                    if (isset($_POST[$key]) && is_array($_POST[$key]) && in_array($option_value, $_POST[$key])) $selected = 'selected="selected"';
                     // !isset($_POST[ $key ] is called to not run the succeeding code if the form is submitted.
                     // to enable the select dropdown retain the submitted options when an error occur/ prevent the form from saving.
                     elseif ( ! isset($_POST[$key]) && isset($db_data) && is_array($db_data) && in_array($option_value, $db_data)) {
@@ -802,7 +819,7 @@ class FieldsShortcodeCallback
         }
 
         if ($is_multiple) {
-            $limit = absint(@$atts['limit']);
+            $limit = absint($atts['limit'] ?? 0);
             $html  .= $this->select2_js_script($key, $limit);
         }
 
@@ -894,11 +911,11 @@ class FieldsShortcodeCallback
 
             $value = esc_attr(trim($value));
 
-            $checked = is_array(@$_POST[$key]) && in_array($value, @$_POST[$key]) ? 'checked="checked"' : @checked(@$_POST[$key], $value, false);
+            $checked = isset($_POST[$key]) && is_array($_POST[$key]) && in_array($value, $_POST[$key]) ? 'checked="checked"' : checked($_POST[$key] ?? '', $value, false);
 
             if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
                 $checked = '';
-                if (isset($_POST[$key]) && is_array(@$_POST[$key]) && in_array($value, @$_POST[$key])) {
+                if (isset($_POST[$key]) && is_array($_POST[$key]) && in_array($value, $_POST[$key])) {
                     $checked = 'checked="checked"';
                 } elseif ( ! isset($_POST[$key]) && isset($this->current_user->$key) && is_array($this->current_user->$key) && in_array($value, $this->current_user->$key)) {
                     $checked = 'checked="checked"';
@@ -929,6 +946,8 @@ class FieldsShortcodeCallback
 
         $_POST = $this->GET_POST();
 
+        unset($atts['placeholder']);
+
         $attributes = $this->field_attributes('ignore_value', $this->valid_field_atts(ppress_normalize_attributes($atts)));
 
         if (empty($atts['key'])) return esc_html__('Field key is missing', 'wp-user-avatar');
@@ -936,7 +955,7 @@ class FieldsShortcodeCallback
         $key = ppress_sanitize_key($atts['key']);
 
         $html        = '<div class="pp-checkbox-wrap pp-single-checkbox">';
-        $field_label = isset($atts['checkbox_text']) ? html_entity_decode($atts['checkbox_text']) : '';
+        $field_label = isset($atts['checkbox_text']) ? html_entity_decode(wp_kses_post($atts['checkbox_text'])) : '';
 
         // checked for checkbox
         $checked = checked(ppressPOST_var($key, ppress_var($atts, 'checked_state')), 'true', false);
@@ -945,7 +964,7 @@ class FieldsShortcodeCallback
             $db_data = isset($atts['value']) ? sanitize_text_field($atts['value']) : ($this->current_user->$key ?? '');
             $db_data = ('1' == $db_data) ? 'true' : $db_data;
 
-            $checked = @checked(
+            $checked = checked(
                 ! empty($_POST[$key]) ? $_POST[$key] : $db_data,
                 'true',
                 false
@@ -1059,7 +1078,7 @@ class FieldsShortcodeCallback
 
                 $user_upload_data = get_user_meta($this->current_user->ID, 'pp_uploaded_files', true);
                 // if the user uploads isn't empty and there exist a file with the custom field key.
-                if ( ! empty($user_upload_data) && ($filename = @$user_upload_data[$key])) {
+                if ( ! empty($user_upload_data) && isset($user_upload_data[$key]) && ($filename = $user_upload_data[$key])) {
                     $link       = PPRESS_FILE_UPLOAD_URL . $filename;
                     $html       .= "<div class='ppress-user-upload'><a href='$link'>$filename</a></div>";
                     $attributes = str_replace('required="required"', '', $attributes);

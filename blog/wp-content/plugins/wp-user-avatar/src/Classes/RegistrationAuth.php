@@ -218,7 +218,8 @@ class RegistrationAuth
         if ( ! empty($_POST['required-fields']) && is_array($_POST['required-fields'])) {
             foreach ($_POST['required-fields'] as $key => $value) {
 
-                if (empty($_POST[$key]) && empty($_FILES[$key])) {
+                // ppressPOST_var($key) === 'false' for checkbox field because if unchecked, default value is "false".
+                if ((empty($_POST[$key]) || ppressPOST_var($key) === 'false') && empty($_FILES[$key])) {
                     $reg_errors->add('required_field_empty', sprintf(__('%s field is required', 'wp-user-avatar'), sanitize_text_field($value)));
                     // stop looping if a required field is found empty.
                     break;

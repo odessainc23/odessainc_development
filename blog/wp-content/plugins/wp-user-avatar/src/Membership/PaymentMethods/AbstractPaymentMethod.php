@@ -5,6 +5,7 @@ namespace ProfilePress\Core\Membership\PaymentMethods;
 use ProfilePress\Core\Membership\Models\Order\OrderEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionStatus;
+use ProfilePress\Core\Membership\Services\TaxService;
 
 /**
  * @property int $id
@@ -298,9 +299,18 @@ abstract class AbstractPaymentMethod implements PaymentMethodInterface
             echo wpautop(wptexturize($description));
         }
 
-        $this->credit_card_form();
+        if (TaxService::init()->is_tax_enabled()) {
 
-        $this->billing_address_form();
+            $this->billing_address_form();
+
+            $this->credit_card_form();
+
+        } else {
+
+            $this->credit_card_form();
+
+            $this->billing_address_form();
+        }
     }
 
     /**
