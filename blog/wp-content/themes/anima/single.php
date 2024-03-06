@@ -103,7 +103,7 @@ $category_detail	= get_the_category( $postID );
 				<h3>More like this</h3>
 				<div id="morelikethis_slider" class="row">
 					<?php
-						$singleArgs = array( 'numberposts' => 3, 'offset' => 1, 'post_type' => 'Post' );
+						$singleArgs = array( 'numberposts' => 3, 'offset' => 0, 'post_type' => 'Post' );
 						$singlePost = get_posts( $singleArgs );
 
 						foreach ( $singlePost as $single ): setup_postdata( $single );
@@ -112,7 +112,7 @@ $category_detail	= get_the_category( $postID );
 					?>
 					<div class="col-xs-12 col-md-4 col-sm-4 item">
 						<a href="<?php echo $singleperm; ?>" class="annoucement_div">
-							<div class="annoucement_thumb"><img src="<?php echo $singleimage[1]; ?>" /></div>
+							<div class="annoucement_thumb"><img src="<?php echo $singleimage[0]; ?>" /></div>
 							<div class="annoucement_content">
 								<h3><?php echo get_the_title($single->ID); ?></h3>
 							</div>
