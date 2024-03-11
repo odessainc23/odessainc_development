@@ -205,49 +205,53 @@
           $('.font-size').html(ui.value);
           $('.slider').css('margin-top', $counter.height() + 50 + 'px');
         } });
-    	$('#validateButton').click(function() {
-    		
-            var email = $('#emailInput').val();
-            if (isValidEmail(email) && !isPersonalDomain(email)) {
-    			$('.posted-email input').removeClass("error");
+
+		$('.odc__btn').click(function() {
+        var email = $('#emailInput').val();
+        if (isValidEmail(email) && !isPersonalDomain(email)) {
+			$('.posted-email input').removeClass("error");
               $(".posted-email").hide();
     		  $('#result').addClass('shw');
-            } else {
-    		  $('.posted-email input').addClass("error");
+          submitToPardot(email);
+        } else {
+          $('#result').text('Not a valid business email'); 
+		   $('.posted-email input').addClass("error");
     		  $(".posted-email").show();
+        }
+      });
+
+
     	
-    
-            }
-          });
     });
     
-        function isValidEmail(email) {
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailRegex.test(email);
+    function isValidEmail(email) {
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function isPersonalDomain(email) {
+      var personalDomains = ['gmail.com', 'yahoo.com', 'hotmail.com']; // Add more personal domains
+      var domain = email.split('@')[1];
+      return personalDomains.includes(domain);
+    }
+
+    function submitToPardot(email) {
+      var pardotFormData = {
+        'email': email,
+        // 'oid': 'YOUR_PARDOT_FORM_ID',
+        // 'api_key': 'YOUR_PARDOT_API_KEY'
+      };
+      // Replace 'YOUR_PARDOT_ENDPOINT_URL' with your Pardot endpoint URL
+      $.ajax({
+        url: 'https://go.odessainc.com/l/310001/2024-01-04/3s3lk68',
+        method: 'POST',
+        data: pardotFormData,
+        success: function(response) {
+          console.log('Form submitted to Pardot');
+        },
+        error: function(xhr, status, error) {
+          console.error('Error submitting form to Pardot');
         }
-    
-        function isPersonalDomain(email) {
-          var personalDomains = ['gmail.com', 'yahoo.com', 'hotmail.com']; // Add more personal domains
-          var domain = email.split('@')[1];
-          return personalDomains.includes(domain);
-        }
-    	function submitToPardot(email) {
-          // Replace 'YOUR_PARDOT_ENDPOINT_URL' with your Pardot endpoint URL
-          var pardotFormData = {
-            'email': email,
-            'oid': 'YOUR_PARDOT_FORM_ID',
-            'api_key': 'YOUR_PARDOT_API_KEY'
-          };
-          $.ajax({
-            url: 'YOUR_PARDOT_ENDPOINT_URL',
-            method: 'POST',
-            data: pardotFormData,
-            success: function(response) {
-              console.log('Form submitted to Pardot');
-            },
-            error: function(xhr, status, error) {
-              console.error('Error submitting form to Pardot');
-            }
-          });
-        }
+      });
+    }
 </script>
