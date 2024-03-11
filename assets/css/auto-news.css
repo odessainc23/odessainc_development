@@ -207,8 +207,14 @@ line-height: normal;
     color: white;
     padding-bottom: 0.75em;
   }
-  .section-products #product-1 .part-1::before {
-    background: url(https://www.odessainc.com/blog/wp-content/uploads/blog_header-B-1-430x350-1.png) no-repeat center;
+  .section-products.auto-prod #product-2 .part-1::before {
+    background: url(../images/auto-news/news-1.png) no-repeat center;
+  }
+  .section-products.auto-prod #product-1 .part-1::before {
+    background: url(https://www.odessainc.com/blog/wp-content/uploads/2023/Bob.jpg) no-repeat center;
+  }
+  .section-products.auto-prod #product-3 .part-1::before {
+    background: url(https://www.odessainc.com/blog/wp-content/uploads/2023/john.jpeg) no-repeat center;
   }
   @media only screen and (max-width: 2000px) {
     .home-welcome{
