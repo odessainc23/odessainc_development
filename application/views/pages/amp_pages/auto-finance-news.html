@@ -1,0 +1,253 @@
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/auto-news.css?v=2001" />
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/api.css?v=2001" />
+
+
+<div id="wrapper" class="auto-news-wrap">
+    <div class="auto-news-banner">
+        <div class="top-auto-content">
+            <h1>The countdown is on!</h1>
+            <h5>Something big is coming to auto finance</h5>
+        </div>
+        <div class="timer-block">
+            <span class="animate-flicker"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
+            <span class="animate-flicker2"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
+            <!-- <img src="<?php echo base_url(); ?>assets/images/auto-news/car.png"> -->
+            <div class="home-welcome">
+                <div class="wrapper">
+                    <div class="counter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="keep-me-posted">
+    <div class="keep-me-content">
+        <h3>Want to be the first to know?</h3>
+        <p>Submit your email below and we’ll send the announcement as it happens.</p>
+        <div class="posted-email">
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <button id="validateButton" class="odc__btn odc__btn--primary odc__btn--md">Keep Me Posted</button>
+
+        </div>
+        <p id="result"> Thank You! Will get back to you.</p>
+    </div>
+
+</div>
+<section class="section-products auto-prod">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 col-lg-12">
+                <div class="header">
+                    <h3>In the meantime, enjoy these news articles about <br>the consumer auto finance industry.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-1" class="single-product">
+                    <div class="part-1">
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">The five key trends transforming auto finance in 2024</h3>
+                        <p class="product-old-price">Robert Johnson, Executive Vice President of Auto Finance at asset finance software provider Odessa, delves into the five pivotal trends that are moulding the sector.</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.motorfinanceonline.com/comment/the-five-key-trends-transforming-auto-finance-in-2024/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-2" class="single-product">
+                    <div class="part-1">
+
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">Three Ways Equipment Finance Will Evolve In 2024</h3>
+                        <p class="product-old-price">The drive toward creating better software is sometimes wrapped up in buzzwords like ‘agile’ and ‘digital transform...</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.odessainc.com/blog/decoding-devops-enabling-innovation/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-3" class="single-product">
+                    <div class="part-1">
+
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">Five Factors Shaping Equipment Finance’s Shift to Subscriptions </h3>
+                        <p class="product-old-price">John Pearce is SVP of product management at Odessa, where he leads the Everything as a Service (XaaS) practice. He has over 10 years of experience building and operating subscription and pay per use technology, most recently as
+                            VP of product at Chargebee.</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.monitordaily.com/opinion-posts/five-factors-shaping-equipment-finances-shift-to-subscriptions/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+
+        </div>
+    </div>
+</section>
+</div>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script id="rendered-js">
+    ////
+    //   COUNTDOWN PLUGIN
+    ////
+    
+    ;(function ($) {
+    
+      $.fn.countdown = function (options) {
+        //global variables 
+        var vars = $.extend({}, $.fn.countdown.defaults, options),
+        $counter = $(this),
+        t = { day: 0, hour: 0, minute: 0, sec: 0 },
+        targetDate = new Date(vars.targetDate).getTime(),
+        secondsLeft;
+    
+    
+        //private methods
+        methods = {
+          setup: function () {
+    
+            $.each(t, function (time, value) {
+              var currentSection = '<ul id="' + time + '"><li>0</li><li>0</li></ul>';
+              $counter.append(currentSection);
+            });
+    
+            if (vars.labels) {
+              var labelHtml = '<div class="labels"><ul><li>Days</li><li>Hours</li><li>Minutes</li><li>Seconds</li></ul></div>';
+              $counter.append(labelHtml);
+            }
+    
+          },
+    
+          updateTime: function () {
+            var currentTime = new Date().getTime(),
+            secondsLeft = (targetDate - currentTime) / 1000,
+            secsIn = { day: 86400, hour: 3600, minute: 60 };
+    
+            if (secondsLeft < 0) {secondsLeft = 0;}
+    
+            $.each(t, function (timePeriod, value) {
+              t[timePeriod] = parseInt(secondsLeft / secsIn[timePeriod], 10);
+              if (timePeriod !== 'sec') {
+                secondsLeft = secondsLeft % secsIn[timePeriod];
+              } else
+              {
+                t[timePeriod] = secondsLeft;
+              }
+            });
+          },
+    
+          updateCounter: function () {
+            $.each(t, function (period, value) {
+              var section = $counter.find('#' + period).children(),
+              digit = splitDigits(value);
+    
+              section.eq(0).html(digit[0]);
+              section.eq(1).html(digit[1]);
+            });
+    
+            function splitDigits(number) {
+              var digits = [];
+              digits[0] = Math.floor(number / 10);
+              digits[1] = Math.floor(number % 10);
+              return digits;
+            }
+          },
+    
+          tick: function () {
+            if (secondsLeft < 1) {} else
+            {
+              methods.updateTime();
+              methods.updateCounter();
+              setTimeout(function () {methods.tick();}, 1000);
+            }
+          },
+    
+          init: function () {
+            methods.setup();
+            methods.updateTime();
+            methods.updateCounter();
+            methods.tick();
+          } };
+    
+    
+        //initiate countdown
+        methods.init();
+      };
+    
+      $.fn.countdown.defaults = {
+        targetDate: 'dec 31 2014', //string: the date you want the counter to count down to.
+        labels: true //boolean: toggles the {day / hour / minute / second} labels 
+      };
+    })(jQuery);
+    // end of countdown plugin
+    
+    // dom ready events (would usually be in separate js file)
+    $(document).ready(function () {
+      // plugin call
+    
+      // arbitrarially make a new date
+      var newDate = new Date();
+      newDate.setDate(45);
+      $('.counter').countdown({ targetDate: newDate });
+    
+      // jquery for the slider 
+      $('.slider').slider({
+        min: 0,
+        max: 100,
+        value: 50,
+        slide: function (event, ui) {
+          var $counter = $('.counter');
+          $counter.css('font-size', ui.value);
+          $('.font-size').html(ui.value);
+          $('.slider').css('margin-top', $counter.height() + 50 + 'px');
+        } });
+    	$('#validateButton').click(function() {
+    		
+            var email = $('#emailInput').val();
+            if (isValidEmail(email) && !isPersonalDomain(email)) {
+    			$('.posted-email input').removeClass("error");
+              $(".posted-email").hide();
+    		  $('#result').addClass('shw');
+            } else {
+    		  $('.posted-email input').addClass("error");
+    		  $(".posted-email").show();
+    	
+    
+            }
+          });
+    });
+    
+        function isValidEmail(email) {
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+    
+        function isPersonalDomain(email) {
+          var personalDomains = ['gmail.com', 'yahoo.com', 'hotmail.com']; // Add more personal domains
+          var domain = email.split('@')[1];
+          return personalDomains.includes(domain);
+        }
+    	function submitToPardot(email) {
+          // Replace 'YOUR_PARDOT_ENDPOINT_URL' with your Pardot endpoint URL
+          var pardotFormData = {
+            'email': email,
+            'oid': 'YOUR_PARDOT_FORM_ID',
+            'api_key': 'YOUR_PARDOT_API_KEY'
+          };
+          $.ajax({
+            url: 'YOUR_PARDOT_ENDPOINT_URL',
+            method: 'POST',
+            data: pardotFormData,
+            success: function(response) {
+              console.log('Form submitted to Pardot');
+            },
+            error: function(xhr, status, error) {
+              console.error('Error submitting form to Pardot');
+            }
+          });
+        }
+</script>
