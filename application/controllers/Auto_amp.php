@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Autonews_amp extends CI_Controller {
+class Auto_amp extends CI_Controller {
 
 	public function index(){
 		$data['meta_title']			= 'Transform your business with XaaS solutions from Odessa';
