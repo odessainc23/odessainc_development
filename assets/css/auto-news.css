@@ -207,6 +207,9 @@ line-height: normal;
     color: white;
     padding-bottom: 0.75em;
   }
+  .section-products #product-1 .part-1::before {
+    background: url(https://www.odessainc.com/blog/wp-content/uploads/blog_header-B-1-430x350-1.png) no-repeat center;
+  }
   @media only screen and (max-width: 2000px) {
     .home-welcome{
       width: 500px;
