@@ -1,0 +1,232 @@
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/auto-news.css?v=2001" />
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/api.css?v=2001" />
+
+
+<div id="wrapper" class="auto-news-wrap">
+    <div class="auto-news-banner">
+        <div class="top-auto-content">
+            <h1>The countdown is on!</h1>
+            <h5>Something big is coming to auto finance</h5>
+        </div>
+        <div class="timer-block">
+            <span class="animate-flicker"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
+            <span class="animate-flicker2"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
+            <!-- <img src="<?php echo base_url(); ?>assets/images/auto-news/car.png"> -->
+            <div class="home-welcome">
+                <div class="wrapper">
+                    <div class="counter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="keep-me-posted">
+    <div class="keep-me-content">
+        <h3>Want to be the first to know?</h3>
+        <p> Thank you for your interest  in Odessa! Someone will be touch shortly.</p>
+       
+        <!-- <p id="result"> Thank You! Will get back to you.</p> -->
+    </div>
+
+</div>
+<section class="section-products auto-prod">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 col-lg-12">
+                <div class="header">
+                    <h3>In the meantime, enjoy these news articles about <br>the consumer auto finance industry.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-1" class="single-product">
+                    <div class="part-1">
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">The five key trends transforming auto finance in 2024</h3>
+                        <p class="product-old-price">Robert Johnson, Executive Vice President of Auto Finance at asset finance software provider Odessa, delves into the five pivotal trends that are moulding the sector.</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.motorfinanceonline.com/comment/the-five-key-trends-transforming-auto-finance-in-2024/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-2" class="single-product">
+                    <div class="part-1">
+
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">Three Ways Equipment Finance Will Evolve In 2024</h3>
+                        <p class="product-old-price">The drive toward creating better software is sometimes wrapped up in buzzwords like ‘agile’ and ‘digital transform...</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.odessainc.com/blog/decoding-devops-enabling-innovation/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div id="product-3" class="single-product">
+                    <div class="part-1">
+
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">Five Factors Shaping Equipment Finance’s Shift to Subscriptions </h3>
+                        <p class="product-old-price">John Pearce is SVP of product management at Odessa, where he leads the Everything as a Service (XaaS) practice. He has over 10 years of experience building and operating subscription and pay per use technology, most recently as
+                            VP of product at Chargebee.</p>
+                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.monitordaily.com/opinion-posts/five-factors-shaping-equipment-finances-shift-to-subscriptions/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Product -->
+
+        </div>
+    </div>
+</section>
+</div>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script id="rendered-js">
+    ////
+    //   COUNTDOWN PLUGIN
+    ////
+    
+    ;(function ($) {
+    
+      $.fn.countdown = function (options) {
+        //global variables 
+        var vars = $.extend({}, $.fn.countdown.defaults, options),
+        $counter = $(this),
+        t = { day: 0, hour: 0, minute: 0, sec: 0 },
+        targetDate = new Date(vars.targetDate).getTime(),
+        secondsLeft;
+    
+    
+        //private methods
+        methods = {
+          setup: function () {
+    
+            $.each(t, function (time, value) {
+              var currentSection = '<ul id="' + time + '"><li>0</li><li>0</li></ul>';
+              $counter.append(currentSection);
+            });
+    
+            if (vars.labels) {
+              var labelHtml = '<div class="labels"><ul><li>Days</li><li>Hours</li><li>Minutes</li><li>Seconds</li></ul></div>';
+              $counter.append(labelHtml);
+            }
+    
+          },
+    
+          updateTime: function () {
+            var currentTime = new Date().getTime(),
+            secondsLeft = (targetDate - currentTime) / 1000,
+            secsIn = { day: 86400, hour: 3600, minute: 60 };
+    
+            if (secondsLeft < 0) {secondsLeft = 0;}
+    
+            $.each(t, function (timePeriod, value) {
+              t[timePeriod] = parseInt(secondsLeft / secsIn[timePeriod], 10);
+              if (timePeriod !== 'sec') {
+                secondsLeft = secondsLeft % secsIn[timePeriod];
+              } else
+              {
+                t[timePeriod] = secondsLeft;
+              }
+            });
+          },
+    
+          updateCounter: function () {
+            $.each(t, function (period, value) {
+              var section = $counter.find('#' + period).children(),
+              digit = splitDigits(value);
+    
+              section.eq(0).html(digit[0]);
+              section.eq(1).html(digit[1]);
+            });
+    
+            function splitDigits(number) {
+              var digits = [];
+              digits[0] = Math.floor(number / 10);
+              digits[1] = Math.floor(number % 10);
+              return digits;
+            }
+          },
+    
+          tick: function () {
+            if (secondsLeft < 1) {} else
+            {
+              methods.updateTime();
+              methods.updateCounter();
+              setTimeout(function () {methods.tick();}, 1000);
+            }
+          },
+    
+          init: function () {
+            methods.setup();
+            methods.updateTime();
+            methods.updateCounter();
+            methods.tick();
+          } };
+    
+    
+        //initiate countdown
+        methods.init();
+      };
+    
+      $.fn.countdown.defaults = {
+        targetDate: 'dec 31 2014', //string: the date you want the counter to count down to.
+        labels: true //boolean: toggles the {day / hour / minute / second} labels 
+      };
+    })(jQuery);
+    // end of countdown plugin
+    
+    // dom ready events (would usually be in separate js file)
+    $(document).ready(function () {
+      // plugin call
+    
+      // arbitrarially make a new date
+      var newDate = new Date();
+      newDate.setDate(45);
+      $('.counter').countdown({ targetDate: newDate });
+    
+    });
+    
+	// document.body.setAttribute('id', 'bodyId');
+</script>
+<script>
+    $.validator.addMethod("myusername", function(value, element) {
+        return /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+    }, 'Free email addresses are not allowed.');
+
+    $(document).ready(function() {
+        $("#primaryForm").validate({
+            rules: {
+                email: {
+                    required: true,
+                    myusername: true,
+                },
+            },
+            messages: {
+                email: {
+                    required: "",
+                },
+            },
+            submitHandler: function(form) {
+                $("#primaryForm").submit();
+                return true;
+            }
+        });
+
+        $("#letstalk").click(function() {
+            $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2017-02-14/25j');
+            $("#primaryForm").submit();
+            return true;
+			$(".thank-u").addClass("ff");
+        });
+
+        $('#primaryForm input').bind("cut copy paste", function(e) {
+            e.preventDefault();
+        });
+    });
+</script>
