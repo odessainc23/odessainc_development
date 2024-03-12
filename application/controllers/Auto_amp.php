@@ -4,13 +4,13 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 class Auto_amp extends CI_Controller {
 
 	public function index(){
-		$data['meta_title']			= 'Transform your business with XaaS solutions from Odessa';
-		$data['meta_description']	= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
-		$data['meta_keyword']		= 'XaaS, Billing Software, as-a-service, Subscription Management Software, Pay per use, Usage based billing, Everything as a service, Subscription management platform';
-		$data['og_title']			= 'Transform your business with XaaS solutions from Odessa';
-		$data['og_description']		= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
-		$data['tc_title']			= 'Transform your business with XaaS solutions from Odessa';
-		$data['tc_description']		= 'Discover Odessa comprehensive XaaS solutions for financial services, offering flexibility and growth through as-a-service, pay-per-use, and subscription management models. Transform your go-to-market strategy and unlock the potential of the sharing economy with Odessa.';
+		$data['meta_title']			= 'Latest Auto Finance News and Updates | Odessa';
+		$data['meta_description']	= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
+		$data['meta_keyword']		= 'auto finance software, auto lending solution, auto leasing, automotive leasing software';
+		$data['og_title']			= 'Latest Auto Finance News and Updates | Odessa';
+		$data['og_description']		= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
+		$data['tc_title']			= 'Latest Auto Finance News and Updates | Odessa';
+		$data['tc_description']		= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
 		$this->load->view('pages/amp_pages/auto-finance-news.html', $data);
