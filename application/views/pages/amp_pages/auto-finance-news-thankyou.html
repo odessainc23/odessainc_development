@@ -12,7 +12,7 @@
             <span class="animate-flicker"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
             <span class="animate-flicker2"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
             <!-- <img src="<?php echo base_url(); ?>assets/images/auto-news/car.png"> -->
-            <div class="home-welcome">
+            <div class="home-welcome" id="thank">
                 <div class="wrapper">
                     <div class="counter"></div>
                 </div>
@@ -23,7 +23,7 @@
 <div class="keep-me-posted">
     <div class="keep-me-content">
         <h3>Want to be the first to know?</h3>
-        <p id="thank"> Thank you for your interest  in Odessa! Someone will be touch shortly.</p>
+        <p> Thank you for your interest  in Odessa! Someone will be touch shortly.</p>
        
         <!-- <p id="result"> Thank You! Will get back to you.</p> -->
     </div>
@@ -221,8 +221,9 @@
         $("#letstalk").click(function() {
             $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2017-02-14/25j');
             $("#primaryForm").submit();
+            $(".thank-u").addClass("ff");
             return true;
-			$(".thank-u").addClass("ff");
+			
         });
 
         $('#primaryForm input').bind("cut copy paste", function(e) {
