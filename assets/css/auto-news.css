@@ -46,7 +46,7 @@
   z-index: -1;
 }
 .timer-block{
-  height: 400px;
+  height: 500px;
   position: relative;
   z-index: 4;
   background-color: #1a2937;
@@ -252,6 +252,9 @@ line-height: normal;
       width: 460px;
       top: 78px;
     }
+    .timer-block{
+      height: 400px;
+    }
   }
 
   @media only screen and (max-width: 1200px) {
@@ -299,7 +302,9 @@ line-height: normal;
     width: 90%;
     background: none;
     border: 0;
-    top: 25px;
+    bottom: -88px;
+    /* position: relative; */
+    top: inherit;
   }
   .animate-flicker img, .animate-flicker2 img {
     width: 100%;
@@ -348,7 +353,7 @@ line-height: normal;
     width: 20%;
   }
   .counter {
-    font-size: 15px;
+    font-size: 20px;
 }
   .keep-me-content p {
     font-size: 16px;
