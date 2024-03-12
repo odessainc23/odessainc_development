@@ -15,7 +15,8 @@
 .top-auto-content h1{
     color: #FFF;
     font-family: MaisonNeue-Bold;
-    font-size: 3rem;
+    font-size: 72px;
+    letter-spacing: 1px;
     font-style: normal;
     font-weight: 700;
     line-height: 1;
@@ -23,7 +24,8 @@
     text-shadow: 0 0 36px #00ABC8, 0 0 39px #00ABC8;
 }
 .top-auto-content h5{
-    font-size: 24px;
+    font-size: 32px;
+    letter-spacing: 0.5px;
     font-family: MaisonNeue-Bold;
     line-height: 32px;
     color: #00ABC8;
@@ -167,13 +169,12 @@ font-weight: 700;
 line-height: normal;
 }
   .counter {
-    font-size: 35px;
+    font-size: 32px;
     width: 90%;
     height: 2em;
     left: 0;
     right: 0;
     position: absolute;
-    font-family: arial, helvetica, sans-serif;
     text-align: center;
     line-height: 2em;
     margin: 6px auto 0 auto;
@@ -202,6 +203,7 @@ line-height: normal;
     border-radius: 6px;
     color: #FFF;
     position: relative;
+    font-family: MaisonNeue-Bold;
   }
   .counter > ul li:after{
     background: #3e4c5a;
@@ -209,7 +211,7 @@ line-height: normal;
     content: "";
     top:0;
     width: 100%;
-    height: 6px;
+    height: 4px;
     left: 0;
   }
   .counter > ul li:first-child {
@@ -223,15 +225,19 @@ line-height: normal;
     text-align: center;
     color: white;
     padding-bottom: 0.75em;
+    font-family:MaisonNeue-Book;
   }
   .section-products.auto-prod #product-2 .part-1::before {
     background: url(../images/auto-news/news-1.png) no-repeat center;
+    background-size: cover;
   }
   .section-products.auto-prod #product-1 .part-1::before {
     background: url(../images/auto-news/news-2.png) no-repeat center;
+    background-size: cover;
   }
   .section-products.auto-prod #product-3 .part-1::before {
     background: url(../images/auto-news/news-3.png) no-repeat center;
+    background-size: cover;
   }
   @media only screen and (max-width: 2000px) {
     .home-welcome{
@@ -293,6 +299,19 @@ line-height: normal;
     .timer-block {
       height: 290px;
     }
+    .counter{
+      width: 100%;
+    }
+    .section-products .header br{
+      display: none;
+    }
+    .top-auto-content h5 {
+      font-size: 25px;
+      line-height: 20px;
+  }
+    .top-auto-content h1{
+      font-size: 56px;
+    }
     .animate-flicker2{
       right:0;top:0
     }
@@ -310,7 +329,10 @@ line-height: normal;
   }
   @media only screen and (max-width: 900px) {
     .home-welcome{
-      top:40px
+      border: 0;
+    bottom: -88px;
+    /* position: relative; */
+    top: inherit;
     }
     .auto-news-banner{
       margin-top: 200px;
@@ -320,10 +342,7 @@ line-height: normal;
   .home-welcome {
     width: 100%;
     background: none;
-    border: 0;
-    bottom: -88px;
-    /* position: relative; */
-    top: inherit;
+    
   }
   .animate-flicker img, .animate-flicker2 img {
     width: 100%;
@@ -370,7 +389,7 @@ line-height: normal;
     width: 20%;
   }
   .counter {
-    font-size: 20px;
+    font-size: 18px;
 }
   .keep-me-content p {
     font-size: 16px;
@@ -393,5 +412,10 @@ line-height: normal;
 .section-products.auto-prod .header h3 {
   line-height: 30px;
   font-size: 25px;
+}
+}
+@media only screen and (max-width: 360px) {
+  .counter {
+    font-size: 15px;
 }
 }
