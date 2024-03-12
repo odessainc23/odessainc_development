@@ -299,7 +299,7 @@ line-height: normal;
   }
   @media only screen and (max-width: 480px) {
   .home-welcome {
-    width: 90%;
+    width: 100%;
     background: none;
     border: 0;
     bottom: -88px;
