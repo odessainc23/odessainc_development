@@ -330,9 +330,7 @@ line-height: normal;
   @media only screen and (max-width: 900px) {
     .home-welcome{
       border: 0;
-    bottom: -88px;
-    /* position: relative; */
-    top: inherit;
+    top:45px;
     }
     .auto-news-banner{
       margin-top: 200px;
@@ -342,7 +340,9 @@ line-height: normal;
   .home-welcome {
     width: 100%;
     background: none;
-    
+    bottom: -88px;
+    /* position: relative; */
+    top: inherit;
   }
   .animate-flicker img, .animate-flicker2 img {
     width: 100%;
