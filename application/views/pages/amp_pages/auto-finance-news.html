@@ -234,8 +234,9 @@
         $("#letstalk").click(function() {
             $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-03-12/3s3vpnz');
             $("#primaryForm").submit();
+            $(".thank-u").addClass("ff");
             return true;
-			$(".thank-u").addClass("ff");
+		
         });
 
         $('#primaryForm input').bind("cut copy paste", function(e) {

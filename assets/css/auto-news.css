@@ -55,7 +55,7 @@
     width: 80%;
     margin: 0 auto;
     position: relative;
-    top: -100px;
+    top: -110px;
     background: #fff;
     z-index: 32;
     text-align: center;
@@ -240,13 +240,29 @@ line-height: normal;
       text-align: center;
       top: 130px;
     }
-    .timer-block:after{
-      background-size: 100%;
-    }
+    
   }
   @media only screen and (max-width: 1600px) {
     .home-welcome{
       top:100px
+    }
+    .top-auto-content {
+      padding: 40px 0 0;
+    }
+    .top-auto-content h1{
+      margin-bottom: 0px;
+    }
+    .top-auto-content h5{
+      margin-bottom: 25px;
+    }
+    .timer-block:after{
+      background-size: 100%;
+    }
+    .keep-me-content{
+      padding: 25px;
+    }
+    .timer-block{
+      height: 350px;
     }
   }
   @media only screen and (max-width: 1500px) {
@@ -254,9 +270,7 @@ line-height: normal;
       width: 460px;
       top: 78px;
     }
-    .timer-block{
-      height: 400px;
-    }
+   
   }
 
   @media only screen and (max-width: 1200px) {
