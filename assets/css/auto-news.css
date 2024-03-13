@@ -259,9 +259,12 @@ line-height: normal;
     .home-welcome{
       top:100px
     }
-    .counter > ul:after{
+    .counter > ul:after {
+      margin: 0 0.29em;
+  }
+    /* .counter > ul:after{
       margin: 0 0.18em;
-    }
+    } */
     /* .top-auto-content {
       padding: 40px 0 0;
     } */
@@ -287,6 +290,9 @@ line-height: normal;
     .timer-block{
       height: 350px;
     }
+    .counter > ul:after {
+      margin: 0 0.18em;
+  }
   }
 
   @media only screen and (max-width: 1200px) {
@@ -300,6 +306,9 @@ line-height: normal;
     .counter {
       font-size: 25px;
 
+    }
+    .counter > ul li{
+      width: 35px;
     }
   }
   @media only screen and (max-width: 1000px) {
@@ -360,7 +369,7 @@ line-height: normal;
   }
   
 .counter > ul li{
-  width: 30px;
+  width: 35px;
 }
   .animate-flicker img, .animate-flicker2 img {
     width: 100%;
@@ -432,8 +441,11 @@ line-height: normal;
   font-size: 25px;
 }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 380px) {
   .counter {
     font-size: 15px;
+}
+.counter > ul li{
+  width: 30px;
 }
 }
