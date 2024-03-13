@@ -1,0 +1,23 @@
+.our-people .home-hero-ctitle{
+    color: #00ABC8;
+    margin: 0 0 10px;
+    font-size: 54px;
+}
+.our-people .home-hero-cdesc{
+    color: #F3F3F5;
+}
+.live-breathe{
+    background:#F3F3F5;
+    padding: 100px 0;
+}
+.live-breathe h2{
+    margin: 0 0 10px;
+}
+.live-breathe h4{
+    font-size: 18px;
+}
+.live-box-1{
+    background: #FFFFFF;
+    width: calc(50% - 20px);
+    margin: 0 20px;
+}

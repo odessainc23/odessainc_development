@@ -233,7 +233,7 @@ line-height: normal;
     font-family:MaisonNeue-Book;
   }
   .section-products.auto-prod #product-2 .part-1::before {
-    background: url(../images/auto-news/news-1.png) no-repeat center;
+    background: url(../images/auto-news/auto-news.png) no-repeat center;
     background-size: cover;
   }
   .section-products.auto-prod #product-1 .part-1::before {
