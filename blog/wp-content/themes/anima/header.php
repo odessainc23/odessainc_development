@@ -12,7 +12,12 @@
 	<?php cryout_meta_hook(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	
+	<meta property="og:title" content="Milos Adzic on Curiosity, Active Listening, and Delivering Great Customer Service">
+    <meta property="og:description" content="Milos Adzic on Curiosity, Active Listening, and Delivering Great Customer Service">
+    <meta property="og:image" content="https://www.odessainc.com/blog/milos-adzic-odessa-customer-service/">
+    <meta property="og:url" content="https://www.odessainc.com/blog/milos-adzic-odessa-customer-service/">
+    <meta property="og:type" content="article">
 	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
