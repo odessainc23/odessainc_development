@@ -273,16 +273,16 @@ line-height: normal;
     .keep-me-content{
       padding: 25px;
     }
-    .timer-block{
-      height: 350px;
-    }
+    
   }
-  @media only screen and (max-width: 1500px) {
+  @media only screen and (max-width: 1400px) {
     .home-welcome {
       width: 460px;
       top: 78px;
     }
-   
+    .timer-block{
+      height: 350px;
+    }
   }
 
   @media only screen and (max-width: 1200px) {
