@@ -208,6 +208,7 @@ line-height: normal;
     color: #FFF;
     position: relative;
     font-family: MaisonNeue-Bold;
+    width: 40px;
   }
   .counter > ul li:after{
     background: #3e4c5a;
@@ -259,7 +260,7 @@ line-height: normal;
       top:100px
     }
     .counter > ul:after{
-      margin: 0 0.3em;
+      margin: 0 0.18em;
     }
     /* .top-auto-content {
       padding: 40px 0 0;
@@ -335,6 +336,12 @@ line-height: normal;
     .counter {
       font-size: 25px;
     }
+    .counter > ul li{
+      width: 35px;
+    }
+    .counter > ul:after {
+      margin: 0 0.22em;
+  }
   }
   @media only screen and (max-width: 900px) {
     .home-welcome{
@@ -351,6 +358,10 @@ line-height: normal;
     /* position: relative; */
     top: inherit;
   }
+  
+.counter > ul li{
+  width: 30px;
+}
   .animate-flicker img, .animate-flicker2 img {
     width: 100%;
     height: 100px;
