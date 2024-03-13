@@ -258,6 +258,9 @@ line-height: normal;
     .home-welcome{
       top:100px
     }
+    .counter > ul:after{
+      margin: 0 0.3em;
+    }
     /* .top-auto-content {
       padding: 40px 0 0;
     } */
