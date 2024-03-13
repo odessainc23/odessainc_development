@@ -192,7 +192,8 @@ line-height: normal;
   .counter > ul:after {
     content: ":";
     color: #fff;
-    margin: 0 0.1em;
+    margin: 0 0.18em;
+    position: absolute;
   }
   .counter > ul:last-of-type:after {
     content: "";
