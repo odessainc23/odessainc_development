@@ -179,7 +179,7 @@ text-align: center;
     
 }
 #wrapper.our-people .xas-banner {
-    height: calc(85vh - 112px);
+    height: calc(90vh - 112px);
     max-height: max-content;
     background: #263746;
 }
