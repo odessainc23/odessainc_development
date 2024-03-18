@@ -70,6 +70,7 @@ color: #00ABC8;
     background: #F3F3F5;
     position: relative;
     margin: 0 0 20px 0;
+    height: 330px;
 }
 .our-people .row.flex{
 display: flex;
@@ -86,7 +87,7 @@ text-align: center;
     display: block;
     position: relative;
     z-index: 7;
-    height: 330px;
+    height: 100%;
 }
 .row.flex{
     margin-bottom: 20px;
@@ -180,6 +181,7 @@ text-align: center;
 #wrapper.our-people .xas-banner {
     height: calc(85vh - 112px);
     max-height: max-content;
+    background: #263746;
 }
 .our-people .xas-banner .home-hero-bg img{
     height: 100%;
