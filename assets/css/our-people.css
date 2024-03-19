@@ -204,7 +204,7 @@ text-align: center;
 	line-height: 18px;
 	text-align:center;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
     .our-people .flex{
         flex-wrap: wrap;
     }

@@ -82,6 +82,16 @@
 						</ul>
 					</div>
 				</div>
+				<div class="accreditations">
+            <ul class="flex">
+                <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
+                <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
+                <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-3.png" alt="canon Logo"></li>
+                <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
+                <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
+            </ul>
+        </div>
+				
 			</div>
 		</div>
 	</div>
