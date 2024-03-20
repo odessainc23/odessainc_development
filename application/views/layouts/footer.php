@@ -24,7 +24,7 @@
 						<ul>
 							<li><a href="<?php echo base_url(); ?>company">Company</a></li>
 							<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
-							<li><a href="<?php echo base_url(); ?>newsroom">Events + Webinars</a></li>
+							<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 							<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
 							<li><a  href="<?php echo base_url(); ?>lets-talk">Contact us</a></li>
 						</ul>
@@ -82,7 +82,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="accreditations">
+				<!-- <div class="accreditations">
             <ul class="flex">
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
@@ -90,7 +90,7 @@
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
             </ul>
-        </div>
+        </div> -->
 				
 			</div>
 		</div>

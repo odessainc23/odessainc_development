@@ -7,6 +7,15 @@
 				<h2 class="platform_size">Get Started</h2>
 				<p>If you're considering Odessa to transform your asset finance business or need more platform information, we're here to help.</p>
 				<h4 class="footer_li_heading">+1 888-683-2484</h4>
+				<div class="accreditations">
+                <ul class="flex">
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-3.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
+                    </ul>
+            </div>
 			</div>
 			<div class="footer_li_wrap">
 				<h2 class="platform_size">Platform</h2>
@@ -19,6 +28,15 @@
 
 					<li><a id="features" href="<?php echo base_url(); ?>platform">View all platform<span> features</span></a></li>
 				</ul>
+				<div class="accreditations">
+                <ul class="flex">
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-3.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
+                    <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
+                    </ul>
+            </div>
 			</div>
 			<div class="footer_li_wrap">
 				<div class="moblie_view_mrgn">
@@ -26,7 +44,7 @@
 					<ul>
 						<li><a href="<?php echo base_url(); ?>company">Company</a></li>
 						<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
-						<li><a href="<?php echo base_url(); ?>newsroom">Events + Webinars</a></li>
+						<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 						<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
 						<li><a id="features" href="<?php echo base_url(); ?>lets-talk">Contact us</a></li>
 					</ul>
@@ -87,7 +105,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="accreditations">
+			<!-- <div class="accreditations">
             <ul class="flex">
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
@@ -95,7 +113,7 @@
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
                 <li><img src="<?php echo base_url(); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
             </ul>
-        </div>
+        </div> -->
 		</div>
 	</div>
 </div>

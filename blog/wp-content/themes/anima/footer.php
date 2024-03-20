@@ -24,7 +24,7 @@
 					<ul>
 						<li><a href="<?php echo OD_BASE_URL ?>company">Company</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>careers">Careers</a></li>
-						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Events + Webinars</a></li>
+						<li><a href="<?php echo OD_BASE_URL ?>blog">Blog</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Newsroom</a></li>
 						<li><a id="features" href="<?php echo OD_BASE_URL ?>lets-talk">Contact us</a></li>
 					</ul>

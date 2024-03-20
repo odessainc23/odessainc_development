@@ -9,9 +9,10 @@
 .accreditations .flex{
     display: flex;
     list-style: none;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 .footer_li_wrap.desktop_view_footer .flex{
     flex-wrap: wrap;
@@ -20,7 +21,7 @@
 .footer_li_wrap.desktop_view_footer .accreditations .flex li img {
     width: 60px;
 }
-.footer_li_wrap.desktop_view_footer .accreditations .flex li:first-child{
+.footer_li_wrap .accreditations .flex li:first-child{
     margin-left:0
 }
 .accreditations .flex li{
@@ -3156,6 +3157,7 @@ section.innovate_section .btns_style:hover {
 }
 .bg-alert {
   background-color: #ff495c;
+  display: none;
 }
 .bg-grad {
   background-image: linear-gradient(to right, #3f7ab8, #81bee7, #81bee7);
