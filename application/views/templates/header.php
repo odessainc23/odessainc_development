@@ -275,7 +275,7 @@
 															<ul>
 																<li class="category-dot category-bxd">Engage with us</li>
 																<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
-																<li><a href="<?php echo base_url(); ?>newsroom">Events</a></li>
+																<!-- <li><a href="<?php echo base_url(); ?>newsroom">Events</a></li> -->
 																<li><a href="<?php echo base_url(); ?>newsroom">Resources</a></li>
 																<li><a href="<?php echo base_url(); ?>lets-talk">Contact Us</a></li>
 															</ul>
@@ -425,7 +425,7 @@
 										<ul>
 											<li>Engage with us</li>
 											<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
-											<li><a href="<?php echo base_url(); ?>newsroom">Events</a></li>
+											<!-- <li><a href="<?php echo base_url(); ?>newsroom">Events</a></li> -->
 											<li><a href="<?php echo base_url(); ?>newsroom">Resources</a></li>
 											<li><a href="<?php echo base_url(); ?>lets-talk">Contact Us</a></li>
 										</ul>

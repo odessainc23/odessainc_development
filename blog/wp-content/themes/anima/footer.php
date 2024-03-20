@@ -14,7 +14,7 @@
 					<li><a href="<?php echo OD_BASE_URL ?>platform/core">Odessa Origination</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>platform/core/">Odessa Servicing</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>platform/developer-tools">Odessa Build</a></li>
-					<li><a href="<?php echo OD_BASE_URL ?>auto-finance-software" hreflang="en">Auto Finance</a></li>
+					<li><a href="<?php echo OD_BASE_URL ?>auto-finance-news" hreflang="en">Auto Finance</a></li>
 					<li><a id="features" href="<?php echo OD_BASE_URL ?>platform">View all platform<span> features</span></a></li>
 				</ul>
 			</div>
@@ -24,7 +24,7 @@
 					<ul>
 						<li><a href="<?php echo OD_BASE_URL ?>company">Company</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>careers">Careers</a></li>
-						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Events + Webinars</a></li>
+						<li><a href="<?php echo OD_BASE_URL ?>blog">Blog</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Newsroom</a></li>
 						<li><a id="features" href="<?php echo OD_BASE_URL ?>lets-talk">Contact us</a></li>
 					</ul>
@@ -58,7 +58,17 @@
 				<h4 class="footer_li_heading"><a href="tel:888-683-2484">+1 888-683-2484</a></h4>
 			</div>
 		</div>
+		<div class="accreditations">
+			<ul class="flex">
+				<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/soc.png" alt="canon Logo"></li>
+				<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/soc-2.png" alt="canon Logo"></li>
+				<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/soc-3.png" alt="canon Logo"></li>
+				<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/iso.png" alt="canon Logo"></li>
+				<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/iso-2.png" alt="canon Logo"></li>
+			</ul>
+		</div>
 	</div>	
+	
 </footer>
 <div class="footermenu_strip">
 	<div class="container">
@@ -72,6 +82,7 @@
 					<li><a href="<?php echo OD_BASE_URL ?>terms-of-use">Terms of Use</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>privacy-policy">Privacy</a></li>
 					<li><a href="<?php echo OD_BASE_URL ?>odessa-modern-slavery-act-statement">Modern Slavery Act Statement</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -79,7 +90,6 @@
 </div>
 <?php wp_footer(); ?>
 </body>
-
 <script async src="https://js.sitesearch360.com/plugin/bundle/50238.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -100,6 +110,8 @@ $(".close-search").click(function() {
 	$('input[type="search"]').val();
 });
 $(".s").attr("placeholder", "Search Blog");
+// $(".heateor_sss_facebook").attr("href", "https://www.facebook.com/sharer/sharer.php?u=YourArticleURL");
+// $(".heateor_sss_button_linkedin").attr("href", "https://www.linkedin.com/sharing/share-offsite/?url=YourArticleURL");
     });
 
 //     window.onload = function(event) {

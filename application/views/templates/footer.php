@@ -26,7 +26,7 @@
 					<ul>
 						<li><a href="<?php echo base_url(); ?>company">Company</a></li>
 						<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
-						<li><a href="<?php echo base_url(); ?>newsroom">Events + Webinars</a></li>
+						<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 						<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
 						<li><a id="features" class="active" href="<?php echo base_url(); ?>lets-talk">Contact us</a></li>
 					</ul>
