@@ -283,7 +283,7 @@
 																	<ul>
 																		<li class="category-dot category-bxd">Engage with us</li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Newsroom</a></li>
-																		<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li>
+																		<!-- <li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li> -->
 																		<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Resources</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Contact Us</a></li>
 																	</ul>
@@ -439,7 +439,7 @@
 												<ul>
 													<li>Engage with us</li>
 													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Newsroom</a></li>
-													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li>
+													<!-- <li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li> -->
 													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Resources</a></li>
 													<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Contact Us</a></li>
 												</ul>
