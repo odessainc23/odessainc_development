@@ -3283,6 +3283,9 @@ section.innovate_section .btns_style:hover {
     justify-content: center;
     padding: 0;
   }
+  .accreditations {
+    margin-bottom: 20px;
+  }
   .mobile_view_footer .accreditations .flex{display: none;}
   .header_banner,
   .page_banner {
