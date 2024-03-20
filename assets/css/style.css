@@ -13,6 +13,7 @@
     align-items: center;
     margin: 0;
     flex-wrap: wrap;
+    padding: 0;
 }
 .footer_li_wrap.desktop_view_footer .flex{
     flex-wrap: wrap;
@@ -21,7 +22,7 @@
 .footer_li_wrap.desktop_view_footer .accreditations .flex li img {
     width: 60px;
 }
-.footer_li_wrap .accreditations .flex li:first-child{
+.accreditations .flex li:first-child{
     margin-left:0
 }
 .accreditations .flex li{
