@@ -2290,6 +2290,24 @@ section.news {
   display: inline-block;
   width: 100%;
 }
+.acc .cloudserverCon{
+  background: none;
+  padding: 50px 0;
+}
+.acc .accreditations .flex{
+  justify-content: center;
+}
+.acc .accreditations .flex li img {
+  width: 72px;
+  filter: none;
+}
+.acc .accreditations .flex li {
+  margin: 0 20px;
+}
+.acc.cloudserversection{
+  background: #F3F3F5;
+  margin: 0 0 50px;
+}
 section.annoucement .heading_div span.annoucement_icon,
 section.awards .heading_div span.award_icon,
 section.news .heading_div span.news_icon {
@@ -3280,6 +3298,13 @@ section.innovate_section .btns_style:hover {
   #wrapper {
     margin: 60px auto auto;
   }
+  .acc .accreditations .flex li {
+    margin: 0 5px;
+}
+.acc .accreditations .flex li img {
+  width: 50px;
+  filter: none;
+}
   .accreditations .flex{
     justify-content: center;
     padding: 0;
