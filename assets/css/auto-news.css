@@ -242,7 +242,7 @@ line-height: normal;
   }
   .section-products.auto-prod #product-3 .part-1::before {
     background: url(../images/auto-news/news-3.png) no-repeat center;
-    background-size: cover;
+    background-size: contain;
   }
   @media only screen and (max-width: 2000px) {
     .home-welcome{
