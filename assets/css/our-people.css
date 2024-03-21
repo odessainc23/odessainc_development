@@ -76,12 +76,14 @@ color: #00ABC8;
 }
 .our-people .row.flex{
 display: flex;
-justify-content: space-between;
+justify-content: flex-start;
 width: 100%;
 align-items: center;
 text-align: center;
 margin:0;
+flex-wrap: wrap;
 }
+
 .talent-box img{
     margin: 0 auto 0 auto;
     width: auto;
@@ -210,6 +212,9 @@ margin:0;
 @media only screen and (max-width: 1500px) {
     .talent-box:after{ left: -6px;}
         .talent-box.box-2:after{right:-15px}
+        .our-people .col-xl-3{
+    width: 33.33%;
+        }
 }
 @media only screen and (max-width: 1024px) {
     .our-people .flex{
