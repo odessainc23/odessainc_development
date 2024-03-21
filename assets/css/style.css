@@ -2292,13 +2292,13 @@ section.news {
 }
 .acc .cloudserverCon{
   background: none;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 .acc .accreditations .flex{
   justify-content: center;
 }
 .acc .accreditations .flex li img {
-  width: 72px;
+  width: 100px;
   filter: none;
 }
 .acc .accreditations .flex li {
