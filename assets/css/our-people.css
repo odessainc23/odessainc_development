@@ -208,7 +208,7 @@ text-align: center;
     .talent-box:after{ left: -6px;}
         .talent-box.box-2:after{right:-15px}
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .our-people .flex{
         flex-wrap: wrap;
     }
@@ -269,7 +269,14 @@ text-align: center;
         margin: 0;
     }
 }
-
+@media only screen and (max-width: 900px) {
+    .talent-box:after {
+        left: 35px;
+    }
+    .talent-box.box-2:after {
+        right: 35px;
+    }
+}
 @media only screen and (max-width: 600px) {
     .col-sm-1{
         width: 100%;
