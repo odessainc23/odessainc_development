@@ -80,7 +80,7 @@ justify-content: space-between;
 width: 100%;
 align-items: center;
 text-align: center;
-
+margin:0;
 }
 .talent-box img{
     margin: 0 auto 0 auto;
