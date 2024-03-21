@@ -70,7 +70,7 @@ color: #00ABC8;
     background: #F3F3F5;
     position: relative;
     margin: 0 0 20px 0;
-    height: 330px;
+    height: 380px;
 }
 .our-people .row.flex{
 display: flex;
@@ -82,7 +82,7 @@ text-align: center;
 }
 .talent-box img{
     margin: 0 auto 0 auto;
-    width: 85%;
+    width:auto;
     padding-top: 20px;
     display: block;
     position: relative;
@@ -97,7 +97,7 @@ text-align: center;
     content: "";
     background: url(../images/our-people/ellipse-1.svg) 0 0 no-repeat;
     width: 158px;
-    left: -6px;
+    left: 40px;
     z-index: 0;
     top: 88px;
     height: 100px;
@@ -105,7 +105,7 @@ text-align: center;
 }
 .talent-box.box-2:after{
     background: url(../images/our-people/ellipse-2.svg) 0 0 no-repeat;
-    right: -15px;
+    right: 69px;
     left: inherit;
     transform: rotate(86deg);
     top: 70px;
@@ -204,9 +204,19 @@ text-align: center;
 	line-height: 18px;
 	text-align:center;
 }
+@media only screen and (max-width: 1500px) {
+    .talent-box:after{ left: -6px;}
+        .talent-box.box-2:after{right:-15px}
+}
 @media only screen and (max-width: 1000px) {
     .our-people .flex{
         flex-wrap: wrap;
+    }
+    .talent-box:after{
+        left:71px
+    }
+    .talent-box.box-2:after{
+        right:78px;
     }
     .live-box-1 {
         width: 100%;
@@ -232,7 +242,7 @@ text-align: center;
         width: 100%;
     }
     .col-sm-1{
-        width: 100%;
+        width: 50%;
         margin:0;
     }
     .our-people .home-hero-content {
@@ -258,7 +268,16 @@ text-align: center;
     .our-people .row.flex{
         margin: 0;
     }
-    .talent-box img{
-        height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-sm-1{
+        width: 100%;
+    }
+    .talent-box.box-2:after{
+        right:103px;
+    }
+    .talent-box:after{
+        left:91px
     }
 }
