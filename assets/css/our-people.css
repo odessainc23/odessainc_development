@@ -71,6 +71,8 @@ color: #00ABC8;
     position: relative;
     margin: 0 0 20px 0;
     height: 380px;
+    width: 100%;
+    overflow: hidden;
 }
 .our-people .row.flex{
 display: flex;
@@ -82,7 +84,7 @@ text-align: center;
 }
 .talent-box img{
     margin: 0 auto 0 auto;
-    width:auto;
+    width: auto;
     padding-top: 20px;
     display: block;
     position: relative;
@@ -102,6 +104,7 @@ text-align: center;
     top: 88px;
     height: 100px;
     transform: rotate(-45deg);
+    display: none;
 }
 .talent-box.box-2:after{
     background: url(../images/our-people/ellipse-2.svg) 0 0 no-repeat;
