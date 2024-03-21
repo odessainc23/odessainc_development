@@ -2354,12 +2354,13 @@ section.news .bottomdiv {
   min-height: 260px;
 }
 .news_div .news_lt {
-  background: #27274c;
+  background: #ffffff;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 260px;
+  border-right: 1px solid #decccc;
 }
 .news_div .news_lt img {
   width: 200px;
