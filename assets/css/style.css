@@ -3301,8 +3301,10 @@ section.innovate_section .btns_style:hover {
   .acc .accreditations .flex li {
     margin: 0 5px;
 }
+.acc h2{
+  font-size:25px}
 .acc .accreditations .flex li img {
-  width: 50px;
+  width:60px;
   filter: none;
 }
   .accreditations .flex{
