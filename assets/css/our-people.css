@@ -249,7 +249,7 @@ flex-wrap: wrap;
     .live-cont {
         width: 100%;
     }
-    .col-sm-1{
+    .our-people .col-xl-3{
         width: 50%;
         margin:0;
     }
@@ -286,7 +286,7 @@ flex-wrap: wrap;
     }
 }
 @media only screen and (max-width: 600px) {
-    .col-sm-1{
+    .our-people .col-xl-3{
         width: 100%;
     }
     .talent-box.box-2:after{
