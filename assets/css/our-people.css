@@ -169,13 +169,13 @@ text-align: center;
 .our-people .row.flex .col-xl-3:hover h5{
     text-align: left;
     color: #fff;
-    padding: 0 10px;
+    padding: 0 18px;
    
 }
 .our-people .row.flex .col-xl-3:hover h6{
     text-align: left;
     color: #fff;
-    padding: 0 10px;
+    padding: 0 18px;
     
 }
 #wrapper.our-people .xas-banner {
@@ -191,7 +191,7 @@ text-align: center;
     height: 0px;
     top:-50%;
     color: #fff;
-	padding:15px 10px; 
+    padding: 18px 18px;
     font-family: MaisonNeue-Book;
     overflow:hidden;
     -webkit-transition: all 0.5s ease-in-out;
