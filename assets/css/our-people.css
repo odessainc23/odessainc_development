@@ -121,29 +121,31 @@ flex-wrap: wrap;
     font-family:MaisonNeue-Bold;
     position: relative;
     z-index: 19;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .col-xl-3{
     position: relative;
     overflow: hidden;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 .talent-container h6{
     color: #555B6D;
     margin-bottom: 0;
     z-index: 19;
     position: relative;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .talk-team{
     background: url(../images/our-people/talk-frame.svg) bottom center no-repeat #263746;
     height: 400px;
+    background-size: 100%;
 }
 .business-talk{
     text-align: center;
@@ -169,7 +171,8 @@ flex-wrap: wrap;
     top:0;
     z-index: 12;
     text-align: left;
-    width: 95%;
+    width: 92%;
+    left: 4%;
 }
 .our-people .row.flex .col-xl-3:hover h5{
     text-align: left;
@@ -184,29 +187,34 @@ flex-wrap: wrap;
     
 }
 #wrapper.our-people .xas-banner {
-    height: calc(90vh - 112px);
+    height: 430px;
     max-height: max-content;
     background: #263746;
 }
 .our-people .xas-banner .home-hero-bg img{
     height: 100%;
+    object-fit: inherit;
+    top:0
 }
 .description{
-    width: 95%;
+    width: 92%;
     height: 0px;
     top:-50%;
-    color: #fff;
     padding: 18px 18px;
-    font-family: MaisonNeue-Book;
     overflow:hidden;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 	position:absolute;
 	background-color:#00ABC8;
-	font-size: 15px;
-	line-height: 18px;
+	
+}
+.description p{
+    color: #fff;
+    font-family: MaisonNeue-Book;
+    font-size: 15px;
+	line-height: 20px;
 	text-align:left;
 }
 @media only screen and (max-width: 1500px) {

@@ -4,13 +4,13 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 class Our_amp extends CI_Controller {
 
 	public function index(){
-		$data['meta_title']			= 'Auto Finance Software | Odessa';
-		$data['meta_description']	= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
-		$data['meta_keyword']		= 'auto finance solution, auto leasing software, vehicle leasing software, car leasing software, auto loan software, auto finance software, automotive finance software, auto lending software, auto loan management software, auto loan origination software, auto loan servicing software, automotive leasing software, automotive leasing software';
+		$data['meta_title']			= 'Meet Our Experts | Odessa';
+		$data['meta_description']	= 'Our knowledge of asset finance is unmatched. We embrace and adapt to the evolving equipment leasing market and help you do the same. We are committed to helping you achieve your business goals.';
+		$data['meta_keyword']		= 'asset finance experts, equipment leasing industry gurus, lease management specialists';
 		$data['og_title']			= 'Auto Finance Software | Odessa';
-		$data['og_description']		= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
+		$data['og_description']		= 'Our knowledge of asset finance is unmatched. We embrace and adapt to the evolving equipment leasing market and help you do the same. We are committed to helping you achieve your business goals.';
 		$data['tc_title']			= 'Auto Finance Software | Odessa';
-		$data['tc_description']		= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
+		$data['tc_description']		= 'Our knowledge of asset finance is unmatched. We embrace and adapt to the evolving equipment leasing market and help you do the same. We are committed to helping you achieve your business goals.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
 		$this->load->view('pages/amp_pages/our-people.html', $data);
