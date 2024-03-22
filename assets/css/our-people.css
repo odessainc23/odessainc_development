@@ -123,10 +123,15 @@ flex-wrap: wrap;
     font-family:MaisonNeue-Bold;
     position: relative;
     z-index: 19;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    position: relative;
+    left: inherit;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    line-height:19px
 }
 .col-xl-3{
     position: relative;
@@ -139,10 +144,15 @@ flex-wrap: wrap;
     margin-bottom: 0;
     z-index: 19;
     position: relative;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    -webkit-transition:all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+    left: inherit;
+    right: 0;
+    margin: 0 auto;
+    line-height:19px
 }
 .talk-team{
     background: url(../images/our-people/talk-frame.svg) bottom center no-repeat #263746;
@@ -177,8 +187,9 @@ flex-wrap: wrap;
     left: 4%;
     }
 .our-people .row.flex .col-xl-3:hover h5{
-    text-align: left;
+    left:0%;
     color: #fff;
+    text-align: left;
     padding: 0 18px;
     -webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
@@ -186,8 +197,9 @@ flex-wrap: wrap;
     transition: all 0.8s ease-in-out;
 }
 .our-people .row.flex .col-xl-3:hover h6{
-    text-align: left;
+    left:0%;
     color: #fff;
+    text-align: left;
     padding: 0 18px;
     -webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
