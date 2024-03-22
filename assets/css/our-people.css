@@ -194,7 +194,7 @@ flex-wrap: wrap;
 .our-people .xas-banner .home-hero-bg img{
     height: 100%;
     object-fit: inherit;
-    top:0
+    bottom:0
 }
 .description{
     width: 92%;
@@ -303,4 +303,8 @@ flex-wrap: wrap;
     .talent-box:after{
         left:91px
     }
+    .our-people .home-hero-content{
+        top:50px
+    }
+    .our-people .home-hero-ctitle{font-size: 35px;}
 }
