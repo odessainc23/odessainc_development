@@ -124,7 +124,7 @@ flex-wrap: wrap;
     position: relative;
     z-index: 19;
     position: relative;
-    left: inherit;
+    left: 0%;
     right: 0;
     margin: 0 auto;
     -webkit-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
@@ -149,7 +149,7 @@ flex-wrap: wrap;
     -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
     transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
     position: relative;
-    left: inherit;
+    left: 0%;
     right: 0;
     margin: 0 auto;
     line-height:19px
