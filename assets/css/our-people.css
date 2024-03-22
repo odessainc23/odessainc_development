@@ -175,18 +175,24 @@ flex-wrap: wrap;
     text-align: left;
     width: 92%;
     left: 4%;
-}
+    }
 .our-people .row.flex .col-xl-3:hover h5{
     text-align: left;
     color: #fff;
     padding: 0 18px;
-   
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 .our-people .row.flex .col-xl-3:hover h6{
     text-align: left;
     color: #fff;
     padding: 0 18px;
-    
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 #wrapper.our-people .xas-banner {
     height: 400px;
