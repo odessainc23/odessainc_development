@@ -15,10 +15,12 @@
 }
 .live-breathe h2{
     margin: 0 0 20px;
+    font-family: MaisonNeue-Book;
 }
 .live-breathe h4{
     font-size: 18px;
     margin-bottom: 60px;
+    font-family: MaisonNeue-Book;
 }
 
 .live-box-1{
@@ -121,10 +123,10 @@ flex-wrap: wrap;
     font-family:MaisonNeue-Bold;
     position: relative;
     z-index: 19;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 .col-xl-3{
     position: relative;
@@ -137,10 +139,10 @@ flex-wrap: wrap;
     margin-bottom: 0;
     z-index: 19;
     position: relative;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 .talk-team{
     background: url(../images/our-people/talk-frame.svg) bottom center no-repeat #263746;
@@ -202,10 +204,10 @@ flex-wrap: wrap;
     top:-50%;
     padding: 18px 18px;
     overflow:hidden;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 	position:absolute;
 	background-color:#00ABC8;
 	
