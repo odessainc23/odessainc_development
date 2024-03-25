@@ -91,106 +91,101 @@
     ////
     
     ;(function ($) {
-    
-      $.fn.countdown = function (options) {
-        //global variables 
-        var vars = $.extend({}, $.fn.countdown.defaults, options),
-        $counter = $(this),
-        t = { day: 0, hour: 0, minute: 0, sec: 0 },
-        targetDate = new Date(vars.targetDate).getTime(),
-        secondsLeft;
-    
-    
-        //private methods
-        methods = {
-          setup: function () {
-    
-            $.each(t, function (time, value) {
-              var currentSection = '<ul id="' + time + '"><li>0</li><li>0</li></ul>';
-              $counter.append(currentSection);
-            });
-    
-            if (vars.labels) {
-              var labelHtml = '<div class="labels"><ul><li>Days</li><li>Hours</li><li>Minutes</li><li>Seconds</li></ul></div>';
-              $counter.append(labelHtml);
-            }
-    
-          },
-    
-          updateTime: function () {
-            var currentTime = new Date().getTime(),
-            secondsLeft = (targetDate - currentTime) / 1000,
-            secsIn = { day: 86400, hour: 3600, minute: 60 };
-    
-            if (secondsLeft < 0) {secondsLeft = 0;}
-    
-            $.each(t, function (timePeriod, value) {
-              t[timePeriod] = parseInt(secondsLeft / secsIn[timePeriod], 10);
-              if (timePeriod !== 'sec') {
-                secondsLeft = secondsLeft % secsIn[timePeriod];
-              } else
-              {
-                t[timePeriod] = secondsLeft;
-              }
-            });
-          },
-    
-          updateCounter: function () {
-            $.each(t, function (period, value) {
-              var section = $counter.find('#' + period).children(),
-              digit = splitDigits(value);
-    
-              section.eq(0).html(digit[0]);
-              section.eq(1).html(digit[1]);
-            });
-    
-            function splitDigits(number) {
-              var digits = [];
-              digits[0] = Math.floor(number / 10);
-              digits[1] = Math.floor(number % 10);
-              return digits;
-            }
-          },
-    
-          tick: function () {
-            if (secondsLeft < 1) {} else
-            {
-              methods.updateTime();
-              methods.updateCounter();
-              setTimeout(function () {methods.tick();}, 1000);
-            }
-          },
-    
-          init: function () {
-            methods.setup();
-            methods.updateTime();
-            methods.updateCounter();
-            methods.tick();
-          } };
-    
-    
-        //initiate countdown
-        methods.init();
-      };
-    
-      $.fn.countdown.defaults = {
-        targetDate: 'dec 31 2014', //string: the date you want the counter to count down to.
-        labels: true //boolean: toggles the {day / hour / minute / second} labels 
-      };
-    })(jQuery);
-    // end of countdown plugin
-    
-    // dom ready events (would usually be in separate js file)
-    $(document).ready(function () {
-      // plugin call
-    
-      // arbitrarially make a new date
-      var newDate = new Date();
-      newDate.setDate(45);
-      $('.counter').countdown({ targetDate: newDate });
-    
-    });
-    
+  
+  $.fn.countdown = function (options) {
+    //global variables 
+    var vars = $.extend({}, $.fn.countdown.defaults, options),
+    $counter = $(this),
+    t = { day: 0, hour: 0, minute: 0, sec: 0 },
+    targetDate = new Date(vars.targetDate).getTime(),
+    secondsLeft;
+
+
+    //private methods
+    methods = {
+      setup: function () {
+
+        $.each(t, function (time, value) {
+          var currentSection = '<ul id="' + time + '"><li>0</li><li>0</li></ul>';
+          $counter.append(currentSection);
+        });
+
+        if (vars.labels) {
+          var labelHtml = '<div class="labels"><ul><li>Days</li><li>Hours</li><li>Minutes</li><li>Seconds</li></ul></div>';
+          $counter.append(labelHtml);
+        }
+
+      },
+
+      updateTime: function () {
+        var currentTime = new Date().getTime(),
+        secondsLeft = (targetDate - currentTime) / 1000,
+        secsIn = { day: 86400, hour: 3600, minute: 60 };
+
+        if (secondsLeft < 0) {secondsLeft = 0;}
+
+        $.each(t, function (timePeriod, value) {
+          t[timePeriod] = parseInt(secondsLeft / secsIn[timePeriod], 10);
+          if (timePeriod !== 'sec') {
+            secondsLeft = secondsLeft % secsIn[timePeriod];
+          } else
+          {
+            t[timePeriod] = secondsLeft;
+          }
+        });
+      },
+
+      updateCounter: function () {
+        $.each(t, function (period, value) {
+          var section = $counter.find('#' + period).children(),
+          digit = splitDigits(value);
+
+          section.eq(0).html(digit[0]);
+          section.eq(1).html(digit[1]);
+        });
+
+        function splitDigits(number) {
+          var digits = [];
+          digits[0] = Math.floor(number / 10);
+          digits[1] = Math.floor(number % 10);
+          return digits;
+        }
+      },
+
+      tick: function () {
+        if (secondsLeft < 1) {} else
+        {
+          methods.updateTime();
+          methods.updateCounter();
+          setTimeout(function () {methods.tick();}, 1000);
+        }
+      },
+
+      init: function () {
+        methods.setup();
+        methods.updateTime();
+        methods.updateCounter();
+        methods.tick();
+      } };
+
+
+    //initiate countdown
+    methods.init();
+  };
+
+  $.fn.countdown.defaults = {
+    targetDate: 'Apr 24 2024 09:00:00 EDT', //string: the date you want the counter to count down to.
+    labels: true //boolean: toggles the {day / hour / minute / second} labels 
+  };
+})(jQuery);
+// end of countdown plugin
+
+// dom ready events (would usually be in separate js file)
+$(document).ready(function () {
+  // plugin call
+  $('.counter').countdown();
+});
+
 	// document.body.setAttribute('id', 'bodyId');
 </script>
 <script>
