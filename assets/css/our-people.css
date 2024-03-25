@@ -122,7 +122,7 @@ flex-wrap: wrap;
     margin-bottom: 0;
     font-family:MaisonNeue-Bold;
     position: relative;
-    z-index: 19;
+    z-index: 1;
     position: relative;
     left: 0%;
     right: 0;
@@ -142,7 +142,7 @@ flex-wrap: wrap;
 .talent-container h6{
     color: #555B6D;
     margin-bottom: 0;
-    z-index: 19;
+    z-index: 1;
     position: relative;
     -webkit-transition:all 0.1s cubic-bezier(0.4, 0, 1, 1);
     -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
@@ -153,6 +153,23 @@ flex-wrap: wrap;
     right: 0;
     margin: 0 auto;
     line-height:19px
+}
+.bot{
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left:-100%;
+    width: 100%;
+    -webkit-transition: all 0.9s linear;
+    -moz-transition: all 0.9s linear;
+    -o-transition: all 0.9s linear;
+    transition: all 0.9s linear;
+    z-index: 19;
+    
+}
+.bot h5,.bot h6{
+    color: #fff;
+    opacity: 0;
 }
 .talk-team{
     background: url(../images/our-people/talk-frame.svg) bottom center no-repeat #263746;
@@ -175,6 +192,13 @@ flex-wrap: wrap;
     color: #fff;
     margin: 0 0 20px 0;
 }
+.our-people .row.flex .col-xl-3:hover .description .bot{
+    left: 5%;
+    
+}
+.our-people .row.flex .col-xl-3:hover .description .bot h5{
+    opacity: 1;
+}
 .our-people .row.flex .col-xl-3:hover .description{
     cursor: pointer;
     margin-top:0;
@@ -186,7 +210,7 @@ flex-wrap: wrap;
     width: 92%;
     left: 4%;
     }
-.our-people .row.flex .col-xl-3:hover h5{
+/* .our-people .row.flex .col-xl-3:hover h5{
     left:0%;
     color: #fff;
     text-align: left;
@@ -205,7 +229,7 @@ flex-wrap: wrap;
     -moz-transition: all 0.8s ease-in-out;
     -o-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;
-}
+} */
 #wrapper.our-people .xas-banner {
     height: 400px;
     max-height: max-content;
