@@ -15,7 +15,7 @@
 					<li><a href="<?php echo base_url(); ?>platform/core">Odessa Origination</a></li>
 					<li><a href="<?php echo base_url(); ?>platform/core/">Odessa Servicing</a></li>
 					<li><a href="<?php echo base_url(); ?>platform/developer-tools">Odessa Build</a></li>
-					<li><a href="<?php echo base_url(); ?>auto-finance-news" hreflang="en">Auto Finance</a></li>
+					<li><a href="<?php echo base_url(); ?>auto-finance-software" hreflang="en">Auto Finance</a></li>
 
 					<li><a id="features" class="active" href="<?php echo base_url(); ?>platform">View all platform<span> features</span></a></li>
 				</ul>
