@@ -576,10 +576,11 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
             // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
             $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
             $("#primaryForm").submit();
+			$(".box").hide();
             return true;
         } else {
             // Show an alert or handle the case when the checkbox is not checked
-            alert('Please agree to the privacy policy.');
+            // alert('Please agree to the privacy policy.');
 			$(".box").show();
             return false;
         }
