@@ -566,7 +566,7 @@
           // Check if the disclaimer checkbox is checked
           if ($('#agree').is(':checked')) {
               // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-              $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+              $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
               $("#secondaryForm").submit();
    		$('.box').hide();
               return true;
