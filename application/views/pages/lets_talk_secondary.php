@@ -371,12 +371,14 @@
 								<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
 							</div>
 						</div>
+						<div class="col-sm-12">
 						<div class="disclaimer">
+									By submitting this form, I understand Odessa will process my personal information in accordance with their privacy policy.  <br>I understand I may withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
 									<label for="agree">
-										<input type="checkbox" id="agree"> By submitting this form, I understand Odessa will process my personal information in accordance with their privacy policy. I understand I may withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+										<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
 									</label>
 								</div>
-							
+				</div>
 					</div>
 					<div class="clearfix secbtntop">
 						<button class="odc__btn odc__btn--primary odc__btn--xl" id="letstalk">Let’s Talk</button>
