@@ -142,6 +142,7 @@ section.different .different_inner {
   top: 2px;
   width: auto;
   margin-top: 0;
+  cursor: pointer;
 }
 body {
   font-family: MaisonNeue-Book;
