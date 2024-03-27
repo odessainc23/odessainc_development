@@ -570,8 +570,8 @@
         // Check if the disclaimer checkbox is checked
         if ($('#agree').is(':checked')) {
             // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-            $("#primaryForm").submit();
+            $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+            $("#secondaryForm").submit();
 			$('.box').hide();
             return true;
         } else {
