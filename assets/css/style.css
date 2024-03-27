@@ -126,9 +126,23 @@ section.different .different_inner {
 .disclaimer a:hover{
   color:#00abc8
 }
+.disclaimer .box{
+  width: 12px;
+    height: 12px;
+    border: 2px solid red;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    display: none;
+}
+
 .disclaimer button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+#agree{
+  position: relative;
 }
 #secondaryForm .disclaimer{
   color: #fff;

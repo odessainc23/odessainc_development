@@ -375,6 +375,7 @@
 						<div class="disclaimer">
 									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
 									<label for="agree">
+									<span class="box"></span>
 										<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
 									</label>
 								</div>
@@ -579,6 +580,7 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
         } else {
             // Show an alert or handle the case when the checkbox is not checked
             alert('Please agree to the privacy policy.');
+			$(".box").show();
             return false;
         }
     } else {
