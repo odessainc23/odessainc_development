@@ -588,7 +588,7 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
         window.location.reload();
         return false;
     }
-});
+})
 
     $("#first_name").keypress(function(event){
               var regex = new RegExp("^[a-zA-Z ]*$");
