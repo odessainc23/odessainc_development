@@ -85,6 +85,59 @@ section.different .different_inner {
   font-style: normal;
   font-display: swap;
 }
+.disclaimer {
+  margin: 10px auto 0;
+  /* max-width: 600px; */
+  /* padding: 20px; */
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+
+}
+
+.disclaimer label {
+  color: #555b6d;
+    font-size: 12px;
+ 
+}
+
+.disclaimer input[type="checkbox"] {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.disclaimer button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.disclaimer button:hover {
+  background-color: #0056b3;
+}
+
+.disclaimer button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+#secondaryForm .disclaimer label{
+  color: #fff;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+#secondaryForm .disclaimer input[type="checkbox"] {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: auto;
+  margin-top: 0;
+}
 body {
   font-family: MaisonNeue-Book;
   line-height: 1.5;

@@ -371,7 +371,12 @@
 								<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
 							</div>
 						</div>
-						
+						<div class="disclaimer">
+									<label for="agree">
+										<input type="checkbox" id="agree"> By submitting this form, I understand Odessa will process my personal information in accordance with their privacy policy. I understand I may withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+									</label>
+								</div>
+							
 					</div>
 					<div class="clearfix secbtntop">
 						<button class="odc__btn odc__btn--primary odc__btn--xl" id="letstalk">Let’s Talk</button>
@@ -561,18 +566,24 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
     });
 
 	$("#letstalk").click(function(){
-	
-		var honeypot_val = $("#honeypot").val();
-		if(honeypot_val == ''){
-			$('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
-			$("#secondaryForm").submit();
-			return true;
-		}else{
-			window.location.reload();
-			return false;
-		}
-   
-	});
+    var honeypot_val = $("#honeypot").val();
+    if(honeypot_val == ''){
+        // Check if the disclaimer checkbox is checked
+        if ($('#agree').is(':checked')) {
+            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+            $("#primaryForm").submit();
+            return true;
+        } else {
+            // Show an alert or handle the case when the checkbox is not checked
+            alert('Please agree to the terms and conditions');
+            return false;
+        }
+    } else {
+        window.location.reload();
+        return false;
+    }
+});
 
     $("#first_name").keypress(function(event){
               var regex = new RegExp("^[a-zA-Z ]*$");
