@@ -123,6 +123,9 @@ section.different .different_inner {
 .disclaimer a{
   color:#00abc8
 }
+.disclaimer a:hover{
+  color:#00abc8
+}
 .disclaimer button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
