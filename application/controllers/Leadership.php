@@ -49,29 +49,6 @@ class Leadership extends CI_Controller {
 				)
 			),
 			array(
-				'name'			=> 'Sumit Maheshwari',
-				'thumbnail'		=> base_url() .'assets/images/leadership/sumit-maheshwari.jpg',
-				'title'			=> 'CFO',
-				'description'	=> 'Sumit is CFO at Odessa. Since joining the organization in 2017, Sumit has led the Finance function, including controllership, business finance, and pricing. Sumit focuses on delivering Odessa’s high growth while also improving operating margin.
-				Sumit has 15+ years of experience and a proven track record in setting up global finance functions for IT and IT Enabled Services businesses. He also has deep experience in leading fundraising, M&A, and IPO transactions for global organizations.
-				Before joining Odessa, Sumit served as Head of Business Finance at AXISCADES and Head of Corporate Financial Reporting at J.P. Morgan and Genpact. Sumit is a Chartered Accountant  from the ICAI.',
-				'experience'	=> '6 Years in Leasing',
-				'social'		=> array(
-					'linkedin'	=> 'https://www.linkedin.com/in/casumitmaheshwari/',
-				)
-			),
-			
-			array(
-				'name'			=> 'Jason St. Laurent',
-				'thumbnail'		=> base_url() .'assets/images/leadership/JasonStLaurent_Odessa.jpg',
-				'title'			=> 'COO',
-				'description'	=> 'Jason is Odessa’s COO, responsible for leading all aspects of the company’s delivery teams across system implementation and customer support. With 23 years of experience in global system implementations, technology development, and inter-disciplinary project management, Jason is focused on delivering exception customer experience, implementing best practices to realize accelerated time-to-value for customers, and developing services teams to scale. Prior to Odessa, he grew and led a variety of services portfolios across FIS. Jason holds a Bachelor’s degree in Accounting and Management Information Systems from the University of Delaware.',
-				'experience'	=> '24 years in Delivery',
-				'social'		=> array(
-					'linkedin'	=> 'https://www.linkedin.com/in/jason-st-laurent-0694472/',
-				)
-			),
-			array(
 				'name'			=> 'Roopa Jayaraman',
 				'thumbnail'		=> base_url() .'assets/images/leadership/roopa-jayaraman.jpg',
 				'title'			=> 'CTO',
@@ -84,6 +61,21 @@ class Leadership extends CI_Controller {
 
 				)
 			),
+			array(
+				'name'			=> 'Sumit Maheshwari',
+				'thumbnail'		=> base_url() .'assets/images/leadership/sumit-maheshwari.jpg',
+				'title'			=> 'CFO',
+				'description'	=> 'Sumit is CFO at Odessa. Since joining the organization in 2017, Sumit has led the Finance function, including controllership, business finance, and pricing. Sumit focuses on delivering Odessa’s high growth while also improving operating margin.
+				Sumit has 15+ years of experience and a proven track record in setting up global finance functions for IT and IT Enabled Services businesses. He also has deep experience in leading fundraising, M&A, and IPO transactions for global organizations.
+				Before joining Odessa, Sumit served as Head of Business Finance at AXISCADES and Head of Corporate Financial Reporting at J.P. Morgan and Genpact. Sumit is a Chartered Accountant  from the ICAI.',
+				'experience'	=> '6 Years in Leasing',
+				'social'		=> array(
+					'linkedin'	=> 'https://www.linkedin.com/in/casumitmaheshwari/',
+				)
+			),
+			
+			
+			
 			
 			array(
 				'name'			=> 'W. Johnson ',
@@ -106,7 +98,16 @@ class Leadership extends CI_Controller {
 					'linkedin'	=> 'https://www.linkedin.com/in/jeffrey-lezinski-7144562a/',
 				)
 			),
-			
+			array(
+				'name'			=> 'Scott Frymire',
+				'thumbnail'		=> base_url() .'assets/images/leadership/scott.jpg',
+				'title'			=> 'SVP, Corporate Marketing',
+				'description'	=> 'Scott is Odessa’s SVP of Corporate Marketing, responsible for driving  company’s solution messaging, expanding the brand presence, and building a best-in-class marketing organization. He has a diverse background with over 25 years of experience in B2B marketing. Scott has held marketing leadership roles in rapidly evolving industries like digital commerce, AI, and IT performance monitoring, shaping success stories at Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, where he provided fractional CMO services and strategic marketing consultation to emerging B2B enterprises.  Scott’s early career was marked by significant contributions to ERP software companies, including Prophet 21 and Epicor, reflecting his unwavering commitment to driving growth and innovation.',
+				'experience'	=> '27 years in B2B software ',
+				'social'		=> array(
+				'linkedin'	    => 'https://www.linkedin.com/in/scottfrymire/',
+				)
+			),
 			// array(
 			// 	'name'			=> 'Andrew Baird',
 			// 	'thumbnail'		=> base_url() .'assets/images/leadership/andrew.jpg',
@@ -141,16 +142,7 @@ class Leadership extends CI_Controller {
 			),
 			
 			
-			array(
-				'name'			=> 'Scott Frymire',
-				'thumbnail'		=> base_url() .'assets/images/leadership/scott.jpg',
-				'title'			=> 'SVP, Corporate Marketing',
-				'description'	=> 'Scott is Odessa’s SVP of Corporate Marketing, responsible for driving  company’s solution messaging, expanding the brand presence, and building a best-in-class marketing organization. He has a diverse background with over 25 years of experience in B2B marketing. Scott has held marketing leadership roles in rapidly evolving industries like digital commerce, AI, and IT performance monitoring, shaping success stories at Unilog, Proton.ai, and ScienceLogic. Prior to joining Odessa, he founded Tidewater CMO, where he provided fractional CMO services and strategic marketing consultation to emerging B2B enterprises.  Scott’s early career was marked by significant contributions to ERP software companies, including Prophet 21 and Epicor, reflecting his unwavering commitment to driving growth and innovation.',
-				'experience'	=> '27 years in B2B software ',
-				'social'		=> array(
-				'linkedin'	    => 'https://www.linkedin.com/in/scottfrymire/',
-				)
-			),
+			
 			array(
 				'name'			=> 'Steve Nippak ',
 				'thumbnail'		=> base_url() .'assets/images/leadership/steve.png',
@@ -162,6 +154,16 @@ class Leadership extends CI_Controller {
 					'linkedin'	=> 'https://www.linkedin.com/in/stevenippak2020/',
 				)
 			),
+			// array(
+			// 	'name'			=> 'Jason St. Laurent',
+			// 	'thumbnail'		=> base_url() .'assets/images/leadership/JasonStLaurent_Odessa.jpg',
+			// 	'title'			=> 'COO',
+			// 	'description'	=> 'Jason is Odessa’s COO, responsible for leading all aspects of the company’s delivery teams across system implementation and customer support. With 23 years of experience in global system implementations, technology development, and inter-disciplinary project management, Jason is focused on delivering exception customer experience, implementing best practices to realize accelerated time-to-value for customers, and developing services teams to scale. Prior to Odessa, he grew and led a variety of services portfolios across FIS. Jason holds a Bachelor’s degree in Accounting and Management Information Systems from the University of Delaware.',
+			// 	'experience'	=> '24 years in Delivery',
+			// 	'social'		=> array(
+			// 		'linkedin'	=> 'https://www.linkedin.com/in/jason-st-laurent-0694472/',
+			// 	)
+			// ),
 		);
 	}
 }
