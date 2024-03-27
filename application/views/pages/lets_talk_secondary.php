@@ -454,119 +454,115 @@
 </script> 
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
-$(document).ready(function() {
-	$.validator.addMethod("myusername", function(value,element) {
-    return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-}, 'Free email addresses are not allowed.');
-
-
-$.validator.addMethod("lettersonly", function(value, element) {
-     return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
-  );
-
-
-$.validator.addMethod("noSpace", function(value, element) { 
-      return value == '' || value.trim().length != 0;  
-    }, "No spaces allowed !! please don't leave it empty.");
-
-
-    $.validator.addMethod("mobile", function(phone_number, element) {
-phone_number = phone_number.replace(/\s+/g, ""); 
-return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
-phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
-}, "Mobile number should be of 6 to 15 digits.");
-
-
-
-    $("#secondaryForm").validate({
-        rules: {
-            "first-name":{
-              required: true,
-              maxlength: 50,
-              lettersonly:true
-            }, 
-            "last-name":{
-              required: true,
-              maxlength: 50,
-              lettersonly:true
-            },
-            email: {
-                required: true,
-                myusername: true,
-            },
-            phone: {
-                required: true,
-                minlength:6,
-                maxlength:15,
-                mobile:true
-              },
-            "job-title": {
-                required: true
-              },
-            company: {
-                required: true
-            },
-            "software-used": {
-              required: true
-            },
-            country: {
-              required: true
-            }
-        },
-            messages: {
-            "first-name": {
-              required:"",
-              maxlength:""
-              }, 
-            "last-name": {
-              required:"",
-              maxlength:""
-              },           
-            email: {
-                required: "",
-               },
-            phone: {
-                required: "",
-                minlength:"",
-				maxlength:""
-               },
-            "job-title": {
-                required: ""
-            },
-            company: {
-                required: ""
-            },
-            "software-used": {
-              required: "",
-            },
-            country: {
-              required: "",
-            }
-          },
-            submitHandler: function (form) {
-			
-				var honeypot_val = $("#honeypot").val();
-				if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-					if(honeypot_val != ''){
-						window.location.reload();
-						return false;
-					}else{
-						$(".capt").addClass("error");
-						return false;
-					}
-				} else {
-					if(honeypot_val == ''){
-						$("#secondaryForm").submit();
-						return true;
-					}else{
-						$(".capt").removeClass("error");
-						return true
-					}
-				}
-
-            
+	$(document).ready(function() {
+	  $.validator.addMethod("myusername", function(value,element) {
+		return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+	}, 'Free email addresses are not allowed.');
+	
+	$.validator.addMethod("lettersonly", function(value, element) {
+		 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
+	  );
+	
+	$.validator.addMethod("noSpace", function(value, element) { 
+		  return value == '' || value.trim().length != 0;  
+		}, "No spaces allowed !! please don't leave it empty.");
+	
+	
+		$.validator.addMethod("mobile", function(phone_number, element) {
+	phone_number = phone_number.replace(/\s+/g, ""); 
+	return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
+	phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
+	}, "Mobile number should be of 6 to 15 digits.");
+	
+	
+	
+	$("#secondaryForm").validate({
+		rules: {
+			"first-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
+			}, 
+			"last-name":{
+				required: true,
+				maxlength: 50,
+				lettersonly:true
+			},
+			email: {
+				required: true,
+				myusername: true,
+			},
+			phone: {
+				required: true,
+				minlength:6,
+				maxlength:15,
+				mobile:true
+				},
+			"job-title": {
+				required: true
+				},
+			company: {
+				required: true
+			},
+			"software-used": {
+				required: true
+			},
+			country: {
+				required: true
 			}
-    });
+		},
+			messages: {
+			"first-name": {
+				required:"",
+				maxlength:""
+				}, 
+			"last-name": {
+				required:"",
+				maxlength:""
+				},           
+			email: {
+				required: "",
+				},
+			phone: {
+				required: "",
+				minlength:"",
+				maxlength:""
+				},
+			"job-title": {
+				required: ""
+			},
+			company: {
+				required: ""
+			},
+			"software-used": {
+				required: "",
+			},
+			country: {
+				required: "",
+			}
+			},
+			submitHandler: function (form) {
+			
+			var honeypot_val = $("#honeypot").val();
+			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
+				if(honeypot_val != ''){
+					window.location.reload();
+					return false;
+				}else{
+					$(".capt").addClass("error");
+					return false;
+				}
+			} else {
+				if(honeypot_val == ''){
+					$("#secondaryForm").submit();
+					return true;
+				}else{
+					$(".capt").removeClass("error");
+					return true
+				}
+			}
+		}
+	});
 
 	$("#letstalk").click(function(){
     var honeypot_val = $("#honeypot").val();
@@ -574,14 +570,14 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
         // Check if the disclaimer checkbox is checked
         if ($('#agree').is(':checked')) {
             // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
+            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
             $("#primaryForm").submit();
-			$(".box").hide();
+			$('.box').hide();
             return true;
         } else {
             // Show an alert or handle the case when the checkbox is not checked
             // alert('Please agree to the privacy policy.');
-			$(".box").show();
+			$('.box').show();
             return false;
         }
     } else {
@@ -590,64 +586,63 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
     }
 })
 
-    $("#first_name").keypress(function(event){
-              var regex = new RegExp("^[a-zA-Z ]*$");
-                  console.log(regex);
-              var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-              if (!regex.test(key)) {
-              event.preventDefault();
-              return false;
-              }
-         });
+	$("#first_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
 
-         $("#last_name").keypress(function(event){
-              var regex = new RegExp("^[a-zA-Z ]*$");
-                  console.log(regex);
-              var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-              if (!regex.test(key)) {
-              event.preventDefault();
-              return false;
-              }
-         });
+	$("#last_name").keypress(function(event){
+		var regex = new RegExp("^[a-zA-Z ]*$");
+			console.log(regex);
+		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+		if (!regex.test(key)) {
+		event.preventDefault();
+		return false;
+		}
+	});
 
-         $('#secondaryForm input').bind("cut copy paste",function(e) {
-          e.preventDefault();
-          });
+	$('#secondaryForm input').bind("cut copy paste",function(e) {
+		e.preventDefault();
+	});
+	
+	
+		
+	});
+	
+	$(function(){
+	  function rescaleCaptcha(){
+		var width = $('.g-recaptcha').parent().width();
+		var scale;
+		if (width < 302) {
+		  scale = width / 302;
+		} else{
+		  scale = 1; 
+		}
+	
+		$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+		$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+		$('.g-recaptcha').css('transform-origin', '0 0');
+		$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+	  }
+	
+	  rescaleCaptcha();
+	  $( window ).resize(function() { rescaleCaptcha(); });
+	
+	});
+	
+	function isNumberKey(evt){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+		if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
 
-
-    
-});
-
-$(function(){
-  function rescaleCaptcha(){
-    var width = $('.g-recaptcha').parent().width();
-    var scale;
-    if (width < 302) {
-      scale = width / 302;
-    } else{
-      scale = 1; 
-    }
-
-    $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-    $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-    $('.g-recaptcha').css('transform-origin', '0 0');
-    $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-  }
-
-  rescaleCaptcha();
-  $( window ).resize(function() { rescaleCaptcha(); });
-
-});
-function isNumberKey(evt)
-      {
-         var charCode = (evt.which) ? evt.which : event.keyCode
-         if (charCode > 31 && (charCode < 48 || charCode > 57))
-            return false;
-
-         return true;
-      
-      }
-</script>
+		return true;
+	}
+	</script>
 <link href="<?= base_url(); ?>assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
 <script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
 <script src="https://www.google.com/recaptcha/api.js"></script>
