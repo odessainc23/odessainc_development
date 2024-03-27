@@ -373,9 +373,9 @@
 						</div>
 						<div class="col-sm-12">
 						<div class="disclaimer">
-									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I may withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
 									<label for="agree">
-										<input type="checkbox" id="agree"> I agree to be contacted and I understand I can withdraw at any time.
+										<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
 									</label>
 								</div>
 				</div>
