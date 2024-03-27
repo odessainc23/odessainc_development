@@ -141,7 +141,7 @@ section.different .different_inner {
   background-color: #ccc;
   cursor: not-allowed;
 }
-#agree{
+.disclaimer label{
   position: relative;
 }
 #secondaryForm .disclaimer{
@@ -2377,7 +2377,7 @@ section.news {
   justify-content: center;
 }
 .acc .accreditations .flex li img {
-  width: 100px;
+  width: 105px;
   filter: none;
 }
 .acc .accreditations .flex li {
