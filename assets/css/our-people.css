@@ -15,7 +15,9 @@
 }
 .live-breathe h2{
     margin: 0 0 20px;
-  
+}
+.mob{
+    display: none;
 }
 .live-breathe h4{
     font-size: 18px;
@@ -308,6 +310,12 @@ flex-wrap: wrap;
 @media only screen and (max-width: 900px) {
     .talent-box:after {
         left: 35px;
+    }
+    .mob{
+        display: block;
+    }
+    .dek{
+        display: none;
     }
     .our-people .xas-banner .home-hero-bg img{
         width: 100%;
