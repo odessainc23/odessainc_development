@@ -15,6 +15,15 @@
     flex-wrap: wrap;
     padding: 0;
 }
+.acc .accreditations .flex li:nth-child(1) img{
+width: 110px;
+}
+.acc .accreditations .flex li:nth-child(2) img{
+  width: 115px;
+  }
+  .acc .accreditations .flex li:nth-child(4) img{
+    width: 105px;
+    }
 .footer_li_wrap.desktop_view_footer .flex{
     flex-wrap: wrap;
     justify-content: center;
@@ -84,6 +93,85 @@ section.different .different_inner {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+.disclaimer {
+  margin: 10px auto 0;
+  /* max-width: 600px; */
+  /* padding: 20px; */
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: MaisonNeue-Book;
+  color: #555b6d;
+}
+
+.disclaimer label {
+  color: #555b6d;
+    font-size: 12px;
+ 
+}
+
+.disclaimer input[type="checkbox"] {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.disclaimer button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.disclaimer button:hover {
+  background-color: #0056b3;
+}
+.disclaimer a{
+  color:#00abc8
+}
+.disclaimer a:hover{
+  color:#00abc8
+}
+.disclaimer .box{
+  width: 12px;
+    height: 12px;
+    border: 2px solid red;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    display: none;
+}
+
+.disclaimer button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.disclaimer label{
+  position: relative;
+}
+#secondaryForm .disclaimer{
+  color: #fff;
+}
+#secondaryForm .disclaimer label{
+  color: #fff;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-top: 5px;
+}
+#secondaryForm .disclaimer input[type="checkbox"] {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: auto;
+  margin-top: 0;
+  cursor: pointer;
 }
 body {
   font-family: MaisonNeue-Book;
@@ -2290,6 +2378,24 @@ section.news {
   display: inline-block;
   width: 100%;
 }
+.acc .cloudserverCon{
+  background: none;
+  padding: 80px 0;
+}
+.acc .accreditations .flex{
+  justify-content: center;
+}
+.acc .accreditations .flex li img {
+  width: 105px;
+  filter: none;
+}
+.acc .accreditations .flex li {
+  margin: 0 20px;
+}
+.acc.cloudserversection{
+  background: #F3F3F5;
+  margin: 0 0 50px;
+}
 section.annoucement .heading_div span.annoucement_icon,
 section.awards .heading_div span.award_icon,
 section.news .heading_div span.news_icon {
@@ -2355,12 +2461,12 @@ section.news .bottomdiv {
 }
 .news_div .news_lt {
   background: #ffffff;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  border-right: 1px solid #decccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border-right: 1px solid #decccc;
 }
 .news_div .news_lt img {
   width: 200px;
@@ -3280,12 +3386,21 @@ section.innovate_section .btns_style:hover {
   #wrapper {
     margin: 60px auto auto;
   }
+  .acc .accreditations .flex li {
+    margin: 0 5px;
+}
+.acc.cloudserversection .cloudserverCon{
+  padding-bottom: 70px;
+}
+.acc h2{
+  font-size:25px}
+.acc .accreditations .flex li img {
+  width:60px  !important;
+  filter: none;
+}
   .accreditations .flex{
     justify-content: center;
     padding: 0;
-  }
-  .accreditations {
-    margin-bottom: 20px;
   }
   .mobile_view_footer .accreditations .flex{display: none;}
   .header_banner,

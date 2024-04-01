@@ -47,7 +47,7 @@
 	<div id="wrapper"> 
 		<div class="">
 		<!--Let's Talk Form Section start here-->
-		<section class="letstalkformSection">
+	<section class="letstalkformSection">
 			<div class="container clearfix">
 				<div class="letstalkformCon">
 					<div class="row clearfix">
@@ -61,7 +61,7 @@
 									<li><span></span>Connect you with helpful resources</li>
 								</ul>
 								<div class="letsAddress">
-									<div class="addrow">
+										<div class="addrow">
 										<div class="counnm">North America</div>
 										<div class="counnum">+1 (215) 231 9800</div>
 									</div>
@@ -380,6 +380,13 @@
 							<div class="capt">
 							<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
 								</div>
+								<div class="disclaimer">
+									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+									<label for="agree">
+										<span class="box"></span>
+										<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
+									</label>
+								</div>
 							
 							<div class="clearfix">
 								<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Let’s Talk</button>
@@ -610,18 +617,27 @@
 	});
 
 	$("#letstalk").click(function(){
-		var honeypot_val = $("#honeypot").val();
-		if(honeypot_val == ''){
-			// $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-			$('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-			$("#primaryForm").submit();
-			return true;
-		}else{
-			window.location.reload();
-			return false;
-		}
-	})	
-	
+    var honeypot_val = $("#honeypot").val();
+    if(honeypot_val == ''){
+        // Check if the disclaimer checkbox is checked
+        if ($('#agree').is(':checked')) {
+            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+            $("#primaryForm").submit();
+			$('.box').hide();
+            return true;
+        } else {
+            // Show an alert or handle the case when the checkbox is not checked
+            // alert('Please agree to the privacy policy.');
+			$('.box').show();
+            return false;
+        }
+    } else {
+        window.location.reload();
+        return false;
+    }
+})
+
 	$("#first_name").keypress(function(event){
 		var regex = new RegExp("^[a-zA-Z ]*$");
 			console.log(regex);

@@ -20,7 +20,7 @@
      font-size: 16px;
  }
  .home-hero-cwrap{
-     padding-top: 120px;
+     padding-top: 140px;
  }
  .testimonial-content {
      padding-bottom: 20px;
@@ -37,10 +37,10 @@
    color: #fff;
    border: none;
    cursor: pointer;
+   min-width:auto;
  }
- .watch:hover,.watch:focus{
+ .watch:hover{
      color:#fff;
-     text-decoration: none;
  }
  
  .video-popup {
@@ -156,15 +156,6 @@
      width: max-content;
      margin: 20px 0 0;
  }
-
- .wistia_click_to_play{
-    height: 100%;
-    width: 100%;
- }
- .testimonial-content img{
-    width:300px;
-    height:300px
- }
  .videoPoster:after{
      background: none;
  }
@@ -187,6 +178,12 @@
    opacity: 0;
    height: 0;
    transition-delay: 0s, 0.8s;
+ }
+ #wistia_41.thumb_container{
+    width: 100%;
+ }
+ .testimonial-content img{
+    width:100%
  }
  
  .videoPoster {
@@ -261,49 +258,65 @@
      input, button{
          margin:0;
      }
-     .overlay.one{
-         opacity: 1;
-     }
-     .overlay img{
-         margin: 50px auto 0px auto;
-     }
-     .login-container {
-         background-color: white;
-         padding: 20px;
-         border-radius: 5px;
-         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-         text-align: center;
-         width: 40%;
-         display: block;
-         margin: 30px auto;      
-         z-index: 9999999;
- }
- 
- input, button {
-     margin: 0 0;
-     padding: 8px;
-     border: 1px solid #ccc;
-     border-radius: 3px;
-     width: 100%;
- }
- 
- button {
-     background-color: #007bff;
-     color: white;
-     border: none;
-     cursor: pointer;
- }
- .letstalkform .form-control.red{
-     border: 2px solid #962424;  
- }
- #footer{
-     position: relative;
-     height: 24px;
-     width: 100%;
-     text-align: center;
-     font-size: 0.75rem;
-     color: #fff;
- }
+     .overlay.ov{
+        position: fixed;
+        width: 100%;
+        background-color: #263746;
+        width: 100%;
+        height:100vh;
+        z-index: 9999999;
+        display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+   
+    }
+    .overlay.ov{
+        opacity: 1;
+    }
+    .overlay img{
+        margin: 50px auto 0px auto;
+    }
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 40%;
+        display: block;
+        margin: 30px auto;
+
+        z-index: 9999999;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.letstalkform .form-control.red{
+    border: 2px solid #962424;  
+}
+#footer{
+    position: relative;
+    /* margin-top: -24px; */
+    height: 24px;
+    width: 100%;
+    /* clear: both; */
+    text-align: center;
+    font-size: 0.75rem;
+    color: #fff;
+}
  .testimonial{
      margin:3em 0 0;
  }
@@ -326,16 +339,12 @@
      .login-container{
          width:80%
      }
-     .home-hero-ctitle{
-        font-size: 2rem;
-     }
+     .home-hero-ctitle {
+    font-size: 2rem;
+}
      .home-hero-bgimg {
      width: 100%;
      transform: translateX(0) translateZ(0);
- }
- .testimonial-content img{
-    width:100%;
-    height:auto
  }
      .video {
      width: 100%;
@@ -396,7 +405,7 @@
                          <div class="home-hero-ctitlewrap">
                              <h1 class="home-hero-ctitle">Your Proven <br>Asset Finance<br> Solution</h1>
                          </div>
-                        <p class="home-hero-cdesc">Innovate and grow your business — all while automating operations —
+                         <p class="home-hero-cdesc">Innovate and grow your business — all while automating operations —
                              with the only asset finance solution you'll ever need.</p>
                          <a class="odc__btn odc__btn--primary odc__btn--md" href="<?= base_url(); ?>platform"
                              target="_self">Explore the platform</a>
@@ -404,18 +413,22 @@
                  </div>
              </div>
          </div>
-         <div class="testimonial" id="JCTestimonial">
+         <div class="testimonial">
              <div class="container">
                  <div class="video">
-                     <img src="<?php echo base_url(); ?>assets/images/o-circle.png" alt="odessa-logo">
+                     <img src="<?php echo base_url(); ?>assets/images/o-circle.png">
                      </div>
              <div class="d-flex">
                  
              <div class="testimonial-content">
-                
-                <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-                    <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
-                </span>            
+                <!-- <iframe src="https://odessainc.wistia.com/medias/kndvnc3z5u"></iframe> -->
+               <!-- <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button> -->
+               <!-- <a href="https://fast.wistia.com/embed/iframe/zs8hlyi5xz?autoPlay=true&controlsVisibleOnLoad=true&playerColor=990000&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-tumblr-googlePlus&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" class="wistia-popover[height=388,playerColor=990000,width=640]">
+                <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" />
+            </a> -->
+            <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
+                <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
+            </span>
              </div>
              
              <div class="video-con">
@@ -423,7 +436,8 @@
                  <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
                     <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
                 </span>
-             </div>
+                 
+            </div>
             
            </div>
            <div class="video-popup">
@@ -432,7 +446,7 @@
                  <div class="popup">
                    <span class="close">&times;</span>
                    <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
-                     <source src="<?php echo base_url(); ?>assets/images/jc.mp4" type="video/mp4">
+                     <source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
                      <!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
                    </video>
                  </div>
@@ -460,7 +474,7 @@
                      <div class="finance_assets_row">
                          <div class="row clearfix">
                              <div class="col-xs-12 col-sm-4">
-                                 <a href="<?= base_url(); ?>auto-finance-news"> <h3>Auto Finance</h3></a>
+                                 <a href="<?= base_url(); ?>auto-finance-software"> <h3>Auto Finance</h3></a>
                              </div>
                              <div class="col-xs-12 col-sm-4">
                                  <a href="<?= base_url(); ?>platform/core"><h3>Equipment Finance</h3></a>
@@ -556,7 +570,26 @@
              </div>
          </div>
          <!--Platform Solution Section End-->
- 
+ <!-- accrediatations -->
+
+ <div class="cloudserversection home-side acc">
+    <div class="container clearfix">
+        <div class="cloudserverCon">
+            <h2 class="text-center">Security and Compliance</h2>
+            <div class="accreditations">
+                <ul class="flex">
+                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn.svg" alt="SOC"></li>
+                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-2.svg" alt="SOC2"></li>
+                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-3.svg" alt="SOC3"></li>
+                    <li><img src="<?php echo base_url(); ?>assets/images/icons/ison.svg" alt="ISO27001"></li>
+                    <li><img src="<?php echo base_url(); ?>assets/images/icons/ison-2.svg" alt="ISO27017"></li>
+                    
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
          <!--Cloud or Server Start Here-->
          <div class="cloudserversection home-side">
              <div class="container clearfix">
@@ -584,7 +617,8 @@
          </div>
      </div>
      <!--Cloud or Server End Here-->
- 
+     
+
      <!--Integrate with the Tools Start-->
      <div class="integratewithtools home-side">
          <div class="container clearfix">
@@ -663,28 +697,28 @@
                  </div>
                  <div class="trusted_brands_logo">
  
-                    <div class="brlogo">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="metabank Logo"
-                            width="51" height="51"></amp-img>
-                    </div>
-
-                    <div class="brlogo">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/pnc_logo.png" alt="pnc Logo"
-                            width="90" height="30"></amp-img>
-                    </div>
-                    <div class="brlogo">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="canon Logo"
-                            width="80" height="25"></amp-img>
-                    </div>
-                    <div class="brlogo">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/truist_logo.png" alt="truist Logo"
-                            width="100" height="30"></amp-img>
-                    </div>
-                    <div class="brlogo">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/johnson-controls.png?v2" alt="johnson Logo"
-                            width="100" height="45"></amp-img>
-                    </div>
-                </div>
+                     <div class="brlogo">
+                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="metabank Logo"
+                             width="51" height="51"></amp-img>
+                     </div>
+ 
+                     <div class="brlogo">
+                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/pnc_logo.png" alt="pnc Logo"
+                             width="90" height="30"></amp-img>
+                     </div>
+                     <div class="brlogo">
+                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="canon Logo"
+                             width="80" height="25"></amp-img>
+                     </div>
+                     <div class="brlogo">
+                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/truist_logo.png" alt="truist Logo"
+                             width="100" height="30"></amp-img>
+                     </div>
+                     <div class="brlogo">
+                         <amp-img src="<?php echo base_url(); ?>assets/images/johnson-controls.png" alt="johnson Logo"
+                             width="100" height="45"></amp-img>
+                     </div>
+                 </div>
              </div>
          </div>
      </div>
@@ -745,39 +779,7 @@
          }
      });
  
-   $(".overlay").addClass('one');
-     const isLoggedIn = localStorage.getItem("isLoggedIn");
  
-     if (isLoggedIn) {
-         // Hide the login form and display the welcome message
-         $("#welcomeMessage").show();
-         $(".overlay").hide();
-         $("#loginContainer").hide();
-         //$(".overlay").hide();
-     }
- 
-     $("#loginForm").submit(function(event) {
-         event.preventDefault(); // Prevent form submission
- 
-         const username = $("#username").val();
-         const password = $("#password").val();
- 
-         // Check if the username and password match the expected values
-         if (username === "odessauser" && password === "password") {
-             alert("Access granted.");
-             $(".overlay").hide();
-             $("#loginContainer").hide();
- 
-             // Store the login state in local storage
-             localStorage.setItem("isLoggedIn", true);
- 
-             // Reload the page to show the welcome message without the login form
-             location.reload();
-         } else {
-             alert("Please enter correct username and password.");
-             $(".form-control").addClass('red');
-         }
-     });
  });
                                                   
  
@@ -903,8 +905,8 @@
      }, 4000);
  
  </script>
+ <script src="https://fast.wistia.com/embed/medias/kndvnc3z5u.jsonp" async></script>
  
- </script>
  
  
  
