@@ -209,7 +209,7 @@ flex-wrap: wrap;
     transition: all 0.8s ease-in-out;
 }
 #wrapper.our-people .xas-banner {
-    height: 400px;
+    height: 380px;
     max-height: max-content;
     background: #263746;
 }
