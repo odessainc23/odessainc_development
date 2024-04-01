@@ -15,6 +15,15 @@
     flex-wrap: wrap;
     padding: 0;
 }
+.acc .accreditations .flex li:nth-child(1) img{
+width: 110px;
+}
+.acc .accreditations .flex li:nth-child(3) img{
+  width: 110px;
+  }
+  .acc .accreditations .flex li:nth-child(5) img{
+    width: 105px;
+    }
 .footer_li_wrap.desktop_view_footer .flex{
     flex-wrap: wrap;
     justify-content: center;
@@ -3386,7 +3395,7 @@ section.innovate_section .btns_style:hover {
 .acc h2{
   font-size:25px}
 .acc .accreditations .flex li img {
-  width:60px;
+  width:60px  !important;
   filter: none;
 }
   .accreditations .flex{
