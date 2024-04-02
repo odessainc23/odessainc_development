@@ -313,7 +313,7 @@ flex-wrap: wrap;
         margin: 0;
     }
     #wrapper.our-people .xas-banner {
-        height: 250px;}
+        height: 200px;}
 }
 @media only screen and (max-width: 900px) {
     .talent-box:after {
