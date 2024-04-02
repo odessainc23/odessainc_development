@@ -1,0 +1,403 @@
+.our-people .home-hero-ctitle{
+    color: #00ABC8;
+    margin: 0 0 10px;
+    font-size: 54px;
+}
+.our-people .home-hero-cdesc{
+    color: #F3F3F5;
+}
+.live-breathe{
+    background:#F3F3F5;
+    padding: 50px 0;
+}
+.our-people .home-hero-cwrap{
+    padding-top: 20px;
+}
+.live-breathe h2{
+    margin: 0 0 20px;
+}
+.mob{
+    display: none;
+}
+.live-breathe h4{
+    font-size: 18px;
+    margin-bottom: 60px;
+    font-family: MaisonNeue-Book;
+}
+
+.live-box-1{
+    background: #FFFFFF;
+    width: calc(50% - 20px);
+    margin: 0 20px;
+    padding: 15px
+}
+#wrapper.our-people{
+    margin: 64px auto auto;
+}
+.our-people .home-hero-bgimg{
+    height: 100%;
+}
+.our-people .flex{
+    display: flex;
+}
+.img-box{
+    width: 200px;
+    height: 180px;
+    background: #F3F3F5;
+    display: flex;
+    align-items: center;
+}
+.img-box img{
+    width: 100%;
+}
+.live-cont{
+    width: calc(80% - 20px);
+    margin-left: 20px;
+} 
+.live-cont h5{
+    font-family:MaisonNeue-Bold;
+    font-size: 20px;
+}
+.our-people .blue{
+color: #00ABC8;
+}
+.live-box-1 .flex{
+    align-items: flex-start;
+}
+.live-cont p{
+    font-size: 16px;
+}
+.talented-experts{
+    margin: 50px 0 30px;
+}
+.talent-box{
+    background: #F3F3F5;
+    position: relative;
+    margin: 0 0 20px 0;
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
+}
+.our-people .row.flex{
+display: flex;
+justify-content: flex-start;
+width: 100%;
+align-items: center;
+text-align: center;
+margin:0;
+flex-wrap: wrap;
+}
+
+.talent-box img{
+    margin: 0 auto 0 auto;
+    width: auto;
+    padding-top: 20px;
+    display: block;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+}
+.row.flex{
+    margin-bottom: 20px;
+}
+.talent-box:after{
+    position: absolute;
+    content: "";
+    background: url(../images/our-people/ellipse-1.svg) 0 0 no-repeat;
+    width: 158px;
+    left: 40px;
+    z-index: 0;
+    top: 88px;
+    height: 100px;
+    transform: rotate(-45deg);
+    display: none;
+}
+.talent-box.box-2:after{
+    background: url(../images/our-people/ellipse-2.svg) 0 0 no-repeat;
+    right: 69px;
+    left: inherit;
+    transform: rotate(86deg);
+    top: 70px;
+}
+.talent-container h5{
+    color: #2a2d36;
+    margin-bottom: 0;
+    font-family:MaisonNeue-Bold;
+    position: relative;
+    z-index: 19;
+    position: relative;
+    left: 0%;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    line-height:19px
+}
+.col-xl-3{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.talent-container h6{
+    color: #555B6D;
+    margin-bottom: 0;
+    z-index: 19;
+    position: relative;
+    -webkit-transition:all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+    left: 0%;
+    right: 0;
+    margin: 0 auto;
+    line-height:19px
+}
+.talk-team{
+    background: url(../images/our-people/talk-frame.svg) bottom center no-repeat #263746;
+    height: 400px;
+    background-size: 100%;
+}
+.business-talk{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.business-talk img{
+    margin-bottom: 30px;
+}
+.business-talk p{
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+.our-people .row.flex .col-xl-3:hover .description{
+    cursor: pointer;
+    margin-top:0;
+	height: 100%;
+    /* padding-top: 10px; */
+    top:0;
+    z-index: 12;
+    text-align: left;
+    width: 92%;
+    left: 4%;
+    }
+.our-people .row.flex .col-xl-3:hover h5{
+    left:0%;
+    color: #fff;
+    text-align: left;
+    padding: 0 18px;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+.our-people .row.flex .col-xl-3:hover h6{
+    left:0%;
+    color: #fff;
+    text-align: left;
+    padding: 0 18px;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+#wrapper.our-people .xas-banner {
+    height: calc(100vh - 160px);
+    max-height: 568px;
+    /* max-height: max-content;
+    background: url(../images/our-people/ban.png) right center no-repeat #263746;
+    background-size: contain; */
+}
+.our-people .xas-banner .home-hero-bg img{
+    height: 100%;
+   
+}
+.description{
+    width: 92%;
+    height: 0px;
+    top:-50%;
+    padding: 18px 18px;
+    overflow:hidden;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+	position:absolute;
+	background-color:#00ABC8;
+	
+}
+.description p{
+    color: #fff;
+    font-family: MaisonNeue-Book;
+    font-size: 15px;
+	line-height: 20px;
+	text-align:left;
+}
+@media only screen and (max-width: 1500px) {
+    .talent-box:after{ left: -6px;}
+        .talent-box.box-2:after{right:-15px}
+        .our-people .col-xl-3{
+    width: 33.33%;
+        }
+    }
+   
+@media only screen and (max-width: 1024px) {
+    .our-people .flex{
+        flex-wrap: wrap;
+    }
+    .our-people .home-hero-cinner {
+        width: 100%;
+    }
+    .talent-box:after{
+        left:71px
+    }
+    .talent-box.box-2:after{
+        right:78px;
+    }
+    .live-box-1 {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 15px;
+    }
+    .img-box {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background: none;
+    }
+    .live-cont p{
+        margin:0;
+    }
+    .our-people .blue{
+        font-size: 18px;
+    }
+    .our-people .blue br{
+        display: none;
+    }
+    .live-cont {
+        width: 100%;
+    }
+    .mob{
+        display: block;
+    }
+    .dek{
+        display: none;
+    }
+    .our-people .col-xl-3{
+        width: 50%;
+       
+    }
+    #wrapper.our-people .xas-banner {
+        height: 100vh;
+        /* max-height: 700px; */
+        display: flex;
+        flex-flow: column-reverse;
+        flex-wrap: wrap;
+    }
+    .our-people .home-hero-content {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+    }
+    .our-people .home-hero-cwrap {
+        padding-top: 0;
+    }
+    /* .our-people .xas-banner .home-hero-bg img{
+        
+        object-fit: cover;
+        
+    } */
+    .our-people .home-hero-cwrap{
+        height: auto;
+        justify-content: flex-start;
+        width: 95%;
+        text-align: center;
+    }
+    .our-people .home-hero-ctitle{
+        font-size: 40px;
+    }
+   
+    .our-people .row.flex{
+        margin: 0;
+    }
+    .our-people .home-hero-bgimg{
+        width:100%;    transform: none;
+    }
+    .our-people .xas-banner .home-hero-bg img {
+        height: auto;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        object-fit: fill;
+        object-position: 0;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .talent-box:after {
+        left: 35px;
+    }
+
+
+    .talent-box.box-2:after {
+        right: 35px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .our-people .col-xl-3{
+        width: 100%;
+    }
+    #wrapper.our-people .xas-banner {
+        background-image: none;
+    }
+   
+    .talent-box.box-2:after{
+        right:103px;
+    }
+    .talent-box:after{
+        left:91px
+    }
+    .our-people .home-hero-content{
+        top:50px
+    }
+    #wrapper.our-people .xas-banner {
+        height: 100vh;
+    }
+    .our-people .home-hero-ctitle{font-size: 30px;}
+    #wrapper.our-people .xas-banner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+    }
+    .our-people .xas-banner .home-hero-bg{
+        width: 100%;
+    }
+    .our-people .home-hero-bgimg {
+        height: 100%;
+        width: 100%;
+    }
+    .our-people .xas-banner .home-hero-bg img {
+        height: auto;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+   
+    .our-people .home-hero-content {
+        top: 70px;
+    }
+    #wrapper.our-people .xas-banner {
+        height: 50vh;
+    }
+}
