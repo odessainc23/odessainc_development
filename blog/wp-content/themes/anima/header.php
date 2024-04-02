@@ -274,6 +274,8 @@
 																		<li class="category-dot category-bx">Company</li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>company">About Odessa</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
+																		<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
+
 																		<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
 																	</ul>
 																</div>

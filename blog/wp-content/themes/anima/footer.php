@@ -23,6 +23,8 @@
 					<h4>About Odessa</h4>
 					<ul>
 						<li><a href="<?php echo OD_BASE_URL ?>company">Company</a></li>
+						<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
+
 						<li><a href="<?php echo OD_BASE_URL ?>careers">Careers</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>blog">Blog</a></li>
 						<li><a href="<?php echo OD_BASE_URL ?>newsroom">Newsroom</a></li>
