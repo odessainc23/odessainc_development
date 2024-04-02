@@ -338,7 +338,9 @@ flex-wrap: wrap;
         left: 0;
         object-fit: fill;
         object-position: 0;
-        display: block ! IMPORTANT;
+    }
+    .our-people .xas-banner .home-hero-bg img.mob{
+        display: block  !important;
     }
 }
 @media only screen and (max-width: 900px) {
