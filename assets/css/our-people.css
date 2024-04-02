@@ -211,8 +211,8 @@ flex-wrap: wrap;
 #wrapper.our-people .xas-banner {
     height: 550px;
     max-height: max-content;
-    background: url(../images/our-people/ban.png) 0 0 no-repeat #263746;
-    background-size: 100% 100%;
+    background: url(../images/our-people/ban.png) right center no-repeat #263746;
+    background-size: contain;
 }
 .our-people .xas-banner .home-hero-bg img{
     height: 100%;
