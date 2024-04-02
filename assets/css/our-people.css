@@ -338,6 +338,7 @@ flex-wrap: wrap;
         left: 0;
         object-fit: fill;
         object-position: 0;
+        display: block ! IMPORTANT;
     }
 }
 @media only screen and (max-width: 900px) {
