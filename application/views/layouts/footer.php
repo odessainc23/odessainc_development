@@ -23,6 +23,8 @@
 						<h2 class="platform_size">About Odessa</h2>
 						<ul>
 							<li><a href="<?php echo base_url(); ?>company">Company</a></li>
+							<li><a href="<?php echo base_url(); ?>our-people" hreflang="en">Our People</a></li>
+
 							<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 							<li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
 							<li><a href="<?php echo base_url(); ?>newsroom">Newsroom</a></li>
