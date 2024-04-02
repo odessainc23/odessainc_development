@@ -248,10 +248,18 @@ flex-wrap: wrap;
     width: 33.33%;
         }
     }
+    @media only screen and (max-width: 1300px) {
+    .our-people .xas-banner .home-hero-bg img {
+        height: 72%;
+    }
+}
    
 @media only screen and (max-width: 1024px) {
     .our-people .flex{
         flex-wrap: wrap;
+    }
+    .our-people .xas-banner .home-hero-bg img {
+        height: 100%;
     }
     .our-people .home-hero-cinner {
         width: 100%;
