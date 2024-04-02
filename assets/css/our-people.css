@@ -129,10 +129,7 @@ flex-wrap: wrap;
     left: 0%;
     right: 0;
     margin: 0 auto;
-    -webkit-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+   
     line-height:19px
 }
 .col-xl-3{
@@ -147,10 +144,7 @@ flex-wrap: wrap;
     margin-bottom: 0;
     z-index: 19;
     position: relative;
-    -webkit-transition:all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    -moz-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    -o-transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
-    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+   
     position: relative;
     left: 0%;
     right: 0;
@@ -174,6 +168,18 @@ flex-wrap: wrap;
 .business-talk img{
     margin-bottom: 30px;
 }
+.bot{
+    position: absolute;
+    bottom: 20px;
+}
+.bot h5{
+    color: #fff;
+    text-align: left;
+}
+.bot h6{
+    color: #fff;
+    text-align: left;
+}
 .business-talk p{
     color: #fff;
     margin: 0 0 20px 0;
@@ -184,31 +190,25 @@ flex-wrap: wrap;
 	height: 100%;
     /* padding-top: 10px; */
     top:0;
-    z-index: 12;
+    z-index: 19;
     text-align: left;
     width: 92%;
     left: 4%;
     }
-.our-people .row.flex .col-xl-3:hover h5{
+/* .our-people .row.flex .col-xl-3:hover h5{
     left:0%;
     color: #fff;
     text-align: left;
     padding: 0 18px;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
 }
 .our-people .row.flex .col-xl-3:hover h6{
     left:0%;
     color: #fff;
     text-align: left;
     padding: 0 18px;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-}
+    
+    
+} */
 #wrapper.our-people .xas-banner {
     height: calc(100vh - 160px);
     max-height: 568px;
@@ -227,10 +227,10 @@ flex-wrap: wrap;
     top:-50%;
     padding: 18px 18px;
     overflow:hidden;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s linear;
+    -moz-transition:all 0.8s linear;
+    -o-transition: all 0.8s linear;
+    transition:all 0.8s linear;
 	position:absolute;
 	background-color:#00ABC8;
 	
