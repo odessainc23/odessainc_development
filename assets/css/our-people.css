@@ -248,13 +248,16 @@ flex-wrap: wrap;
     width: 33.33%;
         }
     }
-    @media only screen and (max-width: 1300px) {
-    .our-people .xas-banner .home-hero-bg img {
-        height: 72%;
-    }
+    @media only screen and (max-width: 1200px) {
+        .our-people .home-hero-bgimg {
+            height: 85%;
+            z-index: 8;
+            position: absolute;
+            bottom: 0;
+        }
 }
    
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
     .our-people .flex{
         flex-wrap: wrap;
     }
@@ -299,10 +302,7 @@ flex-wrap: wrap;
     .dek{
         display: none;
     }
-    .our-people .col-xl-3{
-        width: 50%;
-       
-    }
+    
     #wrapper.our-people .xas-banner {
         height: 100vh;
         /* max-height: 700px; */
@@ -357,7 +357,10 @@ flex-wrap: wrap;
         left: 35px;
     }
 
-
+    .our-people .col-xl-3{
+        width: 50%;
+       
+    }
     .talent-box.box-2:after {
         right: 35px;
     }
