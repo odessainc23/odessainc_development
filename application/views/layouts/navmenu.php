@@ -210,7 +210,8 @@ New White Paper Release: Banking on APIs - The Asset Finance Edition <a href="<?
 														<ul>
 															<li class="category-dot category-bx">Company</li>
 															<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
-														<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+															<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+															<li><a href="<?php echo base_url(); ?>our-people">Our People</a></li>
 															<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 														</ul>
 													</div>
@@ -379,6 +380,7 @@ New White Paper Release: Banking on APIs - The Asset Finance Edition <a href="<?
 										<li>Company</li>
 										<li><a href="<?php echo base_url(); ?>company">About Odessa</a></li>
 										<li><a href="<?php echo base_url(); ?>leadership">Leadership</a></li>
+										<li><a href="<?php echo base_url(); ?>our-people">Our People</a></li>
 										<li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
 									</ul>
 								</div>
