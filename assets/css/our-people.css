@@ -140,6 +140,7 @@ flex-wrap: wrap;
     overflow: hidden;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .talent-container h6{
     color: #555B6D;
