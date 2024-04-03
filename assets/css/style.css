@@ -2460,7 +2460,7 @@ section.news .bottomdiv {
   min-height: 260px;
 }
 .news_div .news_lt {
-  background: #ffffff;
+  background: #181716;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -2469,7 +2469,7 @@ section.news .bottomdiv {
     border-right: 1px solid #decccc;
 }
 .news_div .news_lt img {
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 .annoucement_div .annoucement_lt img {
