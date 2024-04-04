@@ -12,14 +12,12 @@
 	<?php cryout_meta_hook(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	
-	
+
 	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/search.css" rel="stylesheet" type="text/css">
-
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/style.css" rel="stylesheet" type="text/css">
 
@@ -145,7 +143,7 @@
                     </li>
 						</ul>
 						<div class="search-overlay"> <div class="close-search"> <i class="fa fa-close close" aria-hidden="true"></i></div></div>
-
+						
 						<div id="navbar" class="navbar-collapse collapse  js-navbar-collapse">
 							<ul class="nav navbar-nav">
 								<li class="dropdown mega-dropdown"><a href="javascript:void(0)" class="dropdown-toggle hideview" data-toggle="dropdown">Platform</a> 
@@ -276,7 +274,7 @@
 																		<li class="category-dot category-bx">Company</li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>company">About Odessa</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
-																		<li><a href="<?php echo base_url(); ?>our-people" hreflang="en">Our People</a></li>
+																		<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
 
 																		<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
 																	</ul>
@@ -285,7 +283,7 @@
 																	<ul>
 																		<li class="category-dot category-bxd">Engage with us</li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Newsroom</a></li>
-																		<!-- <li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li> -->
+																		
 																		<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Resources</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Contact Us</a></li>
 																	</ul>
@@ -441,7 +439,7 @@
 												<ul>
 													<li>Engage with us</li>
 													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Newsroom</a></li>
-													<!-- <li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li> -->
+													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Events</a></li>
 													<li><a href="<?php echo OD_BASE_URL; ?>newsroom">Resources</a></li>
 													<li><a href="<?php echo OD_BASE_URL; ?>lets-talk">Contact Us</a></li>
 												</ul>
