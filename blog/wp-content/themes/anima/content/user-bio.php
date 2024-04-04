@@ -14,7 +14,7 @@ $anima_heading_tag = ( is_single() ) ? 'h4' : 'h1';
 <section id="author-info" <?php cryout_schema_microdata( 'author' ); ?>>
 
 		<div id="author-avatar" <?php cryout_schema_microdata( 'image' );?>>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'anima_author_bio_avatar_size', 80 ), '', '', array( 'extra_attr' => cryout_schema_microdata( 'url', 0) ) ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'anima_author_bio_avatar_size', 80 ), '', '', array( 'extra_attr' => cryout_schema_microdata( 'url', 0) ),'alt' => 'Author Avatar' ); ?>
 		</div><!-- #author-avatar -->
 
 		<div id="author-description"  <?php cryout_schema_microdata( 'author-description' ); ?>>
