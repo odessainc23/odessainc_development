@@ -14,10 +14,16 @@ $(function() {
         $(".mobile_view_menu ul li a").removeClass("active"), $(this).addClass("active")
     })
       // New URL
-  var newUrl = "https://www.odessainc.com/whitepaper/unlocking-xaas-success-signup";
+  var newUrl = "https://dev.odessainc.com/whitepaper/unlocking-xaas-success-signup";
 
   // Change the href attribute of the anchor tag
   $("#post-1036 .continue-reading-link").attr("href", newUrl);
+
+
+  var newUrl2 = "https://dev.odessainc.com/whitepaper/future-ready-asset-finance-api";
+
+  // Change the href attribute of the anchor tag
+  $("#post-1040 .continue-reading-link").attr("href", newUrl);
 });
 
 function tabBx(i) {
