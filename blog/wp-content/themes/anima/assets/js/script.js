@@ -23,7 +23,7 @@ $(function() {
   var newUrl2 = "https://dev.odessainc.com/whitepaper/future-ready-asset-finance-api";
 
   // Change the href attribute of the anchor tag
-  $("#post-1040 .continue-reading-link").attr("href", newUrl);
+  $("#post-1040 .continue-reading-link").attr("href", newUrl2);
 });
 
 function tabBx(i) {
