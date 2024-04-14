@@ -117,6 +117,10 @@
 .register-form .flex .form-group{
     width: 49%;
 }
+label[for="honeypot"], #honeypot {
+    display: none;
+    visibility: hidden;
+}
 .register-form .flex.country .form-group{
     width: 32%;
 }
