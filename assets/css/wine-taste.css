@@ -165,7 +165,7 @@ label[for="honeypot"], #honeypot {
     margin: 0 auto;
 }
 /* media css */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1200px) {
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
     }
@@ -176,7 +176,7 @@ label[for="honeypot"], #honeypot {
 
        
     .our-people.wine-taste .home-hero-cwrap {
-        padding-top: 30px;
+        padding-top: 100px;
     }
 .our-people.wine-taste .home-hero-ctitle{
     font-size: 30px;
@@ -246,6 +246,9 @@ label[for="honeypot"], #honeypot {
         opacity: 1;
     }
     #wrapper.wine-taste .xas-banner {
-        height: 70vh;
+        height: 100vh;
+    }
+    .event-content{
+        background: none;
     }
 }
