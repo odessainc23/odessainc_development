@@ -124,6 +124,13 @@ label[for="honeypot"], #honeypot {
 .register-form .flex.country .form-group{
     width: 32%;
 }
+.wine-taste .g-recaptcha{
+    display: flex;
+    justify-content: center;
+}
+.wine-taste .disclaimer{
+    text-align: center;
+}
 .country select{
     padding: 14px;
     height: auto;
