@@ -128,6 +128,10 @@ label[for="honeypot"], #honeypot {
     display: flex;
     justify-content: center;
 }
+.wine-taste #Submit{
+    background: #F3F3F5;
+    margin: 50px 0;
+}
 .wine-taste #Submit h4{
     margin-bottom: 0;
     line-height: 40px;
