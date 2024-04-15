@@ -34,6 +34,12 @@ width: 110px;
 .accreditations .flex li:first-child{
     margin-left:0
 }
+.accreditations .flex li:first-child img{
+  width: 55px;
+}
+.accreditations .flex li:nth-child(2) img{
+  width: 55px;
+}
 .accreditations .flex li{
     margin: 0 5px;
 }
