@@ -1,12 +1,27 @@
 <link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/our-people.css" type="text/css" />
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/wine-taste.css" type="text/css" />
+<style>
+  .navbar-brand {
+    width: 101px;
+    height: 32px;
+    padding: 0;
+    background: url(../assets/images/logo_wt.png) 0 0 / 100% 100% no-repeat;
+    display: block;
+    text-indent: -9999px;
+    margin-top: 16px;
+    margin-left: 50px;
+    outline: 0;
+}
+</style>
 <div id="wrapper" class="our-people wine-taste">
    <!-- <div class="container"> -->
    <!-- xass banner -->
    <div class="home-hero xas-banner">
+    <a class="navbar-brand" href="https://dev.odessainc.com/"></a>
       <div class="home-hero-bg">
          <div class="home-hero-bgimg">
+          <img src="<?php echo base_url(); ?>assets/images/wine/stamp.svg" alt="Virtual Wine Table" class="lazyload stamp">
             <img src="<?php echo base_url(); ?>assets/images/wine/wine-table.png" alt="Virtual Wine Table" class="lazyload dek">
             <img src="<?php echo base_url(); ?>/assets/images/wine/mob-ban.png" alt="canon Logo" width="87" height="19" class="mob"> 
          </div>
@@ -25,7 +40,7 @@
    <section class="live-breathe event-content">
       <div class="container">
          <div class="event-container">
-            <p>Odessa is pleased to offer you a seat at our virtual wine tasting event for asset finance and equipment leasing executives. </p>
+            <p>Block your seat at our virtual wine tasting event for asset finance and equipment leasing executives. </p>
             <p>This is an exclusive, limited invitation event. <b>Please do not share this link with others.</b> It’s a social networking and educational event with peers in your industry, not a sales pitch! We hope you can make it. </p>
             <p class="date">Date: <b>May 20 </b>  <span class="space">|</span>  Time: <b>7:00 p.m. – 8:30 p.m. ET </b></p>
          </div>
@@ -334,7 +349,7 @@
      $('#primaryForm input').on('cut copy paste', function(e) {
        e.preventDefault();
      });
-   
+     document.body.setAttribute('id', 'bodyId');
      function rescaleCaptcha() {
        var width = $('.g-recaptcha').parent().width();
        var scale = width < 302 ? width / 302 : 1;
