@@ -54,6 +54,10 @@
     padding: 0;
     list-style-position: inside;
 }
+.wine-taste .disclaimer .box {
+    width: 13px;
+    height: 13px;
+}
 .how-it-cont ul li{
     margin-bottom: 30px;  
       list-style: none;

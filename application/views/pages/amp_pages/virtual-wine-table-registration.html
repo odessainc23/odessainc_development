@@ -76,7 +76,7 @@
                   <input class="form-control"  name="email" type="text" id="email" placeholder="Work Email" required />
                </div>
                <div class="form-group">
-                  <input class="form-control" name="phone" type="text" placeholder="Work Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
+                  <input class="form-control" name="phone" type="text" placeholder="Work Phone" id="phone" aria-required="true" aria-invalid="false"/>
                </div>
             </div>
             <div class="form-group">
@@ -100,7 +100,7 @@
 
                </div>
                <div class="form-group">
-                  <input class="form-control" name="zip" type="text" placeholder="Zip" id="zip" onkeypress="return isNumberKey(event)" required/>
+                  <input class="form-control" name="zip" type="text" placeholder="Zip" id="zip"  aria-required="true" aria-invalid="false"/>
                </div>
             </div>
             <div class="capt">
@@ -151,6 +151,11 @@
 </script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
+  $(function() {
+    $.validator.addMethod('customphone', function (value, element) {
+        return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
+    }, "required");
+  });
    $(document).ready(function() {
      $.validator.addMethod("myusername", function(value, element) {
        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
@@ -164,10 +169,7 @@
        return value == '' || value.trim().length != 0;
      }, "No spaces allowed, please don't leave it empty.");
    
-     $.validator.addMethod("mobile", function(phone_number, element) {
-       phone_number = phone_number.replace(/\s+/g, "");
-       return this.optional(element) || phone_number.length >= 6 && phone_number.length <= 15;
-     }, "Mobile number should be of 6 to 15 digits.");
+    
    
      $("#primaryForm").validate({
        rules: {
@@ -195,7 +197,7 @@
            required: true,
            minlength: 6,
            maxlength: 15,
-           mobile: true
+          
          },
          "software-used": {
            required: true
@@ -216,7 +218,6 @@
            required: true,
            minlength: 6,
            maxlength: 15,
-           mobile: true
          },
        },
        messages: {
