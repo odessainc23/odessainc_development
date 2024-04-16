@@ -244,6 +244,9 @@ background-size: cover;
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
     }
+    .our-people.wine-taste .xas-banner .home-hero-bg img{
+        top:0
+    }
     .our-people.wine-taste .xas-banner .home-hero-bg img.mob{
         width: 100%;
         opacity: 0.5;
