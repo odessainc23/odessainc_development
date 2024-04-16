@@ -41,7 +41,7 @@
     padding-top: 0;
 }
 .event-content {
-    background: url(../images/wine/wine-bg.png) center center no-repeat;
+    background: url(../images/wine/wine-bg.svg) center center no-repeat;
     margin-top: 27px ;
     background-size: cover;
 }
@@ -53,6 +53,7 @@
    font-size: 22px;
    margin-top: 40px;
 }
+
 .date b{
     font-family: MaisonNeue-Bold;
 }
@@ -73,7 +74,7 @@
     display: block;
     text-indent: -9999px;
     margin-top: 16px;
-    margin-left: 50px;
+    margin-left: 94px;
     outline: 0;
 }
 .talk-team.how-it-works{
@@ -223,23 +224,32 @@ label[for="honeypot"], #honeypot {
     margin: 0 auto;
 }
 /* media css */
-@media only screen and (max-width:1500px) {
+@media only screen and (max-width:1600px) {
 .event-content{
 background-size: cover;
 }
+.wine-taste .home-hero-bgimg img{
+    object-fit: fill ;
+}
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
-    max-height: 400px;
+    max-height: 432px;
     background: #263746;
 }
 .our-people.wine-taste .home-hero-ctitle{
     font-size: 45px;
 }
 }
+@media only screen and (max-width:1250px) {
+    #wrapper.wine-taste .xas-banner {
+        max-height: 350px;
+    } 
+}
 @media only screen and (max-width:1200px) {
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
     }
+   
     .our-people.wine-taste .xas-banner .home-hero-bg img.mob{
         width: 100%;
         opacity: 0.5;
@@ -306,7 +316,9 @@ background-size: cover;
         height: 100vh;
         max-height: 600px;
     }
-   
+    .wine-taste .navbar-brand{
+        margin-left: 24px;
+    }
     .how-it-works-img{
         height: 300px;
     }
