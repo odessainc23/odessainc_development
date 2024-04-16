@@ -240,6 +240,12 @@ background-size: cover;
     font-size: 45px;
 }
 }
+@media only screen and (max-width:1300px) {
+    #wrapper.wine-taste .xas-banner {
+        max-height: 400px;
+    }
+
+}
 @media only screen and (max-width:1250px) {
     #wrapper.wine-taste .xas-banner {
         max-height: 350px;
