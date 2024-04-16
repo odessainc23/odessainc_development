@@ -53,6 +53,7 @@
    font-size: 22px;
    margin-top: 40px;
 }
+
 .date b{
     font-family: MaisonNeue-Bold;
 }
@@ -73,7 +74,7 @@
     display: block;
     text-indent: -9999px;
     margin-top: 16px;
-    margin-left: 50px;
+    margin-left: 94px;
     outline: 0;
 }
 .talk-team.how-it-works{
@@ -226,6 +227,9 @@ label[for="honeypot"], #honeypot {
 @media only screen and (max-width:1500px) {
 .event-content{
 background-size: cover;
+}
+.wine-taste .home-hero-bgimg img{
+    object-fit: contain ;
 }
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
