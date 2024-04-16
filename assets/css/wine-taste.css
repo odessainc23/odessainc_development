@@ -41,7 +41,7 @@
     padding-top: 0;
 }
 .event-content {
-    background: url(../images/wine/wine-bg.png) center center no-repeat;
+    background: url(../images/wine/wine-bg.svg) center center no-repeat;
     margin-top: 27px ;
     background-size: cover;
 }
