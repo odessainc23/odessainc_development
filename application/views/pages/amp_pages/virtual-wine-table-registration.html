@@ -2,27 +2,22 @@
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/our-people.css" type="text/css" />
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/wine-taste.css" type="text/css" />
 <style>
-  .navbar-brand {
-    width: 101px;
-    height: 32px;
-    padding: 0;
-    background: url(../assets/images/logo_wt.png) 0 0 / 100% 100% no-repeat;
-    display: block;
-    text-indent: -9999px;
-    margin-top: 16px;
-    margin-left: 50px;
-    outline: 0;
-}
+ 
 </style>
 <div id="wrapper" class="our-people wine-taste">
    <!-- <div class="container"> -->
+    <div class="odessa-log">
+    <div class="container">
+      <div class="navbar_wrapper row"> <a class="navbar-brand" href="<?php echo base_url(); ?>">Odessa</a>
+      </div>
+    </div>
+      </div>
    <!-- xass banner -->
    <div class="home-hero xas-banner">
-    <a class="navbar-brand" href="https://dev.odessainc.com/"></a>
       <div class="home-hero-bg">
          <div class="home-hero-bgimg">
-          <img src="<?php echo base_url(); ?>assets/images/wine/stamp.svg" alt="Virtual Wine Table" class="lazyload stamp">
-            <img src="<?php echo base_url(); ?>assets/images/wine/wine-table.png" alt="Virtual Wine Table" class="lazyload dek">
+          <!-- <img src="<?php echo base_url(); ?>assets/images/wine/stamp.svg" alt="Virtual Wine Table" class="lazyload stamp"> -->
+            <img src="<?php echo base_url(); ?>assets/images/wine/stamp.png" alt="Virtual Wine Table" class="lazyload dek">
             <img src="<?php echo base_url(); ?>/assets/images/wine/mob-ban.png" alt="canon Logo" width="87" height="19" class="mob"> 
          </div>
       </div>
@@ -56,7 +51,7 @@
             <ul>
                <li>Register for the event by submitting your information below.</li>
                <li>We’ll ship the wine to your specified address ahead of the virtual meeting.</li>
-               <li>On the day of the event, join the virtual call. <b>You are welcome to bring a spouse or significant other on the call with you.</b></li>
+               <li>On the day of the event, join the virtual call. You are welcome to bring a spouse or significant other on the call with you.</li>
                <li>Have your wine and glasses ready, because Haley Moore, a nationally acclaimed sommelier and wine educator, will walk us through the tasting.</li>
                <li>Have a drink, ask questions, and enjoy!</li>
             </ul>
@@ -65,6 +60,7 @@
    </section>
    <section class="live-breathe register-form letstalkformCon" id="event-form">
       <h4 class="text-center">Please complete all fields below</h4>
+      <h6 class="text-center">Limited slots only!</h6>
       <div class="container">
          <div class="letstalkform">
             <form id="primaryForm" method="post" autocomplete="off">
@@ -94,17 +90,18 @@
                   <input class="form-control" name="phone" type="text" placeholder="Work Phone" id="phone" aria-required="true" aria-invalid="false"/>
                </div>
             </div>
+            <div class="ship">Ship my wine to below address</div>
             <div class="form-group">
-               <input class="form-control" type="text" name="software-used" placeholder="Shipping Address" required id="software-used"/>
+               <input class="form-control" type="text" name="software-used" placeholder="Street Address" required id="software-used"/>
             </div>
-            <div class="flex">
+            <!-- <div class="flex">
                <div class="form-group">
                   <input class="form-control" name="street-1" id="street-2" type="text" placeholder="Street 1" required/>
                </div>
                <div class="form-group">
                   <input class="form-control" name="street-2" id="street2" type="text" placeholder="Street 2" required />
                </div>
-            </div>
+            </div> -->
             <div class="flex country">
                <div class="form-group">
                   <input class="form-control" name="city" id="city" type="text" placeholder="City" required />
@@ -167,219 +164,167 @@
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
   $(function() {
-    $.validator.addMethod('customphone', function (value, element) {
-        return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
-    }, "required");
-  });
-   $(document).ready(function() {
-    $.validator.addMethod("myusername", function(value,element) {
+  $.validator.addMethod('customphone', function (value, element) {
+    return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
+  }, "required");
+});
+
+$(document).ready(function() {
+  $.validator.addMethod("myusername", function(value,element) {
     return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-}, 'Free email addresses are not allowed.');
+  }, 'Free email addresses are not allowed.');
    
-     $.validator.addMethod("lettersonly", function(value, element) {
-       return this.optional(element) || /^[a-z\s]+$/i.test(value);
-     }, "Please enter letters only.");
+  $.validator.addMethod("lettersonly", function(value, element) {
+    return this.optional(element) || /^[a-z\s]+$/i.test(value);
+  }, "Please enter letters only.");
    
-     $.validator.addMethod("noSpace", function(value, element) {
-       return value == '' || value.trim().length != 0;
-     }, "No spaces allowed, please don't leave it empty.");
+  $.validator.addMethod("noSpace", function(value, element) {
+    return value == '' || value.trim().length != 0;
+  }, "No spaces allowed, please don't leave it empty.");
    
-    
+  $("#primaryForm").validate({
+    rules: {
+      "first-name": {
+        required: true,
+        maxlength: 50,
+        lettersonly: true
+      },
+      "last-name": {
+        required: true,
+        maxlength: 50,
+        lettersonly: true
+      },
+      company: {
+        required: true
+      },
+      "job-title": {
+        required: true
+      },
+      email: {
+        required: true,
+        myusername: true,
+      },
+      phone: {
+        required: true,
+        minlength: 6,
+        maxlength: 15,
+      },
+      "software-used": {
+        required: true
+      },
+      city: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      zip: {
+        required: true,
+        minlength: 6,
+        maxlength: 15,
+      },
+    },
+    messages: {
+      "first-name": {
+        required: "",
+        maxlength: ""
+      },
+      "last-name": {
+        required: "",
+        maxlength: ""
+      },
+      company: {
+        required: ""
+      },
+      "job-title": {
+        required: ""
+      },
+      email: {
+        required: ""
+      },
+      phone: {
+        required: "",
+        minlength: "",
+        maxlength: ""
+      },
+      "software-used": {
+        required: ""
+      },
+      city: {
+        required: ""
+      },
+      state: {
+        required: ""
+      },
+      zip: {
+        required: "",
+        minlength: "",
+        maxlength: ""
+      }
+    },
+    submitHandler: function (form) {
+		
+		var honeypot_val = $("#honeypot").val();
+		if (honeypot_val != ''){
+			window.location.reload();
+			return false;
+		} else {
+			$("#secondaryForm").submit();
+			return true;
+		}
+	}
+
+  });
    
-     $("#primaryForm").validate({
-       rules: {
-         "first-name": {
-           required: true,
-           maxlength: 50,
-           lettersonly: true
-         },
-         "last-name": {
-           required: true,
-           maxlength: 50,
-           lettersonly: true
-         },
-         company: {
-           required: true
-         },
-         "job-title": {
-           required: true
-         },
-         email: {
-           required: true,
-           myusername: true,
-         },
-         phone: {
-           required: true,
-           minlength: 6,
-           maxlength: 15,
-          
-         },
-         "software-used": {
-           required: true
-         },
-         "street-1": {
-           required: true
-         },
-         "street-2": {
-           required: true
-         },
-         city: {
-           required: true
-         },
-         state: {
-           required: true
-         },
-         zip: {
-           required: true,
-           minlength: 6,
-           maxlength: 15,
-         },
-       },
-       messages: {
-         "first-name": {
-           required: "",
-           maxlength: ""
-         },
-         "last-name": {
-           required: "",
-           maxlength: ""
-         },
-         company: {
-           required: ""
-         },
-         "job-title": {
-           required: ""
-         },
-         email: {
-           required: ""
-         },
-         phone: {
-           required: "",
-           minlength: "",
-           maxlength: ""
-         },
-         "software-used": {
-           required: ""
-         },
-         "street-1": {
-           required: ""
-         },
-         "street-2": {
-           required: ""
-         },
-         city: {
-           required: ""
-         },
-         state: {
-           required: ""
-         },
-         zip: {
-           required: "",
-           minlength: "",
-           maxlength: ""
-         }
-       },
-       submitHandler: function(form) {
-  var honeypot_val = $("#honeypot").val();
-  if (honeypot_val != '' || grecaptcha.getResponse() == "") {
-    if (honeypot_val != '') {
-      window.location.reload();
-      return false;
-    } else {
-      $(".capt").addClass("error");
+  $("#letstalk").click(function(){
+	var honeypot_val = $("#honeypot").val();
+	if(honeypot_val == ''){
+		$('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2024-04-12/3s3z6cr');
+		$("#primaryForm").submit();
+		return true;
+	}else{
+		window.location.reload();
+		return false;
+	}
+});
+
+   
+  $("#first_name").on('keypress', function(event) {
+    var regex = new RegExp("^[a-zA-Z ]*$");
+    console.log(regex);
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+      event.preventDefault();
       return false;
     }
-  } else {
-    // If honeypot is empty and reCAPTCHA is completed
-    if (honeypot_val == '') {
-      // Assuming this is the secondary form you want to submit to Pardot
-      $("#secondaryForm").submit();
-      return true;
-    } else {
-      $(".capt").removeClass("error");
-      return true;
+  });
+   
+  $("#last_name").on('keypress', function(event) {
+    var regex = new RegExp("^[a-zA-Z ]*$");
+    console.log(regex);
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+      event.preventDefault();
+      return false;
     }
-  }
+  });
+   
+  $('#primaryForm input').on('cut copy paste', function(e) {
+    e.preventDefault();
+  });
+  document.body.setAttribute('id', 'bodyId');
+});
+   
+function isNumberKey(evt) {
+  var charCode = (evt.which) ? evt.which : event.keyCode;
+  return charCode > 31 && (charCode < 48 || charCode > 57);
 }
 
-     });
-   
-     $("#letstalk").click(function() {
-       var honeypot_val = $("#honeypot").val();
-       if (honeypot_val == '') {
-         if ($('#agree').is(':checked')) {
-          // $(".letstalkform .form-control").removeClass("error");
-          $('.box').hide();
-           $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2024-04-12/3s3z6cr');
-           $("#primaryForm").submit();
-          
-           
-           return true;
-         } else {
-           $('.box').show();
-          //  $(".letstalkform .form-control").addClass("error");
-           return false;
-         }
-       } else {
-         window.location.reload();
-         return false;
-       }
-     });
-   
-     $("#first_name").on('keypress', function(event) {
-       var regex = new RegExp("^[a-zA-Z ]*$");
-       console.log(regex);
-       var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-       if (!regex.test(key)) {
-         event.preventDefault();
-         return false;
-       }
-     });
-   
-     $("#last_name").on('keypress', function(event) {
-       var regex = new RegExp("^[a-zA-Z ]*$");
-       console.log(regex);
-       var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-       if (!regex.test(key)) {
-         event.preventDefault();
-         return false;
-       }
-     });
-   
-     $('#primaryForm input').on('cut copy paste', function(e) {
-       e.preventDefault();
-     });
-     document.body.setAttribute('id', 'bodyId');
-     function rescaleCaptcha() {
-       var width = $('.g-recaptcha').parent().width();
-       var scale = width < 302 ? width / 302 : 1;
-   
-       $('.g-recaptcha').css({
-         'transform': 'scale(' + scale + ')',
-         '-webkit-transform': 'scale(' + scale + ')',
-         'transform-origin': '0 0',
-         '-webkit-transform-origin': '0 0'
-       });
-     }
-   
-     rescaleCaptcha();
-     $(window).on('resize', function() {
-       rescaleCaptcha();
-     });
-   
-   });
-   
-   function isNumberKey(evt) {
-     var charCode = (evt.which) ? evt.which : event.keyCode;
-     return charCode > 31 && (charCode < 48 || charCode > 57);
-   }
-   
 </script>
 <style amp-custom>
    @import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
 </style>
 <script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
-<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
    $(function(){
       $('.selectpicker').selectpicker();

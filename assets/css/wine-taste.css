@@ -19,11 +19,18 @@
     z-index: 2;
     top: 30%;
 }
+.odessa-log{
+    background: #263746;
+    position: absolute;
+    top: 0;
+    z-index: 27;
+}
 #bodyId .navbar {
     display: none;
     }
     #wrapper.wine-taste {
         margin: 0px auto auto;
+       
     }
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
@@ -36,6 +43,7 @@
 .event-content {
     background: url(../images/wine/wine-bg.png) center center no-repeat;
     margin-top: 27px ;
+    background-size: cover;
 }
 .space{
     padding: 0 15px;
@@ -56,6 +64,17 @@
     max-width:800px;
     margin: 0 auto;
     text-align: center;
+}
+.wine-taste .navbar-brand {
+    width: 101px;
+    height: 32px;
+    padding: 0;
+    background: url(../images/logo_wt.png) 0 0 / 100% 100% no-repeat;
+    display: block;
+    text-indent: -9999px;
+    margin-top: 16px;
+    margin-left: 50px;
+    outline: 0;
 }
 .talk-team.how-it-works{
     background-image: none;
@@ -117,8 +136,29 @@
 .wine-taste h4{
     color: #00ABC8;
     font-size: 28px;
+    margin-bottom: 0px;
+    font-family: MaisonNeue-Bold;
+}
+.wine-taste h6{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #555B6D;
     margin-bottom: 40px;
-    font-family: MaisonNeue-Book;
+}
+.wine-taste .host-content h4{
+    font-family: MaisonNeue-Book; 
+    margin: 0 0 40px 0; 
+}
+.ship{
+    color: #00ABC8;
+    margin: 14px 0 24px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: MaisonNeue-Bold;
+    padding-left: 5px;
 }
 .host-content h2{
     font-size: 52px;
@@ -183,6 +223,19 @@ label[for="honeypot"], #honeypot {
     margin: 0 auto;
 }
 /* media css */
+@media only screen and (max-width:1500px) {
+.event-content{
+background-size: cover;
+}
+#wrapper.wine-taste .xas-banner {
+    height: calc(100vh - 200px);
+    max-height: 400px;
+    background: #263746;
+}
+.our-people.wine-taste .home-hero-ctitle{
+    font-size: 45px;
+}
+}
 @media only screen and (max-width:1200px) {
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
@@ -192,7 +245,9 @@ label[for="honeypot"], #honeypot {
         opacity: 0.5;
     }
 
-       
+    .odessa-log{
+        background: transparent;
+    }
     .our-people.wine-taste .home-hero-cwrap {
         padding-top: 100px;
     }
@@ -249,10 +304,9 @@ label[for="honeypot"], #honeypot {
 @media only screen and (max-width:767px) {
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
+        max-height: 600px;
     }
-    .our-people.wine-taste .home-hero-cwrap {
-        padding-top: 0px;
-    }
+   
     .how-it-works-img{
         height: 300px;
     }
