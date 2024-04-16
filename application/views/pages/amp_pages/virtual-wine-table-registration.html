@@ -277,16 +277,26 @@ $(document).ready(function() {
   });
    
   $("#letstalk").click(function(){
-	var honeypot_val = $("#honeypot").val();
-	if(honeypot_val == ''){
-		$('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2024-04-12/3s3z6cr');
-		$("#primaryForm").submit();
-		return true;
-	}else{
-		window.location.reload();
-		return false;
-	}
-});
+    var honeypot_val = $("#honeypot").val();
+    if(honeypot_val == ''){
+        // Check if the disclaimer checkbox is checked
+        if ($('#agree').is(':checked')) {
+            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+            $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-04-12/3s3z6cr');
+            $("#primaryForm").submit();
+			$('.box').hide();
+            return true;
+        } else {
+            // Show an alert or handle the case when the checkbox is not checked
+            // alert('Please agree to the privacy policy.');
+			$('.box').show();
+            return false;
+        }
+    } else {
+        window.location.reload();
+        return false;
+    }
+})
 
    
   $("#first_name").on('keypress', function(event) {
