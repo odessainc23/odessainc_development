@@ -229,7 +229,7 @@ label[for="honeypot"], #honeypot {
 background-size: cover;
 }
 .wine-taste .home-hero-bgimg img{
-    object-fit: contain ;
+    object-fit: fill ;
 }
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
@@ -239,6 +239,11 @@ background-size: cover;
 .our-people.wine-taste .home-hero-ctitle{
     font-size: 45px;
 }
+}
+@media only screen and (max-width:1250px) {
+    #wrapper.wine-taste .xas-banner {
+        max-height: 350px;
+    } 
 }
 @media only screen and (max-width:1200px) {
     #wrapper.wine-taste .xas-banner {
