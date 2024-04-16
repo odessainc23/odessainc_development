@@ -310,7 +310,9 @@ background-size: cover;
         height: 100vh;
         max-height: 600px;
     }
-   
+    .wine-taste .navbar-brand{
+        margin-left: 14px;
+    }
     .how-it-works-img{
         height: 300px;
     }
