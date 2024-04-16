@@ -233,12 +233,18 @@ background-size: cover;
 }
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
-    max-height: 400px;
+    max-height: 432px;
     background: #263746;
 }
 .our-people.wine-taste .home-hero-ctitle{
     font-size: 45px;
 }
+}
+@media only screen and (max-width:1300px) {
+    #wrapper.wine-taste .xas-banner {
+        max-height: 400px;
+    }
+
 }
 @media only screen and (max-width:1250px) {
     #wrapper.wine-taste .xas-banner {
