@@ -13,6 +13,13 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
         display: none;
         -webkit-appearance: none;
 }
+.ebook .know-more:after{
+    display:none
+}
+.ebook .know-more{
+    padding-left: 0;
+}
+
 #bodyId .footermenu_strip{
     display: none;
 }
@@ -31,6 +38,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     height: 100%;
     background-size: contain;
 }
+#wrapper.ebook .api-wrapper{
+    background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
+ 
+}
 
 #wrapper .api-thanku-wrapper{
     background: none;
@@ -45,6 +56,9 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 
 .api-body #primaryForm{
     margin-top: 15px;
+}
+.api-body.ebook #primaryForm {
+    margin-top: 0;
 }
 .api-header .api-logo{
  
@@ -169,7 +183,7 @@ line-height: 26px;
     margin-bottom: 24px;
 }
 .plane{
-    width: 130px;
+    width: 85px;
     margin: 0 auto 12px auto;
     display: block;
 }
@@ -233,6 +247,7 @@ padding-left: 16px;
     right: 40px;
     top: 33px;
 }
+
 .take-flex{
     display: flex;
     flex-flow: row;
