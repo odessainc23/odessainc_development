@@ -608,6 +608,7 @@ overflow: hidden;
     #wrapper .api-wrapper{
         background-image: none;
     }
+   
 }
 
 @media only screen and (max-width: 767px) {

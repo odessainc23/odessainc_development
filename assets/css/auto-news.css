@@ -34,6 +34,7 @@
     padding-left: 14px;
     text-shadow: 0 0 36px #00ABC8, 0 0 39px #00ABC8;
 }
+
 .timer-block:after{
   background-size: 100% 100%;
   background-image: url(https://dev.odessainc.com/assets/images/auto-news/car.png);
