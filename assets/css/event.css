@@ -6,6 +6,7 @@
 .cocktail .key-takeaways{
     background: transparent;
     max-width: 50%;
+    padding-left: 0;
 }
 .cocktail .key-takeaways p{
     color:#2A2D36;
