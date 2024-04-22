@@ -20,7 +20,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%; 
-    background: url(../images/wine/cocktail-banner.jpg) right 0 no-repeat #213847;
+    background: url(../images/wine/cocktail-banner.jpg) center center no-repeat #213847;
     background-size: cover;
 }
 .cocktail .key-takeaways{
