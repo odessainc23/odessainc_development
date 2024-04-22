@@ -70,12 +70,11 @@ $route['get-started'] = 'welcome/lets_talk_secondary';
 $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
-
+$route['cocktail-registeration'] = 'Cocktail';
+$route['cocktail-registeration-thankyou'] = 'Cocktailthank';
 $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
-$route['cocktail'] = 'Cocktail';
-$route['cocktail-thankyou'] = 'Cocktailthank';
 $route['handbook/customer-experience-asset-finance'] = 'Ebook';
 $route['virtual-wine-table-registration'] = 'Virtual';
 $route['virtual-wine-table-registration/thankyou'] = 'Winethank';
