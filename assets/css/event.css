@@ -1,6 +1,7 @@
 #wrapper.cocktail .api-wrapper{
     background: url(../images/wine/cocktail-banner.svg) right 0 no-repeat #213847;
     height: 300px;
+    background-size: cover;
 }
 .cocktail .key-takeaways{
     background: transparent;
