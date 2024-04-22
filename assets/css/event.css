@@ -36,7 +36,15 @@
 .cocktail .plane{
     margin: 0 auto 24px auto;
 }
-
+.cocktail .api-banner.api-thankyou{
+    max-width: 100%;
+    text-align: center;
+}
+.cocktail.cock-thank .key-takeaways {
+    background: transparent;
+    max-width: 100%;
+    text-align: center;
+}
 @media only screen and (max-width:1024px) {
     /* .cocktail .key-takeaways{
         max-width: 60%;
