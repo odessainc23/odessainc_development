@@ -1,39 +1,50 @@
 #wrapper.cocktail .api-wrapper{
     background: url(../images/wine/cocktail-banner.svg) right 0 no-repeat #213847;
-    height: 300px;
+    height: 240px;
     background-size: cover;
 }
 .cocktail .key-takeaways{
     background: transparent;
-    max-width: 50%;
+    max-width: 55%;
     padding-left: 0;
+    padding-top: 0;
 }
 .cocktail .key-takeaways p{
     color:#2A2D36;
 }
 .cocktail .date{
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .cocktail .key-takeaways p{
-    margin-bottom:40px;
+    margin-bottom:5px;
+    font-size: 18px;
 }
 .cocktail .key-takeaways p b{
     font-family: MaisonNeue-Bold;
+}
+.cocktail .key-takeways-section {
+    margin: 20px 0;
 }
 .cocktail .key-takeaways .date p{
     margin-bottom: 0;
 }
 .nav_bar{
-    height: 85px;
+    height: 60px;
+}
+.nav_bar .navbar-brand{
+    padding: 10px 15px;
+}
+.navbar-brand>img{
+    width: 250px;
 }
 .cocktail .api-banner{
-    margin-top: 80px;
+    margin-top:60px;
 }
 .cocktail .get-copy{
-    height: 600px;
+    height:550px;
     padding: 25px 25px 25px 25px;
-    position: absolute;
-    top: -250px;
+    position: fixed;
+    top: 20px;
 }
 .api-body.cocktail #primaryForm {
     margin-top: 0;
