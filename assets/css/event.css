@@ -17,6 +17,9 @@
 .cocktail .key-takeaways p{
     margin-bottom:40px;
 }
+.cocktail .key-takeaways p b{
+    font-family: MaisonNeue-Bold;
+}
 .cocktail .key-takeaways .date p{
     margin-bottom: 0;
 }
