@@ -60,17 +60,23 @@
 .cocktail .api-banner{
     margin-top:60px;
 }
+#wrapper .cocktail .letstalkform.get-copy .form-group{
+    margin-bottom: 10px;
+}
 .cocktail .get-copy{
-    height:550px;
+    height: max-content;
     padding: 25px 25px 25px 25px;
     position: fixed;
-    top: 20px;
-}
+    top: 60px;}
 .api-body.cocktail #primaryForm {
     margin-top: 0;
 }
+.cocktail .get-copy .btnmar{
+    margin-top: 10px;
+}
 .cocktail .plane{
-    margin: 0 auto 24px auto;
+    margin: 0 auto 14px auto;
+    width: 70px;
 }
 .cocktail .api-banner.api-thankyou{
     max-width: 100%;
@@ -88,6 +94,9 @@
     .cocktail .get-copy{
         position: relative;
         top: 0;
+    }
+    .fix{
+        position: relative;
     }
     .cocktail .key-takeaways{
         width: 100%;
@@ -107,6 +116,9 @@
     .cocktail .key-takeaways{
         max-width: 100%;
     }
+    .fix{
+        position: relative;
+    }
     #wrapper.cocktail .api-wrapper{
         height: 200px;
     }
@@ -121,7 +133,6 @@
         text-align: center;
     }
     #wrapper.cocktail .api-wrapper {
-        background: url(../images/wine/cocktail-banner.svg) center center no-repeat #213847;
         background-size: cover;
     }
 }
