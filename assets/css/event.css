@@ -2,6 +2,26 @@
     background: url(../images/wine/cocktail-banner.svg) right 0 no-repeat #213847;
     height: 240px;
     background-size: cover;
+   
+}
+.fix{
+    min-height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+#wrapper.cocktail.cock-thank .api-wrapper{
+    background:none;
+}
+.cock-thank{
+    min-height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%; 
+    background: url(../images/wine/cocktail-banner.svg) right 0 no-repeat #213847;
+    background-size: cover;
 }
 .cocktail .key-takeaways{
     background: transparent;
@@ -78,9 +98,7 @@
     .cocktail .get-copy{
         width: 50%;
     }
-    .cocktail .api-banner {
-        margin-top: 120px;
-    }
+    
     .cocktail .api-heading{
         text-align: center;
     }
@@ -88,6 +106,9 @@
 @media only screen and (max-width:767px) {
     .cocktail .key-takeaways{
         max-width: 100%;
+    }
+    #wrapper.cocktail .api-wrapper{
+        height: 200px;
     }
     .cocktail .take-flex{
         flex-flow: wrap;
