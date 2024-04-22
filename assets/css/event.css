@@ -23,6 +23,9 @@
     background: url(../images/wine/cocktail-banner.jpg) center center no-repeat #213847;
     background-size: cover;
 }
+.cock-thank .api-heading{
+    width: 80%;margin:0 auto;
+}
 .cocktail .key-takeaways{
     background: transparent;
     max-width: 55%;
@@ -142,5 +145,8 @@
     }
     #wrapper.cocktail .api-wrapper {
         background-size: cover;
+    }
+    .cock-thank .api-heading{
+        width: 100%;
     }
 }
