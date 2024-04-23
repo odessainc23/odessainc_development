@@ -3271,7 +3271,6 @@ section.innovate_section .btns_style:hover {
 }
 .bg-alert {
   background-color: #ff495c;
-  display: none;
 }
 .bg-grad {
   background-image: linear-gradient(to right, #3f7ab8, #81bee7, #81bee7);
