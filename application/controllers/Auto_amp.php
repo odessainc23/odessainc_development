@@ -13,7 +13,7 @@ class Auto_amp extends CI_Controller {
 		$data['tc_description']		= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/auto-finance-news.html', $data);
+		$this->load->view('pages/amp_pages/auto-finance-software.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
