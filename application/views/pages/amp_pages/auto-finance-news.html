@@ -1,252 +1,549 @@
-<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/auto-news.css?v=2001" />
-<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/api.css?v=2001" />
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
+<link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" type="text/css" />
+<style amp-custom>
+   .xas-banner .home-hero-bg amp-img{position:absolute;right:0;bottom:0;height:auto}	
+   .buildinnovation.xassconbox.autoconbox {
+   max-width: 100%;
+   }
+   .xas-banner .home-hero-bgimg{
+   height:100%;
+   }
+   .auto-page .xas-content .home-hero-ctitle {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 58px;
+}
+   .auto-page .home-hero-cwrap p{
+	color: #fff;
+   }
+   .xas-banner {
+   background: #0d2332;
+   }
+   .xas-banner {
+   height: calc(100vh - 40px);
+   }
+   .xas-cont.auto-cont{
+   width: 90%;
+   }
+   .xassconbox.buildinnovation.xassconbox.autoconbox .buildinnovationboxConrw .col-sm-4 {
+   padding-left: 20px;
+   padding-right: 20px;
+   }
+   .buildinnovation.xassconbox.autoconbox h3{
+   font-size: 1.2rem;
+   }
+   .auto-wrap {
+   width: 60%;
+   margin: 0 auto;
+   font-size: 17px;
+   }
+   .section1.sec2{
+   display: flex;
+   justify-content: center;	
+   }
+   .section1.sec3{
+   display: flex;
+   justify-content: flex-start;
+   height: auto;
+   }
+   .adapt img{
+   width: 50px;
+   height: auto;
+   }
+   /* .improve_developer{
+   margin:0 0 20px 0;
+   } */
+   .adapt .pgcor_intitle {
+   max-width: 100%;
+   text-align: center;
+   margin-top: 30px;
+   }
+   .trusted_brands_logo .brlogo img.afsa{
+   width: 150px;
+   }
+   .flex-box{
+   display: flex;
+   justify-content: space-between;
+   margin: 30px 20px 0 0px;
+   }
+   .two-section{
+   display: flex;
+   justify-content: space-between;
+   padding: 0px 0 40px;
+   }
+   .auto-page .xas-content .home-hero-cwrap{
+      align-items: flex-start;
+   }
+   .adapt{
+   max-width: 85%;
+   margin: 0 auto;
+   }
+   .reverse{
+   flex-flow: row-reverse;
+   }
+   .section1{
+   width: calc(70% - 10px);
+   margin: 0 20px;
+   }
+   .section1 .pgcor_inwrap{
+   max-width: 90%;
+   margin-left: 0;
+   min-height: auto;
+   }
+   .brlogo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 80px 0 0;
+   }
+   .adapt .brlogo{
+   margin:0;
+   }
+   .section1.sec2 .pgcor_inwrap{
+   margin:0;
+   }
+   .sec2{
+   width: calc(30% - 10px);
+   margin: 0 20px;
+   }
+   .adapt .improve_developer{
+   margin: 0 0 20px 0;
+   }
+   .capabilities1 p{
+   font-family: MaisonNeue-Book;
+   color: #555b6d;
+   margin:0;
+   padding: 10px 20px;
+   font-size: 15px;
+   margin:0 0 20px 0;
+   font-weight: 700;
+   border-bottom: 3px solid #00abc7;
+   box-shadow: 0 -2px 15px 4px rgba(32,33,36,.1);
+   }
+   .capabilities-box h2{
+   margin: 0 0 50px;
+   }
+   .capabilities-box{
+   padding: 0 0 80px 0;
+   }
+   .capabilities-box .flex-box{
+   margin: 30px auto 0 auto;
+   max-width: 85%;
+   }
+   .capabilities1 ul{
+   margin: 0 0 20px 10px;
+   padding: 0 20px;
+   font-size: 1.0625rem;
+   color: #555b6d;
+   }
+   .capabilities1 ul li{
+   list-style: none;
+   position: relative;
+   font-size: 15px;
+   padding-left: 20px;
+   flex: 0 0 100%;
+   position: relative;
+   margin-bottom: 0px;
+   color: #555b6d;
+   }
+   .section1.sec3{
+   width: calc(30% - 10px);
+   }
+   .capabilities1 ul li:before {
+   content: "";
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   background: #0075a2;
+   border-radius: 50%;
+   position: absolute;
+   left: -20px;
+   top: 7px;
+   }
+   .buildinnovationboxConrw {
+   padding: 60px 0;
+   }
+   @media only screen and (max-width:1250px){
+   .auto-page .xas-content .home-hero-ctitle{
+      font-size: 2.5rem;line-height: 40px;
+   }
+   .auto-page .home-hero-ctitle br {
+    display: block;
+}
+}
+   @media only screen and (max-width:1024px){.xas-banner .home-hero-bg amp-img{width:60%;height:30%}
+  
+.auto-page .xas-banner {
+    height: 100vh;
+}
+.auto-page .xas-content .home-hero-cdesc {
+  font-size: 15px;
+}
 
+   .flex-box,.two-section{
+   flex-wrap: wrap;
+   }
+   .wtcol{
+   font-size:20px;
+   }
+   .auto-wrap {
+   width: 80%;
+   margin: 0 auto;
+   }
+   .section1.sec3 {
+   width: 100%;
+   }
+   .log{
+   flex-flow: column-reverse;
+   }
+   .log .brlogo{
+   margin:0;
+   }
+   .section1.sec3,.section1.sec2{
+   justify-content: center;
+   height: auto;
+   }
+   .two-section.reverse,.two-section{
+   flex-flow: column-reverse;
+   }
+   .pgcor_intext{
+   text-align: center;
+   }
+   .section1 {
+   width: 100%;
+   margin: 20px 0px;
+   }
+   .capabilities-box h2{
+   font-size: 2em;
+   }
+   .improve_developer {
+   margin: 0 0 0 0;
+   }
+   .section1.sec2 .pgcor_inwrap{
+   max-width: 100%;
+   }
+   .buildinnovationboxConrw {
+   padding: 0px 0;
+   }
+   .two-section{
+   padding: 0 0 60px 0;}
+   .pgcor_intitle{
+   font-size: 2em;
+   }
+   .trusted_brands_logo .brlogo img {
+   max-width: 90%;
+   }
+   }
+   @media only screen and (max-width:767px){
+      .auto-fin h2,.capabilities-box h2 {
+    font-size: 22px;}
+    .auto-page .pgplat_ftgstitle {
+    font-size: 20px;
+}
+.auto-page .home-hero-ctitle br {
+    display: none;
+}
+.auto-page .xas-content .home-hero-ctitle{
+  font-size: 22px;
+  line-height: 25px;
+}
+.auto-page .section1{
+   margin: 0;
+}
+}
 
-<div id="wrapper" class="auto-news-wrap">
-    <div class="auto-news-banner">
-        <div class="top-auto-content">
-            <h1>The countdown is on!</h1>
-            <h5>Something big is coming to auto finance</h5>
-        </div>
-        <div class="timer-block">
-            <span class="animate-flicker"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
-            <span class="animate-flicker2"><img src="<?php echo base_url(); ?>assets/images/auto-news/blink.png"></span>
-            <!-- <img src="<?php echo base_url(); ?>assets/images/auto-news/car.png"> -->
-            <div class="home-welcome">
-                <div class="wrapper">
-                    <div class="counter"></div>
-                </div>
+   @media only screen and (min-width:768px){.xas-banner .home-hero-bg amp-img{height:80%}
+   
+   }@media only screen and (min-width:1280px){.xas-banner .home-hero-bg amp-img{width:100%;height:50%}}@media only screen and (min-width:540px){.xas-banner .home-hero-bg amp-img{width:70%;height:50%}}@media only screen and (min-width:820px){.xas-banner .home-hero-bg amp-img{width:60%;height:80%}}@media only screen and (min-width:1024px){.xas-banner .home-hero-bg amp-img{width:100%;height:100%}}@media only screen and (max-width:1920px) and (min-width:1290px){.xas-banner .home-hero-bg amp-img{width:100%;height:100%}}
+</style>
+<div id="wrapper" class="auto-page">
+   <!-- <div class="container"> -->
+   <!-- xass banner -->
+   <div class="home-hero xas-banner">
+      <div class="home-hero-bg">
+         <div class="home-hero-bgimg">   
+            <img src="<?php echo base_url(); ?>assets/images/auto-news/tail-light.svg" alt="" class="lazyload" >
+         </div>
+      </div>
+      <div class="home-hero-content xas-content">
+         <div class="home-hero-cinner">
+            <div class="home-hero-cwrap">
+               <div class="home-hero-ctitlewrap">
+                  <h1 class="home-hero-ctitle">Change “Driving the Future of <br> Auto Finance Software” to<br> “A Better Solution for<br> Consumer Auto Finance”</h1>
+               </div>
+               <p class="home-hero-cdesc">“Odessa Auto is a multi-asset, multi-product platform that lends itself perfectly to support traditional auto finance and alternative lending structures such as usage-based lending, subscriptions, fleet, as a service, fractional ownership and more.” 
+               </p>
+			   <p>Read the press release: <a href="">"Odessa Launches Auto Finance Suite: Odessa Auto”</a></p>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
+   <!-- xass banner ends -->
+   <!--Build Page Start Here-->
+   <div class="buildpgwrap">
+      <!--Scale Fector Section Start Here-->
+      <div class="buildpgscalefector xasspadding">
+         <!-- <div class="xasstabsbackgbox"></div> -->
+      </div>
+      <!--Scale Fector Section Start Here-->
+      <div class="container xas-cont auto-cont">
+         <div class="plateformspeedbox xassbox">
+            <div class="btmlinegrey"></div>
+         </div>
+         <!--Platform Speed Section End Here--> 
+         <!--Build Innovation Start Here-->
+         <div class="buildinnovation xassconbox autoconbox">
+            <!-- <h2 class="text-center">Stay agile, pursue <span>new growth strategies</span></h2> -->
+            <div class="buildinnovationboxConrw auto-box">
+               <div class="row clearfix">
+                  <div class="col-sm-4">
+                     <div class="buildinnovationConbx">
+                        <div class="inoiconrw">
+                           <div class="innoicon recoding" style="background: url(assets/images/business_icn_6.svg);"></div>
+                           <h3 class="mb-1">Speed to Market</h3>
+                        </div>
+                        <div class="xass_nor_text">Serve your customers better and gain a competitive edge. Odessa Auto allows you to adapt to changes in programs or business models and bring new offerings to market through self-service configuration tools.</div>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="buildinnovationConbx">
+                        <div class="inoiconrw">
+                           <div class="innoicon improve_developer" style="background: url(assets/images/platform/datamart-flatten.svg);"></div>
+                           <h3 class="mb-1">Platform Consolidation</h3>
+                        </div>
+                        <div class="xass_nor_text">Simplify operations and drive business growth. Odessa’s modern, cloud-based auto lending software unshackles your business from the restraints and risks of running on outdated software. </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="buildinnovationConbx">
+                        <div class="inoiconrw">
+                           <div class="innoicon legacy" style="background: url(assets/images/platformicon/CustomerPortalic.svg); width:40px;"></div>
+                           <h3 class="mb-1">Improved Dealer Relationships</h3>
+                        </div>
+                        <div class="xass_nor_text">Manage stakeholder expectations and build stronger business ecosystems. Odessa Auto automates workflow and removes data siloes. Combined with powerful analytics – this allows you to make faster decisions and funding to dealers. </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--Build Innovation End Here--> 
+         <!--Development Opps Section Start Here-->
+         <div class="capabilities-box">
+            <h2 class="text-center">Unlock Endless Capabilities with Odessa <br> Auto Finance Software</h2>
+            <div class="flex-box">
+               <div class="cap-box">
+                  <div class="capabilities1">
+                     <p>Product, Pricing, and Dealer Management</p>
+                     <ul>
+                        <li>Products:  Retail, Lease, Subscription, Usage-based, Fleet.</li>
+                        <li>Channels:  Direct, Indirect, Portal.</li>
+                        <li>Rate cards, Pricing, and Residuals.</li>
+                        <li>Define and manage dealers.</li>
+                     </ul>
+                  </div>
+                  <div class="capabilities1">
+                     <p>Application Entry</p>
+                     <ul>
+                        <li>Open API framework.</li>
+                        <li>Model and value data integrations.</li>
+                        <li>Star standard compatibility.</li>
+                        <li>Multiple asset support.</li>
+                     </ul>
+                  </div>
+                  <div class="capabilities1">
+                     <p>Analysis and Credit Decision</p>
+                     <ul>
+                        <li>Internal scorecard or integration to external providers.</li>
+                        <li>Fraud checks and investigation.</li>
+                        <li>Automated and manual credit review.</li>
+                        <div>&nbsp;</div>
+                     </ul>
+                  </div>
+               </div>
+               <div class="cap-box">
+                  <div class="capabilities1">
+                     <p>Contract Preparation and Review</p>
+                     <ul>
+                        <li>eContract integration.</li>
+                        <li>Create, distribute, and e-sign documents.</li>
+                        <li>Credit, tax, and compliance policy rule checks.</li>
+                        <div>&nbsp;</div>
+                     </ul>
+                  </div>
+                  <div class="capabilities1">
+                     <p>Document Review</p>
+                     <ul>
+                        <li>Document checklists.</li>
+                        <li>Stipulation and conditions review.</li>
+                        <li>Held offering and contract return processing.</li>
+                        <div>&nbsp;</div>
+                     </ul>
+                  </div>
+                  <div class="capabilities1">
+                     <p>Contract Booking</p>
+                     <ul>
+                        <li>Pricing and rate verification.</li>
+                        <li>Calculate dealer disbursement and compensation.</li>
+                        <li>Servicing system input file.</li>
+                        <div>&nbsp;</div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <section class="two-section reverse adapt">
+            <div class="section1">
+               <div class="brlogo">
+                  <p class="pgcor_intext"> Discover how the right auto finance software can transform your operations, increase efficiency, and enhance adaptability amidst evolving customer trends. Leverage our native asset-based and flexible product components to capitalize on emerging trends in auto finance, such as subscriptions or usage-based models. Odessa's auto lending software establishes a dynamic and scalable technology infrastructure, empowering you to swiftly adapt to shifting market dynamics and evolving business demands. </p>
+               </div>
+            </div>
+            <div class="section1 sec3">
+               <div class="pgcor_inwrap text-center">
+                  <div class="innoicon improve_developer">
+                     <img src="<?php echo base_url(); ?>assets/images/data-residency.svg" alt="canon Logo" width="87" height="19" >
+                  </div>
+                  <h4 class="pgplat_ftgstitle text-center">Adapt to Industry Change</h4>
+                  <!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
+               </div>
+            </div>
+         </section>
+         <section class="two-section adapt" style="padding: 0px 0 40px;">
+            <div class="section1">
+               <div class="brlogo">
+                  <p class="pgcor_intext">Automate cross-platform workflows by connecting Odessa to your critical business tools, including your CRM and various third-party solutions for pricing, decisioning, and more. Odessa’s auto finance solutions are designed around an API-based architecture that allows you to take a “best-in-breed” approach to your application landscape by integrating components of the platform with other popular solutions in the market.</p>
+               </div>
+            </div>
+            <div class="section1 sec2">
+               <div class="pgcor_inwrap text-center">
+                  <div class="innoicon improve_developer">
+                     <img src="<?php echo base_url(); ?>assets/images/business_icn_5.svg" alt="canon Logo" width="87" height="19" >
+                  </div>
+                  <h4 class="pgplat_ftgstitle text-center">Integrate with the <br>Tools You Already Use</h4>
+                  <!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
+               </div>
+            </div>
+         </section>
+         <section class="two-section reverse adapt">
+            <div class="section1">
+               <div class="brlogo">
+                  <p class="pgcor_intext">Embrace a cutting-edge auto finance solution designed to meet global standards and act as a unified, end-to-end platform for all your business requirements. Elevate your digital transformation with intelligent automation, data insights, integrations, and self-service portals. Stay ahead of the game with agile DevOps, SaaS, and service-oriented models. Achieve excellence in customer service and operational efficiency and gain a competitive edge. </p>
+               </div>
+            </div>
+            <div class="section1 sec3">
+               <div class="pgcor_inwrap text-center">
+                  <div class="innoicon improve_developer">
+                     <img src="<?php echo base_url(); ?>assets/images/platformicon/Buidic.svg" alt="canon Logo" width="87" height="19" >
+                  </div>
+                  <h4 class="pgplat_ftgstitle text-center">Build for Today and Tomorrow </h4>
+                  <!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
+               </div>
+            </div>
+         </section>
+         <section class="two-section adapt" style="padding: 0px 0 100px;">
+            <div class="section1">
+               <div class="brlogo">
+                  <p class="pgcor_intext">Odessa is a strong supporter of many industry associations and events dedicated to auto finance. We’re leading the charge to revolutionize the automotive finance market with a modern, cloud-based auto finance software designed for your unique business needs. Join the leading global auto finance businesses that choose Odessa Auto to simply, scale, and succeed. </p>
+               </div>
+            </div>
+            <div class="section1 sec2">
+               <div class="pgcor_inwrap text-center">
+                  <div class="innoicon improve_developer">
+                     <img src="<?php echo base_url(); ?>assets/images/partner.png" alt="canon Logo" width="87" height="19" >
+                  </div>
+                  <h4 class="pgplat_ftgstitle text-center">Partner with the Leaders in Auto Lending Software</h4>
+                  <!-- <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="http://localhost:8000/platform/developer-tools">More About Odessa APIs</a> -->
+               </div>
+            </div>
+         </section>
+      </div>
+      <div class="pgcor_dprin">
+         <div class="odc-gd__container">
+            <div class="odc-gd__row">
+               <div class="odc-gd__col-xxs-12">
+                  <div class="pgcor_dpcontent">
+                     <!-- <h2 class="pgcor_dpctitle">Our design principles</h2> -->
+                     <h2 class="text-center wtcol">Together, we can shape the future of <br>Automotive Finance Software!</h2>
+                     <a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Let's Talk</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="testimonialswrap auto-fin">
+         <h2 class="text-center">Recent Auto Finance News from Odessa</h2>
+         <div class="wrapper">
+            <div class="card">
+               <div class="card-banner">
+                  <!-- <p class="category-tag popular">Pizza</p> -->
+                  <img class="banner-img" src="<?php echo base_url(); ?>assets/images/auto-news/auto-news.png" alt="Veteran Bob Johnson">
+               </div>
+               <div class="card-body">
+                  <!-- <p class="blog-hashtag">#Food #Pizza</p> -->
+                  <h3 class="blog-title">How captives and banks should respond to buyers' evolving tastes</h3>
+                  <p class="blog-description">A lender expanding into new product and service areas such as subscriptions has challenges integrating the new additions into their platform.</p>
+                  <div class="card-profile">
+                     <div class="card-profile-info">
+                        <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://www.autonews.com/guest-commentary/how-auto-finance-captive-lenders-banks-should-respond-buyers" target="_blank">Read
+                           more</a> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-banner">
+                  <!-- <p class="category-tag technology">Biryani</p> -->
+                  <img class="banner-img" src="<?php echo base_url(); ?>assets/images/auto-news/news-3.png" alt="Veteran Bob Johnson">
+               </div>
+               <div class="card-body">
+                  <!-- <p class="blog-hashtag">#Biryani #Food</p> -->
+                  <h3 class="blog-title">Why funding automation is the next big thing in auto finance</h3>
+                  <p class="blog-description">Credit automation is old hat in auto finance. Organizations have long used tools to automate credit processing and spare themselves</p>
+                  <div class="card-profile">
+                     <div class="card-profile-info">
+                        <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://www.autoremarketing.com/subprime/commentary-why-funding-automation-is-the-next-big-thing-in-auto-finance/" target="_blank">Read
+                           more</a> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="testimonialswrap">
+         <h2 class="text-center">Partner with a Leader</h2>
+         <p class="text-center auto-wrap">Odessa is a strong supporter of many industry associations and events dedicated to auto finance. We’re leading the charge to revolutionize the automotive finance market with a modern, cloud-based solution for your unique business needs.</p>
+         <div class="trusted_brands_logo">
+            <div class="brlogo">
+               <img src="<?php echo base_url(); ?>assets/images/auto-finance.png" alt="auto-finance" width="87" height="19" >
+            </div>
+            <div class="brlogo">
+               <img src="<?php echo base_url(); ?>assets/images/afsa.png" alt="afsa" width="120px" height="24" class="afsa">
+            </div>
+			<div class="brlogo">
+				<img src="<?php echo base_url(); ?>assets/images/auto-news/naf.png" alt="naf" width="150px" height="24" class="afsa">
+			 </div>
+         </div>
+      </div>
+   </div>
+   <!--Build Page End Here--> 
+   <!-- </div> -->
 </div>
-<div class="keep-me-posted">
-    <div class="keep-me-content">
-        <h3>Want to be the first to know?</h3>
-        <p>Submit your email below and we’ll send the announcement as it happens.</p>
-        <div class="">
-            <!-- <input type="email" id="emailInput" placeholder="Enter your email">
-            <button id="validateButton" class="odc__btn odc__btn--primary odc__btn--md">Keep Me Posted</button> -->
-            <form id="primaryForm" method="post" autocomplete="off" class="posted-email">
-                <div class="form-group">
-                    <input class="form-control" name="email" type="text" id="email" placeholder="Business Email" required />
-                </div>
-                    <button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Keep Me Posted</button>
-            </form>
-            <div class="thank-u" style="display: none;">
-                <h3> Thank you for your interest  in Odessa!</h3>
-                <h3>Someone will be touch shortly.</h3>
-            </div>
-        </div>
-        <!-- <p id="result"> Thank You! Will get back to you.</p> -->
-    </div>
-
-</div>
-<section class="section-products auto-prod">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-12 col-lg-12">
-                <div class="header">
-                    <h3>In the meantime, enjoy these news articles about <br>the consumer auto finance industry.</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Single Product -->
-            
-            <!-- Single Product -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div id="product-2" class="single-product">
-                    <div class="part-1">
-
-                    </div>
-                    <div class="part-2">
-                        <h3 class="product-title">How captives and banks should respond to buyers' evolving tastes</h3>
-                        <p class="product-old-price">A lender expanding into new product and service areas such as subscriptions has challenges integrating the new additions into their platform.</p>
-                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.autonews.com/guest-commentary/how-auto-finance-captive-lenders-banks-should-respond-buyers" target="_blank">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Product -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div id="product-3" class="single-product">
-                    <div class="part-1">
-
-                    </div>
-                    <div class="part-2">
-                        <h3 class="product-title">Why funding automation is the next big thing in auto finance </h3>
-                        <p class="product-old-price">Credit automation is old hat in auto finance. Organizations have long used tools to automate credit processing and spare themselves thousands of personnel hours annually that would otherwise be devoted to the process. But when it comes to funding, automation is often absent or severely limited.</p>
-                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.autoremarketing.com/subprime/commentary-why-funding-automation-is-the-next-big-thing-in-auto-finance/" target="_blank">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Product -->
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div id="product-1" class="single-product">
-                    <div class="part-1">
-                    </div>
-                    <div class="part-2">
-                        <h3 class="product-title">The five key trends transforming auto finance in 2024</h3>
-                        <p class="product-old-price">Robert Johnson, Executive Vice President of Auto Finance at asset finance software provider Odessa, delves into the five pivotal trends that are moulding the sector.</p>
-                        <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="https://www.motorfinanceonline.com/comment/the-five-key-trends-transforming-auto-finance-in-2024/" target="_blank">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-</div>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-<script id="rendered-js">
-    ;(function ($) {
-      
-      $.fn.countdown = function (options) {
-        //global variables 
-        var vars = $.extend({}, $.fn.countdown.defaults, options),
-        $counter = $(this),
-        t = { day: 0, hour: 0, minute: 0, sec: 0 },
-        targetDate = new Date(),
-        targetMonth = 3, // April is 0-indexed
-        targetDay = 24,
-        targetHour = 9,
-        targetOffset = -4, // Eastern Time (ET) offset from UTC
-        secondsLeft;
-        
-        // Set the target date to April 24 at 9am ET
-        targetDate.setDate(targetDate.getDate() - 1); // yesterday's date
-        targetDate.setUTCMonth(targetMonth);
-        targetDate.setUTCDate(targetDay);
-        targetDate.setUTCHours(targetHour + targetOffset);
-        targetDate.setUTCMinutes(0);
-        targetDate.setUTCSeconds(0);
-        targetDate.setUTCMilliseconds(0);
-        targetDate = targetDate.getTime();
-    
-        //private methods
-        methods = {
-          setup: function () {
-    
-            $.each(t, function (time, value) {
-              var currentSection = '<ul id="' + time + '"><li>0</li><li>0</li></ul>';
-              $counter.append(currentSection);
-            });
-    
-            if (vars.labels) {
-              var labelHtml = '<div class="labels"><ul><li>Days</li><li>Hours</li><li>Minutes</li><li>Seconds</li></ul></div>';
-              $counter.append(labelHtml);
-            }
-    
-          },
-    
-          updateTime: function () {
-            var currentTime = new Date().getTime(),
-            secondsLeft = (targetDate - currentTime) / 1000,
-            secsIn = { day: 86400, hour: 3600, minute: 60 };
-    
-            if (secondsLeft < 0) {secondsLeft = 0;}
-    
-            $.each(t, function (timePeriod, value) {
-              t[timePeriod] = parseInt(secondsLeft / secsIn[timePeriod], 10);
-              if (timePeriod !== 'sec') {
-                secondsLeft = secondsLeft % secsIn[timePeriod];
-              } else
-              {
-                t[timePeriod] = secondsLeft;
-              }
-            });
-          },
-    
-          updateCounter: function () {
-            $.each(t, function (period, value) {
-              var section = $counter.find('#' + period).children(),
-              digit = splitDigits(value);
-    
-              section.eq(0).html(digit[0]);
-              section.eq(1).html(digit[1]);
-            });
-    
-            function splitDigits(number) {
-              var digits = [];
-              digits[0] = Math.floor(number / 10);
-              digits[1] = Math.floor(number % 10);
-              return digits;
-            }
-          },
-    
-          tick: function () {
-            if (secondsLeft < 1) {} else
-            {
-              methods.updateTime();
-              methods.updateCounter();
-              setTimeout(function () {methods.tick();}, 1000);
-            }
-          },
-    
-          init: function () {
-            methods.setup();
-            methods.updateTime();
-            methods.updateCounter();
-            methods.tick();
-          } };
-    
-    
-        //initiate countdown
-        methods.init();
-      };
-    
-      $.fn.countdown.defaults = {
-        labels: true //boolean: toggles the {day / hour / minute / second} labels 
-      };
-    })(jQuery);
-    // end of countdown plugin
-    
-    // dom ready events (would usually be in separate js file)
-    $(document).ready(function () {
-      // plugin call
-      $('.counter').countdown();
-    });
-    
-    
-    
-     // document.body.setAttribute('id', 'bodyId');
-    </script>
-<script>
-    $.validator.addMethod("myusername", function(value, element) {
-        return /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-    }, 'Free email addresses are not allowed.');
-
-    $(document).ready(function() {
-        $("#primaryForm").validate({
-            rules: {
-                email: {
-                    required: true,
-                    myusername: true,
-                },
-            },
-            messages: {
-                email: {
-                    required: "",
-                },
-            },
-            submitHandler: function(form) {
-                $("#primaryForm").submit();
-                return true;
-            }
-        });
-
-        $("#letstalk").click(function() {
-            $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-03-12/3s3vpnz');
-            $("#primaryForm").submit();
-            $(".thank-u").addClass("ff");
-            return true;
-		
-        });
-
-        $('#primaryForm input').bind("cut copy paste", function(e) {
-            e.preventDefault();
-        });
-    });
-    document.body.setAttribute('id', 'bodyMen');
+<!-- <script async src="https://cdn.ampproject.org/v0.js"></script>
+   <script src="https://www.odessainc.com/assets/js/owl.carousel.js"></script> 
+      <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+   <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script> -->
+<script type="application/ld+json"> 
+   { 
+     "@context": "https://schema.org/",  
+     "@type": "Product",  
+     "name": "Auto Software Finance", 
+     "image": "", 
+     "description": "Discover Odessa Cutting-Edge Auto Lending and Leasing Software. Elevate Your Vehicle Leasing Experience with Our Car Leasing Software and Automotive Finance Solutions.", 
+     "brand": { 
+   	"@type": "Product", 
+   	"name": "Odessa" 
+     } 
+   } 
+   
 </script>
