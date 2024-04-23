@@ -3270,7 +3270,7 @@ section.innovate_section .btns_style:hover {
   background-color: #3f7ab8;
 }
 .bg-alert {
-  background-color: #ff495c;
+  background-color: #0075a2;;
 }
 .bg-grad {
   background-image: linear-gradient(to right, #3f7ab8, #81bee7, #81bee7);
@@ -3378,7 +3378,11 @@ section.innovate_section .btns_style:hover {
   background: #fff;
   gap: 10px;
   text-transform: uppercase;
-  color: #ff495c !important;
+  color: #0075a2 !important;
+  border-color: #0075a2;
+}
+.covid-alert .covid-alert__para a:hover{
+  box-shadow: inset 0 -4px 0 #0075a2;
 }
 .speaker {
   width: 25px;

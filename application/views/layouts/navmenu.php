@@ -27,7 +27,7 @@
                             <div class="alert  alert-dismissible fade in ">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                 <p class="covid-alert__para text-center" style="font-size: 18px;">
-                                                                <img src="<?= base_url(); ?>assets/images/api/speaker.svg" alt="Technology role during covid" class="lazyload speaker"/>
+                                                                <img src="<?= base_url(); ?>assets/images/api/speakers.svg" alt="Technology role during covid" class="lazyload speaker"/>
                                                                 Odessa Launches Auto Finance Suite: Odessa Auto<a href="<?php echo base_url(); ?>auto-finance-news" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Read Here</a> 
 																<!-- <a target="_blank" href="<?php echo base_url(); ?>lets-talk" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Know more<i class="fa fa-angle-right"></i></a> -->
 																								</p>
