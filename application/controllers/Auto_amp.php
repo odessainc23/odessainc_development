@@ -4,13 +4,13 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 class Auto_amp extends CI_Controller {
 
 	public function index(){
-		$data['meta_title']			= 'Latest Auto Finance News and Updates | Odessa';
-		$data['meta_description']	= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
-		$data['meta_keyword']		= 'auto finance software, auto lending solution, auto leasing, automotive leasing software';
-		$data['og_title']			= 'Latest Auto Finance News and Updates | Odessa';
-		$data['og_description']		= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
-		$data['tc_title']			= 'Latest Auto Finance News and Updates | Odessa';
-		$data['tc_description']		= 'Discover the Latest Auto Finance News at Odessa. Explore breaking news, expert insights, and industry updates to stay ahead in the Auto Lending Industry.';
+		data['meta_title']			= 'Auto Finance Software | Odessa';
+		$data['meta_description']	= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
+		$data['meta_keyword']		= 'auto finance solution, auto leasing software, vehicle leasing software, car leasing software, auto loan software, auto finance software, automotive finance software, auto lending software, auto loan management software, auto loan origination software, auto loan servicing software, automotive leasing software, automotive leasing software';
+		$data['og_title']			= 'Auto Finance Software | Odessa';
+		$data['og_description']		= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
+		$data['tc_title']			= 'Auto Finance Software | Odessa';
+		$data['tc_description']		= 'Explore Odessa\'s State-of-the-Art Auto Finance Solution and Enhance Your Auto Leasing Experience with Our Innovative Auto Finance Software.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
 		$this->load->view('pages/amp_pages/auto-finance-software.html', $data);
