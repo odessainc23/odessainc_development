@@ -377,6 +377,9 @@
     height: 100%;
     padding-top: 130px;
   }
+  .auto-page .xas-content .home-hero-cwrap{
+    padding-top: 130px;
+  }
   .xas-content .home-hero-ctitle {
     font-size: 2rem;
   }
