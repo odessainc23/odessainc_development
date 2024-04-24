@@ -13,7 +13,7 @@ class Cocktail extends CI_Controller {
 		$data['tc_description']		= 'Register now and reserve your spot for Cocktails at AFSA 2024. We look forward to an evening of building connections, sharing insights, and having a good time.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/cocktail-registeration.html', $data);
+		$this->load->view('pages/amp_pages/cocktail-registration.html', $data);
 		// $this->load->view('pages/amp_pages/automotive-finance-software.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
