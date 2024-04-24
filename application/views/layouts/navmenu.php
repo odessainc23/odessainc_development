@@ -24,12 +24,17 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="covid-alert">
-                            <div class="alert  alert-dismissible fade in ">
+						<div class="alert  alert-dismissible fade in ">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-								<p class="covid-alert__para text-center" style="font-size: 18px;">
-																	<img src="<?= base_url(); ?>assets/images/api/speaker.svg" alt="Technology role during covid" class="lazyload speaker"/>
-																	New White Paper Release: Banking on APIs - The Asset Finance Edition <a href="<?php echo base_url(); ?>whitepaper/future-ready-asset-finance-api" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Get it Now</a> 
-																	<!-- <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a> -->
+                                <!-- <p class="covid-alert__para text-center" style="text-transform: capitalize;font-size: 18px;">
+                                     Whitepaper Out Now! 'Top 10 must haves for XaaS Success in Asset Finance' <a href="<?php echo base_url(); ?>whitepaper/unlocking-xaas-success-signup" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Download</a> 
+                                                                <a target="_blank" href="https://www.odessainc.com/blog/odessa-accelerates-innovation-with-neos-unveils-new-ui-for-spring-22-release/" class="covid-alert__link alert-link">Learn more<i class="fa fa-angle-right"></i></a>
+                                                            </p> -->
+
+                                                            <p class="covid-alert__para text-center" style="font-size: 18px;">
+                                                                <img src="<?= base_url(); ?>assets/images/api/speakers.svg" alt="Technology role during covid" class="lazyload speaker"/>
+                                                                Odessa Launches Auto Finance Suite: Odessa Auto<a href="https://www.odessainc.com/blog/pr_individual/odessa-launches-auto-finance-suite-odessa-auto/" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Read Here</a> 
+                                                                <!-- <a target="_blank" href="<?php echo base_url(); ?>lets-talk" class="odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link" style="text-decoration: none;margin-left: 10px;height: 35px;min-width:100px;font-weight:400;">Know more<i class="fa fa-angle-right"></i></a> -->
 																								</p>
                             </div>
                         </div>
@@ -91,7 +96,7 @@
                                                         <li class="category-dot category-skb"><a href="<?php echo base_url(); ?>xaas-everything-as-a-service" hreflang="en" class="xaas-menu-color" style="color:#000">As-a-Service</a></li>
                                                     </ul>
                                                     <ul>
-														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>auto-finance-news" hreflang="en" class="xaas-menu-color" style="color:#000">Auto Finance</a></li>
+														<li class="category-dot category-bx auto"><a href="<?php echo base_url(); ?>auto-finance-software" hreflang="en" class="xaas-menu-color" style="color:#000">Auto Finance</a></li>
 
                                                     </ul>
                                                 </div>
@@ -289,7 +294,7 @@
                                     </div>
 									<div class="col-xs-6">
                                         <ul>
-										<li><a href="<?php echo base_url(); ?>auto-finance-news" hreflang="en"><b style="color: #000!important;
+										<li><a href="<?php echo base_url(); ?>auto-finance-software" hreflang="en"><b style="color: #000!important;
                                                 font-size: 13px!important;">Auto Finance</b></a></li>
 
                                         </ul>
