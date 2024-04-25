@@ -39,7 +39,7 @@
     margin-top: 10px;
 }
 .cocktail .key-takeaways p{
-    margin-bottom:10px;
+    margin-bottom:15px;
     font-size: 18px;
 }
 .cocktail .key-takeaways p b{
@@ -95,7 +95,7 @@
         height: 240px;
     }
     .cocktail .api-banner{
-        margin-top:60px;
+        margin-top:90px;
     }
 }
 @media only screen and (max-width:1024px) {
