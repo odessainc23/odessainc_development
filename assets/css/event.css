@@ -59,6 +59,18 @@
 }
 .navbar-brand>img{
     width: 250px;
+   
+}
+.nav-flex{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0;
+}
+.nav-flex .navbar-brand{
+    padding-bottom: 0;
+}
+.nav-flex .navbar-brand img{
+    width: 105px;
 }
 .cocktail .api-banner{
     margin-top:150px;
