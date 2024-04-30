@@ -1,0 +1,164 @@
+#wrapper.cocktail .api-wrapper{
+  background: url(../images/wine/cocktail-banner.jpg) right 0 no-repeat #213847;
+  height: 350px;
+  background-size: cover;
+ 
+}
+.fix{
+  min-height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+#wrapper.cocktail.cock-thank .api-wrapper{
+  background:none;
+}
+.cock-thank{
+  min-height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%; 
+  background: url(../images/wine/cocktail-banner.jpg) center center no-repeat #213847;
+  background-size: cover;
+}
+.cock-thank .api-heading{
+  width: 80%;margin:0 auto;
+}
+.cocktail .key-takeaways{
+  background: transparent;
+  max-width: 55%;
+  padding-left: 0;
+  padding-top: 0;
+}
+.cocktail .key-takeaways p{
+  color:#2A2D36;
+}
+.cocktail .date{
+  margin-top: 10px;
+}
+.cocktail .key-takeaways p{
+  margin-bottom:15px;
+  font-size: 18px;
+}
+.cocktail .key-takeaways p b{
+  font-family: MaisonNeue-Bold;
+}
+.cocktail .key-takeways-section {
+  margin: 20px 0;
+}
+.cocktail .key-takeaways .date p{
+  margin-bottom: 0;
+}
+.nav_bar{
+  height: 60px;
+}
+.nav_bar .navbar-brand{
+  padding: 10px 15px;
+}
+.navbar-brand>img{
+  width: 250px;
+ 
+}
+.nav-flex{
+  display: flex;
+  align-items: center;
+  margin: 5px 0 0;
+}
+.nav-flex .navbar-brand{
+  padding-bottom: 0;
+}
+.nav-flex .navbar-brand img{
+  width: 105px;
+}
+.cocktail .api-banner{
+  margin-top:150px;
+}
+#wrapper .cocktail .letstalkform.get-copy .form-group{
+  margin-bottom: 10px;
+}
+.cocktail .get-copy{
+  height: max-content;
+  padding: 25px 25px 25px 25px;
+  position: fixed;
+  top: 60px;}
+.api-body.cocktail #primaryForm {
+  margin-top: 0;
+}
+.cocktail .get-copy .btnmar{
+  margin-top: 10px;
+}
+.cocktail .plane{
+  margin: 0 auto 14px auto;
+  width: 70px;
+}
+.cocktail .api-banner.api-thankyou{
+  max-width: 100%;
+  text-align: center;
+}
+.cocktail.cock-thank .key-takeaways {
+  background: transparent;
+  max-width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width:1400px) {
+  #wrapper.cocktail .api-wrapper{
+      height: 240px;
+  }
+  .cocktail .api-banner{
+      margin-top:90px;
+  }
+}
+@media only screen and (max-width:1024px) {
+  /* .cocktail .key-takeaways{
+      max-width: 60%;
+  } */
+  .cocktail .get-copy{
+      position: relative;
+      top: 0;
+  }
+  .fix{
+      position: relative;
+  }
+  .cocktail .key-takeaways{
+      width: 100%;
+  }
+  .cocktail .take-flex{
+      flex-flow: row
+  }
+  .cocktail .get-copy{
+      width: 50%;
+  }
+  
+  .cocktail .api-heading{
+      text-align: center;
+  }
+}
+@media only screen and (max-width:767px) {
+  .cocktail .key-takeaways{
+      max-width: 100%;
+  }
+  .fix{
+      position: relative;
+  }
+  #wrapper.cocktail .api-wrapper{
+      height: 200px;
+  }
+  .cocktail .take-flex{
+      flex-flow: wrap;
+  }
+  .cocktail .get-copy {
+      width: 100%;
+  }
+  .cocktail .key-takeaways {
+      margin: 0;
+      text-align: center;
+  }
+  #wrapper.cocktail .api-wrapper {
+      background-size: cover;
+  }
+  .cock-thank .api-heading{
+      width: 100%;
+  }
+}
