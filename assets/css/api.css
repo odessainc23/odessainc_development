@@ -613,6 +613,9 @@ overflow: hidden;
     .get-copy {
         max-width: 45%;
     }
+    .api-heading {
+        font-size: 2.8rem;
+    }
 }
 @media only screen and (max-width: 1024px) {
     .api-banner {
