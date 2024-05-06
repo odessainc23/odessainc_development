@@ -47,8 +47,21 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
  
 }
 #wrapper.ebook.handbook .api-wrapper{
-    background: url(../images/api/auto-fin-bg.png) right 0 no-repeat #0D2332;
+    background-image: none;
     background-size: 50% 100%;
+}
+.change-para{
+    max-width: 55%;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.handbook .key-takeaways{
+    max-width: 55%;
+}
+.handbook .api-banner {
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 80px;
 }
 #wrapper .api-thanku-wrapper{
     background: none;
@@ -90,7 +103,7 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     position: relative;
 }
 .know-more{
-    font-size: 24px;
+    font-size: 22px;
     font-family: MaisonNeue-Book;
     font-style: normal;
     line-height: 32px;
@@ -148,7 +161,7 @@ font-family:MaisonNeue-Bold;
     font-style: normal;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 .footermenu_strip_inner .social_icon a:focus{
     text-decoration: none;
@@ -378,7 +391,17 @@ line-height: normal;
     background: url("https://www.odessainc.com/blog/wp-content/uploads/blog_header-B-1-430x350-1.png") no-repeat center;
     background-size: cover;
 }
-
+.next-gen .section-products #product-1 .part-1::before {
+    background: url("https://www.odessainc.com/assets/images/bob.png") no-repeat center;
+}
+.next-gen .section-products #product-2 .part-1::before {
+    background: url("https://dev.odessainc.com/assets/images/auto-news/auto-news.png") no-repeat center;
+    background-size: cover;
+}
+.next-gen .section-products #product-3 .part-1::before {
+    background: url("https://dev.odessainc.com/assets/images/auto-news/news-3.png") no-repeat center;
+    background-size: contain;
+}
 .section-products #product-2 .part-1::before {
     background: url("https://www.odessainc.com/blog/wp-content/uploads/2020/07/Odessa-decoding-dev-ops-01.svg") no-repeat center;
     background-size: cover;
@@ -625,6 +648,9 @@ overflow: hidden;
 .whitepaper-name {
     top: 20%;
     font-size: 14px;
+}
+.change-para{
+    max-width: 100%;
 }
 .get-copy{
     height: auto;
