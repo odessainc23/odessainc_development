@@ -617,7 +617,7 @@ overflow: hidden;
         font-size: 2.8rem;
     }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1189px) {
     .api-banner {
         width: 100%;
         max-width: 100%;
@@ -644,7 +644,9 @@ overflow: hidden;
     #wrapper .api-wrapper{
         background-image: none;
     }
-   
+    .change-para{
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -652,9 +654,7 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-.change-para{
-    max-width: 100%;
-}
+
 .get-copy{
     height: auto;
 }
