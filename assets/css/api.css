@@ -19,6 +19,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 .ebook .know-more{
     padding-left: 0;
 }
+.handbook .flex{
+    display: flex;
+    justify-content: space-between;
+}
 
 #bodyId .footermenu_strip{
     display: none;
@@ -42,7 +46,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
  
 }
-
+#wrapper.ebook.handbook .api-wrapper{
+    background: url(../images/api/auto-fin-bg.png) right 0 no-repeat #0D2332;
+    background-size: 50% 100%;
+}
 #wrapper .api-thanku-wrapper{
     background: none;
     /* height: 100vh; */
@@ -246,6 +253,9 @@ padding-left: 16px;
     padding: 25px 25px 0 25px;
     right: 40px;
     top: 33px;
+}
+.handbook .get-copy{
+    top:25px
 }
 
 .take-flex{
@@ -616,7 +626,22 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-
+.get-copy{
+    height: auto;
+}
+.handbook .get-copy {
+    top: 25px;
+    margin: 0 0 20px 0;
+}
+.key-takeways-section {
+    margin: 20px 0;
+}
+#wrapper.ebook.handbook .api-wrapper{
+    background-image: none;
+}
+.handbook .api-heading br{
+    display: none;
+}
 #wrapper.api-thankyou{
     background: none;
 }
