@@ -9,6 +9,9 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
  #bodyId footer {
     display: none;
 }
+.handbook .navbar-brand>img{
+    width: 350px;
+}
 #bodyId::-webkit-scrollbar {
         display: none;
         -webkit-appearance: none;
