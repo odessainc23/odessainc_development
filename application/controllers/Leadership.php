@@ -154,16 +154,16 @@ class Leadership extends CI_Controller {
 					'linkedin'	=> 'https://www.linkedin.com/in/stevenippak2020/',
 				)
 			),
-			// array(
-			// 	'name'			=> 'Jason St. Laurent',
-			// 	'thumbnail'		=> base_url() .'assets/images/leadership/JasonStLaurent_Odessa.jpg',
-			// 	'title'			=> 'COO',
-			// 	'description'	=> 'Jason is Odessa’s COO, responsible for leading all aspects of the company’s delivery teams across system implementation and customer support. With 23 years of experience in global system implementations, technology development, and inter-disciplinary project management, Jason is focused on delivering exception customer experience, implementing best practices to realize accelerated time-to-value for customers, and developing services teams to scale. Prior to Odessa, he grew and led a variety of services portfolios across FIS. Jason holds a Bachelor’s degree in Accounting and Management Information Systems from the University of Delaware.',
-			// 	'experience'	=> '24 years in Delivery',
-			// 	'social'		=> array(
-			// 		'linkedin'	=> 'https://www.linkedin.com/in/jason-st-laurent-0694472/',
-			// 	)
-			// ),
+			array(
+				'name'			=> 'Nate Montgomery',
+				'thumbnail'		=> base_url() .'assets/images/leadership/nate.png',
+				'title'			=> 'CRO',
+				'description'	=> 'Nate arrives at Odessa after a 20 year career at software company Eagle Investment Systems, a wholly owned subsidiary of BNY Mellon, where his experience with investment management software and in the FinTech industry spanned multiple global roles.  Nate held positions as a Senior Consultant, Lead Sales Engineer, Global Head of Sales Engineering, Regional Sales Director, and Global Head of Sales for the Eagle Investment Systems and the BNY Mellon Data & Analytics businesses.  Over his time at Eagle and BNY Mellon, Nate’s leadership supported a rapid growth period for the business, helped launch and sell new products in cloud, and transformed the firm’s portfolio of accounting, performance measurement, ESG and fund distribution analytics, and data management solutions.  Nate holds a Masters of Business Administration at Carnegie Mellon University’s Tepper School of Business. He also holds bachelor’s degree from the School of Information Systems at the University of Pittsburgh, where he was a four-year starter on the Men’s Soccer Team in the Big East Conference.',
+				'experience'	=> '20 years in Software',
+				'social'		=> array(
+					'linkedin'	=> 'https://www.linkedin.com/in/nathan-montgomery-00359a11/',
+				)
+			),
 		);
 	}
 }

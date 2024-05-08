@@ -6,6 +6,9 @@
 .accreditations{
     margin-top: 0;
 }
+a.pglead_ld-icmsitem.pglead_ld-icmsitem--linkedin svg{
+  width: 13px;
+}
 .accreditations .flex{
     display: flex;
     list-style: none;
@@ -3953,7 +3956,8 @@ section.innovate_section .btns_style:hover {
 .pglead_ld-icmsoc {
   display: flex;
   align-items: flex-start;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-top: -1px;
 }
 .pglead_ld-icmsitem {
   display: block;
