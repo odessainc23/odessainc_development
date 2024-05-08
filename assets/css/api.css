@@ -647,6 +647,9 @@ overflow: hidden;
     .change-para{
         max-width: 100%;
     }
+    .flex .form-group{
+        width: 49%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
