@@ -28,11 +28,11 @@ $(function() {
   $("#post-808 a").attr("href", newUrl2);
 
 
-  var newUrl3 = "https://dev.odessainc.com/handbook/next-gen-auto-platform";
+  var newUrl3 = "https://www.odessainc.com/handbook/next-gen-auto-platform";
 
   // Change the href attribute of the anchor tag
-  $("#post-1058 .continue-reading-link").attr("href", newUrl3);
-  $("#post-1058 a").attr("href", newUrl3);
+  $("#post-829 .continue-reading-link").attr("href", newUrl3);
+  $("#post-829 a").attr("href", newUrl3);
 });
 
 function tabBx(i) {
