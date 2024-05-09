@@ -71,6 +71,8 @@ $route['terms-of-use'] = 'welcome/terms_condition';
 $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
+
+
 $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
