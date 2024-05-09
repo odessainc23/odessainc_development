@@ -13,7 +13,7 @@ class Auto_thank extends CI_Controller {
 		$data['tc_description']		= 'Unlock the potential of Odessa\'s auto finance software with our latest handbook. Streamline operations, boost efficiency & drive growth. Download now.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/next-gen-auto-platform-thankyou.html', $data);
+		$this->load->view('pages/amp_pages/next-gen-auto-finance-platform-thankyou.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
