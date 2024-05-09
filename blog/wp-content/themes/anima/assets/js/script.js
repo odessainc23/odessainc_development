@@ -28,7 +28,7 @@ $(function() {
   $("#post-808 a").attr("href", newUrl2);
 
 
-  var newUrl3 = "https://www.odessainc.com/handbook/next-gen-auto-platform";
+  var newUrl3 = "https://www.odessainc.com/handbook/next-gen-auto-finance-platform";
 
   // Change the href attribute of the anchor tag
   $("#post-829 .continue-reading-link").attr("href", newUrl3);
