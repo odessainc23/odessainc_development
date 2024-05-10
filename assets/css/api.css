@@ -13,8 +13,8 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     width: 350px;
 }
 #bodyId::-webkit-scrollbar {
-        display: none;
-        -webkit-appearance: none;
+        /* display: none;
+        -webkit-appearance: none; */
 }
 .ebook .know-more:after{
     display:none
