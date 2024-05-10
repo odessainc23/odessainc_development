@@ -660,7 +660,9 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-
+.handbook .key-takeaways {
+    max-width: 100%;
+}
 .get-copy{
     height: auto;
 }
