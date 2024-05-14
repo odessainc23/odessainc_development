@@ -784,6 +784,7 @@ section.awards .heading_div span.award_icon {
 .cloudserverCon .normaltxt {
   max-width: 70%;
   margin: 30px auto auto;
+  line-height: 35px;
 }
 .cloudserverCon .nextrw {
   margin-top: 25px;
