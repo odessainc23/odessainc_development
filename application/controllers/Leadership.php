@@ -66,7 +66,16 @@ class Leadership extends CI_Controller {
 				)
 			),
 			
-			
+			array(
+				'name'			=> 'Nate Montgomery',
+				'thumbnail'		=> base_url() .'assets/images/leadership/nate.png',
+				'title'			=> 'CRO',
+				'description'	=> 'Nate is the Chief Revenue Officer at Odessa. He joins us after a 20-year career at software company Eagle Investment Systems, a wholly owned subsidiary of BNY Mellon. His experience with investment management software and in the FinTech industry spans multiple global roles. During his tenure, Nate held multiple titles, and his leadership supported a rapid growth period for the business. He helped launch and sell new products in the cloud, and transformed the firm’s portfolio of accounting, performance measurement, ESG, fund distribution analytics, and data management solutions. Nate holds a Master of Business Administration from Carnegie Mellon University’s Tepper School of Business. Additionally, he earned a Bachelor’s degree from the School of Information Systems at the University of Pittsburgh, where he was a four-year starter on the Men’s Soccer Team in the Big East Conference.',
+				'experience'	=> '20 years in Software',
+				'social'		=> array(
+					'linkedin'	=> 'https://www.linkedin.com/in/nathan-montgomery-00359a11/',
+				)
+			),
 			
 			
 			array(

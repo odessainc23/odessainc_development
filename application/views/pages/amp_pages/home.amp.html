@@ -1,7 +1,63 @@
-<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001"  />
-
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 <style>
-    .testimonial {
+    .slick-slider .element{
+  height:450px;
+  display:inline-block;
+
+}
+.slick-dots button{
+    display: none;
+}
+.slick-slider .slick-disabled {
+  opacity : 0; 
+  pointer-events:none;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
+    padding: 0;
+}
+.slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 6px;
+    background-color: #e0e0e0;
+}
+.slick-dots li.slick-active {
+    background-color: #00abc7;
+}
+.cannon.testimonial {
+    background:url(../assets/images/cannon-bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+.cannon .video-con {
+    width: auto;
+    font-size: 42px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 0px;
+}
+.cannon .testimonial-content {
+    padding-bottom: 20px;
+    width: 100%;
+    position: relative;
+    height: 250px;
+    margin: 50px 0 30px 40px;
+}
+.cannon .watch,.cannon .watch:hover,.cannon .active{
+    background:transparent;
+    box-shadow: none;
+    padding:10px 0;
+}
+.cannon .watch img{
+    width: 165px;
+}
+.testimonial {
    position: relative;
    margin:  0 0;
      height: 100%;
@@ -77,10 +133,7 @@
    cursor: pointer;
  }
  
- 
- 
- 
- 
+
      .platformsectionwrap .dotsdesign img {
          width: 300px;
      }
@@ -152,11 +205,11 @@
  }
  .watch{
      background: #FF495C;
-     padding: 10px 20px;
+     padding:0px 20px;
      font-size: 14px;
      color: #fff;
      width: max-content;
-     margin: 20px 0 0;
+     margin: 0px 0 0;
  }
  .videoPoster:after{
      background: none;
@@ -319,13 +372,22 @@ button {
     font-size: 0.75rem;
     color: #fff;
 }
+.slick-slider{
+    margin-top: 50px;
+}
  .testimonial{
      margin:3em 0 0;
+ }
+ .overtrustedwrap{
+    padding-top: 0;
  }
  @media only screen and (max-width:1300px){
      .home-hero-ctitle{
          font-size: 3rem;
      }
+     #clients_view {
+    max-width: 90%;
+	 }
     .video-con{
      padding-right: 0;
     }
@@ -344,6 +406,7 @@ button {
      .home-hero-ctitle {
     font-size: 2rem;
 }
+
      .home-hero-bgimg {
      width: 100%;
      transform: translateX(0) translateZ(0);
@@ -370,6 +433,9 @@ button {
  .video-con{
      width: 100%;text-align: center;margin:30px auto;padding: 0;
  }
+ .cannon .video-con{
+	text-align: left;
+ }
  .watch{
      margin: 20px auto 0 auto;
  }
@@ -387,551 +453,558 @@ button {
  }
  }
  
- 
- </style>
- 
- <div id="wrapper home-side">
-     <div class="">
-         <div class="home-hero">
-             <div class="home-hero-bg">
-                 <div class="home-hero-bggrad"></div>
-                 <div class="home-hero-bgimg">
-                     <amp-img src="<?php echo base_url(); ?>assets/images/awards/odessa-partner-banner-bkmenu.webp" alt="Odessa-company"
-                         class="lazyload" width="1" height="1" layout="responsive"></amp-img>
-                 </div>
-             </div>
-             <div class="home-hero-content">
-                 <div class="home-hero-cinner">
-                     <div class="home-hero-cwrap">
-                         <p class="home-hero-cstitle" style="font-family: MaisonNeue-Bold;color: #2a2d36;margin: 0 0 10px">BUILT TO PERFORM</p>
-                         <div class="home-hero-ctitlewrap">
-                             <h1 class="home-hero-ctitle">Your Proven <br>Asset Finance<br> Solution</h1>
-                         </div>
-                         <p class="home-hero-cdesc">Innovate and grow your business — all while automating operations —
-                             with the only asset finance solution you'll ever need.</p>
-                         <a class="odc__btn odc__btn--primary odc__btn--md" href="<?= base_url(); ?>platform"
-                             target="_self">Explore the platform</a>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="testimonial">
-             <div class="container">
-                 <div class="video">
-                     <img src="<?php echo base_url(); ?>assets/images/o-circle.png" alt="odessa-logo">
-                     </div>
-             <div class="d-flex">
-                 
-             <div class="testimonial-content">
-                <!-- <iframe src="https://odessainc.wistia.com/medias/kndvnc3z5u"></iframe> -->
-               <!-- <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button> -->
-               <!-- <a href="https://fast.wistia.com/embed/iframe/zs8hlyi5xz?autoPlay=true&controlsVisibleOnLoad=true&playerColor=990000&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-tumblr-googlePlus&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" class="wistia-popover[height=388,playerColor=990000,width=640]">
+ @media only screen and (max-width:767px){
+    .video-con h2 {
+    font-size: 25px;
+}
+.cannon .watch img {
+    width: 120px;
+}
+.cannon .video-con{
+    justify-content: flex-start;
+    padding-left: 20px;
+    text-align: left;
+}
+.testimonial{
+    margin:0;
+}
+.cannon .testimonial-content {
+
+    height: auto;
+    margin: 50px 0 0px 0px;
+}
+.slick-slider .element {
+    height: 100%;
+ }
+ .video-con{
+	width: auto !important;
+ }
+}
+</style>
+
+<div id="wrapper home-side">
+    <div class="">
+        <div class="home-hero">
+            <div class="home-hero-bg">
+                <div class="home-hero-bggrad"></div>
+                <div class="home-hero-bgimg">
+                    <amp-img src="<?php echo base_url(); ?>assets/images/awards/odessa-partner-banner-bkmenu.webp" alt="Odessa-company" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+                </div>
+            </div>
+            <div class="home-hero-content">
+                <div class="home-hero-cinner">
+                    <div class="home-hero-cwrap">
+                        <p class="home-hero-cstitle" style="font-family: MaisonNeue-Bold;color: #2a2d36;margin: 0 0 10px">BUILT TO PERFORM</p>
+                        <div class="home-hero-ctitlewrap">
+                            <h1 class="home-hero-ctitle">Your Proven <br>Asset Finance<br> Solution</h1>
+                        </div>
+                        <p class="home-hero-cdesc">Innovate and grow your business — all while automating operations — with the only asset finance solution you'll ever need.</p>
+                        <a class="odc__btn odc__btn--primary odc__btn--md" href="<?= base_url(); ?>platform" target="_self">Explore the platform</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial cannon">
+            <div class="container">
+
+                <div class="d-flex">
+
+                    <div class="testimonial-content">
+                        <div class="video-con">
+                            <h2>Canon's Phenomenal<br> Growth Journey with <br>Odessa</h2>
+                            <span class="wistia_embed wistia_async_nu19zeekbd popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-1"><div id="wistia_56.thumb_container" class="wistia_click_to_play"></div>
+                            <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link"><img src="<?php echo base_url(); ?>assets/images/watch.png" alt="" /></a>
+                   </span>
+
+                        </div>
+                        <!-- <iframe src="https://odessainc.wistia.com/medias/kndvnc3z5u"></iframe> -->
+                        <!-- <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button> -->
+                        <!-- <a href="https://fast.wistia.com/embed/iframe/zs8hlyi5xz?autoPlay=true&controlsVisibleOnLoad=true&playerColor=990000&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-tumblr-googlePlus&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" class="wistia-popover[height=388,playerColor=990000,width=640]">
                 <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" />
             </a> -->
-            <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-                <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
-            </span>
-             </div>
-             
-             <div class="video-con">
-                 <h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
-                 <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-                    <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
-                </span>
-                 
+
+                    </div>
+
+
+
+                </div>
+                <div class="video-popup">
+                    <div class="video-container">
+                        <!-- <button id="playVideo">Play Video</button> -->
+                        <div class="popup">
+                            <span class="close">&times;</span>
+                            <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
+                                <source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
+                                <!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
+                            </video>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-           </div>
-           <div class="video-popup">
-             <div class="video-container">
-                 <!-- <button id="playVideo">Play Video</button> -->
-                 <div class="popup">
-                   <span class="close">&times;</span>
-                   <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
-                     <source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
-                     <!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
-                   </video>
-                 </div>
-             </div>
-           </div>
-           </div></div>
-           
-           
- 
-       
- 
-         <!--Platform Solution Section Start-->
-         <div style="clear:both"></div>
-         <div class="platformsectionwrap">
-             <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" width="300"
-                     class="lazyload wh-image" /> </div>
-             <div class="container clearfix">
-                 <h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
-                 <p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence
-                     <br>
-                     and extensibility in one seamless platform for better business performance.
-                 </p>
-                 <div class="assetsfinancebox">
-                     <!-- <h3>Asset Finance</h3> -->
-                     <div class="finance_assets_row">
-                         <div class="row clearfix">
-                             <div class="col-xs-12 col-sm-4">
-                                 <a href="<?= base_url(); ?>auto-finance-software"> <h3>Auto Finance</h3></a>
-                             </div>
-                             <div class="col-xs-12 col-sm-4">
-                                 <a href="<?= base_url(); ?>platform/core"><h3>Equipment Finance</h3></a>
-                             </div>
-                           
-                             <div class="col-xs-12 col-sm-4">
+        </div>
+
+
+
+
+
+        <!--Platform Solution Section Start-->
+        <div style="clear:both"></div>
+        <div class="platformsectionwrap">
+            <div class="dotsdesign"> <img data-src="<?= base_url(); ?>assets/images/dots.png" alt="Dots" width="300" class="lazyload wh-image" /> </div>
+            <div class="container clearfix">
+                <h2 class="text-center">One uniﬁed <span>platform solution</span></h2>
+                <p class="text-center">See how the Odessa Platform combines asset-based functionality, data intelligence
+                    <br> and extensibility in one seamless platform for better business performance.
+                </p>
+                <div class="assetsfinancebox">
+                    <!-- <h3>Asset Finance</h3> -->
+                    <div class="finance_assets_row">
+                        <div class="row clearfix">
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="<?= base_url(); ?>auto-finance-software">
+                                    <h3>Auto Finance</h3></a>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="<?= base_url(); ?>platform/core"><h3>Equipment Finance</h3></a>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4">
                                 <a href="<?= base_url(); ?>xaas-everything-as-a-service"><h3>As-a-Service</h3>
                                     </a>
-                             </div>
-                         </div>
-                         <div class="row clearfix">
-                             <div class="col-xs-12 col-sm-4">
-                                 <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
-                                         <div class="fin_ass_logo"></div>
-                                         <div class="finassname">Origination</div>
-                                     </a> </div>
-                             </div>
-                             <div class="col-xs-12 col-sm-4 ordr">
-                                 <div class="fin_ass_valrw lastrw"> <a href="<?= base_url(); ?>platform">
-                                         <div class="fin_ass_logo ass_man"></div>
-                                         <div class="finassname">Asset Management</div>
-                                     </a> </div>
-                             </div>
-                             <div class="col-xs-12 col-sm-4">
-                                 <div class="fin_ass_valrw"> <a href="<?= base_url(); ?>platform">
-                                         <div class="fin_ass_logo servicing"></div>
-                                         <div class="finassname">Servicing</div>
-                                     </a> </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="assets_fin_service">
-                     <div class="row equalHMWrap eqWrap clearfix">
-                         <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="300"
-                             data-aos-once="true">
-                             <div class="assfinconbx">
-                                 <div class="logosrw">
-                                     <div class="finass_ser_logo"></div>
-                                 </div>
-                                 <div class="headingbox">Process Automation</div>
-                                 <div class="fincetext">Seamlessly automate end-to-end business processes.</div>
-                             </div>
-                         </div>
-                         <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600"
-                             data-aos-once="true">
-                             <div class="assfinconbx">
-                                 <div class="logosrw">
-                                     <div class="finass_ser_logo om"></div>
-                                 </div>
-                                 <div class="headingbox">Omnichannel <span>+ Mobility</span></div>
-                                 <div class="fincetext">Build engaging experiences for stakeholders – whenever, and
-                                     wherever.</div>
-                             </div>
-                         </div>
-                         <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600"
-                             data-aos-once="true">
-                             <div class="assfinconbx">
-                                 <div class="logosrw">
-                                     <div class="finass_ser_logo di"></div>
-                                 </div>
-                                 <div class="headingbox">Data Intelligence</div>
-                                 <div class="fincetext">Get analytical insights inside your leasing operations and across
-                                     your business.</div>
-                             </div>
-                         </div>
-                         <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600"
-                             data-aos-once="true">
-                             <div class="assfinconbx">
-                                 <div class="logosrw">
-                                     <div class="finass_ser_logo dt"></div>
-                                 </div>
-                                 <div class="headingbox">Developer Tools</div>
-                                 <div class="fincetext">Extend, build, and test functionality with the #1 asset finance
-                                     platform.</div>
-                             </div>
-                         </div>
-                         <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600"
-                             data-aos-once="true">
-                             <div class="assfinconbx">
-                                 <div class="logosrw">
-                                     <div class="finass_ser_logo api"></div>
-                                 </div>
-                                 <div class="headingbox">API + Integration</div>
-                                 <div class="fincetext">Connect any app, data, or device – in the cloud or on-premise.
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="<?= base_url();?>platform">Learn
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="fin_ass_valrw">
+                                    <a href="<?= base_url(); ?>platform">
+                                        <div class="fin_ass_logo"></div>
+                                        <div class="finassname">Origination</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 ordr">
+                                <div class="fin_ass_valrw lastrw">
+                                    <a href="<?= base_url(); ?>platform">
+                                        <div class="fin_ass_logo ass_man"></div>
+                                        <div class="finassname">Asset Management</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="fin_ass_valrw">
+                                    <a href="<?= base_url(); ?>platform">
+                                        <div class="fin_ass_logo servicing"></div>
+                                        <div class="finassname">Servicing</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="assets_fin_service">
+                    <div class="row equalHMWrap eqWrap clearfix">
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="300" data-aos-once="true">
+                            <div class="assfinconbx">
+                                <div class="logosrw">
+                                    <div class="finass_ser_logo"></div>
+                                </div>
+                                <div class="headingbox">Process Automation</div>
+                                <div class="fincetext">Seamlessly automate end-to-end business processes.</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                            <div class="assfinconbx">
+                                <div class="logosrw">
+                                    <div class="finass_ser_logo om"></div>
+                                </div>
+                                <div class="headingbox">Omnichannel <span>+ Mobility</span></div>
+                                <div class="fincetext">Build engaging experiences for stakeholders – whenever, and wherever.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                            <div class="assfinconbx">
+                                <div class="logosrw">
+                                    <div class="finass_ser_logo di"></div>
+                                </div>
+                                <div class="headingbox">Data Intelligence</div>
+                                <div class="fincetext">Get analytical insights inside your leasing operations and across your business.</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                            <div class="assfinconbx">
+                                <div class="logosrw">
+                                    <div class="finass_ser_logo dt"></div>
+                                </div>
+                                <div class="headingbox">Developer Tools</div>
+                                <div class="fincetext">Extend, build, and test functionality with the #1 asset finance platform.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 asswd20 finserbx chained-delay" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+                            <div class="assfinconbx">
+                                <div class="logosrw">
+                                    <div class="finass_ser_logo api"></div>
+                                </div>
+                                <div class="headingbox">API + Integration</div>
+                                <div class="fincetext">Connect any app, data, or device – in the cloud or on-premise.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="<?= base_url();?>platform">Learn
                          more</a> </div>
-             </div>
-         </div>
-         <!--Platform Solution Section End-->
- <!-- accrediatations -->
+            </div>
+        </div>
+        <!--Platform Solution Section End-->
+        <!-- accrediatations -->
 
- <div class="cloudserversection home-side acc">
-    <div class="container clearfix">
-        <div class="cloudserverCon">
-            <h2 class="text-center">Security and Compliance</h2>
-            <div class="accreditations">
-                <ul class="flex">
-                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn.svg" alt="SOC"></li>
-                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-2.svg" alt="SOC2"></li>
-                    <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-3.svg" alt="SOC3"></li>
-                    <li><img src="<?php echo base_url(); ?>assets/images/icons/ison.svg" alt="ISO27001"></li>
-                    <li><img src="<?php echo base_url(); ?>assets/images/icons/ison-2.svg" alt="ISO27017"></li>
-                    
-                    </ul>
+        <div class="cloudserversection home-side acc">
+            <div class="container clearfix">
+                <div class="cloudserverCon">
+                    <h2 class="text-center">Security and Compliance</h2>
+                    <div class="accreditations">
+                        <ul class="flex">
+                            <li><img src="<?php echo base_url(); ?>assets/images/icons/socn.svg" alt="SOC"></li>
+                            <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-2.svg" alt="SOC2"></li>
+                            <li><img src="<?php echo base_url(); ?>assets/images/icons/socn-3.svg" alt="SOC3"></li>
+                            <li><img src="<?php echo base_url(); ?>assets/images/icons/ison.svg" alt="ISO27001"></li>
+                            <li><img src="<?php echo base_url(); ?>assets/images/icons/ison-2.svg" alt="ISO27017"></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Cloud or Server Start Here-->
+        <div class="cloudserversection home-side">
+            <div class="container clearfix">
+                <div class="cloudserverCon">
+                    <div class="cloudsview1">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.webp" alt="Odessa-cloud" width="1" height="1" layout="responsive"></amp-img>
+                    </div>
+                    <div class="cloudsview2">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Odessa-cloud" width="1" height="1" layout="responsive"></amp-img>
+                    </div>
+                    <h2 class="text-center">Cloud or Server</h2>
+                    <p class="normaltxt text-center">Our cloud-first design philosophy means the Odessa Platform is optimized to be
+                        <br> consumed in the cloud, but dynamic enough to be hosted on your servers.
+                        <span class="nextrw">
+                             <span>Understand which deployment option is</span>
+                        <br>
+                        <a class="odc__btn--more odc__btn--xl" href="<?= base_url(); ?>cloud">best for you</a>
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!--Cloud or Server End Here-->
 
-<!-- <div class="testimonialswrap auto-fin">
-    <h2 class="text-center">Recent Auto Finance News from Odessa</h2>
-    <div class="wrapper">
-    
-       <div class="card">
-          <div class="card-banner">
-             <img class="banner-img" src="<?php echo base_url(); ?>assets/images/auto-news/auto-press.png" alt="Veteran Bob Johnson">
-          </div>
-          <div class="card-body">
-             <h3 class="blog-title">Odessa Launches Auto Finance Suite: Odessa Auto</h3>
-             <p class="blog-description">Equipment finance leader brings 26 years of innovation to auto finance, beginning with originations.</p>
-             <div class="card-profile">
-                <div class="card-profile-info">
-                   <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://www.odessainc.com/blog/pr_individual/odessa-launches-auto-finance-suite-odessa-auto/" target="_blank">Read
-                      more</a> 
-                   </div>
+
+    <!--Integrate with the Tools Start-->
+    <div class="integratewithtools home-side">
+        <div class="container clearfix">
+            <div class="integratecon">
+                <div class="integrateconmidCon">
+                    <h2 class="text-center wtcol">Integrate with the tools you <span>already use</span></h2>
+                    <p class="text-center wtcol">Connect the Odessa Platform to your critical business tools to automate
+                        <br> cross-platform workflow. DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
+                    <div class="newsletter inlineform">
+                        <form id="learnMoreForm" method="post">
+                            <div class="input">
+                                <input type="email" placeholder="What’s your email?" name="email" id="emailInput" class="one-field-pardot-form-handler" />
+                            </div>
+                            <div class="inputbtn">
+                                <button id="submitBtn" class="odc__btn odc__btn--primary odc__btn--md">Learn More</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
+            </div>
+        </div>
     </div>
- </div> -->
+    <!--Integrate with the Tools End-->
+    <div class="slick-slider">
+        <div class="element element-1">
+            <div class="testimonial">
+                <div class="container">
+                    <div class="video">
+                        <img src="<?php echo base_url(); ?>assets/images/o-circle.png">
+                    </div>
+                    <div class="d-flex">
 
-         <!--Cloud or Server Start Here-->
-         <div class="cloudserversection home-side">
-             <div class="container clearfix">
-                 <div class="cloudserverCon">
-                     <div class="cloudsview1">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-2.webp" alt="Odessa-cloud"
-                             width="1" height="1" layout="responsive"></amp-img>
-                     </div>
-                     <div class="cloudsview2">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/odessa-cloud-1.jpg" alt="Odessa-cloud"
-                             width="1" height="1" layout="responsive"></amp-img>
-                     </div>
-                     <h2 class="text-center">Cloud or Server</h2>
-                     <p class="normaltxt text-center">Our cloud-first design philosophy means the Odessa Platform is
-                         optimized to be<br>
-                         consumed in the cloud, but dynamic enough to be hosted on your servers.
-                         <span class="nextrw">
-                             <span>Understand which deployment option is</span>
-                             <br>
-                             <a class="odc__btn--more odc__btn--xl" href="<?= base_url(); ?>cloud">best for you</a>
-                         </span>
-                     </p>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--Cloud or Server End Here-->
-     
+                        <div class="testimonial-content">
 
-     <!--Integrate with the Tools Start-->
-     <div class="integratewithtools home-side">
-         <div class="container clearfix">
-             <div class="integratecon">
-                 <div class="integrateconmidCon">
-                     <h2 class="text-center wtcol">Integrate with the tools you <span>already use</span></h2>
-                     <p class="text-center wtcol">Connect the Odessa Platform to your critical business tools to
-                         automate<br>
-                         cross-platform workflow.
-                         DocuSign, Salesforce, Vertex, GreatPlains and more. </p>
-                     <div class="newsletter inlineform">
-                         <form id="learnMoreForm" method="post">
-                             <div class="input">
-                                 <input type="email" placeholder="What’s your email?" name="email" id="emailInput"  class="one-field-pardot-form-handler"/>
-                             </div>
-                             <div class="inputbtn">
-                                 <button id="submitBtn" class="odc__btn odc__btn--primary odc__btn--md">Learn More</button>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--Integrate with the Tools End-->
- 
-     <!--Testimonials Section Start Here-->
-     <div class="testimonialswrap home-side">
-         <div class="container clearfix">
-             <div id="clients_view">
-                 <div class="row equalHMWrap eqWrap clearfix">
-                     <div class="col-sm-6 col-lg-7">
-                         <div class="clientsmess">
-                             <div class="appcllogorw">
-                                 <div class="testicon">
-                                     <amp-img src="<?php echo base_url(); ?>assets/images/testi_icon.png" alt=""
-                                         class="lazyload" width="1" height="1.5" layout="intrinsic"></amp-img>
- 
-                                     <!-- <amp-img src="<?php echo base_url(); ?>assets/images/testi_icon.png" alt="Quotation mark" width="45"
-                                         height="35" ></amp-img> -->
-                                 </div>
-                                 <div class="applogo medone">
- 
-                                     <img data-src="<?= base_url(); ?>assets/images/med-one_logo.png" alt="Med One"
-                                         class="lazyload wh-image" />
-                                 </div>
-                             </div>
-                             <p>On a daily basis, Odessa is really the backbone of our organization. Everything that we
-                                 all do runs through the Odessa Platform.</p>
-                         </div>
-                     </div>
-                     <div class="col-sm-6 col-lg-5">
-                         <div class="clientsimgbx">
-                             <amp-img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud" width="1"
-                                 height="1" layout="responsive"></amp-img>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="overtrustedwrap">
-                 <h2 class="headingsection text-center">Trusted by over 9,500 asset ﬁnance <span>users around the
+                            <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-1"><div id="wistia_56.thumb_container" class="wistia_click_to_play">
+                    <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt=""></a>
+                </div></span>
+                        </div>
+
+                        <div class="video-con">
+                            <h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
+                            <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-2"><div id="wistia_44.thumb_container" class="wistia_click_to_play" style="position: relative; height: 66.3333px; width: 274.188px;">
+                    <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
+                </div></span>
+                        </div>
+
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="element element-2">
+            <div id="clients_view">
+                <div class="row equalHMWrap eqWrap clearfix">
+                    <div class="col-sm-6 col-lg-7">
+                        <div class="clientsmess">
+                            <div class="appcllogorw">
+                                <div class="testicon">
+                                    <img src="<?php echo base_url(); ?>assets/images/testi_icon.png" alt="">
+
+                                    <!-- <amp-img src="http://localhost:8000/assets/images/testi_icon.png" alt="Quotation mark" width="45"
+                                    height="35" ></amp-img> -->
+                                </div>
+                                <div class="applogo medone">
+
+                                    <img data-src="<?php echo base_url(); ?>assets/images/med-one_logo.png" alt="Med One" class="wh-image ls-is-cached lazyloaded" src="http://localhost:8000/assets/images/med-one_logo.png">
+                                </div>
+                            </div>
+                            <p>On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-5">
+                        <div class="clientsimgbx">
+                            <img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Testimonials Section Start Here-->
+    <div class="testimonialswrap home-side">
+        <div class="container clearfix">
+
+            <div class="overtrustedwrap">
+                <h2 class="headingsection text-center">Trusted by over 9,500 asset ﬁnance <span>users around the
                          world</span></h2>
-                 <p class="text-center">Learn why companies trust Odessa to help deliver great<br>
-                     stakeholder experiences.</p>
-                 <div class="newsletter inlineform">
-                     <!--	<form id ="letstalkForm1" method ="POST"> -->
-                     <div class="input">
-                         <input type="email" placeholder="What’s your email?" name="email" id="email2" required>
-                     </div>
-                     <div class="inputbtn">
-                         <input class="odc__btn odc__btn--primary odc__btn--md" type="submit"
-                             onclick="letstalkclick('email2')" value="Let’s Talk">
-                     </div>
-                     <div class="error"></div>
-                     <!--				</form> -->
-                 </div>
-                 <div class="trusted_brands_logo">
- 
-                     <div class="brlogo">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="metabank Logo"
-                             width="51" height="51"></amp-img>
-                     </div>
- 
-                     <div class="brlogo">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/pnc_logo.png" alt="pnc Logo"
-                             width="90" height="30"></amp-img>
-                     </div>
-                     <div class="brlogo">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="canon Logo"
-                             width="80" height="25"></amp-img>
-                     </div>
-                     <div class="brlogo">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/icons/truist_logo.png" alt="truist Logo"
-                             width="100" height="30"></amp-img>
-                     </div>
-                     <div class="brlogo">
-                         <amp-img src="<?php echo base_url(); ?>assets/images/johnson-controls.png" alt="johnson Logo"
-                             width="100" height="45"></amp-img>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- 
- </div>
- <link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
- 
- <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
- <script>
- 
- $(document).ready(function() {
-     $("#myPopup").get(0).pause();
-   $('.play-btn').click(function() {
-     $('.video-popup').fadeIn();
-     $("#myPopup").get(0).play();
-   });
- 
-   $('.close').click(function() {
-     $('.video-popup').fadeOut();
-     $('#myPopup').stop();
-     $("#myPopup").get(0).pause();
-   });
- 
- //   $('#playVideo').on('click', function() {
- //     $('.video-popup').show();
- //     $('#myPopup').show();
- //     $('#myPopup').play();
- //   });
- 
- //   $('.close').on('click', function() {
- //     $('.video-popup').hide();
- //     $('#myPopup').hide();
- //     this.hide();
- //   });
- 
-     $("#learnMoreForm").validate({
-         rules: {
-             "email":{
-                 required: true
+                <p class="text-center">Learn why companies trust Odessa to help deliver great
+                    <br> stakeholder experiences.</p>
+                <div class="newsletter inlineform">
+                    <!--	<form id ="letstalkForm1" method ="POST"> -->
+                    <div class="input">
+                        <input type="email" placeholder="What’s your email?" name="email" id="email2" required>
+                    </div>
+                    <div class="inputbtn">
+                        <input class="odc__btn odc__btn--primary odc__btn--md" type="submit" onclick="letstalkclick('email2')" value="Let’s Talk">
+                    </div>
+                    <div class="error"></div>
+                    <!--				</form> -->
+                </div>
+                <div class="trusted_brands_logo">
+
+                    <div class="brlogo">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/dell_logo.png" alt="metabank Logo" width="51" height="51"></amp-img>
+                    </div>
+
+                    <div class="brlogo">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/pnc_logo.png" alt="pnc Logo" width="90" height="30"></amp-img>
+                    </div>
+                    <div class="brlogo">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/canon_logo.png" alt="canon Logo" width="80" height="25"></amp-img>
+                    </div>
+                    <div class="brlogo">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/icons/truist_logo.png" alt="truist Logo" width="100" height="30"></amp-img>
+                    </div>
+                    <div class="brlogo">
+                        <amp-img src="<?php echo base_url(); ?>assets/images/johnson-controls.png" alt="johnson Logo" width="100" height="45"></amp-img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<link rel="preload" href="<?php echo base_url(); ?>assets/images/odessa-partner-banner-bkmenu.webp" as="image">
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function() {
+         $("#myPopup").get(0).pause();
+       $('.play-btn').click(function() {
+         $('.video-popup').fadeIn();
+         $("#myPopup").get(0).play();
+       });
+     
+       $('.close').click(function() {
+         $('.video-popup').fadeOut();
+         $('#myPopup').stop();
+         $("#myPopup").get(0).pause();
+       });
+    
+       $(".slick-slider").slick({
+       slidesToShow: 1,
+       infinite:false,
+       slidesToScroll: 1,
+       autoplay: true,
+       autoplaySpeed: 2000,
+        dots: true,
+        arrows: false, 
+      });
+     
+     //   $('#playVideo').on('click', function() {
+     //     $('.video-popup').show();
+     //     $('#myPopup').show();
+     //     $('#myPopup').play();
+     //   });
+     
+     //   $('.close').on('click', function() {
+     //     $('.video-popup').hide();
+     //     $('#myPopup').hide();
+     //     this.hide();
+     //   });
+     
+         $("#learnMoreForm").validate({
+             rules: {
+                 "email":{
+                     required: true
+                 }
+             },
+             messages: {
+                 "email": {
+                     required: "Please enter email address.",
+                 }, 
+             },
+             submitHandler: function (form) {
+                 var emailInputData = $('#emailInput').val();
+                 var emailDomain = emailInputData.split('@')[1];
+                 var personalDomains = ["yahoo.com", "gmail.com", "google.com", "hotmail.com", "me.com", "aol.com", "mac.com", "live.com", "comcast.com", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "verizon.net", "att.net", "gmz.com", "mail.com"];
+                 if (personalDomains.includes(emailDomain)) {
+                     alert('Please use a corporate email address.');
+                 }else {
+                     $('#learnMoreForm').attr('action', 'http://go.odessainc.com/l/310001/2023-10-10/3s387h9');
+                     $("#learnMoreForm").submit();
+                     return true;
+                 }
              }
-         },
-         messages: {
-             "email": {
-                 required: "Please enter email address.",
-             }, 
-         },
-         submitHandler: function (form) {
-             var emailInputData = $('#emailInput').val();
-             var emailDomain = emailInputData.split('@')[1];
-             var personalDomains = ["yahoo.com", "gmail.com", "google.com", "hotmail.com", "me.com", "aol.com", "mac.com", "live.com", "comcast.com", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "verizon.net", "att.net", "gmz.com", "mail.com"];
-             if (personalDomains.includes(emailDomain)) {
-                 alert('Please use a corporate email address.');
-             }else {
-                 $('#learnMoreForm').attr('action', 'http://go.odessainc.com/l/310001/2023-10-10/3s387h9');
-                 $("#learnMoreForm").submit();
-                 return true;
-             }
-         }
+         });
+     
+     
      });
- 
- 
- });
-                                                  
- 
-     String.prototype.escape = function () {
-         var tagsToReplace = {
-             '&': '&amp;',
-             '<': '&lt;',
-             '>': '&gt;'
+                                                      
+     
+         String.prototype.escape = function () {
+             var tagsToReplace = {
+                 '&': '&amp;',
+                 '<': '&lt;',
+                 '>': '&gt;'
+             };
+             return this.replace(/[&<>]/g, function (tag) {
+                 return tagsToReplace[tag] || tag;
+             });
          };
-         return this.replace(/[&<>]/g, function (tag) {
-             return tagsToReplace[tag] || tag;
-         });
-     };
- 
-     function url_redirect(options) {
-         var $form = $("<form />");
- 
-         $form.attr("action", options.url);
-         $form.attr("method", options.method);
- 
-         for (var data in options.data)
-             $form.append('<input type="hidden" name="email" value="' + options.data[data] + '" />');
- 
-         $("body").append($form);
-         $form.submit();
-     }
- 
-     function letstalkclick(emailId) {
- 
-         var email = document.getElementById(emailId).value;
- 
-         var url = "<?= base_url()?>get-started";
- 
-         url_redirect({
-             url: url,
-             method: "post",
-             data: { "email": email.escape() }
-         });
- 
- 
-     }
- // play the targeted video (and hide the poster frame)
- function videoPlay($wrapper) {
-    var $iframe = $wrapper.find(".js-videoIframe");
-    var src = $iframe.data("src");
-    // hide poster
-    $wrapper.addClass("videoWrapperActive");
-    // add iframe src in, starting the video
-    $iframe.attr("src", src);
-    $(".home-video-close").removeClass("is-hidden");
- }
- 
- // stop the targeted/all videos (and re-instate the poster frames)
- function videoStop($wrapper) {
-    // if we're stopping all videos on page
-    if (!$wrapper) {
-       var $wrapper = $(".js-videoWrapper");
-       var $iframe = $(".js-videoIframe");
-       // if we're stopping a particular video
-    } else {
-       var $iframe = $wrapper.find(".js-videoIframe");
-    }
-    // reveal poster
-    $wrapper.removeClass("videoWrapperActive");
-    // remove youtube link, stopping the video from playing in the background
-    $iframe.attr("src", "");
-    $(".home-video-close").addClass("is-hidden");
- }
- 
- // Function to prevent double tap to play the video on touch devices. Hides poster image.
- function touchVideo() {
-    // Checks if #js-point-detector is made visible by the pointer:coarse media query
-    var isVisible = $("#js-pointer-detector").is(":visible");
-    // If it is visible...
-    if (isVisible === true) {
-       // Add active wrapper class
-       $(".videoWrapper").addClass("videoWrapperActive");
-       // Get video source
-       var source = $(".js-videoIframe").data("src");
-       // Load video source
-       $(".js-videoIframe").attr("src", source);
-    } else {
-    }
- }
- 
- // poster frame click event
- $(document).on("click", ".js-videoPoster", function(ev) {
-    ev.preventDefault();
-    var $poster = $(this);
-    var $wrapper = $poster.closest(".js-videoWrapper");
-    videoPlay($wrapper);
- });
- 
- $(document).ready(function() {
-    touchVideo();
- });
- 
- 
- </script>
- <script type="application/ld+json">
-         {
-         "@context": "https://schema.org",
-         "@type": "Organization",
-         "name": "Odessa",
-         "url": "<?php echo base_url(); ?>",
-         "logo": "<?php echo base_url(); ?>",
-         "foundingDate": "1998",
-         "sameAs": [
-             "https://www.facebook.com/OdessaInc/",
-             "https://twitter.com/OdessaTech",
-             "https://www.instagram.com/odessainc/",
-             "https://www.youtube.com/odessainc",
-             "https://www.linkedin.com/company/odessa-inc-/"
-         ]
+     
+         function url_redirect(options) {
+             var $form = $("<form />");
+     
+             $form.attr("action", options.url);
+             $form.attr("method", options.method);
+     
+             for (var data in options.data)
+                 $form.append('<input type="hidden" name="email" value="' + options.data[data] + '" />');
+     
+             $("body").append($form);
+             $form.submit();
          }
-     </script>
- <script async>
- 
-     setTimeout(function () {
+     
+         function letstalkclick(emailId) {
+     
+             var email = document.getElementById(emailId).value;
+     
+             var url = "<?= base_url()?>get-started";
+     
+             url_redirect({
+                 url: url,
+                 method: "post",
+                 data: { "email": email.escape() }
+             });
+     
+     
+         }
+     // play the targeted video (and hide the poster frame)
+     function videoPlay($wrapper) {
+        var $iframe = $wrapper.find(".js-videoIframe");
+        var src = $iframe.data("src");
+        // hide poster
+        $wrapper.addClass("videoWrapperActive");
+        // add iframe src in, starting the video
+        $iframe.attr("src", src);
+        $(".home-video-close").removeClass("is-hidden");
+     }
+     
+     // stop the targeted/all videos (and re-instate the poster frames)
+     function videoStop($wrapper) {
+        // if we're stopping all videos on page
+        if (!$wrapper) {
+           var $wrapper = $(".js-videoWrapper");
+           var $iframe = $(".js-videoIframe");
+           // if we're stopping a particular video
+        } else {
+           var $iframe = $wrapper.find(".js-videoIframe");
+        }
+        // reveal poster
+        $wrapper.removeClass("videoWrapperActive");
+        // remove youtube link, stopping the video from playing in the background
+        $iframe.attr("src", "");
+        $(".home-video-close").addClass("is-hidden");
+     }
+     
+     // Function to prevent double tap to play the video on touch devices. Hides poster image.
+     function touchVideo() {
+        // Checks if #js-point-detector is made visible by the pointer:coarse media query
+        var isVisible = $("#js-pointer-detector").is(":visible");
+        // If it is visible...
+        if (isVisible === true) {
+           // Add active wrapper class
+           $(".videoWrapper").addClass("videoWrapperActive");
+           // Get video source
+           var source = $(".js-videoIframe").data("src");
+           // Load video source
+           $(".js-videoIframe").attr("src", source);
+        } else {
+        }
+     }
+     
+     // poster frame click event
+     $(document).on("click", ".js-videoPoster", function(ev) {
+        ev.preventDefault();
+        var $poster = $(this);
+        var $wrapper = $poster.closest(".js-videoWrapper");
+        videoPlay($wrapper);
+     });
+     
+     $(document).ready(function() {
+        touchVideo();
+     });
+</script>
+<script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Organization", "name": "Odessa", "url": "
+    <?php echo base_url(); ?>", "logo": "
+        <?php echo base_url(); ?>", "foundingDate": "1998", "sameAs": [ "https://www.facebook.com/OdessaInc/", "https://twitter.com/OdessaTech", "https://www.instagram.com/odessainc/", "https://www.youtube.com/odessainc", "https://www.linkedin.com/company/odessa-inc-/" ] }
+</script>
+<script async>
+    setTimeout(function () {
          AOS.init({
              throttleDelay: 0,
          });
      }, 4000);
- 
- </script>
- <script src="https://fast.wistia.com/embed/medias/kndvnc3z5u.jsonp" async></script>
- 
- 
- 
- 
+</script>
+<!-- <script src="https://fast.wistia.com/embed/medias/qddoota6x4.jsonp" async></script> -->
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
