@@ -1,35 +1,65 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
 <style amp-custom>
-	.erp_card_wrap .card_img_rte img,.card_img_lft img{
-		min-height: auto;
-		min-width: auto;
-		height: auto;
-	}
-	.card_img_lft .i-amphtml-layout-size-defined .i-amphtml-fill-content{
-		position: relative;
-		top: -179px;
-    	left: -26px;
-	}
-	.card_img_rte .i-amphtml-layout-size-defined .i-amphtml-fill-content{
-		top:initial
-	}
-	.top_arrow .i-amphtml-layout-size-defined .i-amphtml-fill-content{
-		position: relative;
-		height: auto;
-		width: auto;
-	}
-	@media only screen and (max-width: 410px){
-		.discover_banner .learn_more_btn a {
-			min-width: 110px
-		}
-	}
+    .erp_card_wrap .card_img_rte img,.card_img_lft img{
+    		min-height: auto;
+    		min-width: auto;
+    		height: auto;
+    	}
+    	.card_img_lft .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+    		position: relative;
+    		top: -179px;
+        	left: -26px;
+    	}
+    	.card_img_rte .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+    		top:initial
+    	}
+    	.top_arrow .i-amphtml-layout-size-defined .i-amphtml-fill-content{
+    		position: relative;
+    		height: auto;
+    		width: auto;
+    	}
+    	@media only screen and (max-width: 410px){
+    		.discover_banner .learn_more_btn a {
+    			min-width: 110px
+    		}
+    	}
 </style>
 <style>
-	    .testimonial {
+    .testimonial {
    position: relative;
    margin:  0 0;
      height: 100%;
      background-color: #085B7B;
  }
+ .slick-slider .element{
+  height:450px;
+  display:inline-block;
+
+}
+.slick-dots button{
+    display: none;
+}
+.slick-slider .slick-disabled {
+  opacity : 0; 
+  pointer-events:none;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
+}
+.slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 6px;
+    background-color: #e0e0e0;
+}
+.slick-dots li.slick-active {
+    background-color: #00abc7;
+}
  #wistia_41.thumb_container{
     width: 100%;
  }
@@ -390,72 +420,68 @@
      margin:6em 0 0;
  }
  }
- 
- 
- 
- </style>
+</style>
 <script type="text/javascript">
-$(document).ready(function() {
-    $("#myPopup").get(0).pause();
-  $('.play-btn').click(function() {
-    $('.video-popup').fadeIn();
-    $("#myPopup").get(0).play();
-  });
-
-  $('.close').click(function() {
-    $('.video-popup').fadeOut();
-    $('#myPopup').stop();
-    $("#myPopup").get(0).pause();
-  });
-});
- 
-	String.prototype.escape = function() {
-		var tagsToReplace = {
-			'&': '&amp;',
-			'<': '&lt;',
-			'>': '&gt;'
-		};
-		return this.replace(/[&<>]/g, function(tag) {
-			return tagsToReplace[tag] || tag;
-		});
-	};
-	
-	function url_redirect(options){
-		var $form = $("<form />");
-			
-			$form.attr("action",options.url);
-			$form.attr("method",options.method);
-			
-			for (var data in options.data)
-			$form.append('<input type="hidden" name="email" value="'+options.data[data]+'" />');
-			
-			$("body").append($form);
-			$form.submit(); 
-	}
-	
-	function letstalkclick(emailId)
-	{
-	 
-	var email = document.getElementById(emailId).value;
-	var url="<?= base_url()?>get-started" ;
-	
-	url_redirect( {url: url,
-		method: "post",
-		data: {"email":email.escape() }
-		});
-	}
-	
+    $(document).ready(function() {
+        $("#myPopup").get(0).pause();
+      $('.play-btn').click(function() {
+        $('.video-popup').fadeIn();
+        $("#myPopup").get(0).play();
+      });
+    
+      $('.close').click(function() {
+        $('.video-popup').fadeOut();
+        $('#myPopup').stop();
+        $("#myPopup").get(0).pause();
+      });
+    });
+     
+    	String.prototype.escape = function() {
+    		var tagsToReplace = {
+    			'&': '&amp;',
+    			'<': '&lt;',
+    			'>': '&gt;'
+    		};
+    		return this.replace(/[&<>]/g, function(tag) {
+    			return tagsToReplace[tag] || tag;
+    		});
+    	};
+    	
+    	function url_redirect(options){
+    		var $form = $("<form />");
+    			
+    			$form.attr("action",options.url);
+    			$form.attr("method",options.method);
+    			
+    			for (var data in options.data)
+    			$form.append('<input type="hidden" name="email" value="'+options.data[data]+'" />');
+    			
+    			$("body").append($form);
+    			$form.submit(); 
+    	}
+    	
+    	function letstalkclick(emailId)
+    	{
+    	 
+    	var email = document.getElementById(emailId).value;
+    	var url="<?= base_url()?>get-started" ;
+    	
+    	url_redirect( {url: url,
+    		method: "post",
+    		data: {"email":email.escape() }
+    		});
+    	}
 </script>
-	
-	
+
+
 <div id="wrapper">
-	<div class="">
-			<!-- Design of Principle Screen  Start here -->
-			<!-- Header section Start here -->
-			<div class="page_banner">
-				<div class="header_contant_wrap">
-					<div class="header_contant">
-					<h1 class="text-center wtcol">Our platform is <span>different by design</span></h2>
+    <div class="">
+        <!-- Design of Principle Screen  Start here -->
+        <!-- Header section Start here -->
+        <div class="page_banner">
+            <div class="header_contant_wrap">
+                <div class="header_contant">
+                    <h1 class="text-center wtcol">Our platform is <span>different by design</span></h2>
 						<p class="text-center wtcol">Three core principles drive our innovation engine, creating the most<br> dynamic solutions for customers</p>
 					</div>
 				</div>
@@ -518,43 +544,41 @@ $(document).ready(function() {
 						<div class="erp_card_wrap">
 							<div class="erp_card">
 								<h1 class="text-center">Full-stack Automation</h1>
-								<p>Workflow, business logic, RPA and AI – all integrated in one platform.</p>
-							</div>
-							<div class="card_img_lft">
-								<amp-img src="<?php echo base_url(); ?>assets/images/left_arrow.png" alt="left arrow icon" width="1"
-									height="1" layout="intrinsic"></amp-img>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="erp_card_wrap">
-							<div class="erp_card">
-								<h1 class="text-center">Extensibility</h1>
-								<p>Extend Odessa Core, build new applications, and accelerate time to market – easily.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="erp_card_wrap">
-							<div class="erp_card">
-								<h1 class="text-center">Omnichannel</h1>
-								<p>Customer, Partner and Lessor portals deliver unified CX to all stakeholders – at work, and on the go.</p>
-							</div>
-						<div class="card_img_rte">
-							<amp-img src="<?php echo base_url(); ?>assets/images/right_arrow.png" alt="right arrow icon" width="1"
-								height="1" layout="intrinsic"></amp-img>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- ERP Section End Here -->
-		<!-- Discover latest section Start here -->
-		<div class="discover_banner">
-			<div class="discover_contant_wrap">
-				<div class="discover_contant">
-					<!-- <div class="discover_icons">
+                    <p>Workflow, business logic, RPA and AI – all integrated in one platform.</p>
+                </div>
+                <div class="card_img_lft">
+                    <amp-img src="<?php echo base_url(); ?>assets/images/left_arrow.png" alt="left arrow icon" width="1" height="1" layout="intrinsic"></amp-img>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="erp_card_wrap">
+                <div class="erp_card">
+                    <h1 class="text-center">Extensibility</h1>
+                    <p>Extend Odessa Core, build new applications, and accelerate time to market – easily.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="erp_card_wrap">
+                <div class="erp_card">
+                    <h1 class="text-center">Omnichannel</h1>
+                    <p>Customer, Partner and Lessor portals deliver unified CX to all stakeholders – at work, and on the go.</p>
+                </div>
+                <div class="card_img_rte">
+                    <amp-img src="<?php echo base_url(); ?>assets/images/right_arrow.png" alt="right arrow icon" width="1" height="1" layout="intrinsic"></amp-img>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ERP Section End Here -->
+<!-- Discover latest section Start here -->
+<div class="discover_banner">
+    <div class="discover_contant_wrap">
+        <div class="discover_contant">
+            <!-- <div class="discover_icons">
 						<ul>
 							<li>
 								<a href="#"> 
@@ -578,77 +602,139 @@ $(document).ready(function() {
 							</li>
 						</ul>
 					</div> -->
-					<!-- <h2 class="text-center wtcol">Discover more from the <span>latest platform release</span></h2>
+            <!-- <h2 class="text-center wtcol">Discover more from the <span>latest platform release</span></h2>
 					<p class="text-center wtcol">New and enhanced features to help move your business forward. Check out highlights on the blog.<br> Log into the Customer Community for the full release notes.</p> -->
-					<!-- <div class="learn_more_btn">
+            <!-- <div class="learn_more_btn">
 						<a href=" https://odessainc.force.com/customer/" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Release Notes</a>
 					</div> -->
-                    <h2 class="text-center wtcol">Get the latest on our platform updates</h2>
-					<p class="text-center wtcol">Access our product note release to learn about <br>our new features and the advantages they can offer you.</p>
-					<div class="learn_more_btn">
-						<a href=" https://odessainc.force.com/customer/" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Read Here </a>
-                       
-					</div>
-                    <p class="text-center wtcol" style="margin: 10px 0 0;font-size: 12px;"><i>(For customers only)</i></p>
+            <h2 class="text-center wtcol">Get the latest on our platform updates</h2>
+            <p class="text-center wtcol">Access our product note release to learn about
+                <br>our new features and the advantages they can offer you.</p>
+            <div class="learn_more_btn">
+                <a href=" https://odessainc.force.com/customer/" class="odc__btn odc__btn--primary odc__btn--md" target="_blank">Read Here </a>
 
-				</div>
-			</div>
-		</div>
-		<!-- Discover latest section End here -->
-		<div class="testimonial">
-			<div class="container">
-				<div class="video">
-					<img src="<?php echo base_url(); ?>assets/images/o-circle.png">
-					</div>
-			<div class="d-flex">
-				
-			<div class="testimonial-content">
-			   
-                <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-                    <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
-                </span>			</div>
-			
-			<div class="video-con">
-				<h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
-                <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-                    <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
-                </span>
-			</div>
-		   
-		  </div>
-		  <div class="video-popup">
-			<div class="video-container">
-				<!-- <button id="playVideo">Play Video</button> -->
-				<div class="popup">
-				  <span class="close">&times;</span>
-				  <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
-					<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
-					<!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
-				  </video>
-				</div>
-			</div>
-		  </div>
-		  </div></div>
-		<!-- Have Question section Start here -->
-		<div class="have_question_wrap">
-			<h2 class="text-center">Have questions?</h2>
-			<p class="text-center">Get in touch to discuss the right mix of platform features <br>and services to power your business</p>
-			<div class="inlineform">
-			<!--	<form id ="letstalkForm1" action = "<?= base_url()?>get-started" method ="POST"> -->
-				<div class="input">
-					<input type="email" placeholder="What’s your email?" name ="email" id="email1" required/>
-				</div>
-				<div class="inputbtn">
-					<input class="odc__btn odc__btn--primary odc__btn--md" type="submit" onclick="letstalkclick('email1'); return;" value="Let's Talk" />
-				</div>
-			<!--     </form> -->
-			</div>
+            </div>
+            <p class="text-center wtcol" style="margin: 10px 0 0;font-size: 12px;"><i>(For customers only)</i></p>
 
-			<!-- Have Question section End here -->
-			<!-- Design of Principle Screen End here -->
-		</div>
-	</div>
+        </div>
+    </div>
+</div>
+<!-- Discover latest section End here -->
+<div class="slick-slider">
+    <div class="element element-1">
+        <div class="testimonial">
+            <div class="container">
+                <div class="video">
+                    <img src="<?php echo base_url(); ?>assets/images/o-circle.png">
+                </div>
+                <div class="d-flex">
+
+                    <div class="testimonial-content">
+
+                        <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-1"><div id="wistia_56.thumb_container" class="wistia_click_to_play">
+                        <a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt=""></a>
+                    </div></span>
+                    </div>
+
+                    <div class="video-con">
+                        <h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
+                        <span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-2"><div id="wistia_44.thumb_container" class="wistia_click_to_play" style="position: relative; height: 66.3333px; width: 274.188px;">
+                        <a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
+                    </div></span>
+                    </div>
+
+                </div>
+                <div class="video-popup">
+                    <div class="video-container">
+                        <!-- <button id="playVideo">Play Video</button> -->
+                        <div class="popup">
+                            <span class="close">×</span>
+                            <video class="popuptext" id="myPopup" style="height:100%;" loop="" autoplay="" controls="">
+                                <source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
+                                <!-- <iframe src="http://localhost:8000/assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="element element-2">
+        <div id="clients_view">
+            <div class="row equalHMWrap eqWrap clearfix">
+                <div class="col-sm-6 col-lg-7">
+                    <div class="clientsmess">
+                        <div class="appcllogorw">
+                            <div class="testicon">
+                                <img src="<?php echo base_url(); ?>assets/images/testi_icon.png" alt="">
+
+                                <!-- <amp-img src="http://localhost:8000/assets/images/testi_icon.png" alt="Quotation mark" width="45"
+                                        height="35" ></amp-img> -->
+                            </div>
+                            <div class="applogo medone">
+
+                                <img data-src="<?php echo base_url(); ?>assets/images/med-one_logo.png" alt="Med One" class="wh-image ls-is-cached lazyloaded" src="http://localhost:8000/assets/images/med-one_logo.png">
+                            </div>
+                        </div>
+                        <p>On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-5">
+                    <div class="clientsimgbx">
+                        <img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Have Question section Start here -->
+<div class="have_question_wrap">
+    <h2 class="text-center">Have questions?</h2>
+    <p class="text-center">Get in touch to discuss the right mix of platform features
+        <br>and services to power your business</p>
+    <div class="inlineform">
+        <!--	<form id ="letstalkForm1" action = "<?= base_url()?>get-started" method ="POST"> -->
+        <div class="input">
+            <input type="email" placeholder="What’s your email?" name="email" id="email1" required/>
+        </div>
+        <div class="inputbtn">
+            <input class="odc__btn odc__btn--primary odc__btn--md" type="submit" onclick="letstalkclick('email1'); return;" value="Let's Talk" />
+        </div>
+        <!--     </form> -->
+    </div>
+
+    <!-- Have Question section End here -->
+    <!-- Design of Principle Screen End here -->
+</div>
+</div>
 </div>
 <link rel="preload" href="<?php echo base_url(); ?>assets/images/header_banner_principles.webp" as="image">
 <link href="<?php echo base_url(); ?>assets/css/design_principles.css" rel='stylesheet' />
-	
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+         $("#myPopup").get(0).pause();
+       $('.play-btn').click(function() {
+         $('.video-popup').fadeIn();
+         $("#myPopup").get(0).play();
+       });
+     
+       $('.close').click(function() {
+         $('.video-popup').fadeOut();
+         $('#myPopup').stop();
+         $("#myPopup").get(0).pause();
+       });
+    
+       $(".slick-slider").slick({
+       slidesToShow: 1,
+       infinite:false,
+       slidesToScroll: 1,
+       autoplay: true,
+       autoplaySpeed: 2000,
+        dots: true,
+        arrows: false, 
+      });
+    });
+</script>

@@ -1,4 +1,6 @@
 <link rel="stylesheet preload" as="style" href="<?php echo base_url(); ?>assets/css/modular_styles.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
 <style amp-custom>
     .pgcor_tmbclogo amp-img {
         height: 25px;
@@ -7,40 +9,73 @@
         min-width: 250px;
         max-width: 300px;
     }
-	
 </style>
 <style>
-	.testimonial {
+    .testimonial {
    position: relative;
-   margin: 3em 0 0;
-	 height: 100%;
-	 background-color: #085B7B;;
+   margin:  0 0;
+     height: 100%;
+     background-color: #085B7B;
  }
- .testimonial .container{
-	
+ .slick-slider .element{
+  height:450px;
+  display:inline-block;
+
+}
+.slick-dots button{
+    display: none;
+}
+.slick-slider .slick-disabled {
+  opacity : 0; 
+  pointer-events:none;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
+}
+.slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 6px;
+    background-color: #e0e0e0;
+}
+.slick-dots li.slick-active {
+    background-color: #00abc7;
+}
+ #wistia_41.thumb_container{
+    width: 100%;
+ }
+ .testimonial-content img{
+    width:100%
+ }
+ .discover_contant .learn_more_btn {
+    margin: 30px auto 0px;
+
  }
  .home-hero-bgimg {
-	 width: 40%;
-	 transform: translateX(150%) translateZ(0);
+     width: 40%;
+     transform: translateX(150%) translateZ(0);
  }
  .home-hero-ctitle {
-	 line-height: 1;
-	 font-size: 3rem;
+     line-height: 1;
+     font-size: 3rem;
  }
  .home-hero-cdesc {
-	 font-size: 16px;
+     font-size: 16px;
  }
  .home-hero-cwrap{
-	 padding-top: 120px;
+     padding-top: 120px;
  }
  .testimonial-content {
-	 padding-bottom: 20px;
-	 width: calc(50% - 120px);
-	 margin-left: 150px;
-	 position: relative;
-	 /* width: 350px; */
-	 height: 200px;
-	 margin: 50px 0 50px 120px;
+     padding-bottom: 20px;
+     width: calc(50% - 152px);
+     position: relative;
+     /* width: 350px; */
+     height: 450px;
+     margin: 50px 0 50px 152px;
  }
  
  .play-btn {
@@ -49,8 +84,11 @@
    color: #fff;
    border: none;
    cursor: pointer;
+   min-width:auto;
  }
- 
+ .watch:hover{
+     color:#fff;
+ }
  .video-popup {
    display: none;
    position: fixed;
@@ -62,15 +100,9 @@
    z-index: 2000;
  }
  .video-popup .close{
-	 color: #fff;
-	 text-shadow: 0 1px 0 #fff;
-	 opacity: 0.8;
- }
- #wistia_41.thumb_container{
-    width: 100%;
- }
- .testimonial-content img{
-    width:100%
+     color: #fff;
+     text-shadow: 0 1px 0 #fff;
+     opacity: 0.8;
  }
  .video-container {
    position: absolute;
@@ -93,51 +125,52 @@
  
  
  
-	 .platformsectionwrap .dotsdesign img {
-		 width: 300px;
-	 }
-	 .overlay{
-		 position: fixed;
-		 width: 100%;
-		 background-color: #263746;
-		 width: 100%;
-		 height:100vh;
-		 z-index: 21474830001;
-		 display: flex;
-		 justify-content: center;
-		 align-items: flex-start;
-		 flex-flow: column;
-		 opacity: 0;
-	 }
-	 
-	 .d-flex{
-		 display: flex;
-	 }
-	 .video {
-	 bottom: 0;
-	 width: 158px;
+     .platformsectionwrap .dotsdesign img {
+         width: 300px;
+     }
+     .overlay{
+         position: fixed;
+         width: 100%;
+         background-color: #263746;
+         width: 100%;
+         height:100vh;
+         z-index: 21474830001;
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-flow: column;
+         opacity: 0;
+     }
+     
+     .d-flex{
+         display: flex;
+         justify-content: space-between;
+     }
+     .video {
+    
+     width: 220px;
+     
  }
  .video-con{
-	 width: 60%;
-	 font-size: 42px;
-	 /* padding-right: 200px; */
-	 display: flex;
-	 flex-flow: column;
-	 justify-content: center;
-	 padding-right: 15px;
-	 padding-left:50px;
+     width: 50%;
+     font-size: 42px;
+     /* padding-right: 200px; */
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     padding-left: 50px;
  
  }
  .video-con h2{
-	 font-size: 22px;
-	 color: #fff;
-	 font-family: MaisonNeue-Book;
-	 font-weight: 600;
-	 line-height: 1.3;
+     font-size: 32px;
+     color: #fff;
+     font-family: MaisonNeue-Book;
+     font-weight: 500;
+     line-height: 1.3;
  }
  .video-con span{
-	 display: inline;
-	 color: #085B7B;
+     display: inline;
+     color: #085B7B;
  }
  .videoWrapper {
    position: relative;
@@ -147,39 +180,34 @@
    overflow: hidden;
  }
  .video img{
-	height: auto;
-    position: absolute;
-    top: 55px;
-    width: 158px;
-    left: 0;
-
+     position: absolute;
+     top: 70px;
+     width: 220px;
+     left: -5px;
+	 height: auto;
  }
  
  .videoWrapper169 {
-	 padding-top: 56.25%;
-	 border-radius: 50%;
-	 width: 400px;
-	 height: 400px;
-	 margin-left: 243px;
-	 margin-top: 100px;
+     padding-top: 56.25%;
+     border-radius: 50%;
+     width: 400px;
+     height: 400px;
+     margin-left: 243px;
+     margin-top: 100px;
  }
  .watch{
-	 background: #FF495C;
-	 padding: 10px 20px;
-	 font-size: 14px;
-	 color: #fff;
-	 width: max-content;
-	 min-width:auto;
-	 margin: 20px 0 0;
- }
- .watch:hover{
-     color:#fff;
+     background: #FF495C;
+     padding: 10px 20px;
+     font-size: 14px;
+     color: #fff;
+     width: max-content;
+     margin: 20px 0 0;
  }
  .videoPoster:after{
-	 background: none;
+     background: none;
  }
  .videoPoster:after{
-	 display: none;
+     display: none;
  }
  .videoIframe {
    position: absolute;
@@ -204,8 +232,8 @@
    top: 0;
    right: 0;
    left: 0;
-	  width: 200px;
-	 height: 200px;
+      width: 450px;
+     height: 450px;
    margin: 0;
    padding: 0;
    cursor: pointer;
@@ -220,7 +248,7 @@
    transition: opacity 0.8s ease, height 0s ease;
    transition-delay: 0s, 0s;
    background-size: cover;
-	 border-radius: 50%;
+     border-radius: 50%;
  
  }
  
@@ -258,7 +286,7 @@
  }
  
  .video-con{
-	 font-size: 42px;
+     font-size: 42px;
  }
  .home-video-close.is-hidden {
    display: block;
@@ -268,480 +296,487 @@
  #js-pointer-detector {
    display: none;
  }
-	 input, button{
-		 margin:0;
-	 }
-	 .overlay.one{
-		 opacity: 1;
-	 }
-	 .overlay img{
-		 margin: 50px auto 0px auto;
-	 }
-	 .login-container {
-		 background-color: white;
-		 padding: 20px;
-		 border-radius: 5px;
-		 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-		 text-align: center;
-		 width: 40%;
-		 display: block;
-		 margin: 30px auto;      
-		 z-index: 9999999;
+     input, button{
+         margin:0;
+     }
+     .overlay.one{
+         opacity: 1;
+     }
+     .overlay img{
+         margin: 50px auto 0px auto;
+     }
+     .login-container {
+         background-color: white;
+         padding: 20px;
+         border-radius: 5px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         width: 40%;
+         display: block;
+         margin: 30px auto;      
+         z-index: 9999999;
  }
  
  input, button {
-	 margin: 0 0;
-	 padding: 8px;
-	 border: 1px solid #ccc;
-	 border-radius: 3px;
-	 width: 100%;
+     margin: 0 0;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+     width: 100%;
  }
  
  button {
-	 background-color: #007bff;
-	 color: white;
-	 border: none;
-	 cursor: pointer;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     cursor: pointer;
  }
  .letstalkform .form-control.red{
-	 border: 2px solid #962424;  
+     border: 2px solid #962424;  
  }
  #footer{
-	 position: relative;
-	 height: 24px;
-	 width: 100%;
-	 text-align: center;
-	 font-size: 0.75rem;
-	 color: #fff;
- }
- @media only screen and (max-width:1200px){
-	 .home-hero-ctitle{
-		 font-size: 2rem;
-	 }
-	 .video-con{
-		padding-right: 0;
-	 }
-	 .testimonial-content,.videoPoster{
-		 width: 300px;height: 300px;
-	 }
-	 #myPopup{
-		 height: 100%;
-	 width: 100%;
-	 }
- }
- @media only screen and (min-width:340px) and (max-width:1000px){
-	 .login-container{
-		 width:80%
-	 }
-	 .home-hero-bgimg {
-	 width: 100%;
-	 transform: translateX(0) translateZ(0);
- }
-	 .video {
-	 width: 100%;
- }
- .pg_banner {
-    padding: 162px 0 0 !important;
-}
- .video img{
-	 width: 80px;
- }
- .d-flex{
-	 flex-wrap: wrap;
- }
- .testimonial-content{
-	 width: 100%;
-	 width: 200px;
-	 height: 200px;
-	 margin: 50px auto 0 auto;
- }
- .videoPoster{
-	 width: 200px;
-	 height: 200px;
- }
- .video-con{
-	 width: 100%;text-align: center;margin:30px auto;padding: 0;
- }
- .watch{
-	 margin: 20px auto 0 auto;
- }
- .video-container{
-	 width: 90%;
- }
- .video-con h2 {
-	 font-size: 20px;
- }
- .video-container iframe{
-	 width: 100%;
+     position: relative;
+     height: 24px;
+     width: 100%;
+     text-align: center;
+     font-size: 0.75rem;
+     color: #fff;
  }
  .testimonial{
-	 margin:6em 0 0;
+     margin:3em 0 0;
+ }
+ @media only screen and (max-width:1300px){
+     .home-hero-ctitle{
+         font-size: 2rem;
+     }
+    .video-con{
+     padding-right: 0;
+    }
+     .testimonial-content,.videoPoster{
+         width: 300px;height: 300px;
+     }
+     #myPopup{
+         height: 100%;
+     width: 100%;
+     }
+ }
+ @media only screen and (min-width:340px) and (max-width:1000px){
+     .login-container{
+         width:80%
+     }
+     .home-hero-bgimg {
+     width: 100%;
+     transform: translateX(0) translateZ(0);
+ }
+     .video {
+     width: 100%;
+ }
+ .video img{
+     width: 80px;
+ }
+ .d-flex{
+     flex-wrap: wrap;
+ }
+ .testimonial-content{
+     width: 100%;
+     width: 200px;
+     height: 200px;
+     margin: 50px auto 0 auto;
+ }
+ .videoPoster{
+     width: 200px;
+     height: 200px;
+ }
+ .video-con{
+     width: 100%;text-align: center;margin:30px auto;padding: 0;
+ }
+ .watch{
+     margin: 20px auto 0 auto;
+ }
+ .video-container{
+     width: 90%;
+ }
+ .video-con h2 {
+     font-size: 25px;
+ }
+ .video-container iframe{
+     width: 100%;
+ }
+ .testimonial{
+     margin:6em 0 0;
  }
  }
- 
- 
- </style>
+</style>
 
 
 <div id="wrapper">
-	<div class="">
-	<div class="pg_banner pgcor__banner">
-		<div class="odc-gd__container">
-			<h1 class="pgcor__btitle">The #1 equipment leasing software used by teams</h1>
-			<a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Schedule a demo</a>
-		</div>
-	</div>
-	<div class="pgcor_mods">
-		<div class="odc-gd__container">
-			<div class="odc-gd__row">
-				<div class="odc-gd__col-xxs-12 odc-gd__col-sm-6">
-					<div class="pgcor_mdcontent">
-						
-						<p>Bring your accounting, asset management, reporting, and analytics into one robust platform. Supporting all types of equipment and auto finance business, Odessa gives you unparalleled insight and foundation for financial efficiency and control.</p>
-						<p>The result? More time to tackle your business challenges, like driving strategy and finding the best paths to profitability and innovation.</p>
-						<p><a class="pgcor_inaction odc__btn--more odc__btn--xl odc_corebtn" href="<?php echo base_url(); ?>get-started">For equipment finance</a></p>
-						<p><a class="pgcor_inaction odc__btn--more odc__btn--xl odc_corebtn2" href="<?php echo base_url(); ?>auto-finance-software">For auto finance</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="pgcor_tdes open_design_wrap">
-		<div class="odc-gd__container">
-			<div class="odc-gd__row">
-				<div class="odc-gd__col-xxs-12 odc-gd__col-sm-4">
-					<div class="pgcor_tdimg">
-                        <amp-img src="<?php echo base_url(); ?>assets/images/platform-core/code-prin-circle.webp" alt="Odessa-core" width="1" height="1" layout="responsive"></amp-img>
-					</div>
-				</div>
-				<div class="odc-gd__col-xxs-12 odc-gd__col-sm-8">
-					<div class="pgcor_tdcontent">
-						<div class="pgcor_tdctabnav owl-carousel owl-theme">
-							<div class="pgcor_tdctab-item tabactive" data-toggle="tab" href="#origination">
-								<div class="pgcor_tdctabitext">Origination</div>
-							</div>
-							<div class="pgcor_tdctab-item" data-toggle="tab" href="#servicing">
-								<div class="pgcor_tdctabitext">Servicing</div>
-							</div>
-							<div class="pgcor_tdctab-item" data-toggle="tab" href="#remarketing">
-								<div class="pgcor_tdctabitext">Remarketing</div>
-							</div>
-						</div>
-						<div class="pgcor_tdctabcontent tab-content">
-							<div id="origination" class="pgcor_tdctc-item tab-pane fade active in">
-								<ul class="pgcor_tdclist">
-									<li>
-										<span>
-											<span>Opportunity Management</span>
-											<span>Proposals, Credit App, Line of Credit</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Pricing / Structuring</span>
-											<span>Amendments, Usage-based Billing</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Go-to-market</span>
-											<span>Direct/Indirect, Programs, Rate Cards, Deal Teams</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Interim Funding</span>
-											<span>Interim interest/rent, Periodic - Single - Capitalize, Progress Funding</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Credit Adjudication</span>
-											<span>Scorecards, Decisioning, Exposure</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Fleet Services</span>
-											<span>Fleet products, Fleet service pricing</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div id="servicing" class="pgcor_tdctc-item fade tab-pane">
-								<ul class="pgcor_tdclist">
-									<li>
-										<span>
-											<span>Contract Management</span>
-											<span>Amendments, Non-accrual, provisions, Usage-based billing</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Billing / Collections</span>
-											<span>Non-rentals, Fleet services, Fleet transactions, Maintenance PO, Invoicing, Receipt allocation</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Funding / Syndication</span>
-											<span>Note payable, Full/partial syndication, Securitization</span>
-										</span>
-									</li>
-									<li>
-										<span>
-											<span>Compliance / Risk</span>
-											<span>Lien filing, Sales tax, VAT, Property tax, Income tax</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div id="remarketing" class="pgcor_tdctc-item fade tab-pane">
-								<ul class="pgcor_tdclist">
-									<li>
-										<span>
-											<span>Dispositions</span>
-											<span>Full/partial terminations, Vehicle collection and inspection, Excess mileage and open-end settlements, Upgrades, rollers, Asset resale</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<ul class="pgcor_tdclist pgcor_tdclist--static">
-							<li>
-								<span>
-									<span>Document Management</span>
-									<span>Templates, Generation, Versioning</span>
-								</span>
-							</li>
-							<li>
-								<span>
-									<span>Asset Management</span>
-									<span>Inventory tracking, off-lease depreciation, Impairments: appraisals, Title management</span>
-								</span>
-							</li>
-							<li>
-								<span>
-									<span>Accounts Payable</span>
-									<span>Asset Funding, Investor: compliance payables, Refund: pass throughs</span>
-								</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="">
+        <div class="pg_banner pgcor__banner">
+            <div class="odc-gd__container">
+                <h1 class="pgcor__btitle">The #1 equipment leasing software used by teams</h1>
+                <a href="<?php echo base_url(); ?>lets-talk" class="pgcor__baction odc__btn odc__btn--primary odc__btn--md">Schedule a demo</a>
+            </div>
+        </div>
+        <div class="pgcor_mods">
+            <div class="odc-gd__container">
+                <div class="odc-gd__row">
+                    <div class="odc-gd__col-xxs-12 odc-gd__col-sm-6">
+                        <div class="pgcor_mdcontent">
 
-	<div class="pgcor_dprin">
-		<div class="odc-gd__container">
-			<div class="odc-gd__row">
-				<div class="odc-gd__col-xxs-12">
-					<div class="pgcor_dpcontent">
-						<h2 class="pgcor_dpctitle">Our design principles</h2>
-						<p class="pgcor_dpctext">How do we create an experience unlike any in the industry? By Using three design principles: design open, think user first and build for change</p>
-						<a href="<?php echo base_url(); ?>design-principles" class="pgcor_dpcaction odc__btn odc__btn--primary odc__btn--md">Learn more</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                            <p>Bring your accounting, asset management, reporting, and analytics into one robust platform. Supporting all types of equipment and auto finance business, Odessa gives you unparalleled insight and foundation for financial efficiency
+                                and control.</p>
+                            <p>The result? More time to tackle your business challenges, like driving strategy and finding the best paths to profitability and innovation.</p>
+                            <p><a class="pgcor_inaction odc__btn--more odc__btn--xl odc_corebtn" href="<?php echo base_url(); ?>get-started">For equipment finance</a></p>
+                            <p><a class="pgcor_inaction odc__btn--more odc__btn--xl odc_corebtn2" href="<?php echo base_url(); ?>auto-finance-software">For auto finance</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pgcor_tdes open_design_wrap">
+            <div class="odc-gd__container">
+                <div class="odc-gd__row">
+                    <div class="odc-gd__col-xxs-12 odc-gd__col-sm-4">
+                        <div class="pgcor_tdimg">
+                            <amp-img src="<?php echo base_url(); ?>assets/images/platform-core/code-prin-circle.webp" alt="Odessa-core" width="1" height="1" layout="responsive"></amp-img>
+                        </div>
+                    </div>
+                    <div class="odc-gd__col-xxs-12 odc-gd__col-sm-8">
+                        <div class="pgcor_tdcontent">
+                            <div class="pgcor_tdctabnav owl-carousel owl-theme">
+                                <div class="pgcor_tdctab-item tabactive" data-toggle="tab" href="#origination">
+                                    <div class="pgcor_tdctabitext">Origination</div>
+                                </div>
+                                <div class="pgcor_tdctab-item" data-toggle="tab" href="#servicing">
+                                    <div class="pgcor_tdctabitext">Servicing</div>
+                                </div>
+                                <div class="pgcor_tdctab-item" data-toggle="tab" href="#remarketing">
+                                    <div class="pgcor_tdctabitext">Remarketing</div>
+                                </div>
+                            </div>
+                            <div class="pgcor_tdctabcontent tab-content">
+                                <div id="origination" class="pgcor_tdctc-item tab-pane fade active in">
+                                    <ul class="pgcor_tdclist">
+                                        <li>
+                                            <span>
+											<span>Opportunity Management</span>
+                                            <span>Proposals, Credit App, Line of Credit</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Pricing / Structuring</span>
+                                            <span>Amendments, Usage-based Billing</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Go-to-market</span>
+                                            <span>Direct/Indirect, Programs, Rate Cards, Deal Teams</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Interim Funding</span>
+                                            <span>Interim interest/rent, Periodic - Single - Capitalize, Progress Funding</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Credit Adjudication</span>
+                                            <span>Scorecards, Decisioning, Exposure</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Fleet Services</span>
+                                            <span>Fleet products, Fleet service pricing</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="servicing" class="pgcor_tdctc-item fade tab-pane">
+                                    <ul class="pgcor_tdclist">
+                                        <li>
+                                            <span>
+											<span>Contract Management</span>
+                                            <span>Amendments, Non-accrual, provisions, Usage-based billing</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Billing / Collections</span>
+                                            <span>Non-rentals, Fleet services, Fleet transactions, Maintenance PO, Invoicing, Receipt allocation</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Funding / Syndication</span>
+                                            <span>Note payable, Full/partial syndication, Securitization</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+											<span>Compliance / Risk</span>
+                                            <span>Lien filing, Sales tax, VAT, Property tax, Income tax</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="remarketing" class="pgcor_tdctc-item fade tab-pane">
+                                    <ul class="pgcor_tdclist">
+                                        <li>
+                                            <span>
+											<span>Dispositions</span>
+                                            <span>Full/partial terminations, Vehicle collection and inspection, Excess mileage and open-end settlements, Upgrades, rollers, Asset resale</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="pgcor_tdclist pgcor_tdclist--static">
+                                <li>
+                                    <span>
+									<span>Document Management</span>
+                                    <span>Templates, Generation, Versioning</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+									<span>Asset Management</span>
+                                    <span>Inventory tracking, off-lease depreciation, Impairments: appraisals, Title management</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+									<span>Accounts Payable</span>
+                                    <span>Asset Funding, Investor: compliance payables, Refund: pass throughs</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pgcor_dprin">
+        <div class="odc-gd__container">
+            <div class="odc-gd__row">
+                <div class="odc-gd__col-xxs-12">
+                    <div class="pgcor_dpcontent">
+                        <h2 class="pgcor_dpctitle">Our design principles</h2>
+                        <p class="pgcor_dpctext">How do we create an experience unlike any in the industry? By Using three design principles: design open, think user first and build for change</p>
+                        <a href="<?php echo base_url(); ?>design-principles" class="pgcor_dpcaction odc__btn odc__btn--primary odc__btn--md">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="pgcor_integ">
+            <div class="odc-gd__container">
+                <div class="odc-gd__row">
+                    <div class="odc-gd__col-xs-12 odc-gd__col-sm-5"></div>
+                    <div class="odc-gd__col-xs-12 odc-gd__col-sm-7">
+                        <div class="pgcor_inwrap">
+                            <h2 class="pgcor_intitle">Integrate with everything</h2>
+                            <p class="pgcor_intext"> Work together with Odessa to build one, or create your own integration with our powerful APIs. </p>
+                            <p class="pgcor_intext">Build upon the most flexible lease management software available - our easy-to-use APIs make it simple to confidently manage your business on our platform.</p>
+                            <a class="pgcor_inaction odc__btn--more odc__btn--xl" href="<?php echo base_url(); ?>platform/developer-tools">More About Odessa APIs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 	</div>
-	<div class="container">
-	<section class="pgcor_integ">
-		<div class="odc-gd__container">
-			<div class="odc-gd__row">
-				<div class="odc-gd__col-xs-12 odc-gd__col-sm-5"></div>
-				<div class="odc-gd__col-xs-12 odc-gd__col-sm-7">
-					<div class="pgcor_inwrap">
-						<h2 class="pgcor_intitle">Integrate with everything</h2>
-						<p class="pgcor_intext"> Work together with Odessa to build one, or create your own integration with our powerful APIs. </p>
-						<p class="pgcor_intext">Build upon the most flexible lease management software available - our easy-to-use APIs make it simple to confidently manage your business on our platform.</p>
-						<a class="pgcor_inaction odc__btn--more odc__btn--xl" href="<?php echo base_url(); ?>platform/developer-tools">More About Odessa APIs</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="pgcor_tesm">
-		<div class="odc-gd__container">
-			<div class="pgcor_tmhead">
-				<h2 class="pgcor_tmhtitle">You're in good company</h2>
-				<p class="pgcor_tmhtext">Join top companies and teams around the world who are using the Odessa Platform to power their business</p>
-			</div>
-			<div class="pgcor_tmbox">
-				
-					<!-- <div class="odc-gd__col-xxs-12 odc-gd__col-sm-6">
-						<div class="pgcor_tmbvideo" data-toggle="modal" data-target="#companyvideoplay">
-							<video id="pgcor_tmbvideo-source" poster="<?php echo base_url(); ?>assets/images/videoposter.webp">
-								<source src="<?php echo base_url(); ?>assets/images/core_vid.bin" type="video/mp4">
-							</video>
-							<i class="fa fa-play-circle" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="odc-gd__col-xxs-12 odc-gd__col-sm-6">
-						<div class="pgcor_tmbcontent">
-							<div class="pgcor_tmbclogo"><amp-img src="<?php echo base_url(); ?>assets/images/icons/CSI.png" alt="CSI Leasing" height="1" width="1" layout="responsive"></amp-img></div>
-							<p class="pgcor_tmbctext">This high growth independent equipment finance company is innovating with Odessa across the United States, UK and Mexico </p>
-							<a href="#" rel="" class="pgcor_tmbaction" data-toggle="modal" data-target="#companyvideoplay"><i class="fa fa-play-circle" aria-hidden="true"></i>Play video</a>
-						</div>
-					</div> -->
+        <section class="pgcor_tesm">
+			<div class="slick-slider">
+				<div class="element element-1">
 					<div class="testimonial">
 						<div class="container">
 							<div class="video">
 								<img src="<?php echo base_url(); ?>assets/images/o-circle.png">
+							</div>
+							<div class="d-flex">
+
+								<div class="testimonial-content">
+
+									<span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-1"><div id="wistia_56.thumb_container" class="wistia_click_to_play">
+							<a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt=""></a>
+						</div></span>
 								</div>
-						<div class="d-flex">
-							
-						<div class="testimonial-content">
-						   
-							<span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-								<a href="#"> <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" /></a>
-							</span>
-										</div>
-						
-						<div class="video-con">
-							<h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
-							<span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false" style="display:inline-block;height:84;position:relative;width:150">
-								<a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
-							</span>
-									</div> 
-					   
-					  </div>
-					  <div class="video-popup">
-						<div class="video-container">
-							<!-- <button id="playVideo">Play Video</button> -->
-							<div class="popup">
-							  <span class="close">&times;</span>
-							  <video class="popuptext" id="myPopup" style="height:100%;" loop autoplay controls id="video1">
-								<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
-								<!-- <iframe src="<?php echo base_url(); ?>assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
-							  </video>
+
+								<div class="video-con">
+									<h2>Creating Global Dominance:<br> Johnson Controls Capital's<br> Journey with Odessa</h2>
+									<span class="wistia_embed wistia_async_kndvnc3z5u popover=true popoverContent=link videoFoam=false wistia_embed_initialized" style="display:inline-block;height:84;position:relative;width:150" id="wistia-kndvnc3z5u-2"><div id="wistia_44.thumb_container" class="wistia_click_to_play" style="position: relative; height: 66.3333px; width: 274.188px;">
+							<a href="javascript:void(0);" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link">Watch Now</a>
+						</div></span>
+								</div>
+
+							</div>
+							<div class="video-popup">
+								<div class="video-container">
+									<!-- <button id="playVideo">Play Video</button> -->
+									<div class="popup">
+										<span class="close">×</span>
+										<video class="popuptext" id="myPopup" style="height:100%;" loop="" autoplay="" controls="">
+											<source src="<?php echo base_url(); ?>assets/images/Odessa_testimonial__Johnson_Controls (1080p).mp4" type="video/mp4">
+											<!-- <iframe src="http://localhost:8000/assets/images/core_vid.mp4?autoplay=true" allowfullscreen></iframe> -->
+										</video>
+									</div>
+								</div>
 							</div>
 						</div>
-					  </div>
-					  </div></div>
-			
+					</div>
+				</div>
+				<div class="element element-2">
+					<div id="clients_view">
+						<div class="row equalHMWrap eqWrap clearfix">
+							<div class="col-sm-6 col-lg-7">
+								<div class="clientsmess">
+									<div class="appcllogorw">
+										<div class="testicon">
+											<img src="<?php echo base_url(); ?>assets/images/testi_icon.png" alt="">
+
+											<!-- <amp-img src="http://localhost:8000/assets/images/testi_icon.png" alt="Quotation mark" width="45"
+											height="35" ></amp-img> -->
+										</div>
+										<div class="applogo medone">
+
+											<img data-src="<?php echo base_url(); ?>assets/images/med-one_logo.png" alt="Med One" class="wh-image ls-is-cached lazyloaded" src="http://localhost:8000/assets/images/med-one_logo.png">
+										</div>
+									</div>
+									<p>On a daily basis, Odessa is really the backbone of our organization. Everything that we all do runs through the Odessa Platform.</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-5">
+								<div class="clientsimgbx">
+									<img src="<?php echo base_url(); ?>assets/images/jeff.jpg" alt="Odessa-cloud">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div>
-	</section>
-	<div class="pgcor_clients">
-		<div class="odc-gd__container">
-			<div class="pgcor_clwrap">
-				<div class="pgcor_clitem pgcor_clitem--ari">
-                    <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/ari-logo.webp" alt="ARI Logo" width="1" height="0.5" layout="responsive"/>
-				</div>
-				<div class="pgcor_clitem pgcor_clitem--compeer">
-					<amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/compeer-logo.png" alt="Compeer Logo" width="1" height="0.2" layout="responsive" />
-				</div>
-				<div class="pgcor_clitem pgcor_clitem--cobank">
-					<amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/cobank-logo.png" alt="Cobank Logo" width="1" height="0.17" layout="responsive"/>
-				</div>
-				<div class="pgcor_clitem pgcor_clitem--secbank">
-					<amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/securitybank-logo.png" alt="Security Bank Logo" width="1" height="0.4" layout="responsive"/>
-				</div>
-				<div class="pgcor_clitem pgcor_clitem--lbc">
-					<amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/lbc.png" alt="LBC Logo" width="1" height="0.3" layout="responsive"/>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        </section>
+        <div class="pgcor_clients">
+            <div class="odc-gd__container">
+                <div class="pgcor_clwrap">
+                    <div class="pgcor_clitem pgcor_clitem--ari">
+                        <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/ari-logo.webp" alt="ARI Logo" width="1" height="0.5" layout="responsive" />
+                    </div>
+                    <div class="pgcor_clitem pgcor_clitem--compeer">
+                        <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/compeer-logo.png" alt="Compeer Logo" width="1" height="0.2" layout="responsive" />
+                    </div>
+                    <div class="pgcor_clitem pgcor_clitem--cobank">
+                        <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/cobank-logo.png" alt="Cobank Logo" width="1" height="0.17" layout="responsive" />
+                    </div>
+                    <div class="pgcor_clitem pgcor_clitem--secbank">
+                        <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/securitybank-logo.png" alt="Security Bank Logo" width="1" height="0.4" layout="responsive" />
+                    </div>
+                    <div class="pgcor_clitem pgcor_clitem--lbc">
+                        <amp-img class="pgcor_climage" src="<?php echo base_url(); ?>assets/images/platform-core/lbc.png" alt="LBC Logo" width="1" height="0.3" layout="responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 </div>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Odessa Core",
-  "image": "<?php echo base_url(); ?>assets/images/code-prin-circle.webp",
-  "description": "Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform",
-  "brand": "Odessa",
-"review": {
-    "@type": "Review",
-    "reviewBody": "Odessa's ability to be flexible around what we do was all-important. They're consultants first, developers second. As consultants, I believe they are leasing experts.",
-    "author": {"@type": "Person", "name": "Gary Anderson- CFO, Winthrop Resources Corporation"}
-  }
-}
+    { "@context": "https://schema.org/", "@type": "Product", "name": "Odessa Core", "image": "
+    <?php echo base_url(); ?>assets/images/code-prin-circle.webp", "description": "Odessa is an asset management system that unifies your origination and servicing, reporting and analytics on one robust platform", "brand": "Odessa", "review": { "@type": "Review", "reviewBody":
+        "Odessa's ability to be flexible around what we do was all-important. They're consultants first, developers second. As consultants, I believe they are leasing experts.", "author": {"@type": "Person", "name": "Gary Anderson- CFO, Winthrop Resources
+        Corporation"} } }
 </script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
 <script type="text/javascript">
-	$(document).ready(function() {
-		$("#myPopup").get(0).pause();
-	  $('.play-btn').click(function() {
-		$('.video-popup').fadeIn();
-		$("#myPopup").get(0).play();
-	  });
-	
-	  $('.close').click(function() {
-		$('.video-popup').fadeOut();
-		$('#myPopup').stop();
-		$("#myPopup").get(0).pause();
-	  });
-	});
-	</script>
+    $(document).ready(function() {
+    		$("#myPopup").get(0).pause();
+    	  $('.play-btn').click(function() {
+    		$('.video-popup').fadeIn();
+    		$("#myPopup").get(0).play();
+    	  });
+    	
+    	  $('.close').click(function() {
+    		$('.video-popup').fadeOut();
+    		$('#myPopup').stop();
+    		$("#myPopup").get(0).pause();
+    	  });
+    	  
+    	  $(".slick-slider").slick({
+           slidesToShow: 1,
+           infinite:false,
+           slidesToScroll: 1,
+           autoplay: true,
+           autoplaySpeed: 2000,
+            dots: true,
+            arrows: false, 
+          });
+    	});
+</script>
 <script>
-
-
-
-	$(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),
-	$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),
-	$(document).ready(function() {
-	// play the targeted video (and hide the poster frame)
-function videoPlay($wrapper) {
-   var $iframe = $wrapper.find(".js-videoIframe");
-   var src = $iframe.data("src");
-   // hide poster
-   $wrapper.addClass("videoWrapperActive");
-   // add iframe src in, starting the video
-   $iframe.attr("src", src);
-   $(".home-video-close").removeClass("is-hidden");
-}
-
-// stop the targeted/all videos (and re-instate the poster frames)
-function videoStop($wrapper) {
-   // if we're stopping all videos on page
-   if (!$wrapper) {
-      var $wrapper = $(".js-videoWrapper");
-      var $iframe = $(".js-videoIframe");
-      // if we're stopping a particular video
-   } else {
-      var $iframe = $wrapper.find(".js-videoIframe");
-   }
-   // reveal poster
-   $wrapper.removeClass("videoWrapperActive");
-   // remove youtube link, stopping the video from playing in the background
-   $iframe.attr("src", "");
-   $(".home-video-close").addClass("is-hidden");
-}
-
-// Function to prevent double tap to play the video on touch devices. Hides poster image.
-function touchVideo() {
-   // Checks if #js-point-detector is made visible by the pointer:coarse media query
-   var isVisible = $("#js-pointer-detector").is(":visible");
-   // If it is visible...
-   if (isVisible === true) {
-      // Add active wrapper class
-      $(".videoWrapper").addClass("videoWrapperActive");
-      // Get video source
-      var source = $(".js-videoIframe").data("src");
-      // Load video source
-      $(".js-videoIframe").attr("src", source);
-   } else {
-   }
-}
-
-// poster frame click event
-$(document).on("click", ".js-videoPoster", function(ev) {
-   ev.preventDefault();
-   var $poster = $(this);
-   var $wrapper = $poster.closest(".js-videoWrapper");
-   videoPlay($wrapper);
-});
-touchVideo();
-
-	});
-
-
+    $(".pgcor_tdctabnav").owlCarousel({loop:!1,margin:0,dots:!1,autoplay:!1,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>'],animateOut:"fadeOut",responsive:{0:{items:2,nav:!0,mouseDrag:!0,touchDrag:!0},768:{items:2,nav:!0,mouseDrag:!0,touchDrag:!1},992:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1},1024:{items:3,nav:!1,mouseDrag:!1,touchDrag:!1}}}),
+    	$(".pgcor_tdctab-item").on("click",function(){$(".pgcor_tdctab-item").removeClass("tabactive"),$(this).addClass("tabactive")}),$(".mob_keynav").owlCarousel({loop:!1,margin:10,dots:!1,autoplay:!1,animateOut:"fadeOut",items:2,nav:!0,navText:['<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-right"></span>']}),
+    	$(document).ready(function() {
+    	// play the targeted video (and hide the poster frame)
+    function videoPlay($wrapper) {
+       var $iframe = $wrapper.find(".js-videoIframe");
+       var src = $iframe.data("src");
+       // hide poster
+       $wrapper.addClass("videoWrapperActive");
+       // add iframe src in, starting the video
+       $iframe.attr("src", src);
+       $(".home-video-close").removeClass("is-hidden");
+    }
+    
+    // stop the targeted/all videos (and re-instate the poster frames)
+    function videoStop($wrapper) {
+       // if we're stopping all videos on page
+       if (!$wrapper) {
+          var $wrapper = $(".js-videoWrapper");
+          var $iframe = $(".js-videoIframe");
+          // if we're stopping a particular video
+       } else {
+          var $iframe = $wrapper.find(".js-videoIframe");
+       }
+       // reveal poster
+       $wrapper.removeClass("videoWrapperActive");
+       // remove youtube link, stopping the video from playing in the background
+       $iframe.attr("src", "");
+       $(".home-video-close").addClass("is-hidden");
+    }
+    
+    // Function to prevent double tap to play the video on touch devices. Hides poster image.
+    function touchVideo() {
+       // Checks if #js-point-detector is made visible by the pointer:coarse media query
+       var isVisible = $("#js-pointer-detector").is(":visible");
+       // If it is visible...
+       if (isVisible === true) {
+          // Add active wrapper class
+          $(".videoWrapper").addClass("videoWrapperActive");
+          // Get video source
+          var source = $(".js-videoIframe").data("src");
+          // Load video source
+          $(".js-videoIframe").attr("src", source);
+       } else {
+       }
+    }
+    
+    // poster frame click event
+    $(document).on("click", ".js-videoPoster", function(ev) {
+       ev.preventDefault();
+       var $poster = $(this);
+       var $wrapper = $poster.closest(".js-videoWrapper");
+       videoPlay($wrapper);
+    });
+    touchVideo();
+    
+    	});
 </script>
 <!-- <script src="https://fast.wistia.com/embed/medias/d8h88wu7f0.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script> -->
