@@ -307,6 +307,9 @@
   .xas-section .devOpsCon {
     padding-left: 0;
   }
+  p.text-center{
+    font-size: 22px;
+  }
   .auto-page .xas-banner .home-hero-bg img{
     top:inherit
 }
