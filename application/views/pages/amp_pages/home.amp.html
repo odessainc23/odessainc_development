@@ -658,7 +658,7 @@ button {
                         </div>
                     </div>
                 </div>
-                <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="<?= base_url();?>platform">Learn
+                <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://www.odessainc.com/#cannon">Learn
                          more</a> </div>
             </div>
         </div>
@@ -862,7 +862,7 @@ button {
         dots: true,
         arrows: false, 
       });
-     
+      
      //   $('#playVideo').on('click', function() {
      //     $('.video-popup').show();
      //     $('#myPopup').show();
@@ -985,7 +985,36 @@ button {
         } else {
         }
      }
-     
+//      window.addEventListener('DOMContentLoaded', (event) => {
+//     // Get the section ID from the URL
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const sectionId = urlParams.get('utm_content');
+
+//     // Scroll to the section
+//     const section = document.getElementById('cannon');
+//     if (section) {
+//         section.scrollIntoView({ behavior: 'smooth' });
+//     }
+// });
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Get the section ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const sectionId = urlParams.get('utm_content');
+
+    // Get the section element
+    const section = document.getElementById('cannon');
+    if (section) {
+        // Calculate the offset of the section from the top of the page
+        const offsetTop = section.offsetTop;
+
+        // Scroll to the section
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+});
+
      // poster frame click event
      $(document).on("click", ".js-videoPoster", function(ev) {
         ev.preventDefault();
