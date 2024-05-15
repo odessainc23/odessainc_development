@@ -997,23 +997,24 @@ button {
 //     }
 // });
 window.addEventListener('DOMContentLoaded', (event) => {
-    // Get the section ID from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const sectionId = urlParams.get('utm_content');
-
-    // Get the section element
-    const section = document.getElementById('cannon');
-    if (section) {
-        // Calculate the offset of the section from the top of the page
-        const offsetTop = section.offsetTop;
-
-        // Scroll to the section
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+    const url = window.location.href;
+    const pattern = /https:\/\/www\.odessainc\.com\/#canon\?.*utm_source=signature.*utm_medium=outlookmail.*utm_campaign=canon.*utm_id=May2024.*utm_term=testimonial.*utm_content=video/;
+    // const pattern = /http:\/\/localhost:8000\/#canon\?.*utm_source=signature.*utm_medium=outlookmail.*utm_campaign=canon.*utm_id=May2024.*utm_term=testimonial.*utm_content=video/;
+    if (pattern.test(url)) {
+        const sectionId = 'canon'; // Section ID to scroll to
+        const section = document.getElementById('cannon');
+        if (section) {
+            const offset = 50; // Adjust this value as needed
+            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: sectionTop - offset,
+                behavior: 'smooth'
+            });
+        }
     }
 });
+
+
 
      // poster frame click event
      $(document).on("click", ".js-videoPoster", function(ev) {
