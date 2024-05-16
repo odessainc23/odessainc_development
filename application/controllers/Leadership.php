@@ -80,14 +80,14 @@ class Leadership extends CI_Controller {
 				'thumbnail'		=> base_url() .'assets/images/leadership/nate.png',
 				'title'			=> 'CRO',
 				'description'	=> 'Nate is the Chief Revenue Officer at Odessa. He joins us after a 20-year career at software company Eagle Investment Systems, a wholly owned subsidiary of BNY Mellon. His experience with investment management software and in the FinTech industry spans multiple global roles. During his tenure, Nate held multiple titles, and his leadership supported a rapid growth period for the business. He helped launch and sell new products in the cloud, and transformed the firm’s portfolio of accounting, performance measurement, ESG, fund distribution analytics, and data management solutions. Nate holds a Master of Business Administration from Carnegie Mellon University’s Tepper School of Business. Additionally, he earned a Bachelor’s degree from the School of Information Systems at the University of Pittsburgh, where he was a four-year starter on the Men’s Soccer Team in the Big East Conference.',
-				'experience'	=> '20 years in Software',
+				'experience'	=> '20 years in Fintech',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/nathan-montgomery-00359a11/',
 				)
 			),
 			
 			array(
-				'name'			=> 'W. Johnson ',
+				'name'			=> 'Bob Johnson ',
 				'thumbnail'		=> base_url() .'assets/images/leadership/bob.png',
 				'title'			=> 'EVP, Auto Finance',
 				'description'	=> 'Bob is Executive Vice President, Auto Finance at Odessa. With a background spanning over 30 years in financial services, he oversees global auto operations.  He joined Odessa in 2023, bringing in his extensive industry knowledge and expertise in operational strategy and in the development and implementation of software solutions for the Auto, Equipment and Captive Finance sectors. Prior to his role at Odessa, he held leadership positions at EY, defi SOLUTIONS, Alfa Financial Software and FIS. In his various leadership positions, he led sales, business development, client relationship management, implementations, and provided insight and guidance on product development.',
