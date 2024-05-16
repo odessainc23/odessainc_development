@@ -844,6 +844,7 @@ section.video_section {
 }
 .integratewithtools .inlineform {
   margin: 26px auto auto;
+  box-shadow: none;
 }
 .clientsmess .appcllogorw .testicon,
 .cloudserverCon .nextrw span.breakpoint,
@@ -930,6 +931,7 @@ section.news .heading_div {
   position: relative;
   left: 20px;
   margin: 30px auto auto;
+  box-shadow: none;
 }
 .trusted_brands_logo {
   padding-top: 80px;
