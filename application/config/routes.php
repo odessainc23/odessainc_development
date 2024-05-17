@@ -73,6 +73,9 @@ $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 $route['cocktail-registration'] = 'Cocktail';
 $route['cocktail-registration-thankyou'] = 'Cocktailthank';
 $route['turns22'] = 'home/turns22';
+
+$route['cocktail-et-conversations'] = 'Cocktail_et';
+$route['cocktail-et-conversations-thankyou'] = 'Cocktailet_thank';
 // $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
 $route['handbook/next-gen-auto-finance-platform'] = 'Auto_handbook';

@@ -1,8 +1,11 @@
 #wrapper.cocktail .api-wrapper{
     background: url(../images/wine/cocktail-banner.jpg) right 0 no-repeat #213847;
     height: 350px;
+    background-size: cover;  
+}
+#wrapper.cocktail.paris-event .api-wrapper {
+    background: url(../images/events/paris-bg.jpg) right 0 no-repeat #213847;
     background-size: cover;
-   
 }
 .fix{
     min-height: 100%;
@@ -13,6 +16,69 @@
 }
 #wrapper.cocktail.cock-thank .api-wrapper{
     background:none;
+}
+.api-sub{
+    color: #fff;
+    font-family:MaisonNeue-Book;
+    font-size: 20px;
+    margin: 28px 0;
+    width: 85%;
+    line-height: 26px;
+}
+.paris-event .disclaimer,.disclaimer label{
+    color:#fff;
+    width: 100%;
+}
+.api-body.cocktail.paris-event. #primaryForm {
+    margin-top: 0;
+}
+.paris-event .navbar-brand svg{
+    width: 100px;
+}
+.api-sub b{
+    font-family: MaisonNeue-Bold;
+}
+/* .api-body.paris-event .api-banner{
+    background: url(../images/events/paris-circle.png) right 0 no-repeat;
+} */
+.paris-event .api-banner img{
+    position: absolute;
+    top: -70px;
+    height: 100vh;
+    left: -62px;
+}
+.cocktail.paris-event .api-banner{
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+.cocktail.paris-event .api-banner.api-thankyou{
+    text-align: left;
+    margin-top: 150px;
+}
+.cocktail.paris-event .get-copy .btnmar{
+    position: absolute;
+    top: 2px;
+    width: 20px;
+    right: 2px;
+    margin: 0;
+    height: 40px;
+    min-width: 120px;
+}
+.paris-event .api-banner p{
+    margin-bottom: 5px;
+}
+.paris-event.cocktail .get-copy {
+    height: max-content;
+    padding: 0;
+    position: relative;
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    margin-left: 35px;
+    /* left: 0; */
+}
+#wrapper.cocktail.paris-event .api-wrapper {
+    height: 100vh;
 }
 .cock-thank{
     min-height: 100%;
@@ -114,6 +180,20 @@
     /* .cocktail .key-takeaways{
         max-width: 60%;
     } */
+    #wrapper.cocktail.paris-event .api-wrapper{
+        background: #213847;
+        background-image: none;
+    }
+    .cocktail.paris-event .api-banner{
+        padding: 150px 0 0;
+    }
+    .api-sub,.paris-event .api-banner p {
+        width: 100%;
+        text-align: center;
+    }
+    .paris-event.cocktail .get-copy{
+        margin: 30px auto 0 auto;
+    }
     .cocktail .get-copy{
         position: relative;
         top: 0;
@@ -139,9 +219,17 @@
     .cocktail .key-takeaways{
         max-width: 100%;
     }
+    #wrapper.cocktail.paris-event .api-wrapper {
+        height: 100%;
+    }
     .fix{
         position: relative;
     }
+    .cocktail.paris-event .api-banner {
+        padding: 00px 0 0;
+        margin-top: 0;
+    }
+    
     #wrapper.cocktail .api-wrapper{
         height: 200px;
     }
@@ -161,4 +249,12 @@
     .cock-thank .api-heading{
         width: 100%;
     }
+}
+@media only screen and (max-width:480px) {
+#wrapper.cocktail.paris-event .api-wrapper {
+    height: 100vh;
+}
+.cocktail.paris-event .api-banner{
+    margin-top: 50px;
+}
 }
