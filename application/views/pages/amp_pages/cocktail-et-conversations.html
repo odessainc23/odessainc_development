@@ -42,13 +42,7 @@
 					<div class="form-group">
 						<input class="form-control"  name="email" type="text" id="email" placeholder="Your Business Email" required />
 					</div>
-				   <div class="disclaimer">
-							By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>.<br> I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
-							<label for="agree">
-							<span class="box"></span>
-							<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
-							</label>
-						 </div>
+				
 					<div class="clearfix">
 						<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Oui</button>
 					</div>
@@ -62,45 +56,7 @@
     </section>
 
 
-<!-- <section class="author-section">
-<h2>Authors</h2>
-<div class="d-flex">
-	<div class="author-sec">
-		<div class="author-thumb">
-			<img decoding="async" alt="Eric Bernstein" src="https://www.odessainc.com/assets/images/leadership/eric.jpg">
-		</div>
-		<div class="author-title">
-			John Pearce 
-			<span>SVP, Product Management, Odessa </span>
-		</div>
-		<div class="social-m">
-			<a href="">john.pearce@odessainc.com </a>
-			<a href="" style="width=16px;height=16px;">
-				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano"><path d="M12 12h5.535v2.837h.08C18.385 13.457 20.27 12 23.08 12c5.84 0 6.92 3.637 6.92 8.367V30h-5.77v-8.54c0-2.037-.042-4.657-3-4.657-3.005 0-3.463 2.218-3.463 4.5V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 1 1 6 0z"></path></svg>
 
-
-			</a>
-		</div>
-	</div>
-	<div class="author-sec">
-		<div class="author-thumb">
-			<img decoding="async" alt="Eric Bernstein" src="https://www.odessainc.com/assets/images/leadership/eric.jpg">
-		</div>
-		<div class="author-title">
-			Jeff Lezinski 
-			<span>SVP, Solution Architecture, Odessa </span>
-		</div>
-		<div class="social-m">
-			<a href="">john.pearce@odessainc.com </a>
-			<a href="" style="width=16px;height=16px;">
-				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano"><path d="M12 12h5.535v2.837h.08C18.385 13.457 20.27 12 23.08 12c5.84 0 6.92 3.637 6.92 8.367V30h-5.77v-8.54c0-2.037-.042-4.657-3-4.657-3.005 0-3.463 2.218-3.463 4.5V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 1 1 6 0z"></path></svg>
-
-
-			</a>
-		</div>
-	</div>
-</div>
-</section> -->
 
 </div>
 </div>
@@ -206,24 +162,17 @@ return true
 $("#letstalk").click(function(){
     var honeypot_val = $("#honeypot").val();
     if(honeypot_val == ''){
-        // Check if the disclaimer checkbox is checked
-        if ($('#agree').is(':checked')) {
-            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-            $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-05-16/3s43w6r');
-            $("#primaryForm").submit();
-			$('.box').hide();
-            return true;
-        } else {
-            // Show an alert or handle the case when the checkbox is not checked
-            // alert('Please agree to the privacy policy.');
-			$('.box').show();
-            return false;
-        }
+        // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+        $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-05-16/3s43w6r');
+        $("#primaryForm").submit();
+        $('.box').hide();
+        return true;
     } else {
         window.location.reload();
         return false;
     }
 })
+
 	
 
 $("#first_name").keypress(function(event){

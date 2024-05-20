@@ -38,22 +38,28 @@
 .api-sub b{
     font-family: MaisonNeue-Bold;
 }
-/* .api-body.paris-event .api-banner{
-    background: url(../images/events/paris-circle.png) right 0 no-repeat;
-} */
+
 .paris-event .api-banner img{
     position: absolute;
-    top: -70px;
+    top: -40px;
     height: 100vh;
     left: -62px;
 }
 .cocktail.paris-event .api-banner{
     margin-bottom: 0;
-    margin-top: 50px;
+    padding-top: 100px;
+    margin-top:0;
 }
 .cocktail.paris-event .api-banner.api-thankyou{
     text-align: left;
-    margin-top: 150px;
+    margin-top: 0;
+    padding-top: 150px;
+}
+#wrapper.paris-event .letstalkform.get-copy .form-group{
+    margin-bottom: 0;
+}
+.paris-event .api-thankyou .api-heading{
+    width:45%;
 }
 .cocktail.paris-event .get-copy .btnmar{
     position: absolute;
@@ -180,6 +186,9 @@
     /* .cocktail .key-takeaways{
         max-width: 60%;
     } */
+    .paris-event .api-thankyou .api-heading {
+        width: 100%;
+    }
     #wrapper.cocktail.paris-event .api-wrapper{
         background: #213847;
         background-image: none;
@@ -255,6 +264,6 @@
     height: 100vh;
 }
 .cocktail.paris-event .api-banner{
-    margin-top: 50px;
+    padding-top: 150px;
 }
 }
