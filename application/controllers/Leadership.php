@@ -124,8 +124,8 @@ class Leadership extends CI_Controller {
 			array(
 				'name'			=> 'Campbell Clout',
 				'thumbnail'		=> base_url() .'assets/images/leadership/campbell.jpg',
-				'title'			=> 'SVP, Business Development',
-				'description'	=> 'Campbell is SVP of Business Development at Odessa. With a background spanning over 25 years in the Asset Finance industry, his scope of responsibility involves enterprise sales and new business development in the Asia Pacific, Middle East, and Africa regions. He joined Odessa in 2022, bringing in his extensive industry knowledge and expertise. Before joining Odessa, Campbell held several leadership positions, spearheading projects including go-to-market strategy, sales, project delivery, and product management at AGC/Westpac, Rabobank, International Decision Systems, and FIS.',
+				'title'			=> 'Managing Director, APMEA',
+				'description'	=> 'Campbell is MD for APMEA at Odessa. With a background spanning over 25 years in the Asset Finance industry, his scope of responsibility involves enterprise sales and new business development in the Asia Pacific, Middle East, and Africa regions. He joined Odessa in 2022, bringing in his extensive industry knowledge and expertise. Before joining Odessa, Campbell held several leadership positions, spearheading projects including go-to-market strategy, sales, project delivery, and product management at AGC/Westpac, Rabobank, International Decision Systems, and FIS.',
 				'experience'	=> '25 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/campbell-clout-580541/',
@@ -134,13 +134,14 @@ class Leadership extends CI_Controller {
 			array(
 				'name'			=> 'Alexandre Ellwood',
 				'thumbnail'		=> base_url() .'assets/images/leadership/AlexandreEllwood_Odessa.jpg',
-				'title'			=> 'SVP, Business Development',
-				'description'	=> 'Alexandre is Odessa’s SVP, Business Development, responsible for partnership strategy and business development in Europe.  With 25+ years of experience in finance, technology and professional services, Alexandre is focused on bringing Odessa innovation to new markets. Prior to joining Odessa in 2021, he managed operations at Cassiopae and Sopra Banking Software in the UK for nearly a decade. Alexandre holds a degree in Economics and Finance from Ecole Supérieure des Sciences Commerciales d’ Angers.',
+				'title'			=> 'Managing Director, Europe',
+				'description'	=> 'Alexandre is Odessa’s MD for Europe, responsible for partnership strategy and business development in Europe.  With 25+ years of experience in finance, technology and professional services, Alexandre is focused on bringing Odessa innovation to new markets. Prior to joining Odessa in 2021, he managed operations at Cassiopae and Sopra Banking Software in the UK for nearly a decade. Alexandre holds a degree in Economics and Finance from Ecole Supérieure des Sciences Commerciales d’ Angers.',
 				'experience'	=> '11 Years in Leasing',
 				'social'		=> array(
 					'linkedin'	=> 'https://www.linkedin.com/in/alexellwood/',
 				)
 			),
+			
 			
 			
 			
