@@ -60,21 +60,21 @@
 </div>
 </div>
 </div>
-<script type="application/ld+json">
-{
-"@context" : "https://schema.org",
-"@type" : "Organization",
-"location": {
-"@type": "PostalAddress",
-"name": "Headquarters",
-"streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900",
-"addressLocality": "Philadelphia",
-"addressRegion": "PA",myusername
-"postalCode": "19102",
-"addressCountry": "USA"
-}
-}
-</script>
+<script type="text/javascript">
+	piAId = '311001';
+	piCId = '90662';
+	piHostname = 'pi.pardot.com';
+	
+	(function() {
+		function async_load(){
+			var s = document.createElement('script'); s.type = 'text/javascript';
+			s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+			var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+		}
+		if(window.attachEvent) { window.attachEvent('onload', async_load); }
+		else { window.addEventListener('load', async_load, false); }
+	})();
+	</script>
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
 $(document).ready(function() {
