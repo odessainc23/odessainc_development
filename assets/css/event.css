@@ -228,17 +228,9 @@
     .cocktail .key-takeaways{
         max-width: 100%;
     }
-    #wrapper.cocktail.paris-event .api-wrapper {
-        height: 100%;
-    }
     .fix{
         position: relative;
     }
-    .cocktail.paris-event .api-banner {
-        padding: 00px 0 0;
-        margin-top: 0;
-    }
-    
     #wrapper.cocktail .api-wrapper{
         height: 200px;
     }
