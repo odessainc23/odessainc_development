@@ -2472,8 +2472,8 @@ section.news .bottomdiv {
   min-height: 260px;
 }
 .news_div .news_lt {
-  background: #000;
-    padding: 20px;
+  background: #fff;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2481,7 +2481,7 @@ section.news .bottomdiv {
     border-right: 1px solid #decccc;
 }
 .news_div .news_lt img {
-  width: 300px;
+  width: 100%;
   height: auto;
 }
 .annoucement_div .annoucement_lt img {

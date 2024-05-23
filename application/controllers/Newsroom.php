@@ -16,7 +16,7 @@ class Newsroom extends CI_Controller {
 
 
 		$res[ '2' ]->image = '/blog/wp-content/uploads/2023/Bob.jpg';
-		$res[ '0' ]->image = '/blog/wp-content/uploads/2023/johnson.png';
+		$res[ '0' ]->image = '/blog/wp-content/uploads/2024/auto-press.png';
 		$res[ '1' ]->image = '/blog/wp-content/uploads/2023/john.jpeg';
 
 
