@@ -145,6 +145,7 @@ font-family:MaisonNeue-Bold;
 .gradient{
     position: absolute;
     z-index: 0;
+    opacity: 0.1;
 }
 .api-banner{
     width: 100%;
