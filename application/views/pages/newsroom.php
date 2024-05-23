@@ -129,14 +129,22 @@
                </div>
                <div class="col-md-6 col-sm-6 col-xs-12 nopad">
                   <div class="news_rt">
-                     <span class="date">March 26, 2024</span>
+                     <span class="date">May 22, 2024</span>
                      <!-- <h3></h3> -->
-                     <h3>How To Balance Customization And Efficiency In Enterprise Software</h3>
-                     <p><a href="https://www.forbes.com/sites/forbesbusinesscouncil/2024/03/26/how-to-balance-customization-and-efficiency-in-enterprise-software/?sh=75067b973a16" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+                     <h3>Odessa Taps Fintech Expert Nate Montgomery to Lead Global Sales as Chief Revenue Officer</h3>
+                     <p><a href="https://www.einpresswire.com/article/713691566/odessa-taps-fintech-expert-nate-montgomery-to-lead-global-sales-as-chief-revenue-officer" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
             </div>
             <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+                  <div class="news_div">
+                     <span class="date">March 26, 2024</span>
+                     <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
+                     <h3>How To Balance Customization And Efficiency In Enterprise Software</h3>
+                     <p><a href="https://www.forbes.com/sites/forbesbusinesscouncil/2024/03/26/how-to-balance-customization-and-efficiency-in-enterprise-software/?sh=75067b973a16" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+                  </div>
+               </div>
                <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">March 19, 2024</span>
@@ -153,7 +161,10 @@
                      <p><a href="https://www.autonews.com/guest-commentary/how-auto-finance-captive-lenders-banks-should-respond-buyers" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">March 8, 2024</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -161,8 +172,6 @@
                      <p><a href="https://www.leasinglife.com/comment/decoding-tech-solutions-for-lease-accounting-key-questions-for-vendors/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-            </div>
-            <div class="bottomdiv">
                <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 29, 2024</span>
@@ -179,7 +188,10 @@
                      <p><a href="https://www.monitordaily.com/opinion-posts/five-factors-shaping-equipment-finances-shift-to-subscriptions/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 05, 2024</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -187,8 +199,6 @@
                      <p><a href="https://www.equipmentfa.com/blogs/37470/four-use-cases-for-ai-in-asset-finance" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-            </div>
-            <div class="bottomdiv">
                <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 8, 2024</span>
@@ -205,7 +215,10 @@
                      <p><a href="https://www.monitordaily.com/article-posts/monitor-tech-roundtable-fall-conference-issue/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">Mar 7, 2023</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -213,8 +226,6 @@
                      <p><a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-            </div>
-            <div class="bottomdiv">
                <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">Sep 17, 2021</span>
@@ -230,15 +241,16 @@
                      <p><a href="https://www.monitordaily.com/article-posts/mission-critical-technology-delivers-the-flexibility-and-agility-to-compete/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12 pd10">
+           
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12 pd10">
                   <div class="news_div">
                      <span class="date">June 25, 2020</span>
                      <h3>Accelerating Digital Transformation After COVID-19 </h3>
                      <p><a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-            </div>
-            <div class="bottomdiv">
                <div class="col-md-4 col-sm-4 col-xs-12 pd10">
                   <div class="news_div">
                      <span class="date">July 10, 2019</span>
@@ -257,7 +269,6 @@
          </div>
       </div>
 </section>
-
 
 	<section class="awards" id="awardsRecognition">
 		<div class="section_width">
