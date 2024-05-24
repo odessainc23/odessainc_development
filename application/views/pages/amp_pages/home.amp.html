@@ -1,9 +1,10 @@
 <link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/xass.css?v=2001" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 <style>
-    .slick-slider .element{
+  .slick-slider .element{
   height:450px;
   display:inline-block;
+  overflow: hidden;
 
 }
 .slick-dots button{
@@ -17,8 +18,36 @@
     display: flex;
     justify-content: center;
     margin:20px 0;
+	padding: 0;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
     padding: 0;
 }
+button.slick-prev {
+    position: absolute;
+    bottom: -5px;
+    width: 10px;
+    margin: 0 auto;
+    left: -17px;
+    right: 0;
+    height: 10px;
+    /* background: 0; */
+    opacity: 0;
+}
+button.slick-next {
+    position: absolute;
+    bottom: -5px;
+    width: 10px;
+    margin: 0 auto;
+    right: -17px;
+    right: 0;
+    height: 10px;
+    opacity: 0;
+}
+
 .slick-dots li{
     width: 10px;
     height: 10px;
@@ -26,6 +55,7 @@
     display: inline-block;
     margin: 0 6px;
     background-color: #e0e0e0;
+    cursor: pointer;
 }
 .slick-dots li.slick-active {
     background-color: #00abc7;
@@ -855,12 +885,12 @@ button {
     
        $(".slick-slider").slick({
        slidesToShow: 1,
-       infinite:false,
+       infinite:true,
        slidesToScroll: 1,
        autoplay: true,
-       autoplaySpeed: 2000,
+       autoplaySpeed: 4000,
         dots: true,
-        arrows: false, 
+        arrows: true, 
       });
       
      //   $('#playVideo').on('click', function() {
