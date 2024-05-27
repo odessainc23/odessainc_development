@@ -2482,7 +2482,7 @@ section.news .bottomdiv {
 }
 .news_div .news_lt img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .annoucement_div .annoucement_lt img {
   width: 134px;
