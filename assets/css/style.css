@@ -592,6 +592,7 @@ section.banner .banner_textdiv p {
   display: flex;
   flex-flow: wrap;
   width: 100%;
+  box-shadow:none
 }
 .inlineform .input {
   width: calc(100% - 120px);
