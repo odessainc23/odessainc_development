@@ -87,7 +87,6 @@
                </div>
                <div class="row clearfix">
                   <div class="col-sm-6">
-                  <div class="col-sm-6">
                      <div class="form-group">
                      <select name="country" class="select selectpicker">
 									<option value=""></option>
@@ -355,25 +354,6 @@
                         <input class="form-control" name="software-used" type="text" placeholder="What software are you currently using?" />
                      </div>
                   </div>
-                     <div class="form-group">
-                        <!--<select name="referring-source" class="select refer-source" onchange="">
-                           <option value=""></option>
-                           <option value="" selected="selected">How did you hear about us?</option>
-                           <option value="Advertisement">Advertisement</option>
-                           <option value="Event/Conference">Event/Conference</option>
-                           <option value="Google">Google</option>
-                           <option value="LinkedIn">LinkedIn</option>
-                           <option value="Another Client/Partner">Another Client/Partner</option>
-                           <option value="Blog/PR Publication">Blog/PR Publication</option>
-                           <option value="Social Media">Social Media</option>
-                           <option value="Other">Other</option>
-                           </select>-->
-                        <input class="form-control" name="referring-source" type="text" placeholder="How did you hear about us?" required/>
-                     </div>
-                     <div class="form-group">
-                        <input class="form-control" name="software-used" type="text" placeholder="What software are you currently using?" />
-                     </div>
-                  </div>
                   <div class="col-sm-6">
                      <div class="form-group">
                         <textarea rows="3" cols="3" name="message" class="form-control" placeholder="Message" ></textarea>
@@ -586,7 +566,7 @@
           // Check if the disclaimer checkbox is checked
           if ($('#agree').is(':checked')) {
               // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-              $('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
+              $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
               $("#secondaryForm").submit();
    		$('.box').hide();
               return true;
