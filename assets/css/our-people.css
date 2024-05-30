@@ -242,6 +242,9 @@ flex-wrap: wrap;
 	line-height: 20px;
 	text-align:left;
 }
+/* .our-people .col-xl-3:hover h5{
+    color: #fff;
+} */
 @media only screen and (max-width: 1500px) {
     .talent-box:after{ left: -6px;}
         .talent-box.box-2:after{right:-15px}
