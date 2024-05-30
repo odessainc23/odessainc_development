@@ -196,6 +196,7 @@
 																<li><a href="<?php echo OD_BASE_URL; ?>platform/developer-tools">Odessa Test</a></li>
 															</ul>
 														</div>
+														
 														<div class="col-xs-6 col-sm-3 menuwd20 mnmargintop">
 															<ul>
 																<li class="category-dot category-bx">LEARN MORE</li>
@@ -275,7 +276,7 @@
 																		<li><a href="<?php echo OD_BASE_URL; ?>company">About Odessa</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>leadership">Leadership</a></li>
 																		<li><a href="<?php echo OD_BASE_URL; ?>our-people">Our People</a></li>
-\																		<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
+																	<li><a href="<?php echo OD_BASE_URL; ?>careers">Careers</a></li>
 																	</ul>
 																</div>
 																<div class="col-xs-6 col-sm-6">
