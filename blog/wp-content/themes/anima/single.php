@@ -103,7 +103,7 @@ $category_detail	= get_the_category( $postID );
 				<h3>More like this</h3>
 				<div id="morelikethis_slider" class="row">
 					<?php
-						$singleArgs = array( 'numberposts' => 3, 'offset' => 1, 'post_type' => 'Post' );
+						$singleArgs = array( 'numberposts' => 3, 'offset' => 2, 'post_type' => 'Post' );
 						$singlePost = get_posts( $singleArgs );
 
 						foreach ( $singlePost as $single ): setup_postdata( $single );
