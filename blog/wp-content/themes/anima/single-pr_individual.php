@@ -80,7 +80,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'single-
 				<h3>More like this</h3>
 				<div id="morelikethis_slider" class="row">
 					<?php
-						$singleArgs = array( 'numberposts' => 3, 'offset' => 0, 'post_type' => 'Post' );
+						$singleArgs = array( 'numberposts' => 3, 'offset' => 1, 'post_type' => 'Post' );
 						$singlePost = get_posts( $singleArgs );
 
 						foreach ( $singlePost as $single ): setup_postdata( $single );
