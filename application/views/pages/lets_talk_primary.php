@@ -600,7 +600,7 @@ phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
 		//console.log($("#honeypot").val())
 		var honeypot_val = $("#honeypot").val();
 		if(honeypot_val == ''){
-			$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+			$('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
 			$("#primaryForm").submit();
 			return true;
 		}else{
