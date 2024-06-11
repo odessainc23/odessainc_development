@@ -319,7 +319,7 @@ section.awards .email_div {
 }
 .mega-dropdown-menu {
   width: 100%;
-  top: 115px;
+  top: 60px;
   padding: 0 !important;
   border: 0;
   border-radius: 0;
@@ -3277,7 +3277,8 @@ section.innovate_section .btns_style:hover {
   background-color: #3f7ab8;
 }
 .bg-alert {
-  background-color: #0075a2;;
+  background-color: #0075a2;
+  display: none;
 }
 .bg-grad {
   background-image: linear-gradient(to right, #3f7ab8, #81bee7, #81bee7);
