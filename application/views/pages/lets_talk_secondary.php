@@ -423,31 +423,9 @@
 <!--Let's Talk Secondary Section Start here-->
 <link href="<?php echo base_url(); ?>assets/css/lets_talk_secondary.css" rel='stylesheet' />
 <script type="application/ld+json">
-   {
-   "@context": "https://schema.org",
-   "address": {HQ PostalAddress},
-   "location":[
-   {
-   "@type": "PostalAddress",
-   "streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900",
-   "addressLocality": "Philadelphia",
-   "addressRegion": "PA",
-   "postalCode": "19102",
-   "addressCountry": "USA"
-   }, 
-   "@type": "PostalAddress",
-   "streetAddress": " GGR Towers, 18/2B, Bellandur Gate, Sarjapur Road",
-   "addressLocality": "Bangalore",
-   "addressRegion": "Karnataka",
-   "postalCode": "560103",
-   "addressCountry": India"
-   ]
-   },
-   "contactPoint": {
-   "@type": "ContactPoint",
-   "telephone": "+1.215.231.9800"
-   },
-</script> 
+        { "@context" : "https://schema.org", "@type" : "Organization", "location": { "@type": "PostalAddress", "name": "Headquarters", "streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900", "addressLocality": "Philadelphia", "addressRegion": "PA", "postalCode":
+        "19102", "addressCountry": "USA" } }
+    </script>
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
    $(document).ready(function() {
