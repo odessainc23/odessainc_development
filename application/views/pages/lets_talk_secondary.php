@@ -42,10 +42,7 @@
          <h1 class="wtcol text-center">Discuss your needs with our team </h1>
          <p class="wtcol text-center pdtb">Our sales team will provide feedback based on your requirements so <br>we can set your company up for success.</p>
          <div class="secnformCon">
-            <!--<iframe src="http://go.pardot.com/l/310001/2020-07-30/tbr4b9" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-               -->
-            <!--<form id="secondaryForm" action="https://go.odessainc.com/l/310001/2021-10-26/2l9dpln" method="post">-->
-            <!-- <form id="secondaryForm" action="https://go.odessainc.com/l/310001/2020-06-25/rj5m2v" method="post"> -->
+           
             <form id="secondaryForm" method="post" autocomplete="off">
                <label for="honeypot">Honeypot </label>
                <input id="honeypot" name="honeypot" size="40" type="text" value="" /><br>
@@ -543,8 +540,7 @@
       if(honeypot_val == ''){
           // Check if the disclaimer checkbox is checked
           if ($('#agree').is(':checked')) {
-              // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-              $('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
+\              $('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
               $("#secondaryForm").submit();
    		$('.box').hide();
               return true;
