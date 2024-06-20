@@ -1,10 +1,9 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Core extends CI_Controller {
+class Core_amp extends CI_Controller {
 	
 	public function index() {
-		$data	= array();
 		$data['meta_title']			= 'Equipment Leasing Software from Odessa';
 		$data['meta_description']	= 'Odessa\'s provides equipment leasing software to unify your origination and servicing, reporting and analytics - all on one robust platform.';
 		$data['meta_keyword']		= 'equipment lease accounting,equipment leasing software,equipment finance solution,equipment finance software,equipment finance Platform,equipment leasing Platform';
