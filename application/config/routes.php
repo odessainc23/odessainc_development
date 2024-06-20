@@ -57,13 +57,12 @@ $route['news.amp.html'] = 'News_amp';
 $route['design.amp.html'] = 'Design_amp';
 $route['letstalk.amp.html'] = 'Letstalk_amp';
 $route['company.amp.html'] = 'company_amp';
-$route['platform/core.amp.html'] = 'platform_amp/core';
+$route['platform/core.amp.html'] = 'Core';
 $route['careers.amp.html'] = 'Careers_amp';
 $route['turns22.amp.html'] = 'home/turns22';
 $route['xaas-everything-as-a-service.amp.html'] = 'xaas_amp/xaas';
 $route['newsroom/announcements'] = 'newsroom/announcements';
 $route['privacy-policy'] = 'welcome/privacy_policy';
-// $route['odessa-modern-slavery-act-statement'] = 'welcome/odessa-modern-slavery-act-statement';
 
 $route['lets-talk'] = 'welcome/lets_talk_primary';
 $route['get-started'] = 'welcome/lets_talk_secondary';
