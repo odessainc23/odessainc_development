@@ -3169,6 +3169,10 @@ section.innovate_section .btns_style:hover {
   color: #2a2d36;
   font-weight: 700;
 }
+.legal-ppcontent a{
+  color: #00acc8;
+}
+
 .legal-pcontent p {
   font-size: 17px;
 }
