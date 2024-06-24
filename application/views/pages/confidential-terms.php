@@ -312,7 +312,6 @@
             </p>
             </div>
             <h4>4. How Odessa Collects Your Information</h4>
-            <p>Odessa may collect information that you provide to Odessa in connection with your use of the Odessa Solution or the Odessa Software when you:</p>
             <div class="inner">
               <p class="blck">
                 <span class="highlight">4.1. Direct interactions –</span> You may give us your Identity, Contact, Interaction, Marketing, and Communications Data by filling in forms or by corresponding with us by post, phone, email, or otherwise:<br><br>
