@@ -5,7 +5,7 @@
   .checklist {
   font-size: 1.2rem;
   list-style-type: none;
-  margin: 10px 0 30px 0 !important;
+  margin: 10px 20px 30px 20px !important;
   padding: 0;
 }
 
@@ -25,12 +25,7 @@
   border-bottom: 0.15em solid #00abc8;
   border-right: 0.15em solid #00abc8;
 }
-.checkmark:is(li), ul li:is(li) {
-  margin-left: 1em;
-}
-.checkmark:is(li):not(:first-child), ul li:is(li):not(:first-child) {
-  margin-top: 1em;
-}
+
 	</style>
 
 
