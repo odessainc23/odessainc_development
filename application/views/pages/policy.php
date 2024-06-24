@@ -39,7 +39,7 @@
 			<!-- <h3></h3> -->
             <h4>1. Privacy and Your Information</h4>
             <p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows, you care about how your Personal Information is used and shared, and we take your privacy seriously. This Privacy Notice describes how we  leverage your personal information and respect your privacy rights.</p>
-            <p>This Privacy Policy explains:</p>
+            <!-- <p>This Privacy Policy explains:</p> -->
 			<section id="How">
             <h4>2. Changes to this Privacy Policy</h4>
             <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at <a href="https://dev.odessainc.com/legal/confidential-terms" target="_blank">https://dev.odessainc.com/legal/confidential-terms</a> If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the official email address Odessa has on file for your account, if applicable. The “Last Revised” section at the bottom of this Notice states when this Privacy Notice was last amended, and we update this date each time a revision is posted. </p>
@@ -157,7 +157,7 @@
 
             </div>   
             <div class="inner" style="margin-left:0">
-            <p><span class="highlight">• </span><span class="sub-heading-italic"> Rights to Object or Restrict Processing of Personal Information</span> Customers may update or change their account information through their account settings accessible using the Customer account page included in the Odessa Solution. Access to your Odessa account page will require your Odessa Solution username and password or any other supported authentication mechanism. To update your Information or to delete your account information, please email <a href="mailto:notices@Odessainc.com" >notices@Odessainc.com</a>.</p>
+            <p><span class="highlight">• </span><span class="sub-heading-italic"> Rights to Object or Restrict Processing of Personal Information</span> </p>
             <p>If Odessa has your Personal Information as a result of your relationship with one of Odessa’s Customers, you should first contact that Customer before contacting Odessa. You may, however, at any time revoke your consent to the collection, processing and use of your Personal Information by emailing <a href="mailto:notices@Odessainc.com" >notices@Odessainc.com</a>. Upon receipt of your request, Odessa will delete your personal data provided Odessa may retain any data which is required for billing and accounting purposes, or which is subject to legal retention requirements. In addition, if you discover any errors in data, you may contact us by emailing <a href="mailto:notices@Odessainc.com" >notices@Odessainc.com</a> and we will correct it. You can always opt not to disclose information to us, but keep in mind some information may be needed to take advantage of product features or may be required by your relationship with one of Odessa’s customers.</p>
             </div>   
             <div class="inner" style="margin-left:0">
