@@ -3172,6 +3172,20 @@ section.innovate_section .btns_style:hover {
 .legal-pcontent p {
   font-size: 17px;
 }
+.legal-pcontent p span{
+  color: #2a2d36;
+  font-weight: 700;
+}
+.legal-pcontent p.blck span.highlight{
+  display:inline-block;
+  color: #2a2d36;
+  font-weight: 700;
+}
+.legal-pcontent p.blck span{
+  display:block;
+  color: #555b6d;
+  font-weight: 400;
+}
 .legal-pcontent .inner {
   margin-left: 25px;
 }
