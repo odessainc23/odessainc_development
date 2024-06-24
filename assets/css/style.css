@@ -3190,8 +3190,14 @@ section.innovate_section .btns_style:hover {
   color: #555b6d;
   font-weight: 400;
 }
+.legal-pheader{
+  margin-bottom: 30px;
+}
+.legal-phtitle{
+  margin-bottom:0;
+}
 .legal-pcontent .inner {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 .legal-pcontent .inner p i {
   color: #2a2d36;

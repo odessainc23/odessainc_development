@@ -8,22 +8,34 @@
   margin: 10px 20px 30px 20px !important;
   padding: 0;
 }
-
+.legal-phtitle{
+  margin-bottom:10px
+}
 .checkmark, ul.checklist li {
   position: relative;
-  padding-left: 0.8em;
+  padding-left:0;
+}
+.legal-phicon{
+  width: 50px;
+    height: 50px;
+    position: relative;
+    background: url(../assets/images/cookies.png) 0 0 no-repeat;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
 }
 .checkmark::before, ul.checklist li::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: -0.5em;
-  top: 0;
-  transform: rotate(45deg);
-  height: 1em;
-  width: 0.5em;
-  border-bottom: 0.15em solid #00abc8;
-  border-right: 0.15em solid #00abc8;
+  top: 8px;
+    font-size: 20px;
+    background: #2a2d36;
+    font-weight: 700;
+    width: 6px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: -15px;
+ 
 }
 
 	</style>
@@ -34,7 +46,7 @@
     <div class="legal-page">
     <div class="legal-pheader">
 				<h1 class="legal-phtitle">Cookie Notice</h1>
-				<!-- <span class="legal-phicon"></span> -->
+				<span class="legal-phicon"></span>
 			</div>
       <section class="legal-ppost">
        
