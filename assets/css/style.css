@@ -3433,6 +3433,9 @@ section.innovate_section .btns_style:hover {
   .acc .accreditations .flex li {
     margin: 0 5px;
 }
+.legal-ppost p{
+  overflow-wrap: anywhere;
+}
 .acc.cloudserversection .cloudserverCon{
   padding-bottom: 70px;
 }
