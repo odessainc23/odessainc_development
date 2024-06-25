@@ -4449,6 +4449,10 @@ button {
   .cookie-banner .left-cookie {
     width: 100%;
 }
+.freeprivacypolicy-com---nb .cc-nb-main-container{
+  flex-wrap: wrap !important;
+    justify-content: center !important;
+}
 .cookie-banner .right-cookie {
   width: 100%;
 }
