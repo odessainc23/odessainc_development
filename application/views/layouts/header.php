@@ -161,7 +161,7 @@ button {
 </head>
 <body class="">
 	<?php $this->load->view('layouts/navmenu'); ?>
-	<div class="overlay">
+	<!-- <div class="overlay">
         <img src="<?php echo base_url(); ?>assets/images/logo.png">
     <div class="login-container letstalkform" id="loginContainer">
         <h2 class="home-hero-cstitle">Login</h2>
@@ -172,4 +172,4 @@ button {
         </form>
     </div>
     <div id="footer">© 2023 Odessa. All rights reserved.</div>
-</div>
+</div> -->
