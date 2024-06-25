@@ -4311,7 +4311,61 @@ button {
 
 
 /* cookie msg */
-
+.freeprivacypolicy-com---nb-headline {
+  right: 0;
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0;
+  max-width: 100%;
+  position: fixed !important;
+}
+.cc-nb-buttons-container{
+ 
+}
+.freeprivacypolicy-com---palette-light .cc-nb-text {
+  color:#2a2d36 !important;
+  font-family: MaisonNeue-Book !important;
+  font-size: 16px !important;
+}
+.freeprivacypolicy-com---palette-light .cc-nb-title{
+  color:#2a2d36 !important;
+  font-family: MaisonNeue-Book !important;
+  font-size: 20px !important;
+}
+.cc-nb-title-container{
+  display:none !important;
+}
+.cc-nb-buttons-container button{
+  background: #ff495c !important;
+  border-color: #ff495c !important;
+  color: #fff !important;
+  font-family: MaisonNeue-Book !important;
+  font-size: 14px !important;
+}
+.cc-cp-foot-save{
+  background: #ff495c !important;
+  border-color: #ff495c !important;
+  color: #fff !important;
+  font-family: MaisonNeue-Book !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+.cc-pc-container p,.cc-cp-body-tabs-item button{
+  font-family: MaisonNeue-Book !important;
+  font-size: 14px !important;
+}
+.freeprivacypolicy-com---palette-light.freeprivacypolicy-com---nb{
+  background-color: #89d4e1 !important;
+  transition: .3s ease-out !important;
+}
+.freeprivacypolicy-com---palette-light .cc-cp-foot{
+  padding: 0 10px !important;
+}
+.freeprivacypolicy-com---nb .cc-nb-main-container {
+  padding: 1em 2em !important;
+  display: flex !important;
+  align-items: center !important;
+}
 .cookie-banner {
   position: fixed;
   bottom: 0;

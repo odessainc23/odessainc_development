@@ -126,35 +126,7 @@
     </div>
     </div>
 </div>
-<div id="cookie-consent-banner" class="cookie-banner">
-    
-    <div class="d-flex">
-        <div class="left-cookie"><p>We use necessary cookies to make our site work. We'd also like to set analytics cookies that help us make improvements by measuring how you use the site. These will be set only if you accept.</p>
-            <p>For more detailed information about the cookies we use, see our <a href="https://dev.odessainc.com/cookie-notice" target="_blank">Cookies page</a>.</p>
-        </div>
-        <div class="right-cookie">
-            <button id="accept-all">Accept All Cookies</button>
-            <button id="reject-all">Reject All Cookies</button>
-            <button id="set-preferences">Set My Preferences</button>
-        </div>
-      
-    </div>
-   
 
-</div>
-
-<div id="preferences-modal" class="preferences-modal">
-    <div class="preferences-content">
-        <h2>Cookie Preferences</h2>
-        <div class="d-flex">
-        <label>
-            <input type="checkbox" id="analytics-cookies">
-            Allow analytics cookies
-        </label>
-        <button id="save-preferences">Save Preferences</button>
-        </div>
-    </div>
-</div>
     
 <?php
     $this->minify->js( array('owl.carousel.js', 'bootstrap.js', 'jquery.cookieMessage.min.js', 'stickySidebar.min.js', 'v1-script.js', 'script.js') );
@@ -227,18 +199,47 @@ $(".overlay").addClass('ov');
 //     window.location.href="http://www.google.com";
 // };
 </script>
-<script async>
-   document.addEventListener("DOMContentLoaded", function() {
+
+
+
+<!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
+<script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"https://www.odessainc.com/","website_privacy_policy_url":"https://www.odessainc.com/privacy-policy"});
+});
+</script>
+
+<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
+<!-- End Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
+
+
+
+
+
+<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+<a href="#" id="open_preferences_center">Update cookies preferences</a>
+
+<!-- <script async>
+document.addEventListener("DOMContentLoaded", function() {
     const banner = document.getElementById('cookie-consent-banner');
     const modal = document.getElementById('preferences-modal');
     const analyticsCheckbox = document.getElementById('analytics-cookies');
 
+    // Show the cookie consent banner if the user hasn't set their preferences yet
+    if (!getCookie('cookieConsent')) {
+        banner.style.display = 'block';
+    }
+
     document.getElementById('accept-all').addEventListener('click', function() {
+        setCookie('cookieConsent', 'accepted', 365);
         setCookie('analytics', 'true', 365);
         banner.style.display = 'none';
     });
 
     document.getElementById('reject-all').addEventListener('click', function() {
+        setCookie('cookieConsent', 'rejected', 365);
         setCookie('analytics', 'false', 365);
         banner.style.display = 'none';
     });
@@ -250,8 +251,13 @@ $(".overlay").addClass('ov');
     document.getElementById('save-preferences').addEventListener('click', function() {
         const allowAnalytics = analyticsCheckbox.checked;
         setCookie('analytics', allowAnalytics, 365);
+        setCookie('cookieConsent', 'custom', 365);
         modal.style.display = 'none';
         banner.style.display = 'none';
+    });
+
+    document.getElementById('close-modal').addEventListener('click', function() {
+        modal.style.display = 'none';
     });
 
     function setCookie(name, value, days) {
@@ -266,8 +272,8 @@ $(".overlay").addClass('ov');
         const ca = document.cookie.split(';');
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
     }
@@ -289,7 +295,7 @@ $(".overlay").addClass('ov');
     checkCookie();
 });
 
-</script>
+</script> -->
 <!-- <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/addthis_widget.js?v=900232" async="async"></script>  -->
 <script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
 
