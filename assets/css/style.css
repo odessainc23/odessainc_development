@@ -4432,6 +4432,15 @@ button {
   align-items: center;
   z-index: 99999999;
 }
+.cc-nb-text-container{
+  width: 80%;
+  padding-right: 10px;
+}
+.cc-nb-buttons-container {
+  width: 20%;
+  display: flex;
+  flex-flow: column;
+}
 
 .preferences-content {
   background-color: #fff;
@@ -4456,4 +4465,6 @@ button {
 .cookie-banner .right-cookie {
   width: 100%;
 }
+.cc-nb-buttons-container,.cc-nb-text-container {
+  width: 100%;}
 }
