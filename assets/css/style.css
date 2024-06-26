@@ -4438,7 +4438,7 @@ button {
 }
 .cc-nb-buttons-container {
   width: 20%;
-  display: flex;
+  display: flex !important;
   flex-flow: column;
 }
 
@@ -4466,5 +4466,5 @@ button {
   width: 100%;
 }
 .cc-nb-buttons-container,.cc-nb-text-container {
-  width: 100%;}
+  width: 100%;  display: block !important;}
 }
