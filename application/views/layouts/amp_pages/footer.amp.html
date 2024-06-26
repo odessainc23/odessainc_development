@@ -199,8 +199,7 @@ $(".overlay").addClass('ov');
 //     window.location.href="http://www.google.com";
 // };
 </script>
-
-
+<!-- google analytics -->
 
 <!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
 <script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
@@ -209,6 +208,17 @@ document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"https://www.odessainc.com/","website_privacy_policy_url":"https://www.odessainc.com/privacy-policy"});
 });
 </script>
+
+<!-- Cookie-data -->
+<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-L68NYPCSGJ"></script>
+<script type="text/plain" data-cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L68NYPCSGJ');
+</script>
+<!-- end of Cookie-data-->
 
 <noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
 <!-- End Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
@@ -221,82 +231,6 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
 
 <a href="#" id="open_preferences_center">Update cookies preferences</a>
 
-<!-- <script async>
-document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById('cookie-consent-banner');
-    const modal = document.getElementById('preferences-modal');
-    const analyticsCheckbox = document.getElementById('analytics-cookies');
-
-    // Show the cookie consent banner if the user hasn't set their preferences yet
-    if (!getCookie('cookieConsent')) {
-        banner.style.display = 'block';
-    }
-
-    document.getElementById('accept-all').addEventListener('click', function() {
-        setCookie('cookieConsent', 'accepted', 365);
-        setCookie('analytics', 'true', 365);
-        banner.style.display = 'none';
-    });
-
-    document.getElementById('reject-all').addEventListener('click', function() {
-        setCookie('cookieConsent', 'rejected', 365);
-        setCookie('analytics', 'false', 365);
-        banner.style.display = 'none';
-    });
-
-    document.getElementById('set-preferences').addEventListener('click', function() {
-        modal.style.display = 'flex';
-    });
-
-    document.getElementById('save-preferences').addEventListener('click', function() {
-        const allowAnalytics = analyticsCheckbox.checked;
-        setCookie('analytics', allowAnalytics, 365);
-        setCookie('cookieConsent', 'custom', 365);
-        modal.style.display = 'none';
-        banner.style.display = 'none';
-    });
-
-    document.getElementById('close-modal').addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    function checkCookie() {
-        const analytics = getCookie("analytics");
-        if (analytics === null) {
-            banner.style.display = 'block';
-        } else {
-            if (analytics === "true") {
-                // Initialize analytics here
-                console.log("Analytics cookies accepted");
-            } else {
-                console.log("Analytics cookies rejected");
-            }
-        }
-    }
-
-    checkCookie();
-});
-
-</script> -->
-<!-- <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/addthis_widget.js?v=900232" async="async"></script>  -->
 <script src="//rum-static.pingdom.net/pa-609d1be23a9c8c0011000021.js" async></script>
 
 </body>

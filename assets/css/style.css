@@ -4325,7 +4325,7 @@ button {
 .cc-nb-buttons-container{
  
 }
-.freeprivacypolicy-com---palette-light .cc-nb-text {
+.freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---nb .cc-nb-text {
   color:#2a2d36 !important;
   font-family: MaisonNeue-Book !important;
   font-size: 16px !important;
@@ -4357,7 +4357,7 @@ button {
   font-family: MaisonNeue-Book !important;
   font-size: 14px !important;
 }
-.freeprivacypolicy-com---palette-light.freeprivacypolicy-com---nb{
+.freeprivacypolicy-com---palette-light.freeprivacypolicy-com---nb,.freeprivacypolicy-com---palette-dark.freeprivacypolicy-com---nb{
   background-color: #89d4e1 !important;
   transition: .3s ease-out !important;
 }
@@ -4456,7 +4456,7 @@ button {
 .preferences-content input{
   width: auto;
 }
-.freeprivacypolicy-com---palette-light .cc-nb-text{
+.freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---palette-dark .cc-nb-text{
   margin: 0 !important;
 }
 @media only screen and (max-width: 800px) {
