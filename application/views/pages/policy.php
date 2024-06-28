@@ -61,12 +61,13 @@
         
           <div id="Collect" class="legal-pcontent legal-ppcontab">
 			<!-- <h3></h3> -->
-            <h4>1. Privacy and Your Information</h4>
+     
+      <h4>1. Privacy and Your Information</h4>
             <p>Odessa Technologies, Inc. its affiliates and subsidiaries (collectively “Odessa,” “we”, “our” or “us”) knows, you care about how your Personal Information is used and shared, and we take your privacy seriously. This Privacy Notice describes how we  leverage your personal information and respect your privacy rights.</p>
             <!-- <p>This Privacy Policy explains:</p> -->
 			<section id="How">
             <h4>2. Changes to this Privacy Policy</h4>
-            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located at <a href="https://dev.odessainc.com/legal/confidential-terms" target="_blank">https://dev.odessainc.com/legal/confidential-terms</a> If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the official email address Odessa has on file for your account, if applicable. The “Last Revised” section at the bottom of this Notice states when this Privacy Notice was last amended, and we update this date each time a revision is posted. </p>
+            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located on <a href="https://dev.odessainc.com/legal/confidential-terms" target="_blank">confidential-terms</a>. If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the official email address Odessa has on file for your account, if applicable. The “Last Revised” section at the bottom of this Notice states when this Privacy Notice was last amended, and we update this date each time a revision is posted. </p>
 			</section>
 
 			<section id="Uses">
@@ -222,7 +223,7 @@
 
 			<section id="Contact">
             <h4>9. How to Contact Us</h4>
-            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at </p>
+            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at: </p>
             <p>Two Liberty Place</p>
             <p>50 South 16th Street</p>
             <p>Suite 1900</p>
