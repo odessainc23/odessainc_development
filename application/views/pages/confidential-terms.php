@@ -12,10 +12,11 @@
     content: "";
     position: absolute;
     border-radius: 50%;
-    left: -15px;
+    left: 0px;
   }
   .legal-ppost p{
-    font-size:17px
+    font-size:17px;
+    padding-left:22px
   }
   .legal-ppost h4{
     margin: 20px 0 10px 0;
@@ -302,6 +303,7 @@
               <span class="sub-heading-italic">Service Level Termination Event. </span> If the Uptime SLA Percentage falls below 96% on a rolling three (3) months average (a “Service Level Termination Event”), then Customer may terminate the applicable Sales Order upon thirty (30) days’ notice to Odessa provided that such notice is given within sixty (60) days of the Service Level Termination Event. In the event Customer terminates a Sales Order as a result of a Service Level Termination Event, Odessa will refund to Customer any prepaid, unused Fees applicable to the period after the effective date of the termination.
             </p>
           </div>
+          
           <div id="Privacy" class="legal-pcontent legal-ppcontab">
             <h3>Privacy Policy</h3>
 			      <h4>1. Privacy and Your Information</h4>
