@@ -18,10 +18,12 @@
     content: "";
     position: absolute;
     border-radius: 50%;
-    left: -15px;
+    left: 0px;
+	
   }
   .legal-ppost p{
-    font-size:17px
+    font-size:17px;
+	padding-left:22px;
   }
   .legal-ppost h4{
     margin: 20px 0 10px 0;
