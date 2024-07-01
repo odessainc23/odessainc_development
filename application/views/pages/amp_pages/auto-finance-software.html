@@ -148,7 +148,10 @@
    margin: 0 0 50px;
    }
    .capabilities-box{
-   padding: 0 0 80px 0;
+   padding: 0 0 40px 0;
+   }
+   .capabilities-box.c-suite{
+      padding: 0 0 100px 0;
    }
    .capabilities-box .flex-box{
    margin: 30px auto 0 auto;
@@ -186,6 +189,28 @@
    }
    .buildinnovationboxConrw {
    padding: 60px 0;
+   }
+   .auto-page .c-suite .xas-banner {
+    height: 330px;
+   }
+   .auto-page .c-suite .home-hero-bg img {
+   top: 0;
+   bottom: 0;
+   height: auto;
+   left: 0;
+   width: 100%;
+   }
+   .auto-page .c-suite .xas-content .home-hero-ctitle{
+      font-size: 32px;
+   }
+   .auto-page .c-suite .home-hero-cwrap p{
+      font-size: 16px;
+   }
+   .auto-page .c-suite .home-hero-cwrap p span{
+      font-weight: 700;display: block;
+   }
+   .auto-page .c-suite .xas-content .home-hero-cwrap{
+      padding-top: 0;
    }
    @media only screen and (max-width:1240px){
    .auto-page .xas-content .home-hero-ctitle{
@@ -271,6 +296,12 @@
    .auto-page .pgplat_ftgstitle {
    font-size: 20px;
    }
+   .auto-page .c-suite .xas-content .home-hero-cwrap{
+      padding-bottom: 0;
+   }
+   .c-suite .xas-banner .home-hero-bg {
+   display: none;
+}
    .auto-page .card {
     width: 43%;
 }
@@ -458,6 +489,29 @@
                </div>
             </div>
          </div>
+      </div>
+         <section class="capabilities-box c-suite">
+         <div class="home-hero xas-banner">
+            <div class="home-hero-bg">
+               <div class="home-hero-bgimg">   
+                  <img src="<?php echo base_url(); ?>assets/images/auto-news/c-suite.png" alt="" class="lazyload" >
+               </div>
+            </div>
+            <div class="home-hero-content xas-content">
+               <div class="home-hero-cinner">
+                  <div class="home-hero-cwrap">
+                     <div class="home-hero-ctitlewrap">
+                        <h1 class="home-hero-ctitle">Need C-suite approval?</h1>
+                        <p class="present">Level up your strategy with <span>'The Business Case for Next-Gen Auto Platform'</span></p>
+                        <a class="odc__btn odc__btn--primary odc__btn--md read-more" href="https://dev.odessainc.com/handbook/next-gen-auto-finance-platform" target="_blank">Get the Handbook</a>
+      
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </section>
+
          <section class="two-section reverse adapt">
             <div class="section1">
                <div class="brlogo">
@@ -522,7 +576,7 @@
                </div>
             </div>
          </section>
-      </div>
+     
       <div class="pgcor_dprin">
          <div class="odc-gd__container">
             <div class="odc-gd__row">
