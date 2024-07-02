@@ -655,7 +655,9 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-
+#wrapper.ebook .api-wrapper{
+    background-image: none;
+}
 .get-copy{
     height: auto;
 }
