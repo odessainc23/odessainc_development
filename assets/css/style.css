@@ -4371,7 +4371,7 @@ body .freeprivacypolicy-com---nb .cc-nb-changep{
   font-family: MaisonNeue-Book !important;
 }
 .freeprivacypolicy-com---pc-dialog input[type=checkbox].cc-custom-checkbox:checked+label:before {
-  background: #ff495c !important;
+  background: #89d4e1 !important;
 }
 .freeprivacypolicy-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label,.cc-pc-head-lang-select{
   font-family: MaisonNeue-Book !important;
@@ -4442,11 +4442,16 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
   background-color: #89d4e1 !important;
   transition: .3s ease-out !important;
 }
-
+.freeprivacypolicy-com---palette-light .cc-nb-text a:focus,.freeprivacypolicy-com---palette-light a:focus{
+  box-shadow: none !important;
+}
 .freeprivacypolicy-com---nb .cc-nb-main-container {
-  padding: 1em 2em !important;
+  justify-content: space-between !important;
   display: flex !important;
   align-items: center !important;
+  width: 84% !important;
+  margin: 0 auto !important;
+  padding: 1em 0 !important;
 }
 .cookie-banner {
   position: fixed;
