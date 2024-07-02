@@ -319,7 +319,7 @@ section.awards .email_div {
 }
 .mega-dropdown-menu {
   width: 100%;
-  top: 52px;
+  top: 120px;
   padding: 0 !important;
   border: 0;
   border-radius: 0;
@@ -2205,7 +2205,7 @@ div.leader_person .leader_info div.leaderexp span.leadericon a.linkedin {
 }
 .menuviewwrap {
   position: fixed;
-  top: 60px;
+  top: 120px;
   width: 0;
   bottom: 0;
   z-index: 99997;
