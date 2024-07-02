@@ -21,12 +21,17 @@
   .cc-nb-buttons-container{
    
   }
+  .freeprivacypolicy-com---nb .cc-nb-changep{
+    margin-bottom: 0 !important;
+  }
   .freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---nb .cc-nb-text {
-    color:#2a2d36 !important;
-    font-family: MaisonNeue-Book !important;
-    font-size: 16px !important;
-    text-align: center !important;
-    padding-bottom: 20px !important;
+   
+    color: #2a2d36 !important;
+      font-family: MaisonNeue-Book !important;
+      font-size: 16px !important;
+      text-align: left !important;
+      padding-bottom: 0px !important;
+      padding-right: 20px !important;
   }
   .freeprivacypolicy-com---palette-light .cc-nb-okagree:focus{
     box-shadow: none !important;
@@ -35,9 +40,6 @@
     color:#2a2d36 !important;
     font-family: MaisonNeue-Book !important;
     font-size: 20px !important;
-  }
-  .cc-pc-head-title-text{
-    display: none !important;
   }
   .cc-nb-title-container{
     display:none !important;
@@ -53,58 +55,8 @@
     display: none !important;
   }
   .freeprivacypolicy-com---palette-light .cc-pc-head-lang select{
-    width: 150px !important;
+    width: 80% !important;
   }
-  .freeprivacypolicy-com---palette-light .cc-pc-head-lang select option{
-    width: 150px !important;
-  }
-  .freeprivacypolicy-com---palette-light .cc-pc-head-lang select:focus{
-    box-shadow: none !important;
-  }
-  select {
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    appearance:none;
-    outline:0;
-    box-shadow:none;
-    border:0!important;
-    background: #5c6664;
-    background-image: none;
-    flex: 1;
-    padding: 0 .5em;
-    color:#fff;
-    cursor:pointer;
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
- }
- select::-ms-expand {
-    display: none;
- }
- .select {
-    position: relative;
-    display: flex;
-    width: 20em;
-    height: 3em;
-    line-height: 3;
-    background: #5c6664;
-    overflow: hidden;
-    border-radius: .25em;
- }
- .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    background: #2b2e2e;
-    cursor:pointer;
-    pointer-events:none;
-    transition:.25s all ease;
- }
- .select:hover::after {
-    color: #23b499;
- }
   .freeprivacypolicy-com---palette-light .cc-pc-head-title-headline{
     font-size: 20px !important;
     font-family: MaisonNeue-Book !important;
@@ -135,8 +87,12 @@
     font-weight: 400 !important;
     font-family: MaisonNeue-Book !important;
     border: none;
+    text-transform: capitalize !important;
     width: 200px !important;
     margin: 0 !important;
+  }
+  .freeprivacypolicy-com---reset button:focus{
+    box-shadow: none !important;
   }
   .freeprivacypolicy-com---palette-light .cc-cp-body-tabs-item-link{
     width: 100% !important;
@@ -153,8 +109,15 @@
   body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
     display: none !important;
   }
+  
   .cc-pc-head-title-text img{
     width: 30px !important;
+  }
+  .cc-pc-head-title-text{
+    display: none;
+  }
+  .freeprivacypolicy-com---palette-light .cc-pc-head-lang select:focus{
+    box-shadow: none !important;
   }
   .cc-cp-foot-save{
     background: none !important;
@@ -163,6 +126,9 @@
     font-family: MaisonNeue-Book !important;
     font-size: 12px !important;
     margin: 0 !important;
+  }
+  .freeprivacypolicy-com---pc-dialog .cc-pc-head-lang{
+    justify-content: flex-start !important;
   }
   .cc-pc-container p,.cc-cp-body-tabs-item button{
     font-family: MaisonNeue-Book !important;
@@ -175,7 +141,7 @@
   
   .freeprivacypolicy-com---nb .cc-nb-main-container {
     padding: 1em 2em !important;
-    display: block !important;
+    display: flex !important;
     align-items: center !important;
   }
   .cookie-banner {
@@ -245,14 +211,15 @@
     z-index: 99999999;
   }
   .cc-nb-text-container{
-    width: 100%;
+   
     padding-right: 10px;
   }
   .cc-nb-buttons-container {
-    width: 100%;
+  
     display: flex !important;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-flow: column;
   }
   .cc-nb-buttons-container button {
     /* border-radius: 50px !important; */
@@ -269,10 +236,6 @@
   .freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---palette-dark .cc-nb-text{
     margin: 0 !important;
   }
-  #cookie-msg{
-    display: none;
-  }
-
   @media only screen and (max-width: 800px) {
     .cookie-banner .d-flex{
       flex-wrap: wrap;
