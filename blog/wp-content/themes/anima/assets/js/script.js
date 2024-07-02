@@ -33,7 +33,17 @@ $(function() {
   // Change the href attribute of the anchor tag
   $("#post-829 .continue-reading-link").attr("href", newUrl3);
   $("#post-829 a").attr("href", newUrl3);
+
+
+  var newUrl4 = "https://www.odessainc.com/handbook/cx-asset-finance";
+
+// Change the href attribute of the anchor tag
+$("#post-895 .continue-reading-link").attr("href", newUrl4);
+$("#post-895 a").attr("href", newUrl4);
+
 });
+
+
 
 function tabBx(i) {
     "block" == $("#" + i).css("display") || $(".mobileviewmenu").hide(), $("#" + i).show()
