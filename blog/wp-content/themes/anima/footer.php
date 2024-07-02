@@ -124,7 +124,7 @@ $(".s").attr("placeholder", "Search Blog");
 <script type="text/javascript" charset="UTF-8">
  document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"https://www.odessainc.com/","website_privacy_policy_url":"https://www.odessainc.com/privacy-policy"});
-$('#cc-nb-text').html("We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Agree', you consent to our use of cookies. For more details, see our <a href='https://dev.odessainc.com/cookie-notice' target='_blank'>Cookie Notice</a>.");
+$('#cc-nb-text').html("We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Agree', you consent to our use of cookies. <br>For more details, see our <a href='https://dev.odessainc.com/cookie-notice' target='_blank'>Cookie Notice</a>.");
 $(".cc-nb-okagree").html("Agree");
 $(".cc-nb-reject").html("Only Necessary");
 $(".cc-nb-changep").html("Adjust Preference");
