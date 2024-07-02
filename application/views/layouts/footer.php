@@ -131,7 +131,7 @@
 	<script type="text/javascript">
     $(document).ready(function(){
         $('.search-box').hide();
-$('.search').click(function() {
+       $('.search').click(function() {
     // $('.search-box').toggleClass("op");
     $('.search-box').toggleClass("ser");
     $(".close-search").toggleClass("op");
@@ -144,6 +144,8 @@ $(".close-search").click(function() {
     $(this).removeClass("op"); // Corrected this line
     $('.search-overlay').removeClass("op");
 });
+
+
 
 
 	$(".overlay").addClass('ov');
@@ -190,6 +192,26 @@ $(".close-search").click(function() {
 //     window.location.href="http://www.google.com";
 // };
 </script>
+<script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"https://www.odessainc.com/","website_privacy_policy_url":"https://www.odessainc.com/privacy-policy"});
+$('#cc-nb-text').html("We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Agree', you consent to our use of cookies. For more details, see our “Cookie Notice.”");
+});
+</script>
+
+<!-- Cookie-data -->
+<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-L68NYPCSGJ"></script>
+<script type="text/plain" data-cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L68NYPCSGJ');
+</script>
+<!-- end of Cookie-data-->
+
+<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
 </body>
 
 </html>
