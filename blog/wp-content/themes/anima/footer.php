@@ -136,7 +136,7 @@ $(window).on('load', function() {
 
 </script>
 
-// <!-- Cookie-data -->
+<!-- // Cookie-data -->
 <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-L68NYPCSGJ"></script>
 <script type="text/plain" data-cookie-consent="tracking">
   window.dataLayer = window.dataLayer || [];
@@ -145,9 +145,9 @@ $(window).on('load', function() {
 
   gtag('config', 'G-L68NYPCSGJ');
 </script>
-// <!-- end of Cookie-data-->
+<!-- // end of Cookie-data -->
 
-<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
+<!-- <noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript> -->
 
 
 <script src="<?php bloginfo('template_url'); ?>/assets/js/script.js"></script>

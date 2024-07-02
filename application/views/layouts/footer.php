@@ -219,7 +219,7 @@ $(window).on('load', function() {
 </script>
 <!-- end of Cookie-data-->
 
-<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
+<!-- <noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript> -->
 </body>
 
 </html>

@@ -44,59 +44,7 @@
 			'acceptButton': 'Got It!',
 		});
 	</script>
-	<style>
-		#cookie-msg {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			bottom: -100%;
-			width: 100%;
-			text-align: center;
-			padding: 20px;
-			background-color: rgb(137, 212, 225);
-			transition: all 0.3s ease-out 0s;
-			color: rgb(42, 45, 54);
-			font-family: MaisonNeue-Book;
-			font-size: 15px;
-			z-index: 99999;
-		}
-		
-		#cookie-msg span a {
-			color: rgb(42, 45, 54);
-			text-decoration: underline;
-		}
 
-		#cookie-msg a.btn-aceptar {
-			color: rgb(42, 45, 54);
-			text-decoration: none;
-			padding: 8px 0px;
-			margin: 15px 0 0 0;
-			border: 2px solid rgb(0, 117, 162);
-			border-radius: 0px;
-			background-color: transparent;
-			font-size: 15px;
-			min-width: 120px;
-			display: inline-block;
-		}
-
-		@media only screen and (min-width: 767px) {
-			#cookie-msg {
-				flex-direction: row;
-				font-size: 16px;
-			}
-			
-			#cookie-msg a.btn-aceptar {
-				margin: 0 0 0 20px;
-				min-width: 150px;
-			}
-		}
-		.clearfix .service {
-			color: black !important;
-			font-size: 13px !important;
-		}
-	</style>
 <?php
 	cryout_header_hook();
 	wp_head();
