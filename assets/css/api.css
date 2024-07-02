@@ -9,12 +9,9 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
  #bodyId footer {
     display: none;
 }
-.handbook .navbar-brand>img{
-    width: 350px;
-}
 #bodyId::-webkit-scrollbar {
-        /* display: none;
-        -webkit-appearance: none; */
+        display: none;
+        -webkit-appearance: none;
 }
 .ebook .know-more:after{
     display:none
@@ -133,7 +130,7 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     top: 25%;
     left: 0;
     color: #FFF; 
-font-family:MaisonNeue-Bold;
+    font-family:MaisonNeue-Bold;
     font-size: 16px;
     font-style: normal;
     line-height: normal;
@@ -148,6 +145,7 @@ font-family:MaisonNeue-Bold;
 .gradient{
     position: absolute;
     z-index: 0;
+    opacity: 0.1;
 }
 .api-banner{
     width: 100%;
@@ -391,7 +389,7 @@ line-height: normal;
 }
 
 .section-products #product-1 .part-1::before {
-    background: url("https://www.odessainc.com/blog/wp-content/uploads/blog_header-B-1-430x350-1.png") no-repeat center;
+    background: url("https://www.odessainc.com/blog/wp-content/uploads/AI-Risks-Blog-Header-1-430x350.png") no-repeat center;
     background-size: cover;
 }
 .next-gen .section-products #product-1 .part-1::before {
@@ -650,9 +648,6 @@ overflow: hidden;
     .change-para{
         max-width: 100%;
     }
-    .flex .form-group{
-        width: 49%;
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -660,9 +655,7 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
-.handbook .key-takeaways {
-    max-width: 100%;
-}
+
 .get-copy{
     height: auto;
 }
