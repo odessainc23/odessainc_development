@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: center !important;
   }
-  .amp-mode-mouse .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
+  .blog .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
     display: none !important;
   }
   .cc-pc-head-title-text img{
@@ -238,7 +238,7 @@
   .cookie-banner .right-cookie {
     width: 100%;
   }
-  .amp-mode-touch .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
+  .blog .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
     display: none !important;
   }
   .cc-nb-buttons-container,.cc-nb-text-container {
