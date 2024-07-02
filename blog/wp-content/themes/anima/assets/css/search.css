@@ -3,3 +3,254 @@
 .ss360-search-term-highlight{
     background-color: transparent !important;
  }
+
+
+ 
+/* cookie msg */
+.freeprivacypolicy-com---nb-headline {
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0px !important;
+    max-width: 100%;
+    position: fixed !important;
+    right: 0;
+    left: 0em !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .cc-nb-buttons-container{
+   
+  }
+  .freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---nb .cc-nb-text {
+    color:#2a2d36 !important;
+    font-family: MaisonNeue-Book !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    padding-bottom: 20px !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-nb-okagree:focus{
+    box-shadow: none !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-nb-title{
+    color:#2a2d36 !important;
+    font-family: MaisonNeue-Book !important;
+    font-size: 20px !important;
+  }
+  .cc-nb-title-container{
+    display:none !important;
+  }
+  .cc-nb-buttons-container button{
+    background: none !important;
+    border: 2px solid #0075a2 !important;
+    color: #2a2d36 !important;
+    font-family: MaisonNeue-Book !important;
+    font-size: 12px !important;
+  }
+  .cc-pc-head-close{
+    display: none !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-pc-head-lang select{
+    width: 150px !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-pc-head-title-headline{
+    font-size: 20px !important;
+    font-family: MaisonNeue-Book !important;
+    color: #2a2d36 !important;
+    padding-top:5px !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-cp-body-tabs-item{
+    font-family: MaisonNeue-Book !important;
+  }
+  .freeprivacypolicy-com---pc-dialog input[type=checkbox].cc-custom-checkbox:checked+label:before {
+    background: #ff495c !important;
+  }
+  .freeprivacypolicy-com---pc-dialog input[type=checkbox].cc-custom-checkbox+label,.cc-pc-head-lang-select{
+    font-family: MaisonNeue-Book !important;
+    color: #2a2d36 !important;
+  }
+  .freeprivacypolicy-com---reset button {
+    border-radius: 2px;
+    padding: 8px 0 !important;
+    margin: 15px 0 0;
+    border: 2px solid #0075a2;
+    border-radius: 0;
+    font-size: 15px !important;
+    outline: none;
+    background: #dcdae5;
+    color: #2a2d36 !important;
+    cursor: pointer;
+    font-weight: 400 !important;
+    font-family: MaisonNeue-Book !important;
+    border: none;
+    width: 200px !important;
+    margin: 0 !important;
+  }
+  .freeprivacypolicy-com---palette-light .cc-cp-body-tabs-item-link{
+    width: 100% !important;
+      padding: 10px !important;
+      text-transform: capitalize;
+  }
+  .freeprivacypolicy-com---palette-light .cc-cp-foot {
+    display: flex !important;
+    background:none !important;
+    padding: 20px 0 !important;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .amp-mode-mouse .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
+    display: none !important;
+  }
+  .cc-pc-head-title-text img{
+    width: 30px !important;
+  }
+  .cc-cp-foot-save{
+    background: none !important;
+    border: 2px solid #0075a2 !important;
+    color: #2a2d36 !important;
+    font-family: MaisonNeue-Book !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+  }
+  .cc-pc-container p,.cc-cp-body-tabs-item button{
+    font-family: MaisonNeue-Book !important;
+    font-size: 14px !important;
+  }
+  .freeprivacypolicy-com---palette-light.freeprivacypolicy-com---nb,.freeprivacypolicy-com---palette-dark.freeprivacypolicy-com---nb{
+    background-color: #89d4e1 !important;
+    transition: .3s ease-out !important;
+  }
+  
+  .freeprivacypolicy-com---nb .cc-nb-main-container {
+    padding: 1em 2em !important;
+    display: block !important;
+    align-items: center !important;
+  }
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #89d4e1;
+    transition: .3s ease-out;
+    color: #2a2d36;
+    width:100%;
+    z-index: 99999;
+  }
+  .cookie-banner p{
+    font-size: 16px;
+  }
+  .cookie-banner .d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #preferences-modal .d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cookie-banner button, .preferences-modal button{
+    margin: 0px 0 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    color: #fff !important;
+    background: #ff495c;
+    border-color: #ff495c;
+    border-radius: 0;
+  }
+  .preferences-modal button{
+    width: auto;
+    margin: 0;
+  }
+  .preferences-modal label {
+    max-width: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  .cookie-banner button:last-child{
+    margin:0;
+  }
+  .cookie-banner .right-cookie{
+    width:15%;
+  }
+  .cookie-banner .left-cookie{
+    width:85%;
+  }
+  .preferences-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+  }
+  .cc-nb-text-container{
+    width: 100%;
+    padding-right: 10px;
+  }
+  .cc-nb-buttons-container {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .cc-nb-buttons-container button {
+    /* border-radius: 50px !important; */
+  }
+  .preferences-content {
+    background-color: #fff;
+    padding:1em;
+    text-align: center;
+    font-size: 16px;
+  }
+  .preferences-content input{
+    width: auto;
+  }
+  .freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---palette-dark .cc-nb-text{
+    margin: 0 !important;
+  }
+  #cookie-msg{
+    display: none;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .cookie-banner .d-flex{
+      flex-wrap: wrap;
+    }
+    .cookie-banner .left-cookie {
+      width: 100%;
+  }
+  .freeprivacypolicy-com---reset button{
+    width: 100% !important;
+    padding: 8px 10px !important;
+  }
+  .freeprivacypolicy-com---nb .cc-nb-main-container{
+    flex-wrap: wrap !important;
+      justify-content: center !important;
+  }
+  .cookie-banner .right-cookie {
+    width: 100%;
+  }
+  .amp-mode-touch .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
+    display: none !important;
+  }
+  .cc-nb-buttons-container,.cc-nb-text-container {
+    width: 100%;
+    display: block !important;
+    margin: 10px 0;
+    text-align: center;}
+    .freeprivacypolicy-com---nb-headline {
+      width:100% !important
+  
+    }
+    .cc-nb-buttons-container button{
+      width: auto;
+    }
+  }
