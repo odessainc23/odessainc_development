@@ -120,6 +120,34 @@ $(".s").attr("placeholder", "Search Blog");
 //     window.location.href="http://www.google.com";
 // };
 </script>
+<script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+ document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"https://www.odessainc.com/","website_privacy_policy_url":"https://www.odessainc.com/privacy-policy"});
+$('#cc-nb-text').html("We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Agree', you consent to our use of cookies. For more details, see our <a href='https://dev.odessainc.com/cookie-notice' target='_blank'>Cookie Notice</a>.");
+$(".cc-nb-okagree").html("Agree");
+$(".cc-nb-reject").html("Only Necessary");
+$(".cc-nb-changep").html("Adjust Preference");
+// $(".freeprivacypolicy-com---pc-overlay .cc-pc-head-title-text").html("<img src='https://www.odessainc.com/favicon.ico' alt='Cookie Notice'>");
+});
+$(window).on('load', function() {
+    $(".freeprivacypolicy-com---pc-overlay .cc-pc-head-title-text").html("<img src='https://www.odessainc.com/favicon.ico' alt='Cookie Notice'>");
+});
+
+</script>
+
+// <!-- Cookie-data -->
+<script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-L68NYPCSGJ"></script>
+<script type="text/plain" data-cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L68NYPCSGJ');
+</script>
+// <!-- end of Cookie-data-->
+
+<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
 
 
 <script src="<?php bloginfo('template_url'); ?>/assets/js/script.js"></script>
