@@ -4386,8 +4386,12 @@ button {
   font-weight: 400 !important;
   font-family: MaisonNeue-Book !important;
   border: none;
+  text-transform: capitalize !important;
   width: 200px !important;
   margin: 0 !important;
+}
+.freeprivacypolicy-com---reset button:focus{
+  box-shadow: none !important;
 }
 .freeprivacypolicy-com---palette-light .cc-cp-body-tabs-item-link{
   width: 100% !important;
