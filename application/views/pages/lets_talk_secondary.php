@@ -451,30 +451,30 @@
 </script> 
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
-   $(document).ready(function() {
-    // Add method to restrict free email addresses
+  $(document).ready(function() {
+    // Custom validator for restricting free email addresses
     $.validator.addMethod("myusername", function(value, element) {
-        return /^([\w-\.]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!aol\.com)(?!hotmail\.co\.uk)(?!hotmail\.fr)(?!msn\.com)(?!yahoo\.fr)(?!wanadoo\.fr)(?!orange\.fr)(?!comcast\.net)(?!yahoo\.co\.uk)(?!yahoo\.com\.br)(?!yahoo\.co\.in)(?!live\.com)(?!rediffmail\.com)(?!free\.fr)(?!gmx\.de)(?!web\.de)(?!yandex\.ru)(?!ymail\.com)(?!libero\.it)(?!outlook\.com)(?!uol\.com\.br)(?!bol\.com\.br)(?!mail\.ru)(?!cox\.net)(?!hotmail\.it)(?!sbcglobal\.net)(?!sfr\.fr)(?!live\.fr)(?!verizon\.net)(?!live\.co\.uk)(?!googlemail\.com)(?!yahoo\.es)(?!ig\.com\.br)(?!live\.nl)(?!bigpond\.com)(?!terra\.com\.br)(?!yahoo\.it)(?!neuf\.fr)(?!yahoo\.de)(?!alice\.it)(?!rocketmail\.com)(?!att\.net)(?!laposte\.net)(?!facebook\.com)(?!bellsouth\.net)(?!yahoo\.in)(?!hotmail\.es)(?!charter\.net)(?!yahoo\.ca)(?!yahoo\.com\.au)(?!rambler\.ru)(?!hotmail\.de)(?!tiscali\.it)(?!shaw\.ca)(?!yahoo\.co\.jp)(?!sky\.com)(?!earthlink\.net)(?!optonline\.net)(?!freenet\.de)(?!t-online\.de)(?!aliceadsl\.fr)(?!virgilio\.it)(?!home\.nl)(?!qq\.com)(?!telenet\.be)(?!me\.com)(?!yahoo\.com\.ar)(?!tiscali\.co\.uk)(?!yahoo\.com\.mx)(?!voila\.fr)(?!gmx\.net)(?!mail\.com)(?!planet\.nl)(?!tin\.it)(?!live\.it)(?!ntlworld\.com)(?!arcor\.de)(?!yahoo\.co\.id)(?!frontiernet\.net)(?!hetnet\.nl)(?!live\.com\.au)(?!yahoo\.com\.sg)(?!zonnet\.nl)(?!club-internet\.fr)(?!juno\.com)(?!optusnet\.com\.au)(?!blueyonder\.co\.uk)(?!bluewin\.ch)(?!skynet\.be)(?!sympatico\.ca)(?!windstream\.net)(?!mac\.com)(?!centurytel\.net)(?!chello\.nl)(?!live\.ca)(?!aim\.com)(?!bigpond\.net\.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+        return /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
     }, 'Free email addresses are not allowed.');
 
-    // Add method to allow only letters
+    // Custom validator for letters only
     $.validator.addMethod("lettersonly", function(value, element) {
         return this.optional(element) || /^[a-z\s]+$/i.test(value);
     }, "Please enter letters only.");
 
-    // Add method to disallow empty spaces
+    // Custom validator to disallow spaces
     $.validator.addMethod("noSpace", function(value, element) {
-        return value.trim().length !== 0;
+        return value == '' || value.trim().length != 0;
     }, "No spaces allowed! Please don't leave it empty.");
 
-    // Add method for mobile number validation
+    // Custom validator for mobile numbers
     $.validator.addMethod("mobile", function(phone_number, element) {
         phone_number = phone_number.replace(/\s+/g, "");
         return this.optional(element) || (phone_number.length >= 6 && phone_number.length <= 15 && phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s*,?$)\d{10}\s*,?$/));
-    }, "Mobile number should be of 6 to 15 digits.");
+    }, "Mobile number should be between 6 to 15 digits.");
 
-    // Validate the primary form
-    $("#primaryForm").validate({
+    // Form validation rules
+    $("#secondaryForm").validate({
         rules: {
             "first-name": {
                 required: true,
@@ -511,32 +511,32 @@
         },
         messages: {
             "first-name": {
-                required: "",
-                maxlength: ""
+                required: "Please enter your first name",
+                maxlength: "First name cannot exceed 50 characters"
             },
             "last-name": {
-                required: "",
-                maxlength: ""
+                required: "Please enter your last name",
+                maxlength: "Last name cannot exceed 50 characters"
             },
             email: {
-                required: ""
+                required: "Please enter your email address",
             },
             phone: {
-                required: "",
-                minlength: "",
-                maxlength: ""
+                required: "Please enter your phone number",
+                minlength: "Phone number should be at least 6 digits",
+                maxlength: "Phone number should not exceed 15 digits"
             },
             "job-title": {
-                required: ""
+                required: "Please enter your job title"
             },
             company: {
-                required: ""
+                required: "Please enter your company name"
             },
             "software-used": {
-                required: ""
+                required: "Please enter the software you use"
             },
             country: {
-                required: ""
+                required: "Please select your country"
             }
         },
         submitHandler: function(form) {
@@ -551,7 +551,7 @@
                 }
             } else {
                 if (honeypot_val == '') {
-                    $("#secondaryForm").submit();
+                    $("#primaryForm").submit();
                     return true;
                 } else {
                     $(".capt").removeClass("error");
@@ -565,8 +565,7 @@
     $('form').on('submit', function(event) {
         const countrySelect = document.getElementById('country');
         if (countrySelect.value === '') {
-			$("#country").addClass("error")
-            // alert('Please select a country.');
+			$("#country").addClass("error");
             event.preventDefault();
         }
     });
@@ -577,8 +576,8 @@
         if (honeypot_val == '') {
             // Check if the disclaimer checkbox is checked
             if ($('#agree').is(':checked')) {
-                $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-                $("#primaryForm").submit();
+                $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+                $("#secondaryForm").submit();
                 $('.box').hide();
                 return true;
             } else {
@@ -603,7 +602,7 @@
     });
 
     // Prevent cut, copy, paste on form inputs
-    $('#primaryForm input').bind("cut copy paste", function(e) {
+    $('#secondaryForm input').bind("cut copy paste", function(e) {
         e.preventDefault();
     });
 
@@ -629,6 +628,7 @@ function isNumberKey(evt) {
     }
     return true;
 }
+
 </script>
 <style amp-custom>
    @import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
