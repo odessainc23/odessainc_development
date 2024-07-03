@@ -4544,6 +4544,9 @@ body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button {
 .preferences-content input{
   width: auto;
 }
+.freeprivacypolicy-com---pc-dialog .cc-cp-foot-save{
+  width: 160px  !important;
+}
 .freeprivacypolicy-com---palette-light .cc-nb-text,.freeprivacypolicy-com---palette-dark .cc-nb-text{
   margin: 0 !important;
 }
