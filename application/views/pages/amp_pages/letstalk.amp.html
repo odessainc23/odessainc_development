@@ -1,669 +1,698 @@
+
 <style amp-custom>
-    	label[for="honeypot"], #honeypot {
-    	  display: none;
-    	  visibility: hidden;
-    	}
-    	.i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
-            display: block;
-            height:auto;
-           min-height: auto;
-           max-height: initial;
-           min-width:auto
-        }
-    	#page_number{
-    		color:red;
-    	}
-    	.capt{
-    		border-radius: 4px;
-    		border: 2px solid transparent;
-    	}
-    	.capt.error{
-    		border: 2px solid #ff495c;
-    		width: 306px;
-    		padding: 0;
-    		height: 80px;
-    	}
-    	.letstalkSecondryform .secnformCon textarea.form-control{
-    		height:92px;
-    	}
-    	.customerInnerTitle{
-    		font-size: 1.5rem;
-    	}
-    		
-    	@media only screen and (max-width: 1200px) {
-    		.g-recaptcha, #rc-imageselect{
-    			transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
-    		}
-    		.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
-    			border: 0 !important;
-    			box-shadow:none !important;
-    			background:none !important
-    		}	
-    	}
-</style>
-<div id="wrapper">
-    <div class="">
-        <!--Let's Talk Form Section start here-->
-        <section class="letstalkformSection">
-            <div class="container clearfix">
-                <div class="letstalkformCon">
-                    <div class="row clearfix">
-                        <div class="col-sm-6 col-md-7">
-                            <div class="letstalkinfobox">
-                                <p>Our teams are here to help you in your digital transformation. Fill out the form to the right or call us so we can: </p>
-                                <ul>
-                                    <li><span></span>Find the right solution for your asset finance business</li>
-                                    <li><span></span>Explain options for licensing the Odessa Platform</li>
-                                    <li><span></span>Connect you with helpful resources</li>
-                                </ul>
-                                <div class="letsAddress">
-                                    <div class="addrow">
-                                        <div class="counnm">North America</div>
-                                        <div class="counnum">+1 (215) 231 9800</div>
-                                    </div>
-                                    <div class="addrow">
-                                        <div class="counnm">Europe</div>
-                                        <div class="counnum">+33 (0)1 8824 11 85</div>
-                                    </div>
-                                    <div class="addrow">
-                                        <div class="counnm">UK </div>
-                                        <div class="counnum">+44 (0)20 4579 9595</div>
-                                    </div>
-                                    <div class="addrow">
-                                        <div class="counnm">APAC</div>
-                                        <div class="counnum">+91 80 4146 4321</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-5">
-                            <div class="letstalkform">
-                               
-                                <form id="primaryForm" method="post" autocomplete="off">
-                                    <label for="honeypot">Honeypot </label>
-                                    <input id="honeypot" name="honeypot" size="40" type="text" />
-                                    <br>
-                                    <div class="form-group">
-                                        <input class="form-control" name="first-name" id="first_name" type="text" placeholder="First Name" required/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="last-name" id="last_name" type="text" placeholder="Last Name" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="job-title" type="text" id="job_title" placeholder="Job Title" required/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="email" type="text" id="email" placeholder="Business Email" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="company" type="text" id="company" placeholder="Company" required/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="phone" type="text" placeholder="Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
-                                    </div>
-                                    <div class="form-group">
-                                        <select name="country" class="select selectpicker" >
-                                            <option value=""></option>
-                                            <option value="39461" selected="selected">Country</option>
-                                            <option value="United States">United States</option>
-                                            <option value="Canada">Canada</option>
-                                            <option value="Afghanistan">Afghanistan</option>
-                                            <option value="Albania">Albania</option>
-                                            <option value="Algeria">Algeria</option>
-                                            <option value="American Samoa">American Samoa</option>
-                                            <option value="Andorra">Andorra</option>
-                                            <option value="Angola">Angola</option>
-                                            <option value="Anguilla">Anguilla</option>
-                                            <option value="Antarctica">Antarctica</option>
-                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                            <option value="Argentina">Argentina</option>
-                                            <option value="Armenia">Armenia</option>
-                                            <option value="Aruba">Aruba</option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Austria">Austria</option>
-                                            <option value="Azerbaijan">Azerbaijan</option>
-                                            <option value="Bahamas">Bahamas</option>
-                                            <option value="Bahrain">Bahrain</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Barbados">Barbados</option>
-                                            <option value="Belarus">Belarus</option>
-                                            <option value="Belgium">Belgium</option>
-                                            <option value="Belize">Belize</option>
-                                            <option value="Benin">Benin</option>
-                                            <option value="Bermuda">Bermuda</option>
-                                            <option value="Bhutan">Bhutan</option>
-                                            <option value="Bolivia">Bolivia</option>
-                                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                            <option value="Botswana">Botswana</option>
-                                            <option value="Brazil">Brazil</option>
-                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                            <option value="British Virgin Islands">British Virgin Islands</option>
-                                            <option value="Brunei">Brunei</option>
-                                            <option value="Bulgaria">Bulgaria</option>
-                                            <option value="Burkina Faso">Burkina Faso</option>
-                                            <option value="Burundi">Burundi</option>
-                                            <option value="Cambodia">Cambodia</option>
-                                            <option value="Cameroon">Cameroon</option>
-                                            <option value="Cape Verde">Cape Verde</option>
-                                            <option value="Cayman Islands">Cayman Islands</option>
-                                            <option value="Central African Republic">Central African Republic</option>
-                                            <option value="Chad">Chad</option>
-                                            <option value="Chile">Chile</option>
-                                            <option value="China">China</option>
-                                            <option value="Christmas Island">Christmas Island</option>
-                                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                            <option value="Colombia">Colombia</option>
-                                            <option value="Comoros">Comoros</option>
-                                            <option value="Congo">Congo</option>
-                                            <option value="Cook Islands">Cook Islands</option>
-                                            <option value="Costa Rica">Costa Rica</option>
-                                            <option value="Croatia">Croatia</option>
-                                            <option value="Cuba">Cuba</option>
-                                            <option value="Curaçao">Curaçao</option>
-                                            <option value="Cyprus">Cyprus</option>
-                                            <option value="Czech Republic">Czech Republic</option>
-                                            <option value="Côte d’Ivoire">Côte d’Ivoire</option>
-                                            <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
-                                            <option value="Denmark">Denmark</option>
-                                            <option value="Djibouti">Djibouti</option>
-                                            <option value="Dominica">Dominica</option>
-                                            <option value="Dominican Republic">Dominican Republic</option>
-                                            <option value="Ecuador">Ecuador</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="El Salvador">El Salvador</option>
-                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                            <option value="Eritrea">Eritrea</option>
-                                            <option value="Estonia">Estonia</option>
-                                            <option value="Ethiopia">Ethiopia</option>
-                                            <option value="Falkland Islands">Falkland Islands</option>
-                                            <option value="Faroe Islands">Faroe Islands</option>
-                                            <option value="Fiji">Fiji</option>
-                                            <option value="Finland">Finland</option>
-                                            <option value="France">France</option>
-                                            <option value="French Guiana">French Guiana</option>
-                                            <option value="French Polynesia">French Polynesia</option>
-                                            <option value="French Southern Territories">French Southern Territories</option>
-                                            <option value="Gabon">Gabon</option>
-                                            <option value="Gambia">Gambia</option>
-                                            <option value="Georgia">Georgia</option>
-                                            <option value="Germany">Germany</option>
-                                            <option value="Ghana">Ghana</option>
-                                            <option value="Gibraltar">Gibraltar</option>
-                                            <option value="Greece">Greece</option>
-                                            <option value="Greenland">Greenland</option>
-                                            <option value="Grenada">Grenada</option>
-                                            <option value="Guadeloupe">Guadeloupe</option>
-                                            <option value="Guam">Guam</option>
-                                            <option value="Guatemala">Guatemala</option>
-                                            <option value="Guernsey">Guernsey</option>
-                                            <option value="Guinea">Guinea</option>
-                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
-                                            <option value="Guyana">Guyana</option>
-                                            <option value="Haiti">Haiti</option>
-                                            <option value="Honduras">Honduras</option>
-                                            <option value="Hong Kong S.A.R., China">Hong Kong S.A.R., China</option>
-                                            <option value="Hungary">Hungary</option>
-                                            <option value="Iceland">Iceland</option>
-                                            <option value="India">India</option>
-                                            <option value="Indonesia">Indonesia</option>
-                                            <option value="Iran">Iran</option>
-                                            <option value="Iraq">Iraq</option>
-                                            <option value="Ireland">Ireland</option>
-                                            <option value="Isle of Man">Isle of Man</option>
-                                            <option value="Israel">Israel</option>
-                                            <option value="Italy">Italy</option>
-                                            <option value="Jamaica">Jamaica</option>
-                                            <option value="Japan">Japan</option>
-                                            <option value="Jersey">Jersey</option>
-                                            <option value="Jordan">Jordan</option>
-                                            <option value="Kazakhstan">Kazakhstan</option>
-                                            <option value="Kenya">Kenya</option>
-                                            <option value="Kiribati">Kiribati</option>
-                                            <option value="Kuwait">Kuwait</option>
-                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                            <option value="Laos">Laos</option>
-                                            <option value="Latvia">Latvia</option>
-                                            <option value="Lebanon">Lebanon</option>
-                                            <option value="Lesotho">Lesotho</option>
-                                            <option value="Liberia">Liberia</option>
-                                            <option value="Libya">Libya</option>
-                                            <option value="Liechtenstein">Liechtenstein</option>
-                                            <option value="Lithuania">Lithuania</option>
-                                            <option value="Luxembourg">Luxembourg</option>
-                                            <option value="Macao S.A.R., China">Macao S.A.R., China</option>
-                                            <option value="Macedonia">Macedonia</option>
-                                            <option value="Madagascar">Madagascar</option>
-                                            <option value="Malawi">Malawi</option>
-                                            <option value="Malaysia">Malaysia</option>
-                                            <option value="Maldives">Maldives</option>
-                                            <option value="Mali">Mali</option>
-                                            <option value="Malta">Malta</option>
-                                            <option value="Marshall Islands">Marshall Islands</option>
-                                            <option value="Martinique">Martinique</option>
-                                            <option value="Mauritania">Mauritania</option>
-                                            <option value="Mauritius">Mauritius</option>
-                                            <option value="Mayotte">Mayotte</option>
-                                            <option value="Mexico">Mexico</option>
-                                            <option value="Micronesia">Micronesia</option>
-                                            <option value="Moldova">Moldova</option>
-                                            <option value="Monaco">Monaco</option>
-                                            <option value="Mongolia">Mongolia</option>
-                                            <option value="Montenegro">Montenegro</option>
-                                            <option value="Montserrat">Montserrat</option>
-                                            <option value="Morocco">Morocco</option>
-                                            <option value="Mozambique">Mozambique</option>
-                                            <option value="Myanmar">Myanmar</option>
-                                            <option value="Namibia">Namibia</option>
-                                            <option value="Nauru">Nauru</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Netherlands">Netherlands</option>
-                                            <option value="New Caledonia">New Caledonia</option>
-                                            <option value="New Zealand">New Zealand</option>
-                                            <option value="Nicaragua">Nicaragua</option>
-                                            <option value="Niger">Niger</option>
-                                            <option value="Nigeria">Nigeria</option>
-                                            <option value="Niue">Niue</option>
-                                            <option value="Norfolk Island">Norfolk Island</option>
-                                            <option value="North Korea">North Korea</option>
-                                            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                            <option value="Norway">Norway</option>
-                                            <option value="Oman">Oman</option>
-                                            <option value="Pakistan">Pakistan</option>
-                                            <option value="Palau">Palau</option>
-                                            <option value="Palestinian Territory">Palestinian Territory</option>
-                                            <option value="Panama">Panama</option>
-                                            <option value="Papua New Guinea">Papua New Guinea</option>
-                                            <option value="Paraguay">Paraguay</option>
-                                            <option value="Peru">Peru</option>
-                                            <option value="Philippines">Philippines</option>
-                                            <option value="Pitcairn">Pitcairn</option>
-                                            <option value="Poland">Poland</option>
-                                            <option value="Portugal">Portugal</option>
-                                            <option value="Puerto Rico">Puerto Rico</option>
-                                            <option value="Qatar">Qatar</option>
-                                            <option value="Romania">Romania</option>
-                                            <option value="Russia">Russia</option>
-                                            <option value="Rwanda">Rwanda</option>
-                                            <option value="Réunion">Réunion</option>
-                                            <option value="Saint Barthélemy">Saint Barthélemy</option>
-                                            <option value="Saint Helena">Saint Helena</option>
-                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                            <option value="Saint Lucia">Saint Lucia</option>
-                                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-                                            <option value="Samoa">Samoa</option>
-                                            <option value="San Marino">San Marino</option>
-                                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                            <option value="Saudi Arabia">Saudi Arabia</option>
-                                            <option value="Senegal">Senegal</option>
-                                            <option value="Serbia">Serbia</option>
-                                            <option value="Seychelles">Seychelles</option>
-                                            <option value="Sierra Leone">Sierra Leone</option>
-                                            <option value="Singapore">Singapore</option>
-                                            <option value="Slovakia">Slovakia</option>
-                                            <option value="Slovenia">Slovenia</option>
-                                            <option value="Solomon Islands">Solomon Islands</option>
-                                            <option value="Somalia">Somalia</option>
-                                            <option value="South Africa">South Africa</option>
-                                            <option value="South Korea">South Korea</option>
-                                            <option value="South Sudan">South Sudan</option>
-                                            <option value="Spain">Spain</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                            <option value="Sudan">Sudan</option>
-                                            <option value="Suriname">Suriname</option>
-                                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                            <option value="Swaziland">Swaziland</option>
-                                            <option value="Sweden">Sweden</option>
-                                            <option value="Switzerland">Switzerland</option>
-                                            <option value="Syria">Syria</option>
-                                            <option value="Taiwan">Taiwan</option>
-                                            <option value="Tajikistan">Tajikistan</option>
-                                            <option value="Tanzania">Tanzania</option>
-                                            <option value="Thailand">Thailand</option>
-                                            <option value="Timor-Leste">Timor-Leste</option>
-                                            <option value="Togo">Togo</option>
-                                            <option value="Tokelau">Tokelau</option>
-                                            <option value="Tonga">Tonga</option>
-                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                            <option value="Tunisia">Tunisia</option>
-                                            <option value="Turkey">Turkey</option>
-                                            <option value="Turkmenistan">Turkmenistan</option>
-                                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                            <option value="Tuvalu">Tuvalu</option>
-                                            <option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
-                                            <option value="Uganda">Uganda</option>
-                                            <option value="Ukraine">Ukraine</option>
-                                            <option value="United Arab Emirates">United Arab Emirates</option>
-                                            <option value="United Kingdom">United Kingdom</option>
-                                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                                            <option value="Uruguay">Uruguay</option>
-                                            <option value="Uzbekistan">Uzbekistan</option>
-                                            <option value="Vanuatu">Vanuatu</option>
-                                            <option value="Vatican">Vatican</option>
-                                            <option value="Venezuela">Venezuela</option>
-                                            <option value="Viet Nam">Viet Nam</option>
-                                            <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                            <option value="Western Sahara">Western Sahara</option>
-                                            <option value="Yemen">Yemen</option>
-                                            <option value="Zambia">Zambia</option>
-                                            <option value="Zimbabwe">Zimbabwe</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="referring-source" type="text" id="referring-source" placeholder="How did you hear about us?" required/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="software-used" placeholder="What software are you currently using?" required id="software-used" />
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" placeholder="Message" id="message"></textarea>
-                                    </div>
-
-                                    <div class="capt">
-                                        <div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit'></div>
-                                    </div>
-                                    <div class="disclaimer">
-                                        By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I can
-                                        withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
-                                        <label for="agree">
-                                            <span class="box"></span>
-                                            <input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
-                                        </label>
-                                    </div>
-
-                                    <div class="clearfix">
-                                        <button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Let’s Talk</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Let's Talk Form Section End here-->
-
-        <!--Company Office Ban Start Here-->
-        <div class="letstalkban"></div>
-        <!--Company Office Ban End Here-->
-
-        <!--Already Customer Section Start Here-->
-        <div class="alreadyCustomerwrap">
-            <div class="container clearfix">
-                <h1 class="text-center">Already a customer?</h1>
-                <div class="customerboxrow">
-                    <div class="row equalHMWrap eqWrap clearfix">
-                        <div class="col-sm-6 customerbox">
-                            <div class="cusconinfo">
-                                <div class="customericonrw">
-                                    <div class="customericon"></div>
-                                </div>
-                                <h2 class="customerInnerTitle">Customer Support</h2>
-                                <div class="boxnormaltxt">For help with your account and ensuring your experience is running smoothly, reach out to our global customer success teams.</div>
-                                <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://odessainc.force.com/customer/">Chat with support</a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 customerbox">
-                            <div class="cusconinfo">
-                                <div class="customericonrw">
-                                    <div class="customericon community"></div>
-                                </div>
-                                <h2 class="customerInnerTitle">Customer Community</h2>
-                                <div class="boxnormaltxt">Catch up on our latest release notes packed with new features and functionality, tap into our knowledge base, and join in on the conversation with Odessa users!
-                                </div>
-                                <div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://odessainc.force.com/customer/">Check it out</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="countryAddressSection">
-                    <div class="bluedotsview"></div>
-                    <div class="row clearfix">
-                        <div class="col-sm-7 col-md-6">
-                            <!--Office Headquarters Section-->
-                            <div class="countryAddinfo">
-                                <div class="headingrows"> <span class="customericon programs"></span>
-                                    <h3>Learn about our Alliance Partner Programs</h3>
-                                </div>
-                                <p>Interested in partnering with Odessa? <span>Let’s chat about what it
+	/* hide that honeypot, robots will still see it */
+	label[for="honeypot"], #honeypot {
+	  display: none;
+	  visibility: hidden;
+	}
+	.i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
+        display: block;
+        height:auto;
+       min-height: auto;
+       max-height: initial;
+       min-width:auto
+    }
+	#page_number{
+		color:red;
+	}
+	.capt{
+		border-radius: 4px;
+		border: 2px solid transparent;
+	}
+	.capt.error{
+		border: 2px solid #ff495c;
+		width: 306px;
+		padding: 0;
+		height: 80px;
+	}
+	.letstalkSecondryform .secnformCon textarea.form-control{
+		height:92px;
+	}
+	.customerInnerTitle{
+		font-size: 1.5rem;
+	}
+		
+	@media only screen and (max-width: 1200px) {
+		.g-recaptcha, #rc-imageselect{
+			transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
+		}
+		.rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact{
+			border: 0 !important;
+			box-shadow:none !important;
+			background:none !important
+		}	
+	}
+	
+	</style>
+	<div id="wrapper"> 
+		<div class="">
+		<!--Let's Talk Form Section start here-->
+	<section class="letstalkformSection">
+			<div class="container clearfix">
+				<div class="letstalkformCon">
+					<div class="row clearfix">
+						<div class="col-sm-6 col-md-7">
+							<div class="letstalkinfobox">
+								<p>Our teams are here to help you in your digital transformation. Fill
+									out the form to the right or call us so we can: </p>
+								<ul>
+									<li><span></span>Find the right solution for your asset finance business</li>
+									<li><span></span>Explain options for licensing the Odessa Platform</li>
+									<li><span></span>Connect you with helpful resources</li>
+								</ul>
+								<div class="letsAddress">
+										<div class="addrow">
+										<div class="counnm">North America</div>
+										<div class="counnum">+1 (215) 231 9800</div>
+									</div>
+																	<div class="addrow">
+										<div class="counnm">Europe</div>
+										<div class="counnum">+33 (0)1 8824 11 85</div>
+									</div>
+																	 <div class="addrow">
+										<div class="counnm">UK </div>
+										<div class="counnum">+44 (0)20 4579 9595</div>
+									</div>
+									<div class="addrow">
+										<div class="counnm">APAC</div>
+										<div class="counnum">+91 80 4146 4321</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-5">
+							<div class="letstalkform">
+								<!--<iframe src="http://go.pardot.com/l/310001/2020-07-23/t159xm" width="100%" height="705" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>-->
+								<!-- <form id = "primaryForm" action="https://go.odessainc.com/l/310001/2020-06-23/rg54yd" method="post"> -->
+							<form id = "primaryForm" method="post" autocomplete="off">
+						
+							<label for="honeypot">Honeypot </label>
+							<input id="honeypot" name="honeypot" size="40" type="text"/><br>
+							<div class="form-group">
+								<input class="form-control" name="first-name" id = "first_name" type="text" placeholder="First Name" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" name="last-name" id = "last_name" type="text" placeholder="Last Name" required />
+							</div>
+							<div class="form-group">
+								<input class="form-control" name="job-title" type="text" id="job_title" placeholder="Job Title" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
+							</div>
+							<div class="form-group">
+								<input class="form-control"  name="company" type="text" id="company" placeholder="Company" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" name="phone" type="text" placeholder="Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
+							</div>
+							<div class="form-group">
+								<!-- <label for="country">Select Country:</label> -->
+								<select name="country" class="select form-control selectpicker" id="country" required>
+									<option value="" disabled selected>Select a country</option>
+									<!-- <option value="Country">Country</option> -->
+									<option value="United States">United States</option>
+									<option value="Canada">Canada</option>
+									<option value="Afghanistan">Afghanistan</option>
+									<option value="Albania">Albania</option>
+									<option value="Algeria">Algeria</option>
+									<option value="American Samoa">American Samoa</option>
+									<option value="Andorra">Andorra</option>
+									<option value="Angola">Angola</option>
+									<option value="Anguilla">Anguilla</option>
+									<option value="Antarctica">Antarctica</option>
+									<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+									<option value="Argentina">Argentina</option>
+									<option value="Armenia">Armenia</option>
+									<option value="Aruba">Aruba</option>
+									<option value="Australia">Australia</option>
+									<option value="Austria">Austria</option>
+									<option value="Azerbaijan">Azerbaijan</option>
+									<option value="Bahamas">Bahamas</option>
+									<option value="Bahrain">Bahrain</option>
+									<option value="Bangladesh">Bangladesh</option>
+									<option value="Barbados">Barbados</option>
+									<option value="Belarus">Belarus</option>
+									<option value="Belgium">Belgium</option>
+									<option value="Belize">Belize</option>
+									<option value="Benin">Benin</option>
+									<option value="Bermuda">Bermuda</option>
+									<option value="Bhutan">Bhutan</option>
+									<option value="Bolivia">Bolivia</option>
+									<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+									<option value="Botswana">Botswana</option>
+									<option value="Brazil">Brazil</option>
+									<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+									<option value="British Virgin Islands">British Virgin Islands</option>
+									<option value="Brunei">Brunei</option>
+									<option value="Bulgaria">Bulgaria</option>
+									<option value="Burkina Faso">Burkina Faso</option>
+									<option value="Burundi">Burundi</option>
+									<option value="Cambodia">Cambodia</option>
+									<option value="Cameroon">Cameroon</option>
+									<option value="Cape Verde">Cape Verde</option>
+									<option value="Cayman Islands">Cayman Islands</option>
+									<option value="Central African Republic">Central African Republic</option>
+									<option value="Chad">Chad</option>
+									<option value="Chile">Chile</option>
+									<option value="China">China</option>
+									<option value="Christmas Island">Christmas Island</option>
+									<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+									<option value="Colombia">Colombia</option>
+									<option value="Comoros">Comoros</option>
+									<option value="Congo">Congo</option>
+									<option value="Cook Islands">Cook Islands</option>
+									<option value="Costa Rica">Costa Rica</option>
+									<option value="Croatia">Croatia</option>
+									<option value="Cuba">Cuba</option>
+									<option value="Curaçao">Curaçao</option>
+									<option value="Cyprus">Cyprus</option>
+									<option value="Czech Republic">Czech Republic</option>
+									<option value="Côte d’Ivoire">Côte d’Ivoire</option>
+									<option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+									<option value="Denmark">Denmark</option>
+									<option value="Djibouti">Djibouti</option>
+									<option value="Dominica">Dominica</option>
+									<option value="Dominican Republic">Dominican Republic</option>
+									<option value="Ecuador">Ecuador</option>
+									<option value="Egypt">Egypt</option>
+									<option value="El Salvador">El Salvador</option>
+									<option value="Equatorial Guinea">Equatorial Guinea</option>
+									<option value="Eritrea">Eritrea</option>
+									<option value="Estonia">Estonia</option>
+									<option value="Ethiopia">Ethiopia</option>
+									<option value="Falkland Islands">Falkland Islands</option>
+									<option value="Faroe Islands">Faroe Islands</option>
+									<option value="Fiji">Fiji</option>
+									<option value="Finland">Finland</option>
+									<option value="France">France</option>
+									<option value="French Guiana">French Guiana</option>
+									<option value="French Polynesia">French Polynesia</option>
+									<option value="French Southern Territories">French Southern Territories</option>
+									<option value="Gabon">Gabon</option>
+									<option value="Gambia">Gambia</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Germany">Germany</option>
+									<option value="Ghana">Ghana</option>
+									<option value="Gibraltar">Gibraltar</option>
+									<option value="Greece">Greece</option>
+									<option value="Greenland">Greenland</option>
+									<option value="Grenada">Grenada</option>
+									<option value="Guadeloupe">Guadeloupe</option>
+									<option value="Guam">Guam</option>
+									<option value="Guatemala">Guatemala</option>
+									<option value="Guernsey">Guernsey</option>
+									<option value="Guinea">Guinea</option>
+									<option value="Guinea-Bissau">Guinea-Bissau</option>
+									<option value="Guyana">Guyana</option>
+									<option value="Haiti">Haiti</option>
+									<option value="Honduras">Honduras</option>
+									<option value="Hong Kong S.A.R., China">Hong Kong S.A.R., China</option>
+									<option value="Hungary">Hungary</option>
+									<option value="Iceland">Iceland</option>
+									<option value="India">India</option>
+									<option value="Indonesia">Indonesia</option>
+									<option value="Iran">Iran</option>
+									<option value="Iraq">Iraq</option>
+									<option value="Ireland">Ireland</option>
+									<option value="Isle of Man">Isle of Man</option>
+									<option value="Israel">Israel</option>
+									<option value="Italy">Italy</option>
+									<option value="Jamaica">Jamaica</option>
+									<option value="Japan">Japan</option>
+									<option value="Jersey">Jersey</option>
+									<option value="Jordan">Jordan</option>
+									<option value="Kazakhstan">Kazakhstan</option>
+									<option value="Kenya">Kenya</option>
+									<option value="Kiribati">Kiribati</option>
+									<option value="Kuwait">Kuwait</option>
+									<option value="Kyrgyzstan">Kyrgyzstan</option>
+									<option value="Laos">Laos</option>
+									<option value="Latvia">Latvia</option>
+									<option value="Lebanon">Lebanon</option>
+									<option value="Lesotho">Lesotho</option>
+									<option value="Liberia">Liberia</option>
+									<option value="Libya">Libya</option>
+									<option value="Liechtenstein">Liechtenstein</option>
+									<option value="Lithuania">Lithuania</option>
+									<option value="Luxembourg">Luxembourg</option>
+									<option value="Macao S.A.R., China">Macao S.A.R., China</option>
+									<option value="Macedonia">Macedonia</option>
+									<option value="Madagascar">Madagascar</option>
+									<option value="Malawi">Malawi</option>
+									<option value="Malaysia">Malaysia</option>
+									<option value="Maldives">Maldives</option>
+									<option value="Mali">Mali</option>
+									<option value="Malta">Malta</option>
+									<option value="Marshall Islands">Marshall Islands</option>
+									<option value="Martinique">Martinique</option>
+									<option value="Mauritania">Mauritania</option>
+									<option value="Mauritius">Mauritius</option>
+									<option value="Mayotte">Mayotte</option>
+									<option value="Mexico">Mexico</option>
+									<option value="Micronesia">Micronesia</option>
+									<option value="Moldova">Moldova</option>
+									<option value="Monaco">Monaco</option>
+									<option value="Mongolia">Mongolia</option>
+									<option value="Montenegro">Montenegro</option>
+									<option value="Montserrat">Montserrat</option>
+									<option value="Morocco">Morocco</option>
+									<option value="Mozambique">Mozambique</option>
+									<option value="Myanmar">Myanmar</option>
+									<option value="Namibia">Namibia</option>
+									<option value="Nauru">Nauru</option>
+									<option value="Nepal">Nepal</option>
+									<option value="Netherlands">Netherlands</option>
+									<option value="New Caledonia">New Caledonia</option>
+									<option value="New Zealand">New Zealand</option>
+									<option value="Nicaragua">Nicaragua</option>
+									<option value="Niger">Niger</option>
+									<option value="Nigeria">Nigeria</option>
+									<option value="Niue">Niue</option>
+									<option value="Norfolk Island">Norfolk Island</option>
+									<option value="North Korea">North Korea</option>
+									<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+									<option value="Norway">Norway</option>
+									<option value="Oman">Oman</option>
+									<option value="Pakistan">Pakistan</option>
+									<option value="Palau">Palau</option>
+									<option value="Palestinian Territory">Palestinian Territory</option>
+									<option value="Panama">Panama</option>
+									<option value="Papua New Guinea">Papua New Guinea</option>
+									<option value="Paraguay">Paraguay</option>
+									<option value="Peru">Peru</option>
+									<option value="Philippines">Philippines</option>
+									<option value="Pitcairn">Pitcairn</option>
+									<option value="Poland">Poland</option>
+									<option value="Portugal">Portugal</option>
+									<option value="Puerto Rico">Puerto Rico</option>
+									<option value="Qatar">Qatar</option>
+									<option value="Romania">Romania</option>
+									<option value="Russia">Russia</option>
+									<option value="Rwanda">Rwanda</option>
+									<option value="Réunion">Réunion</option>
+									<option value="Saint Barthélemy">Saint Barthélemy</option>
+									<option value="Saint Helena">Saint Helena</option>
+									<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+									<option value="Saint Lucia">Saint Lucia</option>
+									<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+									<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+									<option value="Samoa">Samoa</option>
+									<option value="San Marino">San Marino</option>
+									<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+									<option value="Saudi Arabia">Saudi Arabia</option>
+									<option value="Senegal">Senegal</option>
+									<option value="Serbia">Serbia</option>
+									<option value="Seychelles">Seychelles</option>
+									<option value="Sierra Leone">Sierra Leone</option>
+									<option value="Singapore">Singapore</option>
+									<option value="Slovakia">Slovakia</option>
+									<option value="Slovenia">Slovenia</option>
+									<option value="Solomon Islands">Solomon Islands</option>
+									<option value="Somalia">Somalia</option>
+									<option value="South Africa">South Africa</option>
+									<option value="South Korea">South Korea</option>
+									<option value="South Sudan">South Sudan</option>
+									<option value="Spain">Spain</option>
+									<option value="Sri Lanka">Sri Lanka</option>
+									<option value="Sudan">Sudan</option>
+									<option value="Suriname">Suriname</option>
+									<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+									<option value="Swaziland">Swaziland</option>
+									<option value="Sweden">Sweden</option>
+									<option value="Switzerland">Switzerland</option>
+									<option value="Syria">Syria</option>
+									<option value="Taiwan">Taiwan</option>
+									<option value="Tajikistan">Tajikistan</option>
+									<option value="Tanzania">Tanzania</option>
+									<option value="Thailand">Thailand</option>
+									<option value="Timor-Leste">Timor-Leste</option>
+									<option value="Togo">Togo</option>
+									<option value="Tokelau">Tokelau</option>
+									<option value="Tonga">Tonga</option>
+									<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+									<option value="Tunisia">Tunisia</option>
+									<option value="Turkey">Turkey</option>
+									<option value="Turkmenistan">Turkmenistan</option>
+									<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+									<option value="Tuvalu">Tuvalu</option>
+									<option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
+									<option value="Uganda">Uganda</option>
+									<option value="Ukraine">Ukraine</option>
+									<option value="United Arab Emirates">United Arab Emirates</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+									<option value="Uruguay">Uruguay</option>
+									<option value="Uzbekistan">Uzbekistan</option>
+									<option value="Vanuatu">Vanuatu</option>
+									<option value="Vatican">Vatican</option>
+									<option value="Venezuela">Venezuela</option>
+									<option value="Viet Nam">Viet Nam</option>
+									<option value="Wallis and Futuna">Wallis and Futuna</option>
+									<option value="Western Sahara">Western Sahara</option>
+									<option value="Yemen">Yemen</option>
+									<option value="Zambia">Zambia</option>
+									<option value="Zimbabwe">Zimbabwe</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<!--<select name="referring-source" class="select refer-source" onchange="">
+									<option value=""></option>
+									<option value="" selected="selected">How did you hear about us?</option>
+									<option value="Advertisement">Advertisement</option>
+									<option value="Event/Conference">Event/Conference</option>
+									<option value="Google">Google</option>
+									<option value="LinkedIn">LinkedIn</option>
+									<option value="Another Client/Partner">Another Client/Partner</option>
+									<option value="Blog/PR Publication">Blog/PR Publication</option>
+									<option value="Social Media">Social Media</option>
+									<option value="Other">Other</option>
+								</select>-->
+								<input class="form-control" name="referring-source" type="text" id="referring-source" placeholder="How did you hear about us?" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" name="software-used"
+									placeholder="What software are you currently using?" required id="software-used"/>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" placeholder="Message" id="message"></textarea>
+							</div>
+							<div class="capt">
+							<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
+								</div>
+								<div class="disclaimer">
+									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>. I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+									<label for="agree">
+										<span class="box"></span>
+										<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
+									</label>
+								</div>
+							
+							<div class="clearfix">
+								<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Let’s Talk</button>
+							</div>
+						</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Let's Talk Form Section End here--> 
+		
+		<!--Company Office Ban Start Here-->
+		<div class="letstalkban"></div>
+		<!--Company Office Ban End Here--> 
+		
+		<!--Already Customer Section Start Here-->
+		<div class="alreadyCustomerwrap">
+			<div class="container clearfix">
+				<h1 class="text-center">Already a customer?</h1>
+				<div class="customerboxrow">
+					<div class="row equalHMWrap eqWrap clearfix">
+						<div class="col-sm-6 customerbox">
+							<div class="cusconinfo">
+								<div class="customericonrw">
+									<div class="customericon"></div>
+								</div>
+								<h2 class="customerInnerTitle">Customer Support</h2>
+								<div class="boxnormaltxt">For help with your account and ensuring your experience is running
+									smoothly, reach out to our global customer success teams.</div>
+								<div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://odessainc.force.com/customer/">Chat with support</a> </div>
+							</div>
+						</div>
+						<div class="col-sm-6 customerbox">
+							<div class="cusconinfo">
+								<div class="customericonrw">
+									<div class="customericon community"></div>
+								</div>
+								<h2 class="customerInnerTitle">Customer Community</h2>
+								<div class="boxnormaltxt">Catch up on our latest release notes packed with new features and
+									functionality, tap into our knowledge base, and join in on the conversation with Odessa
+									users!</div>
+								<div class="lernmorerw"> <a class="odc__btn--more odc__btn--xl" href="https://odessainc.force.com/customer/">Check it out</a> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="countryAddressSection">
+					<div class="bluedotsview"></div>
+					<div class="row clearfix">
+						<div class="col-sm-7 col-md-6">
+							<!--Office Headquarters Section-->
+							<div class="countryAddinfo">
+								<div class="headingrows"> <span class="customericon programs"></span>
+									<h3>Learn about our Alliance Partner Programs</h3>
+								</div>
+								<p>Interested in partnering with Odessa? <span>Let’s chat about what it
 									means to become an integration or strategic services partner.</span></p>
-                                <div class="letsbutton clearfix">
-                                    <a href="mailto:partners@odessainc.com">
-                                        <button class="odc__btn odc__btn--primary odc__btn--xl">Let’s Talk</button>
-                                    </a>
-                                </div>
-                                <div class="headquartersAddbox">
-                                    <div class="headqAdd">
-                                        <div class="headingrows"> <span class="customericon headq"></span>
-                                            <h3 class="mntop">Odessa Headquarters</h3>
-                                        </div>
-                                        <div class="headqinfo">
-                                            <p>Two Liberty Place</p>
-                                            <p>50 South 16th Street, Suite 1900</p>
-                                            <p>Philadelphia, PA 19102</p>
-                                            <p> USA</p>
-                                        </div>
-                                    </div>
-                                    <div class="headqAdd">
-                                        <div class="headingrows">
-                                            <h3 class="mntop pd">Bangalore, India</h3>
-                                        </div>
-                                        <div class="headqinfo">
-                                            <p>GGR Towers</p>
-                                            <p>18/2B, Bellandur Gate, Sarjapur Road</p>
-                                            <p>Bangalore, Karnataka 560103</p>
-                                            <p>India</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Office Headquarters Section End-->
-                        </div>
-                        <div class="col-sm-5 col-md-6">
-                            <div class="officeviewentrybx">
-                                <amp-img src="<?php echo base_url(); ?>assets/images/odessa_ofice_view.webp" alt="office-view" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
+								<div class="letsbutton clearfix"> <a href="mailto:partners@odessainc.com">
+									<button class="odc__btn odc__btn--primary odc__btn--xl">Let’s Talk</button>
+									</a> </div>
+								<div class="headquartersAddbox">
+									<div class="headqAdd">
+										<div class="headingrows"> <span class="customericon headq"></span>
+											<h3 class="mntop">Odessa Headquarters</h3>
+										</div>
+										<div class="headqinfo">
+											<p>Two Liberty Place</p>
+											<p>50 South 16th Street, Suite 1900</p>
+											<p>Philadelphia, PA 19102</p>
+											<p> USA</p>
+										</div>
+									</div>
+									<div class="headqAdd">
+										<div class="headingrows">
+											<h3 class="mntop pd">Bangalore, India</h3>
+										</div>
+										<div class="headqinfo">
+											<p>GGR Towers</p>
+											<p>18/2B, Bellandur Gate, Sarjapur Road</p>
+											<p>Bangalore, Karnataka 560103</p>
+											<p>India</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Office Headquarters Section End--> 
+						</div>
+						<div class="col-sm-5 col-md-6">
+							<div class="officeviewentrybx">
+								<amp-img src="<?php echo base_url(); ?>assets/images/odessa_ofice_view.webp" alt="office-view" class="lazyload" width="1" height="1" layout="responsive"></amp-img>
 
-                                <!-- <img src="<?=base_url(); ?>assets/images/odessa_ofice_view.jpg" alt="Office View" /> </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Already Customer Section End Here-->
-        </div>
-    </div>
-    <script type="application/ld+json">
-        { "@context" : "https://schema.org", "@type" : "Organization", "location": { "@type": "PostalAddress", "name": "Headquarters", "streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900", "addressLocality": "Philadelphia", "addressRegion": "PA", "postalCode":
-        "19102", "addressCountry": "USA" } }
-    </script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-    <script>
-        $(document).ready(function() {
-        	  $.validator.addMethod("myusername", function(value,element) {
-        		return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-        	}, 'Free email addresses are not allowed.');
-        	
-        	$.validator.addMethod("lettersonly", function(value, element) {
-        		 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
-        	  );
-        	
-        	$.validator.addMethod("noSpace", function(value, element) { 
-        		  return value == '' || value.trim().length != 0;  
-        		}, "No spaces allowed !! please don't leave it empty.");
+								<!-- <img src="<?=base_url(); ?>assets/images/odessa_ofice_view.jpg" alt="Office View" /> </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Already Customer Section End Here-->
+	</div>
+	</div>
+	<script type="application/ld+json">
+		{
+			"@context" : "https://schema.org",
+			"@type" : "Organization",
+			"location": {
+				"@type": "PostalAddress",
+				"name": "Headquarters",
+				"streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900",
+				"addressLocality": "Philadelphia",
+				"addressRegion": "PA",
+				"postalCode": "19102",
+				"addressCountry": "USA"
+			}
+		}
+	</script>
+	<script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
+	<script>
+	$(document).ready(function() {
+    // Add method to restrict free email addresses
+    $.validator.addMethod("myusername", function(value, element) {
+        return /^([\w-\.]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!aol\.com)(?!hotmail\.co\.uk)(?!hotmail\.fr)(?!msn\.com)(?!yahoo\.fr)(?!wanadoo\.fr)(?!orange\.fr)(?!comcast\.net)(?!yahoo\.co\.uk)(?!yahoo\.com\.br)(?!yahoo\.co\.in)(?!live\.com)(?!rediffmail\.com)(?!free\.fr)(?!gmx\.de)(?!web\.de)(?!yandex\.ru)(?!ymail\.com)(?!libero\.it)(?!outlook\.com)(?!uol\.com\.br)(?!bol\.com\.br)(?!mail\.ru)(?!cox\.net)(?!hotmail\.it)(?!sbcglobal\.net)(?!sfr\.fr)(?!live\.fr)(?!verizon\.net)(?!live\.co\.uk)(?!googlemail\.com)(?!yahoo\.es)(?!ig\.com\.br)(?!live\.nl)(?!bigpond\.com)(?!terra\.com\.br)(?!yahoo\.it)(?!neuf\.fr)(?!yahoo\.de)(?!alice\.it)(?!rocketmail\.com)(?!att\.net)(?!laposte\.net)(?!facebook\.com)(?!bellsouth\.net)(?!yahoo\.in)(?!hotmail\.es)(?!charter\.net)(?!yahoo\.ca)(?!yahoo\.com\.au)(?!rambler\.ru)(?!hotmail\.de)(?!tiscali\.it)(?!shaw\.ca)(?!yahoo\.co\.jp)(?!sky\.com)(?!earthlink\.net)(?!optonline\.net)(?!freenet\.de)(?!t-online\.de)(?!aliceadsl\.fr)(?!virgilio\.it)(?!home\.nl)(?!qq\.com)(?!telenet\.be)(?!me\.com)(?!yahoo\.com\.ar)(?!tiscali\.co\.uk)(?!yahoo\.com\.mx)(?!voila\.fr)(?!gmx\.net)(?!mail\.com)(?!planet\.nl)(?!tin\.it)(?!live\.it)(?!ntlworld\.com)(?!arcor\.de)(?!yahoo\.co\.id)(?!frontiernet\.net)(?!hetnet\.nl)(?!live\.com\.au)(?!yahoo\.com\.sg)(?!zonnet\.nl)(?!club-internet\.fr)(?!juno\.com)(?!optusnet\.com\.au)(?!blueyonder\.co\.uk)(?!bluewin\.ch)(?!skynet\.be)(?!sympatico\.ca)(?!windstream\.net)(?!mac\.com)(?!centurytel\.net)(?!chello\.nl)(?!live\.ca)(?!aim\.com)(?!bigpond\.net\.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+    }, 'Free email addresses are not allowed.');
 
-        	$.validator.addMethod("mobile", function(phone_number, element) {
-        	phone_number = phone_number.replace(/\s+/g, ""); 
-        	return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
-        	phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
-        	}, "Mobile number should be of 6 to 15 digits.");
-        	
-        	$("#primaryForm").validate({
-        		rules: {
-        			"first-name":{
-        				required: true,
-        				maxlength: 50,
-        				lettersonly:true
-        			}, 
-        			"last-name":{
-        				required: true,
-        				maxlength: 50,
-        				lettersonly:true
-        			},
-        			email: {
-        				required: true,
-        				myusername: true,
-        			},
-        			phone: {
-        				required: true,
-        				minlength:6,
-        				maxlength:15,
-        				mobile:true
-        				},
-        			"job-title": {
-        				required: true
-        				},
-        			company: {
-        				required: true
-        			},
-        			"software-used": {
-        				required: true
-        			},
-        			country: {
-        				required: true
-        			}
-        		},
-        			messages: {
-        			"first-name": {
-        				required:"",
-        				maxlength:""
-        				}, 
-        			"last-name": {
-        				required:"",
-        				maxlength:""
-        				},           
-        			email: {
-        				required: "",
-        				},
-        			phone: {
-        				required: "",
-        				minlength:"",
-        				maxlength:""
-        				},
-        			"job-title": {
-        				required: ""
-        			},
-        			company: {
-        				required: ""
-        			},
-        			"software-used": {
-        				required: "",
-        			},
-        			country: {
-        				required: "",
-        			}
-        			},
-        			submitHandler: function (form) {
-        			
-        			var honeypot_val = $("#honeypot").val();
-        			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-        				if(honeypot_val != ''){
-        					window.location.reload();
-        					return false;
-        				}else{
-        					$(".capt").addClass("error");
-        					return false;
-        				}
-        			} else {
-        				if(honeypot_val == ''){
-        					$("#secondaryForm").submit();
-        					return true;
-        				}else{
-        					$(".capt").removeClass("error");
-        					return true
-        				}
-        			}
-        		}
-        	});
-        
-        	$("#letstalk").click(function(){
+    // Add method to allow only letters
+    $.validator.addMethod("lettersonly", function(value, element) {
+        return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    }, "Please enter letters only.");
+
+    // Add method to disallow empty spaces
+    $.validator.addMethod("noSpace", function(value, element) {
+        return value.trim().length !== 0;
+    }, "No spaces allowed! Please don't leave it empty.");
+
+    // Add method for mobile number validation
+    $.validator.addMethod("mobile", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, "");
+        return this.optional(element) || (phone_number.length >= 6 && phone_number.length <= 15 && phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s*,?$)\d{10}\s*,?$/));
+    }, "Mobile number should be of 6 to 15 digits.");
+
+    // Validate the primary form
+    $("#primaryForm").validate({
+        rules: {
+            "first-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            "last-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            email: {
+                required: true,
+                myusername: true
+            },
+            phone: {
+                required: true,
+                minlength: 6,
+                maxlength: 15,
+                mobile: true
+            },
+            "job-title": {
+                required: true
+            },
+            company: {
+                required: true
+            },
+            "software-used": {
+                required: true
+            },
+            country: {
+                required: true
+            }
+        },
+        messages: {
+            "first-name": {
+                required: "",
+                maxlength: ""
+            },
+            "last-name": {
+                required: "",
+                maxlength: ""
+            },
+            email: {
+                required: ""
+            },
+            phone: {
+                required: "",
+                minlength: "",
+                maxlength: ""
+            },
+            "job-title": {
+                required: ""
+            },
+            company: {
+                required: ""
+            },
+            "software-used": {
+                required: ""
+            },
+            country: {
+                required: ""
+            }
+        },
+        submitHandler: function(form) {
             var honeypot_val = $("#honeypot").val();
-            if(honeypot_val == ''){
-                if ($('#agree').is(':checked')) {
-                    $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-                    $("#primaryForm").submit();
-        			$('.box').hide();
-                    return true;
+            if (honeypot_val != '' || grecaptcha.getResponse() == "") {
+                if (honeypot_val != '') {
+                    window.location.reload();
+                    return false;
                 } else {
-        			$('.box').show();
+                    $(".capt").addClass("error");
                     return false;
                 }
             } else {
-                window.location.reload();
+                if (honeypot_val == '') {
+                    $("#secondaryForm").submit();
+                    return true;
+                } else {
+                    $(".capt").removeClass("error");
+                    return true;
+                }
+            }
+        }
+    });
+
+    // Custom event listener for the form submit
+    $('form').on('submit', function(event) {
+        const countrySelect = document.getElementById('country');
+        if (countrySelect.value === '') {
+			$("#country").addClass("error")
+            // alert('Please select a country.');
+            event.preventDefault();
+        }
+    });
+
+    // Event listener for the 'letstalk' button
+    $("#letstalk").click(function() {
+        var honeypot_val = $("#honeypot").val();
+        if (honeypot_val == '') {
+            // Check if the disclaimer checkbox is checked
+            if ($('#agree').is(':checked')) {
+                $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+                $("#primaryForm").submit();
+                $('.box').hide();
+                return true;
+            } else {
+                // Show an alert or handle the case when the checkbox is not checked
+                $('.box').show();
                 return false;
             }
-        })
-        
-        	$("#first_name").keypress(function(event){
-        		var regex = new RegExp("^[a-zA-Z ]*$");
-        			console.log(regex);
-        		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-        		if (!regex.test(key)) {
-        		event.preventDefault();
-        		return false;
-        		}
-        	});
-        
-        	$("#last_name").keypress(function(event){
-        		var regex = new RegExp("^[a-zA-Z ]*$");
-        			console.log(regex);
-        		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-        		if (!regex.test(key)) {
-        		event.preventDefault();
-        		return false;
-        		}
-        	});
-        
-        	$('#primaryForm input').bind("cut copy paste",function(e) {
-        		e.preventDefault();
-        	});
-        	});
-        	
-        	$(function(){
-        	  function rescaleCaptcha(){
-        		var width = $('.g-recaptcha').parent().width();
-        		var scale;
-        		if (width < 302) {
-        		  scale = width / 302;
-        		} else{
-        		  scale = 1; 
-        		}
-        	
-        		$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-        		$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-        		$('.g-recaptcha').css('transform-origin', '0 0');
-        		$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-        	  }
-        	
-        	  rescaleCaptcha();
-        	  $( window ).resize(function() { rescaleCaptcha(); });
-        	
-        	});
-        	
-        	function isNumberKey(evt){
-        		var charCode = (evt.which) ? evt.which : event.keyCode
-        		if (charCode > 31 && (charCode < 48 || charCode > 57))
-        			return false;
-        
-        		return true;
-        	}
-    </script>
-    <style amp-custom>
-        @import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
-    </style>
-    <script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        $(function(){
-        			$('.selectpicker').selectpicker();
-        		});
-    </script>
+        } else {
+            window.location.reload();
+            return false;
+        }
+    });
+
+    // Restrict certain characters in 'first_name' and 'last_name' fields
+    $("#first_name, #last_name").keypress(function(event) {
+        var regex = new RegExp("^[a-zA-Z ]*$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    // Prevent cut, copy, paste on form inputs
+    $('#primaryForm input').bind("cut copy paste", function(e) {
+        e.preventDefault();
+    });
+
+    // Rescale reCAPTCHA on window resize
+    function rescaleCaptcha() {
+        var width = $('.g-recaptcha').parent().width();
+        var scale = width < 302 ? width / 302 : 1;
+        $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('transform-origin', '0 0');
+        $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+    }
+
+    rescaleCaptcha();
+    $(window).resize(function() { rescaleCaptcha(); });
+});
+
+// Restrict non-numeric input in phone number field
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+	</script>
+	<style amp-custom>
+		@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
+	</style>
+	<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script>
+		$(function(){
+			$('.selectpicker').selectpicker();
+		});
+	</script>

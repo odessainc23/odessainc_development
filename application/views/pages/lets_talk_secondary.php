@@ -42,7 +42,10 @@
          <h1 class="wtcol text-center">Discuss your needs with our team </h1>
          <p class="wtcol text-center pdtb">Our sales team will provide feedback based on your requirements so <br>we can set your company up for success.</p>
          <div class="secnformCon">
-           
+            <!--<iframe src="http://go.pardot.com/l/310001/2020-07-30/tbr4b9" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+               -->
+            <!--<form id="secondaryForm" action="https://go.odessainc.com/l/310001/2021-10-26/2l9dpln" method="post">-->
+            <!-- <form id="secondaryForm" action="https://go.odessainc.com/l/310001/2020-06-25/rj5m2v" method="post"> -->
             <form id="secondaryForm" method="post" autocomplete="off">
                <label for="honeypot">Honeypot </label>
                <input id="honeypot" name="honeypot" size="40" type="text" value="" /><br>
@@ -84,10 +87,11 @@
                </div>
                <div class="row clearfix">
                   <div class="col-sm-6">
-                     <div class="form-group">
-                     <select name="country" class="select selectpicker">
-									<option value=""></option>
-									<option value="39461" selected="selected">Country</option>
+				  <div class="form-group">
+								<!-- <label for="country">Select Country:</label> -->
+								<select name="country" class="select form-control selectpicker" id="country" required>
+									<option value="" disabled selected>Select a country</option>
+									<!-- <option value="Country">Country</option> -->
 									<option value="United States">United States</option>
 									<option value="Canada">Canada</option>
 									<option value="Afghanistan">Afghanistan</option>
@@ -331,7 +335,7 @@
 									<option value="Zambia">Zambia</option>
 									<option value="Zimbabwe">Zimbabwe</option>
 								</select>
-                     </div>
+							</div>
                      <div class="form-group">
                         <!--<select name="referring-source" class="select refer-source" onchange="">
                            <option value=""></option>
@@ -420,198 +424,211 @@
 <!--Let's Talk Secondary Section Start here-->
 <link href="<?php echo base_url(); ?>assets/css/lets_talk_secondary.css" rel='stylesheet' />
 <script type="application/ld+json">
-        { "@context" : "https://schema.org", "@type" : "Organization", "location": { "@type": "PostalAddress", "name": "Headquarters", "streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900", "addressLocality": "Philadelphia", "addressRegion": "PA", "postalCode":
-        "19102", "addressCountry": "USA" } }
-    </script>
+   {
+   "@context": "https://schema.org",
+   "address": {HQ PostalAddress},
+   "location":[
+   {
+   "@type": "PostalAddress",
+   "streetAddress": "Two Liberty Place, 50 S. 16th St, Ste 1900",
+   "addressLocality": "Philadelphia",
+   "addressRegion": "PA",
+   "postalCode": "19102",
+   "addressCountry": "USA"
+   }, 
+   "@type": "PostalAddress",
+   "streetAddress": " GGR Towers, 18/2B, Bellandur Gate, Sarjapur Road",
+   "addressLocality": "Bangalore",
+   "addressRegion": "Karnataka",
+   "postalCode": "560103",
+   "addressCountry": India"
+   ]
+   },
+   "contactPoint": {
+   "@type": "ContactPoint",
+   "telephone": "+1.215.231.9800"
+   },
+</script> 
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
-   $(document).ready(function() {
-     $.validator.addMethod("myusername", function(value,element) {
-   	return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-   }, 'Free email addresses are not allowed.');
-   
-   $.validator.addMethod("lettersonly", function(value, element) {
-   	 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
-     );
-   
-   $.validator.addMethod("noSpace", function(value, element) { 
-   	  return value == '' || value.trim().length != 0;  
-   	}, "No spaces allowed !! please don't leave it empty.");
-   
-   
-   	$.validator.addMethod("mobile", function(phone_number, element) {
-   phone_number = phone_number.replace(/\s+/g, ""); 
-   return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
-   phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
-   }, "Mobile number should be of 6 to 15 digits.");
-   
-   
-   
-   $("#secondaryForm").validate({
-   	rules: {
-   		"first-name":{
-   			required: true,
-   			maxlength: 50,
-   			lettersonly:true
-   		}, 
-   		"last-name":{
-   			required: true,
-   			maxlength: 50,
-   			lettersonly:true
-   		},
-   		email: {
-   			required: true,
-   			myusername: true,
-   		},
-   		phone: {
-   			required: true,
-   			minlength:6,
-   			maxlength:15,
-   			mobile:true
-   			},
-   		"job-title": {
-   			required: true
-   			},
-   		company: {
-   			required: true
-   		},
-   		"software-used": {
-   			required: true
-   		},
-   		country: {
-   			required: true
-   		}
-   	},
-   		messages: {
-   		"first-name": {
-   			required:"",
-   			maxlength:""
-   			}, 
-   		"last-name": {
-   			required:"",
-   			maxlength:""
-   			},           
-   		email: {
-   			required: "",
-   			},
-   		phone: {
-   			required: "",
-   			minlength:"",
-   			maxlength:""
-   			},
-   		"job-title": {
-   			required: ""
-   		},
-   		company: {
-   			required: ""
-   		},
-   		"software-used": {
-   			required: "",
-   		},
-   		country: {
-   			required: "",
-   		}
-   		},
-   		submitHandler: function (form) {
-   		
-   		var honeypot_val = $("#honeypot").val();
-   		if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-   			if(honeypot_val != ''){
-   				window.location.reload();
-   				return false;
-   			}else{
-   				$(".capt").addClass("error");
-   				return false;
-   			}
-   		} else {
-   			if(honeypot_val == ''){
-   				$("#primaryForm").submit();
-   				return true;
-   			}else{
-   				$(".capt").removeClass("error");
-   				return true
-   			}
-   		}
-   	}
-   });
-   
-   $("#letstalk").click(function(){
-      var honeypot_val = $("#honeypot").val();
-      if(honeypot_val == ''){
-          // Check if the disclaimer checkbox is checked
-          if ($('#agree').is(':checked')) {
-\              $('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-25/rj5m2v');
-              $("#secondaryForm").submit();
-   		$('.box').hide();
-              return true;
-          } else {
-              // Show an alert or handle the case when the checkbox is not checked
-              // alert('Please agree to the privacy policy.');
-   		$('.box').show();
-              return false;
-          }
-      } else {
-          window.location.reload();
-          return false;
-      }
-   })
-   
-   $("#first_name").keypress(function(event){
-   	var regex = new RegExp("^[a-zA-Z ]*$");
-   		console.log(regex);
-   	var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-   	if (!regex.test(key)) {
-   	event.preventDefault();
-   	return false;
-   	}
-   });
-   
-   $("#last_name").keypress(function(event){
-   	var regex = new RegExp("^[a-zA-Z ]*$");
-   		console.log(regex);
-   	var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-   	if (!regex.test(key)) {
-   	event.preventDefault();
-   	return false;
-   	}
-   });
-   
-   $('#secondaryForm input').bind("cut copy paste",function(e) {
-   	e.preventDefault();
-   });
-   
-   
-   	
-   });
-   
-   $(function(){
-     function rescaleCaptcha(){
-   	var width = $('.g-recaptcha').parent().width();
-   	var scale;
-   	if (width < 302) {
-   	  scale = width / 302;
-   	} else{
-   	  scale = 1; 
-   	}
-   
-   	$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-   	$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-   	$('.g-recaptcha').css('transform-origin', '0 0');
-   	$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-     }
-   
-     rescaleCaptcha();
-     $( window ).resize(function() { rescaleCaptcha(); });
-   
-   });
-   
-   function isNumberKey(evt){
-   	var charCode = (evt.which) ? evt.which : event.keyCode
-   	if (charCode > 31 && (charCode < 48 || charCode > 57))
-   		return false;
-   
-   	return true;
-   }
+  $(document).ready(function() {
+    // Custom validator for restricting free email addresses
+    $.validator.addMethod("myusername", function(value, element) {
+        return /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+    }, 'Free email addresses are not allowed.');
+
+    // Custom validator for letters only
+    $.validator.addMethod("lettersonly", function(value, element) {
+        return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    }, "Please enter letters only.");
+
+    // Custom validator to disallow spaces
+    $.validator.addMethod("noSpace", function(value, element) {
+        return value == '' || value.trim().length != 0;
+    }, "No spaces allowed! Please don't leave it empty.");
+
+    // Custom validator for mobile numbers
+    $.validator.addMethod("mobile", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, "");
+        return this.optional(element) || (phone_number.length >= 6 && phone_number.length <= 15 && phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s*,?$)\d{10}\s*,?$/));
+    }, "Mobile number should be between 6 to 15 digits.");
+
+    // Form validation rules
+    $("#secondaryForm").validate({
+        rules: {
+            "first-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            "last-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            email: {
+                required: true,
+                myusername: true
+            },
+            phone: {
+                required: true,
+                minlength: 6,
+                maxlength: 15,
+                mobile: true
+            },
+            "job-title": {
+                required: true
+            },
+            company: {
+                required: true
+            },
+            "software-used": {
+                required: true
+            },
+            country: {
+                required: true
+            }
+        },
+        messages: {
+            "first-name": {
+                required: "Please enter your first name",
+                maxlength: "First name cannot exceed 50 characters"
+            },
+            "last-name": {
+                required: "Please enter your last name",
+                maxlength: "Last name cannot exceed 50 characters"
+            },
+            email: {
+                required: "Please enter your email address",
+            },
+            phone: {
+                required: "Please enter your phone number",
+                minlength: "Phone number should be at least 6 digits",
+                maxlength: "Phone number should not exceed 15 digits"
+            },
+            "job-title": {
+                required: "Please enter your job title"
+            },
+            company: {
+                required: "Please enter your company name"
+            },
+            "software-used": {
+                required: "Please enter the software you use"
+            },
+            country: {
+                required: "Please select your country"
+            }
+        },
+        submitHandler: function(form) {
+            var honeypot_val = $("#honeypot").val();
+            if (honeypot_val != '' || grecaptcha.getResponse() == "") {
+                if (honeypot_val != '') {
+                    window.location.reload();
+                    return false;
+                } else {
+                    $(".capt").addClass("error");
+                    return false;
+                }
+            } else {
+                if (honeypot_val == '') {
+                    $("#primaryForm").submit();
+                    return true;
+                } else {
+                    $(".capt").removeClass("error");
+                    return true;
+                }
+            }
+        }
+    });
+
+    // Custom event listener for the form submit
+    $('form').on('submit', function(event) {
+        const countrySelect = document.getElementById('country');
+        if (countrySelect.value === '') {
+			$("#country").addClass("error");
+            event.preventDefault();
+        }
+    });
+
+    // Event listener for the 'letstalk' button
+    $("#letstalk").click(function() {
+        var honeypot_val = $("#honeypot").val();
+        if (honeypot_val == '') {
+            // Check if the disclaimer checkbox is checked
+            if ($('#agree').is(':checked')) {
+                $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+                $("#secondaryForm").submit();
+                $('.box').hide();
+                return true;
+            } else {
+                // Show an alert or handle the case when the checkbox is not checked
+                $('.box').show();
+                return false;
+            }
+        } else {
+            window.location.reload();
+            return false;
+        }
+    });
+
+    // Restrict certain characters in 'first_name' and 'last_name' fields
+    $("#first_name, #last_name").keypress(function(event) {
+        var regex = new RegExp("^[a-zA-Z ]*$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    // Prevent cut, copy, paste on form inputs
+    $('#secondaryForm input').bind("cut copy paste", function(e) {
+        e.preventDefault();
+    });
+
+    // Rescale reCAPTCHA on window resize
+    function rescaleCaptcha() {
+        var width = $('.g-recaptcha').parent().width();
+        var scale = width < 302 ? width / 302 : 1;
+        $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('transform-origin', '0 0');
+        $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+    }
+
+    rescaleCaptcha();
+    $(window).resize(function() { rescaleCaptcha(); });
+});
+
+// Restrict non-numeric input in phone number field
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
 </script>
 <style amp-custom>
    @import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
