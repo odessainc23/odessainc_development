@@ -1472,6 +1472,7 @@ section.news .upperdiv .nopad {
   top: 0;
   z-index: 1;
   display: inline !important;
+  color: #999999 !important;
 }
 #annoucementslider .owl-dots,
 .letstalkSecondryform .secnformCon .form-group label.error,
