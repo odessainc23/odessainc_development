@@ -107,9 +107,10 @@
 								<input class="form-control" name="phone" type="text" placeholder="Phone" id="phone" onkeypress="return isNumberKey(event)" required/>
 							</div>
 							<div class="form-group">
-								<select name="country" class="select selectpicker">
-									<option value=""></option>
-									<option value="39461" selected="selected">Country</option>
+								<!-- <label for="country">Select Country:</label> -->
+								<select name="country" class="select form-control selectpicker" id="country" required>
+									<option value="" disabled selected>Select a country</option>
+									<!-- <option value="Country">Country</option> -->
 									<option value="United States">United States</option>
 									<option value="Canada">Canada</option>
 									<option value="Afghanistan">Afghanistan</option>
@@ -506,193 +507,184 @@
 	<script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 	<script>
 	$(document).ready(function() {
-	  $.validator.addMethod("myusername", function(value,element) {
-		return  /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!hotmail.co.uk)(?!hotmail.fr)(?!msn.com)(?!yahoo.fr)(?!wanadoo.fr)(?!orange.fr)(?!comcast.net)(?!yahoo.co.uk)(?!yahoo.com.br)(?!yahoo.co.in)(?!live.com)(?!rediffmail.com)(?!free.fr)(?!gmx.de)(?!web.de)(?!yandex.ru)(?!ymail.com)(?!libero.it)(?!outlook.com)(?!uol.com.br)(?!bol.com.br)(?!mail.ru)(?!cox.net)(?!hotmail.it)(?!sbcglobal.net)(?!sfr.fr)(?!live.fr)(?!verizon.net)(?!live.co.uk)(?!googlemail.com)(?!yahoo.es)(?!ig.com.br)(?!live.nl)(?!bigpond.com)(?!terra.com.br)(?!yahoo.it)(?!neuf.fr)(?!yahoo.de)(?!alice.it)(?!rocketmail.com)(?!att.net)(?!laposte.net)(?!facebook.com)(?!bellsouth.net)(?!yahoo.in)(?!hotmail.es)(?!charter.net)(?!yahoo.ca)(?!yahoo.com.au)(?!rambler.ru)(?!hotmail.de)(?!tiscali.it)(?!shaw.ca)(?!yahoo.co.jp)(?!sky.com)(?!earthlink.net)(?!optonline.net)(?!freenet.de)(?!t-online.de)(?!aliceadsl.fr)(?!virgilio.it)(?!home.nl)(?!qq.com)(?!telenet.be)(?!me.com)(?!yahoo.com.ar)(?!tiscali.co.uk)(?!yahoo.com.mx)(?!voila.fr)(?!gmx.net)(?!mail.com)(?!planet.nl)(?!tin.it)(?!live.it)(?!ntlworld.com)(?!arcor.de)(?!yahoo.co.id)(?!frontiernet.net)(?!hetnet.nl)(?!live.com.au)(?!yahoo.com.sg)(?!zonnet.nl)(?!club-internet.fr)(?!juno.com)(?!optusnet.com.au)(?!blueyonder.co.uk)(?!bluewin.ch)(?!skynet.be)(?!sympatico.ca)(?!windstream.net)(?!mac.com)(?!centurytel.net)(?!chello.nl)(?!live.ca)(?!aim.com)(?!bigpond.net.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-	}, 'Free email addresses are not allowed.');
-	
-	$.validator.addMethod("lettersonly", function(value, element) {
-		 return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
-	  );
-	
-	$.validator.addMethod("noSpace", function(value, element) { 
-		  return value == '' || value.trim().length != 0;  
-		}, "No spaces allowed !! please don't leave it empty.");
-	
-	
-		$.validator.addMethod("mobile", function(phone_number, element) {
-	phone_number = phone_number.replace(/\s+/g, ""); 
-	return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
-	phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
-	}, "Mobile number should be of 6 to 15 digits.");
-	
-	
-	
-	$("#primaryForm").validate({
-		rules: {
-			"first-name":{
-				required: true,
-				maxlength: 50,
-				lettersonly:true
-			}, 
-			"last-name":{
-				required: true,
-				maxlength: 50,
-				lettersonly:true
-			},
-			email: {
-				required: true,
-				myusername: true,
-			},
-			phone: {
-				required: true,
-				minlength:6,
-				maxlength:15,
-				mobile:true
-				},
-			"job-title": {
-				required: true
-				},
-			company: {
-				required: true
-			},
-			"software-used": {
-				required: true
-			},
-			country: {
-				required: true
-			}
-		},
-			messages: {
-			"first-name": {
-				required:"",
-				maxlength:""
-				}, 
-			"last-name": {
-				required:"",
-				maxlength:""
-				},           
-			email: {
-				required: "",
-				},
-			phone: {
-				required: "",
-				minlength:"",
-				maxlength:""
-				},
-			"job-title": {
-				required: ""
-			},
-			company: {
-				required: ""
-			},
-			"software-used": {
-				required: "",
-			},
-			country: {
-				required: "",
-			}
-			},
-			submitHandler: function (form) {
-			
-			var honeypot_val = $("#honeypot").val();
-			if (honeypot_val != '' || grecaptcha.getResponse() == ""){
-				if(honeypot_val != ''){
-					window.location.reload();
-					return false;
-				}else{
-					$(".capt").addClass("error");
-					return false;
-				}
-			} else {
-				if(honeypot_val == ''){
-					$("#secondaryForm").submit();
-					return true;
-				}else{
-					$(".capt").removeClass("error");
-					return true
-				}
-			}
-		}
-	});
+    // Add method to restrict free email addresses
+    $.validator.addMethod("myusername", function(value, element) {
+        return /^([\w-\.]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!aol\.com)(?!hotmail\.co\.uk)(?!hotmail\.fr)(?!msn\.com)(?!yahoo\.fr)(?!wanadoo\.fr)(?!orange\.fr)(?!comcast\.net)(?!yahoo\.co\.uk)(?!yahoo\.com\.br)(?!yahoo\.co\.in)(?!live\.com)(?!rediffmail\.com)(?!free\.fr)(?!gmx\.de)(?!web\.de)(?!yandex\.ru)(?!ymail\.com)(?!libero\.it)(?!outlook\.com)(?!uol\.com\.br)(?!bol\.com\.br)(?!mail\.ru)(?!cox\.net)(?!hotmail\.it)(?!sbcglobal\.net)(?!sfr\.fr)(?!live\.fr)(?!verizon\.net)(?!live\.co\.uk)(?!googlemail\.com)(?!yahoo\.es)(?!ig\.com\.br)(?!live\.nl)(?!bigpond\.com)(?!terra\.com\.br)(?!yahoo\.it)(?!neuf\.fr)(?!yahoo\.de)(?!alice\.it)(?!rocketmail\.com)(?!att\.net)(?!laposte\.net)(?!facebook\.com)(?!bellsouth\.net)(?!yahoo\.in)(?!hotmail\.es)(?!charter\.net)(?!yahoo\.ca)(?!yahoo\.com\.au)(?!rambler\.ru)(?!hotmail\.de)(?!tiscali\.it)(?!shaw\.ca)(?!yahoo\.co\.jp)(?!sky\.com)(?!earthlink\.net)(?!optonline\.net)(?!freenet\.de)(?!t-online\.de)(?!aliceadsl\.fr)(?!virgilio\.it)(?!home\.nl)(?!qq\.com)(?!telenet\.be)(?!me\.com)(?!yahoo\.com\.ar)(?!tiscali\.co\.uk)(?!yahoo\.com\.mx)(?!voila\.fr)(?!gmx\.net)(?!mail\.com)(?!planet\.nl)(?!tin\.it)(?!live\.it)(?!ntlworld\.com)(?!arcor\.de)(?!yahoo\.co\.id)(?!frontiernet\.net)(?!hetnet\.nl)(?!live\.com\.au)(?!yahoo\.com\.sg)(?!zonnet\.nl)(?!club-internet\.fr)(?!juno\.com)(?!optusnet\.com\.au)(?!blueyonder\.co\.uk)(?!bluewin\.ch)(?!skynet\.be)(?!sympatico\.ca)(?!windstream\.net)(?!mac\.com)(?!centurytel\.net)(?!chello\.nl)(?!live\.ca)(?!aim\.com)(?!bigpond\.net\.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+    }, 'Free email addresses are not allowed.');
 
-	$("#letstalk").click(function(){
-    var honeypot_val = $("#honeypot").val();
-    if(honeypot_val == ''){
-        // Check if the disclaimer checkbox is checked
-        if ($('#agree').is(':checked')) {
-            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
-            $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
-            $("#primaryForm").submit();
-			$('.box').hide();
-            return true;
+    // Add method to allow only letters
+    $.validator.addMethod("lettersonly", function(value, element) {
+        return this.optional(element) || /^[a-z\s]+$/i.test(value);
+    }, "Please enter letters only.");
+
+    // Add method to disallow empty spaces
+    $.validator.addMethod("noSpace", function(value, element) {
+        return value.trim().length !== 0;
+    }, "No spaces allowed! Please don't leave it empty.");
+
+    // Add method for mobile number validation
+    $.validator.addMethod("mobile", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, "");
+        return this.optional(element) || (phone_number.length >= 6 && phone_number.length <= 15 && phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s*,?$)\d{10}\s*,?$/));
+    }, "Mobile number should be of 6 to 15 digits.");
+
+    // Validate the primary form
+    $("#primaryForm").validate({
+        rules: {
+            "first-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            "last-name": {
+                required: true,
+                maxlength: 50,
+                lettersonly: true
+            },
+            email: {
+                required: true,
+                myusername: true
+            },
+            phone: {
+                required: true,
+                minlength: 6,
+                maxlength: 15,
+                mobile: true
+            },
+            "job-title": {
+                required: true
+            },
+            company: {
+                required: true
+            },
+            "software-used": {
+                required: true
+            },
+            country: {
+                required: true
+            }
+        },
+        messages: {
+            "first-name": {
+                required: "",
+                maxlength: ""
+            },
+            "last-name": {
+                required: "",
+                maxlength: ""
+            },
+            email: {
+                required: ""
+            },
+            phone: {
+                required: "",
+                minlength: "",
+                maxlength: ""
+            },
+            "job-title": {
+                required: ""
+            },
+            company: {
+                required: ""
+            },
+            "software-used": {
+                required: ""
+            },
+            country: {
+                required: ""
+            }
+        },
+        submitHandler: function(form) {
+            var honeypot_val = $("#honeypot").val();
+            if (honeypot_val != '' || grecaptcha.getResponse() == "") {
+                if (honeypot_val != '') {
+                    window.location.reload();
+                    return false;
+                } else {
+                    $(".capt").addClass("error");
+                    return false;
+                }
+            } else {
+                if (honeypot_val == '') {
+                    $("#secondaryForm").submit();
+                    return true;
+                } else {
+                    $(".capt").removeClass("error");
+                    return true;
+                }
+            }
+        }
+    });
+
+    // Custom event listener for the form submit
+    $('form').on('submit', function(event) {
+        const countrySelect = document.getElementById('country');
+        if (countrySelect.value === '') {
+			$("#country").addClass("error")
+            // alert('Please select a country.');
+            event.preventDefault();
+        }
+    });
+
+    // Event listener for the 'letstalk' button
+    $("#letstalk").click(function() {
+        var honeypot_val = $("#honeypot").val();
+        if (honeypot_val == '') {
+            // Check if the disclaimer checkbox is checked
+            if ($('#agree').is(':checked')) {
+                $('#primaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+                $("#primaryForm").submit();
+                $('.box').hide();
+                return true;
+            } else {
+                // Show an alert or handle the case when the checkbox is not checked
+                $('.box').show();
+                return false;
+            }
         } else {
-            // Show an alert or handle the case when the checkbox is not checked
-            // alert('Please agree to the privacy policy.');
-			$('.box').show();
+            window.location.reload();
             return false;
         }
-    } else {
-        window.location.reload();
+    });
+
+    // Restrict certain characters in 'first_name' and 'last_name' fields
+    $("#first_name, #last_name").keypress(function(event) {
+        var regex = new RegExp("^[a-zA-Z ]*$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    // Prevent cut, copy, paste on form inputs
+    $('#primaryForm input').bind("cut copy paste", function(e) {
+        e.preventDefault();
+    });
+
+    // Rescale reCAPTCHA on window resize
+    function rescaleCaptcha() {
+        var width = $('.g-recaptcha').parent().width();
+        var scale = width < 302 ? width / 302 : 1;
+        $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+        $('.g-recaptcha').css('transform-origin', '0 0');
+        $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+    }
+
+    rescaleCaptcha();
+    $(window).resize(function() { rescaleCaptcha(); });
+});
+
+// Restrict non-numeric input in phone number field
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     }
-})
+    return true;
+}
 
-	$("#first_name").keypress(function(event){
-		var regex = new RegExp("^[a-zA-Z ]*$");
-			console.log(regex);
-		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-		if (!regex.test(key)) {
-		event.preventDefault();
-		return false;
-		}
-	});
-
-	$("#last_name").keypress(function(event){
-		var regex = new RegExp("^[a-zA-Z ]*$");
-			console.log(regex);
-		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-		if (!regex.test(key)) {
-		event.preventDefault();
-		return false;
-		}
-	});
-
-	$('#primaryForm input').bind("cut copy paste",function(e) {
-		e.preventDefault();
-	});
-	
-	
-		
-	});
-	
-	$(function(){
-	  function rescaleCaptcha(){
-		var width = $('.g-recaptcha').parent().width();
-		var scale;
-		if (width < 302) {
-		  scale = width / 302;
-		} else{
-		  scale = 1; 
-		}
-	
-		$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-		$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-		$('.g-recaptcha').css('transform-origin', '0 0');
-		$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-	  }
-	
-	  rescaleCaptcha();
-	  $( window ).resize(function() { rescaleCaptcha(); });
-	
-	});
-	
-	function isNumberKey(evt){
-		var charCode = (evt.which) ? evt.which : event.keyCode
-		if (charCode > 31 && (charCode < 48 || charCode > 57))
-			return false;
-
-		return true;
-	}
 	</script>
 	<style amp-custom>
 		@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');

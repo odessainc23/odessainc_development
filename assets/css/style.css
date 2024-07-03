@@ -1455,6 +1455,12 @@ section.news .upperdiv .nopad {
 .letstalkform .form-control.error {
   border-color: #ff495c;
 }
+.letstalkform .form-control.select.error{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: inline !important;
+}
 #annoucementslider .owl-dots,
 .letstalkSecondryform .secnformCon .form-group label.error,
 .letstalkform .form-group label.error {
