@@ -4535,6 +4535,9 @@ body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button {
   margin-right: 0rem !important;
   margin-bottom: 0.5rem !important;
 }
+body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button.cc-nb-changep{
+  margin-bottom: 0 !important;
+}
 .preferences-content {
   background-color: #fff;
   padding:1em;
