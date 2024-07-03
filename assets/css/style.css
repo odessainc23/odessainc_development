@@ -1456,7 +1456,7 @@ section.news .upperdiv .nopad {
   border-color: #ff495c;
 }
 .letstalkSecondryform .secnformCon .bootstrap-select > .btn{
-  height: 0 !important;
+  height: 42px !important;
 }
 .letstalkSecondryform .secnformCon .form-control.select.error{
   position: absolute;
@@ -1465,7 +1465,7 @@ section.news .upperdiv .nopad {
   display: inline !important;
 }
 .bootstrap-select.btn-group .btn .caret{
-  margin-top: 10px !important;
+  /* margin-top: 10px !important; */
 }
 .letstalkform .form-control.select.error{
   position: absolute;
