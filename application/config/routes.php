@@ -85,6 +85,7 @@ $route['handbook/cx-asset-finance'] = 'Ebook';
 $route['handbook/cx-asset-finance-thankyou'] = 'Ebook_thank';
 $route['virtual-wine-table-registration'] = 'Virtual';
 $route['virtual-wine-table-registration/thankyou'] = 'Winethank';
+$route['innovate24'] = 'Redirect_innovate24';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['auto-finance-software'] = 'Auto_amp';
 $route['auto-finance-news'] = 'Redirect_news';
