@@ -576,7 +576,7 @@
         if (honeypot_val == '') {
             // Check if the disclaimer checkbox is checked
             if ($('#agree').is(':checked')) {
-                $('#secondaryForm').attr('action', 'http://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
+                $('#secondaryForm').attr('action', 'https://go.odessainc.com/l/310001/2023-09-29/3s36yzd');
                 $("#secondaryForm").submit();
                 $('.box').hide();
                 return true;
