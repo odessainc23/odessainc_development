@@ -1459,6 +1459,7 @@ section.news .upperdiv .nopad {
   top: 0;
   z-index: 1;
   display: inline !important;
+  color: #999999 !important;
 }
 /* .bootstrap-select.btn-group .btn .caret{
   margin-top: 10px !important;
