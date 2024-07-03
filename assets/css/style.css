@@ -1469,6 +1469,7 @@ section.news .upperdiv .nopad {
   top: 0;
   z-index: 1;
   display: inline !important;
+  color: #999999 !important;
 }
 .countryAddinfo .headingrows h3.mntop.pd,
 .countryAddinfo p {
