@@ -88,6 +88,7 @@ $route['automotive-finance-software'] = 'Redirect_amp';
 $route['cocktail-registration'] = 'Cocktail';
 $route['cocktail-registration-thankyou'] = 'Cocktailthank';
 $route['auto-finance-news'] = 'Redirect_news';
+$route['innovate24'] = 'Redirect_innovate24';
 $route['auto-finance-news-thankyou'] = 'Autothankyou_amp';
 $route['whitepaper/future-ready-asset-finance-api'] = 'Api_amp';
 $route['whitepaper/future-ready-asset-finance-api-thankyou'] = 'Thankyou_api';
