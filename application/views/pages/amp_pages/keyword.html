@@ -55,6 +55,27 @@
             margin-bottom: 20px;
 			position: relative;
         }
+		#authControls {
+    margin-top: 10px;
+}
+
+#loginButton, #logoutButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#loginButton {
+    background-color: #007bff;
+    color: white;
+}
+
+#logoutButton {
+    background-color: #dc3545;
+    color: white;
+}
         .search-bar input {
             padding: 10px;
             font-size: 1em;
@@ -125,6 +146,9 @@
     <header>
         <h1 id="headline">Welcome to Our Website</h1>
         <p id="subhead">We provide the best services for your needs.</p>
+		<div id="authControls">
+			<!-- Login and Logout buttons will appear here -->
+		</div>
     </header>
     <section>
         <div class="search-bar">
@@ -164,174 +188,216 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script>
-        const availableKeywords = ['Auto', 'Asset', 'Xaas'];
+        document.addEventListener('DOMContentLoaded', function () {
+    const availableKeywords = ['Auto', 'Asset', 'Xaas'];
 
-        $(function() {
-            $("#searchInput").autocomplete({
-                source: availableKeywords
-            });
+    // Add Autocomplete functionality
+    $(function() {
+        $("#searchInput").autocomplete({
+            source: availableKeywords
         });
+    });
 
-        const keywordSynonyms = {
-            auto: ['vehicle', 'car'],
-            asset: ['finance', 'investment'],
-            xaas: ['everything as a service', 'cloud service']
-        };
+    const keywordSynonyms = {
+        auto: ['vehicle', 'car'],
+        asset: ['finance', 'investment'],
+        xaas: ['everything as a service', 'cloud service']
+    };
 
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
+    // Function to get query parameters from URL
+    function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Function to highlight keywords
+    function highlightKeyword(text, keyword) {
+        if (!keyword) return text;
+        const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const regex = new RegExp(`(${escapedKeyword})`, 'gi');
+        return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    // Update headline and subhead based on the keyword
+    function updateContent(keyword) {
+        const headline = document.getElementById('headline');
+        const subhead = document.getElementById('subhead');
+
+        if (keyword) {
+            headline.innerHTML = `Welcome to Our ${highlightKeyword(keyword, keyword)} Page`;
+            subhead.innerHTML = `We provide the best ${highlightKeyword(keyword, keyword)} services for your needs.`;
+        } else {
+            headline.innerHTML = 'Welcome to Our Website';
+            subhead.innerHTML = 'We provide the best services for your needs.';
         }
+    }
 
-        function highlightKeyword(text, keyword) {
-            if (!keyword) return text;
-            const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-            const regex = new RegExp(`(${escapedKeyword})`, 'gi');
-            return text.replace(regex, '<span class="highlight">$1</span>');
-        }
+    // Update comparison table based on the keyword
+    function updateComparisonTable(keyword) {
+        const comparisonTable = document.getElementById('comparisonTable').getElementsByTagName('tbody')[0];
+        const competitorHeader = document.getElementById('competitorHeader');
 
-        function updateContent(keyword) {
-            const headline = document.getElementById('headline');
-            const subhead = document.getElementById('subhead');
+        comparisonTable.innerHTML = '';
 
-            if (keyword) {
-                headline.innerHTML = `Welcome to Our ${highlightKeyword(keyword, keyword)} Page`;
-                subhead.innerHTML = `We provide the best ${highlightKeyword(keyword, keyword)} services for your needs.`;
-            } else {
-                headline.innerHTML = 'Welcome to Our Website';
-                subhead.innerHTML = 'We provide the best services for your needs.';
-            }
-        }
+        if (keyword) {
+            const rows = {
+                auto: [
+                    { feature: 'Feature 1', yourSoftware: 'Yes', competitor: 'No' },
+                    { feature: 'Feature 2', yourSoftware: 'Yes', competitor: 'Yes' },
+                    { feature: 'Feature 3', yourSoftware: 'No', competitor: 'Yes' },
+                ],
+                asset: [
+                    { feature: 'Feature A', yourSoftware: 'Yes', competitor: 'No' },
+                    { feature: 'Feature B', yourSoftware: 'No', competitor: 'Yes' },
+                    { feature: 'Feature C', yourSoftware: 'Yes', competitor: 'Yes' },
+                ],
+                xaas: [
+                    { feature: 'Feature X', yourSoftware: 'Yes', competitor: 'No' },
+                    { feature: 'Feature Y', yourSoftware: 'Yes', competitor: 'Yes' },
+                    { feature: 'Feature Z', yourSoftware: 'No', competitor: 'Yes' },
+                ]
+            };
 
-        function updateComparisonTable(keyword) {
-            const comparisonTable = document.getElementById('comparisonTable').getElementsByTagName('tbody')[0];
-            const competitorHeader = document.getElementById('competitorHeader');
+            const selectedRows = rows[keyword.toLowerCase()] || [];
 
-            comparisonTable.innerHTML = '';
-
-            if (keyword) {
-                const rows = {
-                    auto: [
-                        { feature: 'Feature 1', yourSoftware: 'Yes', competitor: 'No' },
-                        { feature: 'Feature 2', yourSoftware: 'Yes', competitor: 'Yes' },
-                        { feature: 'Feature 3', yourSoftware: 'No', competitor: 'Yes' },
-                    ],
-                    asset: [
-                        { feature: 'Feature A', yourSoftware: 'Yes', competitor: 'No' },
-                        { feature: 'Feature B', yourSoftware: 'No', competitor: 'Yes' },
-                        { feature: 'Feature C', yourSoftware: 'Yes', competitor: 'Yes' },
-                    ],
-                    xaas: [
-                        { feature: 'Feature X', yourSoftware: 'Yes', competitor: 'No' },
-                        { feature: 'Feature Y', yourSoftware: 'Yes', competitor: 'Yes' },
-                        { feature: 'Feature Z', yourSoftware: 'No', competitor: 'Yes' },
-                    ]
-                };
-
-                const selectedRows = rows[keyword.toLowerCase()] || [];
-
-                selectedRows.forEach(row => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${row.feature}</td>
-                        <td class="${row.yourSoftware === 'Yes' ? 'strong' : ''}">${row.yourSoftware}</td>
-                        <td class="${row.competitor === 'Yes' ? 'strong' : ''}">${row.competitor}</td>
-                    `;
-                    comparisonTable.appendChild(tr);
-                });
-
-                competitorHeader.innerHTML = `${keyword.charAt(0).toUpperCase() + keyword.slice(1)} Competitor`;
-            }
-        }
-
-        function saveSearchHistory(keyword) {
-            let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-            searchHistory.push(keyword);
-            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-            displaySearchHistory();
-        }
-
-        function displaySearchHistory() {
-            const historyContainer = document.getElementById('historyContainer');
-            historyContainer.innerHTML = '';
-
-            const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-
-            searchHistory.forEach(keyword => {
-                const historyItem = document.createElement('div');
-                historyItem.textContent = keyword;
-                historyItem.addEventListener('click', () => {
-                    document.getElementById('searchInput').value = keyword;
-                    performSearch(keyword);
-                });
-                historyContainer.appendChild(historyItem);
-            });
-        }
-
-        function performSearch(keyword) {
-            updateContent(keyword);
-            updateComparisonTable(keyword);
-            saveSearchHistory(keyword);
-            document.getElementById('comparisonTable').style.display = 'none'; // Hide table initially
-        }
-
-        function submitRating() {
-            const rating = document.getElementById('rating').value;
-            const reviews = document.getElementById('reviews');
-            reviews.innerHTML += `<p>Rating submitted: ${rating}</p>`;
-        }
-
-        document.getElementById('searchInput').addEventListener('change', function() {
-            const keyword = this.value;
-            performSearch(keyword);
-        });
-
-        document.getElementById('showTable').addEventListener('click', function() {
-            document.getElementById('comparisonTable').style.display = 'table'; // Show table
-        });
-
-        document.getElementById('downloadReport').addEventListener('click', function() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            // Add title
-            doc.text("Comparison Report", 10, 10);
-
-            // Add headline and subhead
-            doc.text(document.getElementById('headline').textContent, 10, 20);
-            doc.text(document.getElementById('subhead').textContent, 10, 30);
-
-            // Add comparison table
-            const table = document.getElementById('comparisonTable');
-            let yOffset = 40;
-
-            // Add table headers
-            const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
-            doc.text(headers[0], 10, yOffset);
-            doc.text(headers[1], 60, yOffset);
-            doc.text(headers[2], 110, yOffset);
-            yOffset += 10;
-
-            // Add table rows
-            Array.from(table.querySelectorAll('tbody tr')).forEach(row => {
-                const cells = Array.from(row.querySelectorAll('td')).map(td => td.textContent);
-                doc.text(cells[0], 10, yOffset);
-                doc.text(cells[1], 60, yOffset);
-                doc.text(cells[2], 110, yOffset);
-                yOffset += 10;
+            selectedRows.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.feature}</td>
+                    <td class="${row.yourSoftware === 'Yes' ? 'strong' : ''}">${row.yourSoftware}</td>
+                    <td class="${row.competitor === 'Yes' ? 'strong' : ''}">${row.competitor}</td>
+                `;
+                comparisonTable.appendChild(tr);
             });
 
-            // Save the PDF
-            doc.save('report.pdf');
-        });
+            competitorHeader.innerHTML = `${keyword.charAt(0).toUpperCase() + keyword.slice(1)} Competitor`;
+        }
+    }
 
+    // Save and display search history
+    function saveSearchHistory(keyword) {
+        let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        searchHistory.push(keyword);
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
         displaySearchHistory();
+    }
 
-        const initialKeyword = getQueryParameter('keyword');
-        if (initialKeyword) {
-            document.getElementById('searchInput').value = initialKeyword;
-            performSearch(initialKeyword);
+    function displaySearchHistory() {
+        const historyContainer = document.getElementById('historyContainer');
+        historyContainer.innerHTML = '';
+
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+        searchHistory.forEach(keyword => {
+            const historyItem = document.createElement('div');
+            historyItem.textContent = keyword;
+            historyItem.addEventListener('click', () => {
+                document.getElementById('searchInput').value = keyword;
+                performSearch(keyword);
+            });
+            historyContainer.appendChild(historyItem);
+        });
+    }
+
+    // Perform search and update content
+    function performSearch(keyword) {
+        updateContent(keyword);
+        updateComparisonTable(keyword);
+        saveSearchHistory(keyword);
+        document.getElementById('comparisonTable').style.display = 'none'; // Hide table initially
+    }
+
+    // Submit user rating
+    function submitRating() {
+        const rating = document.getElementById('rating').value;
+        const reviews = document.getElementById('reviews');
+        reviews.innerHTML += `<p>Rating submitted: ${rating}</p>`;
+    }
+
+    // Login/Logout Functions
+    function updateAuthControls() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const authControls = document.getElementById('authControls');
+        authControls.innerHTML = '';
+
+        if (isLoggedIn) {
+            authControls.innerHTML = `
+                <button id="logoutButton">Logout</button>
+            `;
+            document.getElementById('logoutButton').addEventListener('click', function() {
+                localStorage.setItem('isLoggedIn', 'false');
+                updateAuthControls();
+            });
+        } else {
+            authControls.innerHTML = `
+                <button id="loginButton">Login</button>
+            `;
+            document.getElementById('loginButton').addEventListener('click', function() {
+                const username = prompt('Enter username:');
+                const password = prompt('Enter password:');
+                if (username && password) {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    updateAuthControls();
+                }
+            });
         }
+    }
+
+    // Initial setup
+    document.getElementById('searchInput').addEventListener('change', function() {
+        const keyword = this.value;
+        performSearch(keyword);
+    });
+
+    document.getElementById('showTable').addEventListener('click', function() {
+        document.getElementById('comparisonTable').style.display = 'table'; // Show table
+    });
+
+    document.getElementById('downloadReport').addEventListener('click', function() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Add title
+        doc.text("Comparison Report", 10, 10);
+
+        // Add headline and subhead
+        doc.text(document.getElementById('headline').textContent, 10, 20);
+        doc.text(document.getElementById('subhead').textContent, 10, 30);
+
+        // Add comparison table
+        const table = document.getElementById('comparisonTable');
+        let yOffset = 40;
+
+        // Add table headers
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
+        doc.text(headers[0], 10, yOffset);
+        doc.text(headers[1], 60, yOffset);
+        doc.text(headers[2], 110, yOffset);
+        yOffset += 10;
+
+        // Add table rows
+        Array.from(table.querySelectorAll('tbody tr')).forEach(row => {
+            const cells = Array.from(row.querySelectorAll('td')).map(td => td.textContent);
+            doc.text(cells[0], 10, yOffset);
+            doc.text(cells[1], 60, yOffset);
+            doc.text(cells[2], 110, yOffset);
+            yOffset += 10;
+        });
+
+        // Save the PDF
+        doc.save('report.pdf');
+    });
+
+    displaySearchHistory();
+    updateAuthControls();
+
+    const initialKeyword = getQueryParameter('keyword');
+    if (initialKeyword) {
+        document.getElementById('searchInput').value = initialKeyword;
+        performSearch(initialKeyword);
+    }
+});
+
     </script>
 </body>
 </html>
