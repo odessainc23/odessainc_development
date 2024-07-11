@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        header, section {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+        }
+        p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            display: none; /* Hide table initially */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .strong {
+            font-weight: bold;
+            background-color: #e0ffe0;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+			position: relative;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 1em;
+            width: calc(100% - 22px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #historyContainer {
+            margin-top: 20px;
+            text-align: left;
+            width: 100%;
+			position: absolute;
+			height: 45px;
+			overflow-y: scroll;
+			top: 10px;
+			background: #d0caca;
+        }
+        #historyContainer h3 {
+            margin-top: 0;
+        }
+        #historyContainer div {
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        #imageContainer img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        #downloadReport {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #ratingContainer {
+            margin-top: 20px;
+            text-align: left;
+        }
+        #ratingContainer label {
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        #ratingContainer select {
+            padding: 5px;
+            font-size: 1em;
+        }
+        #reviews {
+            margin-top: 20px;
+        }
+        #showTable {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="headline">Welcome to Our Website</h1>
+        <p id="subhead">We provide the best services for your needs.</p>
+    </header>
+    <section>
+        <div class="search-bar">
+			<div id="historyContainer"></div>
+            <input type="text" id="searchInput" placeholder="Enter keyword (e.g., Auto, Asset, Xaas)" />
+        </div>
+        <div id="imageContainer"></div>
+        <table id="comparisonTable">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Your Software</th>
+                    <th id="competitorHeader">Competitor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Comparison rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <button id="showTable">Show Comparison Table</button>
+        <button id="downloadReport">Download Report</button>
+       
+        <div id="ratingContainer">
+            <label for="rating">Rate our page:</label>
+            <select id="rating">
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+            <button onclick="submitRating()">Submit Rating</button>
+        </div>
+        <div id="reviews"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        const availableKeywords = ['Auto', 'Asset', 'Xaas'];
+
+        $(function() {
+            $("#searchInput").autocomplete({
+                source: availableKeywords
+            });
+        });
+
+        const keywordSynonyms = {
+            auto: ['vehicle', 'car'],
+            asset: ['finance', 'investment'],
+            xaas: ['everything as a service', 'cloud service']
+        };
+
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function highlightKeyword(text, keyword) {
+            if (!keyword) return text;
+            const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            const regex = new RegExp(`(${escapedKeyword})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function updateContent(keyword) {
+            const headline = document.getElementById('headline');
+            const subhead = document.getElementById('subhead');
+
+            if (keyword) {
+                headline.innerHTML = `Welcome to Our ${highlightKeyword(keyword, keyword)} Page`;
+                subhead.innerHTML = `We provide the best ${highlightKeyword(keyword, keyword)} services for your needs.`;
+            } else {
+                headline.innerHTML = 'Welcome to Our Website';
+                subhead.innerHTML = 'We provide the best services for your needs.';
+            }
+        }
+
+        function updateComparisonTable(keyword) {
+            const comparisonTable = document.getElementById('comparisonTable').getElementsByTagName('tbody')[0];
+            const competitorHeader = document.getElementById('competitorHeader');
+
+            comparisonTable.innerHTML = '';
+
+            if (keyword) {
+                const rows = {
+                    auto: [
+                        { feature: 'Feature 1', yourSoftware: 'Yes', competitor: 'No' },
+                        { feature: 'Feature 2', yourSoftware: 'Yes', competitor: 'Yes' },
+                        { feature: 'Feature 3', yourSoftware: 'No', competitor: 'Yes' },
+                    ],
+                    asset: [
+                        { feature: 'Feature A', yourSoftware: 'Yes', competitor: 'No' },
+                        { feature: 'Feature B', yourSoftware: 'No', competitor: 'Yes' },
+                        { feature: 'Feature C', yourSoftware: 'Yes', competitor: 'Yes' },
+                    ],
+                    xaas: [
+                        { feature: 'Feature X', yourSoftware: 'Yes', competitor: 'No' },
+                        { feature: 'Feature Y', yourSoftware: 'Yes', competitor: 'Yes' },
+                        { feature: 'Feature Z', yourSoftware: 'No', competitor: 'Yes' },
+                    ]
+                };
+
+                const selectedRows = rows[keyword.toLowerCase()] || [];
+
+                selectedRows.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.feature}</td>
+                        <td class="${row.yourSoftware === 'Yes' ? 'strong' : ''}">${row.yourSoftware}</td>
+                        <td class="${row.competitor === 'Yes' ? 'strong' : ''}">${row.competitor}</td>
+                    `;
+                    comparisonTable.appendChild(tr);
+                });
+
+                competitorHeader.innerHTML = `${keyword.charAt(0).toUpperCase() + keyword.slice(1)} Competitor`;
+            }
+        }
+
+        function saveSearchHistory(keyword) {
+            let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+            searchHistory.push(keyword);
+            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+            displaySearchHistory();
+        }
+
+        function displaySearchHistory() {
+            const historyContainer = document.getElementById('historyContainer');
+            historyContainer.innerHTML = '';
+
+            const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+            searchHistory.forEach(keyword => {
+                const historyItem = document.createElement('div');
+                historyItem.textContent = keyword;
+                historyItem.addEventListener('click', () => {
+                    document.getElementById('searchInput').value = keyword;
+                    performSearch(keyword);
+                });
+                historyContainer.appendChild(historyItem);
+            });
+        }
+
+        function performSearch(keyword) {
+            updateContent(keyword);
+            updateComparisonTable(keyword);
+            saveSearchHistory(keyword);
+            document.getElementById('comparisonTable').style.display = 'none'; // Hide table initially
+        }
+
+        function submitRating() {
+            const rating = document.getElementById('rating').value;
+            const reviews = document.getElementById('reviews');
+            reviews.innerHTML += `<p>Rating submitted: ${rating}</p>`;
+        }
+
+        document.getElementById('searchInput').addEventListener('change', function() {
+            const keyword = this.value;
+            performSearch(keyword);
+        });
+
+        document.getElementById('showTable').addEventListener('click', function() {
+            document.getElementById('comparisonTable').style.display = 'table'; // Show table
+        });
+
+        document.getElementById('downloadReport').addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add title
+            doc.text("Comparison Report", 10, 10);
+
+            // Add headline and subhead
+            doc.text(document.getElementById('headline').textContent, 10, 20);
+            doc.text(document.getElementById('subhead').textContent, 10, 30);
+
+            // Add comparison table
+            const table = document.getElementById('comparisonTable');
+            let yOffset = 40;
+
+            // Add table headers
+            const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
+            doc.text(headers[0], 10, yOffset);
+            doc.text(headers[1], 60, yOffset);
+            doc.text(headers[2], 110, yOffset);
+            yOffset += 10;
+
+            // Add table rows
+            Array.from(table.querySelectorAll('tbody tr')).forEach(row => {
+                const cells = Array.from(row.querySelectorAll('td')).map(td => td.textContent);
+                doc.text(cells[0], 10, yOffset);
+                doc.text(cells[1], 60, yOffset);
+                doc.text(cells[2], 110, yOffset);
+                yOffset += 10;
+            });
+
+            // Save the PDF
+            doc.save('report.pdf');
+        });
+
+        displaySearchHistory();
+
+        const initialKeyword = getQueryParameter('keyword');
+        if (initialKeyword) {
+            document.getElementById('searchInput').value = initialKeyword;
+            performSearch(initialKeyword);
+        }
+    </script>
+</body>
+</html>
