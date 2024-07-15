@@ -41,6 +41,9 @@ $(function() {
   // Change the href attribute of the anchor tag
   $("#post-1108 .continue-reading-link").attr("href", newUrl4);
   $("#post-1108 a").attr("href", newUrl4);
+
+
+  $('.postid-1117').append($('<div>o	Ankit Parikh, AVP - Leasing Business, Tata Motors Finance; Campbell Clout, MD - APMEA, Odessa; Anand Bang, COO – Sales & Marketing, Tata Motors Finance; Neeloy Majumder, COO – Technology, Tata Motors Finance</div>'))
 });
 
 
