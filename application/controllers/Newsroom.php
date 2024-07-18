@@ -15,9 +15,9 @@ class Newsroom extends CI_Controller {
 		$res_announcements = $query1->result();
 
 
-		$res[ '2' ]->image = '/blog/wp-content/uploads/2024/auto-press.png';
-		$res[ '0' ]->image = '/blog/wp-content/uploads/2024/tata-team.png';
-		$res[ '1' ]->image = '/blog/wp-content/uploads/2024/nate.jpg';
+		$res[ '2' ]->image = '/blog/wp-content/uploads/2024/nate.jpg';
+		$res[ '0' ]->image = '/blog/wp-content/uploads/2024/jd-power.png';
+		$res[ '1' ]->image = '/blog/wp-content/uploads/2024/tata-team.png';
 
 		
 		$data['meta_title']			= 'Get the latest updates about Odessa in the news.';
