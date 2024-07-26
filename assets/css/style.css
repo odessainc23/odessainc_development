@@ -939,7 +939,7 @@ section.news .heading_div {
   vertical-align: middle;
 }
 .trusted_brands_logo .brlogo {
-  margin: 0 40px;
+  margin: 0 25px;
   display: inline-block;
 }
 .cm-menu .navbar-nav,
@@ -3449,6 +3449,7 @@ section.innovate_section .btns_style:hover {
   #wrapper {
     margin: 60px auto auto;
   }
+ 
   .acc .accreditations .flex li {
     margin: 0 5px;
 }
@@ -3771,6 +3772,7 @@ section.innovate_section .btns_style:hover {
     flex-wrap: wrap;
     width: 100%;
   }
+  
   .covid-alert .alert-dismissible .close {
     display: none;
   }
