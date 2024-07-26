@@ -16,9 +16,8 @@
         // Get parameters from URL
         let params = getQueryParams();
 
-        // Check if email is present
+        // Create a form and submit it to Pardot Form Handler
         if (params.email) {
-            // Create a form and submit it to Pardot Form Handler
             let form = document.createElement('form');
             form.method = 'POST';
             form.action = 'https://go.odessainc.com/l/310001/2024-07-25/3s4chmm'; // Replace with your Pardot Form Handler URL
@@ -35,6 +34,7 @@
 
             document.body.appendChild(form);
             form.submit();
+        } else {
+            alert('Email parameter is missing.');
         }
     </script>
-
