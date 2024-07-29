@@ -244,10 +244,13 @@ position: relative;
  .bg-blue{
     background: url(../images/technology-partner/ellip2.png) center 0px no-repeat #085B7B;
  }
+ .navbar-brand {
+    margin: 10px 50px;
+ }
  .height-small{
     height: 16vh;
  }
- .reasons-consider-odessa .row{
+ .right-technology-partner .row{
     margin:0;width:100%;
  }
  .reasons-consider-odessa .row .col-lg-4,.reasons-consider-odessa .row .col-lg-6{
@@ -287,6 +290,7 @@ position: relative;
 .cannon-image{
     width: 100%;position: relative;margin-bottom: 30px;
 }
+.right-technology-partner{}
 .cannon-image img.mob{
     height: 400px;
 }
@@ -352,5 +356,14 @@ form .flex-section{
 }
 .cannon-part {
     width: 100%;
+}
+.reasons-consider-odessa .row .col-lg-6 {
+    padding: 0 
+}
+.reasons-consider-odessa h2{
+    text-align: center;
+}
+.navbar-brand {
+    margin: 10px 10px;
 }
 }
