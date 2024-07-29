@@ -123,9 +123,12 @@ position: relative;
 }
 .cannon-image img{
     width: 100%;
+  
+    object-fit: cover;
+}
+.cannon-image img.mob,.cannon-image img.desk{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    object-fit: cover;
 }
 .tech-container h2{
     color: #00ACC8;
@@ -141,7 +144,7 @@ position: relative;
     margin: 0 !important;
 }
 .cannon-part .glyphicon{
-    height: 25px;
+    height: 22px;
 }
 .quote{
     position: absolute;
@@ -150,7 +153,7 @@ position: relative;
 }
 .cannon-part .glyphicon-play:before {
     content: "\e072";
-    font-size: 12px;
+    font-size: 16px;
     color: #FC5D19;
     padding: 5px 10px;
 }
