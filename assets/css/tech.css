@@ -19,6 +19,9 @@ position: relative;
     bottom: 0;
     content: "";
 }
+#wistia_41.thumb_container,.wistia_embed.wistia_async_kndvnc3z5u,#wistia_44.thumb_container{
+    width: 100% !important;
+}
 .top-section{
     position: relative;
     top: -230px;
