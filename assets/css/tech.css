@@ -233,8 +233,8 @@ position: relative;
     background: #F3F3F5;
     padding: 50px 0;
  }
- .client-logos{
-   
+ .client-logos h2{
+   margin-bottom: 0;
  }
  .client-br h2 span{
     font-size: 16px;
