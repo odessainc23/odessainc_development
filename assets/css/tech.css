@@ -1,0 +1,356 @@
+.right-technology-partner{
+   
+}
+.right-technology-partner .mob{
+    display: none;
+}
+.tech-cont{
+    height: 500px;
+    background: 
+    url(../images/technology-partner/ellipse.png) center 20px no-repeat,
+    linear-gradient(0deg, #00ACC8 -120%, rgba(0, 172, 200, 0) 60.1%), 
+    #0D2332; /* Solid color fallback */
+background-size: 550px 100%;
+position: relative;
+}
+.right-technology-partner:after{
+    position: absolute;
+    background: linear-gradient(0deg, #00ACC8 0%, rgba(0, 172, 200, 0) 97.1%);
+    bottom: 0;
+    content: "";
+}
+.top-section{
+    position: relative;
+    top: -230px;
+    margin: 0 0 50px 0;
+}
+.tech-part{
+    padding: 100px 0 0;
+    text-align: center;
+}
+.tech-part h1{
+    background: -webkit-linear-gradient(296deg, #B8E3ED 0.41%, #00ACC8 97.3%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+.tech-part h6{
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.tech-part .btn{
+    font-size: 18px;
+    background: #FC5D19;
+    border-radius: 8px;
+    width: 233px;
+    height: 54px;
+    margin: 20px 0 0;
+}
+.flex-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.right-technology-partner .odc__btn--primary.odc__btn--xl{
+    border:0;
+    font-size: 18px;
+    background: #FC5D19;
+    border-radius: 8px;
+    width: 233px;
+    height: 54px;
+    margin: 20px 0 0;
+}
+.right-technology-partner .odc__btn--primary.odc__btn--xl:hover{
+    box-shadow: none;
+}
+
+#bodyId .navbar {
+    display: none;
+}
+#bodyId footer {
+    display: none;
+}
+#bodyId .footermenu_strip{
+    display: none;
+}
+.cannon-section{
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 50px auto 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 50px 0px #0000001A;
+}
+.tech-container{
+    width: 90%;
+    margin: 0 auto 0px auto;
+}
+.cannon-content{
+    width:80%;
+}
+.cannon-part{
+    width: 95%;
+}
+.cannon-part p{
+   color:#0D2332;
+   font-size: 18px;
+   margin: 0 0 20px 0;
+}
+.cfs-benefit{
+    background: #F3F3F5;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.cfs-benefit h4{
+    margin:0 0 5px 0;
+}
+.cfs-benefit ul{
+    padding: 0 30px;
+}
+.cannon-image{
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+}
+.cannon-image img{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-fit: cover;
+}
+.tech-container h2{
+    color: #00ACC8;
+    font-family:MaisonNeue-Bold;
+    margin:0 0 20px 0;
+    font-size: 32px;
+}
+.cannon-part .btn{
+    background:#0D2332 !important;
+    border-radius: 8px !important;
+    width:300px !important;
+    height: 54px !important;
+    margin: 0 !important;
+}
+.cannon-part .glyphicon{
+    height: 25px;
+}
+.quote{
+    position: absolute;
+    top: 19px;
+    left: -37px;
+}
+.cannon-part .glyphicon-play:before {
+    content: "\e072";
+    font-size: 12px;
+    color: #FC5D19;
+    padding: 5px 10px;
+}
+.book-my-slot{
+    background: url(../images/technology-partner/half.png) center 0px no-repeat #0D2332;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin: 50px 0 30px 0;
+    height: 280px;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.book-my-slot h2{
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+.tech-container .book-my-slot p{
+    color: #fff;
+    margin: 0;
+ }
+ .tech-container p{
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-family: MaisonNeue-Book;
+ }
+ .icon-cont{
+    font-size: 18px;
+ }
+ .flex-section .form-group{
+    width: 49%;
+ }
+ .flex-section .form-group.wid100{
+    width: 100%;
+ }
+ .not-ready{
+    width: 60%;
+    padding-right: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+ }
+ .free-copy{
+    width: 40%;
+ }
+ .free-copy img{
+    width: 100%;
+ }
+ .free-copy-form.letstalkform{
+    padding:0;
+    border-radius:0;
+    background:none;
+    box-shadow: none;
+ }
+ .reasons-consider-odessa .bg-grey{
+    background: #F3F3F5;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: flex-start;
+    height: 130px;
+    align-items: center;
+ }
+ .icon{
+    margin-right: 20px;
+ }
+ .mb-20{
+    margin-bottom: 20px;
+ }
+ .trusted-companies{
+    margin: 50px 0;
+    background: #F3F3F5;
+    padding: 50px 0;
+ }
+ .client-logos{
+   
+ }
+ .client-br h2 span{
+    font-size: 16px;
+    color: #0D2332;
+    font-family: MaisonNeue-Book;
+    padding-top: 10px;
+ }
+ .brd{
+    border-bottom: 2px solid #D9D9D9;
+    padding: 30px 0 50px 0;
+    margin: 0 0 50px 0;
+ }
+ .bg-blue{
+    background: url(../images/technology-partner/ellip2.png) center 0px no-repeat #085B7B;
+ }
+ .height-small{
+    height: 16vh;
+ }
+ .reasons-consider-odessa .row{
+    margin:0;width:100%;
+ }
+ .reasons-consider-odessa .row .col-lg-4,.reasons-consider-odessa .row .col-lg-6{
+    padding:0 15px;
+ }
+ .slick-slide img{
+    margin: 0 auto;
+ }
+ @media only screen and (max-width:1200px){
+
+    .reasons-consider-odessa .bg-grey {
+        width: 100%;
+        margin-bottom:20px ;
+
+ }
+ .cannon-image img{height: 100%;}
+ .reasons-consider-odessa .col-lg-4{
+    width: 100%;
+ }
+ .mb-20{
+    margin-bottom: 0;
+ }
+}
+@media only screen and (max-width:767px){
+.right-technology-partner .mob{
+    display: block;
+}
+.right-technology-partner .desk{
+    display: none;
+}
+.cannon-section .flex-section{
+    flex-wrap: wrap;flex-flow: column-reverse;
+}
+.cannon-content{
+    width: 100%;
+}
+.cannon-image{
+    width: 100%;position: relative;margin-bottom: 30px;
+}
+.cannon-image img.mob{
+    height: 400px;
+}
+.cannon-part .btn{
+    width: 100% !important;
+}
+form .flex-section{
+    flex-wrap: wrap;
+}
+.flex-section .form-group {
+    width: 100%;
+}
+.get-me-free-copy .flex-section{ 
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+}
+.not-ready {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 30px 0 0;
+    text-align: center;
+}
+.free-copy {
+    width: 100%;
+}
+.top-section{
+    top:-177px
+}
+.client-br{
+    text-align: center;margin-right: 30px;    width: 100%;
+    margin: 0;
+}
+.client-br span{
+    display: block;
+}
+.client-logos .flex-section{
+    flex-wrap: wrap;
+}
+.book-my-slot,.reasons-consider-odessa .bg-grey{
+    height: auto;
+}
+.trusted-companies{
+    padding: 50px 30px;
+}
+.cannon-part h2,.cannon-part p{text-align: center;}
+.tech-container h2{font-size: 25px;}
+.cannon-part br,.icon-cont br{display: none;}
+.cannon-section{padding: 20px;}
+.quote {
+    top: -22px;
+    left: -10px;
+}
+.quote img{width: 80px;}
+.cfs-benefit ul {
+    padding: 0 10px;
+}
+.cfs-benefit{
+    padding: 20px 10px;
+}
+.cannon-part {
+    width: 100%;
+}
+}
