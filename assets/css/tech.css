@@ -62,6 +62,10 @@ position: relative;
     width: 233px;
     height: 54px;
     margin: 20px 0 0;
+    font-family: MaisonNeue-Bold;
+}
+.right-technology-partner #primaryForm .odc__btn--primary.odc__btn--xl{
+    margin: 0px 0 0 !important
 }
 .right-technology-partner .odc__btn--primary.odc__btn--xl:hover{
     box-shadow: none;
@@ -103,7 +107,7 @@ position: relative;
 .cfs-benefit{
     padding: 20px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 10px;
 }
 .cfs-benefit h4{
@@ -160,9 +164,9 @@ position: relative;
     background: url(../images/technology-partner/half.png) center 0px no-repeat #0D2332;
     color: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 0;
     margin: 50px 0 30px 0;
-    height: 280px;
+    height: 210px;
     background-size: contain;
     position: relative;
     display: flex;
@@ -174,38 +178,46 @@ position: relative;
 .book-my-slot h2{
     font-size: 32px;
     color: #fff;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 }
 .tech-container .book-my-slot p{
     color: #fff;
     margin: 0;
  }
  .tech-container p{
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 0 20px 0;
     font-family: MaisonNeue-Book;
+    color: #0D2332;
+ }
+ .get-me-free-copy{
+    margin-top: 50px;
  }
  .icon-cont{
     font-size: 18px;
  }
  .flex-section .form-group{
     width: 49%;
+    margin-bottom: 10px;
  }
  .flex-section .form-group.wid100{
     width: 100%;
  }
  .not-ready{
-    width: 60%;
-    padding-right: 50px;
+    width: 70%;
+    padding-right: 100px;
     display: flex;
     flex-flow: column;
     justify-content: center;
  }
  .free-copy{
-    width: 40%;
+    width: 30%;
+    position: relative;
  }
  .free-copy img{
-    width: 100%;
+    width: 83%;
+    position: absolute;
+    bottom: -50px;
  }
  .free-copy-form.letstalkform{
     padding:0;
@@ -214,7 +226,17 @@ position: relative;
     box-shadow: none;
  }
  .reasons-consider-odessa .bg-grey{
-    background: #F3F3F5;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: flex-start;
+    height: 130px;
+    align-items: center;
+ }
+ .bg-grey{
+    background: #F9F9FB
+ }
+ .bg-white{
+    background:#ffffff;
     padding: 20px;
     border-radius: 10px;
     justify-content: flex-start;
@@ -227,10 +249,13 @@ position: relative;
  .mb-20{
     margin-bottom: 20px;
  }
+ .reasons-consider-odessa{
+    background: #F3F3F5;
+    padding: 50px 0 50px 0;
+ }
  .trusted-companies{
     margin: 50px 0;
-    background: #F3F3F5;
-    padding: 50px 0;
+    /* padding: 50px 0; */
  }
  .client-logos h2{
    margin-bottom: 0;
@@ -252,14 +277,19 @@ position: relative;
  .navbar-brand {
     margin: 10px 50px;
  }
+ .not-ready h2{
+    margin: 0 !important;
+    font-size: 28px;
+ }
  .height-small{
-    height: 16vh;
+    height: 0;
  }
  .right-technology-partner .row{
     margin:0;width:100%;
  }
+
  .reasons-consider-odessa .row .col-lg-4,.reasons-consider-odessa .row .col-lg-6{
-    padding:0 15px;
+    padding:0 15px 0 0;
  }
  .slick-slide img{
     margin: 0 auto;
