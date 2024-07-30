@@ -83,7 +83,7 @@ position: relative;
 .cannon-section{
     background: #FFFFFF;
     border-radius: 20px;
-    padding: 30px;
+    padding: 30px 40px;
     margin: 50px auto 20px auto;
     position: relative;
     overflow: hidden;
@@ -185,13 +185,16 @@ position: relative;
     margin: 0;
  }
  .tech-container p{
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 0 20px 0;
     font-family: MaisonNeue-Book;
     color: #0D2332;
  }
  .get-me-free-copy{
     margin-top: 50px;
+ }
+ .get-me-free-copy p{
+    font-size: 16px;
  }
  .icon-cont{
     font-size: 18px;
