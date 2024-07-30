@@ -206,6 +206,9 @@ position: relative;
  .flex-section .form-group.wid100{
     width: 100%;
  }
+ .free-copy-form.letstalkform .form-control{
+    border: 1px solid #55555555;
+ }
  .not-ready{
     width: 70%;
     padding-right: 100px;
