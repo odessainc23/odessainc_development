@@ -302,6 +302,12 @@ position: relative;
  .slick-slide img{
     margin: 0 auto;
  }
+ @media only screen and (max-width:1300px){
+    .free-copy img{
+        width: 100%;
+    }
+ }
+
  @media only screen and (max-width:1200px){
 
     .reasons-consider-odessa .bg-grey {
