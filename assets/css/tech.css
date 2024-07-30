@@ -216,6 +216,8 @@ position: relative;
  .free-copy{
     width: 30%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
  }
  .free-copy img{
     width: 83%;
@@ -311,16 +313,33 @@ position: relative;
  .mb-20{
     margin-bottom: 0;
  }
+ .free-copy img {
+    width: 100%;}
 }
 @media only screen and (max-width:767px){
 .right-technology-partner .mob{
     display: block;
 }
-.right-technology-partner .desk{
+.bg-white{
+    height: auto;
+}
+.right-technology-partner .desk,.icon-cont br{
     display: none;
 }
+.tech-part{
+   padding: 100px 20px 0; 
+}
+.tech-part h1{font-size: 30px;}
+.free-copy img {
+    width: 80%;}
 .cannon-section .flex-section{
     flex-wrap: wrap;flex-flow: column-reverse;
+}
+.cfs-benefit{
+    margin-bottom: 0;
+}
+.free-copy-form.letstalkform{
+    margin:0 ;
 }
 .cannon-content{
     width: 100%;
@@ -357,6 +376,7 @@ form .flex-section{
 }
 .free-copy {
     width: 100%;
+    justify-content: center;
 }
 .top-section{
     top:-177px
@@ -371,14 +391,23 @@ form .flex-section{
 .client-logos .flex-section{
     flex-wrap: wrap;
 }
-.book-my-slot,.reasons-consider-odessa .bg-grey{
+.reasons-consider-odessa .row .col-lg-4, .reasons-consider-odessa .row .col-lg-6 {
+    padding: 0 0px 0 0;
+}
+.book-my-slot,.reasons-consider-odessa .bg-grey,.reasons-consider-odessa .bg-white{
     height: auto;
+    padding: 30px;
+    margin: 0 0 20px 0;
 }
 .trusted-companies{
-    padding: 50px 30px;
+    padding: 0px 30px;
+}
+.free-copy img {
+    position: relative;
+    bottom: 0;
 }
 .cannon-part h2,.cannon-part p{text-align: center;}
-.tech-container h2{font-size: 25px;}
+.tech-container h2{font-size: 22px;}
 .cannon-part br,.icon-cont br{display: none;}
 .cannon-section{padding: 20px;}
 .quote {
