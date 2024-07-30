@@ -290,7 +290,7 @@ position: relative;
     font-size: 28px;
  }
  .height-small{
-    height: 0;
+    height: 10vh;
  }
  .right-technology-partner .row{
     margin:0;width:100%;
