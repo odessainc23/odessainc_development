@@ -101,7 +101,6 @@ position: relative;
    margin: 0 0 20px 0;
 }
 .cfs-benefit{
-    background: #F3F3F5;
     padding: 20px;
     width: 100%;
     margin-bottom: 20px;
@@ -111,7 +110,7 @@ position: relative;
     margin:0 0 5px 0;
 }
 .cfs-benefit ul{
-    padding: 0 30px;
+    padding: 0 20px;
 }
 .cannon-image{
     width: 20%;
