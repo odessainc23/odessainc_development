@@ -176,6 +176,7 @@
 }
 .api-logo .navbar-brand > img {
   width: 90px;
+  opacity: 0.9;
 }
 .quote {
   position: absolute;
