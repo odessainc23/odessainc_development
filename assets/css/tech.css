@@ -170,6 +170,9 @@ position: relative;
 .cannon-part .glyphicon{
     height: 23px;
 }
+.api-logo .navbar-brand>img{
+    width: 100px;
+}
 .quote{
     position: absolute;
     top: 19px;
