@@ -334,6 +334,10 @@ position: relative;
     .free-copy img{
         width: 100%;
     }
+    .api-logo{
+        
+    padding: 15px 40px;
+    }
  }
 
  @media only screen and (max-width:1200px){
