@@ -209,6 +209,10 @@ position: relative;
  .free-copy-form.letstalkform .form-control{
     border: 1px solid #55555555;
  }
+ .free-copy-form.letstalkform  .form-control.error{
+    border-color: #ff495c !important 
+ }
+
  .not-ready{
     width: 70%;
     padding-right: 100px;
