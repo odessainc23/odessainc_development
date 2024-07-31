@@ -171,7 +171,7 @@ position: relative;
     height: 23px;
 }
 .api-logo .navbar-brand>img{
-    width: 100px;
+    width: 90px;
 }
 .quote{
     position: absolute;
@@ -268,6 +268,7 @@ position: relative;
     height: 130px;
     align-items: center;
  }
+ .right-technology-partner h2{   color: #00ACC8;}
  .bg-grey{
     background: #F9F9FB
  }
@@ -323,7 +324,7 @@ position: relative;
  .right-technology-partner .row{
     margin:0;width:100%;
  }
-
+.slick-dots{display: none !important;}
  .reasons-consider-odessa .row .col-lg-4,.reasons-consider-odessa .row .col-lg-6{
     padding:0 15px 0 0;
  }
@@ -334,10 +335,7 @@ position: relative;
     .free-copy img{
         width: 100%;
     }
-    .api-logo{
-        
-    padding: 15px 40px;
-    }
+    
  }
 
  @media only screen and (max-width:1200px){
@@ -347,6 +345,10 @@ position: relative;
         margin-bottom:20px ;
 
  }
+ .api-logo{
+        
+    padding: 15px 40px;
+    }
  .cannon-image img{height: 100%;}
  .reasons-consider-odessa .col-lg-4{
     width: 100%;
@@ -455,7 +457,8 @@ form .flex-section{
     position: relative;
     bottom: 0;
 }
-.cannon-part h2,.cannon-part p{text-align: center;}
+.cannon-part h2,.cannon-part p{text-align: center; }
+
 .tech-container h2{font-size: 22px;}
 .cannon-part br,.icon-cont br{display: none;}
 .cannon-section{padding: 20px;}
