@@ -63,7 +63,7 @@ position: relative;
     position: fixed;
     width: 100%;
     z-index: 4;
-    /* height: 69px; */
+    box-shadow: 0px 4px 50px 0px #0000001A;
     transition: all 0.3s ease-in-out;
     background: transparent;
 }
