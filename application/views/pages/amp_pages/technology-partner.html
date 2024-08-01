@@ -9,7 +9,8 @@
          <a class="navbar-brand" href="<?php echo base_url(); ?>">
            <img src="<?php echo base_url(); ?>assets/images/technology-partner/odessa-logo.svg" alt="" class="whitepaper">
         </a>
-        <a href="" class="btn odc__btn odc__btn--primary odc__btn--xl">Schedule a call</a>
+        <button id="schedule-button"  class="btn odc__btn odc__btn--primary odc__btn--xl">Schedule an call</button>
+        <!-- <a href="" class="btn odc__btn odc__btn--primary odc__btn--xl" id="schedule-button">Schedule a call</a> -->
 
      </div>
         <section class="tech-part">
@@ -238,6 +239,10 @@
 
 <script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
 <script>
+   document.getElementById('schedule-button').addEventListener('click', function() {
+            // Replace with your specific Calendly link
+            window.location.href = 'https://calendly.com/krathi-shetty-odessainc/30min';
+        });
 $(document).ready(function() {
 
    $(window).on("scroll", function() {
