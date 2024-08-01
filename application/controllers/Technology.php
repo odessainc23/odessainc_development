@@ -17,7 +17,7 @@ class Technology extends CI_Controller {
 		);
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/technology-partner.html', $data);
+		$this->load->view('pages/amp_pages/client-success-stories.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 

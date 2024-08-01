@@ -1,4 +1,7 @@
-.right-technology-partner {
+.right-technology-partner .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .right-technology-partner .mob {
   display: none;
