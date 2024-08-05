@@ -82,7 +82,9 @@
         <section class="book-my-slot top-section">
             <h2>Explore how Odessa can transform your business</h2>
             <p>Schedule a personalized, no-commitment call today. </p>
-            <a href="http://localhost:8000/get-started" class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</a>
+            <button id="schedule-button2"  class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</button>
+
+            <!-- <a href="http://localhost:8000/get-started" class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</a> -->
         </section>
         <section class="get-me-free-copy top-section">
             <div class="flex-section">
@@ -234,7 +236,9 @@
         <section class="book-my-slot bg-blue top-section">
             <h2>Explore how Odessa can transform your business</h2>
             <p>Schedule a personalized, no-commitment call today. </p>
-            <a href="http://localhost:8000/get-started" class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</a>
+            <button id="schedule-button1"  class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</button>
+
+            <!-- <a href="http://localhost:8000/get-started" class="btn odc__btn odc__btn--primary odc__btn--xl">Block my slot</a> -->
         </section>
     </div>
 </div>
@@ -244,7 +248,15 @@
 <script>
    document.getElementById('schedule-button').addEventListener('click', function() {
             // Replace with your specific Calendly link
-            window.location.href = 'https://calendly.com/krathi-shetty-odessainc/30min';
+            window.open('https://calendly.com/steve-nippak-odessainc/30min?month=2024-08', '_blank');
+        });
+        document.getElementById('schedule-button1').addEventListener('click', function() {
+            // Replace with your specific Calendly link
+            window.open('https://calendly.com/steve-nippak-odessainc/30min?month=2024-08', '_blank');
+        });
+        document.getElementById('schedule-button2').addEventListener('click', function() {
+            // Replace with your specific Calendly link
+            window.open('https://calendly.com/steve-nippak-odessainc/30min?month=2024-08', '_blank');
         });
 $(document).ready(function() {
 
