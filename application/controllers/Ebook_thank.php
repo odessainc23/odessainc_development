@@ -12,7 +12,7 @@ class Ebook_thank extends CI_Controller {
 		$data['tc_title']			= 'Get the latest handbook Customer Experiences in Asset Finance | Odessa';
 		$data['tc_description']		= "Delve into our latest e-book to uncover how you can WOW your customers  and create standout experiences that build lifelong customer relationships at AFSA";
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/client-success-stories.html', $data);
+		$this->load->view('pages/amp_pages/client-success-stories-thankyou.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
 }
