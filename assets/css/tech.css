@@ -100,7 +100,31 @@
 .right-technology-partner .odc__btn--primary.odc__btn--xl:hover {
   box-shadow: none;
 }
+#bodyId::-webkit-scrollbar{
+  display: block;
+  -webkit-appearance:auto ;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #00acc8 #ffffff;
+  }
 
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00acc8;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 #bodyId .navbar {
   display: none;
 }
@@ -307,6 +331,7 @@ left: -40px;
   margin: 50px 0;
   /* padding: 50px 0; */
 }
+.right-technology-partner h2.white{color: #fff;}
 .client-logos h2 {
   margin-bottom: 0;
 }
