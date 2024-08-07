@@ -1,0 +1,558 @@
+.slick-track {
+  display: flex !important;
+  align-items: center ;
+  justify-content: center;
+}
+.right-technology-partner .mob {
+display: none;
+}
+.tech-cont {
+height: 500px;
+background: url(../images/technology-partner/ellipse.png) center 20px
+    no-repeat,
+  linear-gradient(0deg, #00acc8 -120%, rgba(0, 172, 200, 0) 60.1%), #0d2332; /* Solid color fallback */
+background-size: 550px 100%;
+position: relative;
+}
+.right-technology-partner:after {
+position: absolute;
+background: linear-gradient(0deg, #00acc8 0%, rgba(0, 172, 200, 0) 97.1%);
+bottom: 0;
+content: "";
+}
+#wistia_41.thumb_container,
+.wistia_embed.wistia_async_kndvnc3z5u,
+#wistia_44.thumb_container {
+width: 100% !important;
+}
+.top-section {
+position: relative;
+top: -230px;
+margin: 0 0 50px 0;
+}
+.tech-part {
+padding: 150px 0 0;
+text-align: center;
+}
+.tech-part h1 {
+background: -webkit-linear-gradient(296deg, #b8e3ed 0.41%, #00acc8 97.3%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin: 0;
+}
+.tech-part h6 {
+color: #ffffff;
+font-size: 18px;
+}
+.tech-part .btn {
+font-size: 18px;
+background: #fc5d19;
+border-radius: 8px;
+width: 233px;
+height: 54px;
+margin: 20px 0 0;
+}
+.flex-section {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+.api-logo {
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+padding: 15px 60px;
+align-items: center;
+position: fixed;
+width: 100%;
+z-index: 4;
+box-shadow: 0px 4px 50px 0px #0000001a;
+transition: all 0.3s ease-in-out;
+background: transparent;
+}
+.api-logo.active {
+background: #ffffff;
+transition: all 0.3s ease-in-out;
+}
+.api-logo .btn {
+margin: 0 !important;
+font-size: 16px !important;
+width: 180px !important;
+height: 45px !important;
+}
+.api-logo .navbar-brand {
+padding: 0;
+height: 35px;
+}
+.right-technology-partner .odc__btn--primary.odc__btn--xl {
+border: 0;
+font-size: 18px;
+background: #fc5d19;
+border-radius: 8px;
+width: 210px;
+height: 50px;
+margin: 20px 0 0;
+font-weight: 600;
+}
+.right-technology-partner #primaryForm .odc__btn--primary.odc__btn--xl {
+margin: 0px 0 0 !important;
+}
+.right-technology-partner .odc__btn--primary.odc__btn--xl:hover {
+box-shadow: none;
+}
+#bodyId::-webkit-scrollbar{
+display: block;
+-webkit-appearance:auto ;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00acc8 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00acc8;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+#bodyId .navbar {
+display: none;
+}
+#bodyId footer {
+display: none;
+}
+#bodyId .footermenu_strip {
+display: none;
+}
+.cannon-section {
+background: #ffffff;
+border-radius: 20px;
+padding: 30px 40px;
+margin: 50px auto 20px auto;
+position: relative;
+overflow: hidden;
+box-shadow: 0px 4px 50px 0px #0000001a;
+}
+.tech-container {
+width: 90%;
+margin: 0 auto 0px auto;
+}
+.cannon-content {
+width: 80%;
+}
+.cannon-part {
+width: 95%;
+}
+.cannon-part p {
+color: #0d2332;
+font-size: 18px;
+margin: 0 0 20px 0;
+}
+.cfs-benefit {
+padding: 0;
+width: 100%;
+margin-bottom: 30px;
+border-radius: 10px;
+}
+.cfs-benefit h4 {
+margin: 0 0 5px 0;
+}
+.cfs-benefit ul {
+padding: 0 20px;
+}
+.cannon-image {
+position: absolute;
+right: 0;
+top: 0;
+z-index: 0;
+height: 100%;
+}
+.cannon-image img {
+width: 100%;
+height: 100%;
+}
+.cannon-image img.mob,
+.cannon-image img.desk {
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+.tech-container h2 {
+color: #00acc8;
+font-family: MaisonNeue-Bold;
+margin: 0 0 20px 0;
+font-size: 32px;
+}
+.cannon-part .btn {
+background: #0d2332 !important;
+border-radius: 8px !important;
+width: 300px !important;
+height: 54px !important;
+margin: 0 !important;
+}
+.cannon-part .glyphicon {
+height: 23px;
+}
+.api-logo .navbar-brand > img {
+width: 90px;
+opacity: 0.9;
+}
+.quote {
+position: absolute;
+top: 10px;
+left: -40px;
+}
+.cannon-part .glyphicon-play:before {
+content: "\e072";
+font-size: 16px;
+color: #fc5d19;
+padding: 5px 10px;
+}
+.book-my-slot {
+background: url(../images/technology-partner/half.png) center 0px no-repeat
+  #0d2332;
+color: #fff;
+text-align: center;
+padding: 0;
+margin: 50px 0 30px 0;
+height: 210px;
+background-size: contain;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+}
+.book-my-slot h2 {
+font-size: 32px;
+color: #fff;
+margin: 0 0 15px 0;
+}
+.tech-container .book-my-slot p {
+color: #fff;
+margin: 0;
+}
+.tech-container p {
+font-size: 18px;
+margin: 0 0 20px 0;
+font-family: MaisonNeue-Book;
+color: #0d2332;
+}
+.get-me-free-copy {
+margin-top: 50px;
+}
+.get-me-free-copy p {
+font-size: 16px;
+}
+.icon-cont {
+font-size: 18px;
+}
+.flex-section .form-group {
+width: 49%;
+margin-bottom: 10px;
+}
+.flex-section .form-group.wid100 {
+width: 100%;
+}
+.free-copy-form.letstalkform .form-control {
+border: 1px solid #55555555;
+}
+.free-copy-form.letstalkform .form-control.error {
+border-color: #ff495c !important;
+}
+
+.not-ready {
+width: 70%;
+padding-right: 100px;
+display: flex;
+flex-flow: column;
+justify-content: center;
+}
+.free-copy {
+width: 30%;
+position: relative;
+display: flex;
+justify-content: flex-end;
+}
+.free-copy img {
+width: 68%;
+position: absolute;
+bottom: -50px;
+}
+.free-copy-form.letstalkform {
+padding: 0;
+border-radius: 0;
+background: none;
+box-shadow: none;
+}
+.reasons-consider-odessa .bg-grey {
+padding: 20px;
+border-radius: 10px;
+justify-content: flex-start;
+height: 130px;
+align-items: center;
+}
+.right-technology-partner h2 {
+color: #00acc8;
+}
+.bg-grey {
+background: #f9f9fb;
+}
+.bg-white {
+background: #ffffff;
+padding: 20px;
+border-radius: 10px;
+justify-content: flex-start;
+height: 130px;
+align-items: center;
+}
+.icon {
+margin-right: 20px;
+}
+.mb-20 {
+margin-bottom: 20px;
+}
+.reasons-consider-odessa {
+background: #f3f3f5;
+padding: 50px 0 50px 0;
+}
+.trusted-companies {
+margin: 50px 0;
+/* padding: 50px 0; */
+}
+.right-technology-partner h2.white{color: #fff;}
+.client-logos h2 {
+margin-bottom: 0;
+}
+.client-br h2 span {
+font-size: 16px;
+color: #0d2332;
+font-family: MaisonNeue-Book;
+padding-top: 10px;
+}
+.brd {
+border-bottom: 2px solid #d9d9d9;
+padding: 20px 0 40px 0;
+margin: 0 0 50px 0;
+}
+.bg-blue {
+background: url(../images/technology-partner/ellip2.png) center 0px no-repeat
+  #085b7b;
+}
+.navbar-brand {
+/* margin: 10px 50px; */
+}
+.not-ready h2 {
+margin: 0 !important;
+font-size: 28px;
+}
+.height-small {
+height: 10vh;
+}
+.right-technology-partner .row {
+margin: 0;
+width: 100%;
+}
+.slick-dots {
+display: none !important;
+}
+.reasons-consider-odessa .row .col-lg-4,
+.reasons-consider-odessa .row .col-lg-6 {
+padding: 0 15px 0 0;
+}
+.slick-slide img {
+margin: 0 auto;
+}
+@media only screen and (max-width: 1280px) {
+.free-copy img {
+  width: 100%;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+.reasons-consider-odessa .bg-grey {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.quote {width: 100px;}
+.trusted-companies {
+  padding: 0 20px;
+}
+.api-logo {
+  padding: 15px 40px;
+}
+.cannon-image img {
+  height: 100%;
+}
+.reasons-consider-odessa .col-lg-4 {
+  width: 100%;
+}
+.mb-20 {
+  margin-bottom: 0;
+}
+.free-copy img {
+  width: 100%;
+}
+}
+@media only screen and (max-width: 767px) {
+.right-technology-partner .mob {
+  display: block;
+}
+.api-logo {
+  padding: 15px 12px;
+}
+.navbar-brand > img {
+  width: auto;
+}
+.right-technology-partner .api-logo .odc__btn--primary.odc__btn--xl {
+  width: 170px;
+  height: 40px;
+}
+.bg-white {
+  height: auto;
+}
+.right-technology-partner .desk,
+.icon-cont br {
+  display: none;
+}
+
+.tech-part h1 {
+  font-size: 30px;
+}
+.free-copy img {
+  width: 80%;
+}
+.cannon-section .flex-section {
+  flex-wrap: wrap;
+  flex-flow: column-reverse;
+}
+.cfs-benefit {
+  margin-bottom: 0;
+}
+.free-copy-form.letstalkform {
+  margin: 0;
+}
+.cannon-content {
+  width: 100%;
+}
+.cannon-image {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.right-technology-partner {
+}
+.cannon-image img.mob {
+  height: 100%;
+}
+.cannon-part .btn {
+  width: 100% !important;
+}
+form .flex-section {
+  flex-wrap: wrap;
+}
+.flex-section .form-group {
+  width: 100%;
+}
+.get-me-free-copy .flex-section {
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: column-reverse;
+}
+.not-ready {
+  width: 100%;
+  padding-right: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 30px 0 0;
+  text-align: center;
+}
+.free-copy {
+  width: 100%;
+  justify-content: center;
+}
+.top-section {
+  top: -177px;
+}
+.client-br {
+  text-align: center;
+  margin-right: 30px;
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+.client-br span {
+  display: block;
+}
+.client-logos .flex-section {
+  flex-wrap: wrap;
+}
+.reasons-consider-odessa .row .col-lg-4,
+.reasons-consider-odessa .row .col-lg-6 {
+  padding: 0 0px 0 0;
+}
+.book-my-slot,
+.reasons-consider-odessa .bg-grey,
+.reasons-consider-odessa .bg-white {
+  height: auto;
+  padding: 30px;
+  margin: 0 0 20px 0;
+}
+.trusted-companies {
+  padding: 0px 30px;
+}
+.free-copy img {
+  position: relative;
+  bottom: 0;
+}
+.cannon-part h2,
+.cannon-part p {
+  text-align: center;
+}
+
+.tech-container h2 {
+  font-size: 22px;
+}
+.cannon-part br,
+.icon-cont br {
+  display: none;
+}
+.cannon-section {
+  padding: 20px;
+}
+.quote {
+  top: -22px;
+  left: -10px;
+}
+.quote img {
+  width: 180px;
+}
+.cfs-benefit ul {
+  padding: 0 10px;
+}
+.cfs-benefit {
+  padding: 20px 10px;
+}
+.cannon-part {
+  width: 100%;
+}
+.reasons-consider-odessa .row .col-lg-6 {
+  padding: 0;
+}
+.reasons-consider-odessa h2 {
+  text-align: center;
+}
+.navbar-brand {
+  margin: 10px 10px;
+}
+}

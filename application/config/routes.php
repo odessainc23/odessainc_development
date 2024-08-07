@@ -77,6 +77,7 @@ $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
 $route['afterwork'] = 'Cocktail_et';
+$route['client-success-stories'] = 'Technology';
 $route['afterwork-thankyou'] = 'Cocktailet_thank';
 $route['handbook/next-gen-auto-finance-platform'] = 'Auto_handbook';
 $route['handbook/next-gen-auto-finance-platform-thankyou'] = 'Auto_thank';
