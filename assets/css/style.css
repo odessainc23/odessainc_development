@@ -3577,10 +3577,17 @@ section.innovate_section .btns_style:hover {
 .pr-list .container {
   margin-top: 40px;
 }
+@media only screen and (max-width: 1024px)
+{
+  .cc-nb-buttons-container {
+    width: 100% !important;
+  }
+}
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
   .banner-l-cntnr .home-hero-ctitle {
     font-size: 3.6rem;
   }
+ 
   .banner-l-cntnr__img .img--size-1 {
     height: 35px;
   }
@@ -4475,6 +4482,7 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
   width: 84% !important;
   margin: 0 auto !important;
   padding: 1em 0 !important;
+  flex-flow: column;
 }
 .cookie-banner {
   position: fixed;
@@ -4547,16 +4555,18 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
   padding-right: 10px;
 }
 .cc-nb-buttons-container {
-
   display: flex !important;
-  align-items: flex-end;
-  justify-content: flex-end;
-  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+  flex-direction: row-reverse;
+  width: 60%;
+  margin: 20px auto 0 auto;
 }
 body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button {
   /* border-radius: 50px !important; */
   margin-right: 0rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0rem !important;
 }
 body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button.cc-nb-changep{
   margin-bottom: 0 !important;
@@ -4584,8 +4594,17 @@ body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button.cc-n
     width: 100%;
 }
 .freeprivacypolicy-com---reset button{
+  font-size: 12px !important;
+}
+body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button{
+  margin-right: 0.2rem !important;
+}
+.freeprivacypolicy-com---reset button{
   width: 100% !important;
   padding: 8px 10px !important;
+}
+.freeprivacypolicy-com---nb .cc-nb-main-container{
+  width: 95% !important;
 }
 .freeprivacypolicy-com---nb .cc-nb-main-container{
   flex-wrap: wrap !important;
@@ -4599,7 +4618,6 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
 }
 .cc-nb-buttons-container,.cc-nb-text-container {
   width: 100%;
-  display: block !important;
   margin: 10px 0;
   text-align: center;}
   .freeprivacypolicy-com---nb-headline {
