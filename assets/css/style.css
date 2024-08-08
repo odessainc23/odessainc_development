@@ -4349,7 +4349,7 @@ button {
     position: fixed !important;
     right: 0;
     left: 0em !important;
-    width: 80% !important;
+    width: 50% !important;
     margin: 0 auto !important;
 }
 .cc-nb-buttons-container{
@@ -4363,9 +4363,9 @@ body .freeprivacypolicy-com---nb .cc-nb-changep{
   color: #2a2d36 !important;
     font-family: MaisonNeue-Book !important;
     font-size: 16px !important;
-    text-align: left !important;
+    text-align: center !important;
     padding-bottom: 0px !important;
-    padding-right: 20px !important;
+    padding-right: 0px !important;
 }
 .freeprivacypolicy-com---palette-light .cc-nb-okagree:focus{
   box-shadow: none !important;
@@ -4479,7 +4479,7 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
   justify-content: space-between !important;
   display: flex !important;
   align-items: center !important;
-  width: 84% !important;
+  width: 88% !important;
   margin: 0 auto !important;
   padding: 1em 0 !important;
   flex-flow: column;
@@ -4560,7 +4560,7 @@ body .freeprivacypolicy-com---pc-dialog .cc-cp-foot-byline{
   justify-content: space-between;
   flex-flow: row;
   flex-direction: row-reverse;
-  width: 60%;
+  width: 100%;
   margin: 20px auto 0 auto;
 }
 body .freeprivacypolicy-com---palette-light .cc-nb-buttons-container button {
