@@ -135,18 +135,26 @@
          <div class="clearfix">
             <div class="news_div upperdiv">
                <div class="col-md-6 col-sm-6 col-xs-12 news_lt">
-               <img src="<?php echo base_url();?>assets/images/auto-news/monitor-daily.png" alt="ELFA" />
+               <img src="<?php echo base_url();?>assets/images/auto-news/EFA.png" alt="ELFA" />
                </div>
                <div class="col-md-6 col-sm-6 col-xs-12 nopad">
                   <div class="news_rt">
-                     <span class="date">July 2024</span>
+                     <span class="date">Aug 14, 2024</span>
                      <!-- <h3></h3> -->
-                     <h3>Three Reasons Equipment Finance Companies Should Embrace Modern Technology</h3>
-                     <p><a href="https://www.monitordaily.com/opinion-posts/three-reasons-equipment-finance-companies-should-embrace-modern-technology/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+                     <h3>The Hidden Costs of Legacy Equipment Finance Software</h3>
+                     <p><a href="https://www.equipmentfa.com/articles/38435/the-hidden-costs-of-legacy-equipment-finance-software" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
             </div>
             <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+                  <div class="news_div">
+                     <span class="date">July 2024</span>
+                     <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
+                     <h3>Three Reasons Equipment Finance Companies Should Embrace Modern Technology</h3>
+                     <p><a href="https://www.monitordaily.com/opinion-posts/three-reasons-equipment-finance-companies-should-embrace-modern-technology/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
+                  </div>
+               </div>
             <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">May 30, 2024</span>
@@ -163,7 +171,12 @@
                      <p><a href="https://www.forbes.com/sites/forbesbusinesscouncil/2024/03/26/how-to-balance-customization-and-efficiency-in-enterprise-software/?sh=75067b973a16" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+             
+               
+              
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">March 19, 2024</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -171,10 +184,6 @@
                      <p><a href="https://www.autoremarketing.com/subprime/commentary-why-funding-automation-is-the-next-big-thing-in-auto-finance/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               
-              
-            </div>
-            <div class="bottomdiv">
             <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">March 11, 2024</span>
@@ -191,7 +200,12 @@
                      <p><a href="https://www.leasinglife.com/comment/decoding-tech-solutions-for-lease-accounting-key-questions-for-vendors/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+             
+              
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 29, 2024</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -199,10 +213,6 @@
                      <p><a href="https://www.forbes.com/sites/forbesbusinesscouncil/2024/01/29/three-ways-equipment-finance-will-evolve-in-2024/?sh=5fa1510071c2" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-              
-               
-            </div>
-            <div class="bottomdiv">
             <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 2024</span>
@@ -219,7 +229,11 @@
                      <p><a href="https://www.equipmentfa.com/blogs/37470/four-use-cases-for-ai-in-asset-finance" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+         
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">January 8, 2024</span>
                      <!-- <h3>The Equipment Finance Ecosystem's Journey Toward Inclusion</h3> -->
@@ -228,9 +242,6 @@
                   </div>
                </div>
                
-               
-            </div>
-            <div class="bottomdiv">
             <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">Sept/Oct 2023</span>
@@ -247,7 +258,12 @@
                      <p><a href="https://www.monitordaily.com/reinvention-odessa/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12  pd10">
+         
+              
+            
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">Sep 17, 2021</span>
                      <!-- <h3>Odessa SVP Sumandeep Kaur Named Women’s Leader in Equipment Finance</h3> -->
@@ -255,10 +271,6 @@
                      <p><a href="https://www.bizjournals.com/philadelphia/news/2021/09/17/fast-growing-local-fintech-secures-investment.html" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-              
-            
-            </div>
-            <div class="bottomdiv">
             <div class="col-md-4 col-sm-4 col-xs-12  pd10">
                   <div class="news_div">
                      <span class="date">May 15, 2021</span>
@@ -273,16 +285,17 @@
                      <p><a href="https://www.monitordaily.com/article-posts/critical-technology-accelerating-digital-transformation-after-covid-19/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-4 col-xs-12 pd10">
+           
+               
+            </div>
+            <div class="bottomdiv">
+            <div class="col-md-4 col-sm-4 col-xs-12 pd10">
                   <div class="news_div">
                      <span class="date">July 10, 2019</span>
                      <h3>Living in the Future: The Monitor 2019 Tech Roundtable </h3>
                      <p><a href="https://www.monitordaily.com/article-posts/living-in-the-future-the-monitor-2019-tech-roundtable/" class="odc__btn--more odc__btn--xl" target="_blank">Read more</a></p>
                   </div>
                </div>
-               
-            </div>
-            <div class="bottomdiv">
             <div class="col-md-4 col-sm-4 col-xs-12 pd10">
                   <div class="news_div">
                      <span class="date">July 1, 2018</span>
