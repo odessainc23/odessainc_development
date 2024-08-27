@@ -91,6 +91,7 @@ $route['keyword'] = 'Keyword';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['auto-finance-software'] = 'Auto_amp';
 $route['auto-finance-news'] = 'Redirect_news';
+$route['whitepaper/ready-to-rethink'] = 'Ready_amp';
 $route['whitepaper/future-ready-asset-finance-api'] = 'Api_amp';
 $route['whitepaper/future-ready-asset-finance-api-thankyou'] = 'Thankyou_api';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';

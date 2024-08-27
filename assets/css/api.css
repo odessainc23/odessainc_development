@@ -122,6 +122,66 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     left: 0;
     top: 3px;
 }
+#wrapper.ready-rethink .api-wrapper{
+    background: url(../images/api/ready-rethink.png) right 0 no-repeat #0D2332;
+}
+.ready-rethink .h3-head{
+    margin-bottom: 20px;
+}
+.ready-rethink .key-takeaways ul li{
+    padding-left: 50px;
+    color:#0D2332
+}
+.ready-rethink .get-copy{
+top:15px
+}
+.ready-rethink .key-takeaways ul li:after{
+    top:8px
+}
+.api-body.ready-rethink #primaryForm {
+    margin-top: 0;
+}
+.ready-rethink .flex{
+        display: flex;
+        justify-content: space-between;
+}
+.ready-rethink .letstalkform .form-control{
+    border: 1px solid #C6C6C6;
+}
+.api-body .disclaimer{
+    color:#0D2332
+}
+.ready-rethink p{
+    margin-bottom: 20px;
+    color:#0D2332
+}
+.ready-rethink .get-copy .btnmar{
+    margin-top: 10px;
+}
+.ready-rethink .key-takeaways ul li.customer:after{
+    content: url(../images/api/customer-centric.svg);  
+}
+.ready-rethink .key-takeaways ul li.operational:after{
+    content: url(../images/api/operational.svg);  
+}
+.ready-rethink .key-takeaways ul li.insights:after{
+    content: url(../images/api/insights.svg);  
+}
+.ready-rethink p{
+    font-size: 16px;
+}
+.ready-rethink .key-takeaways{
+    background: none;
+    padding:0
+}
+.ready-rethink{ 
+}
+.ready-rethink .know-more{
+    padding-left: 0px;  
+}
+.ready-rethink .know-more:after{
+    content:none
+}
 .know-more span{
     display: block;
     font-family: MaisonNeue-Bold;
@@ -565,6 +625,9 @@ overflow: hidden;
     .get-copy{
         max-width: 450px;
         height: 540px;
+    }
+    .ready-rethink .get-copy{
+        height: 525px;
     }
     .key-takeaways{
         margin-right: 25px;
