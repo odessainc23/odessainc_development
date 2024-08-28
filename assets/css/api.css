@@ -722,7 +722,10 @@ overflow: hidden;
     background-image: none;
 }
 .get-copy{
-    height: auto;
+    height: auto !important;
+}
+#wrapper.ready-rethink .api-wrapper{
+    background-size: contain;
 }
 .handbook .get-copy {
     top: 25px;
