@@ -18,6 +18,24 @@ a.pglead_ld-icmsitem.pglead_ld-icmsitem--linkedin svg{
     flex-wrap: wrap;
     padding: 0;
 }
+.innovate-banner{
+  background: url(../images/innovate-banner.png) 0 0 no-repeat;
+  height: 465px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.innovate-banner h2{
+  color: #00ACC8;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35.2px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-top: 10px;
+}
 .acc .accreditations .flex li:nth-child(1) img{
 width: 110px;
 }
@@ -3781,7 +3799,15 @@ section.innovate_section .btns_style:hover {
     flex-wrap: wrap;
     width: 100%;
   }
-  
+  .innovate-banner img{
+    width:500px
+  }
+  .innovate-banner h2{
+    font-size: 20px;
+  }
+  .innovate-banner{
+    height:350px
+  }
   .covid-alert .alert-dismissible .close {
     display: none;
   }
