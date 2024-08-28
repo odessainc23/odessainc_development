@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Thankyou_whitepaper extends CI_Controller {
+class Thankyou_rethink extends CI_Controller {
 	public function index() {
 		$data = array(
 			'page_title' => 'Thank you for your interest in the white paper',
@@ -17,7 +17,7 @@ class Thankyou_whitepaper extends CI_Controller {
 		);
 
 		$this->load->view( 'templates/header', $data );
-		$this->load->view( 'pages/unlocking-xaas-thankyou',$data );
+		$this->load->view('pages/amp_pages/thank-you.html', $data);
 		$this->load->view( 'templates/footer' );
 	}
 
