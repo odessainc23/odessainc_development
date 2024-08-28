@@ -3,13 +3,13 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
 class Ready_amp extends CI_Controller {
 public function index(){
-	$data['meta_title']			= 'White paper - 10 Technology Requirements for Empowering XaaS in Asset Finance | Odessa';
-	$data['meta_description']	= 'This white paper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.';
-	$data['meta_keyword']		= '';
-	$data['og_title']			= 'White paper - 10 Technology Requirements for Empowering XaaS in Asset Finance | Odessa';
-	$data['og_description']		= 'This white paper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.';
-	$data['tc_title']			= 'White paper - 10 Technology Requirements for Empowering XaaS in Asset Finance | Odessa';
-	$data['tc_description']		= 'This white paper is a practical guide to your XaaS (everything-as-a-service) journey, drawing on insights from industry practitioners and early adopters.';
+	$data['meta_title']			= 'Rethink Asset Finance: Master Pay-Per-Use Models | Download the Whitepaper';
+	$data['meta_description']	= 'Transform your asset finance strategy with our expert whitepaper on pay-per-use models. Learn how to stay competitive with customer-centric and subscription-based approaches in the XaaS revolution. Get insights from industry expert Yann Toutant.';
+	$data['meta_keyword']		= 'asset finance, pay-per-use, XaaS, subscription-based models, customer-centric approach, operational excellence, whitepaper, Yann Toutant, Everything-as-a-Service';
+	$data['og_title']			= 'Rethink Asset Finance: Master Pay-Per-Use Models | Download the Whitepaper';
+	$data['og_description']		= 'Transform your asset finance strategy with our expert whitepaper on pay-per-use models. Learn how to stay competitive with customer-centric and subscription-based approaches in the XaaS revolution. Get insights from industry expert Yann Toutant.';
+	$data['tc_title']			= 'Rethink Asset Finance: Master Pay-Per-Use Models | Download the Whitepaper';
+	$data['tc_description']		= 'Transform your asset finance strategy with our expert whitepaper on pay-per-use models. Learn how to stay competitive with customer-centric and subscription-based approaches in the XaaS revolution. Get insights from industry expert Yann Toutant.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
 		$this->load->view('pages/amp_pages/ready-to-rethink.html', $data);
