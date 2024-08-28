@@ -1453,7 +1453,7 @@ section.news .upperdiv .nopad {
 }
 .letstalkSecondryform .secnformCon .form-control.error,
 .letstalkform .form-control.error {
-  border-color: #ff495c;
+  border-color: #ff495c !important;
 }
 .letstalkSecondryform .secnformCon .bootstrap-select > .btn{
   height: 42px !important;
