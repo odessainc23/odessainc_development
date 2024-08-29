@@ -34,7 +34,27 @@ a.pglead_ld-icmsitem.pglead_ld-icmsitem--linkedin svg{
   line-height: 35.2px;
   letter-spacing: -0.01em;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 0;
+}
+.innovate-banner h3{
+  font-family: Maison Neue;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 34.53px;
+  letter-spacing: 0.4em;
+  text-align: center;
+  color: #fff;
+  margin: 10px 0 0;
+}
+.innovate-banner h6{
+  font-family: Maison Neue;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.25px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #B8E3ED;
 }
 .acc .accreditations .flex li:nth-child(1) img{
 width: 110px;
@@ -3799,8 +3819,17 @@ section.innovate_section .btns_style:hover {
     flex-wrap: wrap;
     width: 100%;
   }
+  .innovate-banner{
+    padding: 0 20px;
+  }
   .innovate-banner img{
-    width:500px
+    width:100%
+  }
+  .innovate-banner h3{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25.53px;
+    letter-spacing: 0.1em;
   }
   .innovate-banner h2{
     font-size: 20px;
