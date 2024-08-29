@@ -288,6 +288,9 @@ label[for="honeypot"], #honeypot {
 #wrapper .letstalkform.get-copy .form-group {
     margin-bottom: 15px;
 }
+#wrapper .letstalkform.get-copy .flex .form-group{
+    width:50%
+}
 .key-takeaways ul li{
     color: #555B6D;
     font-family:MaisonNeue-Book;
@@ -593,6 +596,14 @@ overflow: hidden;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 }
+@media only screen and (min-height: 1440px)
+{ 
+    .ready-rethink .get-copy {
+        top: 35px;
+    }
+ 
+}
+
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
         padding: 0;
@@ -672,6 +683,7 @@ overflow: hidden;
     }
     
 }
+
 @media only screen and (max-width: 1200px) {
    
     .get-copy {
