@@ -29,13 +29,13 @@ a.pglead_ld-icmsitem.pglead_ld-icmsitem--linkedin svg{
 }
 .innovate-banner h2{
   color: #00ACC8;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 22px;
   line-height: 35.2px;
   letter-spacing: -0.01em;
   text-align: center;
   margin-top: 20px;
   margin-left: 0;
+  font-family: MaisonNeue-Book;
 }
 .innovate-banner h3{
   font-size: 26px;
