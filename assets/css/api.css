@@ -683,7 +683,7 @@ overflow: hidden;
     }
     
 }
-@media only screen and (max-width: 1336px) {
+@media only screen and (max-width: 1300px) {
     .ready-rethink .get-copy {
         height: 540px;
     }
