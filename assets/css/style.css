@@ -355,7 +355,7 @@ section.awards .email_div {
 }
 .mega-dropdown-menu {
   width: 100%;
-  top: 60px;
+  top: 110px;
   padding: 0 !important;
   border: 0;
   border-radius: 0;
@@ -2260,7 +2260,7 @@ div.leader_person .leader_info div.leaderexp span.leadericon a.linkedin {
 }
 .menuviewwrap {
   position: fixed;
-  top: 60px;
+  top: 160px;
   width: 0;
   bottom: 0;
   z-index: 99997;
@@ -3359,7 +3359,7 @@ section.innovate_section .btns_style:hover {
   background-color: #0075a2;
 }
 .bg-alert.t-alert-covid{
-  display: none;
+  /* display: none; */
 }
 .bg-grad {
   background-image: linear-gradient(to right, #3f7ab8, #81bee7, #81bee7);
