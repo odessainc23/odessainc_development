@@ -258,7 +258,7 @@ margin-bottom: 20px;
 font-size: 24px;
 font-style: normal;
 
-line-height: 26px;
+line-height: 28px;
 }
 .letstalkform.get-copy .form-group{
     margin-bottom: 24px;
@@ -683,7 +683,11 @@ overflow: hidden;
     }
     
 }
-
+@media only screen and (max-width: 1336px) {
+    .ready-rethink .get-copy {
+        height: 540px;
+    }
+}
 @media only screen and (max-width: 1200px) {
    
     .get-copy {
@@ -692,6 +696,7 @@ overflow: hidden;
     .api-heading {
         font-size: 2.8rem;
     }
+   
 }
 @media only screen and (max-width: 1189px) {
     .api-banner {
