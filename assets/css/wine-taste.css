@@ -157,6 +157,7 @@
     font-weight: 700;
     line-height: 26px;
 }
+.host-img img{width:300px}
 .how-it-cont li{
     font-size: 18px;
     font-style: normal;
@@ -166,7 +167,7 @@
 }
 .host-container{
     background: #0D2332;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .host-img{
     width: 40%;
