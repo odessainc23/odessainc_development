@@ -2,7 +2,10 @@
     color: #fff;
     font-size: 52px;
     line-height: 1.2;
-    margin: 0 0 20px;
+    margin: 30px 0 30px;
+}
+.our-people.wine-taste .thank .home-hero-ctitle{
+    margin: 30px 0 0px;
 }
 .overlay {
     display: none; /* Hidden by default */
@@ -87,6 +90,7 @@
    color:#2A2D36;
    font-size: 22px;
    margin-top: 40px;
+   margin-bottom: 0;
 }
 
 .date b{
@@ -109,12 +113,14 @@
     display: block;
     text-indent: -9999px;
     margin-top: 16px;
-    margin-left: 94px;
+    margin-left: 75px;
     outline: 0;
 }
 .talk-team.how-it-works{
     background-image: none;
-    height: auto;
+    height: 480px;
+    background-size: cover;
+    overflow: hidden;
 }
 .how-it-cont{
     margin: 70px 77px 0;
