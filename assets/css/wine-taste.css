@@ -313,7 +313,9 @@ background-size: cover;
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
     }
-   
+    .talk-team.how-it-works{
+        height: auto;
+    }
     .our-people.wine-taste .xas-banner .home-hero-bg img.mob{
         width: 100%;
         opacity: 0.5;
@@ -365,8 +367,12 @@ background-size: cover;
 }
 .host-img {
     width: 100%;
-    height: 700px;
+    /* height: 700px; */
     overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .host-content {
