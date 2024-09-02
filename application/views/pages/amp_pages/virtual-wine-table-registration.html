@@ -115,7 +115,7 @@
 
                </div>
                <div class="form-group">
-                  <input class="form-control" name="zip" type="text" placeholder="Postcode" id="zip"  aria-required="true" aria-invalid="false"/>
+                  <input class="form-control" name="zip" type="text" placeholder="Postcode" id="zip" required />
                </div>
             </div>
             <div class="capt">
@@ -255,8 +255,6 @@ $(document).ready(function() {
       },
       zip: {
         required: true,
-        minlength: 4,
-        maxlength: 15,
       },
     },
     messages: {
@@ -296,8 +294,6 @@ $(document).ready(function() {
       },
       zip: {
         required: "",
-        minlength: "",
-        maxlength: ""
       }
     },
     submitHandler: function (form) {
