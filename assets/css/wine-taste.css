@@ -118,7 +118,7 @@
 }
 .talk-team.how-it-works{
     background-image: none;
-    height: 470px;
+    height: 450px;
     background-size: cover;
     overflow: hidden;
 }
@@ -135,7 +135,7 @@
     height: 13px;
 }
 .how-it-cont ul li{
-    margin-bottom: 30px;  
+    margin-bottom:22px;  
       list-style: none;
       position: relative;
       padding-left: 20px;
