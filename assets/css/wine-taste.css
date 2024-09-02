@@ -121,6 +121,7 @@
     height: 450px;
     background-size: cover;
     overflow: hidden;
+    background: #0D2332;
 }
 .how-it-cont{
     margin: 70px 77px 0;
@@ -170,10 +171,10 @@
     padding: 30px 0;
 }
 .host-img{
-    width: 40%;
+    width: 35%;
 }
 .host-content{
-    width: 60%;
+    width: 65%;
 }
 .host-content{
     padding: 60px 0px 60px 0;
@@ -187,10 +188,10 @@
 }
 .wine-taste h4{
     color: #00ABC8;
-    font-size: 35px;
+    font-size: 42px;
     margin-bottom: 30px;
     font-family: MaisonNeue-Bold;
-    line-height: 40px;
+    line-height: 50px;
 }
 .wine-taste h4 span{
     color: #fff;
