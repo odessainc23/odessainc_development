@@ -118,7 +118,7 @@
 }
 .talk-team.how-it-works{
     background-image: none;
-    height: 480px;
+    height: 470px;
     background-size: cover;
     overflow: hidden;
 }
@@ -189,7 +189,7 @@
     font-size: 35px;
     margin-bottom: 30px;
     font-family: MaisonNeue-Bold;
-    line-height: 50px;
+    line-height: 40px;
 }
 .wine-taste h4 span{
     color: #fff;
