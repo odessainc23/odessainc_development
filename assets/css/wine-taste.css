@@ -4,12 +4,47 @@
     line-height: 1.2;
     margin: 0 0 20px;
 }
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the pop-up content */
+.popup-content {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Styles for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive iframe */
+.popup-content iframe {
+    width: 100%;
+    height: 315px;
+}
 .wine-taste .odc__btn--primary{
     padding: 17px 82px;
     min-width: 249px;
     border-radius: 10px;
     height: 55px;
-    
+    text-transform: uppercase;
 }
 .our-people .xas-banner .home-hero-bg img.stamp{
     width: 100px;
@@ -20,7 +55,7 @@
     top: 30%;
 }
 .odessa-log{
-    background: #263746;
+    background: #0D2332;
     position: absolute;
     top: 0;
     z-index: 27;
@@ -41,9 +76,9 @@
     padding-top: 0;
 }
 .event-content {
-    background: url(../images/wine/wine-bg.svg) center center no-repeat;
+    background: url(../images/wine/wine-bg.png) center center no-repeat;
     margin-top: 27px ;
-    background-size: cover;
+    background-size: contain;
 }
 .space{
     padding: 0 15px;
@@ -62,7 +97,7 @@
     line-height: 26px;
 }
 .event-content .event-container{
-    max-width:800px;
+    max-width:700px;
     margin: 0 auto;
     text-align: center;
 }
@@ -87,6 +122,7 @@
 .how-it-cont ul{
     padding: 0;
     list-style-position: inside;
+    margin-bottom: 0;
 }
 .wine-taste .disclaimer .box {
     width: 13px;
@@ -123,7 +159,7 @@
     color:#fff;
 }
 .host-container{
-    background: #263746;
+    background: #0D2332;
 }
 .host-img{
     width: 40%;
@@ -132,12 +168,19 @@
     width: 60%;
 }
 .host-content{
-    padding: 80px 50px 0 0;
+    padding: 60px 0px 60px 0;
+}
+.our-people .host-container .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 .wine-taste h4{
     color: #00ABC8;
     font-size: 28px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     font-family: MaisonNeue-Bold;
 }
 .wine-taste h6{
@@ -149,7 +192,7 @@
     margin-bottom: 40px;
 }
 .wine-taste .host-content h4{
-    font-family: MaisonNeue-Book; 
+    /* font-family: MaisonNeue-Book;  */
     margin: 0 0 40px 0; 
 }
 .ship{
@@ -169,6 +212,7 @@
     font-size: 18px;
     color: #fff;
     line-height: 26px;
+    margin: 0 0 20px 0;
 }
 .register-form .flex{
     justify-content: space-between;
@@ -225,16 +269,16 @@ label[for="honeypot"], #honeypot {
 }
 /* media css */
 @media only screen and (max-width:1600px) {
-.event-content{
+/* .event-content{
 background-size: cover;
-}
+} */
 .wine-taste .home-hero-bgimg img{
     object-fit: fill ;
 }
 #wrapper.wine-taste .xas-banner {
     height: calc(100vh - 200px);
     max-height: 432px;
-    background: #263746;
+    background: #0D2332;
 }
 .our-people.wine-taste .home-hero-ctitle{
     font-size: 45px;
@@ -274,7 +318,8 @@ background-size: cover;
     display: block;
 }
 .wine-taste .odc__btn--primary{
-    margin: 0 auto;
+    margin: 0 auto;    padding: 17px 50px;
+    min-width: auto;
 }
 .our-people.wine-taste .home-hero-content {
     top: 40px;
@@ -309,12 +354,11 @@ background-size: cover;
     height: 700px;
     overflow: hidden;
 }
-.host-img img{
-    width: 100%;
-}
+
 .host-content {
-    padding: 40px 20px;
+    padding: 40px 0px;
     width: 100%;
+    text-align: center;
 }
 }
 @media only screen and (max-width:767px) {
@@ -330,6 +374,9 @@ background-size: cover;
     }
     .host-img {
         height: auto;
+        margin: 50px 0 0;
+        display: flex;
+        justify-content: center;
     }
     .our-people.wine-taste .xas-banner .home-hero-bg img.mob{
         width: 100%;

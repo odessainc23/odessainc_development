@@ -13,7 +13,7 @@ class Winethank extends CI_Controller {
 		$data['tc_description']		= 'See you at the virtual wine tasting event. An exclusive, limited invitation event for asset finance and equipment leasing executives on May 20, 2024.';
 
 		$this->load->view('layouts/amp_pages/header.amp.html', $data);
-		$this->load->view('pages/amp_pages/thankyou.html', $data);
+		$this->load->view('pages/amp_pages/wine-thank.html', $data);
 		// $this->load->view('pages/amp_pages/automotive-finance-software.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
