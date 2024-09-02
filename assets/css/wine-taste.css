@@ -160,6 +160,7 @@
 }
 .host-container{
     background: #0D2332;
+    padding: 50px 0;
 }
 .host-img{
     width: 40%;
@@ -179,9 +180,14 @@
 }
 .wine-taste h4{
     color: #00ABC8;
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 30px;
     font-family: MaisonNeue-Bold;
+    line-height: 50px;
+}
+.wine-taste h4 span{
+    color: #fff;
+    display: inline
 }
 .wine-taste h6{
     font-size: 18px;
@@ -365,6 +371,12 @@ background-size: cover;
     #wrapper.wine-taste .xas-banner {
         height: 100vh;
         max-height: 600px;
+    }
+    .wine-taste h4 span{
+        display: block;
+    }
+    .wine-taste h4{
+        font-size: 30px;line-height: 40px;
     }
     .wine-taste .navbar-brand{
         margin-left: 24px;
