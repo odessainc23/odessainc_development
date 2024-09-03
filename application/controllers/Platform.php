@@ -42,12 +42,12 @@ class Platform extends CI_Controller {
 	public function build() {
 		$data	= array();
 
-		$data['meta_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
+		$data['meta_title']			= 'Developer Tools for Asset Finance Solutions | Odessa Platform';
 		$data['meta_description']	= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
 		$data['meta_keyword']		= 'equipment lease accounting, equipment leasing software,equipment finance software';
-		$data['og_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
+		$data['og_title']			= 'Developer Tools for Asset Finance Solutions | Odessa Platform';
 		$data['og_description']		= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
-		$data['tc_title']			= 'Odessa\'s developer tools unify business and IT, delivering equipment finance solutions faster';
+		$data['tc_title']			= 'Developer Tools for Asset Finance Solutions | Odessa Platform';
 		$data['tc_description']		= 'Leverage development tools to extend, build, test, and ship features. Automate your equipment leasing business processes with the Odessa Platform.';
 
 		// $this->load->view('layouts/header', $data);
