@@ -11,11 +11,11 @@
       </div>
         </div>
    <!-- xass banner -->
-   <div class="home-hero xas-banner">
+   <div class="home-hero xas-banner thank">
       <div class="home-hero-bg">
          <div class="home-hero-bgimg">
-            <img src="<?php echo base_url(); ?>assets/images/wine/wine-table.png" alt="Virtual Wine Table" class="lazyload dek">
-            <img src="<?php echo base_url(); ?>/assets/images/wine/mob-ban.png" alt="canon Logo" width="87" height="19" class="mob"> 
+            <img src="<?php echo base_url(); ?>assets/images/wine/wine-registration.png" alt="Virtual Wine Table" class="lazyload dek">
+            <img src="<?php echo base_url(); ?>/assets/images/wine/mob-wine.png" alt="canon Logo" width="87" height="19" class="mob"> 
          </div>
       </div>
       <div class="home-hero-content">
@@ -176,40 +176,10 @@
          company: {
            required: true
          },
-         "job-title": {
-           required: true
-         },
          email: {
            required: true,
            myusername: true,
-         },
-         phone: {
-           required: true,
-           minlength: 6,
-           maxlength: 15,
-           mobile: true
-         },
-         "software-used": {
-           required: true
-         },
-         "street-1": {
-           required: true
-         },
-         "street-2": {
-           required: true
-         },
-         city: {
-           required: true
-         },
-         state: {
-           required: true
-         },
-         zip: {
-           required: true,
-           minlength: 6,
-           maxlength: 15,
-           mobile: true
-         },
+         }, 
        },
        messages: {
          "first-name": {
@@ -223,37 +193,9 @@
          company: {
            required: ""
          },
-         "job-title": {
-           required: ""
-         },
          email: {
            required: ""
-         },
-         phone: {
-           required: "",
-           minlength: "",
-           maxlength: ""
-         },
-         "software-used": {
-           required: ""
-         },
-         "street-1": {
-           required: ""
-         },
-         "street-2": {
-           required: ""
-         },
-         city: {
-           required: ""
-         },
-         state: {
-           required: ""
-         },
-         zip: {
-           required: "",
-           minlength: "",
-           maxlength: ""
-         }
+         },    
        },
        submitHandler: function(form) {
   var honeypot_val = $("#honeypot").val();
