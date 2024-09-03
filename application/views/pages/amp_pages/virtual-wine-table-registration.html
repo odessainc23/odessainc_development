@@ -201,7 +201,7 @@ window.addEventListener('click', function(event) {
 $(document).ready(function() {
    $.validator.addMethod("myusername", function(value, element) {
     return /^([\w-\.]+@(?!gmail\.com)(?!gmail\.co)(?!yahoo\.com)(?!hotmail\.com)(?!aol\.com)(?!hotmail\.co\.uk)(?!hotmail\.fr)(?!msn\.com)(?!yahoo\.fr)(?!wanadoo\.fr)(?!orange\.fr)(?!comcast\.net)(?!yahoo\.co\.uk)(?!yahoo\.com\.br)(?!yahoo\.co\.in)(?!live\.com)(?!rediffmail\.com)(?!free\.fr)(?!gmx\.de)(?!web\.de)(?!yandex\.ru)(?!ymail\.com)(?!libero\.it)(?!outlook\.com)(?!uol\.com\.br)(?!bol\.com\.br)(?!mail\.ru)(?!cox\.net)(?!hotmail\.it)(?!sbcglobal\.net)(?!sfr\.fr)(?!live\.fr)(?!verizon\.net)(?!live\.co\.uk)(?!googlemail\.com)(?!yahoo\.es)(?!ig\.com\.br)(?!live\.nl)(?!bigpond\.com)(?!terra\.com\.br)(?!yahoo\.it)(?!neuf\.fr)(?!yahoo\.de)(?!alice\.it)(?!rocketmail\.com)(?!att\.net)(?!laposte\.net)(?!facebook\.com)(?!bellsouth\.net)(?!yahoo\.in)(?!hotmail\.es)(?!charter\.net)(?!yahoo\.ca)(?!yahoo\.com\.au)(?!rambler\.ru)(?!hotmail\.de)(?!tiscali\.it)(?!shaw\.ca)(?!yahoo\.co\.jp)(?!sky\.com)(?!earthlink\.net)(?!optonline\.net)(?!freenet\.de)(?!t-online\.de)(?!aliceadsl\.fr)(?!virgilio\.it)(?!home\.nl)(?!qq\.com)(?!telenet\.be)(?!me\.com)(?!yahoo\.com\.ar)(?!tiscali\.co\.uk)(?!yahoo\.com\.mx)(?!voila\.fr)(?!gmx\.net)(?!mail\.com)(?!planet\.nl)(?!tin\.it)(?!live\.it)(?!ntlworld\.com)(?!arcor\.de)(?!yahoo\.co\.id)(?!frontiernet\.net)(?!hetnet\.nl)(?!live\.com\.au)(?!yahoo\.com\.sg)(?!zonnet\.nl)(?!club-internet\.fr)(?!juno\.com)(?!optusnet\.com\.au)(?!blueyonder\.co\.uk)(?!bluewin\.ch)(?!skynet\.be)(?!sympatico\.ca)(?!windstream\.net)(?!mac\.com)(?!centurytel\.net)(?!chello\.nl)(?!live\.ca)(?!aim\.com)(?!bigpond\.net\.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
-}, 'Free email addresses are not allowed.');
+}, 'Please enter your business email id only');
 
    
   $.validator.addMethod("lettersonly", function(value, element) {
@@ -233,19 +233,21 @@ $(document).ready(function() {
     },
     messages: {
       email: {
-        required: ""
+         required: "Email address is required.",
+         email: "Please enter a valid email address.",
+                businessEmail: "Please use your business email address."
       },
       "street-address": {
-        required: ""
+        required: "Street-address is required"
       },
       city: {
-        required: ""
+        required: "City is required"
       },
       county: {
-        required: ""
+        required: "County is required"
       },
       zip: {
-        required: "",
+        required: "Zip is required",
       }
     },
     submitHandler: function (form) {
@@ -264,26 +266,39 @@ $(document).ready(function() {
    
   $("#letstalk").click(function(){
     var honeypot_val = $("#honeypot").val();
-    if(honeypot_val == ''){
+    
+    // Perform the form validation
+    var isFormValid = true;
+    
+    // Example: Validate that required input fields are not empty
+    $("#primaryForm input[required]").each(function() {
+        if ($(this).val() === "") {
+            isFormValid = false;
+            $(this).addClass("error");  // Optionally, add an error class to highlight the field
+        } else {
+            $(this).removeClass("error");
+        }
+    });
+
+    if(honeypot_val == '') {
         // Check if the disclaimer checkbox is checked
-        
-        if ($('#agree').is(':checked')) {
-            // $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2020-06-23/rg54yd');
+        if ($('#agree').is(':checked') && isFormValid) {
+            // Submit the form if everything is valid
             $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-08-30/3s4gngg');
             $("#primaryForm").submit();
-			$('.box').hide();
+            $('.box').hide();
             return true;
         } else {
-            // Show an alert or handle the case when the checkbox is not checked
-            // alert('Please agree to the privacy policy.');
-			$('.box').show();
+            // Show error if form is not valid or checkbox is not checked
+            $('.box').show();
             return false;
         }
     } else {
         window.location.reload();
         return false;
     }
-})
+});
+
 
    
   $("#first_name").on('keypress', function(event) {

@@ -7,6 +7,9 @@
 .our-people.wine-taste .thank .home-hero-ctitle{
     margin: 30px 0 0px;
 }
+.our-people.wine-taste .letstalkform .form-group label.error {
+    display: block !important;
+}
 .overlay {
     display: none; /* Hidden by default */
     position: fixed;
