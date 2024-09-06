@@ -5,6 +5,61 @@
    .buildinnovation.xassconbox.autoconbox {
    max-width: 100%;
    }
+   .cannon.testimonial {
+    background:url(../assets/images/auto-bg.png) center center no-repeat;
+    background-size: cover;
+}
+.cannon .video-con {
+    width: auto;
+    font-size: 42px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 0px;
+}
+.cannon .testimonial-content {
+    padding-bottom: 0px;
+    width: 100%;
+    position: relative;
+    height: 150px;
+    margin: 40px 0 25px 40px;
+    display: flex;
+}
+.home-hero-cdesc{
+   margin: 0;
+}
+.cannon .watch,.cannon .watch:hover,.cannon .active{
+    background:transparent;
+    box-shadow: none !important;
+    padding:10px 0;
+    border: 0;
+}
+.cannon .watch img{
+    width: 165px;
+    height: auto;
+}
+
+.watch {
+    background: #FF495C;
+    padding: 0px 20px;
+    font-size: 14px;
+    color: #fff;
+    width: max-content;
+    margin: 0px 0 0;
+}
+.cannon .watch, .cannon .watch:hover, .cannon .active {
+    background: transparent;
+    box-shadow: none;
+    padding: 10px 0;
+}
+.video-con h2 {
+    font-size: 32px;
+    color: #fff;
+    font-family: MaisonNeue-Book;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
    .xas-banner .home-hero-bgimg{
    height:100%;
    }
@@ -309,6 +364,25 @@
    .auto-page .pgplat_ftgstitle {
    font-size: 20px;
    }
+   .video-con h2 {
+        font-size: 25px;
+    }
+   
+    .cannon .testimonial-content {
+        height: auto;
+        margin: 50px 0 50px 0px;
+    }
+    .cannon .watch img {
+        width: 120px;
+    }
+    .cannon .watch, .cannon .watch:hover, .cannon .active{
+      margin:0 !important;padding: 0 !important;
+    }
+    .cannon .video-con {
+        justify-content: flex-start;
+        padding-left: 20px;
+        text-align: left;
+    }
    .auto-page .c-suite .xas-content .home-hero-ctitle{
       font-size: 30px;
    }
@@ -390,13 +464,42 @@
             <div class="different_inner">
                <p class="home-hero-cdesc"><b style="font-family:MaisonNeue-Bold;">Odessa Auto</b> is a multi-asset, multi-product platform that lends itself perfectly to support traditional auto finance and alternative lending structures such as usage-based lending, subscriptions, fleet, as a service, fractional ownership and more.
                </p>
-               <span class="wistia_embed wistia_async_l3y7smo2gn popover=true popoverContent=link videoFoam=false" style="display:inline;position:relative">
-                  <a class="odc__btn odc__btn--primary odc__btn--md" href="https://dev.odessainc.com/blog/pr_individual/odessa-launches-auto-finance-suite-odessa-auto/" target="_blank">Watch Odessa's Vision for Auto Finance</a>
-               </span>            
+                    
             </div>
          </div>
       </div>
    </section>
+   <div class="testimonial cannon" id="cannon">
+      <div class="container">
+
+          <div class="d-flex">
+
+              <div class="testimonial-content">
+                  <div class="video-con">
+                      <h2>Odessa's Vision <br> for Auto Finance</h2>
+                      <!-- <span class="wistia_embed wistia_async_l3y7smo2gn popover=true popoverContent=link videoFoam=false" style="display:inline;position:relative">
+                        <a class="odc__btn odc__btn--primary odc__btn--md" href="https://dev.odessainc.com/blog/pr_individual/odessa-launches-auto-finance-suite-odessa-auto/" target="_blank">Watch Odessa's Vision for Auto Finance</a>
+                     </span>      -->
+                     <span class="wistia_embed wistia_async_l3y7smo2gn popover=true popoverContent=link videoFoam=false" style="display:inline;position:relative">
+                      <a href="javascript:void(0)" class="play-btn watch odc__btn odc__btn--primary odc__btn--md covid-alert__link alert-link"><img src="<?php echo base_url(); ?>assets/images/watch.png" alt="" /></a>
+             </span>
+
+                  </div>
+                  <!-- <iframe src="https://odessainc.wistia.com/medias/kndvnc3z5u"></iframe> -->
+                  <!-- <button class="play-btn videoPoster js-videoPoster" style="background-image:url('<?= base_url(); ?>assets/images/testimonial-thumbnail.png');">Play Video</button> -->
+                  <!-- <a href="https://fast.wistia.com/embed/iframe/zs8hlyi5xz?autoPlay=true&controlsVisibleOnLoad=true&playerColor=990000&plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-tumblr-googlePlus&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true" class="wistia-popover[height=388,playerColor=990000,width=640]">
+          <img src="<?php echo base_url(); ?>assets/images/testimonial-thumbnail.png" alt="" />
+      </a> -->
+
+              </div>
+
+
+
+          </div>
+         
+      </div>
+  </div>
+
    <!-- xass banner ends -->
    <!--Build Page Start Here-->
    <div class="buildpgwrap">
@@ -729,6 +832,6 @@
    } 
    
 </script>
-<script>
+<!-- <script>
    window.location.href = "https://www.odessainc.com/auto-finance-software#odessa-vision";
-</script>
+</script> -->
