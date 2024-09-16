@@ -20,8 +20,7 @@
 		<meta name="robots" content="index, follow">		
 	<?php } ?>
 
-	<?php header("Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted-scripts.com; object-src 'none';");
-		?>
+	
 	<meta http-equiv="Content-Language" content="en_US">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
