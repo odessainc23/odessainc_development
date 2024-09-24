@@ -540,6 +540,9 @@ padding-left: 16px;
     width: 100%;
     padding-top: 128px !IMPORTANT;
 }
+.wistia_embed #wistia-kndvnc3z5u-1_popover{
+    box-shadow: none !important;
+}
 .api-h5{
     color: #555B6D;
     font-size: 32px;
