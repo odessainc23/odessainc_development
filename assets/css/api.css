@@ -9,6 +9,13 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
  #bodyId footer {
     display: none;
 }
+.rigid-platform .free-copy img{
+   
+    width: auto;
+}
+.rigid-platform .free-copy{
+    width: auto;
+}
 #bodyId::-webkit-scrollbar {
         display: none;
         -webkit-appearance: none;
@@ -265,10 +272,7 @@ top:15px
 .flexible-asset .api-header .api-logo{
     position: relative;
 }
-.rigid-platform .free-copy img{
-    bottom: 0;
-    position: relative;
-}
+
 .flexible-asset .h3-head{
     font-size: 27px;
     font-style: normal;
