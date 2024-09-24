@@ -934,6 +934,16 @@ background-image: none;
     .flexible-asset .cannon-image img{
         width: 100%;
     }
+    .flexible-asset .trusted-companies{
+        padding: 0;
+    }
+    .bg-grey .flex-section{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .employee-uptodate{text-align: center;}
+    .flexible-asset.ready-rethink .key-takeaways{margin: 0;}
 }
 
 @media only screen and (max-width: 767px) {

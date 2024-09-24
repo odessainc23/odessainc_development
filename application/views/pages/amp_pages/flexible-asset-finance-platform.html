@@ -14,7 +14,7 @@
             <section class="api-banner">
                 <h1 class="api-heading">Get the Power of a Flexible Asset Finance Platform</h1>
                 <p>Empower your business with a platform that adapts as fast as your customers’ needs - because flexibility is not an option.</p>
-				<button class="btn odc__btn odc__btn--primary orange odc__btn--xl btnmar" id="letstalk">Ask for a demo</button>
+				<a href="#primaryForm"><button class="btn odc__btn odc__btn--primary orange odc__btn--xl btnmar" id="">Ask for a demo</button></a>
 
             </section>
         </div>
@@ -180,6 +180,16 @@
 							<input class="form-control"  name="company" type="text" id="company" placeholder="Company" required/>
 						 </div>
 						 </div>
+						 <div class="capt">
+							<div class="g-recaptcha brochure__form__captcha" id="rcaptcha" data-sitekey="6LfYPqgkAAAAAEg_L0IHcYGkoK6vRSWKv1q4-5dP" data-action='submit' ></div>
+								</div>
+								<div class="disclaimer">
+									By submitting this form, I understand Odessa will process my personal information in accordance with their <a href="<?php echo base_url(); ?>privacy-policy" target="_blank">privacy policy</a>.<br> I understand I can withdraw my consent or update my preferences by clicking the unsubscribe link at the bottom of the email I will receive.
+									<label for="agree">
+									<span class="box"></span>
+									<input type="checkbox" id="agree"> I agree to be contacted and understand I can opt out at any time.
+									</label>
+								 </div>
                         <div class="clearfix">
                             <button class="btn odc__btn odc__btn--primary orange odc__btn--xl btnmar" id="letstalk">Submit</button>
                         </div>
@@ -205,7 +215,7 @@
            infinite:true,
            slidesToScroll:1,
            autoplay: true,
-           autoplaySpeed: 1000,
+           autoplaySpeed: 500,
             dots: false,
             arrows:false, 
             responsive: [
@@ -221,8 +231,8 @@
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
