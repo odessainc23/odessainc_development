@@ -16,8 +16,40 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 .ebook .know-more:after{
     display:none
 }
+.flexible-asset.ready-rethink .trusted-companies p{font-weight: 400;}
 .ebook .know-more{
     padding-left: 0;
+}
+.rigid-system {
+    position: relative;
+}
+.rigid-system .box-container{
+    position: absolute;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0
+}
+.rigid-system .box{
+    width: 360px;
+    height: 110px;
+    top: 488px;
+    left: 100px;
+    padding: 22px 22px 20px 22px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #fff;
+    color: #00ACC8;
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    margin-right: 20px;
+}
+.rigid-system .box img{
+    margin-right: 10px;
 }
 .handbook .flex{
     display: flex;
@@ -125,12 +157,33 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 #wrapper.ready-rethink .api-wrapper{
     background: url(../images/api/ready-rethink.png) right 0 no-repeat #0D2332;
 }
+#wrapper.ready-rethink.flexible-asset .api-wrapper {
+    background: url(../images/platform/flexible-bg.png) right 0 no-repeat #0D2332;
+    background-size: contain;
+}
+.flexible-asset .api-banner{
+    max-width: 60%;margin-bottom: 70px;
+}
+.flexible-asset .api-banner p{
+    font-size: 18px;
+  
+}
+/* .flexible-asset{
+    background:#F3F3F5;
+} */
+.rigid-banner{
+    display: flex;
+    width:40%;
+    justify-content: flex-end;
+    margin-top: 60px;
+}
 .ready-rethink .h3-head{
     margin-bottom: 20px;
 }
 .ready-rethink .key-takeaways ul li{
-    padding-left: 50px;
-    color:#0D2332
+    padding-left: 55px;
+    color:#0D2332;
+    font-size: 18px;
 }
 .ready-rethink .get-copy{
 top:15px
@@ -151,6 +204,9 @@ top:15px
 .api-body .disclaimer{
     color:#0D2332
 }
+.flexible-asset .top-section{
+    top: -260px;
+}
 .ready-rethink p{
     margin-bottom: 20px;
     color:#0D2332
@@ -161,18 +217,77 @@ top:15px
 .ready-rethink .key-takeaways ul li.customer:after{
     content: url(../images/api/customer-centric.svg);  
 }
+.ready-rethink .key-takeaways ul li.faster:after{
+    content: url(../images/api/faster-time.svg);  
+}
+.ready-rethink .key-takeaways ul li.cut-cost:after{
+    content: url(../images/api/cut-cost.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
+}
+.ready-rethink .key-takeaways ul li.delight:after{
+    content: url(../images/api/delight.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
+}
 .ready-rethink .key-takeaways ul li.operational:after{
     content: url(../images/api/operational.svg);  
 }
-.ready-rethink .key-takeaways ul li.insights:after{
-    content: url(../images/api/insights.svg);  
+.ready-rethink .key-takeaways ul li.scalable:after{
+    content: url(../images/api/scalable.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
 }
 .ready-rethink p{
     font-size: 16px;
+    font-weight: 600;
+}
+/* .flexible-asset .cannon-image{
+    width: 20%;
+} */
+
+.flexible-asset .cannon-image img{
+    width: auto;height: auto;
+}
+.flexible-asset .mob{
+    display: none;
+}
+.flexible-asset.ready-rethink p{
+    font-weight: 600;
+    font-size: 18px;
+}
+.flexible-asset .api-header .api-logo{
+    position: relative;
+}
+.rigid-platform .free-copy img{
+    bottom: 0;
+    position: relative;
+}
+.flexible-asset .h3-head{
+    font-size: 27px;
+    font-style: normal;
+    line-height: 32px; 
+    font-family: MaisonNeue-Book;
+    font-weight: 600;
+}
+.flexible-asset .key-takeways-section {
+    padding: 130px 0 200px 0;
+    margin: 0;
+    background: #F3F3F5;
+}
+.flexible-asset .api-banner {
+    margin-bottom: 130px;
 }
 .ready-rethink .key-takeaways{
     background: none;
-    padding:0
+    padding:0;
+    max-width: 60%;
 }
 .ready-rethink{ 
 }
@@ -230,6 +345,55 @@ top:15px
 .blue {
     color: #00ABC8;
     margin-bottom: 10px;
+}
+.bg-grey{
+    background: #F3F3F5;
+}
+.employee-uptodate h2,.employee-uptodate p{
+    color: #0D2332 !important;
+}
+.flexible-asset.ready-rethink .employee-uptodate p{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.employee-uptodate{
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-flow: column;
+}
+.flexible-asset.ready-rethink .api-banner p{font-weight: 400;}
+.rigid-platform{
+    height: 10vh;
+}
+.odc__btn--primary.orange{
+    background: #FC5D19;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.odc__btn--primary.orange:hover{
+    box-shadow: inset 0 -5px 0 #c84a13;
+    -moz-box-shadow: inset 0 -2px 0 #c84a13;
+}
+.cannon-part .btn:hover{
+    box-shadow: inset 0 -5px 0 #c84a13;
+    -moz-box-shadow: inset 0 -2px 0 #c84a13;
+
+}
+.employee-image{
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.flexible-asset .top-section.bg-grey{
+    text-align: left; 
+    height: auto;
+}
+.flexible-asset.ready-rethink .not-ready p{
+    font-weight: 400;
+}
+.flexible-asset .not-ready h2{
+    margin-bottom: 20px !important;
 }
 .api-banner p{
 color: #FFF;
@@ -702,9 +866,24 @@ overflow: hidden;
     .key-takeaways,.get-copy{
         max-width: 100%;
     }
+    .rigid-system .box-container{
+        flex-flow: row;
+    }
     .take-flex{
         flex-wrap: wrap;
         flex-flow: column-reverse;
+    }
+    .ready-rethink .key-takeaways{
+        max-width:100%
+    }
+    .flexible-asset .key-takeways-section {
+        padding: 110px 0 200px 0;
+    }
+    .rigid-banner{
+        display: none;
+    }
+    .rigid-system .box {
+        width: auto;
     }
     .key-takeaways,.get-copy{
        margin: 0;position: relative;
@@ -725,12 +904,44 @@ overflow: hidden;
         max-width: 100%;
     }
 }
+@media only screen and (max-width: 900px) {
+#wrapper.ready-rethink.flexible-asset .api-wrapper{
+background-image: none;
+}
+.flexible-asset .api-banner {
+    max-width: 100%;}
+    .flexible-asset .key-takeways-section {
+        padding: 70px 0 200px 0;
+    }
+    .rigid-system .box img{
+        width: auto;
+    }
+    .rigid-system .box-container{
+        position: relative;
+        flex-flow: column;
+    }
+    .rigid-system .box {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+    .flexible-asset .mob{
+        display: block;
+    }
+    .flexible-asset .desk{
+        display: none;
+    }
+    .flexible-asset .cannon-image img{
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 767px) {
 .whitepaper-name {
     top: 20%;
     font-size: 14px;
 }
+
 #wrapper.ebook .api-wrapper{
     background-image: none;
 }

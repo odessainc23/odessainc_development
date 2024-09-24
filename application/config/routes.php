@@ -80,6 +80,7 @@ $route['afterwork-thankyou'] = 'Cocktailet_thank';
 // $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
 $route['client-success-stories'] = 'Technology';
+$route['flexible-asset-finance-platform'] = 'Flexible';
 $route['handbook/next-gen-auto-finance-platform'] = 'Auto_handbook';
 $route['handbook/next-gen-auto-finance-platform-thankyou'] = 'Auto_thank';
 $route['handbook/cx-asset-finance'] = 'Ebook';
