@@ -92,6 +92,7 @@ $route['keyword'] = 'Keyword';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['auto-finance-software'] = 'Auto_amp';
 $route['auto-finance-news'] = 'Redirect_news';
+$route['odessa-cocktails-elfa-2024'] = 'Annual_Elfa';
 $route['whitepaper/rethink-asset-finance-master-pay-per-use'] = 'Ready_amp';
 $route['whitepaper/thankyou'] = 'Thankyou_rethink';
 $route['whitepaper/future-ready-asset-finance-api'] = 'Api_amp';

@@ -3,6 +3,18 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     scroll-behavior: auto;
     overscroll-behavior: none !important;
 }
+.annual-elfa{
+    height: 100vh;
+}
+.annual-elfa .api-banner{
+    margin-top: 100px;
+}
+#wrapper.ready-rethink.annual-elfa .api-wrapper{
+    background-size: contain;
+}
+.annual-elfa .api-heading{
+    margin-bottom:20px ;
+}
 #bodyId .navbar {
     display: none;
     }
