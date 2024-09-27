@@ -882,6 +882,9 @@ overflow: hidden;
         width: 100%;
         max-width: 100%;
     }
+    .annual-elfa{
+        height: auto;
+    }
     .key-takeaways,.get-copy{
         max-width: 100%;
     }
@@ -917,7 +920,7 @@ overflow: hidden;
         font-size: 25px;
     }
     #wrapper .api-wrapper{
-        background-image: none;
+        background-image: none !important;
     }
     .change-para{
         max-width: 100%;
