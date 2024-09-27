@@ -10,6 +10,24 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     margin-top: 0;
     margin-bottom: 0;
 }
+.thank-u{    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;}
+    .thank-u h3{
+        text-align: center;
+        margin: 0;
+        line-height: 35px;
+        font-size: 23px;
+       
+    }
+    .thank-u  .api-heading {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+.ready-rethink.annual-elfa .get-copy .btnmar{
+    background: #FC5D19;
+}
 .ready-rethink.annual-elfa .get-copy{
     position: relative;
     top: 0;
@@ -109,6 +127,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     overflow: hidden;
     height: 100%;
     background-size: contain;
+}
+#wrapper.ready-rethink.annual-elfa .api-wrapper{
+    background: url(../images/api/elfa-bg.png) right 0 no-repeat #213847;
+  
 }
 #wrapper.ebook .api-wrapper{
     background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
