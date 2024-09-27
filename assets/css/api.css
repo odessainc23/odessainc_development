@@ -130,6 +130,7 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 }
 #wrapper.ready-rethink.annual-elfa .api-wrapper{
     background: url(../images/api/elfa-bg.png) right 0 no-repeat #213847;
+    background-size: cover;
   
 }
 #wrapper.ebook .api-wrapper{
