@@ -14,11 +14,11 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     justify-content: center;
     align-items: center;
     height: 200px;}
-    .thank-u h3{
+    .thank-u h2{
         text-align: center;
         margin: 0;
         line-height: 35px;
-        font-size: 23px;
+        font-size: 22px;
        
     }
     .thank-u  .api-heading {

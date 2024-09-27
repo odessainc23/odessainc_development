@@ -112,10 +112,15 @@ $("#primaryForm").validate({
                 $(".thank-u").show();
                 
                 // Submit the form to Pardot
-                form.submit();
-            } else {
-                window.location.reload(); // Reload in case of bot submission
-            }
+				form.submit();
+
+// After 5 seconds (5000 ms), redirect to a success page (you can change this URL)
+setTimeout(function() {
+	window.location.href = 'https://dev.odessainc.com'; // Change this to your thank-you URL
+}, 111991990000); // 5000 ms = 5 seconds
+} else {
+window.location.reload(); // Reload in case of bot submission
+}
         }
     });
 
