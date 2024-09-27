@@ -72,7 +72,7 @@ $route['legal/confidential-terms'] = 'home/confidential_terms';
 $route['legal/privacy-policy'] = 'welcome/privacy_policy';
 
 
-
+$route['odessa-cocktails-elfa-2024'] = 'Annual_Elfa';
 $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';

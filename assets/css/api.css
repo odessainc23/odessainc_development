@@ -3,11 +3,69 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     scroll-behavior: auto;
     overscroll-behavior: none !important;
 }
+.letstalkform .form-control.error {
+    border-color: #ff495c !important;
+}
+.annual-elfa{
+    height: 100vh;
+}
+
+.annual-elfa .api-banner{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.thank-u{    display: flex;
+    
+    align-items: center;
+    height: 200px;}
+    .thank-u h2{
+       
+        margin: 0;
+        line-height: 35px;
+        font-size: 22px;
+       
+    }
+    .thank-u  .api-heading {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+.ready-rethink.annual-elfa .get-copy .btnmar{
+    background: #FC5D19;
+}
+.ready-rethink.annual-elfa .get-copy{
+    position: relative;
+    top: 0;
+    padding: 30px;
+    right: 0;
+    height: auto;
+}
+.annual-elfa .take-flex {
+        height: 90vh;
+        display: flex;
+        flex-flow: row;
+        position: relative;
+       justify-content: space-between;
+        align-items: center;
+    }
+
+#wrapper.ready-rethink.annual-elfa .api-wrapper{
+    background-size: contain;
+}
+.annual-elfa .api-heading{
+    margin-bottom:20px ;
+}
 #bodyId .navbar {
     display: none;
     }
  #bodyId footer {
     display: none;
+}
+.rigid-platform .free-copy img{
+   
+    width: auto;
+}
+.rigid-platform .free-copy{
+    width: auto;
 }
 #bodyId::-webkit-scrollbar {
         display: none;
@@ -16,8 +74,40 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
 .ebook .know-more:after{
     display:none
 }
+.flexible-asset.ready-rethink .trusted-companies p{font-weight: 400;}
 .ebook .know-more{
     padding-left: 0;
+}
+.rigid-system {
+    position: relative;
+}
+.rigid-system .box-container{
+    position: absolute;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0
+}
+.rigid-system .box{
+    width: 360px;
+    height: 110px;
+    top: 488px;
+    left: 100px;
+    padding: 22px 22px 20px 22px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #fff;
+    color: #00ACC8;
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    margin-right: 20px;
+}
+.rigid-system .box img{
+    margin-right: 10px;
 }
 .handbook .flex{
     display: flex;
@@ -41,6 +131,11 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     overflow: hidden;
     height: 100%;
     background-size: contain;
+}
+#wrapper.ready-rethink.annual-elfa .api-wrapper{
+    background: url(../images/api/elfa-bg.png) right 0 no-repeat #213847;
+    background-size: cover;
+  
 }
 #wrapper.ebook .api-wrapper{
     background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
@@ -122,6 +217,146 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     left: 0;
     top: 3px;
 }
+#wrapper.ready-rethink .api-wrapper{
+    background: url(../images/api/ready-rethink.png) right 0 no-repeat #0D2332;
+}
+#wrapper.ready-rethink.flexible-asset .api-wrapper {
+    background: url(../images/platform/flexible-bg.png) right 0 no-repeat #0D2332;
+    background-size: contain;
+}
+.flexible-asset .api-banner{
+    max-width: 60%;margin-bottom: 70px;
+}
+.flexible-asset .api-banner p{
+    font-size: 18px;
+  
+}
+/* .flexible-asset{
+    background:#F3F3F5;
+} */
+.rigid-banner{
+    display: flex;
+    width:40%;
+    justify-content: flex-end;
+    margin-top: 60px;
+}
+.ready-rethink .h3-head{
+    margin-bottom: 20px;
+}
+.ready-rethink .key-takeaways ul li{
+    padding-left: 55px;
+    color:#0D2332;
+    font-size: 18px;
+}
+.ready-rethink .get-copy{
+top:15px
+}
+.ready-rethink .key-takeaways ul li:after{
+    top:8px
+}
+.api-body.ready-rethink #primaryForm {
+    margin-top: 0;
+}
+.ready-rethink .flex{
+        display: flex;
+        justify-content: space-between;
+}
+.ready-rethink .letstalkform .form-control{
+    border: 1px solid #C6C6C6;
+}
+.api-body .disclaimer{
+    color:#0D2332
+}
+.flexible-asset .top-section{
+    top: -260px;
+}
+.ready-rethink p{
+    margin-bottom: 20px;
+    color:#0D2332
+}
+.ready-rethink .get-copy .btnmar{
+    margin-top: 10px;
+}
+.ready-rethink .key-takeaways ul li.customer:after{
+    content: url(../images/api/customer-centric.svg);  
+}
+.ready-rethink .key-takeaways ul li.faster:after{
+    content: url(../images/api/faster-time.svg);  
+}
+.ready-rethink .key-takeaways ul li.cut-cost:after{
+    content: url(../images/api/cut-cost.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
+}
+.ready-rethink .key-takeaways ul li.delight:after{
+    content: url(../images/api/delight.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
+}
+.ready-rethink .key-takeaways ul li.operational:after{
+    content: url(../images/api/operational.svg);  
+}
+.ready-rethink .key-takeaways ul li.scalable:after{
+    content: url(../images/api/scalable.svg);  
+    width: 60px;
+    height: 60px;
+    top: -12px;
+    left: -7px;
+}
+.ready-rethink p{
+    font-size: 16px;
+    font-weight: 600;
+}
+/* .flexible-asset .cannon-image{
+    width: 20%;
+} */
+
+.flexible-asset .cannon-image img{
+    width: auto;height: auto;
+}
+.flexible-asset .mob{
+    display: none;
+}
+.flexible-asset.ready-rethink p{
+    font-weight: 600;
+    font-size: 18px;
+}
+.flexible-asset .api-header .api-logo{
+    position: relative;
+}
+
+.flexible-asset .h3-head{
+    font-size: 27px;
+    font-style: normal;
+    line-height: 32px; 
+    font-family: MaisonNeue-Book;
+    font-weight: 600;
+}
+.flexible-asset .key-takeways-section {
+    padding: 130px 0 200px 0;
+    margin: 0;
+    background: #F3F3F5;
+}
+.flexible-asset .api-banner {
+    margin-bottom: 130px;
+}
+.ready-rethink .key-takeaways{
+    background: none;
+    padding:0;
+    max-width: 60%;
+}
+.ready-rethink{ 
+}
+.ready-rethink .know-more{
+    padding-left: 0px;  
+}
+.ready-rethink .know-more:after{
+    content:none
+}
 .know-more span{
     display: block;
     font-family: MaisonNeue-Bold;
@@ -171,6 +406,55 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     color: #00ABC8;
     margin-bottom: 10px;
 }
+.bg-grey{
+    background: #F3F3F5;
+}
+.employee-uptodate h2,.employee-uptodate p{
+    color: #0D2332 !important;
+}
+.flexible-asset.ready-rethink .employee-uptodate p{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.employee-uptodate{
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-flow: column;
+}
+.flexible-asset.ready-rethink .api-banner p{font-weight: 400;}
+.rigid-platform{
+    height: 10vh;
+}
+.odc__btn--primary.orange{
+    background: #FC5D19;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.odc__btn--primary.orange:hover{
+    box-shadow: inset 0 -5px 0 #c84a13;
+    -moz-box-shadow: inset 0 -2px 0 #c84a13;
+}
+.cannon-part .btn:hover{
+    box-shadow: inset 0 -5px 0 #c84a13;
+    -moz-box-shadow: inset 0 -2px 0 #c84a13;
+
+}
+.employee-image{
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.flexible-asset .top-section.bg-grey{
+    text-align: left; 
+    height: auto;
+}
+.flexible-asset.ready-rethink .not-ready p{
+    font-weight: 400;
+}
+.flexible-asset .not-ready h2{
+    margin-bottom: 20px !important;
+}
 .api-banner p{
 color: #FFF;
 font-family:MaisonNeue-Book;
@@ -198,7 +482,7 @@ margin-bottom: 20px;
 font-size: 24px;
 font-style: normal;
 
-line-height: 26px;
+line-height: 28px;
 }
 .letstalkform.get-copy .form-group{
     margin-bottom: 24px;
@@ -227,6 +511,9 @@ label[for="honeypot"], #honeypot {
 }
 #wrapper .letstalkform.get-copy .form-group {
     margin-bottom: 15px;
+}
+#wrapper .letstalkform.get-copy .flex .form-group{
+    width:48%
 }
 .key-takeaways ul li{
     color: #555B6D;
@@ -312,6 +599,9 @@ padding-left: 16px;
     /* right: 0; */
     width: 100%;
     padding-top: 128px !IMPORTANT;
+}
+.wistia_embed #wistia-kndvnc3z5u-1_popover{
+    box-shadow: none !important;
 }
 .api-h5{
     color: #555B6D;
@@ -533,12 +823,16 @@ overflow: hidden;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 }
+
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
         padding: 0;
         width: 90%;
         max-width: 90%;
     } */
+    .annual-elfa .take-flex {
+        height: 90vh;
+    }
 }
 @media only screen and (max-width: 1750px) {
     .api-banner{
@@ -566,6 +860,9 @@ overflow: hidden;
         max-width: 450px;
         height: 540px;
     }
+    .ready-rethink .get-copy{
+        height: 525px;
+    }
     .key-takeaways{
         margin-right: 25px;
         width:100%;
@@ -579,6 +876,14 @@ overflow: hidden;
 }
 
 }
+@media only screen and (min-height: 1440px)
+{ 
+    .ready-rethink .get-copy {
+        top: 35px;
+    }
+ 
+}
+
 @media only screen and (max-width: 1400px) {
     .api-banner,.key-takeaways{
         max-width: 50%;
@@ -586,6 +891,10 @@ overflow: hidden;
     .api-heading{
         font-size: 3rem;
     }
+    .annual-elfa .take-flex {
+        height:75vh;
+    }
+    .ready-rethink.annual-elfa .get-copy{padding: 25px;}
     #wrapper.api-thankyou{
         /* background: url(../images/api/thank-you.png) 0px -54px no-repeat #ffffff;
         background-size: contain; */
@@ -609,6 +918,7 @@ overflow: hidden;
     }
     
 }
+
 @media only screen and (max-width: 1200px) {
    
     .get-copy {
@@ -617,18 +927,43 @@ overflow: hidden;
     .api-heading {
         font-size: 2.8rem;
     }
+   
 }
 @media only screen and (max-width: 1189px) {
     .api-banner {
         width: 100%;
         max-width: 100%;
     }
+    .annual-elfa{
+        height: auto;
+    }
+    .annual-elfa .take-flex {
+        height: 100vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-flow: column;
+    }
     .key-takeaways,.get-copy{
         max-width: 100%;
+    }
+    .rigid-system .box-container{
+        flex-flow: row;
     }
     .take-flex{
         flex-wrap: wrap;
         flex-flow: column-reverse;
+    }
+    .ready-rethink .key-takeaways{
+        max-width:100%
+    }
+    .flexible-asset .key-takeways-section {
+        padding: 110px 0 200px 0;
+    }
+    .rigid-banner{
+        display: none;
+    }
+    .rigid-system .box {
+        width: auto;
     }
     .key-takeaways,.get-copy{
        margin: 0;position: relative;
@@ -643,11 +978,52 @@ overflow: hidden;
         font-size: 25px;
     }
     #wrapper .api-wrapper{
-        background-image: none;
+        background-image: none !important;
     }
     .change-para{
         max-width: 100%;
     }
+}
+@media only screen and (max-width: 900px) {
+#wrapper.ready-rethink.flexible-asset .api-wrapper{
+background-image: none;
+}
+.flexible-asset .api-banner {
+    max-width: 100%;}
+    .flexible-asset .key-takeways-section {
+        padding: 70px 0 200px 0;
+    }
+    .rigid-system .box img{
+        width: auto;
+    }
+    .rigid-system .box-container{
+        position: relative;
+        flex-flow: column;
+    }
+    .rigid-system .box {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+    .flexible-asset .mob{
+        display: block;
+    }
+    .flexible-asset .desk{
+        display: none;
+    }
+    .flexible-asset .cannon-image img{
+        width: 100%;
+    }
+    .flexible-asset .trusted-companies{
+        padding: 0;
+    }
+    .bg-grey .flex-section{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .employee-uptodate{text-align: center;}
+    .flexible-asset.ready-rethink .key-takeaways{margin: 0;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -655,11 +1031,15 @@ overflow: hidden;
     top: 20%;
     font-size: 14px;
 }
+
 #wrapper.ebook .api-wrapper{
     background-image: none;
 }
 .get-copy{
-    height: auto;
+    height: auto !important;
+}
+#wrapper.ready-rethink .api-wrapper{
+    background-size: contain;
 }
 .handbook .get-copy {
     top: 25px;

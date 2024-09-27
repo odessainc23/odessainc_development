@@ -1,0 +1,180 @@
+<link rel="stylesheet preload" href="<?php echo base_url(); ?>assets/css/api.css?v=2001"  />
+
+<div id="wrapper" class="api-body ready-rethink annual-elfa">
+	<section class="api-wrapper">
+	<div class="container api-header">
+		<div class="navbar_wrapper row">
+			<div class="api-logo">
+			 <a class="navbar-brand" href="<?php echo base_url(); ?>">
+				<img src="https://dev.odessainc.com/assets/images/platform/odesaa.svg" alt="Whitepaper" class="whitepaper">
+			</a>
+		</div>
+	</div>
+	<div class="take-flex">
+		<section class="api-banner">
+			<div class="hd">
+			<h1 class="api-heading">Join us at the Odessa Cocktails at ELFA Annual </h1>
+			<div class="know-more">October 27, 2024 | 7:15 PM – 9:15 PM <br>
+				JW Marriott, Austin TX | Edge Rooftop, Capital View</div>
+			</div>
+				<div class="thank-u" style="display: none;">
+					<h2 class="api-heading">Thank you for registering.</h2>
+					<!-- <h3>Someone will be in touch shortly.</h3> -->
+				</div>
+	</section>
+	<div class="letstalkform get-copy">
+		<form id="primaryForm" method="post" autocomplete="off">
+			<!-- Honeypot field for spam bots -->
+			<label for="honeypot">Honeypot</label>
+			<input id="honeypot" name="honeypot" size="40" type="text"/><br>
+	
+			<!-- Input fields -->
+			<div class="flex">
+				<div class="form-group">
+					<input class="form-control" name="first-name" id="first_name" type="text" placeholder="First Name" required/>
+				</div>
+				<div class="form-group">
+					<input class="form-control" name="last-name" id="last_name" type="text" placeholder="Last Name" required/>
+				</div>
+			</div>
+			<div class="form-group">
+				<input class="form-control" name="company" id="company" type="text" placeholder="Company" required/>
+			</div>
+			<div class="form-group">
+				<input class="form-control" name="email" id="email" type="email" placeholder="Business Email" required/>
+			</div>
+	
+			<!-- Disclaimer is now disabled -->
+			<div class="disclaimer" style="display: none;">
+				By submitting this form, I agree to Odessa's <a href="/privacy-policy" target="_blank">privacy policy</a>.
+			</div>
+	
+			<!-- Submit button -->
+			<div class="clearfix">
+				<button class="odc__btn odc__btn--primary odc__btn--xl btnmar" id="letstalk">Submit</button>
+			</div>
+		</form>
+	
+		<!-- Thank you message -->
+		
+	</div>
+		</div>
+	</div>
+    </section>
+
+
+</div>
+
+<script src= "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script> 
+<script>
+$(document).ready(function() {
+	$.validator.addMethod("myusername", function(value, element) {
+    return /^([\w-\.]+@(?!gmail\.com)(?!gmail\.co)(?!yahoo\.com)(?!hotmail\.com)(?!aol\.com)(?!hotmail\.co\.uk)(?!hotmail\.fr)(?!msn\.com)(?!yahoo\.fr)(?!wanadoo\.fr)(?!orange\.fr)(?!comcast\.net)(?!yahoo\.co\.uk)(?!yahoo\.com\.br)(?!yahoo\.co\.in)(?!live\.com)(?!rediffmail\.com)(?!free\.fr)(?!gmx\.de)(?!web\.de)(?!yandex\.ru)(?!ymail\.com)(?!libero\.it)(?!outlook\.com)(?!uol\.com\.br)(?!bol\.com\.br)(?!mail\.ru)(?!cox\.net)(?!hotmail\.it)(?!sbcglobal\.net)(?!sfr\.fr)(?!live\.fr)(?!verizon\.net)(?!live\.co\.uk)(?!googlemail\.com)(?!yahoo\.es)(?!ig\.com\.br)(?!live\.nl)(?!bigpond\.com)(?!terra\.com\.br)(?!yahoo\.it)(?!neuf\.fr)(?!yahoo\.de)(?!alice\.it)(?!rocketmail\.com)(?!att\.net)(?!laposte\.net)(?!facebook\.com)(?!bellsouth\.net)(?!yahoo\.in)(?!hotmail\.es)(?!charter\.net)(?!yahoo\.ca)(?!yahoo\.com\.au)(?!rambler\.ru)(?!hotmail\.de)(?!tiscali\.it)(?!shaw\.ca)(?!yahoo\.co\.jp)(?!sky\.com)(?!earthlink\.net)(?!optonline\.net)(?!freenet\.de)(?!t-online\.de)(?!aliceadsl\.fr)(?!virgilio\.it)(?!home\.nl)(?!qq\.com)(?!telenet\.be)(?!me\.com)(?!yahoo\.com\.ar)(?!tiscali\.co\.uk)(?!yahoo\.com\.mx)(?!voila\.fr)(?!gmx\.net)(?!mail\.com)(?!planet\.nl)(?!tin\.it)(?!live\.it)(?!ntlworld\.com)(?!arcor\.de)(?!yahoo\.co\.id)(?!frontiernet\.net)(?!hetnet\.nl)(?!live\.com\.au)(?!yahoo\.com\.sg)(?!zonnet\.nl)(?!club-internet\.fr)(?!juno\.com)(?!optusnet\.com\.au)(?!blueyonder\.co\.uk)(?!bluewin\.ch)(?!skynet\.be)(?!sympatico\.ca)(?!windstream\.net)(?!mac\.com)(?!centurytel\.net)(?!chello\.nl)(?!live\.ca)(?!aim\.com)(?!bigpond\.net\.au)([\w-]+\.)+[\w-]{2,4})?$/.test(value);
+}, 'Free email addresses are not allowed.');
+
+
+$.validator.addMethod("lettersonly", function(value, element) {
+return this.optional(element) || /^[a-z\s]+$/i.test(value);},"Please enter letters only."
+);
+
+$.validator.addMethod("noSpace", function(value, element) { 
+return value == '' || value.trim().length != 0;  
+}, "No spaces allowed !! please don't leave it empty.");
+
+
+$.validator.addMethod("mobile", function(phone_number, element) {
+phone_number = phone_number.replace(/\s+/g, ""); 
+return this.optional(element) || phone_number.length >= 6 && phone_number.length <=15
+phone_number.match(/^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$/);
+}, "Mobile number should be of 6 to 15 digits.");
+
+
+
+$("#primaryForm").validate({
+        rules: {
+            "first-name": { required: true, maxlength: 50, lettersonly: true },
+            "last-name": { required: true, maxlength: 50, lettersonly: true },
+            email: { required: true,  myusername: true },
+            company: { required: true }
+        },
+		submitHandler: function(form) {
+            var honeypot_val = $("#honeypot").val();
+
+            // Proceed if honeypot is empty (not a bot)
+            if (honeypot_val === '') {
+                // Set Pardot form handler URL
+                $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-09-27/3s4kpl2');
+                
+                // Hide form and show thank you message after submission
+                $(".ready-rethink.annual-elfa .get-copy").hide();
+				$(".hd").hide();
+                $(".thank-u").show();
+                
+                // Submit the form to Pardot
+				form.submit();
+
+// After 5 seconds (5000 ms), redirect to a success page (you can change this URL)
+setTimeout(function() {
+	window.location.href = 'https://dev.odessainc.com'; // Change this to your thank-you URL
+}, 111991990000); // 5000 ms = 5 seconds
+} else {
+window.location.reload(); // Reload in case of bot submission
+}
+        }
+    });
+
+    // Additional field validations
+    $("#first_name, #last_name").keypress(function(event){
+        var regex = new RegExp("^[a-zA-Z ]*$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+        }
+    });
+
+
+$('#primaryForm input').bind("cut copy paste",function(e) {
+e.preventDefault();
+});
+
+});
+document.body.setAttribute('id', 'bodyId');
+$(function(){
+function rescaleCaptcha(){
+var width = $('.g-recaptcha').parent().width();
+var scale;
+if (width < 302) {
+scale = width / 302;
+} else{
+scale = 1; 
+}
+
+$('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+$('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+$('.g-recaptcha').css('transform-origin', '0 0');
+$('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+}
+
+rescaleCaptcha();
+$( window ).resize(function() { rescaleCaptcha(); });
+
+});
+
+function isNumberKey(evt){
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+
+return true;
+}
+</script>
+<style amp-custom>
+@import url('../../../../assets/css/bootstrap-select.min.css?v=<?php echo time() ?>');
+</style>
+<script src="<?= base_url(); ?>assets/js/bootstrap-select.js"></script> 
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+$(function(){
+$('.selectpicker').selectpicker();
+});
+</script>
