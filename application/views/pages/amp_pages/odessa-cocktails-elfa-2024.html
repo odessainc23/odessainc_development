@@ -98,14 +98,21 @@ $("#primaryForm").validate({
             email: { required: true,  myusername: true },
             company: { required: true }
         },
-        submitHandler: function(form) {
+		submitHandler: function(form) {
             var honeypot_val = $("#honeypot").val();
+
             // Proceed if honeypot is empty (not a bot)
             if (honeypot_val === '') {
-                // Hide form and show thank you message on submission
+                // Set Pardot form handler URL
+                $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-09-27/3s4kpl2');
+                
+                // Hide form and show thank you message after submission
                 $(".ready-rethink.annual-elfa .get-copy").hide();
 				$(".hd").hide();
                 $(".thank-u").show();
+                
+                // Submit the form to Pardot
+                form.submit();
             } else {
                 window.location.reload(); // Reload in case of bot submission
             }
