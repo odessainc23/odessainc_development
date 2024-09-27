@@ -7,8 +7,25 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     height: 100vh;
 }
 .annual-elfa .api-banner{
-    margin-top: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
+.ready-rethink.annual-elfa .get-copy{
+    position: relative;
+    top: 0;
+    padding: 30px;
+    right: 0;
+    height: auto;
+}
+.annual-elfa .take-flex {
+        height: 90vh;
+        display: flex;
+        flex-flow: row;
+        position: relative;
+       justify-content: space-between;
+        align-items: center;
+    }
+
 #wrapper.ready-rethink.annual-elfa .api-wrapper{
     background-size: contain;
 }
@@ -779,13 +796,6 @@ overflow: hidden;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 }
-@media only screen and (min-height: 1440px)
-{ 
-    .ready-rethink .get-copy {
-        top: 35px;
-    }
- 
-}
 
 @media only screen and (max-width: 2000px) {
     /* .api-body .container {
@@ -793,6 +803,9 @@ overflow: hidden;
         width: 90%;
         max-width: 90%;
     } */
+    .annual-elfa .take-flex {
+        height: 90vh;
+    }
 }
 @media only screen and (max-width: 1750px) {
     .api-banner{
@@ -836,6 +849,14 @@ overflow: hidden;
 }
 
 }
+@media only screen and (min-height: 1440px)
+{ 
+    .ready-rethink .get-copy {
+        top: 35px;
+    }
+ 
+}
+
 @media only screen and (max-width: 1400px) {
     .api-banner,.key-takeaways{
         max-width: 50%;
@@ -843,6 +864,10 @@ overflow: hidden;
     .api-heading{
         font-size: 3rem;
     }
+    .annual-elfa .take-flex {
+        height:75vh;
+    }
+    .ready-rethink.annual-elfa .get-copy{padding: 25px;}
     #wrapper.api-thankyou{
         /* background: url(../images/api/thank-you.png) 0px -54px no-repeat #ffffff;
         background-size: contain; */
@@ -884,6 +909,12 @@ overflow: hidden;
     }
     .annual-elfa{
         height: auto;
+    }
+    .annual-elfa .take-flex {
+        height: 100vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-flow: column;
     }
     .key-takeaways,.get-copy{
         max-width: 100%;
