@@ -11,11 +11,11 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     margin-bottom: 0;
 }
 .thank-u{    display: flex;
-    justify-content: center;
+    
     align-items: center;
     height: 200px;}
     .thank-u h2{
-        text-align: center;
+       
         margin: 0;
         line-height: 35px;
         font-size: 22px;
