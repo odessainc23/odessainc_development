@@ -988,6 +988,9 @@ overflow: hidden;
 #wrapper.ready-rethink.flexible-asset .api-wrapper{
 background-image: none;
 }
+.annual-elfa .api-heading br{
+    display: none;
+}
 .flexible-asset .api-banner {
     max-width: 100%;}
     .flexible-asset .key-takeways-section {
