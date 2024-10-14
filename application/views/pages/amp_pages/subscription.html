@@ -136,7 +136,7 @@
             if (honeypot_val == '') {
                 // Submit the form to the secondary form URL
                 $("#secondaryForm").submit();
-
+				window.scrollTo({ top: 0, behavior: 'smooth' });
                 // Show the thank-you message after submission
                 $("#primaryForm").hide(); // Hide the form
 				$(".sub-head").hide();
