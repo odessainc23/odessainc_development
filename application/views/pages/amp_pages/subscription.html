@@ -47,6 +47,7 @@
 				</form>
 				<div class="thank-u" style="display: none;">
 					<h2 class="api-heading text-center">Thank you for subscribing!</h2>
+					<p>You’re now part of our community. Keep an eye on your inbox for the latest insights, trends, and <br>exclusive content coming your way!</p>
 					<!-- <h3>Someone will be in touch shortly.</h3> -->
 				</div>
 				</div>
@@ -139,7 +140,8 @@
                 // Show the thank-you message after submission
                 $("#primaryForm").hide(); // Hide the form
 				$(".sub-head").hide();
-				$(".thank-u").show();; // Show the thank-you message
+				$(".api-body").addClass('thank')
+				$(".thank-u").show(); // Show the thank-you message
                 
                 return true;
             } else {

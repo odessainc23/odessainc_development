@@ -48,8 +48,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     box-shadow: none;
    
 }
-.ready-rethink.subscribe-form  .get-copy {
-    height: auto !important;
+.ready-rethink.subscribe-form.thank  .get-copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .subscribe-form .thank-u{
     display: block;height: auto;
