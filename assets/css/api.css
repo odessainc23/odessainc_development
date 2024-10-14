@@ -464,6 +464,9 @@ html.i-amphtml-singledoc > body {
   z-index: 1;
   max-width: 848px;
 }
+.subscribe-form .api-heading{
+    color:#00acc8
+}
 .api-heading {
   color: #fff;
   font-family: MaisonNeue-Bold;
