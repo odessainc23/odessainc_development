@@ -14,6 +14,7 @@ html.i-amphtml-singledoc > body {
 }
 .subscribe-form {
   background: #0d2332;
+  background: url(../images/api/subscribe-bg.png) right 0 no-repeat #213847;
   max-width: 100%;
   padding: 0 0 1px 0;
 }
