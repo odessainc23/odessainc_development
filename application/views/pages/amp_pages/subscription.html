@@ -6,11 +6,12 @@
 	<!--Form Section Start Here-->
 	<div class="letstalkform get-copy">
 		<!-- <img src="<?php echo base_url(); ?>assets/images/api/download.svg" alt="" class="plane"> -->
-
+<div class="sub-head">
 			<h1 class="api-heading text-center">
 				Get Fresh Perspectives <br>Straight to Your Inbox 
 			</h1>
 			<p class="text-center">Join our community and stay updated with the latest insights, trends,<br> and exclusive content tailored for industry leaders.</p>
+		</div>
 			<form id="primaryForm" method="post" autocomplete="off">
 				<label for="honeypot">Honeypot </label>
 				<input id="honeypot" name="honeypot" size="40" type="text"/><br>
@@ -45,7 +46,7 @@
 				</div>
 				</form>
 				<div class="thank-u" style="display: none;">
-					<h2 class="api-heading">Thank you for subscribing!</h2>
+					<h2 class="api-heading text-center">Thank you for subscribing!</h2>
 					<!-- <h3>Someone will be in touch shortly.</h3> -->
 				</div>
 				</div>
@@ -137,6 +138,7 @@
 
                 // Show the thank-you message after submission
                 $("#primaryForm").hide(); // Hide the form
+				$(".sub-head").hide();
 				$(".thank-u").show();; // Show the thank-you message
                 
                 return true;
