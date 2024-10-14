@@ -78,69 +78,75 @@
     }, "Mobile number should be 6 to 15 digits.");
 
     // Primary form validation
-    $("#primaryForm").validate({
-        rules: {
-            "first-name": {
-                required: true,
-                maxlength: 50,
-                lettersonly: true
-            },
-            "last-name": {
-                required: true,
-                maxlength: 50,
-                lettersonly: true
-            },
-            email: {
-                required: true,
-                myusername: true
-            },
-            company: {
-                required: true
-            },
-            agree: {
-                required: true // Validation for the checkbox
-            }
+	$("#primaryForm").validate({
+    rules: {
+        "first-name": {
+            required: true,
+            maxlength: 50,
+            lettersonly: true
         },
-        messages: {
-            "first-name": {
-                required: "Please enter your first name.",
-                maxlength: "First name cannot exceed 50 characters."
-            },
-            "last-name": {
-                required: "Please enter your last name.",
-                maxlength: "Last name cannot exceed 50 characters."
-            },
-            email: {
-                required: "Please enter your email address."
-            },
-            company: {
-                required: "Please enter your company name."
-            },
-            agree: {
-                required: "You must agree to the privacy policy."
-            }
+        "last-name": {
+            required: true,
+            maxlength: 50,
+            lettersonly: true
         },
-        submitHandler: function (form) {
-            var honeypot_val = $("#honeypot").val();
-            if (honeypot_val != '' || grecaptcha.getResponse() == "") {
-                if (honeypot_val != '') {
-                    window.location.reload();
-                    return false;
-                } else {
-                    $(".capt").addClass("error");
-                    return false;
-                }
+        email: {
+            required: true,
+            myusername: true
+        },
+        company: {
+            required: true
+        },
+        agree: {
+            required: true // Validation for the checkbox
+        }
+    },
+    messages: {
+        "first-name": {
+            required: "Please enter your first name.",
+            maxlength: "First name cannot exceed 50 characters."
+        },
+        "last-name": {
+            required: "Please enter your last name.",
+            maxlength: "Last name cannot exceed 50 characters."
+        },
+        email: {
+            required: "Please enter your email address."
+        },
+        company: {
+            required: "Please enter your company name."
+        },
+        agree: {
+            required: "You must agree to the privacy policy."
+        }
+    },
+    submitHandler: function (form) {
+        var honeypot_val = $("#honeypot").val();
+        if (honeypot_val != '' || grecaptcha.getResponse() == "") {
+            if (honeypot_val != '') {
+                window.location.reload();
+                return false;
             } else {
-                if (honeypot_val == '') {
-                    $("#secondaryForm").submit();
-                    return true;
-                } else {
-                    $(".capt").removeClass("error");
-                    return true;
-                }
+                $(".capt").addClass("error");
+                return false;
+            }
+        } else {
+            if (honeypot_val == '') {
+                // Submit the form to the secondary form URL
+                $("#secondaryForm").submit();
+
+                // Show the thank-you message after submission
+                $("#primaryForm").hide(); // Hide the form
+				$(".thank-u").show();; // Show the thank-you message
+                
+                return true;
+            } else {
+                $(".capt").removeClass("error");
+                return true;
             }
         }
-    });
+    }
+});
 
     // Submit button click event
     $("#letstalk").click(function () {
@@ -149,8 +155,7 @@
             if ($('#primaryForm').valid()) {
                 if ($('#agree').is(':checked')) {
                     $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-09-26/3s4kl6r');
-					$(".ready-rethink .get-copy").hide();
-                $(".thank-u").show();
+				
                     $("#primaryForm").submit();
                     $('.box').hide();
                     return true;
