@@ -48,6 +48,12 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     box-shadow: none;
    
 }
+.ready-rethink.subscribe-form  .get-copy {
+    height: auto !important;
+}
+.subscribe-form .thank-u{
+    display: block;height: auto;
+}
 .subscribe-form .get-copy .subscribe-btn:before {
     font-size: 22px;
     transition: all 300ms ease 0ms;
