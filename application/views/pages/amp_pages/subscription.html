@@ -45,8 +45,8 @@
 				</div>
 				</form>
 				<div class="thank-u" style="display: none;">
-					<h3> Thank you for your interest  in Odessa!</h3>
-					<h3>Someone will be touch shortly.</h3>
+					<h2 class="api-heading">Thank you for subscribing!</h2>
+					<!-- <h3>Someone will be in touch shortly.</h3> -->
 				</div>
 				</div>
 	<!--Form Section End Here--> 
@@ -149,6 +149,8 @@
             if ($('#primaryForm').valid()) {
                 if ($('#agree').is(':checked')) {
                     $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-09-26/3s4kl6r');
+					$(".ready-rethink .get-copy").hide();
+                $(".thank-u").show();
                     $("#primaryForm").submit();
                     $('.box').hide();
                     return true;
