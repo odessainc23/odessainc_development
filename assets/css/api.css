@@ -17,6 +17,7 @@ html.i-amphtml-singledoc > body {
   background: url(../images/api/subscribe-bg.png) right 0 no-repeat #213847;
   max-width: 100%;
   padding: 0 0 1px 0;
+  background-size: cover;
 }
 .subscribe-form.api-body .disclaimer,
 .subscribe-form.api-body label,
