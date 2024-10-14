@@ -3,6 +3,73 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     scroll-behavior: auto;
     overscroll-behavior: none !important;
 }
+.subscribe-form .get-copy{
+    margin: 120px auto 100px;
+    max-width: 800px;
+    position: relative;  
+    left:0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: unset
+}
+.subscribe-form{
+    background: #0D2332;
+    max-width: 100%;
+    padding: 0 0 1px 0;
+}
+.subscribe-form.api-body .disclaimer,.subscribe-form.api-body label,.subscribe-form.ready-rethink  p{
+    color: #fff;
+}
+.ready-rethink.subscribe-form .letstalkform .form-control {
+    border: 2px solid #C6C6C6;
+}
+.subscribe-form .get-copy .subscribe-btn{
+    color: #FFFFFF !important;
+    border-width: 1px !important;
+    border-color: #FC5D19;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #FC5D19;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    padding-top: 12px !important;
+    padding-right: 50px !important;
+    padding-bottom: 12px !important;
+    padding-left: 50px !important;
+}
+.subscribe-form .get-copy .subscribe-btn:hover {
+    color: #FFFFFF !important;
+    background-image: initial;
+    background-color: #FC5D19;
+    box-shadow: none;
+   
+}
+.subscribe-form .get-copy .subscribe-btn:before {
+    font-size: 22px;
+    transition: all 300ms ease 0ms;
+    line-height: 1em;
+    content: "\003E";
+    opacity: 0;
+    position: absolute;
+    margin-left: -1em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -webkit-font-feature-settings: "kern" off;
+    font-feature-settings: "kern" off;
+    font-variant: none;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: none;
+    top: 14px;
+}
+.subscribe-form .get-copy .subscribe-btn:hover:before {
+    opacity: 1;
+    margin-left: 85px;
+}
 .annual-elfa{
     height: 100vh;
 }
