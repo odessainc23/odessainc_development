@@ -52,9 +52,10 @@ html.i-amphtml-fie>body, html.i-amphtml-singledoc>body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
 .subscribe-form .thank-u{
-    display: block;height: auto;
+    display: block;height: auto;text-align:center;
 }
 .subscribe-form .get-copy .subscribe-btn:before {
     font-size: 22px;
