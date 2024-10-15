@@ -84,6 +84,7 @@ $route['handbook/next-gen-auto-finance-platform-thankyou'] = 'Auto_thank';
 $route['handbook/cx-asset-finance'] = 'Ebook';
 $route['handbook/cx-asset-finance-thankyou'] = 'Ebook_thank';
 $route['virtual-wine-tasting-event-registration'] = 'Virtual';
+$route['whitepaper/rethink-asset-finance-master-pay-per-use'] = 'Ready_amp';
 $route['virtual-wine-tasting-event-registration/thankyou'] = 'Winethank';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['cocktail-registration'] = 'Cocktail';
