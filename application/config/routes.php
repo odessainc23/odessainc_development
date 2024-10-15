@@ -79,6 +79,7 @@ $route['our-people'] = 'Our_amp';
 $route['afterwork'] = 'Cocktail_et';
 $route['client-success-stories'] = 'Technology';
 $route['afterwork-thankyou'] = 'Cocktailet_thank';
+$route['flexible-asset-finance-platform'] = 'Flexible';
 $route['handbook/next-gen-auto-finance-platform'] = 'Auto_handbook';
 $route['handbook/next-gen-auto-finance-platform-thankyou'] = 'Auto_thank';
 $route['handbook/cx-asset-finance'] = 'Ebook';
