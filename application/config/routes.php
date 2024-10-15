@@ -87,6 +87,7 @@ $route['virtual-wine-tasting-event-registration'] = 'Virtual';
 $route['whitepaper/rethink-asset-finance-master-pay-per-use'] = 'Ready_amp';
 $route['virtual-wine-tasting-event-registration/thankyou'] = 'Winethank';
 $route['automotive-finance-software'] = 'Redirect_amp';
+$route['whitepaper/thankyou'] = 'Thankyou_rethink';
 $route['cocktail-registration'] = 'Cocktail';
 $route['cocktail-registration-thankyou'] = 'Cocktailthank';
 $route['auto-finance-news'] = 'Redirect_news';
