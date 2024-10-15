@@ -62,6 +62,7 @@ $route['careers.amp.html'] = 'Careers_amp';
 $route['turns22.amp.html'] = 'home/turns22';
 $route['xaas-everything-as-a-service.amp.html'] = 'xaas_amp/xaas';
 $route['newsroom/announcements'] = 'newsroom/announcements';
+$route['subscribe-insights'] = 'Subscribe';
 $route['privacy-policy'] = 'welcome/privacy_policy';
 // $route['odessa-modern-slavery-act-statement'] = 'welcome/odessa-modern-slavery-act-statement';
 
