@@ -327,6 +327,7 @@ html.i-amphtml-singledoc > body {
 }
 .ready-rethink .key-takeaways ul li:after {
   top: 8px;
+  content: url(../images/api/insights.svg);
 }
 .api-body.ready-rethink #primaryForm {
   margin-top: 0;
