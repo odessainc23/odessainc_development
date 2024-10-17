@@ -3,6 +3,76 @@ html.i-amphtml-singledoc > body {
   scroll-behavior: auto;
   overscroll-behavior: none !important;
 }
+#wrapper.ready-rethink.flexible-asset.competitive .api-wrapper {
+  background: url(../images/api/half-circle.png) right 0 no-repeat #0d2332;
+}
+.flexible-asset.competitive .api-banner{
+  max-width: 70%;
+  margin-bottom: 60px;
+}
+.flexible-asset.competitive .key-takeways-section{
+  padding: 40px 0;
+  background: #fff;
+}
+.flexible-asset.ready-rethink.competitive p {
+  font-weight: 400;
+}
+.ready-rethink.competitive .key-takeaways ul li{
+  margin-bottom: 20px;
+}
+.key-takeaways ul.functional-gaps{
+  margin: 40px 0 0;
+}
+.life-cycle{
+  margin: 30px 0;width: 100%;
+}
+.flexible-asset.ready-rethink.competitive .top-section{
+  background: #fff;top:0;margin:0;
+}
+.ready-rethink.competitive .reasons-consider-odessa .bg-grey{
+  background: #F3F3F5;
+  padding: 20px 40px;
+}
+.ready-rethink.competitive .talk-team{
+  background:#085B7B;    padding: 50px 0;
+}
+.ready-rethink.competitive .business-talk{
+  width: 80%;
+}
+.ready-rethink.flexible-asset.competitive .letstalkform{
+  background: transparent;
+  padding: 0;
+  box-shadow: unset;
+}
+.orange-btn{
+  background: #FC5D19;
+  border-color: #FC5D19;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 180px;
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+.ready-rethink.competitive .letstalkform .form-control{
+  width: 50%;
+}
+.ready-rethink.flexible-asset.competitive .key-takeaways ul.cycle li{
+padding-left: 30px;}
+.ready-rethink.flexible-asset.competitive .key-takeaways ul.cycle li:after{
+  content: url(../images/api/stroke.svg);top:0;left:0
+}
+.ready-rethink .world-dedicated .key-takeaways{
+  max-width: 70%
+}
+.flexible-asset.ready-rethink.competitive .top-section.world-dedicated {
+  background: #F3F3F5;
+}
+.business-talk h2, .business-talk p{color: #fff !important}
 .subscribe-form .get-copy {
   margin: 120px auto 100px;
   max-width: 800px;
@@ -337,7 +407,7 @@ html.i-amphtml-singledoc > body {
   justify-content: space-between;
 }
 .ready-rethink .letstalkform .form-control {
-  border: 1px solid #c6c6c6;
+  border: 2px solid #c6c6c6;
 }
 .api-body .disclaimer {
   color: #0d2332;
@@ -357,6 +427,27 @@ html.i-amphtml-singledoc > body {
 }
 .ready-rethink .key-takeaways ul li.faster:after {
   content: url(../images/api/faster-time.svg);
+}
+.ready-rethink .key-takeaways ul li.technical:after {
+  content: url(../images/api/technical.svg);
+}
+.ready-rethink .key-takeaways ul li.security:after {
+  content: url(../images/api/security.svg);
+}
+.ready-rethink .key-takeaways ul li.development:after {
+  content: url(../images/api/development.svg);
+}
+.ready-rethink .key-takeaways ul li.bug:after {
+  content: url(../images/api/bug.svg);
+}
+.ready-rethink .key-takeaways ul li.personnel:after {
+  content: url(../images/api/personnel.svg);
+}
+.ready-rethink .key-takeaways ul li.maintainence:after {
+  content: url(../images/api/maintainence.svg);
+}
+.ready-rethink.flexible-asset.competitive .key-takeaways ul li:after{
+  top:-8px;left:-9px
 }
 .ready-rethink .key-takeaways ul li.cut-cost:after {
   content: url(../images/api/cut-cost.svg);
@@ -1120,6 +1211,21 @@ label[for="honeypot"],
   .flexible-asset.ready-rethink .key-takeaways {
     margin: 0;
   }
+  .ready-rethink .world-dedicated .key-takeaways {
+    max-width: 100%;
+}
+.ready-rethink.competitive .business-talk {
+  width: 100%;
+}
+.flexible-asset.ready-rethink.competitive .top-section.world-dedicated{
+  padding: 20px 0;
+}
+.flexible-asset.competitive .api-banner {
+  max-width: 100%;
+}
+.ready-rethink.competitive .letstalkform .form-control {
+  width: 100%;
+}
 }
 
 @media only screen and (max-width: 767px) {

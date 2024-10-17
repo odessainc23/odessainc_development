@@ -92,6 +92,7 @@ $route['innovate24'] = 'Redirect_innovate24';
 $route['keyword'] = 'Keyword';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['auto-finance-software'] = 'Auto_amp';
+$route['real-cost-of-maintaining-outdated-technology'] = 'Outdated';
 $route['auto-finance-news'] = 'Redirect_news';
 $route['odessa-cocktails-elfa-2024'] = 'Annual_Elfa';
 $route['whitepaper/master-as-a-service-offerings-asset-finance-whitepaper'] = 'Ready_amp';
