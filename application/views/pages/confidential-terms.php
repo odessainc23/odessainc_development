@@ -35,8 +35,8 @@
           <div class="legal-ppnav__inner">
             <div class="legal-ppnavtitle">TABLE OF CONTENTS</div>
             <div class="legal-ppnavlist">
-              <a href="#OnPremise" class="active">On-Premise SLA’s</a>
-              <a href="#PrivateCloud">Hosted SLA’s</a>
+              <a href="#OnPremise" class="active">Standard Support Terms </a>
+              <a href="#PrivateCloud">Service Level Availability</a>
               <a href="#Privacy">Data Privacy
                 <a href="#Privacy" style="display: block;padding: 10px 20px;">a. Privacy Policy</a>
               
@@ -53,7 +53,7 @@
         </div>
         <div class="legal-ppcontent">
           <div id="OnPremise" class="legal-pcontent legal-ppcontab">
-            <h3>On-Premise SLA’s</h3>
+            <h3>Standard Support Terms</h3>
             <h4>Section 1. Defined Terms</h4>
             <p>Except as expressly defined in this Support Exhibit, capitalized terms will have the meaning ascribed to them in the Master Agreement. In addition, the following capitalized terms will have the following meanings:</p>
             <p>
