@@ -778,13 +778,13 @@ label[for="honeypot"],
   background-size: contain;
 }
 .section-products #product-2 .part-1::before {
-  background: url("https://www.odessainc.com/blog/wp-content/uploads/2020/07/Odessa-decoding-dev-ops-01.svg")
+  background: url("https://www.odessainc.com/blog/wp-content/uploads/XAAS-Blog-Header-1-430x350.png")
     no-repeat center;
   background-size: cover;
 }
 
 .section-products #product-3 .part-1::before {
-  background: url("https://www.odessainc.com/blog/wp-content/uploads/2023/01/cost-of-doing-nothing-1.png")
+  background: url("https://www.odessainc.com/blog/wp-content/uploads/Odessa-Monitor-Live-891-x-769-px-1-1-1-430x350.png")
     no-repeat center;
   background-size: cover;
 }
