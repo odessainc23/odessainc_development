@@ -34,6 +34,8 @@ body::-webkit-scrollbar {
 	</div>
 	<section class="api-banner">
 			<h1 class="api-heading">The Real Cost of Maintaining Outdated Technology</h1>
+            <a class="orange-btn" id="scrollToSection">Let's Chat</a>
+
 	</section>
 	</div>
     </section>
@@ -193,6 +195,16 @@ $(document).ready(function() {
     // Disable cut, copy, paste for inputs
     $('#primaryForm input').bind("cut copy paste", function(e) {
         e.preventDefault();
+    });
+
+    $('#scrollToSection').on('click', function(event) {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Animate the scroll to the target section
+        $('html, body').animate({
+            scrollTop: $('#primaryForm').offset().top
+        }, 800); // Adjust the duration (800ms) as needed
     });
 });
 

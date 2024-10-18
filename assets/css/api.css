@@ -56,10 +56,21 @@ html.i-amphtml-singledoc > body {
   width: 180px;
   height: 45px;
   display: flex;
+  transition: all 0.5s ease;
   align-items: center;
   justify-content: center;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+}
+.flexible-asset.competitive .api-banner h1{
+      margin: 0 0 30px 0;
+}
+.orange-btn:hover{
+  background: #a94115;
+  border-color: #b9a49b;
+  color: #fff;
+  border-bottom: 1px solid;
 }
 .ready-rethink.competitive .letstalkform .form-control{
   width: 50%;
