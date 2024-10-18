@@ -17,6 +17,9 @@ html.i-amphtml-singledoc > body {
 .flexible-asset.ready-rethink.competitive p {
   font-weight: 400;
 }
+.ready-rethink.flexible-asset.competitive .key-takeaways ul.cycle li:last-child{
+  margin-bottom: 0px;
+}
 .ready-rethink.competitive .key-takeaways ul li{
   margin-bottom: 20px;
 }

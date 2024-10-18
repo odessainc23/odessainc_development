@@ -147,12 +147,13 @@ body::-webkit-scrollbar {
             
                 <button class="orange-btn" id="letstalk">Let's Chat</button>
             </form>
-            <div class="thank-u" style="display: none;">
-                Thank you for your submission!
-            </div>
-				
+           
 				</div>
     </div>
+    <div class="thank-u" style="display: none;">
+        Thank you for your submission!
+    </div>
+        
     </div>
     </section>
 </div>
@@ -183,13 +184,8 @@ $(document).ready(function() {
             $(element).removeClass('error');
         },
         submitHandler: function(form) {
-    console.log("Form is being submitted");
     $('#primaryForm').attr('action', 'https://go.odessainc.com/l/310001/2024-10-17/3s4mvtx');
     $("#primaryForm").submit();
-    $('#primaryForm').hide();
-    console.log("Primary form hidden, showing thank you message");
-    $('.thank-u').show();
-    console.log("Thank you message displayed");
     return true;
 }
     });
