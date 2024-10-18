@@ -78,6 +78,7 @@ $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
 $route['afterwork'] = 'Cocktail_et';
+$route['real-cost-of-maintaining-outdated-technology'] = 'Outdated';
 $route['client-success-stories'] = 'Technology';
 $route['afterwork-thankyou'] = 'Cocktailet_thank';
 $route['flexible-asset-finance-platform'] = 'Flexible';
