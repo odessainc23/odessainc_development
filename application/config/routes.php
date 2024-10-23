@@ -90,6 +90,7 @@ $route['virtual-wine-tasting-event-registration/thankyou'] = 'Winethank';
 $route['subscribe-insights'] = 'Subscribe';
 $route['innovate24'] = 'Redirect_innovate24';
 $route['keyword'] = 'Keyword';
+$route['how-modern-software-saves-enterprises-money'] = 'Enterprises';
 $route['automotive-finance-software'] = 'Redirect_amp';
 $route['auto-finance-software'] = 'Auto_amp';
 $route['real-cost-of-maintaining-outdated-technology'] = 'Outdated';
