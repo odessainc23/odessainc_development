@@ -1173,9 +1173,7 @@ label[for="honeypot"],
   .api-thank-conent h2 {
     font-size: 25px;
   }
-  #wrapper .api-wrapper {
-    background-image: none !important;
-  }
+  
   .change-para {
     max-width: 100%;
   }
@@ -1183,6 +1181,9 @@ label[for="honeypot"],
 @media only screen and (max-width: 900px) {
   #wrapper.ready-rethink.flexible-asset .api-wrapper {
     background-image: none;
+  }
+  #wrapper .api-wrapper {
+    background-image: none !important;
   }
   .subscribe-form .get-copy {
     top: 80px;
