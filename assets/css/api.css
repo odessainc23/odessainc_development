@@ -10,6 +10,9 @@ html.i-amphtml-singledoc > body {
   max-width: 70%;
   margin-bottom: 60px;
 }
+#wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
+  background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
+}
 .flexible-asset.competitive .key-takeways-section{
   padding: 40px 0;
   background: #fff;
@@ -1251,6 +1254,15 @@ label[for="honeypot"],
 }
 .ready-rethink.competitive .letstalkform .form-control {
   width: 100%;
+}
+.cs-banner {
+  max-width: 100% !important
+}
+.cs-main-post .api-heading {
+  font-size: 30px !important;
+}
+.business-talk h2, .business-talk p {
+ font-size: 25px;
 }
 }
 

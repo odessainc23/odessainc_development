@@ -19,13 +19,12 @@
 		max-width: 50%;
 		padding: 30px 0 40px;
 	}
-.Eric-blog .letstalkform{
-	box-shadow: none;
-	padding: 0;
-	margin-bottom: 30px;
-	background: none;
+.Eric-blog  .talk-team {
+    background: #085B7B;
+    padding: 50px 0;
 }
-	.cs-main-post {
+.cs-main-post p{color: #fff;}
+	.Eric-blog .api-wrapper {
 		background: url(../assets/images/api/subscribe-bg.png) right 0 no-repeat #213847;
 	}
 
@@ -110,7 +109,9 @@
 	.cs-blog-detail .cs-text .post-option span a {
 		color: #777;
 	}
-
+.cs-banner{
+	max-width: 50%;
+}
 	.widget ul.blog-list li .cs-text {
 		height: auto;
 		margin: 0;
@@ -594,16 +595,14 @@
 		object-fit: cover;
 	}
 
-	.cs-main-post figure {
-		height: 300px;
-	}
+	
 
 	.cs-main-post {
-		margin-bottom: 25px;
-		height: 300px;
-		margin-top: 120px;
+		padding:50px 0 ;
 	}
-
+.cs-main-post .api-heading{
+	font-size: 40px;
+}
 	.cs-blog-detail .cs-admin-post .cs-media figure,
 	.cs-blog-detail .cs-admin-post .cs-media figure img {
 		border-radius: 100%;
@@ -780,7 +779,7 @@
 
 	.cs-blog-detail .cs-post-option-panel {
 		float: left;
-		padding-top: 20px;
+		padding-top: 40px;
 		width: 100%;
 	}
 
@@ -1070,31 +1069,31 @@
 		margin-bottom: 20px;
 	}
 </style>
-<div class="Eric-blog">
-<div class="cs-main-post">
-	<div class="cs-content">
-	<h1>How Modern Software Actually Saves Enterprises Money</h1>
-	<a class="orange-btn" id="scrollToSection">Subscribe</a>
 
-</div>
-</div>
+<div id="wrapper" class="api-body ready-rethink competitive flexible-asset Eric-blog">
+	<section class="api-wrapper">
+	<div class="container api-header">
+		<div class="navbar_wrapper row">
+			<div class="api-logo">
+                <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                    <img src="<?php echo base_url(); ?>assets/images/technology-partner/odessa-logo.svg" alt="" class="whitepaper">
+                 </a>
+		</div>
+	</div>
+	<div class="cs-main-post">
+		<div class="cs-banner">
+			<h1 class="api-heading">How Modern Software Actually Saves Enterprises Money</h1>
+			<p>By Eric Bernstein, CEO of Odessa</p>
+		<a class="orange-btn" id="scrollToSection">Let's talk</a>
+	
+	</div>
+	</div>
+	</div>
+	</section>
+
 <div class="container">
 
 	<div class="cs-blog-detail">
-
-		<div class="cs-post-title">
-			<div class="cs-author">
-				<figure>
-					<img class="hero-logo" src="<?php echo base_url(); ?>assets/images/leadership/eric.jpg"
-						alt="Logo: OdessaInc" style="width:30px">
-				</figure>
-				<div class="cs-text">
-					<a href="http://jobcareer.chimpgroup.com/jobdoor/user/jobcareer-admin/">Eric Bernstein, CEO,
-						Odessa</a>
-				</div>
-			</div>
-
-		</div>
 		<div class="cs-post-option-panel">
 			<div class="rich-editor-text">
 				<p>Organizations running on legacy software are like owners of cars with 100,000 miles on them. The
@@ -1187,7 +1186,7 @@
 <section class="talk-team">
     <div class="container">
     <div class="business-talk">
-  
+  <h2>Want to know how Odessa can help you?  </h2>
     <div class="letstalkform">
 		
 			<form id="primaryForm" method="post" autocomplete="off">
@@ -1195,10 +1194,10 @@
 				<input id="honeypot" name="honeypot" size="40" type="text"/>
 			
 			<div class="form-group">
-				<input class="form-control"  name="email" type="text" id="email" placeholder="Business Email" required />
+				<input class="form-control"  name="email" type="text" id="email" placeholder="Business Email ID" required />
 			</div>
             
-                <button class="orange-btn" id="letstalk">Submit</button>
+                <button class="orange-btn" id="letstalk">Let's talk</button>
             </form>
            
 				</div>
@@ -1260,7 +1259,7 @@ $(document).ready(function() {
     });
 });
 
-// document.body.setAttribute('id', 'bodyId');
+document.body.setAttribute('id', 'bodyId');
 
 
 
