@@ -41,6 +41,14 @@ $(function() {
 $("#post-895 .continue-reading-link").attr("href", newUrl4);
 $("#post-895 a").attr("href", newUrl4);
 
+
+var newUrl4 = "https://www.odessainc.com/whitepaper/master-as-a-service-offerings-asset-finance-whitepaper";
+
+  // Change the href attribute of the anchor tag
+  $("#post-928 .continue-reading-link").attr("href", newUrl4);
+  $("#post-928 a").attr("href", newUrl4);
+
+
 });
 
 
