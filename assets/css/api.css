@@ -10,6 +10,9 @@ html.i-amphtml-singledoc > body {
   max-width: 70%;
   margin-bottom: 60px;
 }
+#wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
+  background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
+}
 .flexible-asset.competitive .key-takeways-section{
   padding: 40px 0;
   background: #fff;
@@ -1170,9 +1173,7 @@ label[for="honeypot"],
   .api-thank-conent h2 {
     font-size: 25px;
   }
-  #wrapper .api-wrapper {
-    background-image: none !important;
-  }
+  
   .change-para {
     max-width: 100%;
   }
@@ -1181,8 +1182,20 @@ label[for="honeypot"],
   #wrapper.ready-rethink.flexible-asset .api-wrapper {
     background-image: none;
   }
+  #wrapper .api-wrapper {
+    background-image: none !important;
+  }
   .subscribe-form .get-copy {
     top: 80px;
+  }
+  .cs-content h1{
+    font-size: 22px !important;
+  }
+  .cs-content{
+    top:130px !important
+  }
+  .Eric-blog .business-talk {
+    max-width: 90%;
   }
   .ready-rethink.competitive .reasons-consider-odessa .bg-grey{
     padding: 20px 10px;
@@ -1242,6 +1255,15 @@ label[for="honeypot"],
 }
 .ready-rethink.competitive .letstalkform .form-control {
   width: 100%;
+}
+.cs-banner {
+  max-width: 100% !important
+}
+.cs-main-post .api-heading {
+  font-size: 30px !important;
+}
+.business-talk h2, .business-talk p {
+ font-size: 25px;
 }
 }
 
