@@ -34,6 +34,11 @@ $(function() {
   $("#post-1058 .continue-reading-link").attr("href", newUrl3);
   $("#post-1058 a").attr("href", newUrl3);
 
+  var newUrl5 = "https://dev.odessainc.com/whitepaper/master-as-a-service-offerings-asset-finance-whitepaper";
+
+  // Change the href attribute of the anchor tag
+  $("#post-1191 .continue-reading-link").attr("href", newUrl5);
+  $("#post-1191 a").attr("href", newUrl5);
 
 
   var newUrl4 = "https://dev.odessainc.com/handbook/cx-asset-finance";
@@ -45,6 +50,9 @@ $(function() {
 
   $('.postid-1117 .pr_announcementimg').append($('<div class="photo-cap"><b>L to R:</b><br> Ankit Parikh, AVP - Leasing Business, TMF; Campbell Clout, MD - APMEA, Odessa; Anand Bang, COO – Sales & Marketing, TMF; Neeloy Majumder, COO – Technology, TMF</div>'))
 });
+
+
+
 
 
 
