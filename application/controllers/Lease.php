@@ -12,7 +12,7 @@ class Lease extends CI_Controller {
 		$data['tc_title']			= 'The Ultimate Year-End Lease Accounting Checklist | Ensure Accurate & Efficient Close';
 		$data['tc_description']		= "Download our comprehensive year-end lease accounting checklist to streamline your close process. Learn how to spot discrepancies, improve financial accuracy, and reduce compliance risks. Expert guidance from Diane Parisi, with over 25 years of experience.";
 
-		$this->load->view('layouts/amp_pages/header.amp.html', $data);
+		$this->load->view('layouts/amp_pages/header1.amp.html', $data);
 		$this->load->view('pages/amp_pages/year-end-lease-accounting-checklist.html', $data);
 		$this->load->view('layouts/amp_pages/footer.amp.html', $data);
 	}
