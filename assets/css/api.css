@@ -10,6 +10,26 @@ html.i-amphtml-singledoc > body {
   max-width: 70%;
   margin-bottom: 60px;
 }
+.lease.handbook .api-banner{
+  max-width: 60%;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+.lease .change-para{
+  margin-bottom: 20px;
+}
+.handbook.lease .key-takeaways{
+  margin-top: 20px ;
+}
+#wrapper.lease .letstalkform.get-copy .form-group {
+  margin-bottom: 10px;
+}
+.handbook.lease .get-copy {
+  top: 8px;max-width: 440px
+}
+.lease .btnmar{
+  margin-top: 20px;
+}
 #wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
   background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
 }
@@ -238,6 +258,15 @@ padding-left: 30px;}
 .ebook .know-more:after {
   display: none;
 }
+.ebook.lease .know-more:after {
+  display: block;
+}
+.lease .know-more span{
+  font-family: MaisonNeue-Book;
+}
+.lease.ebook .know-more{
+  padding-left: 14px;
+}
 .flexible-asset.ready-rethink .trusted-companies p {
   font-weight: 400;
 }
@@ -304,6 +333,9 @@ padding-left: 30px;}
 }
 #wrapper.ebook .api-wrapper {
   background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
+}
+#wrapper.ebook.lease.handbook .api-wrapper{
+  background: url(../images/api/ready-rethink.png) right 0 no-repeat #0d2332;
 }
 #wrapper.ebook.handbook .api-wrapper {
   background-image: none;
@@ -1054,7 +1086,7 @@ label[for="honeypot"],
   }
   .get-copy {
     max-width: 450px;
-    height: 540px;
+    height: 535px;
   }
   .ready-rethink .get-copy {
     height: 525px;
