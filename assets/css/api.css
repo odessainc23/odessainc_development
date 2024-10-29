@@ -1158,6 +1158,10 @@ label[for="honeypot"],
     width: 100%;
     max-width: 100%;
   }
+  .handbook.lease .key-takeaways {
+    max-width: 100%;
+  }
+  .handbook.lease .get-copy{max-width: 100%;}
   .annual-elfa {
     height: auto;
   }
@@ -1297,6 +1301,7 @@ label[for="honeypot"],
 .business-talk h2, .business-talk p {
  font-size: 25px;
 }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -1381,6 +1386,7 @@ label[for="honeypot"],
     padding: 30px 15px;
     margin-bottom: 0;
   }
+ 
 }
 
 @media only screen and (max-width: 480px) {
