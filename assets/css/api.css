@@ -1173,11 +1173,17 @@ label[for="honeypot"],
   }
   .key-takeaways,
   .get-copy {
+    max-width: 100% !important;
+  }
+  .lease.handbook .api-banner {
     max-width: 100%;
   }
   .rigid-system .box-container {
     flex-flow: row;
   }
+  .handbook.lease .key-takeaways {
+    margin-top: 40px;
+}
   .take-flex {
     flex-wrap: wrap;
     flex-flow: column-reverse;
