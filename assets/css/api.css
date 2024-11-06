@@ -780,6 +780,7 @@ label[for="honeypot"],
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
+  height: 500px;
 }
 .handbook .get-copy {
 

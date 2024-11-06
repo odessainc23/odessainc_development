@@ -1,7 +1,7 @@
 <?php
 defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 
-class Api_amp extends CI_Controller {
+class Future_amp extends CI_Controller {
 
 	public function index(){
 		$data['meta_title']			= 'Unlocking Asset Finance Futures: Mastering API Strategies for Success';
