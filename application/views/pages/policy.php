@@ -224,13 +224,13 @@
 
 			<section id="Contact">
             <h4>9. How to Contact Us</h4>
-            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at: </p>
-            <p>Two Liberty Place</p>
+            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> </p>
+            <!-- <p>Two Liberty Place</p>
             <p>50 South 16th Street</p>
             <p>Suite 1900</p>
             <p>Philadelphia, PA 19102</p>
             <p>Attention: Data Protection Officer.</p>
-            <p>Last Revised: April 15, 2024</p>
+            <p>Last Revised: April 15, 2024</p> -->
 
 			</section>
             
