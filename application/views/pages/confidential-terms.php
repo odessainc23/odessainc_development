@@ -16,7 +16,7 @@
   }
   .legal-ppost p{
     font-size:17px;
-    padding-left:22px;
+    padding-left:22px
   }
   .legal-ppost h4{
     margin: 20px 0 10px 0;
@@ -53,7 +53,7 @@
         </div>
         <div class="legal-ppcontent">
           <div id="OnPremise" class="legal-pcontent legal-ppcontab">
-            <h3>Standard Support Terms </h3>
+            <h3>Standard Support Terms</h3>
             <h4>Section 1. Defined Terms</h4>
             <p>Except as expressly defined in this Support Exhibit, capitalized terms will have the meaning ascribed to them in the Master Agreement. In addition, the following capitalized terms will have the following meanings:</p>
             <p>

@@ -19,11 +19,10 @@
     position: absolute;
     border-radius: 50%;
     left: 0px;
-	
   }
   .legal-ppost p{
     font-size:17px;
-	padding-left:22px;
+    padding-left:22px
   }
   .legal-ppost h4{
     margin: 20px 0 10px 0;
@@ -69,7 +68,7 @@
             <!-- <p>This Privacy Policy explains:</p> -->
 			<section id="How">
             <h4>2. Changes to this Privacy Policy</h4>
-            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located on <a href="https://www.odessainc.com/legal/confidential-terms" target="_blank">confidential-terms</a>. If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the official email address Odessa has on file for your account, if applicable. The “Last Revised” section at the bottom of this Notice states when this Privacy Notice was last amended, and we update this date each time a revision is posted. </p>
+            <p>Odessa may make changes to this Privacy Policy. The most current version of the Privacy Policy will govern Odessa’s use of information about you and will be located on <a href="https://dev.odessainc.com/legal/confidential-terms" target="_blank">confidential-terms</a>. If Odessa makes material changes to this Privacy Policy, Odessa will notify you by posting a notice on our website and may send an email to the official email address Odessa has on file for your account, if applicable. The “Last Revised” section at the bottom of this Notice states when this Privacy Notice was last amended, and we update this date each time a revision is posted. </p>
 			</section>
 
 			<section id="Uses">
@@ -225,13 +224,13 @@
 
 			<section id="Contact">
             <h4>9. How to Contact Us</h4>
-            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> or via postal mail at: </p>
-            <p>Two Liberty Place</p>
+            <p>If you have questions or complaints regarding Odessa’s Privacy Policy or practices, please contact <a href="mailto:notices@odessainc.com">notices@odessainc.com</a> </p>
+            <!-- <p>Two Liberty Place</p>
             <p>50 South 16th Street</p>
             <p>Suite 1900</p>
             <p>Philadelphia, PA 19102</p>
             <p>Attention: Data Protection Officer.</p>
-            <p>Last Revised: April 15, 2024</p>
+            <p>Last Revised: April 15, 2024</p> -->
 
 			</section>
             
