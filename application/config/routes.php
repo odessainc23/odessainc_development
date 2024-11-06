@@ -103,6 +103,8 @@ $route['whitepaper/future-ready-asset-finance-api-thankyou'] = 'Thankyou_api';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
 $route['whitepaper/unlocking-xaas-transformative-insights-asset-finance'] = 'Whitepaper';
 $route['whitepaper/unlocking-xaas-thankyou'] = 'Thankyou_whitepaper';
+$route['year-end-lease-accounting-checklist-thankyou'] = 'Lease_Thank';
+
 $route['odessa-modern-slavery-act-statement'] = 'Modern_amp';
 $route['xaas-everything-as-a-service'] = 'platform/xaas';
 $route['design-principles'] = 'welcome/design_principles';
