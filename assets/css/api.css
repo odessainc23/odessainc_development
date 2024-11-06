@@ -24,12 +24,18 @@ html.i-amphtml-singledoc > body {
 #wrapper.lease .letstalkform.get-copy .form-group {
   margin-bottom: 8px;
 }
+.disclaimer label{
+  margin-bottom: 0 !important;
+}
 .handbook.lease .get-copy {
-  top: 20px;max-width: 440px;        height: 510px;
+  top: 80px;
+  max-width: 440px;
+  height: 500px;
 }
 .lease .btnmar{
   margin-top: 20px;
 }
+.lease .h3-head{margin-bottom: 15px;}
 #wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
   background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
 }
@@ -1107,12 +1113,16 @@ label[for="honeypot"],
   .ready-rethink .get-copy {
     top: 35px;
   }
+  
 }
 
 @media only screen and (max-width: 1400px) {
   .api-banner,
   .key-takeaways {
     max-width: 50%;
+  }
+  .handbook.lease .get-copy {
+    top: 25px;
   }
   .api-heading {
     font-size: 3rem;
@@ -1144,15 +1154,24 @@ label[for="honeypot"],
     color: #2a2d36 !important;
   }
 }
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   .get-copy {
     max-width: 45%;
   }
   .api-heading {
     font-size: 2.8rem;
   }
+  .handbook.lease .get-copy {
+    top: 30px;
+  }
 }
+@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) and (orientation: landscape) {
+  .handbook.lease .get-copy {
+    top: 30px;
+  }
+}
+
+
 @media only screen and (max-width: 1189px) {
   .api-banner {
     width: 100%;
