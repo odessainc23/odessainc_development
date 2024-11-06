@@ -10,6 +10,31 @@ html.i-amphtml-singledoc > body {
   max-width: 70%;
   margin-bottom: 60px;
 }
+.lease.handbook .api-banner{
+  max-width: 60%;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+.lease .change-para{
+  margin-bottom: 20px;
+}
+.handbook.lease .key-takeaways{
+  margin-top: 20px ;
+}
+#wrapper.lease .letstalkform.get-copy .form-group {
+  margin-bottom: 8px;
+}
+.disclaimer label{
+  margin-bottom: 0 !important;
+}
+.handbook.lease .get-copy {
+  max-width: 440px;
+  height: 500px;
+}
+.lease .btnmar{
+  margin-top: 20px;
+}
+.lease .h3-head{margin-bottom: 15px;}
 #wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
   background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
 }
@@ -238,6 +263,15 @@ padding-left: 30px;}
 .ebook .know-more:after {
   display: none;
 }
+.ebook.lease .know-more:after {
+  display: block;
+}
+.lease .know-more span{
+  font-family: MaisonNeue-Book;
+}
+.lease.ebook .know-more{
+  padding-left: 14px;
+}
 .flexible-asset.ready-rethink .trusted-companies p {
   font-weight: 400;
 }
@@ -304,6 +338,9 @@ padding-left: 30px;}
 }
 #wrapper.ebook .api-wrapper {
   background: url(../images/api/handbook-bg.svg) right 0 no-repeat #213847;
+}
+#wrapper.ebook.lease.handbook .api-wrapper{
+  background: url(../images/api/ready-rethink.png) right 0 no-repeat #0d2332;
 }
 #wrapper.ebook.handbook .api-wrapper {
   background-image: none;
@@ -410,7 +447,7 @@ padding-left: 30px;}
   font-size: 18px;
 }
 .ready-rethink .get-copy {
-  top: 15px;
+  /* top: 15px; */
 }
 .ready-rethink .key-takeaways ul li:after {
   top: 8px;
@@ -739,12 +776,14 @@ label[for="honeypot"],
   margin-left: 85px;
   position: fixed;
   bottom: 0;
-  padding: 25px 25px 0 25px;
+  padding: 20px 20px 0 20px;
   right: 40px;
-  top: 33px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
 }
 .handbook .get-copy {
-  top: 25px;
+
 }
 
 .take-flex {
@@ -1054,7 +1093,7 @@ label[for="honeypot"],
   }
   .get-copy {
     max-width: 450px;
-    height: 540px;
+    height: 535px;
   }
   .ready-rethink .get-copy {
     height: 525px;
@@ -1072,9 +1111,10 @@ label[for="honeypot"],
   }
 }
 @media only screen and (min-height: 1440px) {
-  .ready-rethink .get-copy {
+  /* .ready-rethink .get-copy {
     top: 35px;
-  }
+  } */
+  
 }
 
 @media only screen and (max-width: 1400px) {
@@ -1082,6 +1122,9 @@ label[for="honeypot"],
   .key-takeaways {
     max-width: 50%;
   }
+  /* .handbook.lease .get-copy {
+    top: 25px;
+  } */
   .api-heading {
     font-size: 3rem;
   }
@@ -1112,20 +1155,33 @@ label[for="honeypot"],
     color: #2a2d36 !important;
   }
 }
-
-@media only screen and (max-width: 1200px) {
-  .get-copy {
+@media only screen and (max-width: 1280px) {
+  /* .get-copy {
     max-width: 45%;
-  }
+  } */
   .api-heading {
     font-size: 2.8rem;
   }
+  /* .handbook.lease .get-copy {
+    top: 30px;
+  } */
 }
+@media only screen and (min-device-width: 720px) and (max-device-width: 1280px) and (orientation: landscape) {
+  /* .handbook.lease .get-copy {
+    top: 30px;
+  } */
+}
+
+
 @media only screen and (max-width: 1189px) {
   .api-banner {
     width: 100%;
     max-width: 100%;
   }
+  .handbook.lease .key-takeaways {
+    max-width: 100%;
+  }
+  .handbook.lease .get-copy{max-width: 100%;}
   .annual-elfa {
     height: auto;
   }
@@ -1137,11 +1193,17 @@ label[for="honeypot"],
   }
   .key-takeaways,
   .get-copy {
+    max-width: 100% !important;
+  }
+  .lease.handbook .api-banner {
     max-width: 100%;
   }
   .rigid-system .box-container {
     flex-flow: row;
   }
+  .handbook.lease .key-takeaways {
+    margin-top: 40px;
+}
   .take-flex {
     flex-wrap: wrap;
     flex-flow: column-reverse;
@@ -1166,6 +1228,7 @@ label[for="honeypot"],
   .get-copy {
     top: 0;
     left: 0;
+    transform: none;
   }
   .key-takeaways {
     margin: 40px 0;
@@ -1185,9 +1248,9 @@ label[for="honeypot"],
   #wrapper .api-wrapper {
     background-image: none !important;
   }
-  .subscribe-form .get-copy {
+  /* .subscribe-form .get-copy {
     top: 80px;
-  }
+  } */
   .cs-content h1{
     font-size: 22px !important;
   }
@@ -1265,6 +1328,7 @@ label[for="honeypot"],
 .business-talk h2, .business-talk p {
  font-size: 25px;
 }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -1283,7 +1347,7 @@ label[for="honeypot"],
     background-size: contain;
   }
   .handbook .get-copy {
-    top: 25px;
+    /* top: 25px; */
     margin: 0 0 20px 0;
   }
   .key-takeways-section {
@@ -1349,6 +1413,7 @@ label[for="honeypot"],
     padding: 30px 15px;
     margin-bottom: 0;
   }
+ 
 }
 
 @media only screen and (max-width: 480px) {

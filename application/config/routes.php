@@ -81,6 +81,7 @@ $route['afterwork'] = 'Cocktail_et';
 $route['how-modern-software-saves-enterprises-money'] = 'Enterprises';
 $route['client-success-stories'] = 'Technology';
 $route['afterwork-thankyou'] = 'Cocktailet_thank';
+$route['year-end-lease-accounting-checklist'] = 'Lease';
 $route['flexible-asset-finance-platform'] = 'Flexible';
 $route['real-cost-of-maintaining-outdated-technology'] = 'Outdated';
 $route['handbook/next-gen-auto-finance-platform'] = 'Auto_handbook';
