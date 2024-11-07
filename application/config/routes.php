@@ -101,6 +101,7 @@ $route['odessa-cocktails-elfa-2024'] = 'Annual_Elfa';
 $route['whitepaper/master-as-a-service-offerings-asset-finance-whitepaper'] = 'Ready_amp';
 $route['whitepaper/thankyou'] = 'Thankyou_rethink';
 $route['whitepaper/next-gen-equipment-finance-tech-business-case'] = 'Equipment';
+$route['whitepaper/next-gen-equipment-finance-tech-business-case-thankyou'] = 'Equipment_thank';
 $route['whitepaper/future-ready-asset-finance-api'] = 'Future_amp';
 $route['whitepaper/future-ready-asset-finance-api-thankyou'] = 'Thankyou_api';
 $route['whitepaper/unlocking-xaas-success-signup'] = 'Whitepaper_amp';
