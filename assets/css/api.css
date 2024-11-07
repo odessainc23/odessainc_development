@@ -931,7 +931,7 @@ label[for="honeypot"],
 }
 .next-gen .section-products #product-3 .part-1::before {
   background: url("../images/api/eric-banner.png") no-repeat center;
-  background-size: contain;
+  background-size: cover;
 }
 .section-products #product-2 .part-1::before {
   background: url("https://www.odessainc.com/blog/wp-content/uploads/XAAS-Blog-Header-1-430x350.png")
