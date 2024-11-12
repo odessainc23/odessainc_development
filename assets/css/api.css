@@ -914,8 +914,17 @@ label[for="honeypot"],
   background: url("https://www.odessainc.com/assets/images/auto-news/auto-press.png")
     no-repeat center;
 }
+.next-gen .section-products.check #product-1 .part-1::before {
+  background: url("https://www.odessainc.com/blog/wp-content/uploads/Asset-Finance-Blog-Header-4-512x350.png")
+    no-repeat center;
+}
 .next-gen .section-products #product-2 .part-1::before {
   background: url("https://dev.odessainc.com/assets/images/auto-news/auto-news.png")
+    no-repeat center;
+  background-size: cover;
+}
+.next-gen .section-products.check #product-2 .part-1::before {
+  background: url("https://www.odessainc.com/blog/wp-content/uploads/blog_header-B-1-430x350-1.png")
     no-repeat center;
   background-size: cover;
 }
