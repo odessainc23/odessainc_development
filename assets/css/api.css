@@ -707,7 +707,7 @@ padding-left: 30px;}
   font-family: MaisonNeue-Bold;
   font-size: 24px;
   font-style: normal;
-
+  margin-bottom:15px;
   line-height: 28px;
 }
 .letstalkform.get-copy .form-group {
@@ -813,7 +813,7 @@ label[for="honeypot"],
 }
 /* thank you */
 .api-thank-conent {
-  max-width: 838px;
+  max-width: 780px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -919,10 +919,19 @@ label[for="honeypot"],
     no-repeat center;
   background-size: cover;
 }
-.next-gen .section-products #product-3 .part-1::before {
-  background: url("https://dev.odessainc.com/assets/images/auto-news/news-3.png")
+.next-gen-fin.section-products #product-1 .part-1::before {
+  background: url("../images/api/subscribe-bg.png")
     no-repeat center;
-  background-size: contain;
+  background-size: cover;
+}
+.next-gen-fin.section-products #product-2 .part-1::before {
+  background: url("https://www.odessainc.com/blog/wp-content/uploads/D3-Option-1_V1-430x350-1.png")
+    no-repeat center;
+  background-size: cover;
+}
+.next-gen .section-products #product-3 .part-1::before {
+  background: url("../images/api/eric-banner.png") no-repeat center;
+  background-size: cover;
 }
 .section-products #product-2 .part-1::before {
   background: url("https://www.odessainc.com/blog/wp-content/uploads/XAAS-Blog-Header-1-430x350.png")
@@ -1071,7 +1080,7 @@ label[for="honeypot"],
 }
 @media only screen and (max-width: 1750px) {
   .api-banner {
-    max-width: 750px;
+    max-width: 825px;
   }
   .whitepaper-tag {
     margin-left: 23px;
