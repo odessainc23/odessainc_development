@@ -10,7 +10,7 @@
 	<meta name="description" content="<?php echo $description; ?>"/>
 	<meta name="keywords" content="<?php echo $keywords; ?>">
 	<link rel="canonical" href="<?php echo $canonical_tag; ?>"/>
-	<meta name="robots" content="index, follow"/>
+	<meta name="robots" content="noindex, nofollow">
 	<meta name="language" content="english"/>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon" />

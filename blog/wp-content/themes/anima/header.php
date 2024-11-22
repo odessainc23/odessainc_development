@@ -11,6 +11,7 @@
 <head>
 	<?php cryout_meta_hook(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="robots" content="noindex, nofollow">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">

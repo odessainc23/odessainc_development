@@ -1,9 +1,18 @@
 User-agent: *
+Disallow: /
+
+User-agent: *
 Disallow: /leadership/
+
+User-agent: *
+Disallow: /blog/
+
+User-agent: *
+Disallow: /cloud/
+
+User-agent: *
+Disallow: /platform/
 
 User-agent: *
 Disallow: /whitepaper/future-ready-asset-finance-api-thankyou
 
-Allow: /
-
-Sitemap: https://www.odessainc.com/sitemap.xml

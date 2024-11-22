@@ -17,7 +17,7 @@
 	<?php if ( isset($nofollow) && $nofollow ) { ?>
 		<meta name="robots" content="noindex, nofollow" />
 	<?php } else { ?>
-		<meta name="robots" content="index, follow">		
+		<meta name="robots" content="noindex, nofollow">		
 	<?php } ?>
 
 	<meta http-equiv="Content-Language" content="en_US">
