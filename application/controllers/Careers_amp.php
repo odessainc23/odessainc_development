@@ -58,8 +58,8 @@ class Careers_amp extends CI_Controller {
 		$ch = curl_init();
 
 		
-		curl_setopt($ch, CURLOPT_URL, 'https://odessainc.skillate.com/api/postings?offset=0&limit=100000');
-		// curl_setopt($ch, CURLOPT_URL, 'https://odessa.sensehq.eu/careers/api/postings?offset=0&limit=100000');
+		// curl_setopt($ch, CURLOPT_URL, 'https://odessainc.skillate.com/api/postings?offset=0&limit=100000');
+		curl_setopt($ch, CURLOPT_URL, 'https://odessa.sensehq.eu/careers/api/postings?offset=0&limit=100000');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 		$result = curl_exec($ch);
