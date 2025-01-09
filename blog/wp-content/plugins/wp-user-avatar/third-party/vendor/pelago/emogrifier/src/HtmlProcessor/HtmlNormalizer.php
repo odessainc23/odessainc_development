@@ -9,7 +9,6 @@ namespace ProfilePressVendor\Pelago\Emogrifier\HtmlProcessor;
  * - disentangle incorrectly nested tags
  * - add HEAD and BODY elements (if they are missing)
  * - reformat the HTML
- * @internal
  */
 class HtmlNormalizer extends AbstractHtmlProcessor
 {

@@ -4,8 +4,8 @@ namespace ProfilePressVendor\Stripe;
 
 /**
  * Class ApiResource.
- * @internal
- */
+ *
+ * */
 abstract class ApiResource extends StripeObject
 {
     use ApiOperations\Request;

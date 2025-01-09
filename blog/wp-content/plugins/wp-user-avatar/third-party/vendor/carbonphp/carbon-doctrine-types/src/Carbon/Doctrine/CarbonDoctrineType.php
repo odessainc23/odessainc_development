@@ -3,7 +3,6 @@
 namespace ProfilePressVendor\Carbon\Doctrine;
 
 use ProfilePressVendor\Doctrine\DBAL\Platforms\AbstractPlatform;
-/** @internal */
 interface CarbonDoctrineType
 {
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform);

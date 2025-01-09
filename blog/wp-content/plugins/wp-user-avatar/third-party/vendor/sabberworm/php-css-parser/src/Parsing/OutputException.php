@@ -4,7 +4,6 @@ namespace ProfilePressVendor\Sabberworm\CSS\Parsing;
 
 /**
  * Thrown if the CSS parser attempts to print something invalid.
- * @internal
  */
 class OutputException extends SourceException
 {

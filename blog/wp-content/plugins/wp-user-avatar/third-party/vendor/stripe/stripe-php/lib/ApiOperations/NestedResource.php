@@ -6,12 +6,11 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * Trait for resources that have nested resources.
  *
  * This trait should only be applied to classes that derive from StripeObject.
- * @internal
  */
 trait NestedResource
 {
     /**
-     * @param string $method
+     * @param 'delete'|'get'|'post' $method
      * @param string $url
      * @param null|array $params
      * @param null|array|string $options

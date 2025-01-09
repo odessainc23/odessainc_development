@@ -11,7 +11,6 @@ declare (strict_types=1);
  */
 namespace ProfilePressVendor\Carbon\Traits;
 
-/** @internal */
 trait DeprecatedProperties
 {
     /**

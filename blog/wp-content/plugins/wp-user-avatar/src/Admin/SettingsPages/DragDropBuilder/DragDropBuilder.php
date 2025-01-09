@@ -205,12 +205,8 @@ class DragDropBuilder
             ])
         );
 
-        add_settings_error(
-            'pp_drag_drop_builder_notice',
-            'changes_saved',
-            esc_html__('Changes saved'),
-            'success'
-        );
+        wp_safe_redirect(esc_url_raw(add_query_arg('form-edited', 'true')));
+        exit;
     }
 
     private function is_custom_field_enabled()
@@ -1271,6 +1267,16 @@ class DragDropBuilder
 
     public function builder_header()
     {
+        if (ppressGET_var('form-edited') == 'true') {
+
+            add_settings_error(
+                'pp_drag_drop_builder_notice',
+                'changes_saved',
+                esc_html__('Changes saved'),
+                'success'
+            );
+        }
+
         settings_errors('pp_drag_drop_builder_notice');
         $title     = FR::get_name($this->form_id, $this->form_type);
         $shortcode = sprintf('[profilepress-%s id="%s"]', $this->form_type, $this->form_id);
@@ -1283,9 +1289,7 @@ class DragDropBuilder
             </div>
             <div class="inside">
                 <p class="description">
-                    <label for="ppress-shortcode">
-                        <?php esc_html_e('Copy this shortcode and paste it into your post, page, or text widget content:', 'wp-user-avatar') ?>
-                    </label>
+                    <label for="ppress-shortcode"><?php esc_html_e('Copy this shortcode and paste it into your post, page, or text widget content:', 'wp-user-avatar') ?></label>
                     <span class="shortcode wp-ui-highlight">
                         <input type="text" id="ppress-shortcode" onfocus="this.select();" readonly="readonly" class="large-text code" value="<?= esc_attr($shortcode) ?>">
                     </span>
@@ -1329,8 +1333,7 @@ class DragDropBuilder
         $theme_class_instance = FR::forge_class($this->form_id, $this->form_class, $this->form_type);
 
         if ( ! $theme_class_instance) {
-            wp_safe_redirect(add_query_arg('form-type', $this->form_type, PPRESS_FORMS_SETTINGS_PAGE));
-            exit;
+            ppress_do_admin_redirect(add_query_arg('form-type', $this->form_type, PPRESS_FORMS_SETTINGS_PAGE));
         }
 
         $this->theme_class_instance = $theme_class_instance;

@@ -3,7 +3,10 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\BillingPortal;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class ConfigurationService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
@@ -11,7 +14,7 @@ class ConfigurationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      * portal.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -26,7 +29,7 @@ class ConfigurationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      * PortalSession.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -42,7 +45,7 @@ class ConfigurationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -57,7 +60,7 @@ class ConfigurationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

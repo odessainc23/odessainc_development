@@ -148,6 +148,9 @@ if ( ! ExtensionManager::is_premium()) {
         'Campaign Monitor' => [
             esc_html__("Subscribe members to your Campaign Monitor lists when they register or subscribe to a membership plan and sync membership and profile changes with Campaign Monitor.", 'wp-user-avatar')
         ],
+        'WooCommerce' => [
+            esc_html__("Sell paid memberships via WooCommerce, and create members-only discounts.", 'wp-user-avatar')
+        ]
     ];
     ob_start();
     ?>
@@ -159,7 +162,7 @@ if ( ! ExtensionManager::is_premium()) {
         <?php endforeach; ?>
         <div>
             <a href="https://profilepress.com/pricing/?utm_source=wp_dashboard&utm_medium=upgrade&utm_campaign=edit_plan_page_integration_metabox" target="__blank" class="button-primary">
-                <?php esc_html_e('Get ProfilePress Pro →', 'wp-user-avatar') ?>
+                <?php esc_html_e('Get ProfilePress Premium →', 'wp-user-avatar') ?>
             </a>
         </div>
     </div>
@@ -280,7 +283,7 @@ do_action('add_meta_boxes', 'ppmembershipplan', new WP_Post(new stdClass()));
                     $('#field-role-free_trial').show();
 
                     $('#field-role-subscription_length').show()
-                        .find('.ppress-plan-control').change();
+                        .find('.ppress-plan-control').trigger('change');
                 } else {
                     $('#field-role-subscription_length').hide();
                     $('#field-role-total_payments').hide();
@@ -293,7 +296,7 @@ do_action('add_meta_boxes', 'ppmembershipplan', new WP_Post(new stdClass()));
                 $('#field-role-total_payments').toggle($(this).val() === 'fixed');
             });
 
-            $('#billing_frequency').change();
+            $('#billing_frequency').trigger('change');
 
             $(window).on('load', function () {
                 var tmpl = wp.template('ppress-plan-summary');
@@ -309,7 +312,7 @@ do_action('add_meta_boxes', 'ppmembershipplan', new WP_Post(new stdClass()));
                             'free_trial': $('.form-field #free_trial').val(),
                         })
                     );
-                }).change();
+                }).trigger('change');
 
             });
         })(jQuery);

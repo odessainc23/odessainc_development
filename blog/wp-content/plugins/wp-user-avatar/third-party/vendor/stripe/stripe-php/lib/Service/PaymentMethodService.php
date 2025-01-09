@@ -3,16 +3,20 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
-     * Returns a list of PaymentMethods. For listing a customer’s payment methods, you
-     * should use <a href="/docs/api/payment_methods/customer_list">List a Customer’s
-     * PaymentMethods</a>.
+     * Returns a list of PaymentMethods for Treasury flows. If you want to list the
+     * PaymentMethods attached to a Customer for payments, you should use the <a
+     * href="/docs/api/payment_methods/customer_list">List a Customer’s
+     * PaymentMethods</a> API instead.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -29,10 +33,11 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      * you use a <a href="/docs/api/setup_intents">SetupIntent</a> or a PaymentIntent
      * with <a
      * href="/docs/api/payment_intents/create#create_payment_intent-setup_future_usage">setup_future_usage</a>.
-     * These approaches will perform any necessary steps to ensure that the
-     * PaymentMethod can be used in a future payment. Using the
-     * <code>/v1/payment_methods/:id/attach</code> endpoint does not ensure that future
-     * payments can be made with the attached PaymentMethod. See <a
+     * These approaches will perform any necessary steps to set up the PaymentMethod
+     * for future payments. Using the <code>/v1/payment_methods/:id/attach</code>
+     * endpoint without first using a SetupIntent or PaymentIntent with
+     * <code>setup_future_usage</code> does not optimize the PaymentMethod for future
+     * use, which makes later declines and payment friction more likely. See <a
      * href="/docs/payments/payment-intents#future-usage">Optimizing cards for future
      * payments</a> for more information about setting up future payments.
      *
@@ -43,7 +48,7 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -65,7 +70,7 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      * method details ahead of a future payment.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -81,7 +86,7 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -92,11 +97,14 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
         return $this->request('post', $this->buildPath('/v1/payment_methods/%s/detach', $id), $params, $opts);
     }
     /**
-     * Retrieves a PaymentMethod object.
+     * Retrieves a PaymentMethod object attached to the StripeAccount. To retrieve a
+     * payment method attached to a Customer, you should use <a
+     * href="/docs/api/payment_methods/customer">Retrieve a Customer’s
+     * PaymentMethods</a>.
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -112,7 +120,7 @@ class PaymentMethodService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

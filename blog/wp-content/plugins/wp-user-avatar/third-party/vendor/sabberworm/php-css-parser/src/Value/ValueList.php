@@ -8,7 +8,6 @@ use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
  * (mostly `,`, whitespace, or `/`).
  *
  * There are two types of `ValueList`s: `RuleValueList` and `CSSFunction`
- * @internal
  */
 abstract class ValueList extends Value
 {
@@ -29,7 +28,7 @@ abstract class ValueList extends Value
     public function __construct($aComponents = [], $sSeparator = ',', $iLineNo = 0)
     {
         parent::__construct($iLineNo);
-        if (!\is_array($aComponents)) {
+        if (!is_array($aComponents)) {
             $aComponents = [$aComponents];
         }
         $this->aComponents = $aComponents;
@@ -84,9 +83,11 @@ abstract class ValueList extends Value
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         return $oOutputFormat->implode($oOutputFormat->spaceBeforeListArgumentSeparator($this->sSeparator) . $this->sSeparator . $oOutputFormat->spaceAfterListArgumentSeparator($this->sSeparator), $this->aComponents);
     }

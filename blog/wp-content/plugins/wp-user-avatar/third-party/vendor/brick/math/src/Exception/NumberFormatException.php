@@ -5,7 +5,6 @@ namespace ProfilePressVendor\Brick\Math\Exception;
 
 /**
  * Exception thrown when attempting to create a number from a string with an invalid format.
- * @internal
  */
 class NumberFormatException extends MathException
 {
@@ -16,7 +15,7 @@ class NumberFormatException extends MathException
      *
      * @psalm-pure
      */
-    public static function charNotInAlphabet(string $char) : self
+    public static function charNotInAlphabet(string $char): self
     {
         $ord = \ord($char);
         if ($ord < 32 || $ord > 126) {
@@ -27,6 +26,6 @@ class NumberFormatException extends MathException
         } else {
             $char = '"' . $char . '"';
         }
-        return new self(\sprintf('Char %s is not a valid character in the given alphabet.', $char));
+        return new self(sprintf('Char %s is not a valid character in the given alphabet.', $char));
     }
 }

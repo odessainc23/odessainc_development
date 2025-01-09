@@ -4,7 +4,6 @@ namespace ProfilePressVendor\Stripe\Service;
 
 /**
  * Abstract base class for all services.
- * @internal
  */
 abstract class AbstractService
 {
@@ -66,19 +65,25 @@ abstract class AbstractService
     }
     protected function request($method, $path, $params, $opts)
     {
-        return $this->getClient()->request($method, $path, static::formatParams($params), $opts);
+        return $this->getClient()->request($method, $path, self::formatParams($params), $opts);
     }
     protected function requestStream($method, $path, $readBodyChunkCallable, $params, $opts)
     {
-        return $this->getStreamingClient()->requestStream($method, $path, $readBodyChunkCallable, static::formatParams($params), $opts);
+        // TODO (MAJOR): Add this method to StripeClientInterface
+        // @phpstan-ignore-next-line
+        return $this->getStreamingClient()->requestStream($method, $path, $readBodyChunkCallable, self::formatParams($params), $opts);
     }
     protected function requestCollection($method, $path, $params, $opts)
     {
-        return $this->getClient()->requestCollection($method, $path, static::formatParams($params), $opts);
+        // TODO (MAJOR): Add this method to StripeClientInterface
+        // @phpstan-ignore-next-line
+        return $this->getClient()->requestCollection($method, $path, self::formatParams($params), $opts);
     }
     protected function requestSearchResult($method, $path, $params, $opts)
     {
-        return $this->getClient()->requestSearchResult($method, $path, static::formatParams($params), $opts);
+        // TODO (MAJOR): Add this method to StripeClientInterface
+        // @phpstan-ignore-next-line
+        return $this->getClient()->requestSearchResult($method, $path, self::formatParams($params), $opts);
     }
     protected function buildPath($basePath, ...$ids)
     {
@@ -88,6 +93,6 @@ abstract class AbstractService
                 throw new \ProfilePressVendor\Stripe\Exception\InvalidArgumentException($msg);
             }
         }
-        return \sprintf($basePath, ...\array_map('\\urlencode', $ids));
+        return \sprintf($basePath, ...\array_map('\urlencode', $ids));
     }
 }

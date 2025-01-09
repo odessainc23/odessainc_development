@@ -3,14 +3,17 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Sigma;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class ScheduledQueryRunService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
      * Returns a list of scheduled query runs.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -25,7 +28,7 @@ class ScheduledQueryRunService extends \ProfilePressVendor\Stripe\Service\Abstra
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

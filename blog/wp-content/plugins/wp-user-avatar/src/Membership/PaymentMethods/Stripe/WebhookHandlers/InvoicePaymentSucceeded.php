@@ -2,7 +2,9 @@
 
 namespace ProfilePress\Core\Membership\PaymentMethods\Stripe\WebhookHandlers;
 
+use ProfilePress\Core\Membership\Models\Order\OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
+use ProfilePress\Core\Membership\PaymentMethods\Stripe\APIClass;
 use ProfilePress\Core\Membership\PaymentMethods\Stripe\PaymentHelpers;
 use ProfilePress\Core\Membership\PaymentMethods\WebhookHandlerInterface;
 use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
@@ -26,6 +28,8 @@ class InvoicePaymentSucceeded implements WebhookHandlerInterface
 
             if ($parent_order->exists() && ! $parent_order->is_completed()) {
                 $parent_order->complete_order($event_data['payment_intent']);
+
+                $this->set_customer_default_payment_method($parent_order, $event_data['customer']);
             }
         }
 
@@ -42,6 +46,40 @@ class InvoicePaymentSucceeded implements WebhookHandlerInterface
                 // CustomerSubscriptionUpdated event.
                 $subscription->renew(false);
             }
+        }
+    }
+
+    /**
+     * @param OrderEntity $order
+     * @param string $stripe_customer_id
+     *
+     * @return void
+     */
+    public function set_customer_default_payment_method($order, $stripe_customer_id)
+    {
+        try {
+
+            $setup_intent_id = $order->get_meta('stripe_setup_intent');
+
+            if ( ! empty($setup_intent_id) && ! empty($stripe_customer_id)) {
+
+                $response = APIClass::stripeClient()->setupIntents->retrieve($setup_intent_id, []);
+
+                if ( ! empty($response->payment_method)) {
+
+                    APIClass::stripeClient()->customers->update(
+                        $stripe_customer_id,
+                        [
+                            'invoice_settings' => [
+                                'default_payment_method' => $response->payment_method
+                            ]
+                        ]
+                    );
+                }
+            }
+
+        } catch (\Exception $e) {
+            // Ignore, not critical enough to cause an error
         }
     }
 }

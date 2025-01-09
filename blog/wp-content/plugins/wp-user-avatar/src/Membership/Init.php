@@ -17,6 +17,7 @@ use ProfilePress\Core\Membership\Emails\SubscriptionRenewalReminder;
 use ProfilePress\Core\Membership\Models\Customer\CustomerFactory;
 use ProfilePress\Core\Membership\PaymentMethods\PaymentMethods;
 use ProfilePress\Core\Membership\Repositories\CustomerRepository;
+use ProfilePress\Core\Membership\Repositories\SubscriptionRepository;
 
 class Init
 {
@@ -53,6 +54,26 @@ class Init
         add_action('wp_login', function ($user_login) {
             self::log_last_login($user_login);
         }, 10, 2);
+
+        add_action('ppress_myaccount_before_delete_user', [__CLASS__, 'cancel_subs_on_user_delete']);
+
+        add_action('ppress_ec_before_delete_unconfirmed_users', [__CLASS__, 'cancel_subs_on_user_delete']);
+    }
+
+    public static function cancel_subs_on_user_delete($user_id)
+    {
+        $customer = CustomerFactory::fromUserId($user_id);
+
+        if ($customer->exists()) {
+
+            $subs = SubscriptionRepository::init()->retrieveBy([
+                'customer_id' => $customer->get_id()
+            ]);
+
+            foreach ($subs as $sub) {
+                $sub->cancel(true);
+            }
+        }
     }
 
     public static function log_last_login($user_login_or_id)

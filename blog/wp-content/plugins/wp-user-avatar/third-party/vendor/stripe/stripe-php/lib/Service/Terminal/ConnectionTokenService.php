@@ -3,7 +3,10 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Terminal;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class ConnectionTokenService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
@@ -12,7 +15,7 @@ class ConnectionTokenService extends \ProfilePressVendor\Stripe\Service\Abstract
      * an endpoint that creates and returns a connection token.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

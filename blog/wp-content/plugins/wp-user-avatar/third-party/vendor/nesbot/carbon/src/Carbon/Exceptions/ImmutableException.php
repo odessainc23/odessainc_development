@@ -12,7 +12,6 @@ namespace ProfilePressVendor\Carbon\Exceptions;
 
 use RuntimeException as BaseRuntimeException;
 use Throwable;
-/** @internal */
 class ImmutableException extends BaseRuntimeException implements RuntimeException
 {
     /**
@@ -38,7 +37,7 @@ class ImmutableException extends BaseRuntimeException implements RuntimeExceptio
      *
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->value;
     }

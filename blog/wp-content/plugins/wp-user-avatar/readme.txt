@@ -1,11 +1,11 @@
 === Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress ===
 Contributors: properfraction, collizo4sky
 Donate link: https://profilepress.com/pricing/
-Tags: membership, ecommerce, user registration, user profile, stripe
+Tags: membership, ecommerce, user registration, user profile, memberships
 Requires at least: 5.3
 Requires PHP: 7.4
-Tested up to: 6.4
-Stable tag: 4.15.2
+Tested up to: 6.7
+Stable tag: 4.15.20.1
 License: GPLv2 or later
 
 Setup paid membership, accept payment, sell subscription & digital product, paywall, create login & registration form, user profile & member directory
@@ -16,7 +16,7 @@ Setup paid membership, accept payment, sell subscription & digital product, payw
 
 [ProfilePress](https://profilepress.com/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) is a powerful ecommerce and paid membership plugin for accepting one-time and recurring payments, selling subscriptions and digital products or digital downloads (downloadable files) via Bank Transfer, Stripe, PayPal, RazorPay, Mollie & Paystack, paywall & restrict content and control user access.
 
-ProfilePress is the best Stripe (Credit Card), PayPal, RazorPay, Paystack & Mollie payment forms plugin for WordPress to quickly accept payments, sell memberships and provide your users the ultimate member experience.
+ProfilePress is the best Stripe (Credit Card), PayPal, RazorPay, Paystack & Mollie payment forms and WooCommerce membership plugin for to quickly accept payments, sell memberships and provide your users the ultimate member experience.
 
 ProfilePress lets you create beautiful user profiles, member directories, frontend login, and user registration forms, member password reset and edit profile forms.
 
@@ -29,6 +29,8 @@ https://www.youtube.com/watch?v=OXkWVm53Xzo&rel=0
 ### Excellent Membership Features
 
 ProfilePress ecommerce plugin is suited for selling non-physical goods, including online courses, digital downloads, downloadable files, paid memberships, subscriptions, services, accepting donations, selling digital downloads, etc.
+
+Our WordPress membership plugin is a perfect alternative to MemberPress, Paid Memberships Pro, MemberMouse, Thrive Apprentice, WishList Member, Ultimate Membership Pro and more!
 
 = Protect Registration Forms Against Banned Email Addresses =
 
@@ -113,7 +115,7 @@ Extend the capabilities of ProfilePress with our powerful addons and remove the 
 * [Social Login](https://profilepress.com/addons/social-login/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Let users checkout, register & login to your site with social login via Facebook, Twitter, Google, LinkedIn, Yahoo, Microsoft, Amazon, GitHub, VK and WordPress.com.
 * [Two-Factor Authentication (2FA)](https://profilepress.com/addons/2fa/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Adds an additional layer of security to users accounts by requiring more than just a password to log in.
 * [Passwordless Login](https://profilepress.com/addons/passwordless-login/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Let users log in to your site via a one-time URL sent to their email addresses.
-* [WooCommerce](https://profilepress.com/addons/woocommerce/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Manage WooCommerce billing and shipping fields, replace WooCommerce login and edit account forms in checkout and "My Account" pages with that of ProfilePress.
+* [WooCommerce Memberships & Integration](https://profilepress.com/addons/woocommerce/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Create WooCommerce membership sites, members-only discounts and stores, manage WooCommerce billing and shipping fields, replace WooCommerce login and edit account forms in checkout and "My Account" pages with that of ProfilePress.
 * [LearnDash](https://profilepress.com/addons/learndash/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to LearnDash courses and groups, enroll users after signup via a custom LearnDash registration form, and let users view their enrolled courses on the My Account page.
 * [LifterLMS](https://profilepress.com/addons/lifterlms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to LifterLMS courses and memberships, enroll users after signup via a custom LifterLMS registration form, and let users view their enrolled courses on the My Account page.
 * [Sensei LMS](https://profilepress.com/addons/sensei-lms/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) – Sell access to Sensei LMS courses and groups, enroll users after registration, and let users view their enrolled courses on the My Account page.
@@ -125,6 +127,18 @@ Extend the capabilities of ProfilePress with our powerful addons and remove the 
 * [Join BuddyPress Groups](https://profilepress.com/addons/join-buddypress-groups/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Let users select the BuddyBoss/BuddyPress groups to join during registration.
 * [Akismet](https://profilepress.com/addons/akismet/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Block spam and bot user registrations with Akismet and keep your membership site safe and secured.
 * [Polylang](https://profilepress.com/addons/polylang/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion) –  Build multilingual login, registration, password reset, and edit profile forms.
+
+ProfilePress is the Ecommerce platform and WooCommerce memberships plugin of your dreams. It delivers a complete experience with everything needed for selling digital products online.
+
+If you're looking to build a business out of your membership site by creating paid memberships, there's no better way than to use ProfilePress membership plugin which provide the ultimate member experience and will help you start and profit from your WordPress membership sites.
+
+= What's Next =
+
+If you like this plugin, then consider checking out our other products:
+
+* <a href="https://mailoptin.io/">MailOptin</a> - Create popups and optin forms for capturing email newsletter subscribers. Integrates with Mailchimp, ConvertKit, Infusionsoft, ActiveCampaign, Campaign Monitor, Constant Contact & more.
+* <a href="https://fusewp.com/">FuseWP</a> - Connect wordPress to marketing platforms and sync users to your email list.
+* <a href="https://feedbackwp.com/">FeedbackWP</a> - Add star rating to WordPress posts and collect user feedbacks.
 
 == Installation ==
 
@@ -169,14 +183,18 @@ Any file type can be sold using ProfilePress ecommerce and membership plugin, in
 
 == Changelog ==
 
-= Paid Membership, Ecommerce & User Registration 4.15.2 =
-* Fixed XSS on edit profile form.
+= Paid Membership, Ecommerce & User Registration 4.15.20.1 =
+* Disable registration via checkout if "user can register" is not enabled.
 
-= Paid Membership, Ecommerce & User Registration 4.15.1 =
-* Fixed XSS on registration form with user role select field.
-
-= Paid Membership, Ecommerce & User Registration 4.15.0 =
-* Added [Login Redirect](https://profilepress.com/wordpress-user-redirection-after-login-role/#WordPress_Login_Redirect_Based_on_Membership_Level) feature.
-* Security Fix: XSS on forms.
+= Paid Membership, Ecommerce & User Registration 4.15.20 =
+* Added ppress_content_protection_ignore_post_excerpt filter.
+* Added ppress_user_avatar_image_url filter.
+* Added {{order_coupon}} placeholder to order emails.
+* Fixed customer search in admin dashboard not working correctly.
+* Fixed various XSS reported by Cleantalk.
+* Fixed duplicate queries detected by Query Monitor.
+* Fixed fatal error that might occur from changing default login page url.
+* Switched to using core Codemirror library.
+* Fixed couple of PHP errors and warnings.
 
 See the [changelog file](https://plugins.svn.wordpress.org/wp-user-avatar/trunk/changelog.txt) for full change log information.

@@ -10,7 +10,6 @@ namespace ProfilePressVendor\Stripe\FinancialConnections;
  * @property string $object String representing the object's type. Objects of the same type share the same value.
  * @property int $created Time at which the object was created. Measured in seconds since the Unix epoch.
  * @property \Stripe\Collection<\Stripe\FinancialConnections\AccountOwner> $owners A paginated list of owners for this account.
- * @internal
  */
 class AccountOwnership extends \ProfilePressVendor\Stripe\ApiResource
 {

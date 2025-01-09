@@ -5,7 +5,6 @@ namespace ProfilePressVendor\Stripe;
 use ProfilePressVendor\Stripe\Util\CaseInsensitiveArray;
 /**
  * Class ApiResponse.
- * @internal
  */
 class ApiResponse
 {

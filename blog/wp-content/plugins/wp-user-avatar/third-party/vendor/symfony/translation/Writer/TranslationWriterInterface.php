@@ -16,7 +16,6 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * TranslationWriter writes translation messages.
  *
  * @author Michel Salib <michelsalib@hotmail.com>
- * @internal
  */
 interface TranslationWriterInterface
 {

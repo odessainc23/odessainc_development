@@ -13,7 +13,6 @@ namespace ProfilePressVendor\League\Csv;
 
 /**
  * Thrown when a data is not added to the Csv Document.
- * @internal
  */
 class CannotInsertRecord extends Exception
 {
@@ -24,7 +23,7 @@ class CannotInsertRecord extends Exception
     /**
      * Create an Exception from a record insertion into a stream.
      */
-    public static function triggerOnInsertion(array $record) : self
+    public static function triggerOnInsertion(array $record): self
     {
         $exception = new self('Unable to write record to the CSV document');
         $exception->record = $record;
@@ -33,7 +32,7 @@ class CannotInsertRecord extends Exception
     /**
      * Create an Exception from a Record Validation.
      */
-    public static function triggerOnValidation(string $name, array $record) : self
+    public static function triggerOnValidation(string $name, array $record): self
     {
         $exception = new self('Record validation failed');
         $exception->name = $name;
@@ -44,7 +43,7 @@ class CannotInsertRecord extends Exception
      * return the validator name.
      *
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +51,7 @@ class CannotInsertRecord extends Exception
      * return the invalid data submitted.
      *
      */
-    public function getRecord() : array
+    public function getRecord(): array
     {
         return $this->record;
     }

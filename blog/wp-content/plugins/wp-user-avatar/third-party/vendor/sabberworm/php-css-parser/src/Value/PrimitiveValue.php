@@ -2,7 +2,6 @@
 
 namespace ProfilePressVendor\Sabberworm\CSS\Value;
 
-/** @internal */
 abstract class PrimitiveValue extends Value
 {
     /**

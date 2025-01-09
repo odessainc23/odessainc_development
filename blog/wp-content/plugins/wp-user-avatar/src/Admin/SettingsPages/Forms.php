@@ -184,6 +184,11 @@ class Forms extends AbstractSettingsPage
         $this->forms_instance = FormList::get_instance();
     }
 
+    /**
+     * @param $echo
+     *
+     * @return string|void
+     */
     public function live_form_preview_btn($echo = true)
     {
         if ( ! isset($_GET['view'])) return;
@@ -209,6 +214,9 @@ class Forms extends AbstractSettingsPage
             case 'edit-shortcode-user-profile':
                 $form_type = FR::USER_PROFILE_TYPE;
                 break;
+            case 'edit-shortcode-member-directory':
+                $form_type = FR::MEMBERS_DIRECTORY_TYPE;
+                break;
         }
 
         $preview_url = esc_url(add_query_arg(
@@ -228,8 +236,11 @@ class Forms extends AbstractSettingsPage
     public function no_form_exist_redirect($form_id, $form_type)
     {
         if ( ! FR::form_id_exist($form_id, $form_type)) {
-            wp_safe_redirect(add_query_arg('form-type', $form_type, PPRESS_FORMS_SETTINGS_PAGE));
-            exit;
+            $url = ($form_type === FR::MEMBERS_DIRECTORY_TYPE)
+                ? PPRESS_MEMBER_DIRECTORIES_SETTINGS_PAGE
+                : add_query_arg('form-type', $form_type, PPRESS_FORMS_SETTINGS_PAGE);
+
+            ppress_do_admin_redirect($url);
         }
     }
 
@@ -260,7 +271,7 @@ class Forms extends AbstractSettingsPage
             add_filter('wp_cspa_settings_page_sidebar', [$this->DragDropClassInstance, 'sidebar_section']);
             add_action('wp_cspa_before_closing_header', [$this, 'live_form_preview_btn']);
 
-            add_action('wp_cspa_main_content_area', function ($content, $option_name) {
+            add_filter('wp_cspa_main_content_area', function ($content, $option_name) {
                 if ($option_name != 'pp_edit_form') return $content;
 
                 if ($_GET['view'] == 'drag-drop-builder') {
@@ -269,6 +280,9 @@ class Forms extends AbstractSettingsPage
 
                     return ob_get_clean();
                 }
+
+                return $content;
+
             }, 10, 2);
 
             $instance = Custom_Settings_Page_Api::instance();
@@ -280,7 +294,7 @@ class Forms extends AbstractSettingsPage
             return $instance->build();
         }
 
-        add_action('wp_cspa_main_content_area', array($this, 'wp_list_table'), 10, 2);
+        add_filter('wp_cspa_main_content_area', array($this, 'wp_list_table'), 10, 2);
         add_action('wp_cspa_before_post_body_content', array($this, 'form_sub_header'));
         add_action('wp_cspa_before_closing_header', [$this, 'add_new_form_button']);
 

@@ -94,7 +94,21 @@ class FieldsShortcodeCallback
     {
         if ( ! is_array($atts)) return $atts;
 
-        $invalid_atts = array('enforce', 'key', 'type', 'field_key', 'limit', 'options', 'key_value_options', 'checkbox_text', 'date_format', 'field_width', 'icon', 'checked_state', 'billing_country');
+        $invalid_atts = array(
+            'enforce',
+            'key',
+            'type',
+            'field_key',
+            'limit',
+            'options',
+            'key_value_options',
+            'checkbox_text',
+            'date_format',
+            'field_width',
+            'icon',
+            'checked_state',
+            'billing_country'
+        );
 
         $valid_atts = array();
 
@@ -132,7 +146,7 @@ class FieldsShortcodeCallback
             $key = sanitize_text_field(trim($key));
 
             // skip all onXYZ attributes eg onclick, onmouseover etc
-            if(strpos($key, 'on') === 0) continue;
+            if (strpos($key, 'on') === 0) continue;
 
             // add class to submit button.
             if ($field_name == $this->tag_name . '_submit' && $key == 'class') {
@@ -582,7 +596,7 @@ class FieldsShortcodeCallback
 
         $key = ppress_sanitize_key($atts['key']);
 
-        $value = isset($_POST[$key]) ? sanitize_text_field($_POST[$key]) : @sanitize_text_field($atts['value']);
+        $value = isset($_POST[$key]) ? sanitize_text_field($_POST[$key]) : sanitize_text_field($atts['value'] ?? '');
 
         if ($this->form_type == FormRepository::EDIT_PROFILE_TYPE) {
             $db_data = isset($atts['value']) ? sanitize_text_field($atts['value']) : ($this->current_user->$key ?? '');
@@ -955,7 +969,10 @@ class FieldsShortcodeCallback
         $key = ppress_sanitize_key($atts['key']);
 
         $html        = '<div class="pp-checkbox-wrap pp-single-checkbox">';
-        $field_label = isset($atts['checkbox_text']) ? html_entity_decode(wp_kses_post($atts['checkbox_text'])) : '';
+        $field_label = isset($atts['checkbox_text']) ? wp_kses_post(html_entity_decode($atts['checkbox_text'])) : '';
+
+        // remove all onXYZ attributes
+        $field_label = preg_replace('/(on.+=)/', '', $field_label);
 
         // checked for checkbox
         $checked = checked(ppressPOST_var($key, ppress_var($atts, 'checked_state')), 'true', false);
@@ -1017,7 +1034,7 @@ class FieldsShortcodeCallback
 
                 if ( ! empty($country) && ! empty($states = ppress_array_of_world_states($country))) {
                     $type                      = 'select';
-                    $atts['key_value_options'] = ['' => '&mdash;&mdash;&mdash;'] + $states;
+                    $atts['key_value_options'] = $states;
                 }
             }
         }
@@ -1044,7 +1061,7 @@ class FieldsShortcodeCallback
 
         if ($type == 'agreeable') {
             $atts['key']           = $key;
-            $atts['checkbox_text'] = html_entity_decode(PROFILEPRESS_sql::get_field_label($key));
+            $atts['checkbox_text'] = wp_kses_post(html_entity_decode(PROFILEPRESS_sql::get_field_label($key)));
             $html                  = $this->single_checkbox_field($atts);
         }
 

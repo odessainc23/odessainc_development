@@ -121,7 +121,7 @@
                     if ('error' in result && typeof result.error.message !== 'undefined') {
                         ppressCheckoutForm.createAlertMessage(result.error.message);
                     } else {
-                        _this.checkout_form.submit();
+                        _this.checkout_form.trigger('submit');
                     }
                 });
 
@@ -134,15 +134,8 @@
             if (ppressCheckoutForm.is_var_defined(response.gateway_response) === true) {
 
                 if (
-                    (   // for subscription payments
-                        ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice) === true &&
-                        ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice.payment_intent) === true &&
-                        ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice.payment_intent.status) === true
-                    )
-                    ||
-                    (   // for one-time payments
-                        ppressCheckoutForm.is_var_defined(response.gateway_response.status) === true
-                    )
+                    ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice) === true || // for subscription payments
+                    ppressCheckoutForm.is_var_defined(response.gateway_response.status) === true // for one-time payments
                 ) {
 
                     // ensure the below block of code runs once
@@ -150,7 +143,7 @@
 
                         window.confirmPaymentFlag = true;
 
-                        let client_secret;
+                        let client_secret, stripeAction = 'confirmPayment', actionResultParam = 'paymentIntent';
 
                         if (ppressCheckoutForm.is_var_defined(response.gateway_response.client_secret)) {
                             client_secret = response.gateway_response.client_secret;
@@ -159,17 +152,23 @@
                             ppressCheckoutForm.is_var_defined(response.gateway_response.latest_invoice.payment_intent.client_secret)
                         ) {
                             client_secret = response.gateway_response.latest_invoice.payment_intent.client_secret;
+                        } else if (
+                            ppressCheckoutForm.is_var_defined(response.gateway_response.setup_intent_response) &&
+                            ppressCheckoutForm.is_var_defined(response.gateway_response.setup_intent_response.client_secret)
+                        ) {
+                            client_secret = response.gateway_response.setup_intent_response.client_secret;
+                            stripeAction = 'confirmSetup';
+                            actionResultParam = 'setupIntent';
                         }
 
-                        // client_secret can be undefined if it's free trial
                         if (typeof client_secret === 'undefined') {
                             $(document.body).trigger('ppress_checkout_success', [response, payment_method]);
                             window.location.assign(response.order_success_url);
                         }
 
-                        var cp_getBillingDetails = _this.getBillingDetails();
+                        let cp_getBillingDetails = _this.getBillingDetails();
 
-                        stripe.confirmPayment({
+                        stripe[stripeAction]({
                             elements: window.elements,
                             clientSecret: client_secret,
                             confirmParams: {
@@ -186,7 +185,7 @@
                                 ppressCheckoutForm.createAlertMessage(result.error.message);
                             } else {
 
-                                if (result.paymentIntent.status === 'succeeded') {
+                                if (result[actionResultParam]['status'] === 'succeeded') {
                                     $(document.body).trigger('ppress_checkout_success', [response, payment_method]);
                                 }
 

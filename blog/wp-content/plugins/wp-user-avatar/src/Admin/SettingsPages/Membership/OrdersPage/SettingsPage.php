@@ -473,7 +473,7 @@ class SettingsPage extends AbstractSettingsPage
 
     public function settings_page_function()
     {
-        add_action('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
+        add_filter('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
         add_action('wp_cspa_before_closing_header', [$this, 'add_new_button']);
         add_action('wp_cspa_form_tag', function ($option_name) {
             if ($option_name == 'ppress_orders') {

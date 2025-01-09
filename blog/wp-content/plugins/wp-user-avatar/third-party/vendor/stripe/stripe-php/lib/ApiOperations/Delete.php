@@ -6,7 +6,6 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * Trait for deletable resources. Adds a `delete()` method to the class.
  *
  * This trait should only be applied to classes that derive from StripeObject.
- * @internal
  */
 trait Delete
 {

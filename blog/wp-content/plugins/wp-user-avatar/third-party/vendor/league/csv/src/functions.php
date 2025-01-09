@@ -20,9 +20,8 @@ namespace ProfilePressVendor\League\Csv;
  * Returns the BOM sequence found at the start of the string.
  *
  * If no valid BOM sequence is found an empty string is returned
- * @internal
  */
-function bom_match(string $str) : string
+function bom_match(string $str): string
 {
     return Info::fetchBOMSequence($str) ?? '';
 }
@@ -39,9 +38,8 @@ function bom_match(string $str) : string
  * a submitted delimiter and each value the number CSV fields found
  * when processing at most $limit CSV records with the given delimiter
  *
- * @internal
  */
-function delimiter_detect(Reader $csv, array $delimiters, int $limit = 1) : array
+function delimiter_detect(Reader $csv, array $delimiters, int $limit = 1): array
 {
     return Info::getDelimiterStats($csv, $delimiters, $limit);
 }

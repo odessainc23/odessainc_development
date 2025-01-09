@@ -104,26 +104,29 @@ class PROFILEPRESS_sql
 
     public static function get_meta_data_by_key($meta_key)
     {
-        global $wpdb;
+        return ppress_cache_transform('meta_data_by_key_' . $meta_key, function () use ($meta_key) {
 
-        $table = Base::meta_data_db_table();
+            global $wpdb;
 
-        $sql = "SELECT * FROM $table WHERE meta_key = %s";
+            $table = Base::meta_data_db_table();
 
-        $result = $wpdb->get_results($wpdb->prepare($sql, $meta_key), 'ARRAY_A');
+            $sql = "SELECT * FROM $table WHERE meta_key = %s";
 
-        if (empty($result)) return false;
+            $result = $wpdb->get_results($wpdb->prepare($sql, $meta_key), 'ARRAY_A');
 
-        $output = [];
-        foreach ($result as $key => $meta) {
-            $output[$key] = array_reduce(array_keys($meta), function ($carry, $item) use ($meta) {
-                $carry[$item] = ($item == 'meta_value') ? unserialize($meta[$item], ['allowed_classes' => false]) : $meta[$item];
+            if (empty($result)) return false;
 
-                return $carry;
-            });
-        }
+            $output = [];
+            foreach ($result as $key => $meta) {
+                $output[$key] = array_reduce(array_keys($meta), function ($carry, $item) use ($meta) {
+                    $carry[$item] = ($item == 'meta_value') ? unserialize($meta[$item], ['allowed_classes' => false]) : $meta[$item];
 
-        return $output;
+                    return $carry;
+                });
+            }
+
+            return $output;
+        });
     }
 
     /**
@@ -474,13 +477,25 @@ class PROFILEPRESS_sql
 
     public static function get_field_type($field_key)
     {
-        if ( ! ExtensionManager::is_premium()) return '';
+        $cache_key = 'get_field_type_' . $field_key;
 
-        global $wpdb;
+        static $cache_bucket = [];
 
-        $table = Base::profile_fields_db_table();
+        if ( ! array_key_exists($cache_key, $cache_bucket)) {
 
-        return $wpdb->get_var($wpdb->prepare("SELECT type FROM $table WHERE field_key = %s", $field_key));
+            $cache_bucket[$cache_key] = '';
+
+            if (ExtensionManager::is_premium()) {
+
+                global $wpdb;
+
+                $table = Base::profile_fields_db_table();
+
+                $cache_bucket[$cache_key] = $wpdb->get_var($wpdb->prepare("SELECT type FROM $table WHERE field_key = %s", $field_key));
+            }
+        }
+
+        return $cache_bucket[$cache_key];
     }
 
     public static function get_contact_info_fields()

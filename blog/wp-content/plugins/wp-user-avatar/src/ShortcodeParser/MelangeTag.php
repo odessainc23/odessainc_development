@@ -51,7 +51,7 @@ class MelangeTag extends FormProcessor
         }
 
         if (isset($_GET['edit']) && ($_GET['edit'] == 'true')) {
-            $response = apply_filters('ppress_edit_profile_status', html_entity_decode(EditUserProfile::get_success_message($id, true)), $id);
+            $response = apply_filters('ppress_edit_profile_status', wp_kses_post(html_entity_decode(EditUserProfile::get_success_message($id, true))), $id);
         }
 
         if (isset($this->edit_profile_form_error[$id])) {

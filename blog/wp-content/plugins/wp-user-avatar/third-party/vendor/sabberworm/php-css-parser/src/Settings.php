@@ -6,7 +6,6 @@ namespace ProfilePressVendor\Sabberworm\CSS;
  * Parser settings class.
  *
  * Configure parser behaviour here.
- * @internal
  */
 class Settings
 {
@@ -33,7 +32,7 @@ class Settings
     public $bLenientParsing = \true;
     private function __construct()
     {
-        $this->bMultibyteSupport = \extension_loaded('mbstring');
+        $this->bMultibyteSupport = extension_loaded('mbstring');
     }
     /**
      * @return self new instance

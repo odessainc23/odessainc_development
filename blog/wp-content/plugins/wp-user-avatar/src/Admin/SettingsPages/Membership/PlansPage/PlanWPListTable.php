@@ -222,8 +222,7 @@ class PlanWPListTable extends \WP_List_Table
             $dup_plan_id = SubscriptionPlanController::get_instance()->duplicate_plan($planObj);
 
             if (is_int($dup_plan_id)) {
-                wp_safe_redirect(add_query_arg(['ppress_subp_action' => 'edit', 'id' => $dup_plan_id, 'saved' => 'true'], PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE));
-                exit;
+                ppress_do_admin_redirect(add_query_arg(['ppress_subp_action' => 'edit', 'id' => $dup_plan_id, 'saved' => 'true'], PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE));
             }
         }
 
@@ -270,8 +269,7 @@ class PlanWPListTable extends \WP_List_Table
         }
 
         if ($this->current_action() !== false) {
-            wp_safe_redirect(PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_MEMBERSHIP_SUBSCRIPTION_PLANS_SETTINGS_PAGE);
         }
     }
 

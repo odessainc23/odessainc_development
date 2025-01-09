@@ -12,7 +12,6 @@ use ProfilePressVendor\Sabberworm\CSS\Value\CSSString;
  * - May not be found in any CSSList other than the Document.
  * - May only appear at the very top of a Document’s contents.
  * - Must not appear more than once.
- * @internal
  */
 class Charset implements AtRule
 {
@@ -70,9 +69,11 @@ class Charset implements AtRule
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         return "{$oOutputFormat->comments($this)}@charset {$this->oCharset->render($oOutputFormat)};";
     }
@@ -97,7 +98,7 @@ class Charset implements AtRule
      */
     public function addComments(array $aComments)
     {
-        $this->aComments = \array_merge($this->aComments, $aComments);
+        $this->aComments = array_merge($this->aComments, $aComments);
     }
     /**
      * @return array<array-key, Comment>

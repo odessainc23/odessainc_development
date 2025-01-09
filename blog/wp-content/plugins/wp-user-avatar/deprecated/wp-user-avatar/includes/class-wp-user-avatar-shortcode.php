@@ -111,7 +111,7 @@ class WP_User_Avatar_Shortcode
      */
     private function wpua_edit_user($user_id = 0)
     {
-        $update = $user_id ? true : false;
+        $update = (bool)$user_id;
         $user   = new stdClass;
         $errors = new WP_Error();
         do_action_ref_array('wpua_update_errors', array($errors, $update, $user));
@@ -166,6 +166,7 @@ class WP_User_Avatar_Shortcode
             if ($valid_user) {
                 // Save
                 if (isset($_POST['submit']) && $_POST['submit'] && $_POST['wpua_action'] == 'update') {
+                    check_admin_referer('update-user_' . $valid_user->ID);
                     do_action('wpua_update', $valid_user->ID);
                     // Check for errors
                     $errors = $this->wpua_edit_user($valid_user->ID);

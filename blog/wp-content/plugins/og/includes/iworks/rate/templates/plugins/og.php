@@ -1,15 +1,11 @@
 <?php
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly
-?>
-<p>
-<?php
-	esc_html_e( 'Would you like to boost your website sharing abilities?', 'og' );
-?>
-</p>
-<p>
-<?php
+echo '<p>';
+esc_html_e( 'Would you like to boost your website sharing abilities?', 'og' );
+echo '</p>';
+echo '<p>';
 printf(
-/* translators: %s is a plugin name with url */
+	/* translators: %s is a plugin name with url */
 	esc_html__( 'Don\'t wait, install plugin %s!', 'og' ),
 	/* translators: %s is a plugin wp home name, %s plugin name */
 	sprintf(
@@ -18,8 +14,8 @@ printf(
 		esc_html( $args['plugin_name'] )
 	)
 );
+echo '</p>';
 ?>
-</p>
- <p class="iworks-rate-center"><a href="<?php echo esc_url( $args['install_plugin_url'] ); ?>" class="iworks-rate-button iworks-rate-button--green dashicons-admin-plugins
+<p class="iworks-rate-center"><a href="<?php echo esc_url( $args['install_plugin_url'] ); ?>" class="iworks-rate-button iworks-rate-button--green dashicons-admin-plugins
 "><?php echo esc_html( __( 'Install', 'og' ) ); ?></a></p>
 

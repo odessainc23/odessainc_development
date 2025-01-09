@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: OG — Better Share on Social Media 3.3.0\n"
+"Project-Id-Version: OG — Better Share on Social Media 3.3.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/og\n"
 "POT-Creation-Date: 2022-08-16 06:31:09+00:00\n"
 "MIME-Version: 1.0\n"
@@ -150,7 +150,7 @@ msgid "OG"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://og.iworks.pl/"
+msgid "https://github.com/iworks/og/"
 msgstr ""
 
 #. Description of the plugin/theme

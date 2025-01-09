@@ -97,7 +97,10 @@ class AjaxHandler
             $type = FR::SHORTCODE_BUILDER_TYPE;
         }
 
-        if ($builder_type == 'dragDropBuilder' && in_array($form_type, [FR::USER_PROFILE_TYPE, FR::MEMBERS_DIRECTORY_TYPE])) return;
+        if ($builder_type == 'dragDropBuilder' && in_array($form_type, [
+                FR::USER_PROFILE_TYPE,
+                FR::MEMBERS_DIRECTORY_TYPE
+            ])) return;
 
         $label = esc_html__('Create from Scratch', 'wp-user-avatar');
         ?>
@@ -171,7 +174,12 @@ class AjaxHandler
 
     public function get_forms_by_builder_type($form_type = FR::LOGIN_TYPE, $builder_type = false)
     {
-        $form_type    = ! empty($form_type) ? sanitize_text_field($form_type) : FR::LOGIN_TYPE;
+        $form_type = ! empty($form_type) ? sanitize_text_field($form_type) : FR::LOGIN_TYPE;
+
+        if (isset($_POST['is_member_directory']) && $_POST['is_member_directory'] == 'true') {
+            $form_type = FR::MEMBERS_DIRECTORY_TYPE;
+        }
+
         $builder_type = ! $builder_type ? sanitize_text_field($_POST['data']) : $builder_type;
 
         $this->form_name_field();
@@ -235,30 +243,34 @@ class AjaxHandler
     {
         check_ajax_referer('pp-plugin-nonce', 'nonce');
 
-        if (empty($_REQUEST['title']) || empty($_REQUEST['theme_type']) || empty($_REQUEST['builder_type'])) {
-            wp_send_json_error(__('Unexpected error. Please try again.', 'wp-user-avatar'));
-        }
 
-        $title            = sanitize_text_field($_POST['title']);
-        $form_theme_class = sanitize_text_field($_POST['theme_class']);
-        $form_type        = sanitize_text_field($_POST['theme_type']);
-        $builder_type     = sanitize_text_field($_POST['builder_type']);
+        if (current_user_can('manage_options')) {
 
-        if (FR::name_exist($title)) {
-            wp_send_json_error(__('Form with similar name exist already.', 'wp-user-avatar'));
-        }
+            if (empty($_REQUEST['title']) || empty($_REQUEST['theme_type']) || empty($_REQUEST['builder_type'])) {
+                wp_send_json_error(__('Unexpected error. Please try again.', 'wp-user-avatar'));
+            }
 
-        do_action('ppress_before_add_form');
+            $title            = sanitize_text_field($_POST['title']);
+            $form_theme_class = sanitize_text_field($_POST['theme_class']);
+            $form_type        = sanitize_text_field($_POST['theme_type']);
+            $builder_type     = sanitize_text_field($_POST['builder_type']);
 
-        $form_id = FR::add_form($title, $form_type, $form_theme_class, $builder_type);
+            if (FR::name_exist($title)) {
+                wp_send_json_error(__('Form with similar name exist already.', 'wp-user-avatar'));
+            }
 
-        if (is_int($form_id)) {
+            do_action('ppress_before_add_form');
 
-            do_action('ppress_after_add_form', $form_id);
+            $form_id = FR::add_form($title, $form_type, $form_theme_class, $builder_type);
 
-            wp_send_json_success(
-                ['redirect' => FormList::customize_url($form_id, $form_type, $builder_type)]
-            );
+            if (is_int($form_id)) {
+
+                do_action('ppress_after_add_form', $form_id);
+
+                wp_send_json_success(
+                    ['redirect' => FormList::customize_url($form_id, $form_type, $builder_type)]
+                );
+            }
         }
 
         wp_send_json_error();
@@ -398,14 +410,14 @@ class AjaxHandler
             // populate global $_POST variable.
             $_POST = $data;
 
-            $login_form_id = absint(@$data['login_form_id']);
+            $login_form_id = absint($data['login_form_id'] ?? '');
 
             // $login_username, $login_password, $login_remember, $login_redirect, $ogin_form_id are all populated by parse_str()
             $login_status_css_class = apply_filters('ppress_login_error_css_class', 'profilepress-login-status', $login_form_id);
 
             $login_username = ! empty($data['tabbed-login-name']) ? $data['tabbed-login-name'] : $data['login_username'];
             $login_password = ! empty($data['tabbed-login-password']) ? $data['tabbed-login-password'] : $data['login_password'];
-            $login_remember = ! empty($data['tabbed-login-remember-me']) ? $data['tabbed-login-remember-me'] : @$data['login_remember'];
+            $login_remember = ! empty($data['tabbed-login-remember-me']) ? $data['tabbed-login-remember-me'] : $data['login_remember'];
 
             $login_username = trim($login_username);
             $login_remember = sanitize_text_field($login_remember);
@@ -446,7 +458,7 @@ class AjaxHandler
 
             $is_melange = ( ! empty($_POST['is_melange']) && $_POST['is_melange'] == 'true');
 
-            $form_id = ! empty($_POST['melange_id']) ? $_POST['melange_id'] : @$_POST['signup_form_id'];
+            $form_id = ! empty($_POST['melange_id']) ? $_POST['melange_id'] : ($_POST['signup_form_id'] ?? '');
             $form_id = absint($form_id);
 
             $redirect = ppressPOST_var('signup_redirect', '', true);
@@ -454,7 +466,7 @@ class AjaxHandler
                 $redirect = sanitize_text_field($_POST['melange_redirect']);
             }
 
-            $no_login_redirect = sanitize_text_field(@$_POST['signup_no_login_redirect']);
+            $no_login_redirect = sanitize_text_field($_POST['signup_no_login_redirect'] ?? '');
 
             // if this is tab widget.
             if (isset($_POST['is-pp-tab-widget']) && $_POST['is-pp-tab-widget'] == 'true') {
@@ -477,7 +489,7 @@ class AjaxHandler
                 if (is_array($response)) {
                     $ajax_response = ['redirect' => $response[0]];
                 } else {
-                    $ajax_response = ['message' => html_entity_decode($response)];
+                    $ajax_response = ['message' => wp_kses_post(html_entity_decode($response))];
                 }
 
                 wp_send_json($ajax_response);
@@ -516,7 +528,7 @@ class AjaxHandler
 
             $ajax_response            = array();
             $ajax_response['status']  = is_array($response) ? true : false;
-            $ajax_response['message'] = is_array($response) ? html_entity_decode($response[0]) : html_entity_decode($response);
+            $ajax_response['message'] = is_array($response) ? wp_kses_post(html_entity_decode($response[0])) : wp_kses_post(html_entity_decode($response));
 
             wp_send_json($ajax_response);
         }

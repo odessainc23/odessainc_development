@@ -7,7 +7,6 @@ use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
 use ProfilePressVendor\Sabberworm\CSS\Value\URL;
 /**
  * Class representing an `@import` rule.
- * @internal
  */
 class Import implements AtRule
 {
@@ -70,9 +69,11 @@ class Import implements AtRule
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         return $oOutputFormat->comments($this) . "@import " . $this->oLocation->render($oOutputFormat) . ($this->sMediaQuery === null ? '' : ' ' . $this->sMediaQuery) . ';';
     }
@@ -90,7 +91,7 @@ class Import implements AtRule
     {
         $aResult = [$this->oLocation];
         if ($this->sMediaQuery) {
-            \array_push($aResult, $this->sMediaQuery);
+            array_push($aResult, $this->sMediaQuery);
         }
         return $aResult;
     }
@@ -101,7 +102,7 @@ class Import implements AtRule
      */
     public function addComments(array $aComments)
     {
-        $this->aComments = \array_merge($this->aComments, $aComments);
+        $this->aComments = array_merge($this->aComments, $aComments);
     }
     /**
      * @return array<array-key, Comment>

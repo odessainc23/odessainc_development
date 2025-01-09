@@ -41,6 +41,7 @@ abstract class AbstractMembershipEmail
                 OrderService::init()->admin_view_order_url($order->id) :
                 OrderService::init()->frontend_view_order_url($order->order_key),
             '{{plan_name}}'            => ppress_get_plan($order->plan_id)->name,
+            '{{order_coupon}}'         => $order->coupon_code,
             '{{order_subtotal}}'       => ppress_display_amount($order->subtotal, $order->currency),
             '{{order_tax}}'            => ppress_display_amount($order->tax, $order->currency),
             '{{order_total}}'          => ppress_display_amount($order->total, $order->currency),
@@ -86,44 +87,25 @@ abstract class AbstractMembershipEmail
         ]);
     }
 
-    public function custom_profile_field_search_replace($message)
-    {
-        // handle support for custom fields placeholder.
-        preg_match_all('#({{[a-z_-]+}})#', $message, $matches);
-
-        if (isset($matches[1]) && ! empty($matches[1])) {
-
-            foreach ($matches[1] as $match) {
-
-                $key = str_replace(['{', '}'], '', $match);
-
-                $value = '';
-
-                if (isset($user->{$key})) {
-
-                    $value = $user->{$key};
-
-                    if (is_array($value)) {
-                        $value = implode(', ', $value);
-                    }
-                }
-
-                $message = str_replace($match, $value, $message);
-            }
-        }
-
-        return $message;
-    }
-
     /**
      * @param string $content
      * @param array $placeholders
+     * @param OrderEntity|SubscriptionEntity $order_or_sub
      *
      * @return array|string|string[]
      */
-    public function parse_placeholders($content, $placeholders)
+    public function parse_placeholders($content, $placeholders, $order_or_sub)
     {
-        return $this->custom_profile_field_search_replace(str_replace(array_keys($placeholders), array_values($placeholders), $content));
+        if ($order_or_sub instanceof SubscriptionEntity) {
+            $user = $order_or_sub->get_customer()->get_wp_user();
+        } else {
+            $user = $order_or_sub->get_customer()->get_wp_user();
+        }
+
+        return ppress_custom_profile_field_search_replace(
+            str_replace(array_keys($placeholders), array_values($placeholders), $content),
+            $user
+        );
     }
 
     /**

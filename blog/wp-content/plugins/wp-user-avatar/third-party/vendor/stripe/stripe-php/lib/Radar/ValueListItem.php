@@ -4,12 +4,9 @@
 namespace ProfilePressVendor\Stripe\Radar;
 
 /**
- * Value list items allow you to add specific values to a given Radar value list,
- * which can then be used in rules.
+ * Value list items allow you to add specific values to a given Radar value list, which can then be used in rules.
  *
- * Related guide: <a
- * href="https://stripe.com/docs/radar/lists#managing-list-items">Managing List
- * Items</a>.
+ * Related guide: <a href="https://stripe.com/docs/radar/lists#managing-list-items">Managing list items</a>
  *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
@@ -18,13 +15,81 @@ namespace ProfilePressVendor\Stripe\Radar;
  * @property bool $livemode Has the value <code>true</code> if the object exists in live mode or the value <code>false</code> if the object exists in test mode.
  * @property string $value The value of the item.
  * @property string $value_list The identifier of the value list this item belongs to.
- * @internal
  */
 class ValueListItem extends \ProfilePressVendor\Stripe\ApiResource
 {
     const OBJECT_NAME = 'radar.value_list_item';
-    use \ProfilePressVendor\Stripe\ApiOperations\All;
-    use \ProfilePressVendor\Stripe\ApiOperations\Create;
-    use \ProfilePressVendor\Stripe\ApiOperations\Delete;
-    use \ProfilePressVendor\Stripe\ApiOperations\Retrieve;
+    /**
+     * Creates a new <code>ValueListItem</code> object, which is added to the specified
+     * parent value list.
+     *
+     * @param null|array $params
+     * @param null|array|string $options
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\Radar\ValueListItem the created resource
+     */
+    public static function create($params = null, $options = null)
+    {
+        self::_validateParams($params);
+        $url = static::classUrl();
+        list($response, $opts) = static::_staticRequest('post', $url, $params, $options);
+        $obj = \ProfilePressVendor\Stripe\Util\Util::convertToStripeObject($response->json, $opts);
+        $obj->setLastResponse($response);
+        return $obj;
+    }
+    /**
+     * Deletes a <code>ValueListItem</code> object, removing it from its parent value
+     * list.
+     *
+     * @param null|array $params
+     * @param null|array|string $opts
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\Radar\ValueListItem the deleted resource
+     */
+    public function delete($params = null, $opts = null)
+    {
+        self::_validateParams($params);
+        $url = $this->instanceUrl();
+        list($response, $opts) = $this->_request('delete', $url, $params, $opts);
+        $this->refreshFrom($response, $opts);
+        return $this;
+    }
+    /**
+     * Returns a list of <code>ValueListItem</code> objects. The objects are sorted in
+     * descending order by creation date, with the most recently created object
+     * appearing first.
+     *
+     * @param null|array $params
+     * @param null|array|string $opts
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\Collection<\Stripe\Radar\ValueListItem> of ApiResources
+     */
+    public static function all($params = null, $opts = null)
+    {
+        $url = static::classUrl();
+        return static::_requestPage($url, \ProfilePressVendor\Stripe\Collection::class, $params, $opts);
+    }
+    /**
+     * Retrieves a <code>ValueListItem</code> object.
+     *
+     * @param array|string $id the ID of the API resource to retrieve, or an options array containing an `id` key
+     * @param null|array|string $opts
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\Radar\ValueListItem
+     */
+    public static function retrieve($id, $opts = null)
+    {
+        $opts = \ProfilePressVendor\Stripe\Util\RequestOptions::parse($opts);
+        $instance = new static($id, $opts);
+        $instance->refresh();
+        return $instance;
+    }
 }

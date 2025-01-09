@@ -11,7 +11,6 @@
 namespace ProfilePressVendor\Carbon\Exceptions;
 
 use RuntimeException as BaseRuntimeException;
-/** @internal */
 class UnreachableException extends BaseRuntimeException implements RuntimeException
 {
     //

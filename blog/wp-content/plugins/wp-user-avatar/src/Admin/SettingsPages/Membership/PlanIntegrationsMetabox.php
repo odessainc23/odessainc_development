@@ -59,10 +59,10 @@ class PlanIntegrationsMetabox
         <tr>
             <td class="sort"></td>
             <td class="file_name">
-                <input type="text" class="input_text" placeholder="<?php esc_html_e('File name', 'wp-user-avatar') ?>" name="<?= $name ?>_names[]" value="<?= $file_name ?>">
+                <input type="text" class="input_text" placeholder="<?php esc_html_e('File name', 'wp-user-avatar') ?>" name="<?= esc_attr($name) ?>_names[]" value="<?= esc_attr($file_name) ?>">
             </td>
             <td class="file_url">
-                <input type="text" class="input_text" placeholder="https://" name="<?= $name ?>_urls[]" value="<?= $file_url ?>">
+                <input type="text" class="input_text" placeholder="https://" name="<?= esc_attr($name) ?>_urls[]" value="<?= esc_url($file_url) ?>">
             </td>
             <td class="file_url_choose">
                 <a href="#" class="button upload_file_button" data-choose="<?php esc_html_e('Choose file', 'wp-user-avatar') ?>" data-update="<?php esc_html_e('Insert file URL', 'wp-user-avatar') ?>"><?php esc_html_e('Choose file', 'wp-user-avatar') ?></a>
@@ -99,7 +99,7 @@ class PlanIntegrationsMetabox
             <tfoot>
             <tr>
                 <th colspan="2">
-                    <a href="#" class="button insert""><?php esc_html_e('Add File', 'wp-user-avatar') ?></a>
+                    <a href="#" class="button insert"><?php esc_html_e('Add File', 'wp-user-avatar') ?></a>
                 </th>
                 <th colspan="3">
                 </th>
@@ -140,7 +140,10 @@ class PlanIntegrationsMetabox
     {
         printf('<select id="%1$s" name="%1$s" class="select short">', esc_attr($name));
 
-        if (is_array($options['options']) && ! empty($options['options'])) {
+        if (
+            isset($options['options']) &&
+            ($options['options'] instanceof \Generator || (is_array($options['options']) && ! empty($options['options'])))
+        ) {
             foreach ($options['options'] as $id => $val) {
                 if (is_array($val)) {
                     echo "<optgroup label='$id'>";
@@ -174,7 +177,10 @@ class PlanIntegrationsMetabox
         printf('<input name="%1$s[]" type="hidden" value="">', esc_attr($name));
         printf('<select data-placeholder="%2$s" id="%1$s" name="%1$s[]" class="select ppselect2 short" multiple>', esc_attr($name), esc_html__('Select...', 'wp-user-avatar'));
 
-        if (is_array($options['options']) && ! empty($options['options'])) {
+        if (
+            isset($options['options']) &&
+            ($options['options'] instanceof \Generator || (is_array($options['options']) && ! empty($options['options'])))
+        ) {
             foreach ($options['options'] as $id => $val) {
                 if (is_array($val)) {
                     echo "<optgroup label='$id'>";

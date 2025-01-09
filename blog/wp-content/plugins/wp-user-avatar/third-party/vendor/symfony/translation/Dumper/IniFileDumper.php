@@ -15,7 +15,6 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * IniFileDumper generates an ini formatted string representation of a message catalogue.
  *
  * @author Stealth35
- * @internal
  */
 class IniFileDumper extends FileDumper
 {
@@ -26,7 +25,7 @@ class IniFileDumper extends FileDumper
     {
         $output = '';
         foreach ($messages->all($domain) as $source => $target) {
-            $escapeTarget = \str_replace('"', '\\"', $target);
+            $escapeTarget = str_replace('"', '\"', $target);
             $output .= $source . '="' . $escapeTarget . "\"\n";
         }
         return $output;

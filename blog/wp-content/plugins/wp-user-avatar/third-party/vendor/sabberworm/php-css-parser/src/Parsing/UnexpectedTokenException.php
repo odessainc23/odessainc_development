@@ -4,7 +4,6 @@ namespace ProfilePressVendor\Sabberworm\CSS\Parsing;
 
 /**
  * Thrown if the CSS parser encounters a token it did not expect.
- * @internal
  */
 class UnexpectedTokenException extends SourceException
 {
@@ -41,7 +40,7 @@ class UnexpectedTokenException extends SourceException
         } elseif ($this->sMatchType === 'identifier') {
             $sMessage = "Identifier expected. Got “{$sFound}”";
         } elseif ($this->sMatchType === 'custom') {
-            $sMessage = \trim("{$sExpected} {$sFound}");
+            $sMessage = trim("{$sExpected} {$sFound}");
         }
         parent::__construct($sMessage, $iLineNo);
     }

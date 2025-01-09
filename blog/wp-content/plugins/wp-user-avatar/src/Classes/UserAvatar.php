@@ -106,7 +106,7 @@ class UserAvatar
             /** WP User Avatar Adapter ENDS */
         }
 
-        return $url;
+        return apply_filters('ppress_user_avatar_image_url', $url, $id_or_email, $size);
     }
 
     public static function user_has_pp_avatar($id_or_email)
@@ -134,11 +134,11 @@ class UserAvatar
     /**
      * @param $id_or_email
      *
-     * @param bool $size
+     * @param string $size
      *
      * @return string
      */
-    public static function get_pp_avatar_url($id_or_email, $size = false, $original = false)
+    public static function get_pp_avatar_url($id_or_email, $size = '', $original = false)
     {
         $user_id = self::get_avatar_user_id($id_or_email);
 

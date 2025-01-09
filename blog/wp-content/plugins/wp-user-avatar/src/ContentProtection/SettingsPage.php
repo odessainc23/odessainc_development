@@ -176,7 +176,7 @@ class SettingsPage extends AbstractSettingsPage
 
     public function settings_page_function()
     {
-        add_action('wp_cspa_main_content_area', array($this, 'admin_settings_page_callback'), 10, 2);
+        add_filter('wp_cspa_main_content_area', array($this, 'admin_settings_page_callback'), 10, 2);
         add_action('wp_cspa_before_closing_header', [$this, 'add_new_button']);
 
         $is_sidebar = ! isset($_GET['action'], $_GET['id']) && ! isset($_GET['add']);

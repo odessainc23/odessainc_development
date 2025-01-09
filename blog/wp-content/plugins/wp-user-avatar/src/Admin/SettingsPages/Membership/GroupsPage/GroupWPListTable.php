@@ -183,8 +183,7 @@ class GroupWPListTable extends \WP_List_Table
         }
 
         if ($this->current_action() !== false) {
-            wp_safe_redirect(PPRESS_MEMBERSHIP_GROUPS_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_MEMBERSHIP_GROUPS_SETTINGS_PAGE);
         }
     }
 

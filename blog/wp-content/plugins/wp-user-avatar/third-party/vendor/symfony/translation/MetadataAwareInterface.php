@@ -14,7 +14,6 @@ namespace ProfilePressVendor\Symfony\Component\Translation;
  * MetadataAwareInterface.
  *
  * @author Fabien Potencier <fabien@symfony.com>
- * @internal
  */
 interface MetadataAwareInterface
 {

@@ -371,8 +371,7 @@ class FormList extends \WP_List_Table
             }
 
 
-            wp_safe_redirect($url);
-            exit;
+            ppress_do_admin_redirect($url);
 
         }
 
@@ -395,8 +394,7 @@ class FormList extends \WP_List_Table
                 }
             }
 
-            wp_safe_redirect($url);
-            exit;
+            ppress_do_admin_redirect($url);
         }
 
         // Detect when a bulk action is being triggered...

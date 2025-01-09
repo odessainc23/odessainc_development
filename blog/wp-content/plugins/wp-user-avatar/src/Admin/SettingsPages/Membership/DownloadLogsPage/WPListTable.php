@@ -146,8 +146,7 @@ class WPListTable extends \WP_List_Table
                 PROFILEPRESS_sql::delete_meta_data($log_id);
             }
 
-            wp_safe_redirect(PPRESS_MEMBERSHIP_DOWNLOAD_LOGS_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_MEMBERSHIP_DOWNLOAD_LOGS_SETTINGS_PAGE);
         }
     }
 }

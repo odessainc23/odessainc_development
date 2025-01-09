@@ -12,13 +12,12 @@ namespace ProfilePressVendor\Symfony\Component\Translation\Provider;
 
 use ProfilePressVendor\Symfony\Component\Translation\Exception\IncompleteDsnException;
 use ProfilePressVendor\Symfony\Component\Translation\Exception\UnsupportedSchemeException;
-/** @internal */
 interface ProviderFactoryInterface
 {
     /**
      * @throws UnsupportedSchemeException
      * @throws IncompleteDsnException
      */
-    public function create(Dsn $dsn) : ProviderInterface;
-    public function supports(Dsn $dsn) : bool;
+    public function create(Dsn $dsn): ProviderInterface;
+    public function supports(Dsn $dsn): bool;
 }

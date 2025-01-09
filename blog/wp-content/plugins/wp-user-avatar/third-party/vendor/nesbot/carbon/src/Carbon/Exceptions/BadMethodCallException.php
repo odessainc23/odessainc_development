@@ -10,7 +10,6 @@
  */
 namespace ProfilePressVendor\Carbon\Exceptions;
 
-/** @internal */
 interface BadMethodCallException extends Exception
 {
     //

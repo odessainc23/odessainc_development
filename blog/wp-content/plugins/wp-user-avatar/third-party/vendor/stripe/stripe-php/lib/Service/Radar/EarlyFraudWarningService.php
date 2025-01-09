@@ -3,14 +3,17 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Radar;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class EarlyFraudWarningService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
      * Returns a list of early fraud warnings.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -29,7 +32,7 @@ class EarlyFraudWarningService extends \ProfilePressVendor\Stripe\Service\Abstra
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

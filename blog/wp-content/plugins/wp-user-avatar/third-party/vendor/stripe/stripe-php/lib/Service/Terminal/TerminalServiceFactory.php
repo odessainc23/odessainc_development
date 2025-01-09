@@ -10,7 +10,6 @@ namespace ProfilePressVendor\Stripe\Service\Terminal;
  * @property ConnectionTokenService $connectionTokens
  * @property LocationService $locations
  * @property ReaderService $readers
- * @internal
  */
 class TerminalServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

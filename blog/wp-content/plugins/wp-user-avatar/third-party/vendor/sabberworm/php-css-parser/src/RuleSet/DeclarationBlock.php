@@ -24,7 +24,6 @@ use ProfilePressVendor\Sabberworm\CSS\Value\Value;
  * matching elements.
  *
  * Declaration blocks usually appear directly inside a `Document` or another `CSSList` (mostly a `MediaQuery`).
- * @internal
  */
 class DeclarationBlock extends RuleSet
 {
@@ -57,15 +56,15 @@ class DeclarationBlock extends RuleSet
             $sStringWrapperChar = \false;
             do {
                 $aSelectorParts[] = $oParserState->consume(1) . $oParserState->consumeUntil(['{', '}', '\'', '"'], \false, \false, $aComments);
-                if (\in_array($oParserState->peek(), ['\'', '"']) && \substr(\end($aSelectorParts), -1) != "\\") {
+                if (in_array($oParserState->peek(), ['\'', '"']) && substr(end($aSelectorParts), -1) != "\\") {
                     if ($sStringWrapperChar === \false) {
                         $sStringWrapperChar = $oParserState->peek();
                     } elseif ($sStringWrapperChar == $oParserState->peek()) {
                         $sStringWrapperChar = \false;
                     }
                 }
-            } while (!\in_array($oParserState->peek(), ['{', '}']) || $sStringWrapperChar !== \false);
-            $oResult->setSelectors(\implode('', $aSelectorParts), $oList);
+            } while (!in_array($oParserState->peek(), ['{', '}']) || $sStringWrapperChar !== \false);
+            $oResult->setSelectors(implode('', $aSelectorParts), $oList);
             if ($oParserState->comes('{')) {
                 $oParserState->consume(1);
             }
@@ -91,10 +90,10 @@ class DeclarationBlock extends RuleSet
      */
     public function setSelectors($mSelector, $oList = null)
     {
-        if (\is_array($mSelector)) {
+        if (is_array($mSelector)) {
             $this->aSelectors = $mSelector;
         } else {
-            $this->aSelectors = \explode(',', $mSelector);
+            $this->aSelectors = explode(',', $mSelector);
         }
         foreach ($this->aSelectors as $iKey => $mSelector) {
             if (!$mSelector instanceof Selector) {
@@ -164,6 +163,8 @@ class DeclarationBlock extends RuleSet
      * Splits shorthand declarations (e.g. `margin` or `font`) into their constituent parts.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandShorthands()
     {
@@ -178,6 +179,8 @@ class DeclarationBlock extends RuleSet
      * Creates shorthand declarations (e.g. `margin` or `font`) whenever possible.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createShorthands()
     {
@@ -196,6 +199,8 @@ class DeclarationBlock extends RuleSet
      * Multiple borders are not yet supported as of 3.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandBorderShorthand()
     {
@@ -224,12 +229,10 @@ class DeclarationBlock extends RuleSet
                     $sNewRuleName = $sBorderRule . "-width";
                 } elseif ($mValue instanceof Color) {
                     $sNewRuleName = $sBorderRule . "-color";
+                } else if (in_array($mValue, $aBorderSizes)) {
+                    $sNewRuleName = $sBorderRule . "-width";
                 } else {
-                    if (\in_array($mValue, $aBorderSizes)) {
-                        $sNewRuleName = $sBorderRule . "-width";
-                    } else {
-                        $sNewRuleName = $sBorderRule . "-style";
-                    }
+                    $sNewRuleName = $sBorderRule . "-style";
                 }
                 $oNewRule = new Rule($sNewRuleName, $oRule->getLineNo(), $oRule->getColNo());
                 $oNewRule->setIsImportant($oRule->getIsImportant());
@@ -246,6 +249,8 @@ class DeclarationBlock extends RuleSet
      * Handles `margin`, `padding`, `border-color`, `border-style` and `border-width`.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandDimensionsShorthand()
     {
@@ -264,7 +269,7 @@ class DeclarationBlock extends RuleSet
                 $aValues = $mRuleValue->getListComponents();
             }
             $top = $right = $bottom = $left = null;
-            switch (\count($aValues)) {
+            switch (count($aValues)) {
                 case 1:
                     $top = $right = $bottom = $left = $aValues[0];
                     break;
@@ -285,7 +290,7 @@ class DeclarationBlock extends RuleSet
                     break;
             }
             foreach (['top', 'right', 'bottom', 'left'] as $sPosition) {
-                $oNewRule = new Rule(\sprintf($sExpanded, $sPosition), $oRule->getLineNo(), $oRule->getColNo());
+                $oNewRule = new Rule(sprintf($sExpanded, $sPosition), $oRule->getLineNo(), $oRule->getColNo());
                 $oNewRule->setIsImportant($oRule->getIsImportant());
                 $oNewRule->addValue(${$sPosition});
                 $this->addRule($oNewRule);
@@ -299,6 +304,8 @@ class DeclarationBlock extends RuleSet
      * into their constituent parts.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandFontShorthand()
     {
@@ -318,19 +325,19 @@ class DeclarationBlock extends RuleSet
         }
         foreach ($aValues as $mValue) {
             if (!$mValue instanceof Value) {
-                $mValue = \mb_strtolower($mValue);
+                $mValue = mb_strtolower($mValue);
             }
-            if (\in_array($mValue, ['normal', 'inherit'])) {
+            if (in_array($mValue, ['normal', 'inherit'])) {
                 foreach (['font-style', 'font-weight', 'font-variant'] as $sProperty) {
                     if (!isset($aFontProperties[$sProperty])) {
                         $aFontProperties[$sProperty] = $mValue;
                     }
                 }
-            } elseif (\in_array($mValue, ['italic', 'oblique'])) {
+            } elseif (in_array($mValue, ['italic', 'oblique'])) {
                 $aFontProperties['font-style'] = $mValue;
             } elseif ($mValue == 'small-caps') {
                 $aFontProperties['font-variant'] = $mValue;
-            } elseif (\in_array($mValue, ['bold', 'bolder', 'lighter']) || $mValue instanceof Size && \in_array($mValue->getSize(), \range(100, 900, 100))) {
+            } elseif (in_array($mValue, ['bold', 'bolder', 'lighter']) || $mValue instanceof Size && in_array($mValue->getSize(), range(100, 900, 100))) {
                 $aFontProperties['font-weight'] = $mValue;
             } elseif ($mValue instanceof RuleValueList && $mValue->getListSeparator() == '/') {
                 list($oSize, $oHeight) = $mValue->getListComponents();
@@ -358,6 +365,8 @@ class DeclarationBlock extends RuleSet
      * @see http://www.w3.org/TR/21/colors.html#propdef-background
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandBackgroundShorthand()
     {
@@ -374,7 +383,7 @@ class DeclarationBlock extends RuleSet
         } else {
             $aValues = $mRuleValue->getListComponents();
         }
-        if (\count($aValues) == 1 && $aValues[0] == 'inherit') {
+        if (count($aValues) == 1 && $aValues[0] == 'inherit') {
             foreach ($aBgProperties as $sProperty => $mValue) {
                 $oNewRule = new Rule($sProperty, $oRule->getLineNo(), $oRule->getColNo());
                 $oNewRule->addValue('inherit');
@@ -387,17 +396,17 @@ class DeclarationBlock extends RuleSet
         $iNumBgPos = 0;
         foreach ($aValues as $mValue) {
             if (!$mValue instanceof Value) {
-                $mValue = \mb_strtolower($mValue);
+                $mValue = mb_strtolower($mValue);
             }
             if ($mValue instanceof URL) {
                 $aBgProperties['background-image'] = $mValue;
             } elseif ($mValue instanceof Color) {
                 $aBgProperties['background-color'] = $mValue;
-            } elseif (\in_array($mValue, ['scroll', 'fixed'])) {
+            } elseif (in_array($mValue, ['scroll', 'fixed'])) {
                 $aBgProperties['background-attachment'] = $mValue;
-            } elseif (\in_array($mValue, ['repeat', 'no-repeat', 'repeat-x', 'repeat-y'])) {
+            } elseif (in_array($mValue, ['repeat', 'no-repeat', 'repeat-x', 'repeat-y'])) {
                 $aBgProperties['background-repeat'] = $mValue;
-            } elseif (\in_array($mValue, ['left', 'center', 'right', 'top', 'bottom']) || $mValue instanceof Size) {
+            } elseif (in_array($mValue, ['left', 'center', 'right', 'top', 'bottom']) || $mValue instanceof Size) {
                 if ($iNumBgPos == 0) {
                     $aBgProperties['background-position'][0] = $mValue;
                     $aBgProperties['background-position'][1] = 'center';
@@ -417,6 +426,8 @@ class DeclarationBlock extends RuleSet
     }
     /**
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function expandListStyleShorthand()
     {
@@ -435,7 +446,7 @@ class DeclarationBlock extends RuleSet
         } else {
             $aValues = $mRuleValue->getListComponents();
         }
-        if (\count($aValues) == 1 && $aValues[0] == 'inherit') {
+        if (count($aValues) == 1 && $aValues[0] == 'inherit') {
             foreach ($aListProperties as $sProperty => $mValue) {
                 $oNewRule = new Rule($sProperty, $oRule->getLineNo(), $oRule->getColNo());
                 $oNewRule->addValue('inherit');
@@ -447,13 +458,13 @@ class DeclarationBlock extends RuleSet
         }
         foreach ($aValues as $mValue) {
             if (!$mValue instanceof Value) {
-                $mValue = \mb_strtolower($mValue);
+                $mValue = mb_strtolower($mValue);
             }
             if ($mValue instanceof Url) {
                 $aListProperties['list-style-image'] = $mValue;
-            } elseif (\in_array($mValue, $aListStyleTypes)) {
+            } elseif (in_array($mValue, $aListStyleTypes)) {
                 $aListProperties['list-style-types'] = $mValue;
-            } elseif (\in_array($mValue, $aListStylePositions)) {
+            } elseif (in_array($mValue, $aListStylePositions)) {
                 $aListProperties['list-style-position'] = $mValue;
             }
         }
@@ -470,6 +481,8 @@ class DeclarationBlock extends RuleSet
      * @param string $sShorthand
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createShorthandProperties(array $aProperties, $sShorthand)
     {
@@ -505,6 +518,8 @@ class DeclarationBlock extends RuleSet
     }
     /**
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createBackgroundShorthand()
     {
@@ -513,6 +528,8 @@ class DeclarationBlock extends RuleSet
     }
     /**
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createListStyleShorthand()
     {
@@ -525,6 +542,8 @@ class DeclarationBlock extends RuleSet
      * Should be run after `create_dimensions_shorthand`!
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createBorderShorthand()
     {
@@ -537,6 +556,8 @@ class DeclarationBlock extends RuleSet
      * and converts them into shorthand CSS properties.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createDimensionsShorthand()
     {
@@ -547,16 +568,16 @@ class DeclarationBlock extends RuleSet
             $aFoldable = [];
             foreach ($aRules as $sRuleName => $oRule) {
                 foreach ($aPositions as $sPosition) {
-                    if ($sRuleName == \sprintf($sExpanded, $sPosition)) {
+                    if ($sRuleName == sprintf($sExpanded, $sPosition)) {
                         $aFoldable[$sRuleName] = $oRule;
                     }
                 }
             }
             // All four dimensions must be present
-            if (\count($aFoldable) == 4) {
+            if (count($aFoldable) == 4) {
                 $aValues = [];
                 foreach ($aPositions as $sPosition) {
-                    $oRule = $aRules[\sprintf($sExpanded, $sPosition)];
+                    $oRule = $aRules[sprintf($sExpanded, $sPosition)];
                     $mRuleValue = $oRule->getValue();
                     $aRuleValues = [];
                     if (!$mRuleValue instanceof RuleValueList) {
@@ -592,7 +613,7 @@ class DeclarationBlock extends RuleSet
                 }
                 $this->addRule($oNewRule);
                 foreach ($aPositions as $sPosition) {
-                    $this->removeRule(\sprintf($sExpanded, $sPosition));
+                    $this->removeRule(sprintf($sExpanded, $sPosition));
                 }
             }
         }
@@ -604,6 +625,8 @@ class DeclarationBlock extends RuleSet
      * At least `font-size` AND `font-family` must be present in order to create a shorthand declaration.
      *
      * @return void
+     *
+     * @deprecated since 8.7.0, will be removed without substitution in version 9.0 in #511
      */
     public function createFontShorthand()
     {
@@ -684,14 +707,16 @@ class DeclarationBlock extends RuleSet
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      *
      * @throws OutputException
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         $sResult = $oOutputFormat->comments($this);
-        if (\count($this->aSelectors) === 0) {
+        if (count($this->aSelectors) === 0) {
             // If all the selectors have been removed, this declaration block becomes invalid
             throw new OutputException("Attempt to print declaration block with missing selector", $this->iLineNo);
         }

@@ -6,7 +6,6 @@ namespace ProfilePressVendor\Stripe\ApiOperations;
  * Trait for listable resources. Adds a `all()` static method to the class.
  *
  * This trait should only be applied to classes that derive from StripeObject.
- * @internal
  */
 trait All
 {
@@ -20,15 +19,7 @@ trait All
      */
     public static function all($params = null, $opts = null)
     {
-        self::_validateParams($params);
         $url = static::classUrl();
-        list($response, $opts) = static::_staticRequest('get', $url, $params, $opts);
-        $obj = \ProfilePressVendor\Stripe\Util\Util::convertToStripeObject($response->json, $opts);
-        if (!$obj instanceof \ProfilePressVendor\Stripe\Collection) {
-            throw new \ProfilePressVendor\Stripe\Exception\UnexpectedValueException('Expected type ' . \ProfilePressVendor\Stripe\Collection::class . ', got "' . \get_class($obj) . '" instead.');
-        }
-        $obj->setLastResponse($response);
-        $obj->setFilters($params);
-        return $obj;
+        return static::_requestPage($url, \ProfilePressVendor\Stripe\Collection::class, $params, $opts);
     }
 }

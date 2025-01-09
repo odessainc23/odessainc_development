@@ -316,22 +316,4 @@ class ThemesRepository
         self::defaultThemes();
         self::$themes[] = $data;
     }
-
-    /**
-     * Delete form theme from stack.
-     *
-     * @param mixed $theme_name
-     *
-     * @return void
-     */
-    public static function delete_by_name($theme_name)
-    {
-        self::defaultThemes();
-
-        foreach (self::$themes as $index => $theme) {
-            if ($theme['name'] == $theme_name) {
-                unset(self::$themes[$index]);
-            }
-        }
-    }
 }

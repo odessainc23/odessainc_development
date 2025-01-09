@@ -34,7 +34,7 @@ class IconPicker
         echo '<div class="pp-form-control pp-form-control-icon-picker">';
         printf(
             '<# var material_icon = wp.template("pp-form-builder-material-icon")({icon:data.%1$s}); #> {{{ material_icon }}}',
-            @$this->args['name']
+            $this->args['name'] ?? ''
         );
         echo '</div>';
 

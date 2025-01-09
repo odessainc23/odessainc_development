@@ -12,7 +12,6 @@ declare (strict_types=1);
 namespace ProfilePressVendor\League\Csv;
 
 use Throwable;
-/** @internal */
 interface UnableToProcessCsv extends Throwable
 {
 }

@@ -4,7 +4,7 @@
 
 $loader = (static function () {
     // Backup the autoloaded Composer files
-    $existingComposerAutoloadFiles = $GLOBALS['__composer_autoload_files'] ?? [];
+    $existingComposerAutoloadFiles = isset($GLOBALS['__composer_autoload_files']) ? $GLOBALS['__composer_autoload_files'] : [];
 
     $loader = require_once __DIR__.'/autoload.php';
     // Ensure InstalledVersions is available
@@ -29,8 +29,6 @@ if (!function_exists('humbug_phpscoper_expose_class')) {
         }
     }
 }
-humbug_phpscoper_expose_class('ComposerAutoloaderInit38b8a8a9c6655418dde57cfe93eb2b69', 'ProfilePressVendor\ComposerAutoloaderInit38b8a8a9c6655418dde57cfe93eb2b69');
-humbug_phpscoper_expose_class('PAnD', 'ProfilePressVendor\PAnD');
 humbug_phpscoper_expose_class('PhpToken', 'ProfilePressVendor\PhpToken');
 humbug_phpscoper_expose_class('ValueError', 'ProfilePressVendor\ValueError');
 humbug_phpscoper_expose_class('Attribute', 'ProfilePressVendor\Attribute');
@@ -41,7 +39,7 @@ humbug_phpscoper_expose_class('Stringable', 'ProfilePressVendor\Stringable');
 // https://github.com/humbug/php-scoper/blob/master/docs/further-reading.md#function-aliases
 if (!function_exists('app')) { function app() { return \ProfilePressVendor\app(...func_get_args()); } }
 if (!function_exists('calculateTranslationStatus')) { function calculateTranslationStatus() { return \ProfilePressVendor\calculateTranslationStatus(...func_get_args()); } }
-if (!function_exists('composerRequire38b8a8a9c6655418dde57cfe93eb2b69')) { function composerRequire38b8a8a9c6655418dde57cfe93eb2b69() { return \ProfilePressVendor\composerRequire38b8a8a9c6655418dde57cfe93eb2b69(...func_get_args()); } }
+if (!function_exists('composerRequirec33e7254bfb6e6bc8570f410ac076a70')) { function composerRequirec33e7254bfb6e6bc8570f410ac076a70() { return \ProfilePressVendor\composerRequirec33e7254bfb6e6bc8570f410ac076a70(...func_get_args()); } }
 if (!function_exists('extractLocaleFromFilePath')) { function extractLocaleFromFilePath() { return \ProfilePressVendor\extractLocaleFromFilePath(...func_get_args()); } }
 if (!function_exists('extractTranslationKeys')) { function extractTranslationKeys() { return \ProfilePressVendor\extractTranslationKeys(...func_get_args()); } }
 if (!function_exists('fdiv')) { function fdiv() { return \ProfilePressVendor\fdiv(...func_get_args()); } }
@@ -70,10 +68,13 @@ if (!function_exists('mb_http_input')) { function mb_http_input() { return \Prof
 if (!function_exists('mb_http_output')) { function mb_http_output() { return \ProfilePressVendor\mb_http_output(...func_get_args()); } }
 if (!function_exists('mb_internal_encoding')) { function mb_internal_encoding() { return \ProfilePressVendor\mb_internal_encoding(...func_get_args()); } }
 if (!function_exists('mb_language')) { function mb_language() { return \ProfilePressVendor\mb_language(...func_get_args()); } }
+if (!function_exists('mb_lcfirst')) { function mb_lcfirst() { return \ProfilePressVendor\mb_lcfirst(...func_get_args()); } }
 if (!function_exists('mb_list_encodings')) { function mb_list_encodings() { return \ProfilePressVendor\mb_list_encodings(...func_get_args()); } }
+if (!function_exists('mb_ltrim')) { function mb_ltrim() { return \ProfilePressVendor\mb_ltrim(...func_get_args()); } }
 if (!function_exists('mb_ord')) { function mb_ord() { return \ProfilePressVendor\mb_ord(...func_get_args()); } }
 if (!function_exists('mb_output_handler')) { function mb_output_handler() { return \ProfilePressVendor\mb_output_handler(...func_get_args()); } }
 if (!function_exists('mb_parse_str')) { function mb_parse_str() { return \ProfilePressVendor\mb_parse_str(...func_get_args()); } }
+if (!function_exists('mb_rtrim')) { function mb_rtrim() { return \ProfilePressVendor\mb_rtrim(...func_get_args()); } }
 if (!function_exists('mb_scrub')) { function mb_scrub() { return \ProfilePressVendor\mb_scrub(...func_get_args()); } }
 if (!function_exists('mb_str_pad')) { function mb_str_pad() { return \ProfilePressVendor\mb_str_pad(...func_get_args()); } }
 if (!function_exists('mb_str_split')) { function mb_str_split() { return \ProfilePressVendor\mb_str_split(...func_get_args()); } }
@@ -92,6 +93,8 @@ if (!function_exists('mb_strwidth')) { function mb_strwidth() { return \ProfileP
 if (!function_exists('mb_substitute_character')) { function mb_substitute_character() { return \ProfilePressVendor\mb_substitute_character(...func_get_args()); } }
 if (!function_exists('mb_substr')) { function mb_substr() { return \ProfilePressVendor\mb_substr(...func_get_args()); } }
 if (!function_exists('mb_substr_count')) { function mb_substr_count() { return \ProfilePressVendor\mb_substr_count(...func_get_args()); } }
+if (!function_exists('mb_trim')) { function mb_trim() { return \ProfilePressVendor\mb_trim(...func_get_args()); } }
+if (!function_exists('mb_ucfirst')) { function mb_ucfirst() { return \ProfilePressVendor\mb_ucfirst(...func_get_args()); } }
 if (!function_exists('preg_last_error_msg')) { function preg_last_error_msg() { return \ProfilePressVendor\preg_last_error_msg(...func_get_args()); } }
 if (!function_exists('printTable')) { function printTable() { return \ProfilePressVendor\printTable(...func_get_args()); } }
 if (!function_exists('printTitle')) { function printTitle() { return \ProfilePressVendor\printTitle(...func_get_args()); } }

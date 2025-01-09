@@ -13,7 +13,6 @@ namespace ProfilePressVendor\Carbon;
 use ProfilePressVendor\Carbon\Exceptions\ImmutableException;
 use ProfilePressVendor\Symfony\Component\Config\ConfigCacheFactoryInterface;
 use ProfilePressVendor\Symfony\Component\Translation\Formatter\MessageFormatterInterface;
-/** @internal */
 class TranslatorImmutable extends Translator
 {
     /** @var bool */
@@ -55,7 +54,7 @@ class TranslatorImmutable extends Translator
     /**
      * @codeCoverageIgnore
      */
-    public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory) : void
+    public function setConfigCacheFactory(ConfigCacheFactoryInterface $configCacheFactory): void
     {
         $this->disallowMutation(__METHOD__);
         parent::setConfigCacheFactory($configCacheFactory);

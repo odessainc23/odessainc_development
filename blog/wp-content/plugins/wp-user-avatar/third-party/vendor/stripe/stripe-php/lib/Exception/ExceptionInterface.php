@@ -6,7 +6,6 @@ namespace ProfilePressVendor\Stripe\Exception;
 if (\interface_exists(\Throwable::class, \false)) {
     /**
      * The base interface for all Stripe exceptions.
-     * @internal
      */
     interface ExceptionInterface extends \Throwable
     {
@@ -14,7 +13,6 @@ if (\interface_exists(\Throwable::class, \false)) {
 } else {
     /**
      * The base interface for all Stripe exceptions.
-     * @internal
      */
     // phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
     interface ExceptionInterface

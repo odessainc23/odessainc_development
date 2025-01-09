@@ -43,10 +43,6 @@ $payment_method = PaymentMethods::get_instance()->get_by_id($sub->get_payment_me
                 $actions['cancel'] = esc_html__('Cancel', 'wp-user-avatar');
             }
 
-            /**
-             * When plan group launches, we do not want to show resubscribe button if expired/cancelled plan belongs to
-             * a plan group where the customer has an active plan
-             */
             if ( ! $customer->has_active_group_subscription($plan_group_id) && ! $sub->is_active()) {
                 $actions['resubscribe'] = esc_html__('Resubscribe', 'wp-user-avatar');
             }

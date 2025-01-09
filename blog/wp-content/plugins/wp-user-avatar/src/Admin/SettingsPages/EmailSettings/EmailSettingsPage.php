@@ -132,6 +132,10 @@ class EmailSettingsPage
                     '{{last_name}}'           => esc_html__('Last Name entered by user on registration.', 'wp-user-avatar'),
                     '{{password_reset_link}}' => esc_html__('URL to reset password.', 'wp-user-avatar'),
                     '{{login_link}}'          => esc_html__('URL to login.', 'wp-user-avatar'),
+                    '{{field_key}}'           => sprintf(
+                        esc_html__('Replace "field_key" with the %scustom field key%s or usermeta key.', 'wp-user-avatar'),
+                        '<a href="' . PPRESS_CUSTOM_FIELDS_SETTINGS_PAGE . '" target="_blank">', '</a>'
+                    )
                 ],
             ],
             [
@@ -279,8 +283,7 @@ class EmailSettingsPage
         $data = array_shift($data);
 
         if (empty($data)) {
-            wp_safe_redirect(PPRESS_SETTINGS_SETTING_GENERAL_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_SETTINGS_SETTING_GENERAL_PAGE);
         }
 
         $page_header = $data['title'];
@@ -534,23 +537,23 @@ class EmailSettingsPage
         <script type="text/javascript">
             (function ($) {
 
-                $('#email_template_type').change(function () {
+                $('#email_template_type').on('change', function () {
                     var cache = $('#customize_default_template_row');
                     cache.hide();
                     if (this.value === 'default') {
                         cache.show();
                     }
-                }).change();
+                }).trigger('change');
 
-                $('#email_content_type').change(function () {
+                $('#email_content_type').on('change', function () {
                     var cache = $('#email_template_type_row, #customize_default_template_row');
                     cache.hide();
                     if (this.value === 'text/html') {
                         cache.show();
-                        $('#email_template_type').change();
+                        $('#email_template_type').trigger('change');
                     }
 
-                }).change();
+                }).trigger('change');
             })(jQuery);
         </script>
         <?php

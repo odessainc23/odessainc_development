@@ -9,7 +9,6 @@ use ProfilePressVendor\Sabberworm\CSS\Property\AtRule;
  * `@import`, `@charset` or `@media`.
  *
  * A common example for this is `@font-face`.
- * @internal
  */
 class AtRuleSet extends RuleSet implements AtRule
 {
@@ -54,9 +53,11 @@ class AtRuleSet extends RuleSet implements AtRule
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         $sResult = $oOutputFormat->comments($this);
         $sArgs = $this->sArgs;

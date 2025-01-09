@@ -129,12 +129,20 @@ $billing_frequency = $plan->is_recurring() ? ' ' . SubscriptionBillingFrequency:
         <?php if ($plan->is_recurring()) : ?>
             <div class="ppress-checkout_charge_details">
                 <?php printf(
-                    esc_html__('You\'ll be charged %1$stoday%3$s then %2$s starting %4$s.', 'wp-user-avatar'),
-                    sprintf('<span>%s ', ppress_display_amount($cart_vars->initial_amount)),
-                    sprintf('<span>%s %s</span>', ppress_display_amount($cart_vars->recurring_amount), strtolower(SubscriptionBillingFrequency::get_label($plan->billing_frequency))),
-                    '</span>',
-                    apply_filters('ppress_checkout_sidebar_order_expiration_date_time', (new DateTime($cart_vars->expiration_date, new DateTimeZone('UTC')))->setTimezone(wp_timezone())->format('j M, Y'), $cart_vars, $plan)
+                    esc_html__('You\'ll be charged %1$stoday%2$s', 'wp-user-avatar'),
+                    sprintf('<span>%s ', ppress_display_amount($cart_vars->initial_amount)), '</span>',
                 );
+
+                if ($plan->is_auto_renew()) {
+
+                    echo '&nbsp;';
+
+                    printf(
+                        esc_html__('then %1$s starting %2$s.', 'wp-user-avatar'),
+                        sprintf('<span>%s %s</span>', ppress_display_amount($cart_vars->recurring_amount), strtolower(SubscriptionBillingFrequency::get_label($plan->billing_frequency))),
+                        apply_filters('ppress_checkout_sidebar_order_expiration_date_time', (new DateTime($cart_vars->expiration_date, new DateTimeZone('UTC')))->setTimezone(wp_timezone())->format('j M, Y'), $cart_vars, $plan)
+                    );
+                }
 
                 if ($plan->get_total_payments() > 0) {
                     printf('&nbsp;' . esc_html__('%s payments total.', 'wp-user-avatar'), '<strong>' . $plan->get_total_payments() . '</strong>');

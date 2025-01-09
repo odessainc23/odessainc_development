@@ -12,7 +12,6 @@ namespace ProfilePressVendor\League\Csv;
 
 /**
  * Defines constants for common BOM sequences.
- * @internal
  */
 interface ByteSequence
 {

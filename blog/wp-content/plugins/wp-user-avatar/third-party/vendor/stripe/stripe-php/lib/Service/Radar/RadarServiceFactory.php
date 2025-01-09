@@ -9,7 +9,6 @@ namespace ProfilePressVendor\Stripe\Service\Radar;
  * @property EarlyFraudWarningService $earlyFraudWarnings
  * @property ValueListItemService $valueListItems
  * @property ValueListService $valueLists
- * @internal
  */
 class RadarServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

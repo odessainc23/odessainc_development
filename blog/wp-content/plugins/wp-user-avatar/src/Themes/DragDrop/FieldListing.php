@@ -71,7 +71,7 @@ class FieldListing
 
         if ( ! in_array($field_type, ['login-remember']) && strpos($field_type, 'agreeable') === false && ! empty($field_setting['label'])) {
             $output = sprintf('<div class="pp-form-label-wrap"><label for="%s" class="pp-form-label">', $field_id);
-            $output .= $field_setting['label'];
+            $output .= wp_kses_post($field_setting['label']);
 
             if ($this->is_field_required($field_setting)) {
                 $output .= ' <span class="pp-form-required-label">*</span>';
@@ -134,7 +134,7 @@ class FieldListing
                 unset($field_setting['field_width']);
             }
 
-            $pp_form_field_wrap_classes .= ' fw-' . $field_with_class;
+            $pp_form_field_wrap_classes .= ' fw-' . esc_attr($field_with_class);
 
             if ( ! empty($field_setting['icon'])) {
                 $pp_form_field_wrap_classes .= ' field-has-icon';
@@ -151,7 +151,7 @@ class FieldListing
                 $description_appearance = $field_setting['description_appearance'];
                 unset($field_setting['description_appearance']);
             }
-            $pp_form_field_wrap_classes .= ' fda-' . $description_appearance;
+            $pp_form_field_wrap_classes .= ' fda-' . esc_attr($description_appearance);
 
             $label_display = 'above';
             if ( ! empty($field_setting['label_display'])) {
@@ -192,7 +192,7 @@ class FieldListing
 
             $output .= $this->label_structure($raw_field_setting, $field_id);
 
-            $field_description = isset($field_setting['description']) ? $field_setting['description'] : '';
+            $field_description = $field_setting['description'] ?? '';
 
             unset($field_setting['label']);
             unset($field_setting['description']);
@@ -238,7 +238,7 @@ class FieldListing
             $output .= $this->shortcode_field_wrap_start;
 
             if ($this->is_avatar($field_type)) {
-                $output .= sprintf('<div class="pp-field-user-avatar-picture-wrap" style="width:%s">', $field_setting['size'] . 'px');
+                $output .= sprintf('<div class="pp-field-user-avatar-picture-wrap" style="width:%s">', esc_attr($field_setting['size']) . 'px');
             }
 
             if ($this->is_cover_image($field_type)) {
@@ -262,7 +262,7 @@ class FieldListing
             $output .= apply_filters('ppress_form_after_field_listing', '', $raw_field_setting, $this->form_id, $this->form_type);
             if ( ! empty($field_description)) {
                 $output .= '<div class="pp-form-field-description">';
-                $output .= $field_description;
+                $output .= wp_kses_post($field_description);
                 $output .= '</div>';
             }
 

@@ -290,6 +290,13 @@ class ThemesRepository
                 'flag'        => 'premium',
                 'theme_type'  => FormRepository::MELANGE_TYPE,
                 'screenshot'  => PPRESS_ASSETS_URL . '/images/themes/stride.gif'
+            ],
+
+            [
+                'name'        => 'Tablefy',
+                'theme_class' => 'Tablefy',
+                'theme_type'  => FormRepository::MEMBERS_DIRECTORY_TYPE,
+                'screenshot'  => PPRESS_ASSETS_URL . '/images/themes/tablefy-member-directory.png'
             ]
         ];
     }
@@ -362,23 +369,5 @@ class ThemesRepository
     {
         self::defaultThemes();
         self::$themes[] = $data;
-    }
-
-    /**
-     * Delete form theme from stack.
-     *
-     * @param mixed $theme_name
-     *
-     * @return void
-     */
-    public static function delete_by_name($theme_name)
-    {
-        self::defaultThemes();
-
-        foreach (self::$themes as $index => $theme) {
-            if ($theme['name'] == $theme_name) {
-                unset(self::$themes[$index]);
-            }
-        }
     }
 }

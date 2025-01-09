@@ -11,7 +11,6 @@ namespace ProfilePressVendor\Brick\Math;
  * exact numerical result, the discarded digits will be referred to as the discarded fraction
  * regardless the digits' contribution to the value of the number. In other words, considered
  * as a numerical value, the discarded fraction could have an absolute value greater than one.
- * @internal
  */
 final class RoundingMode
 {

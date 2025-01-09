@@ -1,5 +1,105 @@
 ﻿== Changelog ==
 
+= 4.15.20.1 =
+* Disable registration via checkout if "user can register" is not enabled.
+
+= 4.15.20 =
+* Added ppress_content_protection_ignore_post_excerpt filter.
+* Added ppress_user_avatar_image_url filter.
+* Added {{order_coupon}} placeholder to order emails.
+* Fixed customer search in admin dashboard not working correctly.
+* Fixed various XSS reported by Cleantalk.
+* Fixed duplicate queries detected by Query Monitor.
+* Fixed fatal error that might occur from changing default login page url.
+* Switched to using core Codemirror library.
+* Fixed couple of PHP errors and warnings.
+
+= 4.15.19 =
+* Security fix where protected content was exposed via WP and Rest API search.
+* Upgraded Stripe PHP SDK to 16.3.
+* Fixed bug with incorrect insertion of ob_start().
+
+= 4.15.18 =
+* Added ppress_checkout_disable_payment_for_zero_initial_payment filter to disable payment when initial amount is zero.
+* Added filter to disable tab widget user registration.
+* Fixed bug where restricted content could be accessed via rest api.
+* Fixed icon error in admin css.
+* Fixed bug with multiple display of login remember label.
+
+= 4.15.17 =
+* Fixed bug that displays double 'tripple-mdash' in billing state field.
+* Fixed bug where country/state field ID instead of title was displayed in member directory & user profile.
+* Improved content protection compatibility with WooCommerce.
+
+= 4.15.16 =
+* Fixed fatal error: Uncaught ValueError.
+* Bumped Stripe API version to 2024-06-20.
+
+= 4.15.15 =
+* Improved support for cache-heavy hosting like WPEngine and Pantheon.
+* Fixed XSS on plan edit page metabox and builder form field label.
+* Improve compatibility with jQuery 4.
+
+= 4.15.14 =
+* Added WooCommerce compatibility to content protection where add-to-cart button is hidden for restricted product.
+* Added ppress_is_checkout_autoscroll_enabled filter to disable checkout autoscroll feature.
+* Updated Twitter social login to X.
+* Remove deprecated jQuery codes.
+
+= 4.15.13 =
+* Pro: [WooCommerce Memberships feature](https://profilepress.com/article/create-woocommerce-membership-website/?ref=changelog)
+* Added setting for disabling My Account tabs.
+* Fixed date_created time bug with manual order.
+* Fixed bug where expired coupons could be used via URL.
+
+= 4.15.12 =
+* Added uncode theme compatibility to content protection feature.
+* Fixed bugs with Stripe tax update after order.
+* Fixed bug where manual order didn't include subtotal.
+
+= 4.15.11 =
+* Enhancement: Update order tax amount in if Stripe charges tax.
+* Added filter to remove cover photo uploader field from default profile page.
+* Fixed: Undefined array key 'exempt' warning.
+
+= 4.15.10 =
+* Added exemption to content protection.
+* Fixed bug where Tutor course in multiple plans didn't exactly work correctly
+* Fixed bug where subscription was not revoked when unpaid in Stripe.
+* Enhancement: Stopped ucwords-ing displayname profile information.
+* Improved checkout compatibility with Pantheon hosting.
+
+= 4.15.9 =
+* Fixed bug where zero amount checkout didn't work when autorenewal is enabled.
+
+= 4.15.8 =
+* Fixed Stripe bug where payment method not saving for zero amount orders.
+
+= 4.15.7 =
+* Added filter to for changing Tutor LMS subscribe button.
+* Added filters to order and subscriptions email recipients.
+
+= 4.15.6 =
+* Fixed bug where Stripe sometimes fails to make payment method default.
+* Fixed XSS on registration checkbox field label.
+* Added ppress_content_protection_is_protection_disabled filter.
+
+= 4.15.5 =
+* Added custom field support to account welcome email
+* Improve checkout verbiage when auto-renewal is disabled
+* Fixed bug where customer username is always email during creation from wp-admin.
+* Fixed Stripe bug where payment method not saving for zero amount orders.
+* Fixed XSS on carousel-author-posts shortcode.
+
+= 4.15.4 =
+* Compatibility with upcoming WP 6.5
+
+= 4.15.3 =
+* Fixed bug where user membership subscriptions were not cancelled after account deletion.
+* Fixed bug with tax-inclusive checkout calculation.
+* Fixed bug with custom field not working on order/sub emails.
+* Fixed XSS on checkbox registration field.
+
 = 4.15.2 =
 * Fixed XSS on edit profile form.
 

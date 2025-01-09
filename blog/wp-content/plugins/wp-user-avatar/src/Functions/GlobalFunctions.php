@@ -282,6 +282,11 @@ function ppress_profile_url()
     return apply_filters('ppress_profile_url', $url);
 }
 
+/**
+ * @param $username_or_id
+ *
+ * @return string
+ */
 function ppress_get_frontend_profile_url($username_or_id)
 {
     if (is_numeric($username_or_id)) {
@@ -426,7 +431,6 @@ function ppress_get_current_url_query_string()
     return esc_url_raw($url);
 }
 
-
 /**
  * @return string blog URL without scheme
  */
@@ -566,7 +570,21 @@ function ppress_other_field_atts($atts)
 {
     if ( ! is_array($atts)) return $atts;
 
-    $official_atts = array('name', 'class', 'id', 'value', 'title', 'required', 'placeholder', 'key', 'field_key', 'limit', 'options', 'checkbox_text', 'processing_label');
+    $official_atts = array(
+        'name',
+        'class',
+        'id',
+        'value',
+        'title',
+        'required',
+        'placeholder',
+        'key',
+        'field_key',
+        'limit',
+        'options',
+        'checkbox_text',
+        'processing_label'
+    );
 
     $other_atts = array();
 
@@ -771,28 +789,7 @@ function ppress_wp_new_user_notification($user_id, $deprecated = null, $notify =
                 $user
             );
 
-            // handle support for custom fields placeholder.
-            preg_match_all('#({{[a-z_-]+}})#', $message, $matches);
-
-            if (isset($matches[1]) && ! empty($matches[1])) {
-
-                foreach ($matches[1] as $match) {
-                    $key = str_replace(['{', '}'], '', $match);
-
-                    $value = '';
-
-                    if (isset($user->{$key})) {
-
-                        $value = $user->{$key};
-
-                        if (is_array($value)) {
-                            $value = implode(', ', $value);
-                        }
-                    }
-
-                    $message = str_replace($match, $value, $message);
-                }
-            }
+            $message = ppress_custom_profile_field_search_replace($message, $user);
 
             $admin_email = apply_filters('ppress_signup_notification_admin_email', ppress_get_admin_notification_emails());
 
@@ -1257,7 +1254,7 @@ function ppressGET_var($key, $default = false, $empty = false)
 function ppress_var($bucket, $key, $default = false, $empty = false)
 {
     if ($empty) {
-        return isset($bucket[$key]) && ( ! empty($bucket[$key]) || ppress_is_boolean($bucket[$key])) ? $bucket[$key] : $default;
+        return isset($bucket[$key]) && ( ! empty($bucket[$key]) || ppress_is_boolean($bucket[$key]) || is_numeric($bucket[$key])) ? $bucket[$key] : $default;
     }
 
     return isset($bucket[$key]) ? $bucket[$key] : $default;
@@ -1301,10 +1298,33 @@ function ppress_dnd_field_key_description()
 function ppress_reserved_field_keys()
 {
     return [
-        'ID', 'id', 'user_pass', 'user_login', 'user_nicename', 'user_url', 'user_email', 'display_name', 'nickname',
-        'first_name', 'last_name', 'description', 'rich_editing', 'syntax_highlighting', 'comment_shortcuts', 'admin_color',
-        'use_ssl', 'user_registered', 'user_activation_key', 'spam', 'show_admin_bar_front', 'role', 'locale', 'deleted', 'user_level',
-        'user_status', 'user_description'
+        'ID',
+        'id',
+        'user_pass',
+        'user_login',
+        'user_nicename',
+        'user_url',
+        'user_email',
+        'display_name',
+        'nickname',
+        'first_name',
+        'last_name',
+        'description',
+        'rich_editing',
+        'syntax_highlighting',
+        'comment_shortcuts',
+        'admin_color',
+        'use_ssl',
+        'user_registered',
+        'user_activation_key',
+        'spam',
+        'show_admin_bar_front',
+        'role',
+        'locale',
+        'deleted',
+        'user_level',
+        'user_status',
+        'user_description'
     ];
 }
 
@@ -1517,11 +1537,9 @@ function ppress_get_cover_image_url($user_id = false)
 
     $slug = get_user_meta($user_id, 'pp_profile_cover_image', true);
 
-    if ( ! empty($slug)) {
-        return PPRESS_COVER_IMAGE_UPLOAD_URL . "$slug";
-    }
+    $url = ! empty($slug) ? PPRESS_COVER_IMAGE_UPLOAD_URL . "$slug" : get_option('wp_user_cover_default_image_url');
 
-    return get_option('wp_user_cover_default_image_url');
+    return esc_url_raw($url);
 }
 
 function ppress_is_my_own_profile()
@@ -1554,7 +1572,7 @@ function ppress_social_login_networks()
 {
     return apply_filters('ppress_social_login_networks', [
         'facebook'     => 'Facebook',
-        'twitter'      => 'Twitter',
+        'twitter'      => 'X/Twitter',
         'google'       => 'Google',
         'linkedin'     => 'LinkedIn',
         'microsoft'    => 'Microsoft',
@@ -1647,6 +1665,16 @@ function ppress_content_http_redirect($myURL)
     Please wait while you are redirected...or
     <a href="<?php echo $myURL; ?>">Click Here</a> if you do not want to wait.
     <?php
+}
+
+function ppress_do_admin_redirect($url)
+{
+    if ( ! headers_sent()) {
+        wp_safe_redirect($url);
+        exit;
+    }
+
+    ppress_content_http_redirect($url);
 }
 
 function ppress_is_json($str)
@@ -1760,18 +1788,15 @@ function ppress_upgrade_urls_affilify($url)
 
 function ppress_cache_transform($cache_key, $callback)
 {
-    static $ppress_cache_transform_bucket = [];
+    static $cache = [];
 
-    $result = ppress_var($ppress_cache_transform_bucket, $cache_key, false);
-
-    if ( ! $result) {
-
-        $result = $callback();
-
-        $ppress_cache_transform_bucket[$cache_key] = $result;
+    // If the cache key does not exist, compute the value and cache it.
+    if ( ! isset($cache[$cache_key])) {
+        $cache[$cache_key] = $callback();
     }
 
-    return $result;
+    // Return the cached result.
+    return $cache[$cache_key];
 }
 
 function ppress_form_has_field($form_id, $form_type, $field_shortcode_tag)
@@ -1795,4 +1820,33 @@ function ppress_form_has_field($form_id, $form_type, $field_shortcode_tag)
     }
 
     return false;
+}
+
+function ppress_custom_profile_field_search_replace($message, $user)
+{
+    // handle support for custom fields placeholder.
+    preg_match_all('#({{[a-z_-]+}})#', $message, $matches);
+
+    if (isset($matches[1]) && ! empty($matches[1])) {
+
+        foreach ($matches[1] as $match) {
+
+            $key = str_replace(['{', '}'], '', $match);
+
+            $value = '';
+
+            if (isset($user->{$key})) {
+
+                $value = $user->{$key};
+
+                if (is_array($value)) {
+                    $value = implode(', ', $value);
+                }
+            }
+
+            $message = str_replace($match, $value, $message);
+        }
+    }
+
+    return $message;
 }

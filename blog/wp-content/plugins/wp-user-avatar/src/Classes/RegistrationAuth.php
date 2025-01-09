@@ -335,7 +335,7 @@ class RegistrationAuth
         // array of files uploaded. Array key is the "custom field key" and the filename as the array value.
         $custom_usermeta['pp_uploaded_files'] = $uploads;
 
-        // if @$user_id is no WP_Error, add the extra user profile field
+        // if $user_id is no WP_Error, add the extra user profile field
         if (is_array($custom_usermeta)) {
 
             foreach ($custom_usermeta as $key => $value) {
@@ -426,7 +426,7 @@ class RegistrationAuth
             }
         }
 
-        return apply_filters('ppress_registration_success_message', ! empty($success_message) ? $success_message : $default_success_message);
+        return apply_filters('ppress_registration_success_message', ! empty($success_message) ? wp_kses_post($success_message) : $default_success_message);
     }
 
     /**

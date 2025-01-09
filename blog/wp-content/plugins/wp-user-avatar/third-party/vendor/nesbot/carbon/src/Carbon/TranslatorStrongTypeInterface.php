@@ -13,7 +13,6 @@ namespace ProfilePressVendor\Carbon;
 use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogueInterface;
 /**
  * Mark translator using strong type from symfony/translation >= 6.
- * @internal
  */
 interface TranslatorStrongTypeInterface
 {

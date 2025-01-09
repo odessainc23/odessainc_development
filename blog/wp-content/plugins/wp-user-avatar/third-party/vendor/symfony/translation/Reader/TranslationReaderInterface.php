@@ -15,7 +15,6 @@ use ProfilePressVendor\Symfony\Component\Translation\MessageCatalogue;
  * TranslationReader reads translation messages from translation files.
  *
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
- * @internal
  */
 interface TranslationReaderInterface
 {

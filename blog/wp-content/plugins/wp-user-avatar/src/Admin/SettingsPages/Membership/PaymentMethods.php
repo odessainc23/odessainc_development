@@ -65,8 +65,7 @@ class PaymentMethods
             );
 
             if ( ! $method) {
-                wp_safe_redirect(add_query_arg(['view' => 'payments', 'section' => 'payment-methods'], PPRESS_SETTINGS_SETTING_PAGE));
-                exit;
+                ppress_do_admin_redirect(add_query_arg(['view' => 'payments', 'section' => 'payment-methods'], PPRESS_SETTINGS_SETTING_PAGE));
             }
 
             $instance->page_header($method->get_method_title());

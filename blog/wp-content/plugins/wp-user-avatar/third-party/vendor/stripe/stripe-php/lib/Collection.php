@@ -12,7 +12,6 @@ namespace ProfilePressVendor\Stripe;
  * @property string $url
  * @property bool $has_more
  * @property TStripeObject[] $data
- * @internal
  */
 class Collection extends StripeObject implements \Countable, \IteratorAggregate
 {
@@ -45,6 +44,9 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
     {
         $this->filters = $filters;
     }
+    /**
+     * @return mixed
+     */
     #[\ReturnTypeWillChange]
     public function offsetGet($k)
     {
@@ -133,6 +135,8 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
         return new \ArrayIterator(\array_reverse($this->data));
     }
     /**
+     * @throws Exception\ApiErrorException
+     *
      * @return \Generator|TStripeObject[] A generator that can be used to
      *    iterate across all objects across all pages. As page boundaries are
      *    encountered, the next page will be fetched automatically for
@@ -145,12 +149,12 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
             $filters = $this->filters ?: [];
             if (\array_key_exists('ending_before', $filters) && !\array_key_exists('starting_after', $filters)) {
                 foreach ($page->getReverseIterator() as $item) {
-                    (yield $item);
+                    yield $item;
                 }
                 $page = $page->previousPage();
             } else {
                 foreach ($page as $item) {
-                    (yield $item);
+                    yield $item;
                 }
                 $page = $page->nextPage();
             }
@@ -190,6 +194,8 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
      * @param null|array $params
      * @param null|array|string $opts
      *
+     * @throws Exception\ApiErrorException
+     *
      * @return Collection<TStripeObject>
      */
     public function nextPage($params = null, $opts = null)
@@ -209,6 +215,8 @@ class Collection extends StripeObject implements \Countable, \IteratorAggregate
      *
      * @param null|array $params
      * @param null|array|string $opts
+     *
+     * @throws Exception\ApiErrorException
      *
      * @return Collection<TStripeObject>
      */

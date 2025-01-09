@@ -5,7 +5,6 @@ namespace ProfilePressVendor\Stripe\Exception;
 /**
  * InvalidRequestException is thrown when a request is initiated with invalid
  * parameters.
- * @internal
  */
 class InvalidRequestException extends ApiErrorException
 {

@@ -43,7 +43,10 @@ class WelcomeEmailAfterSignup
             ppress_login_url()
         ]);
 
-        return str_replace($search, $replace, $content);
+        return ppress_custom_profile_field_search_replace(
+            str_replace($search, $replace, $content),
+            $this->wp_user
+        );
     }
 
     public function send_welcome_mail()

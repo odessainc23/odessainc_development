@@ -2,7 +2,6 @@
 
 namespace ProfilePressVendor\Stripe;
 
-/** @internal */
 abstract class WebhookSignature
 {
     const EXPECTED_SCHEME = 'v1';

@@ -10,7 +10,7 @@
         "pelago\/emogrifier": "^6.0.0",
         "barryvdh\/composer-cleanup-plugin": "dev-master",
         "nesbot\/carbon": "^2.57",
-        "stripe\/stripe-php": "^7.117",
+        "stripe\/stripe-php": "^16.3",
         "brick\/math": "^0.9.3",
         "league\/csv": "^9.0"
     },

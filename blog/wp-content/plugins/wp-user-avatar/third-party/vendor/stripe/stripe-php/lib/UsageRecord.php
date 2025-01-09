@@ -7,9 +7,9 @@ namespace ProfilePressVendor\Stripe;
  * Usage records allow you to report customer usage and metrics to Stripe for
  * metered billing of subscription prices.
  *
- * Related guide: <a
- * href="https://stripe.com/docs/billing/subscriptions/metered-billing">Metered
- * Billing</a>.
+ * Related guide: <a href="https://stripe.com/docs/billing/subscriptions/metered-billing">Metered billing</a>
+ *
+ * This is our legacy usage-based billing API. See the <a href="https://docs.stripe.com/billing/subscriptions/usage-based">updated usage-based billing docs</a>.
  *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
@@ -17,7 +17,6 @@ namespace ProfilePressVendor\Stripe;
  * @property int $quantity The usage quantity for the specified date.
  * @property string $subscription_item The ID of the subscription item this usage record contains data for.
  * @property int $timestamp The timestamp when this usage occurred.
- * @internal
  */
 class UsageRecord extends ApiResource
 {

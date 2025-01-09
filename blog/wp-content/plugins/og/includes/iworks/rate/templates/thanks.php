@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly
 	data-slug="<?php echo esc_attr( $args['slug'] ); ?>"
 	data-id="<?php echo esc_attr( $args['plugin_id'] ); ?>"
 	data-ajax-url="<?php echo esc_url( $args['ajax_url'] ); ?>"
-	data-nonce="<?php echo wp_create_nonce( 'iworks-rate' ); ?>"
+	data-nonce="<?php echo esc_attr( wp_create_nonce( 'iworks-rate' ) ); ?>"
 >
 	<div class="<?php echo esc_attr( implode( ' ', $args['classes'] ) ); ?>">
 		<h4>
@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly
 <?php
 /* translators: %1$s: open anchor tag, %2$s: close anchor tag */
 $content = __( 'Please let us know what you think about our plugin. It is important that we can develop this tool. Thank you for all the ratings, reviews and donates. If you have a technical problem, please before you add a review %1$scheck our FAQ%2$s or contact us if you did not find help there. We will try to help you!', 'og' );
-echo wpautop( wp_kses_post( sprintf( $content, sprintf( '<a href="%s#faq" target="_blank">', esc_url( $args['url'] ) ), '</a>' ) ) );
+echo wp_kses_post( wpautop( sprintf( $content, sprintf( '<a href="%s#faq" target="_blank">', esc_url( $args['url'] ) ), '</a>' ) ) );
 ?>
 		<div class="iworks-rate-buttons">
 			<a data-action="get-help" href="<?php echo esc_url( $args['support_url'] ); ?>/#new-post" target="_blank" class="iworks-rate-button iworks-rate-button--green" ><?php echo esc_html( __( 'Get help', 'og' ) ); ?></a>

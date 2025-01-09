@@ -971,7 +971,7 @@
 }
 
 .pp-form-buider-settings-popup-container .pp-form-buider-settings-popup-body select.pp-form-control {
-    background-image: url(../../images/frontend/arrow-down.png);
+    background-image: url(../images/frontend/arrow-down.png);
     background-position: right 20px center;
     background-repeat: no-repeat;
     background-size: 10px auto;
@@ -1044,7 +1044,7 @@
     height: 35px;
 }
 
-.ppSCB-margin-r input[type="text"], .ppSCB-margin-r textarea, .ppSCB-margin-r select {
+.ppSCB-margin-r input[type="text"], .ppSCB-margin-r input[type="number"], .ppSCB-margin-r textarea, .ppSCB-margin-r select {
     max-width: 500px !important;
     width: 100% !important;
 }
@@ -1057,7 +1057,8 @@ textarea.wp-editor-area {
 }
 
 .ppSCB-tab-content {
-    max-width: 840px;
+    max-width: 100%;
+    width: 100% !important;
 }
 
 #ppSettings.ppSCB-tab-content {

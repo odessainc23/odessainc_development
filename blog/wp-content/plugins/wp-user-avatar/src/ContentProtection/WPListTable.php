@@ -359,8 +359,7 @@ class WPListTable extends \WP_List_Table
 
             PROFILEPRESS_sql::update_meta_value($rule_id, SettingsPage::META_DATA_KEY, $meta);
 
-            wp_safe_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
         }
 
         if ('activate' === $this->current_action()) {
@@ -375,8 +374,7 @@ class WPListTable extends \WP_List_Table
 
             PROFILEPRESS_sql::update_meta_value($rule_id, SettingsPage::META_DATA_KEY, $meta);
 
-            wp_safe_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
         }
 
         if ('delete' === $this->current_action()) {
@@ -389,8 +387,7 @@ class WPListTable extends \WP_List_Table
 
                 do_action('ppress_content_protection_delete_rule', $rule_id);
 
-                wp_safe_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
-                exit;
+                ppress_do_admin_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
             }
         }
 
@@ -406,8 +403,7 @@ class WPListTable extends \WP_List_Table
 
             do_action('ppress_content_protection_duplicate_rule', $rule_id);
 
-            wp_safe_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
         }
 
         if ('bulk-delete' === $this->current_action()) {
@@ -422,8 +418,7 @@ class WPListTable extends \WP_List_Table
 
             do_action('ppress_content_protection_after_bulk_delete', $delete_ids);
 
-            wp_safe_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
-            exit;
+            ppress_do_admin_redirect(PPRESS_CONTENT_PROTECTION_SETTINGS_PAGE);
         }
     }
 

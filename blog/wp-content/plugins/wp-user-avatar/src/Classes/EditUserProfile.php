@@ -51,7 +51,7 @@ class EditUserProfile
             }
 
             if (is_array($edit_profile_response) && $edit_profile_response['status'] == 'success') {
-                $ajax_response['message'] = html_entity_decode($success_message);
+                $ajax_response['message'] = wp_kses_post(html_entity_decode($success_message));
 
                 if ( ! empty($edit_profile_response['avatar_url'])) {
                     $ajax_response['avatar_url'] = $edit_profile_response['avatar_url'];

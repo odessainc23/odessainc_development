@@ -11,7 +11,6 @@ use ProfilePressVendor\Sabberworm\CSS\Parsing\UnexpectedTokenException;
  * This class is a wrapper for quoted strings to distinguish them from keywords.
  *
  * `CSSString`s always output with double quotes.
- * @internal
  */
 class CSSString extends PrimitiveValue
 {
@@ -51,7 +50,7 @@ class CSSString extends PrimitiveValue
         $sContent = null;
         if ($sQuote === null) {
             // Unquoted strings end in whitespace or with braces, brackets, parentheses
-            while (!\preg_match('/[\\s{}()<>\\[\\]]/isu', $oParserState->peek())) {
+            while (!preg_match('/[\s{}()<>\[\]]/isu', $oParserState->peek())) {
                 $sResult .= $oParserState->parseCharacter(\false);
             }
         } else {
@@ -90,12 +89,14 @@ class CSSString extends PrimitiveValue
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
-        $sString = \addslashes($this->sString);
-        $sString = \str_replace("\n", '\\A', $sString);
+        $sString = addslashes($this->sString);
+        $sString = str_replace("\n", '\A', $sString);
         return $oOutputFormat->getStringQuotingType() . $sString . $oOutputFormat->getStringQuotingType();
     }
 }

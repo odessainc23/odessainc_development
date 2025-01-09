@@ -21,7 +21,6 @@ use ProfilePressVendor\Symfony\Component\CssSelector\XPath\Translator;
  * selectors to XPath expressions.
  *
  * @author Christophe Coevoet <stof@notk.org>
- * @internal
  */
 class CssSelectorConverter
 {
@@ -53,6 +52,6 @@ class CssSelectorConverter
      */
     public function toXPath(string $cssExpr, string $prefix = 'descendant-or-self::')
     {
-        return $this->cache[$prefix][$cssExpr] ?? ($this->cache[$prefix][$cssExpr] = $this->translator->cssToXPath($cssExpr, $prefix));
+        return $this->cache[$prefix][$cssExpr] ?? $this->cache[$prefix][$cssExpr] = $this->translator->cssToXPath($cssExpr, $prefix);
     }
 }

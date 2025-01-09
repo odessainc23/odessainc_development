@@ -7,7 +7,6 @@ namespace ProfilePressVendor\Stripe\Service\Sigma;
  * Service factory class for API resources in the Sigma namespace.
  *
  * @property ScheduledQueryRunService $scheduledQueryRuns
- * @internal
  */
 class SigmaServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

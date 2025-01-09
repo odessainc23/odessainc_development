@@ -4,12 +4,11 @@ namespace ProfilePress\Core\ShortcodeParser\Builder;
 
 use ProfilePress\Core\Classes\ExtensionManager as EM;
 use ProfilePress\Core\Classes\PROFILEPRESS_sql;
-use ProfilePress\Core\Classes\UserAvatar;
+use WP_User;
 
 class FrontendProfileBuilder
 {
-    /** @var \WP_User user_data */
-    static private $user_data;
+    private static WP_User $user_data;
 
     /**
      * Define all front-end profile sub-shortcode.
@@ -55,6 +54,8 @@ class FrontendProfileBuilder
         add_shortcode('profile-post-list', array($this, 'author_post_list'));
         add_shortcode('profile-comment-list', array($this, 'author_comment_list'));
 
+        add_shortcode('profile-view-url', array($this, 'view_user_profile_url'));
+
         add_shortcode('profile-author-posts-url', array($this, 'author_post_url'));
 
         add_shortcode('profile-date-registered', array($this, 'date_user_registered'));
@@ -70,6 +71,11 @@ class FrontendProfileBuilder
     public function date_user_registered()
     {
         return date('F jS, Y', strtotime(self::$user_data->user_registered));
+    }
+
+    public function view_user_profile_url(): string
+    {
+        return ppress_get_frontend_profile_url(self::$user_data->user_login);
     }
 
     public function author_post_url()
@@ -243,7 +249,7 @@ class FrontendProfileBuilder
     {
         $user_id = self::$user_data->ID;
 
-        return apply_filters('ppress_profile_avatar_url', ppress_get_cover_image_url($user_id), self::$user_data);
+        return apply_filters('ppress_cover_image_url', ppress_get_cover_image_url($user_id), self::$user_data);
     }
 
     /**
@@ -293,7 +299,7 @@ class FrontendProfileBuilder
             }
         }
 
-        return apply_filters('ppress_profile_display_name', ucwords($display_name), self::$user_data);
+        return apply_filters('ppress_profile_display_name', $display_name, self::$user_data);
     }
 
     /**
@@ -678,9 +684,9 @@ class FrontendProfileBuilder
                         ?>
                         <li>
                             <a href="<?php echo get_permalink($post->ID); ?>">
-                                <img src="<?php echo $feature_img; ?>" alt="<?php echo $post->post_title; ?>">
+                                <img src="<?php echo esc_url($feature_img); ?>" alt="<?php esc_attr_e($post->post_title); ?>">
 
-                                <div class="jc-title"><?php echo $post->post_title; ?></div>
+                                <div class="jc-title"><?php esc_html_e($post->post_title); ?></div>
                             </a>
                         </li>
                         <?php
@@ -704,12 +710,8 @@ class FrontendProfileBuilder
 
     public static function get_instance($user = '')
     {
-        static $instance = false;
-        $user = isset($user) && ! empty($user) ? $user : wp_get_current_user();
-        if ( ! $instance) {
-            $instance = new self($user);
-        }
+        $user = ! empty($user) ? $user : wp_get_current_user();
 
-        return $instance;
+        return new self($user);
     }
 }

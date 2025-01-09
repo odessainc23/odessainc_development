@@ -82,12 +82,12 @@ class UserPanel extends \WP_Widget
 
         <p>
             <label for="<?php echo $this->get_field_id('edit_profile_label'); ?>"><?php _e('Label for "edit profile" link:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('edit_profile_label'); ?>" name="<?php echo $this->get_field_name('edit_profile_label'); ?>" type="text" value="<?php echo $edit_profile_label; ?>">
+            <input class="widefat" id="<?php echo $this->get_field_id('edit_profile_label'); ?>" name="<?php echo $this->get_field_name('edit_profile_label'); ?>" type="text" value="<?php echo esc_attr($edit_profile_label); ?>">
         </p>
 
         <p>
             <label for="<?php echo $this->get_field_id('logout_label'); ?>"><?php _e('Label for logout link:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('logout_label'); ?>" name="<?php echo $this->get_field_name('logout_label'); ?>" type="text" value="<?php echo $logout_label; ?>">
+            <input class="widefat" id="<?php echo $this->get_field_id('logout_label'); ?>" name="<?php echo $this->get_field_name('logout_label'); ?>" type="text" value="<?php echo esc_attr($logout_label); ?>">
         </p>
 
         <?php

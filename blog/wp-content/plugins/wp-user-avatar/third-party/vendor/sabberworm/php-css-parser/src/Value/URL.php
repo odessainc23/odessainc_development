@@ -9,7 +9,6 @@ use ProfilePressVendor\Sabberworm\CSS\Parsing\UnexpectedEOFException;
 use ProfilePressVendor\Sabberworm\CSS\Parsing\UnexpectedTokenException;
 /**
  * This class represents URLs in CSS. `URL`s always output in `URL("")` notation.
- * @internal
  */
 class URL extends PrimitiveValue
 {
@@ -80,9 +79,11 @@ class URL extends PrimitiveValue
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         return "url({$this->oURL->render($oOutputFormat)})";
     }

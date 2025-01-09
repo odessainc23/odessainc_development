@@ -30,7 +30,7 @@ class SettingsPage extends AbstractSettingsPage
 
     public function settings_page_function()
     {
-        add_action('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
+        add_filter('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
 
         $instance = Custom_Settings_Page_Api::instance();
         $instance->option_name('ppview'); // adds ppview css class to #poststuff

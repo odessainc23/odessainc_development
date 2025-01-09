@@ -4,6 +4,8 @@
 namespace ProfilePressVendor\Stripe\FinancialConnections;
 
 /**
+ * Describes an owner of an account.
+ *
  * @property string $id Unique identifier for the object.
  * @property string $object String representing the object's type. Objects of the same type share the same value.
  * @property null|string $email The email address of the owner.
@@ -12,7 +14,6 @@ namespace ProfilePressVendor\Stripe\FinancialConnections;
  * @property null|string $phone The raw phone number of the owner.
  * @property null|string $raw_address The raw physical address of the owner.
  * @property null|int $refreshed_at The timestamp of the refresh that updated this owner.
- * @internal
  */
 class AccountOwner extends \ProfilePressVendor\Stripe\ApiResource
 {

@@ -367,8 +367,10 @@ class PaymentHelpers
          * @see https://groups.google.com/a/lists.stripe.com/g/api-discuss/c/-Ezjn3roCiI/m/MYUpA4kUAQAJ
          */
         $disallowed_list = [
-            'br'/** @see https://stripe.com/docs/connect/direct-charges#collecting-fees */,
-            'in', // Error: Stripe doesn't currently support application fees for platforms in US with connected accounts in IN|MY|MX
+            'br'
+            /** @see https://stripe.com/docs/connect/direct-charges#collecting-fees */,
+            'in',
+            // Error: Stripe doesn't currently support application fees for platforms in US with connected accounts in IN|MY|MX
             'mx',
             'my'
         ];

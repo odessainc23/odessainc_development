@@ -53,7 +53,7 @@ class LoginFormTag extends FormProcessor
 
             return apply_filters(
                 'ppress_login_form_already_loggedin_message',
-                wpautop(esc_html__('You are already logged in.', 'wp-user-avatar')),
+                wpautop('<div class="ppress-already-logged-in-message">' . esc_html__('You are already logged in.', 'wp-user-avatar') . '</div>'),
                 $login_form,
                 $id
             );

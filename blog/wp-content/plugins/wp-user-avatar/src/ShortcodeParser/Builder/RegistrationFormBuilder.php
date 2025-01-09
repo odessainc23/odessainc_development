@@ -137,7 +137,7 @@ class RegistrationFormBuilder
         <script type="text/javascript">
             var pass_strength = 0;
             (function ($) {
-                $(document).on('ready', function () {
+                $(function () {
                     var password1 = $('input[name=reg_password]');
                     var password2 = $('input[name=reg_password2]');
                     var submitButton = $('input[name=reg_submit]');
@@ -242,7 +242,7 @@ class RegistrationFormBuilder
         if (is_array($wp_roles)) {
             foreach ($wp_roles as $key => $value) {
                 $_POST    = self::GET_POST();
-                $selected = selected(@$_POST['reg_select_role'], $key, false);
+                $selected = selected($_POST['reg_select_role'] ?? '', $key, false);
                 $label    = $value['name'];
                 $html     .= "<option value='$key' id='select_role_$key' class='select_role_option' $selected>$label</option>";
             }

@@ -28,15 +28,19 @@ class NewOrderAdminNotification extends AbstractMembershipEmail
 
             $subject = apply_filters('ppress_' . self::ID . '_email_subject', $this->parse_placeholders(
                 ppress_get_setting(self::ID . '_email_subject', esc_html__('New Order #{{order_id}}', 'wp-user-avatar'), true),
-                $placeholders_values
+                $placeholders_values,
+                $order
             ), $order);
 
             $message = apply_filters('ppress_' . self::ID . '_email_content', $this->parse_placeholders(
                 ppress_get_setting(self::ID . '_email_content', $this->get_new_order_admin_notification_content(), true),
-                $placeholders_values
+                $placeholders_values,
+                $order
             ), $order);
 
-            ppress_send_email(ppress_get_admin_notification_emails(), $subject, $message);
+            $recipient = apply_filters('ppress_' . self::ID . '_recipient', ppress_get_admin_notification_emails(), $order);
+
+            ppress_send_email($recipient, $subject, $message);
         }
     }
 }

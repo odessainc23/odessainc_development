@@ -45,11 +45,14 @@ function ppress_get_payment_method($payment_method_id)
  */
 function ppress_is_any_active_plan()
 {
-    global $wpdb;
+    return ppress_cache_transform('ppress_is_any_active_plan', function () {
 
-    $table = Base::subscription_plans_db_table();
+        global $wpdb;
 
-    return absint($wpdb->get_var("SELECT COUNT(id) FROM $table WHERE status = 'true'")) > 0;
+        $table = Base::subscription_plans_db_table();
+
+        return absint($wpdb->get_var("SELECT COUNT(id) FROM $table WHERE status = 'true'")) > 0;
+    });
 }
 
 /**
@@ -911,7 +914,7 @@ function ppress_subscribe_user_to_plan($plan_id, $customer_id, $order_data = [],
     }
 
     $order_data = wp_parse_args(array_filter($order_data), [
-        'date_created'   => current_time('mysql'),
+        'date_created'   => current_time('mysql', true),
         'payment_method' => StoreGateway::get_instance()->get_id(),
         'amount'         => '0',
         'order_status'   => OrderStatus::COMPLETED,
@@ -921,6 +924,7 @@ function ppress_subscribe_user_to_plan($plan_id, $customer_id, $order_data = [],
     $order                 = new OrderEntity();
     $order->plan_id        = $plan_obj->id;
     $order->customer_id    = $customer_id;
+    $order->subtotal       = ppress_sanitize_amount($order_data['amount']);
     $order->total          = ppress_sanitize_amount($order_data['amount']);
     $order->status         = sanitize_text_field($order_data['order_status']);
     $order->payment_method = sanitize_text_field($order_data['payment_method']);

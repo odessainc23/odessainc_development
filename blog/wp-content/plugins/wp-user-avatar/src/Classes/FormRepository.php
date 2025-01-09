@@ -172,27 +172,32 @@ class FormRepository
 
     public static function get_form_meta($form_id, $form_type, $key, $single = true)
     {
-        $table   = Base::form_meta_db_table();
-        $form_id = absint($form_id);
+        return ppress_cache_transform(
+            sprintf('get_form_meta_%s_%s_%s_%s', $form_id, $form_type, $key, $single),
+            function () use ($form_id, $form_type, $key, $single) {
 
-        $result = self::wpdb()->get_results(
-            self::wpdb()->prepare(
-                "SELECT  meta_value FROM $table WHERE form_id = %d AND form_type = %s AND meta_key = %s",
-                $form_id, $form_type, $key
-            ),
-            'ARRAY_A'
-        );
+                $table   = Base::form_meta_db_table();
+                $form_id = absint($form_id);
 
-        if (empty($result)) return $single == true ? false : [];
+                $result = self::wpdb()->get_results(
+                    self::wpdb()->prepare(
+                        "SELECT  meta_value FROM $table WHERE form_id = %d AND form_type = %s AND meta_key = %s",
+                        $form_id, $form_type, $key
+                    ),
+                    'ARRAY_A'
+                );
 
-        $output = [];
-        foreach ($result as $value) {
-            $output[] = unserialize($value['meta_value'], ['allowed_classes' => false]);
-        }
+                if (empty($result)) return $single == true ? false : [];
 
-        if ($single && is_array($output)) return $output[0];
+                $output = [];
+                foreach ($result as $value) {
+                    $output[] = unserialize($value['meta_value'], ['allowed_classes' => false]);
+                }
 
-        return $output;
+                if ($single && is_array($output)) return $output[0];
+
+                return $output;
+            });
     }
 
     public static function get_form_first_id($form_type)
@@ -399,10 +404,6 @@ class FormRepository
 
     public static function update_form($form_id, $form_type, $name = '', $data = [])
     {
-        $data = array_filter($data, function ($value) {
-            return is_bool($value) || ! empty($value) || is_null($value);
-        });
-
         if ( ! empty($name)) {
             self::wpdb()->update(
                 Base::form_db_table(),
@@ -412,7 +413,6 @@ class FormRepository
                 ['%d', '%s']
             );
         }
-
 
         foreach ($data as $key => $value) {
             self::update_form_meta($form_id, $form_type, $key, $value);
@@ -431,15 +431,18 @@ class FormRepository
      */
     public static function get_name($form_id, $form_type)
     {
-        $table = Base::form_db_table();
+        return ppress_cache_transform('fr_get_name_' . $form_id . '_' . $form_type, function () use ($form_id, $form_type) {
 
-        return self::wpdb()->get_var(
-            self::wpdb()->prepare(
-                "SELECT name FROM $table WHERE form_id = %d AND form_type = %s",
-                $form_id,
-                $form_type
-            )
-        );
+            $table = Base::form_db_table();
+
+            return self::wpdb()->get_var(
+                self::wpdb()->prepare(
+                    "SELECT name FROM $table WHERE form_id = %d AND form_type = %s",
+                    $form_id,
+                    $form_type
+                )
+            );
+        });
     }
 
     public static function get_form_ids($form_type)
@@ -476,15 +479,19 @@ class FormRepository
 
     public static function is_drag_drop($form_id, $form_type)
     {
-        $table = Base::form_db_table();
+        return ppress_cache_transform("is_drag_drop_{$form_id}_{$form_type}", function () use ($form_id, $form_type) {
 
-        return self::wpdb()->get_var(
-                self::wpdb()->prepare(
-                    "SELECT builder_type FROM $table WHERE form_type = '%s' AND form_id = %d",
-                    $form_type,
-                    $form_id
-                )
-            ) == self::DRAG_DROP_BUILDER_TYPE;
+                $table = Base::form_db_table();
+
+                return self::wpdb()->get_var(
+                    self::wpdb()->prepare(
+                        "SELECT builder_type FROM $table WHERE form_type = '%s' AND form_id = %d",
+                        $form_type,
+                        $form_id
+                    )
+                );
+
+            }) == self::DRAG_DROP_BUILDER_TYPE;
     }
 
     /**

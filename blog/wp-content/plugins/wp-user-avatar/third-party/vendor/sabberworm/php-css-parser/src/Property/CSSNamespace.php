@@ -6,7 +6,6 @@ use ProfilePressVendor\Sabberworm\CSS\Comment\Comment;
 use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
 /**
  * `CSSNamespace` represents an `@namespace` rule.
- * @internal
  */
 class CSSNamespace implements AtRule
 {
@@ -53,9 +52,11 @@ class CSSNamespace implements AtRule
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         return '@namespace ' . ($this->sPrefix === null ? '' : $this->sPrefix . ' ') . $this->mUrl->render($oOutputFormat) . ';';
     }
@@ -105,7 +106,7 @@ class CSSNamespace implements AtRule
     {
         $aResult = [$this->mUrl];
         if ($this->sPrefix) {
-            \array_unshift($aResult, $this->sPrefix);
+            array_unshift($aResult, $this->sPrefix);
         }
         return $aResult;
     }
@@ -116,7 +117,7 @@ class CSSNamespace implements AtRule
      */
     public function addComments(array $aComments)
     {
-        $this->aComments = \array_merge($this->aComments, $aComments);
+        $this->aComments = array_merge($this->aComments, $aComments);
     }
     /**
      * @return array<array-key, Comment>

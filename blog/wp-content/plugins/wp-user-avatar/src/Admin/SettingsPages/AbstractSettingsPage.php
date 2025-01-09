@@ -29,7 +29,7 @@ abstract class AbstractSettingsPage
             PPRESS_DASHBOARD_SETTINGS_SLUG,
             '',
             $this->getMenuIcon(),
-            '80.0015'
+            '45.0015'
         );
 
         do_action('ppress_register_menu_page_' . $this->active_menu_tab() . '_' . $this->active_submenu_tab());

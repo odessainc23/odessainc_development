@@ -92,10 +92,27 @@ $category_detail	= get_the_category( $postID );
 						<h3 class="scrollheading"></h3>
 						<div class="addthis_responsive_sharing_37zh content_socialicons"></div>
 					</div>
+
+					<?php 
+						// Retrieve custom field value (video URL or embed code)
+						$video_url = get_post_meta(get_the_ID(), 'video_url', true);
+
+						// Check if the custom field is not empty
+						if ($video_url) {
+							echo '<div class="custom-video-embed">';
+							echo do_shortcode( '[evp_embed_video url="' . esc_url($video_url) . '"]' );
+							echo '</div>';
+						}
+					?>
 				</div>
+				
 			</div>
 		</div>
 	</div>
+	
+	
+
+
 <?php endwhile; wp_reset_postdata(); wp_reset_query();   ?>
 	<section class="morelikethis">
 		<div class="container">

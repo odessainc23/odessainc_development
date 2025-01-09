@@ -33,7 +33,7 @@ class PPRESS_Session
         }
 
         if ( ! defined('WP_PPRESS_SESSION_COOKIE')) {
-            define('WP_PPRESS_SESSION_COOKIE', 'ppwp_wp_session');
+            define('WP_PPRESS_SESSION_COOKIE', $this->get_session_cookie_name());
         }
 
         if ( ! class_exists('PPRESS_Recursive_ArrayAccess')) {
@@ -55,6 +55,19 @@ class PPRESS_Session
         add_action($hook, [$this, 'init'], -1);
     }
 
+    public function get_session_cookie_name()
+    {
+        $name = 'ppwp_wp_session';
+
+        /** @see https://docs.pantheon.io/cookies#cache-busting-cookies */
+        if ( ! empty($_ENV['PANTHEON_ENVIRONMENT'])) $name = 'wp-' . $name;
+
+        /** @see https://wpengine.com/support/cache/#Default_Cache_Exclusions */
+        if (function_exists('is_wpe') && is_wpe()) $name = 'wordpress_' . $name;
+
+        return $name;
+    }
+
     /**
      * Setup the WP_PPress_Session instance
      *
@@ -65,6 +78,11 @@ class PPRESS_Session
         $this->session = WP_PPress_Session::get_instance();
 
         return $this->session;
+    }
+
+    public function get_all()
+    {
+        return $this->session->toArray();
     }
 
     /**

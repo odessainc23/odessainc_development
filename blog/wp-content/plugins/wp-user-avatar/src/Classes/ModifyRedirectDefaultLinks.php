@@ -111,24 +111,30 @@ class ModifyRedirectDefaultLinks
      *
      * @return string page with login shortcode
      */
-    public function set_login_url_func($url, $redirect = '', $force_reauth = false)
+    public function set_login_url_func($url, $redirect, $force_reauth)
     {
-        if ( ! $this->is_third_party_2fa_active()) {
-            $login_page_id = ppress_get_setting('set_login_url');
+        global $wp_rewrite;
 
-            if ( ! empty($login_page_id) && 'publish' == get_post_status($login_page_id)) {
+        if (is_object($wp_rewrite)) {
 
-                $url = get_permalink($login_page_id);
+            if ( ! $this->is_third_party_2fa_active()) {
 
-                if ( ! empty($redirect)) {
-                    $url = add_query_arg('redirect_to', rawurlencode(wp_validate_redirect($redirect)), $url);
+                $login_page_id = ppress_get_setting('set_login_url');
+
+                if ( ! empty($login_page_id) && 'publish' == get_post_status($login_page_id)) {
+
+                    $url = get_permalink($login_page_id);
+
+                    if ( ! empty($redirect)) {
+                        $url = add_query_arg('redirect_to', rawurlencode(wp_validate_redirect($redirect)), $url);
+                    }
+
+                    if ($force_reauth) {
+                        $url = add_query_arg('reauth', '1', $url);
+                    }
+
+                    $url = esc_url_raw($url);
                 }
-
-                if ($force_reauth) {
-                    $url = add_query_arg('reauth', '1', $url);
-                }
-
-                $url = esc_url_raw($url);
             }
         }
 

@@ -8,7 +8,6 @@ namespace ProfilePressVendor\Stripe\Service\Reporting;
  *
  * @property ReportRunService $reportRuns
  * @property ReportTypeService $reportTypes
- * @internal
  */
 class ReportingServiceFactory extends \ProfilePressVendor\Stripe\Service\AbstractServiceFactory
 {

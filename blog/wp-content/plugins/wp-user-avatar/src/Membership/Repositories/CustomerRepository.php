@@ -263,8 +263,10 @@ class CustomerRepository extends BaseRepository
 
             if (is_numeric($search)) {
                 $sql .= " AND (id = %d";
-                $sql .= " OR user_id = %d)";
+                $sql .= " OR user_id = %d";
+                $sql .= " OR user_id = (SELECT ID FROM $user_table WHERE user_login = %s))";
 
+                $replacement[] = $search;
                 $replacement[] = $search;
                 $replacement[] = $search;
 

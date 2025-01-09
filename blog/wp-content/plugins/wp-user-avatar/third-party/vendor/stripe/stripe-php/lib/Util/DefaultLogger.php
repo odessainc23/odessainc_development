@@ -5,7 +5,6 @@ namespace ProfilePressVendor\Stripe\Util;
 /**
  * A very basic implementation of LoggerInterface that has just enough
  * functionality that it can be the default for this library.
- * @internal
  */
 class DefaultLogger implements LoggerInterface
 {

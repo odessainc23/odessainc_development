@@ -3,7 +3,10 @@
 // File generated from our OpenAPI spec
 namespace ProfilePressVendor\Stripe\Service\Issuing;
 
-/** @internal */
+/**
+ * @phpstan-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ * @psalm-import-type RequestOptionsArray from \Stripe\Util\RequestOptions
+ */
 class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractService
 {
     /**
@@ -12,7 +15,7 @@ class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      * object appearing first.
      *
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -23,14 +26,18 @@ class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
         return $this->requestCollection('get', '/v1/issuing/authorizations', $params, $opts);
     }
     /**
-     * Approves a pending Issuing <code>Authorization</code> object. This request
-     * should be made within the timeout window of the <a
+     * [Deprecated] Approves a pending Issuing <code>Authorization</code> object. This
+     * request should be made within the timeout window of the <a
      * href="/docs/issuing/controls/real-time-authorizations">real-time
-     * authorization</a> flow.
+     * authorization</a> flow.  This method is deprecated. Instead, <a
+     * href="/docs/issuing/controls/real-time-authorizations#authorization-handling">respond
+     * directly to the webhook request to approve an authorization</a>.
+     *
+     * @deprecated  this method is deprecated, please refer to the description for details
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -41,14 +48,18 @@ class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
         return $this->request('post', $this->buildPath('/v1/issuing/authorizations/%s/approve', $id), $params, $opts);
     }
     /**
-     * Declines a pending Issuing <code>Authorization</code> object. This request
-     * should be made within the timeout window of the <a
+     * [Deprecated] Declines a pending Issuing <code>Authorization</code> object. This
+     * request should be made within the timeout window of the <a
      * href="/docs/issuing/controls/real-time-authorizations">real time
-     * authorization</a> flow.
+     * authorization</a> flow. This method is deprecated. Instead, <a
+     * href="/docs/issuing/controls/real-time-authorizations#authorization-handling">respond
+     * directly to the webhook request to decline an authorization</a>.
+     *
+     * @deprecated  this method is deprecated, please refer to the description for details
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -63,7 +74,7 @@ class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
@@ -80,7 +91,7 @@ class AuthorizationService extends \ProfilePressVendor\Stripe\Service\AbstractSe
      *
      * @param string $id
      * @param null|array $params
-     * @param null|array|\Stripe\Util\RequestOptions $opts
+     * @param null|RequestOptionsArray|\Stripe\Util\RequestOptions $opts
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *

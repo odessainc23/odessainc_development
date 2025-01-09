@@ -28,7 +28,8 @@
             $.post(
                 ajaxurl, {
                     action: "pp_get_forms_by_builder_type",
-                    data: builder_type
+                    data: builder_type,
+                    is_member_directory: typeof pp_is_member_directory != 'undefined' ? pp_is_member_directory : false
                 }, function (response) {
                     $('.pp-main-ajax-body').html(response);
                     fb.uiUnBlock();
@@ -75,7 +76,7 @@
             e.preventDefault();
             var form_title_obj = $('#pp-add-form-title');
             // remove input field error on change.
-            form_title_obj.change(function () {
+            form_title_obj.on('change', function () {
                 form_title_obj.removeClass('pp-input-error');
             });
 

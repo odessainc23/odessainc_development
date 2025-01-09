@@ -45,7 +45,7 @@ class EditProfileTag extends FormProcessor
         }
 
         if (isset($_GET['edit']) && ($_GET['edit'] == 'true')) {
-            $response = html_entity_decode(EditUserProfile::get_success_message($id));
+            $response = wp_kses_post(html_entity_decode(EditUserProfile::get_success_message($id)));
         }
 
         $response = apply_filters('ppress_edit_profile_status', $response, $id);

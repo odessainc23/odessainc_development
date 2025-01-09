@@ -370,6 +370,9 @@ auEa+7b+FGTKs7dUo2BNGR7OVifK4GZ8w/ajS0TelhrSRi3BBQCGXLzUO/UURUAh
 				}
 			}
 		}
+		if ( !defined( 'WFWAF_RULES_LOADED' ) ) {
+			define( 'WFWAF_RULES_LOADED', true );
+		}
 	}
 
 	private function handleRuleFailure($rule, $cause) {
@@ -820,7 +823,7 @@ auEa+7b+FGTKs7dUo2BNGR7OVifK4GZ8w/ajS0TelhrSRi3BBQCGXLzUO/UURUAh
 
 				wfWAFStorageFile::atomicFilePutContents($storageEngine->getRulesFile(), sprintf(<<<PHP
 <?php
-if (!defined('WFWAF_VERSION')) {
+if (!defined('WFWAF_VERSION') || defined('WFWAF_RULES_LOADED')) {
 	exit('Access denied');
 }
 /*
@@ -1355,6 +1358,8 @@ HTML
 	 * @return bool
 	 */
 	public function isRuleParamWhitelisted($ruleID, $urlPath, $paramKey) {
+		$urlPath = (string)$urlPath;
+		$paramKey = (string)$paramKey;
 		if ($this->isParamKeyURLBlacklisted($ruleID, $paramKey, $urlPath)) {
 			return false;
 		}
@@ -1629,7 +1634,7 @@ HTML
 		if ($host === null) {
 			$host = $this->getRequest()->getHost();
 		}
-		return self::AUTH_COOKIE . '-' . md5($host);
+		return self::AUTH_COOKIE . '-' . md5((string)$host);
 	}
 
 	/**

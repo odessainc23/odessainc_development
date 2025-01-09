@@ -35,8 +35,6 @@ class RegisterScripts
 
         wp_enqueue_style('ppress-form-builder-styles', PPRESS_ASSETS_URL . '/css/form-builder.css', [], PPRESS_VERSION_NUMBER);
 
-        wp_enqueue_style('ppress-codemirror', PPRESS_ASSETS_URL . '/codemirror/codemirror.css');
-
         wp_enqueue_style('ppress-jbox', PPRESS_ASSETS_URL . '/jbox/jBox.all.min.css', [], PPRESS_VERSION_NUMBER);
     }
 
@@ -99,18 +97,31 @@ class RegisterScripts
         wp_enqueue_script('ppress-frontend-script', PPRESS_ASSETS_URL . "/js/frontend.min.js", $frontend_dependencies, PPRESS_VERSION_NUMBER, true);
 
         wp_localize_script('ppress-frontend-script', 'pp_ajax_form', [
-            'ajaxurl'                 => admin_url('admin-ajax.php'),
-            'confirm_delete'          => esc_html__('Are you sure?', 'wp-user-avatar'),
-            'deleting_text'           => esc_html__('Deleting...', 'wp-user-avatar'),
-            'deleting_error'          => esc_html__('An error occurred. Please try again.', 'wp-user-avatar'),
-            'nonce'                   => wp_create_nonce('ppress-frontend-nonce'),
-            'disable_ajax_form'       => apply_filters('ppress_disable_ajax_form', (string)$is_ajax_mode_disabled),
-            'is_checkout'             => ppress_is_checkout() ? '1' : '0',
-            'is_checkout_tax_enabled' => $this->is_tax_enabled_in_checkout() ? '1' : '0'
+            'ajaxurl'                        => admin_url('admin-ajax.php'),
+            'confirm_delete'                 => esc_html__('Are you sure?', 'wp-user-avatar'),
+            'deleting_text'                  => esc_html__('Deleting...', 'wp-user-avatar'),
+            'deleting_error'                 => esc_html__('An error occurred. Please try again.', 'wp-user-avatar'),
+            'nonce'                          => wp_create_nonce('ppress-frontend-nonce'),
+            'disable_ajax_form'              => apply_filters('ppress_disable_ajax_form', (string)$is_ajax_mode_disabled),
+            'is_checkout'                    => ppress_is_checkout() ? '1' : '0',
+            'is_checkout_tax_enabled'        => $this->is_tax_enabled_in_checkout() ? '1' : '0',
+            'is_checkout_autoscroll_enabled' => apply_filters('ppress_is_checkout_autoscroll_enabled', 'true')
         ]);
 
         if (isset($_GET['pp_preview_form']) || ppress_post_content_has_shortcode('profilepress-member-directory')) {
-            wp_enqueue_script('ppress-member-directory', PPRESS_ASSETS_URL . "/js/member-directory{$suffix}.js", ['jquery', 'jquery-masonry', 'ppress-select2', 'ppress-flatpickr'], PPRESS_VERSION_NUMBER, true);
+
+            wp_enqueue_script(
+                'ppress-member-directory',
+                PPRESS_ASSETS_URL . "/js/member-directory{$suffix}.js",
+                [
+                    'jquery',
+                    'jquery-masonry',
+                    'ppress-select2',
+                    'ppress-flatpickr'
+                ],
+                PPRESS_VERSION_NUMBER,
+                true
+            );
         }
 
         do_action('ppress_enqueue_public_js');
@@ -144,7 +155,7 @@ class RegisterScripts
         }
 
         wp_enqueue_script('ppress-chartjs', PPRESS_ASSETS_URL . '/js/admin/chart.min.js', array('jquery'), PPRESS_VERSION_NUMBER);
-        wp_enqueue_script('ppress-reports', PPRESS_ASSETS_URL . '/js/admin/reports.js', array('jquery', 'ppress-chartjs'), PPRESS_VERSION_NUMBER);
+        wp_enqueue_script('ppress-reports', PPRESS_ASSETS_URL . '/js/admin/reports.js', ['jquery', 'ppress-chartjs'], PPRESS_VERSION_NUMBER);
 
         wp_enqueue_media();
 
@@ -153,7 +164,7 @@ class RegisterScripts
 
         wp_enqueue_script('ppress-clipboardjs', PPRESS_ASSETS_URL . '/js/clipboard.min.js', [], PPRESS_VERSION_NUMBER);
 
-        wp_enqueue_script('ppress-admin-scripts', PPRESS_ASSETS_URL . '/js/admin.js', array('jquery', 'jquery-ui-sortable'), PPRESS_VERSION_NUMBER);
+        wp_enqueue_script('ppress-admin-scripts', PPRESS_ASSETS_URL . '/js/admin.js', ['jquery', 'jquery-ui-sortable'], PPRESS_VERSION_NUMBER);
 
         wp_localize_script('ppress-admin-scripts', 'ppress_admin_globals', [
             'nonce' => wp_create_nonce('ppress-admin-nonce')
@@ -177,7 +188,15 @@ class RegisterScripts
         wp_enqueue_script(
             'ppress-form-builder',
             PPRESS_ASSETS_URL . '/js/builder/app.min.js',
-            ['jquery', 'backbone', 'wp-util', 'jquery-ui-draggable', 'jquery-ui-core', 'jquery-ui-sortable', 'wp-color-picker'],
+            [
+                'jquery',
+                'backbone',
+                'wp-util',
+                'jquery-ui-draggable',
+                'jquery-ui-core',
+                'jquery-ui-sortable',
+                'wp-color-picker'
+            ],
             PPRESS_VERSION_NUMBER
         );
 
@@ -187,11 +206,21 @@ class RegisterScripts
 
         wp_enqueue_script('ppress-jquery-blockui', PPRESS_ASSETS_URL . '/js/jquery.blockUI.js', array('jquery'), PPRESS_VERSION_NUMBER);
 
-        wp_enqueue_script('ppress-codemirror', PPRESS_ASSETS_URL . '/codemirror/codemirror.js');
-        wp_enqueue_script('ppress-codemirror-css', PPRESS_ASSETS_URL . '/codemirror/css.js', ['ppress-codemirror']);
-        wp_enqueue_script('ppress-codemirror-javascript', PPRESS_ASSETS_URL . '/codemirror/javascript.js', ['ppress-codemirror']);
-        wp_enqueue_script('ppress-codemirror-xml', PPRESS_ASSETS_URL . '/codemirror/xml.js', ['ppress-codemirror']);
-        wp_enqueue_script('ppress-codemirror-htmlmixed', PPRESS_ASSETS_URL . '/codemirror/htmlmixed.js', ['ppress-codemirror']);
+        /** @see https://make.wordpress.org/core/2017/10/22/code-editing-improvements-in-wordpress-4-9/ */
+        // ensures even if user disable syntax highlight, it still works.
+        add_filter('get_user_metadata', function ($val, $object_id, $meta_key) {
+            if ($meta_key == 'syntax_highlighting') return true;
+
+            return $val;
+
+        }, 10, 3);
+
+        $settings = wp_enqueue_code_editor([
+            'type'       => 'text/html',
+            'codemirror' => ['lint' => false]
+        ]);
+
+        wp_localize_script('code-editor', 'ppressCodeEditor', ['settings' => $settings]);
     }
 
     /**

@@ -15,7 +15,6 @@ use ProfilePressVendor\Sabberworm\CSS\Value\Value;
  * `Rule`s just have a string key (the rule) and a 'Value'.
  *
  * In CSS, `Rule`s are expressed as follows: “key: value[0][0] value[0][1], value[1][0] value[1][1];”
- * @internal
  */
 class Rule implements Renderable, Commentable
 {
@@ -105,7 +104,7 @@ class Rule implements Renderable, Commentable
      */
     private static function listDelimiterForRule($sRule)
     {
-        if (\preg_match('/^font($|-)/', $sRule)) {
+        if (preg_match('/^font($|-)/', $sRule)) {
             return [',', '/', ' '];
         }
         return [',', ' ', '/'];
@@ -179,12 +178,12 @@ class Rule implements Renderable, Commentable
     public function setValues(array $aSpaceSeparatedValues)
     {
         $oSpaceSeparatedList = null;
-        if (\count($aSpaceSeparatedValues) > 1) {
+        if (count($aSpaceSeparatedValues) > 1) {
             $oSpaceSeparatedList = new RuleValueList(' ', $this->iLineNo);
         }
         foreach ($aSpaceSeparatedValues as $aCommaSeparatedValues) {
             $oCommaSeparatedList = null;
-            if (\count($aCommaSeparatedValues) > 1) {
+            if (count($aCommaSeparatedValues) > 1) {
                 $oCommaSeparatedList = new RuleValueList(',', $this->iLineNo);
             }
             foreach ($aCommaSeparatedValues as $mValue) {
@@ -229,11 +228,11 @@ class Rule implements Renderable, Commentable
                 $aResult[] = [$mValue];
                 continue;
             }
-            if ($this->mValue->getListSeparator() === ' ' || \count($aResult) === 0) {
+            if ($this->mValue->getListSeparator() === ' ' || count($aResult) === 0) {
                 $aResult[] = [];
             }
             foreach ($mValue->getListComponents() as $mValue) {
-                $aResult[\count($aResult) - 1][] = $mValue;
+                $aResult[count($aResult) - 1][] = $mValue;
             }
         }
         return $aResult;
@@ -249,7 +248,7 @@ class Rule implements Renderable, Commentable
      */
     public function addValue($mValue, $sType = ' ')
     {
-        if (!\is_array($mValue)) {
+        if (!is_array($mValue)) {
             $mValue = [$mValue];
         }
         if (!$this->mValue instanceof RuleValueList || $this->mValue->getListSeparator() !== $sType) {
@@ -312,9 +311,11 @@ class Rule implements Renderable, Commentable
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         $sResult = "{$oOutputFormat->comments($this)}{$this->sRule}:{$oOutputFormat->spaceAfterRuleName()}";
         if ($this->mValue instanceof Value) {
@@ -324,7 +325,7 @@ class Rule implements Renderable, Commentable
             $sResult .= $this->mValue;
         }
         if (!empty($this->aIeHack)) {
-            $sResult .= ' \\' . \implode('\\', $this->aIeHack);
+            $sResult .= ' \\' . implode('\\', $this->aIeHack);
         }
         if ($this->bIsImportant) {
             $sResult .= ' !important';
@@ -339,7 +340,7 @@ class Rule implements Renderable, Commentable
      */
     public function addComments(array $aComments)
     {
-        $this->aComments = \array_merge($this->aComments, $aComments);
+        $this->aComments = array_merge($this->aComments, $aComments);
     }
     /**
      * @return array<array-key, Comment>

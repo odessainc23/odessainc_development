@@ -33,7 +33,7 @@ class AddNewForm
      */
     public function sub_header()
     {
-        if ( ! empty($_GET['page']) && in_array($_GET['page'], [PPRESS_FORMS_SETTINGS_SLUG])) : ?>
+        if ( ! empty($_GET['page']) && in_array($_GET['page'], [PPRESS_FORMS_SETTINGS_SLUG, PPRESS_MEMBER_DIRECTORIES_SLUG])) : ?>
             <div class="pp-add-new-form-wrapper">
                 <div class="profile-press-design-gateway">
                     <div class="profile-press-design-gateway-inner">
@@ -92,16 +92,6 @@ class AddNewForm
                 <div class="pp-main-ajax-body"></div>
             </div>
         <?php endif;
-
-
-        if (in_array($_GET['page'], [PPRESS_MEMBER_DIRECTORIES_SLUG])) {
-            echo '<div class="pp-add-new-form-wrapper">';
-            AjaxHandler::get_instance()->get_forms_by_builder_type(
-                FormRepository::MEMBERS_DIRECTORY_TYPE,
-                'dragDropBuilder'
-            );
-            echo '</div>';
-        }
     }
 
     /**

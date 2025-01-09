@@ -10,7 +10,7 @@ class DBUpdates
 {
     public static $instance;
 
-    const DB_VER = 10;
+    const DB_VER = 11;
 
     public function init_options()
     {
@@ -163,6 +163,15 @@ class DBUpdates
         $table = DBTables::profile_fields_db_table();
 
         $wpdb->query("ALTER TABLE $table CHANGE options options longtext NULL;");
+    }
+
+    public function update_routine_11()
+    {
+        $linkedin_api_version = ppress_get_setting('linkedin_api_version', '');
+
+        if (empty($linkedin_api_version)) {
+            ppress_update_settings('linkedin_api_version', 'deprecated');
+        }
     }
 
     public static function get_instance()

@@ -12,6 +12,7 @@ use ProfilePress\Core\Membership\Models\Order\OrderEntity as OrderEntity;
 use ProfilePress\Core\Membership\Models\Order\OrderFactory;
 use ProfilePress\Core\Membership\Models\Order\OrderStatus;
 use ProfilePress\Core\Membership\Models\Order\OrderType;
+use ProfilePress\Core\Membership\Models\Plan\PlanFactory;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionBillingFrequency;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionEntity;
 use ProfilePress\Core\Membership\Models\Subscription\SubscriptionFactory;
@@ -33,8 +34,27 @@ class OrderService
      */
     public function is_free_checkout($cart_vars)
     {
-        return Calculator::init($cart_vars->total)->isNegativeOrZero() &&
-               Calculator::init($cart_vars->recurring_amount)->isNegativeOrZero();
+        return Calculator::init($cart_vars->total)->isNegativeOrZero() && (
+                ! PlanFactory::fromId($cart_vars->plan_id)->is_auto_renew() ||
+                Calculator::init($cart_vars->recurring_amount)->isNegativeOrZero() ||
+                $this->is_disable_payment_for_zero_initial_subscription_payment($cart_vars)
+            );
+    }
+
+    /**
+     * Should payment form be displayed when initial payment of a subscription zero amount?
+     *
+     * @param CartEntity $cart_vars
+     *
+     * @return bool
+     */
+    public function is_disable_payment_for_zero_initial_subscription_payment($cart_vars)
+    {
+        if (PlanFactory::fromId($cart_vars->plan_id)->is_recurring()) {
+            return apply_filters('ppress_checkout_disable_payment_for_zero_initial_payment', false, $cart_vars);
+        }
+
+        return false;
     }
 
     public function customer_has_trialled($plan_id = '')
@@ -307,11 +327,13 @@ class OrderService
 
                 $gross_amount = Calculator::init($sub_total)->minus($discount_amount)->val();
 
-                $sub_total = Calculator::init($gross_amount)->dividedBy(
+                $tax_calculation_base_total = Calculator::init($gross_amount)->dividedBy(
                     Calculator::init('1')->plus($tax_rate_decimal)->val()
                 )->val();
 
-                $tax_amount = Calculator::init($gross_amount)->minus($sub_total)->val();
+                $tax_amount = Calculator::init($gross_amount)->minus($tax_calculation_base_total)->val();
+
+                $sub_total = Calculator::init($tax_calculation_base_total)->plus($discount_amount)->val();
 
                 if ($planObj->is_recurring()) {
 
@@ -562,7 +584,10 @@ class OrderService
             $order_id = OrderFactory::fromOrderKey($order_id_or_key)->id;
         }
 
-        return add_query_arg(['ppress_order_action' => 'edit', 'id' => $order_id], PPRESS_MEMBERSHIP_ORDERS_SETTINGS_PAGE);
+        return add_query_arg([
+            'ppress_order_action' => 'edit',
+            'id'                  => $order_id
+        ], PPRESS_MEMBERSHIP_ORDERS_SETTINGS_PAGE);
     }
 
     /**

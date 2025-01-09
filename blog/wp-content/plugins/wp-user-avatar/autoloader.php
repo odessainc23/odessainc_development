@@ -33,4 +33,5 @@ require __DIR__ . "/src/Functions/custom-settings-api.php";
 require __DIR__ . "/src/Functions/GlobalFunctions.php";
 require __DIR__ . "/src/Functions/MSFunctions.php";
 require __DIR__ . "/src/Functions/PPressBFnote.php";
+require __DIR__ . "/src/Functions/Shogun.php";
 require __DIR__ . "/src/Functions/FuseWPAdminNotice.php";

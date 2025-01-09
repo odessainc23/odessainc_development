@@ -59,7 +59,7 @@ class SettingsPage extends AbstractSettingsPage
     }
 
     /**
-     * @return void|string
+     * @return void
      * @throws \Exception
      */
     public function save_customer()
@@ -119,7 +119,7 @@ class SettingsPage extends AbstractSettingsPage
 
         if ('new' == $type) {
 
-            $user_login = ! empty($_POST['username']) ? $_POST['username'] : $customer_email;
+            $user_login = ! empty($customer_data['username']) ? $customer_data['username'] : $customer_email;
 
             $existing_user = get_user_by('login', $user_login);
 
@@ -265,7 +265,7 @@ class SettingsPage extends AbstractSettingsPage
     public function settings_page_function()
     {
         add_action('admin_footer', [$this, 'js_script']);
-        add_action('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
+        add_filter('wp_cspa_main_content_area', [$this, 'admin_settings_page_callback'], 10, 2);
         add_action('wp_cspa_before_closing_header', [$this, 'add_new_button']);
 
         add_action('wp_cspa_form_tag', function ($option_name) {
@@ -427,7 +427,7 @@ class SettingsPage extends AbstractSettingsPage
                         $("#username_row").hide();
                         $("#password_row").hide();
                     }
-                }).change();
+                }).trigger('change');
             });
         </script>
         <?php

@@ -240,6 +240,7 @@ class Base extends DBTables
         IDUserColumn::get_instance();
         GDPR::get_instance();
         \PPressBFnote::instance();
+        \ProperP_Shogun::get_instance();
 
         do_action('ppress_admin_hooks');
     }

@@ -14,7 +14,6 @@ use ProfilePressVendor\Sabberworm\CSS\Value\ValueList;
  * at-rules.
  *
  * Most `CSSList`s conform to this category but some at-rules (such as `@keyframes`) do not.
- * @internal
  */
 abstract class CSSBlockList extends CSSList
 {
@@ -103,9 +102,9 @@ abstract class CSSBlockList extends CSSList
                     $aResult[] = $oSelector;
                 } else {
                     $sComparator = '===';
-                    $aSpecificitySearch = \explode(' ', $sSpecificitySearch);
+                    $aSpecificitySearch = explode(' ', $sSpecificitySearch);
                     $iTargetSpecificity = $aSpecificitySearch[0];
-                    if (\count($aSpecificitySearch) > 1) {
+                    if (count($aSpecificitySearch) > 1) {
                         $sComparator = $aSpecificitySearch[0];
                         $iTargetSpecificity = $aSpecificitySearch[1];
                     }

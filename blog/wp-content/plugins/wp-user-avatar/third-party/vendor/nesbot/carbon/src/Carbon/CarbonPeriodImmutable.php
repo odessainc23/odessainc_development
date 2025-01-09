@@ -10,7 +10,6 @@
  */
 namespace ProfilePressVendor\Carbon;
 
-/** @internal */
 class CarbonPeriodImmutable extends CarbonPeriod
 {
     /**

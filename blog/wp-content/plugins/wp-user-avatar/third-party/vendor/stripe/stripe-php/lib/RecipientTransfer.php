@@ -29,7 +29,6 @@ namespace ProfilePressVendor\Stripe;
  * @property string $statement_descriptor
  * @property string $status
  * @property string $type
- * @internal
  */
 class RecipientTransfer extends ApiResource
 {

@@ -6,7 +6,6 @@ use ProfilePressVendor\Sabberworm\CSS\OutputFormat;
 use ProfilePressVendor\Sabberworm\CSS\Property\AtRule;
 /**
  * A `BlockList` constructed by an unknown at-rule. `@media` rules are rendered into `AtRuleBlockList` objects.
- * @internal
  */
 class AtRuleBlockList extends CSSBlockList implements AtRule
 {
@@ -51,9 +50,11 @@ class AtRuleBlockList extends CSSBlockList implements AtRule
         return $this->render(new OutputFormat());
     }
     /**
+     * @param OutputFormat|null $oOutputFormat
+     *
      * @return string
      */
-    public function render(OutputFormat $oOutputFormat)
+    public function render($oOutputFormat)
     {
         $sResult = $oOutputFormat->comments($this);
         $sResult .= $oOutputFormat->sBeforeAtRuleBlock;

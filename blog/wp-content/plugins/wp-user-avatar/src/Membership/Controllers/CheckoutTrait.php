@@ -210,6 +210,11 @@ trait CheckoutTrait
 
         $should_validate_fields = [];
 
+
+        if ( ! get_option('users_can_register')) {
+            $error_bucket->add('registration_disabled', esc_html__('Registration is disabled', 'wp-user-avatar'));
+        }
+
         // --------START ---------   validation for required fields ----------------------//
         foreach ($account_info_fields as $field_key => $field_settings) {
 
