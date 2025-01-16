@@ -66,44 +66,45 @@ $category_detail	= get_the_category( $postID );
 						if ( isset($blogContent['0']['title']) || isset($blogContent[ '1' ][ 'title' ]) ){
 					?>
 					<div class="col-md-8 col-sm-8 blogpad">
-					<?php }else{  ?>
-						<div class="col-md-12 col-sm-12 blogpad">
-						<?php } ?>
-						<div class="content_text">
-							<?php
-								if( $blogContent ):
-									foreach ( $blogContent as $detail ) {
-										if( isset($detail['title']) ) :
-											$goto2 = preg_replace('/[^a-zA-Z0-9]+/', '', $detail['title']);
-							?>
-											<h3 class="scrollheading" id="<?php echo $goto2; ?>"><?php echo $detail['title']; ?></h3>
-							<?php
-										endif;
-							
-										if( isset($detail['description']) ) :
-							?>
-											<?php echo $detail['description']; ?>
-									<?php
-										endif;
-									}
-								endif;
-							?>
-						</div>
-						<h3 class="scrollheading"></h3>
-						<div class="addthis_responsive_sharing_37zh content_socialicons"></div>
+						<?php }else{  ?>
+							<div class="col-md-12 col-sm-12 blogpad">
+							<?php } ?>
+							<div class="content_text">
+								<?php
+									if( $blogContent ):
+										foreach ( $blogContent as $detail ) {
+											if( isset($detail['title']) ) :
+												$goto2 = preg_replace('/[^a-zA-Z0-9]+/', '', $detail['title']);
+								?>
+												<h3 class="scrollheading" id="<?php echo $goto2; ?>"><?php echo $detail['title']; ?></h3>
+								<?php
+											endif;
+								
+											if( isset($detail['description']) ) :
+								?>
+												<?php echo $detail['description']; ?>
+										<?php
+											endif;
+										}
+									endif;
+								?>
+							</div>
+							<h3 class="scrollheading"></h3>
+							<div class="addthis_responsive_sharing_37zh content_socialicons"></div>
+						
+
+						<?php 
+							// Retrieve custom field value (video URL or embed code)
+							$video_url = get_post_meta(get_the_ID(), 'video_url', true);
+
+							// Check if the custom field is not empty
+							if ($video_url) {
+								echo '<div class="custom-video-embed">';
+								echo do_shortcode( '[evp_embed_video url="' . esc_url($video_url) . '"]' );
+								echo '</div>';
+							}
+						?>
 					</div>
-
-					<?php 
-						// Retrieve custom field value (video URL or embed code)
-						$video_url = get_post_meta(get_the_ID(), 'video_url', true);
-
-						// Check if the custom field is not empty
-						if ($video_url) {
-							echo '<div class="custom-video-embed">';
-							echo do_shortcode( '[evp_embed_video url="' . esc_url($video_url) . '"]' );
-							echo '</div>';
-						}
-					?>
 				</div>
 				
 			</div>
