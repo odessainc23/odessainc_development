@@ -83,6 +83,44 @@ var newUrl5 = "https://www.odessainc.com/whitepaper/master-as-a-service-offering
   document.body.appendChild(script1);
   document.body.appendChild(script2);
 
+
+
+  // Target the container where the second Wistia video will be embedded
+const videoContainer2 = document.getElementById('video-container-2'); // Ensure this container exists in your HTML
+
+// Create the first script element for Wistia JSONP for the second video
+const script3 = document.createElement('script');
+script3.src = "https://fast.wistia.com/embed/medias/n4yygwezck.jsonp"; // Use the Wistia ID of the second video
+script3.async = true;
+
+// Create the second script element for Wistia external assets for the second video
+const script4 = document.createElement('script');
+script4.src = "https://fast.wistia.com/assets/external/E-v1.js";
+script4.async = true;
+
+// Create the div structure for the second Wistia video
+const wistiaDiv2 = document.createElement('div');
+wistiaDiv2.className = "wistia_responsive_padding";
+wistiaDiv2.style = "padding:56.25% 0 0 0;position:relative;";
+wistiaDiv2.innerHTML = `
+   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+      <div class="wistia_embed wistia_async_n4yygwezck seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
+         <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+            <img src="https://fast.wistia.com/embed/medias/n4yygwezck/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+         </div>
+      </div>
+   </div>
+`;
+
+// Append the second Wistia div and scripts to the container
+videoContainer2.appendChild(wistiaDiv2);
+document.body.appendChild(script3);
+document.body.appendChild(script4);
+
+
+
+  
+
 function tabBx(i) {
     "block" == $("#" + i).css("display") || $(".mobileviewmenu").hide(), $("#" + i).show()
 }
