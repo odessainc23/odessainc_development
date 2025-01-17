@@ -102,7 +102,7 @@ document.body.appendChild(transcriptScript2);
 
  // Create the first script element for Wistia JSONP for the second video
  const script3 = document.createElement('script');
- script3.src = "https://fast.wistia.com/embed/medias/x5ueou8su9.jsonp"; // Use the Wistia ID of the second video
+ script3.src = "https://fast.wistia.com/embed/medias/8kzs2v0tej.jsonp"; // Use the Wistia ID of the second video
  script3.async = true;
  
  // Create the second script element for Wistia external assets for the second video
@@ -121,9 +121,9 @@ document.body.appendChild(transcriptScript2);
  wistiaDiv2.style = "padding:56.25% 0 0 0;position:relative;"; // Maintain aspect ratio of 16:9
  wistiaDiv2.innerHTML = `
     <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-       <div class="wistia_embed wistia_async_x5ueou8su9 seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
+       <div class="wistia_embed wistia_async_8kzs2v0tej seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
           <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-             <img src="https://fast.wistia.com/embed/medias/x5ueou8su9/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+             <img src="https://fast.wistia.com/embed/medias/8kzs2v0tej/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
           </div>
        </div>
     </div>
@@ -131,7 +131,7 @@ document.body.appendChild(transcriptScript2);
  
  // Create the transcript div for the second video
  const transcriptDiv = document.createElement('wistia-transcript');
- transcriptDiv.setAttribute('media-id', 'x5ueou8su9'); // Add the Wistia ID of the video
+ transcriptDiv.setAttribute('media-id', '8kzs2v0tej'); // Add the Wistia ID of the video
  
  // Append the second Wistia div, transcript, and scripts to the container
  videoContainer2.appendChild(wistiaDiv2);
