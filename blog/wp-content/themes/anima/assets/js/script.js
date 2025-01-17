@@ -56,7 +56,7 @@ const videoContainer = document.getElementById('video-container');
 
 // Create the first script element for Wistia JSONP
 const script1 = document.createElement('script');
-script1.src = "https://fast.wistia.com/embed/medias/n4yygwezck.jsonp";
+script1.src = "https://fast.wistia.com/embed/medias/rcpjx3ys63.jsonp";
 script1.async = true;
 
 // Create the second script element for Wistia external assets
@@ -75,9 +75,9 @@ wistiaDiv.className = "wistia_responsive_padding";
 wistiaDiv.style = "padding:56.25% 0 0 0;position:relative;";
 wistiaDiv.innerHTML = `
     <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-        <div class="wistia_embed wistia_async_n4yygwezck seo=false videoFoam=true" style="height:100%;position:relative;width:100%;">
+        <div class="wistia_embed wistia_async_rcpjx3ys63 seo=false videoFoam=true" style="height:100%;position:relative;width:100%;">
             <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                <img src="https://fast.wistia.com/embed/medias/n4yygwezck/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                <img src="https://fast.wistia.com/embed/medias/rcpjx3ys63/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@ wistiaDiv.innerHTML = `
 
 // Create the transcript div for the video
 const transcriptDiv2 = document.createElement('wistia-transcript');
-transcriptDiv2.setAttribute('media-id', 'n4yygwezck'); // Add the Wistia ID of the video
+transcriptDiv2.setAttribute('media-id', 'rcpjx3ys63'); // Add the Wistia ID of the video
 
 // Append the Wistia div, transcript, and scripts to the container
 videoContainer.appendChild(wistiaDiv);
