@@ -51,65 +51,96 @@ var newUrl5 = "https://www.odessainc.com/whitepaper/master-as-a-service-offering
 
 });
 
-  // Target the container where the Wistia video will be embedded
-  const videoContainer = document.getElementById('video-container');
+// Target the container where the Wistia video will be embedded
+const videoContainer = document.getElementById('video-container');
 
-  // Create the first script element for Wistia JSONP
-  const script1 = document.createElement('script');
-  script1.src = "https://fast.wistia.com/embed/medias/n4yygwezck.jsonp";
-  script1.async = true;
+// Create the first script element for Wistia JSONP
+const script1 = document.createElement('script');
+script1.src = "https://fast.wistia.com/embed/medias/n4yygwezck.jsonp";
+script1.async = true;
 
-  // Create the second script element for Wistia external assets
-  const script2 = document.createElement('script');
-  script2.src = "https://fast.wistia.com/assets/external/E-v1.js";
-  script2.async = true;
+// Create the second script element for Wistia external assets
+const script2 = document.createElement('script');
+script2.src = "https://fast.wistia.com/assets/external/E-v1.js";
+script2.async = true;
 
-  // Create the div structure for the Wistia video
-  const wistiaDiv = document.createElement('div');
-  wistiaDiv.className = "wistia_responsive_padding";
-  wistiaDiv.style = "padding:56.25% 0 0 0;position:relative;";
-  wistiaDiv.innerHTML = `
-      <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-          <div class="wistia_embed wistia_async_n4yygwezck seo=false videoFoam=true" style="height:100%;position:relative;width:100%;">
-              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                  <img src="https://fast.wistia.com/embed/medias/n4yygwezck/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
-              </div>
-          </div>
-      </div>
-  `;
+// Create the transcript script for the video
+const transcriptScript2 = document.createElement('script');
+transcriptScript2.src = "https://fast.wistia.net/assets/external/transcript.js";
+transcriptScript2.async = true;
 
-  // Append the Wistia div and scripts to the container
-  videoContainer.appendChild(wistiaDiv);
-  document.body.appendChild(script1);
-  document.body.appendChild(script2);
-
-
-
-  // Target the container where the second Wistia video will be embedded
-const videoContainer2 = document.getElementById('video-container-2'); // Ensure this container exists in your HTML
-
-// Create the first script element for Wistia JSONP for the second video
-const script3 = document.createElement('script');
-script3.src = "https://fast.wistia.com/embed/medias/x5ueou8su9.jsonp"; // Use the Wistia ID of the second video
-script3.async = true;
-
-// Create the second script element for Wistia external assets for the second video
-const script4 = document.createElement('script');
-script4.src = "https://fast.wistia.com/assets/external/E-v1.js";
-script4.async = true;
-
-// Create the div structure for the second Wistia video
-const wistiaDiv2 = document.createElement('div');
-wistiaDiv2.className = "wistia_responsive_padding";
-wistiaDiv2.style = "padding:56.25% 0 0 0;position:relative;";
-wistiaDiv2.innerHTML = `
-   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_x5ueou8su9 seo=false videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/x5ueou8su9/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div>
+// Create the div structure for the Wistia video
+const wistiaDiv = document.createElement('div');
+wistiaDiv.className = "wistia_responsive_padding";
+wistiaDiv.style = "padding:56.25% 0 0 0;position:relative;";
+wistiaDiv.innerHTML = `
+    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+        <div class="wistia_embed wistia_async_n4yygwezck seo=false videoFoam=true" style="height:100%;position:relative;width:100%;">
+            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                <img src="https://fast.wistia.com/embed/medias/n4yygwezck/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+            </div>
+        </div>
+    </div>
 `;
 
-// Append the second Wistia div and scripts to the container
-videoContainer2.appendChild(wistiaDiv2);
-document.body.appendChild(script3);
-document.body.appendChild(script4);
+// Create the transcript div for the video
+const transcriptDiv2 = document.createElement('wistia-transcript');
+transcriptDiv2.setAttribute('media-id', 'n4yygwezck'); // Add the Wistia ID of the video
+
+// Append the Wistia div, transcript, and scripts to the container
+videoContainer.appendChild(wistiaDiv);
+videoContainer.appendChild(transcriptDiv2);
+document.body.appendChild(script1);
+document.body.appendChild(script2);
+document.body.appendChild(transcriptScript2);
+
+
+
+
+ // Target the container where the second Wistia video will be embedded
+ const videoContainer2 = document.getElementById('video-container-2'); // Ensure this container exists in your HTML
+
+ // Create the first script element for Wistia JSONP for the second video
+ const script3 = document.createElement('script');
+ script3.src = "https://fast.wistia.com/embed/medias/x5ueou8su9.jsonp"; // Use the Wistia ID of the second video
+ script3.async = true;
+ 
+ // Create the second script element for Wistia external assets for the second video
+ const script4 = document.createElement('script');
+ script4.src = "https://fast.wistia.com/assets/external/E-v1.js";
+ script4.async = true;
+ 
+ // Create the transcript script for the second video
+ const transcriptScript = document.createElement('script');
+ transcriptScript.src = "https://fast.wistia.net/assets/external/transcript.js";
+ transcriptScript.async = true;
+ 
+ // Create the div structure for the second Wistia video
+ const wistiaDiv2 = document.createElement('div');
+ wistiaDiv2.className = "wistia_responsive_padding";
+ wistiaDiv2.style = "padding:56.25% 0 0 0;position:relative;"; // Maintain aspect ratio of 16:9
+ wistiaDiv2.innerHTML = `
+    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+       <div class="wistia_embed wistia_async_x5ueou8su9 seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
+          <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+             <img src="https://fast.wistia.com/embed/medias/x5ueou8su9/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+          </div>
+       </div>
+    </div>
+ `;
+ 
+ // Create the transcript div for the second video
+ const transcriptDiv = document.createElement('wistia-transcript');
+ transcriptDiv.setAttribute('media-id', 'x5ueou8su9'); // Add the Wistia ID of the video
+ 
+ // Append the second Wistia div, transcript, and scripts to the container
+ videoContainer2.appendChild(wistiaDiv2);
+ videoContainer2.appendChild(transcriptDiv);
+ document.body.appendChild(script3);
+ document.body.appendChild(script4);
+ document.body.appendChild(transcriptScript);
+ 
+
 
 
 
