@@ -78,6 +78,7 @@ $route['turns22'] = 'home/turns22';
 $route['auto-finance-software'] = 'Automotive_amp';
 $route['our-people'] = 'Our_amp';
 $route['afterwork'] = 'Cocktail_et';
+$route['afsa-gumbo'] = 'Afsa';
 $route['how-modern-software-saves-enterprises-money'] = 'Enterprises';
 $route['client-success-stories'] = 'Technology';
 $route['afterwork-thankyou'] = 'Cocktailet_thank';

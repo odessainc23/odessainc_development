@@ -34,9 +34,28 @@ html.i-amphtml-singledoc > body {
 .lease .btnmar{
   margin-top: 20px;
 }
+.ingredients{
+  background: #F3F3F5;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+.ingre{
+  color: #00ACC8;
+  font-size: 20px;
+  margin: 0 0 30px 0;
+}
+.ingre ul{
+  padding: 0 0 0 25px;
+}
+ul li{
+  color:#085B7B;padding: 0 0 5px 0;
+}
 .lease .h3-head{margin-bottom: 15px;}
 #wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
   background: url(../images/api/scott.png) right 0 no-repeat #0d2332;
+}
+#wrapper.ready-rethink.flexible-asset.competitive.Eric-blog.recipe-page .api-wrapper{
+  background: url(../images/afsa.jpg) right 0 no-repeat #0d2332;
 }
 .flexible-asset.competitive .key-takeways-section{
   padding: 40px 0;
@@ -69,6 +88,13 @@ html.i-amphtml-singledoc > body {
 }
 .ready-rethink.competitive .business-talk{
   width: 80%;
+}
+.flexible-asset.ready-rethink.competitive p.note{
+  color: #085B7B;
+  font-style: italic;
+}
+.flexible-asset.ready-rethink.competitive.recipe-page p{
+  width: 70%;
 }
 .ready-rethink.flexible-asset.competitive .letstalkform{
   background: transparent;
@@ -1354,7 +1380,12 @@ label[for="honeypot"],
     top: 20%;
     font-size: 14px;
   }
-
+  .flexible-asset.ready-rethink.competitive.recipe-page p{
+    width: 100%;
+  }
+  .ingredients{
+    padding: 22px;
+  }
   #wrapper.ebook .api-wrapper {
     background-image: none;
   }
