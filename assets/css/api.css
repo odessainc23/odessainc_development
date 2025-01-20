@@ -38,6 +38,8 @@ html.i-amphtml-singledoc > body {
   background: #F3F3F5;
   padding: 40px;
   margin-bottom: 40px;
+  position: relative;
+  border-radius: 20px;
 }
 .ingre{
   color: #00ACC8;
@@ -47,8 +49,13 @@ html.i-amphtml-singledoc > body {
 .ingre ul{
   padding: 0 0 0 25px;
 }
-ul li{
-  color:#085B7B;padding: 0 0 5px 0;
+.ingredients ul li{
+  color:#085B7B;padding: 0 0 5px 0;font-size: 18px;
+}
+.cook-object{
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
 }
 .lease .h3-head{margin-bottom: 15px;}
 #wrapper.ready-rethink.flexible-asset.competitive.Eric-blog .api-wrapper {
@@ -1289,6 +1296,9 @@ label[for="honeypot"],
   #wrapper.ready-rethink.flexible-asset .api-wrapper {
     background-image: none;
   }
+  .cook-object{
+    display: none;
+  }
   #wrapper .api-wrapper {
     background-image: none !important;
   }
@@ -1380,6 +1390,7 @@ label[for="honeypot"],
     top: 20%;
     font-size: 14px;
   }
+  
   .flexible-asset.ready-rethink.competitive.recipe-page p{
     width: 100%;
   }
