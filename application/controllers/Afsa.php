@@ -4,13 +4,13 @@ defined( 'BASEPATH' )OR exit( 'No direct script access allowed' );
 class Afsa extends CI_Controller {
 
 	public function index(){
-		$data['meta_title']			= 'How Modern Software Saves Enterprises Money | By Eric Bernstein, CEO of Odessa';
-		$data['meta_description']	= 'Modern software savings,Legacy software costs,Enterprise software modernization';
-		$data['meta_keyword']		= 'asset finance experts, equipment leasing industry gurus, lease management specialists';
-		$data['og_title']			= 'How Modern Software Saves Enterprises Money | By Eric Bernstein, CEO of Odessa';
-		$data['og_description']		= 'Discover how modern, cloud-based software reduces costs, enhances efficiency, and future-proofs enterprises. Learn the hidden costs of legacy systems and the benefits of modernization.';
-		$data['tc_title']			= 'How Modern Software Saves Enterprises Money | By Eric Bernstein, CEO of Odessa';
-		$data['tc_description']		= 'Discover how modern, cloud-based software reduces costs, enhances efficiency, and future-proofs enterprises. Learn the hidden costs of legacy systems and the benefits of modernization.';
+		$data['meta_title']			= 'Authentic Gumbo Recipe for AFSA Vehicle Finance Conference Attendees';
+		$data['meta_description']	= 'Take a taste of New Orleans home with you! Enjoy this authentic seafood gumbo recipe, shared by a Louisiana native and brought to you by Odessa for AFSA Vehicle Finance Conference attendees.';
+		$data['meta_keyword']		= 'Gumbo recipe, Authentic seafood gumbo, New Orleans gumbo, AFSA conference recipe, Louisiana seafood gumbo, Shrimp and sausage gumbo, Creole gumbo recipe, Gumbo for AFSA attendees';
+		$data['og_title']			= 'Authentic Gumbo Recipe for AFSA Vehicle Finance Conference Attendees';
+		$data['og_description']		= 'Take a taste of New Orleans home with you! Enjoy this authentic seafood gumbo recipe, shared by a Louisiana native and brought to you by Odessa for AFSA Vehicle Finance Conference attendees.';
+		$data['tc_title']			= 'Authentic Gumbo Recipe for AFSA Vehicle Finance Conference Attendees';
+		$data['tc_description']		= 'Take a taste of New Orleans home with you! Enjoy this authentic seafood gumbo recipe, shared by a Louisiana native and brought to you by Odessa for AFSA Vehicle Finance Conference attendees.';
 
 		$this->load->view('layouts/amp_pages/header-copy.amp.html', $data);
 		$this->load->view('pages/amp_pages/afsa-gumbo.html', $data);
