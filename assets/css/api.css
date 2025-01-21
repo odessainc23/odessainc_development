@@ -51,6 +51,7 @@ html.i-amphtml-singledoc > body {
   display: flex;
       flex-flow: row;
       flex-wrap: wrap;
+      margin: 0;
 }
 .ingredients ul li{
   color: #085B7B;
