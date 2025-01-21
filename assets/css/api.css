@@ -1309,7 +1309,7 @@ label[for="honeypot"],
   .cook-object{
     display: none;
   }
-  .ingredients ul li{
+  .ingredients ul{
     width: 100%;
   }
   #wrapper .api-wrapper {
